@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-09-03 01:42:43 IST",
+  "overall_health_score": 100.0,
+  "total_stocks": 29,
+  "passed_stocks": 29,
+  "failed_stocks": 0,
+  "total_errors": 0,
+  "total_warnings": 0,
+  "sector_scores": {
+    "Energy": 100.0,
+    "Technology": 100.0,
+    "Financial Services": 100.0,
+    "Communication Services": 100.0,
+    "Consumer Defensive": 100.0,
+    "Industrials": 100.0,
+    "Consumer Cyclical": 100.0,
+    "Healthcare": 100.0,
+    "Utilities": 100.0,
+    "Basic Materials": 100.0
+  }
+}
