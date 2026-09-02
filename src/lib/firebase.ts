@@ -14,18 +14,29 @@ import { getFirestore, doc, getDoc, collection, getDocs, query, where, DocumentD
 import type { Stock } from '../types/stock';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCfSd8RlEyfPrOYZ3NZSxx3JfY_yJOi5ys",
-  authDomain: "filterer-68dd0.firebaseapp.com",
-  projectId: "filterer-68dd0",
-  storageBucket: "filterer-68dd0.firebasestorage.app",
-  messagingSenderId: "587965525417",
-  appId: "1:587965525417:web:2a48c119f515d51f44a8b8",
-  measurementId: "G-V52102N1E9"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'filterer-68dd0.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'filterer-68dd0',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'filterer-68dd0.firebasestorage.app',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '587965525417',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || ''
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+// Initialize Firebase conditionally if client credentials are provided
+const isConfigured = Boolean(firebaseConfig.apiKey && firebaseConfig.projectId);
+
+export const db = isConfigured
+  ? (() => {
+      try {
+        const app = initializeApp(firebaseConfig);
+        return getFirestore(app);
+      } catch (err) {
+        console.warn('Firebase initialization failed; using static JSON fallback:', err);
+        return null;
+      }
+    })()
+  : null;
 
 // ────────────────────────────────────────────────────────
 //  FIRESTORE DATA ACCESS
@@ -35,9 +46,13 @@ export const db = getFirestore(app);
  * Fetch full stock detail data from Firestore.
  * Used by the StockDetailPage when a user navigates to /stock/:symbol.
  *
- * Falls back to static JSON if Firestore is unavailable.
+ * Falls back to static JSON if Firestore is unavailable or unconfigured.
  */
 export async function fetchStockDetail(symbol: string): Promise<Partial<Stock> | null> {
+  if (!db) {
+    return await fetchStockDetailFromJSON(symbol);
+  }
+
   try {
     const docRef = doc(db, 'stocks', symbol.toUpperCase());
     const docSnap = await getDoc(docRef);
@@ -93,6 +108,10 @@ export interface MarketIndicesCache {
 }
 
 export async function fetchMarketIndices(): Promise<MarketIndicesCache | null> {
+  if (!db) {
+    return await fetchMarketIndicesFromJSON();
+  }
+
   try {
     // Try Firestore first
     const docRef = doc(db, 'market', 'indices');
