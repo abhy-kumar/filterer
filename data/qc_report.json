@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-03 01:42:43 IST",
+  "timestamp": "2026-09-03 01:46:58 IST",
   "overall_health_score": 100.0,
-  "total_stocks": 29,
-  "passed_stocks": 29,
+  "total_stocks": 67,
+  "passed_stocks": 67,
   "failed_stocks": 0,
   "total_errors": 0,
   "total_warnings": 0,
@@ -16,6 +16,7 @@
     "Consumer Cyclical": 100.0,
     "Healthcare": 100.0,
     "Utilities": 100.0,
-    "Basic Materials": 100.0
+    "Basic Materials": 100.0,
+    "Real Estate": 100.0
   }
 }
