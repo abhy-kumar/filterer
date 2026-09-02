@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, FileSpreadsheet } from 'lucide-react';
+import { FileSpreadsheet } from 'lucide-react';
 import { Stock } from '../../types/stock';
 
 interface ProfitLossTableProps {
@@ -27,25 +27,24 @@ export const ProfitLossTable: React.FC<ProfitLossTableProps> = ({ stock }) => {
   ];
 
   return (
-    <div className="w-full bg-[#0c1017] dark:bg-[#0c1017] light:bg-white rounded-2xl border border-white/10 dark:border-white/10 light:border-slate-200 p-6 shadow-xl mb-8 overflow-hidden">
-      <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/5 dark:border-white/5 light:border-slate-100 mb-4">
+    <div className="w-full apple-glass rounded-3xl border border-white/[0.08] p-6 shadow-2xl mb-8 overflow-hidden">
+      <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/[0.06] mb-4">
         <div>
-          <h3 className="text-base font-bold text-white dark:text-white light:text-slate-900 flex items-center gap-2">
-            <FileSpreadsheet className="w-4 h-4 text-sky-400" />
-            Profit & Loss
+          <h3 className="text-base font-semibold text-white dark:text-white light:text-slate-900 flex items-center gap-2">
+            <FileSpreadsheet className="w-4 h-4 text-[#2997ff]" />
+            10-Year Annual Profit & Loss Statement
           </h3>
           <p className="text-xs text-slate-400 mt-0.5">
-            10-Year Annual Financial Performance (₹ Crores)
+            Consolidated 10-Year History (Figures in ₹ Crores)
           </p>
         </div>
       </div>
 
-      {/* 10-Year P&L Table */}
       <div className="overflow-x-auto mb-8">
-        <table className="w-full text-left border-collapse financial-table text-xs font-mono">
+        <table className="w-full text-left border-collapse apple-table text-xs font-mono">
           <thead>
-            <tr className="bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-100 text-slate-400">
-              <th className="py-3 px-4 sticky left-0 z-10 bg-[#080c13] dark:bg-[#080c13] light:bg-slate-100 min-w-[160px]">
+            <tr className="bg-black/30 text-slate-400">
+              <th className="py-3 px-4 sticky left-0 z-10 bg-[#070b12] min-w-[160px]">
                 Particulars
               </th>
               {annual.map((y) => (
@@ -55,12 +54,12 @@ export const ProfitLossTable: React.FC<ProfitLossTableProps> = ({ stock }) => {
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/5 dark:divide-white/5 light:divide-slate-200">
+          <tbody className="divide-y divide-white/[0.04]">
             {rows.map((row) => (
-              <tr key={row.key} className="hover:bg-slate-800/40 transition-colors">
+              <tr key={row.key} className="hover:bg-white/[0.03] transition-colors">
                 <td
-                  className={`py-2.5 px-4 sticky left-0 z-10 bg-[#0c1017] dark:bg-[#0c1017] light:bg-white font-sans ${
-                    row.isBold ? 'font-bold text-white dark:text-white light:text-slate-900' : 'text-slate-400'
+                  className={`py-2.5 px-4 sticky left-0 z-10 bg-[#0a0e17] font-sans ${
+                    row.isBold ? 'font-semibold text-white' : 'text-slate-400'
                   }`}
                 >
                   {row.label}
@@ -72,12 +71,12 @@ export const ProfitLossTable: React.FC<ProfitLossTableProps> = ({ stock }) => {
                       key={y.year}
                       className={`py-2.5 px-3 text-right whitespace-nowrap ${
                         row.isSky
-                          ? 'text-sky-400 font-bold'
+                          ? 'text-[#2997ff] font-bold'
                           : row.isHighlight
-                          ? 'text-emerald-400 font-semibold'
+                          ? 'text-[#30d158] font-semibold'
                           : row.isBold
-                          ? 'text-white dark:text-white light:text-slate-900 font-bold'
-                          : 'text-slate-300 dark:text-slate-300 light:text-slate-700'
+                          ? 'text-white font-bold'
+                          : 'text-slate-300'
                       }`}
                     >
                       {row.format ? row.format(val) : val}
@@ -90,104 +89,104 @@ export const ProfitLossTable: React.FC<ProfitLossTableProps> = ({ stock }) => {
         </table>
       </div>
 
-      {/* Compounded Growth 4-Grid Cards (Classic Screener Feature) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-white/5">
+      {/* Compounded Growth 4-Grid Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-white/[0.06]">
         {/* Sales Growth */}
-        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
-          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <h4 className="text-[11px] font-bold text-slate-300 mb-3 uppercase tracking-wider">
             Compounded Sales Growth
           </h4>
           <div className="space-y-1.5 text-xs font-mono">
             <div className="flex justify-between text-slate-300">
               <span>10 Years:</span>
-              <strong className="text-sky-400">{stock.sales_growth_10y.toFixed(1)}%</strong>
+              <strong className="text-[#2997ff]">{stock.sales_growth_10y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>5 Years:</span>
-              <strong className="text-sky-400">{stock.sales_growth_5y.toFixed(1)}%</strong>
+              <strong className="text-[#2997ff]">{stock.sales_growth_5y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>3 Years:</span>
-              <strong className="text-sky-400">{stock.sales_growth_3y.toFixed(1)}%</strong>
+              <strong className="text-[#2997ff]">{stock.sales_growth_3y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>TTM:</span>
-              <strong className="text-sky-400">{stock.sales_growth_3y.toFixed(1)}%</strong>
+              <strong className="text-[#2997ff]">{stock.sales_growth_3y.toFixed(1)}%</strong>
             </div>
           </div>
         </div>
 
         {/* Profit Growth */}
-        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
-          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <h4 className="text-[11px] font-bold text-slate-300 mb-3 uppercase tracking-wider">
             Compounded Profit Growth
           </h4>
           <div className="space-y-1.5 text-xs font-mono">
             <div className="flex justify-between text-slate-300">
               <span>10 Years:</span>
-              <strong className="text-emerald-400">{stock.profit_growth_10y.toFixed(1)}%</strong>
+              <strong className="text-[#30d158]">{stock.profit_growth_10y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>5 Years:</span>
-              <strong className="text-emerald-400">{stock.profit_growth_5y.toFixed(1)}%</strong>
+              <strong className="text-[#30d158]">{stock.profit_growth_5y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>3 Years:</span>
-              <strong className="text-emerald-400">{stock.profit_growth_3y.toFixed(1)}%</strong>
+              <strong className="text-[#30d158]">{stock.profit_growth_3y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>TTM:</span>
-              <strong className="text-emerald-400">{stock.profit_growth_3y.toFixed(1)}%</strong>
+              <strong className="text-[#30d158]">{stock.profit_growth_3y.toFixed(1)}%</strong>
             </div>
           </div>
         </div>
 
         {/* Stock Price CAGR */}
-        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
-          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <h4 className="text-[11px] font-bold text-slate-300 mb-3 uppercase tracking-wider">
             Stock Price CAGR
           </h4>
           <div className="space-y-1.5 text-xs font-mono">
             <div className="flex justify-between text-slate-300">
               <span>10 Years:</span>
-              <strong className="text-indigo-400">{stock.price_cagr_10y.toFixed(1)}%</strong>
+              <strong className="text-[#5e5ce6]">{stock.price_cagr_10y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>5 Years:</span>
-              <strong className="text-indigo-400">{stock.price_cagr_5y.toFixed(1)}%</strong>
+              <strong className="text-[#5e5ce6]">{stock.price_cagr_5y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>3 Years:</span>
-              <strong className="text-indigo-400">{stock.price_cagr_3y.toFixed(1)}%</strong>
+              <strong className="text-[#5e5ce6]">{stock.price_cagr_3y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>1 Year:</span>
-              <strong className="text-indigo-400">{stock.price_cagr_1y.toFixed(1)}%</strong>
+              <strong className="text-[#5e5ce6]">{stock.price_cagr_1y.toFixed(1)}%</strong>
             </div>
           </div>
         </div>
 
         {/* Return on Equity */}
-        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
-          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+        <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <h4 className="text-[11px] font-bold text-slate-300 mb-3 uppercase tracking-wider">
             Return on Equity (ROE)
           </h4>
           <div className="space-y-1.5 text-xs font-mono">
             <div className="flex justify-between text-slate-300">
               <span>10 Years:</span>
-              <strong className="text-amber-400">{stock.roe_10y.toFixed(1)}%</strong>
+              <strong className="text-[#ff9f0a]">{stock.roe_10y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>5 Years:</span>
-              <strong className="text-amber-400">{stock.roe_5y.toFixed(1)}%</strong>
+              <strong className="text-[#ff9f0a]">{stock.roe_5y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>3 Years:</span>
-              <strong className="text-amber-400">{stock.roe_3y.toFixed(1)}%</strong>
+              <strong className="text-[#ff9f0a]">{stock.roe_3y.toFixed(1)}%</strong>
             </div>
             <div className="flex justify-between text-slate-300">
               <span>Last Year:</span>
-              <strong className="text-amber-400">{stock.roe.toFixed(1)}%</strong>
+              <strong className="text-[#ff9f0a]">{stock.roe.toFixed(1)}%</strong>
             </div>
           </div>
         </div>

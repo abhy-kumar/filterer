@@ -4,9 +4,6 @@ import {
   TrendingDown,
   Globe,
   Building2,
-  Bookmark,
-  Share2,
-  ExternalLink,
   ShieldCheck,
   Sparkles
 } from 'lucide-react';
@@ -19,7 +16,6 @@ interface StockHeaderProps {
 export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
   const isUp = stock.change >= 0;
 
-  // Key screener ratio cards
   const ratioCards = [
     { label: 'Market Cap', value: `₹ ${stock.market_cap.toLocaleString('en-IN')} Cr`, isPrimary: true },
     { label: 'Current Price', value: `₹ ${stock.current_price.toLocaleString('en-IN')}`, isPrimary: true },
@@ -35,7 +31,6 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
     { label: 'Graham Number', value: `₹ ${stock.graham_number.toFixed(1)}` },
   ];
 
-  // 52-Week Range position percentage
   const rangePct = Math.min(
     100,
     Math.max(
@@ -45,24 +40,24 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
   );
 
   return (
-    <div className="w-full bg-[#0c1017] dark:bg-[#0c1017] light:bg-white rounded-2xl border border-white/10 dark:border-white/10 light:border-slate-200 p-6 shadow-xl mb-6">
+    <div className="w-full apple-glass rounded-3xl border border-white/[0.08] p-6 sm:p-7 shadow-2xl mb-6">
       {/* Top Identity Row */}
-      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-white/5 dark:border-white/5 light:border-slate-100">
+      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-white/[0.06]">
         <div>
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white dark:text-white light:text-slate-900 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-bold text-white dark:text-white light:text-slate-900 tracking-tight">
               {stock.name}
             </h1>
-            <span className="px-2.5 py-1 rounded-lg bg-sky-500/10 text-sky-400 font-mono font-bold text-sm border border-sky-500/20">
+            <span className="px-2.5 py-0.5 rounded-full bg-[#2997ff]/15 text-[#2997ff] font-mono font-bold text-xs border border-[#2997ff]/30">
               {stock.symbol}
             </span>
             {stock.bse_code && (
-              <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-xs">
+              <span className="px-2 py-0.5 rounded-full bg-white/[0.06] text-slate-400 font-mono text-[11px]">
                 BSE: {stock.bse_code}
               </span>
             )}
             {stock.debt_to_equity < 0.1 && (
-              <span className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
+              <span className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#30d158]/15 text-[#30d158] text-xs font-semibold border border-[#30d158]/25">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Virtually Debt Free
               </span>
@@ -79,10 +74,10 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
                 href={stock.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-sky-400 hover:underline"
+                className="flex items-center gap-1 text-[#2997ff] hover:underline"
               >
                 <Globe className="w-3.5 h-3.5" />
-                Website
+                Official Site
               </a>
             )}
           </div>
@@ -92,14 +87,14 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
           </p>
         </div>
 
-        {/* Live Price Box & 52W Gauge */}
-        <div className="flex flex-col items-start lg:items-end shrink-0 bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 p-4 rounded-xl border border-white/5">
-          <div className="text-3xl font-extrabold font-mono text-white dark:text-white light:text-slate-900">
+        {/* Live Price Display & 52W Gauge */}
+        <div className="flex flex-col items-start lg:items-end shrink-0 bg-black/40 p-4 rounded-2xl border border-white/[0.06]">
+          <div className="text-3xl font-bold font-mono text-white dark:text-white light:text-slate-900">
             ₹{stock.current_price.toLocaleString('en-IN')}
           </div>
           <div
             className={`flex items-center gap-1 font-mono text-sm font-semibold mt-1 ${
-              isUp ? 'text-emerald-400' : 'text-rose-400'
+              isUp ? 'text-[#30d158]' : 'text-[#ff453a]'
             }`}
           >
             {isUp ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
@@ -107,16 +102,16 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
             <span>({isUp ? '+' : ''}{stock.change_pct.toFixed(2)}%)</span>
           </div>
 
-          {/* 52W Range Bar */}
+          {/* 52W Range Indicator */}
           <div className="w-48 sm:w-56 mt-3">
             <div className="flex justify-between text-[10px] font-mono text-slate-400 mb-1">
               <span>L: ₹{stock.low_52w}</span>
               <span>52W Range</span>
               <span>H: ₹{stock.high_52w}</span>
             </div>
-            <div className="w-full h-1.5 rounded-full bg-slate-800 overflow-hidden relative">
+            <div className="w-full h-1.5 rounded-full bg-white/[0.1] overflow-hidden relative">
               <div
-                className="h-full bg-gradient-to-r from-sky-500 to-emerald-400 rounded-full"
+                className="h-full bg-gradient-to-r from-[#2997ff] to-[#30d158] rounded-full"
                 style={{ width: `${rangePct}%` }}
               />
             </div>
@@ -124,15 +119,15 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
         </div>
       </div>
 
-      {/* Ratios Grid (Classic Screener 12 Cards Grid) */}
+      {/* Ratios Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-6">
         {ratioCards.map((card) => (
           <div
             key={card.label}
-            className={`p-3 rounded-xl border transition-all ${
+            className={`p-3.5 rounded-2xl border transition-all ${
               card.isHighlight
-                ? 'bg-emerald-500/5 border-emerald-500/20'
-                : 'bg-slate-900/40 dark:bg-slate-900/40 light:bg-slate-50 border-white/5 dark:border-white/5 light:border-slate-200'
+                ? 'bg-[#30d158]/[0.06] border-[#30d158]/25'
+                : 'bg-white/[0.02] border-white/[0.06]'
             }`}
           >
             <div className="text-[11px] font-medium text-slate-400 truncate">
@@ -141,9 +136,9 @@ export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
             <div
               className={`text-sm sm:text-base font-bold font-mono mt-1 ${
                 card.isHighlight
-                  ? 'text-emerald-400'
+                  ? 'text-[#30d158]'
                   : card.isPrimary
-                  ? 'text-sky-400'
+                  ? 'text-[#2997ff]'
                   : 'text-white dark:text-white light:text-slate-900'
               }`}
             >

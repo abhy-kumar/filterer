@@ -1,4 +1,4 @@
-﻿export interface QuarterlyResult {
+export interface QuarterlyResult {
   period: string; // e.g. "Dec 2023", "Mar 2024", "Jun 2024", "Sep 2024", "Dec 2024"
   sales: number;
   expenses: number;
@@ -70,6 +70,7 @@ export interface ShareholdingPeriod {
   dii: number;
   public: number;
   others: number;
+  total?: number;
   pledged: number;
 }
 
