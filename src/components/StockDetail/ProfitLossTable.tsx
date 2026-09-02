@@ -1,0 +1,197 @@
+import React from 'react';
+import { TrendingUp, FileSpreadsheet } from 'lucide-react';
+import { Stock } from '../../types/stock';
+
+interface ProfitLossTableProps {
+  stock: Stock;
+}
+
+export const ProfitLossTable: React.FC<ProfitLossTableProps> = ({ stock }) => {
+  const annual = stock.annual_pnl || [];
+
+  if (annual.length === 0) return null;
+
+  const rows = [
+    { label: 'Sales +', key: 'sales', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}`, isBold: true },
+    { label: 'Expenses +', key: 'expenses', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}` },
+    { label: 'Operating Profit', key: 'operating_profit', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}`, isBold: true, isHighlight: true },
+    { label: 'OPM %', key: 'opm_pct', format: (v: number) => `${v.toFixed(1)} %`, isHighlight: true },
+    { label: 'Other Income +', key: 'other_income', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}` },
+    { label: 'Interest', key: 'interest', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}` },
+    { label: 'Depreciation', key: 'depreciation', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}` },
+    { label: 'Profit before tax', key: 'profit_before_tax', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}` },
+    { label: 'Tax %', key: 'tax_pct', format: (v: number) => `${v.toFixed(1)} %` },
+    { label: 'Net Profit +', key: 'net_profit', format: (v: number) => `₹ ${v.toLocaleString('en-IN')}`, isBold: true, isSky: true },
+    { label: 'EPS in Rs', key: 'eps', format: (v: number) => `₹ ${v.toFixed(2)}`, isBold: true },
+    { label: 'Dividend Payout %', key: 'dividend_payout_pct', format: (v: number) => `${v.toFixed(0)} %` },
+  ];
+
+  return (
+    <div className="w-full bg-[#0c1017] dark:bg-[#0c1017] light:bg-white rounded-2xl border border-white/10 dark:border-white/10 light:border-slate-200 p-6 shadow-xl mb-8 overflow-hidden">
+      <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/5 dark:border-white/5 light:border-slate-100 mb-4">
+        <div>
+          <h3 className="text-base font-bold text-white dark:text-white light:text-slate-900 flex items-center gap-2">
+            <FileSpreadsheet className="w-4 h-4 text-sky-400" />
+            Profit & Loss
+          </h3>
+          <p className="text-xs text-slate-400 mt-0.5">
+            10-Year Annual Financial Performance (₹ Crores)
+          </p>
+        </div>
+      </div>
+
+      {/* 10-Year P&L Table */}
+      <div className="overflow-x-auto mb-8">
+        <table className="w-full text-left border-collapse financial-table text-xs font-mono">
+          <thead>
+            <tr className="bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-100 text-slate-400">
+              <th className="py-3 px-4 sticky left-0 z-10 bg-[#080c13] dark:bg-[#080c13] light:bg-slate-100 min-w-[160px]">
+                Particulars
+              </th>
+              {annual.map((y) => (
+                <th key={y.year} className="py-3 px-3 text-right whitespace-nowrap">
+                  {y.year}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-white/5 dark:divide-white/5 light:divide-slate-200">
+            {rows.map((row) => (
+              <tr key={row.key} className="hover:bg-slate-800/40 transition-colors">
+                <td
+                  className={`py-2.5 px-4 sticky left-0 z-10 bg-[#0c1017] dark:bg-[#0c1017] light:bg-white font-sans ${
+                    row.isBold ? 'font-bold text-white dark:text-white light:text-slate-900' : 'text-slate-400'
+                  }`}
+                >
+                  {row.label}
+                </td>
+                {annual.map((y) => {
+                  const val = (y as any)[row.key];
+                  return (
+                    <td
+                      key={y.year}
+                      className={`py-2.5 px-3 text-right whitespace-nowrap ${
+                        row.isSky
+                          ? 'text-sky-400 font-bold'
+                          : row.isHighlight
+                          ? 'text-emerald-400 font-semibold'
+                          : row.isBold
+                          ? 'text-white dark:text-white light:text-slate-900 font-bold'
+                          : 'text-slate-300 dark:text-slate-300 light:text-slate-700'
+                      }`}
+                    >
+                      {row.format ? row.format(val) : val}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Compounded Growth 4-Grid Cards (Classic Screener Feature) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-white/5">
+        {/* Sales Growth */}
+        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
+          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+            Compounded Sales Growth
+          </h4>
+          <div className="space-y-1.5 text-xs font-mono">
+            <div className="flex justify-between text-slate-300">
+              <span>10 Years:</span>
+              <strong className="text-sky-400">{stock.sales_growth_10y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>5 Years:</span>
+              <strong className="text-sky-400">{stock.sales_growth_5y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>3 Years:</span>
+              <strong className="text-sky-400">{stock.sales_growth_3y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>TTM:</span>
+              <strong className="text-sky-400">{stock.sales_growth_3y.toFixed(1)}%</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* Profit Growth */}
+        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
+          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+            Compounded Profit Growth
+          </h4>
+          <div className="space-y-1.5 text-xs font-mono">
+            <div className="flex justify-between text-slate-300">
+              <span>10 Years:</span>
+              <strong className="text-emerald-400">{stock.profit_growth_10y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>5 Years:</span>
+              <strong className="text-emerald-400">{stock.profit_growth_5y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>3 Years:</span>
+              <strong className="text-emerald-400">{stock.profit_growth_3y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>TTM:</span>
+              <strong className="text-emerald-400">{stock.profit_growth_3y.toFixed(1)}%</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* Stock Price CAGR */}
+        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
+          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+            Stock Price CAGR
+          </h4>
+          <div className="space-y-1.5 text-xs font-mono">
+            <div className="flex justify-between text-slate-300">
+              <span>10 Years:</span>
+              <strong className="text-indigo-400">{stock.price_cagr_10y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>5 Years:</span>
+              <strong className="text-indigo-400">{stock.price_cagr_5y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>3 Years:</span>
+              <strong className="text-indigo-400">{stock.price_cagr_3y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>1 Year:</span>
+              <strong className="text-indigo-400">{stock.price_cagr_1y.toFixed(1)}%</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* Return on Equity */}
+        <div className="p-4 rounded-xl bg-slate-950/60 dark:bg-slate-950/60 light:bg-slate-50 border border-white/5">
+          <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 mb-3 uppercase tracking-wider">
+            Return on Equity (ROE)
+          </h4>
+          <div className="space-y-1.5 text-xs font-mono">
+            <div className="flex justify-between text-slate-300">
+              <span>10 Years:</span>
+              <strong className="text-amber-400">{stock.roe_10y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>5 Years:</span>
+              <strong className="text-amber-400">{stock.roe_5y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>3 Years:</span>
+              <strong className="text-amber-400">{stock.roe_3y.toFixed(1)}%</strong>
+            </div>
+            <div className="flex justify-between text-slate-300">
+              <span>Last Year:</span>
+              <strong className="text-amber-400">{stock.roe.toFixed(1)}%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

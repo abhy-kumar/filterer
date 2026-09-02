@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Python Virtual Environment
+.venv/
+venv/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & Coverage
+coverage/
+.pytest_cache/
+.coverage
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# SQLite main database (use db_split_join.py to split/join parts)
+data/screener.db
+data/market_scans.db
+
+# Keep the parts tracked
+!data/screener.db.part_*
+!data/market_scans.db.part_*
+
+# Environment & OS
+.env
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+*.log
