@@ -36,7 +36,10 @@ firebase-credentials.json
 *.json.key
 
 # Generated stock detail JSONs (too large for git)
-public/data/stocks/
+# public/data/stocks/ is NOT ignored. Since the statements were split out of
+# the JS bundle, these files are the only copy of the detail tier: without
+# them in the repo, a deployment renders every company page with no
+# statements at all.
 
 # Environment & OS
 .env

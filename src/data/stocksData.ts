@@ -2,8 +2,8 @@ import { Stock } from '../types/stock';
 
 export const STOCKS_DATA: Stock[] = [
   {
-    "symbol": "RELIANCE",
     "id": "reliance",
+    "symbol": "RELIANCE",
     "name": "Reliance Industries Ltd",
     "nse_symbol": "RELIANCE",
     "bse_code": "500325",
@@ -82,8 +82,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 5.06
   },
   {
-    "symbol": "TCS",
     "id": "tcs",
+    "symbol": "TCS",
     "name": "Tata Consultancy Services Ltd",
     "nse_symbol": "TCS",
     "bse_code": "532540",
@@ -162,8 +162,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 18.78
   },
   {
-    "symbol": "HDFCBANK",
     "id": "hdfcbank",
+    "symbol": "HDFCBANK",
     "name": "HDFC Bank Ltd",
     "nse_symbol": "HDFCBANK",
     "bse_code": "500180",
@@ -242,8 +242,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 0.33
   },
   {
-    "symbol": "BHARTIARTL",
     "id": "bhartiartl",
+    "symbol": "BHARTIARTL",
     "name": "Bharti Airtel Ltd",
     "nse_symbol": "BHARTIARTL",
     "bse_code": "532454",
@@ -322,8 +322,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 7.03
   },
   {
-    "symbol": "ICICIBANK",
     "id": "icicibank",
+    "symbol": "ICICIBANK",
     "name": "ICICI Bank Ltd",
     "nse_symbol": "ICICIBANK",
     "bse_code": "532174",
@@ -402,8 +402,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 20.12
   },
   {
-    "symbol": "INFY",
     "id": "infy",
+    "symbol": "INFY",
     "name": "Infosys Ltd",
     "nse_symbol": "INFY",
     "bse_code": "500209",
@@ -482,8 +482,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 16.04
   },
   {
-    "symbol": "SBIN",
     "id": "sbin",
+    "symbol": "SBIN",
     "name": "State Bank of India",
     "nse_symbol": "SBIN",
     "bse_code": "500112",
@@ -562,8 +562,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 27.14
   },
   {
-    "symbol": "ITC",
     "id": "itc",
+    "symbol": "ITC",
     "name": "ITC Ltd",
     "nse_symbol": "ITC",
     "bse_code": "500875",
@@ -642,8 +642,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 4.23
   },
   {
-    "symbol": "LT",
     "id": "lt",
+    "symbol": "LT",
     "name": "Larsen & Toubro Ltd",
     "nse_symbol": "LT",
     "bse_code": "500510",
@@ -722,8 +722,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 21.07
   },
   {
-    "symbol": "HINDUNILVR",
     "id": "hindunilvr",
+    "symbol": "HINDUNILVR",
     "name": "Hindustan Unilever Ltd",
     "nse_symbol": "HINDUNILVR",
     "bse_code": "500696",
@@ -802,8 +802,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 0.65
   },
   {
-    "symbol": "BAJFINANCE",
     "id": "bajfinance",
+    "symbol": "BAJFINANCE",
     "name": "Bajaj Finance Ltd",
     "nse_symbol": "BAJFINANCE",
     "bse_code": "500034",
@@ -882,8 +882,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 34.01
   },
   {
-    "symbol": "MARUTI",
     "id": "maruti",
+    "symbol": "MARUTI",
     "name": "Maruti Suzuki India Ltd",
     "nse_symbol": "MARUTI",
     "bse_code": "532500",
@@ -962,8 +962,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 5.31
   },
   {
-    "symbol": "SUNPHARMA",
     "id": "sunpharma",
+    "symbol": "SUNPHARMA",
     "name": "Sun Pharmaceutical Industries Ltd",
     "nse_symbol": "SUNPHARMA",
     "bse_code": "524715",
@@ -1042,8 +1042,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 24.79
   },
   {
-    "symbol": "KOTAKBANK",
     "id": "kotakbank",
+    "symbol": "KOTAKBANK",
     "name": "Kotak Mahindra Bank Ltd",
     "nse_symbol": "KOTAKBANK",
     "bse_code": "500247",
@@ -1122,8 +1122,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 22.58
   },
   {
-    "symbol": "AXISBANK",
     "id": "axisbank",
+    "symbol": "AXISBANK",
     "name": "Axis Bank Ltd",
     "nse_symbol": "AXISBANK",
     "bse_code": "532215",
@@ -1202,8 +1202,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 19.99
   },
   {
-    "symbol": "NTPC",
     "id": "ntpc",
+    "symbol": "NTPC",
     "name": "NTPC Ltd",
     "nse_symbol": "NTPC",
     "bse_code": "532555",
@@ -1282,8 +1282,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 4.58
   },
   {
-    "symbol": "ONGC",
     "id": "ongc",
+    "symbol": "ONGC",
     "name": "Oil & Natural Gas Corporation Ltd",
     "nse_symbol": "ONGC",
     "bse_code": "500312",
@@ -1362,8 +1362,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 4.33
   },
   {
-    "symbol": "POWERGRID",
     "id": "powergrid",
+    "symbol": "POWERGRID",
     "name": "Power Grid Corporation of India Ltd",
     "nse_symbol": "POWERGRID",
     "bse_code": "532898",
@@ -1442,8 +1442,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 6.72
   },
   {
-    "symbol": "M&M",
     "id": "m%26m",
+    "symbol": "M&M",
     "name": "Mahindra & Mahindra Ltd",
     "nse_symbol": "M&M",
     "bse_code": "500520",
@@ -1522,8 +1522,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 10.15
   },
   {
-    "symbol": "TITAN",
     "id": "titan",
+    "symbol": "TITAN",
     "name": "Titan Company Ltd",
     "nse_symbol": "TITAN",
     "bse_code": "500114",
@@ -1602,8 +1602,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 53.61
   },
   {
-    "symbol": "ADANIENT",
     "id": "adanient",
+    "symbol": "ADANIENT",
     "name": "Adani Enterprises Ltd",
     "nse_symbol": "ADANIENT",
     "bse_code": "512599",
@@ -1682,8 +1682,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 64.96
   },
   {
-    "symbol": "ADANIPORTS",
     "id": "adaniports",
+    "symbol": "ADANIPORTS",
     "name": "Adani Ports and SEZ Ltd",
     "nse_symbol": "ADANIPORTS",
     "bse_code": "532921",
@@ -1762,8 +1762,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 29.47
   },
   {
-    "symbol": "TATASTEEL",
     "id": "tatasteel",
+    "symbol": "TATASTEEL",
     "name": "Tata Steel Ltd",
     "nse_symbol": "TATASTEEL",
     "bse_code": "500470",
@@ -1842,8 +1842,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 16.07
   },
   {
-    "symbol": "HCLTECH",
     "id": "hcltech",
+    "symbol": "HCLTECH",
     "name": "HCL Technologies Ltd",
     "nse_symbol": "HCLTECH",
     "bse_code": "532281",
@@ -1922,8 +1922,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 29.27
   },
   {
-    "symbol": "WIPRO",
     "id": "wipro",
+    "symbol": "WIPRO",
     "name": "Wipro Ltd",
     "nse_symbol": "WIPRO",
     "bse_code": "507685",
@@ -2002,8 +2002,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 4.79
   },
   {
-    "symbol": "COALINDIA",
     "id": "coalindia",
+    "symbol": "COALINDIA",
     "name": "Coal India Ltd",
     "nse_symbol": "COALINDIA",
     "bse_code": "533278",
@@ -2082,8 +2082,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 13.05
   },
   {
-    "symbol": "NESTLEIND",
     "id": "nestleind",
+    "symbol": "NESTLEIND",
     "name": "Nestle India Ltd",
     "nse_symbol": "NESTLEIND",
     "bse_code": "500790",
@@ -2162,8 +2162,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 24.45
   },
   {
-    "symbol": "ULTRACEMCO",
     "id": "ultracemco",
+    "symbol": "ULTRACEMCO",
     "name": "UltraTech Cement Ltd",
     "nse_symbol": "ULTRACEMCO",
     "bse_code": "532538",
@@ -2242,8 +2242,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 10.34
   },
   {
-    "symbol": "JSWSTEEL",
     "id": "jswsteel",
+    "symbol": "JSWSTEEL",
     "name": "JSW Steel Ltd",
     "nse_symbol": "JSWSTEEL",
     "bse_code": "500228",
@@ -2322,8 +2322,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 25.58
   },
   {
-    "symbol": "ASIANPAINT",
     "id": "asianpaint",
+    "symbol": "ASIANPAINT",
     "name": "Asian Paints Ltd.",
     "nse_symbol": "ASIANPAINT",
     "bse_code": "500820",
@@ -2402,8 +2402,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 19.5
   },
   {
-    "symbol": "TATAMOTORS",
     "id": "tatamotors",
+    "symbol": "TATAMOTORS",
     "name": "TATAMOTORS",
     "nse_symbol": "TATAMOTORS",
     "bse_code": "500570",
@@ -2482,8 +2482,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 46.08
   },
   {
-    "symbol": "BAJAJFINSV",
     "id": "bajajfinsv",
+    "symbol": "BAJAJFINSV",
     "name": "Bajaj Finserv Ltd.",
     "nse_symbol": "BAJAJFINSV",
     "bse_code": "532978",
@@ -2562,8 +2562,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 24.61
   },
   {
-    "symbol": "GRASIM",
     "id": "grasim",
+    "symbol": "GRASIM",
     "name": "Grasim Industries Ltd.",
     "nse_symbol": "GRASIM",
     "bse_code": "500300",
@@ -2642,8 +2642,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 31.66
   },
   {
-    "symbol": "HINDALCO",
     "id": "hindalco",
+    "symbol": "HINDALCO",
     "name": "Hindalco Industries Ltd.",
     "nse_symbol": "HINDALCO",
     "bse_code": "500440",
@@ -2722,8 +2722,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 39.63
   },
   {
-    "symbol": "TECHM",
     "id": "techm",
+    "symbol": "TECHM",
     "name": "Tech Mahindra Ltd.",
     "nse_symbol": "TECHM",
     "bse_code": "532755",
@@ -2802,8 +2802,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 24.45
   },
   {
-    "symbol": "VEDL",
     "id": "vedl",
+    "symbol": "VEDL",
     "name": "Vedanta Ltd.",
     "nse_symbol": "VEDL",
     "bse_code": "500295",
@@ -2882,8 +2882,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 8.41
   },
   {
-    "symbol": "INDUSINDBK",
     "id": "indusindbk",
+    "symbol": "INDUSINDBK",
     "name": "IndusInd Bank Ltd.",
     "nse_symbol": "INDUSINDBK",
     "bse_code": "532187",
@@ -2962,8 +2962,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 37.63
   },
   {
-    "symbol": "DIVISLAB",
     "id": "divislab",
+    "symbol": "DIVISLAB",
     "name": "Divi's Laboratories Ltd.",
     "nse_symbol": "DIVISLAB",
     "bse_code": "532488",
@@ -3042,8 +3042,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 63.58
   },
   {
-    "symbol": "CIPLA",
     "id": "cipla",
+    "symbol": "CIPLA",
     "name": "Cipla Ltd.",
     "nse_symbol": "CIPLA",
     "bse_code": "500087",
@@ -3122,8 +3122,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 21.2
   },
   {
-    "symbol": "EICHERMOT",
     "id": "eichermot",
+    "symbol": "EICHERMOT",
     "name": "Eicher Motors Ltd.",
     "nse_symbol": "EICHERMOT",
     "bse_code": "505200",
@@ -3202,8 +3202,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 22.25
   },
   {
-    "symbol": "BPCL",
     "id": "bpcl",
+    "symbol": "BPCL",
     "name": "Bharat Petroleum Corporation Ltd.",
     "nse_symbol": "BPCL",
     "bse_code": "500547",
@@ -3282,8 +3282,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 19.88
   },
   {
-    "symbol": "BRITANNIA",
     "id": "britannia",
+    "symbol": "BRITANNIA",
     "name": "Britannia Industries Ltd.",
     "nse_symbol": "BRITANNIA",
     "bse_code": "500825",
@@ -3362,8 +3362,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 2.36
   },
   {
-    "symbol": "HEROMOTOCO",
     "id": "heromotoco",
+    "symbol": "HEROMOTOCO",
     "name": "Hero MotoCorp Ltd.",
     "nse_symbol": "HEROMOTOCO",
     "bse_code": "500182",
@@ -3442,8 +3442,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 13.45
   },
   {
-    "symbol": "APOLLOHOSP",
     "id": "apollohosp",
+    "symbol": "APOLLOHOSP",
     "name": "Apollo Hospitals Enterprise Ltd.",
     "nse_symbol": "APOLLOHOSP",
     "bse_code": "508869",
@@ -3522,8 +3522,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 30.2
   },
   {
-    "symbol": "BEL",
     "id": "bel",
+    "symbol": "BEL",
     "name": "Bharat Electronics Ltd.",
     "nse_symbol": "BEL",
     "bse_code": "500049",
@@ -3602,8 +3602,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 10.11
   },
   {
-    "symbol": "HAL",
     "id": "hal",
+    "symbol": "HAL",
     "name": "Hindustan Aeronautics Ltd.",
     "nse_symbol": "HAL",
     "bse_code": "541154",
@@ -3682,8 +3682,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 37.39
   },
   {
-    "symbol": "VBL",
     "id": "vbl",
+    "symbol": "VBL",
     "name": "Varun Beverages Ltd.",
     "nse_symbol": "VBL",
     "bse_code": "540180",
@@ -3762,8 +3762,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 8.92
   },
   {
-    "symbol": "TRENT",
     "id": "trent",
+    "symbol": "TRENT",
     "name": "Trent Ltd.",
     "nse_symbol": "TRENT",
     "bse_code": "500251",
@@ -3842,8 +3842,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 30.62
   },
   {
-    "symbol": "SHRIRAMFIN",
     "id": "shriramfin",
+    "symbol": "SHRIRAMFIN",
     "name": "Shriram Finance Ltd.",
     "nse_symbol": "SHRIRAMFIN",
     "bse_code": "511218",
@@ -3922,8 +3922,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 80.52
   },
   {
-    "symbol": "BAJAJ-AUTO",
     "id": "bajaj-auto",
+    "symbol": "BAJAJ-AUTO",
     "name": "Bajaj Auto Ltd.",
     "nse_symbol": "BAJAJ-AUTO",
     "bse_code": "532977",
@@ -4002,8 +4002,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 42.85
   },
   {
-    "symbol": "CHOLAFIN",
     "id": "cholafin",
+    "symbol": "CHOLAFIN",
     "name": "Cholamandalam Investment and Finance Company Ltd.",
     "nse_symbol": "CHOLAFIN",
     "bse_code": "511243",
@@ -4082,8 +4082,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 40.52
   },
   {
-    "symbol": "RECLTD",
     "id": "recltd",
+    "symbol": "RECLTD",
     "name": "REC Ltd.",
     "nse_symbol": "RECLTD",
     "bse_code": "532955",
@@ -4162,8 +4162,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 4.08
   },
   {
-    "symbol": "GAIL",
     "id": "gail",
+    "symbol": "GAIL",
     "name": "GAIL (India) Ltd.",
     "nse_symbol": "GAIL",
     "bse_code": "532155",
@@ -4242,8 +4242,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 28.76
   },
   {
-    "symbol": "DLF",
     "id": "dlf",
+    "symbol": "DLF",
     "name": "DLF Ltd.",
     "nse_symbol": "DLF",
     "bse_code": "532868",
@@ -4322,8 +4322,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 37.63
   },
   {
-    "symbol": "PFC",
     "id": "pfc",
+    "symbol": "PFC",
     "name": "Power Finance Corporation Ltd.",
     "nse_symbol": "PFC",
     "bse_code": "532810",
@@ -4402,8 +4402,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 5.03
   },
   {
-    "symbol": "SIEMENS",
     "id": "siemens",
+    "symbol": "SIEMENS",
     "name": "Siemens Ltd.",
     "nse_symbol": "SIEMENS",
     "bse_code": "500550",
@@ -4482,8 +4482,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 42.21
   },
   {
-    "symbol": "ABB",
     "id": "abb",
+    "symbol": "ABB",
     "name": "ABB India Ltd.",
     "nse_symbol": "ABB",
     "bse_code": "500002",
@@ -4562,8 +4562,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 60.59
   },
   {
-    "symbol": "SBILIFE",
     "id": "sbilife",
+    "symbol": "SBILIFE",
     "name": "SBI Life Insurance Company Ltd.",
     "nse_symbol": "SBILIFE",
     "bse_code": "540719",
@@ -4642,8 +4642,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 1.15
   },
   {
-    "symbol": "HDFCLIFE",
     "id": "hdfclife",
+    "symbol": "HDFCLIFE",
     "name": "HDFC Life Insurance Company Ltd.",
     "nse_symbol": "HDFCLIFE",
     "bse_code": "540777",
@@ -4722,8 +4722,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 0.47
   },
   {
-    "symbol": "ICICIPRULI",
     "id": "icicipruli",
+    "symbol": "ICICIPRULI",
     "name": "ICICI Prudential Life Insurance Company Ltd.",
     "nse_symbol": "ICICIPRULI",
     "bse_code": "540133",
@@ -4802,8 +4802,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 8.71
   },
   {
-    "symbol": "BANKBARODA",
     "id": "bankbaroda",
+    "symbol": "BANKBARODA",
     "name": "Bank of Baroda",
     "nse_symbol": "BANKBARODA",
     "bse_code": "532134",
@@ -4882,8 +4882,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 4.09
   },
   {
-    "symbol": "TATACONSUM",
     "id": "tataconsum",
+    "symbol": "TATACONSUM",
     "name": "Tata Consumer Products Ltd.",
     "nse_symbol": "TATACONSUM",
     "bse_code": "500800",
@@ -4962,8 +4962,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 0.48
   },
   {
-    "symbol": "PNB",
     "id": "pnb",
+    "symbol": "PNB",
     "name": "Punjab National Bank",
     "nse_symbol": "PNB",
     "bse_code": "532461",
@@ -5042,8 +5042,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 18.78
   },
   {
-    "symbol": "CANBK",
     "id": "canbk",
+    "symbol": "CANBK",
     "name": "Canara Bank",
     "nse_symbol": "CANBK",
     "bse_code": "532483",
@@ -5122,8 +5122,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 19.59
   },
   {
-    "symbol": "IDFCFIRSTB",
     "id": "idfcfirstb",
+    "symbol": "IDFCFIRSTB",
     "name": "IDFC First Bank Ltd.",
     "nse_symbol": "IDFCFIRSTB",
     "bse_code": "539437",
@@ -5202,8 +5202,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 46.5
   },
   {
-    "symbol": "FEDERALBNK",
     "id": "federalbnk",
+    "symbol": "FEDERALBNK",
     "name": "Federal Bank Ltd.",
     "nse_symbol": "FEDERALBNK",
     "bse_code": "500469",
@@ -5282,8 +5282,8 @@ export const STOCKS_DATA: Stock[] = [
     "distance_52w_low": 87.55
   },
   {
-    "symbol": "UNIONBANK",
     "id": "unionbank",
+    "symbol": "UNIONBANK",
     "name": "Union Bank of India",
     "nse_symbol": "UNIONBANK",
     "bse_code": "532477",
