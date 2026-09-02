@@ -163,7 +163,7 @@ def merge_and_save(new_stocks: List[Dict[str, Any]]) -> None:
     logger.info("Syncing SQLite database and splitting for Git...")
     generate_sqlite_db(merged, db_path="data/screener.db")
     db_split_join.split_db()
-    logger.info(f"✓ Master dataset updated: {len(merged)} stocks.")
+    logger.info(f"OK Master dataset updated: {len(merged)} stocks.")
 
 def main():
     import argparse
@@ -212,13 +212,13 @@ def main():
                 stock_data = future.result()
                 if stock_data:
                     results.append(stock_data)
-                    print(f"[{i+1}/{len(targets)}] ✓ Successfully ingested {sym} (CMP: ₹{stock_data.get('current_price')})")
+                    print(f"[{i+1}/{len(targets)}] OK Successfully ingested {sym} (CMP: ₹{stock_data.get('current_price')})")
                 else:
                     failed.append(sym)
-                    print(f"[{i+1}/{len(targets)}] ✗ Failed {sym}")
+                    print(f"[{i+1}/{len(targets)}] FAIL Failed {sym}")
             except Exception as e:
                 failed.append(sym)
-                print(f"[{i+1}/{len(targets)}] ✗ Exception on {sym}: {e}")
+                print(f"[{i+1}/{len(targets)}] FAIL Exception on {sym}: {e}")
 
     print(f"\nBatch Complete: {len(results)} succeeded, {len(failed)} failed.")
 

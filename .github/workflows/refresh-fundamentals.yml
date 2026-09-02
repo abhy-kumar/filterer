@@ -1,0 +1,104 @@
+name: Refresh fundamentals
+
+# The full ingest: universe, statements, shareholding, price history.
+#
+# Weekly rather than daily, because this rewrites the whole detail tier and
+# annual and quarterly statements only change when a company files. The ingest
+# is resumable, so a throttled run picks up where it left off on the next one
+# instead of losing the universe.
+
+on:
+  schedule:
+    - cron: '0 5 * * 6'  # Saturday, 10:30 IST, with the market closed
+  workflow_dispatch:
+    inputs:
+      retry_failed:
+        description: 'Only retry companies that failed previously'
+        type: boolean
+        default: false
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    # Yahoo throttles, so the ingest is paced. The ledger means a timeout is
+    # not a lost run: the next scheduled run continues from where it stopped.
+    timeout-minutes: 330
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          npm ci
+
+      # The ledger is not committed, so each run starts from a clean slate and
+      # walks the whole universe. Restoring it from cache lets a run that was
+      # cut short resume instead of re-fetching what already succeeded.
+      - name: Restore the ingest ledger
+        uses: actions/cache/restore@v4
+        with:
+          path: data/ingest.db
+          key: ingest-ledger-${{ github.run_id }}
+          restore-keys: ingest-ledger-
+
+      - name: Refresh the universe from the NSE index
+        run: python -m data_pipeline.universe_source --index nifty500
+
+      - name: Ingest
+        run: |
+          if [ "${{ inputs.retry_failed }}" = "true" ]; then
+            python -m data_pipeline.ingest --retry-failed --rate-limit 1.5
+          else
+            python -m data_pipeline.ingest --rate-limit 1.0
+            python -m data_pipeline.ingest --retry-failed --rate-limit 2.0
+          fi
+
+      - name: Report coverage
+        run: python -m data_pipeline.ingest --status
+
+      - name: Save the ingest ledger
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/ingest.db
+          key: ingest-ledger-${{ github.run_id }}
+
+      - name: Write the app's data files
+        run: python -m data_pipeline.ingest --export
+
+      - name: Rebuild the data tiers
+        run: npm run data:rebuild
+
+      - name: Verify data invariants
+        run: npm test
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/stocksData.ts public/data/stocks data/universe
+          if git diff --cached --quiet; then
+            echo "No change in the data; nothing to commit."
+          else
+            git commit -m "chore(data): weekly fundamentals refresh [skip ci]"
+            git push
+          fi

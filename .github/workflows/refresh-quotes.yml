@@ -1,0 +1,77 @@
+name: Refresh quotes
+
+# Prices and everything derived from them, three times each trading day.
+#
+# This deliberately does NOT touch the detail tier. Statements change once a
+# quarter but weigh ~18 MB; rewriting them three times a day would add well
+# over a gigabyte to the repository every month. Only the small bundled tier
+# (src/data/stocksData.ts, ~0.2 MB) is updated here.
+#
+# The repository is public, so Actions minutes are unlimited and free.
+
+on:
+  schedule:
+    # Times are UTC. IST is UTC+5:30, NSE trades 09:15-15:30 IST.
+    - cron: '30 3 * * 1-5'   # 09:00 IST, before the open
+    - cron: '15 10 * * 1-5'  # 15:45 IST, just after the close
+    - cron: '0 14 * * 1-5'   # 19:30 IST, evening settle
+  workflow_dispatch:
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          npm ci
+
+      - name: Refresh prices and price-derived metrics
+        run: python -m data_pipeline.refresh_quotes
+
+      - name: Refresh market indices
+        run: python -c "from data_pipeline.market_indices import save_indices_cache; save_indices_cache()"
+        continue-on-error: true
+
+      - name: Rebuild the data tiers
+        run: npm run data:rebuild
+
+      # A failing suite means the refresh produced something the app should not
+      # ship: a metric that lost coverage, a series out of order, a screen that
+      # now matches nothing. The job stops here rather than committing it.
+      - name: Verify data invariants
+        run: npm test
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/stocksData.ts public/data/stocks data/market_indices.json public/data/market_indices.json
+          if git diff --cached --quiet; then
+            echo "No change in the data; nothing to commit."
+          else
+            git commit -m "chore(data): refresh quotes [skip ci]"
+            git push
+          fi

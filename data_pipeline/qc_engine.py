@@ -214,7 +214,7 @@ class FinancialQCEngine:
 
     def generate_markdown_report(self, summary: UniverseQCSummary) -> str:
         """Generates an executive-ready markdown quality control report."""
-        status_icon = "✓ PASSED" if summary.failed_stocks == 0 else "⚠ ISSUES DETECTED"
+        status_icon = "OK PASSED" if summary.failed_stocks == 0 else "ISSUES DETECTED"
 
         md = [
             "# Filterer Financial Quality Control (QC) Audit Report",

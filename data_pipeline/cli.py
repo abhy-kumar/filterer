@@ -153,7 +153,7 @@ def run_clean(stocks: List[Dict[str, Any]]) -> None:
         cleaned_stocks.append(s)
 
     save_stocks_to_ts(cleaned_stocks)
-    print("✓ Normalization complete.\n")
+    print("OK Normalization complete.\n")
 
 def run_sync_db(stocks: List[Dict[str, Any]]):
     from scripts.generate_stocks_dataset import generate_sqlite_db
@@ -162,7 +162,7 @@ def run_sync_db(stocks: List[Dict[str, Any]]):
     generate_sqlite_db(stocks, db_path="data/screener.db")
     print("[Splitting database into Git-compliant parts...]")
     db_split_join.split_db()
-    print("✓ SQLite sync and split complete.")
+    print("OK SQLite sync and split complete.")
 
 def run_split_db():
     import db_split_join

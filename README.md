@@ -43,6 +43,9 @@ Filterer is engineered around four core design invariants:
         │   Terminal CLI Scanner  │                                   │   React / Vite Web UI   │
         │       (scanner.py)      │                                   │ (Client-Side AST Engine)│
         └─────────────────────────┘                                   └─────────────────────────┘
+
+   Refreshed by two GitHub Actions workflows: quotes three times each trading
+   day into the 0.2 MB screening tier, fundamentals weekly into the detail tier.
 ```
 
 ---
@@ -159,6 +162,7 @@ truncated run, just the ~13% that happened to get through.
 | Transport | Fixed 0.8s delay, 3 linear retries | `http_client.py`: per-host token buckets, 429/`Retry-After` awareness, exponential backoff with jitter, on-disk response cache, browser impersonation via `curl_cffi` |
 | Price history | One request per company | `batch_price_history()` downloads in chunks of 40, turning ~500 requests into ~13 |
 | Interruption | Lost the whole run | Costs one company |
+| Cadence | One weekly job doing everything | Quotes three times a trading day into the 0.2 MB tier; fundamentals weekly into the detail tier |
 
 `data/ingest.db` is the job ledger. It is safe to interrupt a run and resume.
 
@@ -250,6 +254,9 @@ python -m data_pipeline.ingest                  # everything still pending
 python -m data_pipeline.ingest --retry-failed   # mop up throttled names
 python -m data_pipeline.ingest --export         # write the app's data files
 
+# Price-only refresh: the whole universe in about a dozen batched requests
+python -m data_pipeline.refresh_quotes
+
 # Then rebuild the two front-end tiers and check the invariants
 npm run data:rebuild
 npm test
@@ -284,16 +291,69 @@ Due to GitHub's 50MB file size limit for tracked assets:
 
 ---
 
-## Automated CI/CD Pipelines
+## Scheduled Data Refresh
 
-A GitHub Actions workflow (`.github/workflows/update_market_data.yml`) runs weekly (Saturday 06:00 UTC) to refresh fundamentals, recalculate derived indicators, run the regression suites and commit updated database artifacts.
+Two workflows on different cadences, because the two data tiers change at very
+different rates. The repository is public, so Actions minutes are unlimited.
 
-After any pipeline run, rebuild the two data tiers:
+### `refresh-quotes.yml` — three times each trading day
 
-```bash
-npm run data:rebuild   # repair, then split
-npm test               # the dataset invariants below must hold
+`03:30`, `10:15` and `14:00` UTC, Monday to Friday (09:00, 15:45 and 19:30 IST:
+before the open, just after the close, and an evening settle).
+
+Runs `data_pipeline/refresh_quotes.py`, which updates only what moves with the
+price: last price, day change, market capitalisation, the 52-week band and
+distances, the 50- and 200-day averages, RSI, volume, and the P/E and P/B that
+follow from them. The whole universe downloads in batches of 40 tickers, so a
+run is roughly a dozen requests and finishes in under a minute.
+
+It touches only `src/data/stocksData.ts`, about 0.2 MB.
+
+### `refresh-fundamentals.yml` — weekly
+
+Saturday 05:00 UTC, with the market closed. Refreshes the universe from the NSE
+index, then runs the full ingest: statements, shareholding and price history,
+followed by a `--retry-failed` pass at a gentler rate for anything Yahoo
+throttled. The SQLite ledger is carried between runs through the Actions cache,
+so a run that hits the time limit resumes rather than starting over.
+
+### Why the split
+
+Statements change when a company files, roughly once a quarter, but the detail
+tier weighs about 18 MB across 500 files. Rewriting it three times a day would
+add well over a gigabyte to the repository every month for data that had not
+changed. Quotes move constantly and live in a tier 90 times smaller.
+
+### Both workflows stop before committing if the suite fails
+
+```yaml
+- name: Verify data invariants
+  run: npm test          # no `|| true`, no `continue-on-error`
 ```
+
+A failing suite means the refresh produced something that should not ship: a
+metric that lost coverage, a series out of order, a curated screen that now
+matches nothing. The previous workflow ran `pytest || echo "Tests failed but
+continuing with data commit"`, which is how a dataset with five empty columns
+reached production in the first place.
+
+Nothing is committed when the data is unchanged, so a quiet day costs an empty
+run rather than a commit.
+
+---
+
+## A Note on Firebase
+
+Firestore is optional and off the critical path. The detail tier is static JSON
+served from the repository through the CDN, which is free, uncapped and faster
+than a database round-trip. The Firebase SDK is dynamically imported, so it is
+not in the entry bundle unless credentials are configured.
+
+If you do enable Firestore, the Spark tier allows 50,000 document reads and
+20,000 writes a day. Writing 500 companies three times daily is 1,500 writes, a
+small fraction of the quota. Reads are the risk: one company page view is one
+read, so a traffic spike is what would exhaust it, not the refresh schedule.
+Serving the JSON statically avoids that entirely.
 
 ---
 

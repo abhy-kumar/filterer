@@ -93,7 +93,7 @@ def upload_to_firestore(stocks: list[dict], batch_size: int = 50) -> None:
         batch.commit()
         logger.info(f"  Uploaded batch {i // batch_size + 1}: stocks {i + 1}-{min(i + batch_size, total)}")
 
-    logger.info(f"✓ All {total} stocks uploaded to Firestore")
+    logger.info(f"OK All {total} stocks uploaded to Firestore")
 
 
 def upload_market_indices(indices_path: str = "data/market_indices.json") -> None:
@@ -113,7 +113,7 @@ def upload_market_indices(indices_path: str = "data/market_indices.json") -> Non
 
     doc_ref = db.collection("market").document("indices")
     doc_ref.set(_clean_for_firestore(data), merge=True)
-    logger.info(f"✓ Market indices uploaded to Firestore")
+    logger.info(f"OK Market indices uploaded to Firestore")
 
 
 def verify_upload(symbol: str = "RELIANCE") -> None:
@@ -124,9 +124,9 @@ def verify_upload(symbol: str = "RELIANCE") -> None:
 
     if doc.exists:
         data = doc.to_dict()
-        logger.info(f"✓ Verified {symbol}: ₹{data.get('current_price', '?')} | MCap ₹{data.get('market_cap', '?')} Cr")
+        logger.info(f"OK Verified {symbol}: ₹{data.get('current_price', '?')} | MCap ₹{data.get('market_cap', '?')} Cr")
     else:
-        logger.error(f"✗ Document {symbol} not found in Firestore")
+        logger.error(f"FAIL Document {symbol} not found in Firestore")
 
 
 if __name__ == "__main__":

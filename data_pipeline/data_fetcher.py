@@ -182,7 +182,7 @@ class StockDataFetcher:
                 stock["peers"] = []
 
                 logger.info(
-                    f"✓ {clean_sym}: ₹{cmp:,.0f} | MCap ₹{mcap_cr:,.0f} Cr | "
+                    f"OK {clean_sym}: ₹{cmp:,.0f} | MCap ₹{mcap_cr:,.0f} Cr | "
                     f"PE {stock['pe_ratio']} | ROCE {stock['roce']}%"
                 )
                 return stock
