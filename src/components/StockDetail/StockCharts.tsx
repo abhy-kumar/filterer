@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 import { Stock } from '../../types/stock';
 import { LineChart } from 'lucide-react';
+import { useTheme } from '../../context/ThemeContext';
 
 interface StockChartsProps {
   stock: Stock;
@@ -20,6 +21,7 @@ interface StockChartsProps {
 
 export const StockCharts: React.FC<StockChartsProps> = ({ stock }) => {
   const [activeTab, setActiveTab] = useState<'price' | 'pe' | 'sales'>('price');
+  const { isDark } = useTheme();
 
   const priceData = stock.historical_prices || [];
 
@@ -37,16 +39,28 @@ export const StockCharts: React.FC<StockChartsProps> = ({ stock }) => {
     price: d.price,
   }));
 
+  const tooltipStyle = {
+    backgroundColor: isDark ? '#161618' : '#ffffff',
+    borderColor: isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)',
+    borderRadius: '14px',
+    fontSize: '12px',
+    color: isDark ? '#f5f5f7' : '#1d1d1f',
+    boxShadow: isDark ? '0 8px 32px rgba(0,0,0,0.6)' : '0 4px 20px rgba(0,0,0,0.1)',
+  };
+
+  const axisColor = isDark ? '#8e8e93' : '#6e6e73';
+  const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+
   return (
-    <div className="w-full apple-glass rounded-3xl border border-white/[0.08] p-6 shadow-2xl mb-8">
+    <div className="w-full apple-card p-6 shadow-sm mb-8 border border-apple">
       {/* Header & Tabs */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06] mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-apple-border-subtle mb-6">
         <div>
-          <h3 className="text-base font-semibold text-white dark:text-white light:text-slate-900 flex items-center gap-2">
-            <LineChart className="w-4 h-4 text-[#2997ff]" />
+          <h3 className="text-base font-bold text-apple-primary flex items-center gap-2 font-display">
+            <LineChart className="w-4 h-4 text-apple-blue" />
             Historical Technical & Valuation Trends
           </h3>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <p className="text-xs text-apple-muted mt-0.5">
             50/200 Day Moving Averages, historical P/E multiples, and operating margin trends.
           </p>
         </div>
@@ -79,23 +93,14 @@ export const StockCharts: React.FC<StockChartsProps> = ({ stock }) => {
         {activeTab === 'price' && (
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={priceData} margin={{ top: 10, right: 10, left: 10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis dataKey="date" stroke="#86868b" tick={{ fontSize: 11 }} />
-              <YAxis stroke="#86868b" domain={['auto', 'auto']} tick={{ fontSize: 11 }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: '#0a0e17',
-                  borderColor: 'rgba(255,255,255,0.12)',
-                  borderRadius: '16px',
-                  fontSize: '12px',
-                  color: '#fff',
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
-                }}
-              />
+              <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
+              <XAxis dataKey="date" stroke={axisColor} tick={{ fontSize: 11 }} />
+              <YAxis stroke={axisColor} domain={['auto', 'auto']} tick={{ fontSize: 11 }} />
+              <Tooltip contentStyle={tooltipStyle} />
               <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
-              <Area type="monotone" dataKey="price" name="Share Price (₹)" stroke="#2997ff" fill="rgba(41, 151, 255, 0.12)" strokeWidth={2.5} />
-              <Line type="monotone" dataKey="dma_50" name="50 DMA (₹)" stroke="#30d158" strokeWidth={1.8} dot={false} strokeDasharray="4 4" />
-              <Line type="monotone" dataKey="dma_200" name="200 DMA (₹)" stroke="#ff9f0a" strokeWidth={1.8} dot={false} strokeDasharray="2 2" />
+              <Area type="monotone" dataKey="price" name="Share Price (₹)" stroke={isDark ? '#2997ff' : '#0071e3'} fill={isDark ? 'rgba(41, 151, 255, 0.12)' : 'rgba(0, 113, 227, 0.08)'} strokeWidth={2.5} />
+              <Line type="monotone" dataKey="dma_50" name="50 DMA (₹)" stroke={isDark ? '#30d158' : '#248a3d'} strokeWidth={1.8} dot={false} strokeDasharray="4 4" />
+              <Line type="monotone" dataKey="dma_200" name="200 DMA (₹)" stroke={isDark ? '#ff9f0a' : '#b25000'} strokeWidth={1.8} dot={false} strokeDasharray="2 2" />
             </ComposedChart>
           </ResponsiveContainer>
         )}
@@ -103,21 +108,13 @@ export const StockCharts: React.FC<StockChartsProps> = ({ stock }) => {
         {activeTab === 'pe' && (
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={peData} margin={{ top: 10, right: 10, left: 10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis dataKey="date" stroke="#86868b" tick={{ fontSize: 11 }} />
-              <YAxis stroke="#86868b" domain={['auto', 'auto']} tick={{ fontSize: 11 }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: '#0a0e17',
-                  borderColor: 'rgba(255,255,255,0.12)',
-                  borderRadius: '16px',
-                  fontSize: '12px',
-                  color: '#fff',
-                }}
-              />
+              <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
+              <XAxis dataKey="date" stroke={axisColor} tick={{ fontSize: 11 }} />
+              <YAxis stroke={axisColor} domain={['auto', 'auto']} tick={{ fontSize: 11 }} />
+              <Tooltip contentStyle={tooltipStyle} />
               <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
-              <Line type="monotone" dataKey="pe" name="P/E Ratio" stroke="#bf5af2" strokeWidth={2.5} dot={false} />
-              <Line type="monotone" dataKey="median_pe" name="Current P/E" stroke="#86868b" strokeWidth={1.5} strokeDasharray="3 3" dot={false} />
+              <Line type="monotone" dataKey="pe" name="P/E Ratio" stroke={isDark ? '#bf5af2' : '#8944ab'} strokeWidth={2.5} dot={false} />
+              <Line type="monotone" dataKey="median_pe" name="Current P/E" stroke={axisColor} strokeWidth={1.5} strokeDasharray="3 3" dot={false} />
             </ComposedChart>
           </ResponsiveContainer>
         )}
@@ -125,23 +122,15 @@ export const StockCharts: React.FC<StockChartsProps> = ({ stock }) => {
         {activeTab === 'sales' && (
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart data={salesData} margin={{ top: 10, right: 10, left: 10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-              <XAxis dataKey="year" stroke="#86868b" tick={{ fontSize: 11 }} />
-              <YAxis yAxisId="left" stroke="#86868b" tick={{ fontSize: 11 }} />
-              <YAxis yAxisId="right" orientation="right" stroke="#30d158" unit="%" domain={[0, 50]} tick={{ fontSize: 11 }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: '#0a0e17',
-                  borderColor: 'rgba(255,255,255,0.12)',
-                  borderRadius: '16px',
-                  fontSize: '12px',
-                  color: '#fff',
-                }}
-              />
+              <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
+              <XAxis dataKey="year" stroke={axisColor} tick={{ fontSize: 11 }} />
+              <YAxis yAxisId="left" stroke={axisColor} tick={{ fontSize: 11 }} />
+              <YAxis yAxisId="right" orientation="right" stroke={isDark ? '#30d158' : '#248a3d'} unit="%" domain={[0, 50]} tick={{ fontSize: 11 }} />
+              <Tooltip contentStyle={tooltipStyle} />
               <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
-              <Bar yAxisId="left" dataKey="sales" name="Sales (₹ Cr)" fill="#2997ff" radius={[6, 6, 0, 0]} />
-              <Bar yAxisId="left" dataKey="net_profit" name="Net Profit (₹ Cr)" fill="#5e5ce6" radius={[6, 6, 0, 0]} />
-              <Line yAxisId="right" type="monotone" dataKey="opm" name="OPM %" stroke="#30d158" strokeWidth={2.5} dot={{ r: 3 }} />
+              <Bar yAxisId="left" dataKey="sales" name="Sales (₹ Cr)" fill={isDark ? '#2997ff' : '#0071e3'} radius={[6, 6, 0, 0]} />
+              <Bar yAxisId="left" dataKey="net_profit" name="Net Profit (₹ Cr)" fill={isDark ? '#5e5ce6' : '#5856d6'} radius={[6, 6, 0, 0]} />
+              <Line yAxisId="right" type="monotone" dataKey="opm" name="OPM %" stroke={isDark ? '#30d158' : '#248a3d'} strokeWidth={2.5} dot={{ r: 3 }} />
             </ComposedChart>
           </ResponsiveContainer>
         )}

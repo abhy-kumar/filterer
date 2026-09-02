@@ -8,31 +8,27 @@ import { CommandPalette } from './components/CommandPalette';
 import { SaveScreenModal } from './components/SaveScreenModal';
 import { Footer } from './components/Footer';
 import { StockDetailPage } from './pages/StockDetailPage';
-import { Stock, ScreenFilter } from './types/stock';
+import { ScreenFilter } from './types/stock';
 import { STOCKS_DATA } from './data/stocksData';
 import { executeScreenerQuery } from './engine/screenerParser';
-import { Sparkles, SlidersHorizontal, Bookmark, Trash2, Play } from 'lucide-react';
+import { SlidersHorizontal, Bookmark, Trash2, Play, Search, Zap, ShieldCheck } from 'lucide-react';
+import { useTheme } from './context/ThemeContext';
 
 export const App: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const { isDark } = useTheme();
 
   const queryFromUrl = searchParams.get('q') || 'Market Capitalization > 500 AND Return on capital employed > 18 AND Debt to equity < 0.2';
-  
-  // We'll keep local query state so they can type without changing URL on every keystroke
-  // Or we can just use the URL. Better to let `query` be local and URL be updated on run?
-  // User asked: "When on /screen?q=..., read the query from URL search params".
-  // So queryFromUrl is the source of truth for execution. Let's keep local state for the input box, sync on run.
   const [query, setQuery] = useState<string>(queryFromUrl);
-  
+
   useEffect(() => {
     setQuery(queryFromUrl);
   }, [queryFromUrl]);
 
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
 
   // Saved Screens in LocalStorage
   const [savedScreens, setSavedScreens] = useState<ScreenFilter[]>(() => {
@@ -43,18 +39,6 @@ export const App: React.FC = () => {
       return [];
     }
   });
-
-  // Toggle Theme Class on HTML root
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDark) {
-      root.classList.add('dark');
-      root.classList.remove('light');
-    } else {
-      root.classList.remove('dark');
-      root.classList.add('light');
-    }
-  }, [isDark]);
 
   // Execute Query on Stocks Data
   const screenResult = useMemo(() => {
@@ -118,45 +102,57 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#06090e] dark:bg-[#06090e] light:bg-[#f8fafc]">
+    <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary transition-colors duration-200">
       <Header
         onOpenSearch={() => setIsCommandPaletteOpen(true)}
-        isDark={isDark}
-        onToggleTheme={() => setIsDark(!isDark)}
         savedScreensCount={savedScreens.length}
       />
 
       <Routes>
         <Route path="/" element={
           <>
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
               <div className="animate-fade-in">
-                <div className="mb-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-sky-900/30 via-slate-900/50 to-indigo-900/20 border border-white/10 relative overflow-hidden">
-                  <div className="relative z-10 max-w-2xl">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-semibold border border-sky-500/20 mb-4">
-                      <Sparkles className="w-3.5 h-3.5" />
-                      Free & Open Quantitative Stock Screener
+                {/* Apple macOS-Style Command Banner */}
+                <div className="mb-8 p-6 sm:p-8 rounded-3xl apple-card relative overflow-hidden">
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div className="max-w-2xl">
+                      <div className="flex items-center gap-2 mb-3 flex-wrap">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-apple-blue-subtle text-apple-blue text-xs font-semibold font-mono border border-apple-blue/20">
+                          <Zap className="w-3 h-3" />
+                          Sub-10ms AST Engine
+                        </span>
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-apple-green-subtle text-apple-green text-xs font-semibold font-mono border border-apple-green/20">
+                          <ShieldCheck className="w-3 h-3" />
+                          500 Nifty Equities
+                        </span>
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-apple-subtle text-apple-muted text-xs font-mono border border-apple-border">
+                          Zero Paywalls • 100% Free
+                        </span>
+                      </div>
+
+                      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-apple-primary font-display">
+                        Indian Equity Screener
+                      </h1>
+                      <p className="text-sm text-apple-secondary mt-2 leading-relaxed">
+                        Construct quantitative valuation screens with Screener.in natural query syntax, multi-variable financial formulas, and instant in-browser AST evaluation.
+                      </p>
                     </div>
-                    <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                      Discover High-Conviction <br className="hidden sm:inline" />
-                      Indian Equities with Ease
-                    </h1>
-                    <p className="text-sm text-slate-300 mt-3 leading-relaxed">
-                      Screen over 500+ NSE & BSE stocks using Screener.in compatible formulas, 100+ fundamental indicators, and institutional quantitative models.
-                    </p>
-                    <div className="mt-6 flex items-center gap-3 flex-wrap">
+
+                    <div className="flex items-center gap-3 shrink-0 flex-wrap">
                       <button
                         onClick={() => navigate('/screen')}
-                        className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white text-xs font-bold shadow-lg shadow-sky-500/25 transition-all flex items-center gap-2"
+                        className="px-5 py-2.5 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold shadow-sm transition-all flex items-center gap-2 active:scale-95"
                       >
-                        <SlidersHorizontal className="w-4 h-4" />
-                        Open Custom Screener
+                        <SlidersHorizontal className="w-3.5 h-3.5" />
+                        <span>Query Builder</span>
                       </button>
                       <button
                         onClick={() => setIsCommandPaletteOpen(true)}
-                        className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-white/10 transition-all"
+                        className="px-4 py-2.5 rounded-xl bg-apple-subtle hover:bg-apple-surface-active text-apple-primary text-xs font-medium border border-apple-border transition-all flex items-center gap-2 active:scale-95 shadow-xs"
                       >
-                        Quick Search (Ctrl+K)
+                        <Search className="w-3.5 h-3.5 text-apple-muted" />
+                        <span>Search (⌘K)</span>
                       </button>
                     </div>
                   </div>
@@ -167,21 +163,21 @@ export const App: React.FC = () => {
                   onRunScreen={handleRunScreen}
                 />
 
-                <div className="mt-12">
+                <div className="mt-10">
                   <div className="flex items-center justify-between gap-4 mb-4">
                     <div>
-                      <h3 className="text-lg font-bold text-white dark:text-white light:text-slate-900">
-                        Featured Screen: Debt-Free High Return Leaders
+                      <h3 className="text-lg font-bold text-apple-primary font-display">
+                        Featured Strategy: Debt-Free High Return Leaders
                       </h3>
-                      <p className="text-xs text-slate-400 mt-0.5">
-                        Live matches for: <code className="text-sky-400 font-mono">{queryFromUrl}</code>
+                      <p className="text-xs text-apple-muted mt-0.5">
+                        Matches: <code className="text-apple-blue font-mono font-medium">{queryFromUrl}</code>
                       </p>
                     </div>
                     <button
                       onClick={() => navigate('/screen')}
-                      className="text-xs font-semibold text-sky-400 hover:underline flex items-center gap-1"
+                      className="text-xs font-semibold text-apple-blue hover:underline flex items-center gap-1"
                     >
-                      Edit Filter Query &rarr;
+                      Edit Query &rarr;
                     </button>
                   </div>
 
@@ -199,7 +195,7 @@ export const App: React.FC = () => {
 
         <Route path="/screen" element={
           <>
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
               <div className="animate-fade-in">
                 <ScreenQueryBuilder
                   query={query}
@@ -223,38 +219,38 @@ export const App: React.FC = () => {
 
         <Route path="/saved" element={
           <>
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
               <div className="animate-fade-in">
                 <div className="flex items-center justify-between gap-4 mb-6">
                   <div>
-                    <h2 className="text-xl font-bold text-white dark:text-white light:text-slate-900 flex items-center gap-2">
-                      <Bookmark className="w-5 h-5 text-sky-400" />
-                      Your Saved Screens ({savedScreens.length})
+                    <h2 className="text-2xl font-bold text-apple-primary font-display flex items-center gap-2">
+                      <Bookmark className="w-6 h-6 text-apple-blue" />
+                      Saved Screens
                     </h2>
-                    <p className="text-xs text-slate-400 mt-1">
-                      Custom screens and formulas saved in your browser.
+                    <p className="text-xs text-apple-muted mt-1">
+                      Custom financial filters stored locally in your browser session.
                     </p>
                   </div>
                   <button
                     onClick={() => navigate('/screen')}
-                    className="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-white text-xs font-bold shadow-md shadow-sky-500/20"
+                    className="px-4 py-2 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold shadow-sm transition-all"
                   >
                     + Create New Screen
                   </button>
                 </div>
 
                 {savedScreens.length === 0 ? (
-                  <div className="bg-[#0c1017] rounded-2xl border border-white/10 p-12 text-center">
-                    <Bookmark className="w-12 h-12 text-slate-600 mx-auto mb-3" />
-                    <h3 className="text-base font-bold text-white mb-1">No Saved Screens Yet</h3>
-                    <p className="text-xs text-slate-400 max-w-md mx-auto mb-6">
-                      Build custom formulas in the Screener Query Editor and click "Save Custom Screen" to keep them here for quick access.
+                  <div className="apple-card p-12 text-center my-8">
+                    <Bookmark className="w-12 h-12 text-apple-muted mx-auto mb-3 opacity-40" />
+                    <h3 className="text-base font-semibold text-apple-primary">No Saved Screens Yet</h3>
+                    <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1 mb-5">
+                      Save your custom screening formulas to quickly re-run quantitative analyses across the Nifty 500.
                     </p>
                     <button
                       onClick={() => navigate('/screen')}
-                      className="px-5 py-2.5 rounded-xl bg-sky-500 text-white text-xs font-bold"
+                      className="px-5 py-2.5 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold transition-all shadow-sm"
                     >
-                      Go to Custom Screener
+                      Open Query Builder
                     </button>
                   </div>
                 ) : (
@@ -263,43 +259,36 @@ export const App: React.FC = () => {
                       <div
                         key={screen.id}
                         onClick={() => handleRunScreen(screen.query)}
-                        className="bg-[#0c1017] rounded-2xl border border-white/10 p-5 hover:border-sky-500/40 cursor-pointer transition-all flex flex-col justify-between group"
+                        className="apple-card p-5 cursor-pointer flex flex-col justify-between group"
                       >
                         <div>
                           <div className="flex items-start justify-between gap-2 mb-2">
-                            <h3 className="text-sm font-bold text-white group-hover:text-sky-400 transition-colors">
+                            <h3 className="text-sm font-semibold text-apple-primary group-hover:text-apple-blue transition-colors">
                               {screen.title}
                             </h3>
                             <button
                               onClick={(e) => handleDeleteSavedScreen(screen.id, e)}
-                              className="p-1 rounded-md text-slate-500 hover:text-rose-400 hover:bg-rose-500/10 transition-colors"
-                              title="Delete Screen"
+                              className="p-1.5 rounded-lg text-apple-muted hover:text-apple-red hover:bg-apple-red-subtle transition-colors"
+                              title="Delete screen"
                             >
                               <Trash2 className="w-3.5 h-3.5" />
                             </button>
                           </div>
-                          <p className="text-xs text-slate-400 line-clamp-2 mb-3">
-                            {screen.description}
+                          <p className="text-xs text-apple-muted line-clamp-2">
+                            {screen.description || 'Custom user formula'}
                           </p>
-                          <div className="p-2.5 rounded-lg bg-slate-950 font-mono text-[11px] text-slate-400 line-clamp-2">
+                          <div className="mt-3 p-2.5 rounded-xl bg-apple-subtle border border-apple-border font-mono text-[11px] text-apple-secondary line-clamp-2">
                             {screen.query}
                           </div>
                         </div>
 
-                        <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
-                          <span className="text-[10px] font-mono uppercase text-slate-500">
-                            {screen.category}
+                        <div className="mt-4 pt-3 border-t border-apple-border flex items-center justify-between">
+                          <span className="text-[10px] font-mono text-apple-muted">
+                            {screen.createdAt ? new Date(screen.createdAt).toLocaleDateString() : 'Curated'}
                           </span>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleRunScreen(screen.query);
-                            }}
-                            className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 text-xs font-bold hover:bg-sky-500 hover:text-white transition-all"
-                          >
-                            <Play className="w-3 h-3 fill-current" />
-                            <span>Run</span>
-                          </button>
+                          <span className="text-xs font-semibold text-apple-blue flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                            Run Screen &rarr;
+                          </span>
                         </div>
                       </div>
                     ))}
@@ -317,19 +306,13 @@ export const App: React.FC = () => {
       <CommandPalette
         isOpen={isCommandPaletteOpen}
         onClose={() => setIsCommandPaletteOpen(false)}
-        onSelectStock={(s) => navigate(`/stock/${s.symbol}`)}
-        onSelectScreen={(s) => handleRunScreen(s.query)}
-        onInsertMetric={(metric) => {
-          setQuery((prev) => (prev ? `${prev} AND ${metric} > ` : `${metric} > `));
-          navigate('/screen');
-        }}
       />
 
       <SaveScreenModal
         isOpen={isSaveModalOpen}
         onClose={() => setIsSaveModalOpen(false)}
-        query={queryFromUrl}
         onSave={handleSaveScreen}
+        query={query}
       />
     </div>
   );

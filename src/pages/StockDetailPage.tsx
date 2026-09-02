@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { STOCKS_DATA } from '../data/stocksData';
 import { fetchStockDetail } from '../lib/firebase';
+import { Header } from '../components/Header';
 import { StockHeader } from '../components/StockDetail/StockHeader';
 import { StockProsCons } from '../components/StockDetail/StockProsCons';
 import { StockCharts } from '../components/StockDetail/StockCharts';
@@ -40,13 +41,12 @@ export const StockDetailPage: React.FC = () => {
       .finally(() => setIsLoading(false));
   }, [symbol]);
 
-  // Merge bundled data with remote detail data (remote takes priority for financial statements)
+  // Merge bundled data with remote detail data
   const stock = useMemo<Stock | null>(() => {
     if (!bundledStock) return null;
     if (!remoteData) return bundledStock;
     return {
       ...bundledStock,
-      // Override with remote data for detail fields (financial statements, etc.)
       annual_pnl: remoteData.annual_pnl || bundledStock.annual_pnl,
       quarterly_results: remoteData.quarterly_results || bundledStock.quarterly_results,
       balance_sheet: remoteData.balance_sheet || bundledStock.balance_sheet,
@@ -64,17 +64,23 @@ export const StockDetailPage: React.FC = () => {
 
   if (!bundledStock) {
     return (
-      <div className="min-h-screen flex flex-col bg-[#06090e] dark:bg-[#06090e] light:bg-[#f8fafc]">
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Stock not found</h2>
-          <p className="text-sm text-slate-400 mb-6">No data available for symbol "{symbol}"</p>
-          <button 
-            onClick={() => navigate('/')} 
-            className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold"
-          >
-            Go Home
-          </button>
+      <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary">
+        <Header />
+        <div className="flex-1 flex flex-col items-center justify-center p-8">
+          <div className="apple-card p-8 max-w-md w-full text-center">
+            <h2 className="text-xl font-bold text-apple-primary mb-2 font-display">Stock Not Found</h2>
+            <p className="text-xs text-apple-muted mb-6">
+              No matching equity records for symbol "{symbol}". Please verify the NSE ticker.
+            </p>
+            <button
+              onClick={() => navigate('/')}
+              className="px-5 py-2.5 rounded-xl bg-apple-blue hover:opacity-90 text-white font-semibold text-xs transition-all shadow-sm"
+            >
+              Return to Screener
+            </button>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -89,22 +95,26 @@ export const StockDetailPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#05070a] text-white">
-      <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 flex flex-col">
-        {/* Top Control Bar */}
-        <div className="sticky top-0 z-40 apple-glass py-3 px-4 rounded-2xl border border-white/[0.08] flex items-center justify-between gap-4 mb-6 shadow-lg">
-          <div className="flex items-center gap-2 text-xs text-slate-400">
+    <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary transition-colors duration-200">
+      <Header />
+
+      <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+        {/* Top Sticky Control Bar */}
+        <div className="sticky top-16 z-30 apple-glass py-2.5 px-4 rounded-2xl border border-apple flex items-center justify-between gap-4 mb-6 shadow-sm">
+          <div className="flex items-center gap-2 text-xs text-apple-muted">
             <button
               onClick={() => navigate('/')}
-              className="flex items-center gap-1.5 font-medium hover:text-white transition-colors"
+              className="flex items-center gap-1.5 font-medium hover:text-apple-primary transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Home</span>
+              <span>Screener</span>
             </button>
-            <ChevronRight className="w-3.5 h-3.5 opacity-50" />
-            <span className="font-semibold text-[#2997ff] font-mono">{stock.symbol}</span>
-            <span className="hidden sm:inline text-slate-600">•</span>
-            <span className="hidden sm:inline text-slate-300 font-medium">{stock.name}</span>
+            <ChevronRight className="w-3.5 h-3.5 opacity-40" />
+            <span className="font-semibold text-apple-blue font-mono">{stock.symbol}</span>
+            <span className="hidden sm:inline text-apple-muted">•</span>
+            <span className="hidden sm:inline text-apple-secondary font-medium truncate max-w-[200px]">
+              {stock.name}
+            </span>
           </div>
 
           {/* Quick Sub-navigation Anchors */}
@@ -119,6 +129,13 @@ export const StockDetailPage: React.FC = () => {
             <button onClick={() => scrollTo('sec-ratios')} className="apple-segmented-item py-1 px-2.5">Ratios</button>
             <button onClick={() => scrollTo('sec-shareholding')} className="apple-segmented-item py-1 px-2.5">Shareholding</button>
           </div>
+
+          {isLoading && (
+            <div className="flex items-center gap-1.5 text-[11px] text-apple-muted font-mono">
+              <Loader2 className="w-3 h-3 animate-spin text-apple-blue" />
+              <span className="hidden sm:inline">Syncing statements...</span>
+            </div>
+          )}
         </div>
 
         {/* Detailed Financial Sections */}
@@ -166,6 +183,7 @@ export const StockDetailPage: React.FC = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

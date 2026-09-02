@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Sparkles,
   ShieldCheck,
   TrendingUp,
   Gem,
@@ -15,29 +14,30 @@ import {
   CheckCircle,
   Play,
   Copy,
-  Check
+  Check,
+  Compass
 } from 'lucide-react';
 import { ScreenFilter } from '../types/stock';
 import { CURATED_SCREENS } from '../data/screens';
 
 interface PresetScreensProps {
-  onSelectScreen: (screen: ScreenFilter) => void;
-  onRunScreen: (query: string) => void;
+  onSelectScreen?: (screen: ScreenFilter) => void;
+  onRunScreen?: (query: string) => void;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  ShieldCheck: <ShieldCheck className="w-5 h-5 text-[#30d158]" />,
-  Sparkles: <Sparkles className="w-5 h-5 text-[#ff9f0a]" />,
-  TrendingUp: <TrendingUp className="w-5 h-5 text-[#2997ff]" />,
-  Gem: <Gem className="w-5 h-5 text-[#5e5ce6]" />,
-  Zap: <Zap className="w-5 h-5 text-[#ffd60a]" />,
-  Landmark: <Landmark className="w-5 h-5 text-[#64d2ff]" />,
-  Award: <Award className="w-5 h-5 text-[#bf5af2]" />,
-  Coins: <Coins className="w-5 h-5 text-[#30d158]" />,
-  PiggyBank: <PiggyBank className="w-5 h-5 text-[#ff375f]" />,
-  Flame: <Flame className="w-5 h-5 text-[#ff9f0a]" />,
-  Activity: <Activity className="w-5 h-5 text-[#64d2ff]" />,
-  CheckCircle: <CheckCircle className="w-5 h-5 text-[#30d158]" />,
+  ShieldCheck: <ShieldCheck className="w-4 h-4 text-apple-green" />,
+  Sparkles: <Zap className="w-4 h-4 text-apple-amber" />,
+  TrendingUp: <TrendingUp className="w-4 h-4 text-apple-blue" />,
+  Gem: <Gem className="w-4 h-4 text-apple-indigo" />,
+  Zap: <Zap className="w-4 h-4 text-apple-amber" />,
+  Landmark: <Landmark className="w-4 h-4 text-apple-blue" />,
+  Award: <Award className="w-4 h-4 text-apple-indigo" />,
+  Coins: <Coins className="w-4 h-4 text-apple-green" />,
+  PiggyBank: <PiggyBank className="w-4 h-4 text-apple-red" />,
+  Flame: <Flame className="w-4 h-4 text-apple-amber" />,
+  Activity: <Activity className="w-4 h-4 text-apple-blue" />,
+  CheckCircle: <CheckCircle className="w-4 h-4 text-apple-green" />,
 };
 
 export const PresetScreens: React.FC<PresetScreensProps> = ({
@@ -63,15 +63,15 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({
 
   return (
     <div className="w-full mb-10">
-      {/* Category Tabs */}
+      {/* Category Tabs & Section Header */}
       <div className="flex items-center justify-between gap-4 mb-6 flex-wrap">
         <div>
-          <h2 className="text-xl font-bold text-white dark:text-white light:text-slate-900 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-[#2997ff]" />
-            Curated Screen Strategies
+          <h2 className="text-xl font-bold text-apple-primary font-display flex items-center gap-2">
+            <Compass className="w-5 h-5 text-apple-blue" />
+            Curated Investment Strategies
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
-            Proven quantitative investment formulas and screening rules for Indian equities.
+          <p className="text-xs text-apple-muted mt-1">
+            Pre-configured valuation models and quantitative screens for Indian equities.
           </p>
         </div>
 
@@ -105,41 +105,42 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({
             <div>
               {/* Card Header */}
               <div className="flex items-start justify-between gap-3 mb-3">
-                <div className="w-10 h-10 rounded-2xl bg-white/[0.04] dark:bg-white/[0.04] light:bg-black/[0.04] border border-white/[0.08] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                  {iconMap[screen.iconName] || <Sparkles className="w-5 h-5 text-[#2997ff]" />}
+                <div className="w-9 h-9 rounded-xl bg-apple-subtle border border-apple-border flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                  {iconMap[screen.iconName] || <Zap className="w-4 h-4 text-apple-blue" />}
                 </div>
-                <span className="px-2 py-0.5 rounded-full bg-white/[0.06] text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                <span className="px-2 py-0.5 rounded-full bg-apple-subtle text-[10px] font-mono text-apple-muted uppercase tracking-wider border border-apple-border-subtle">
                   {screen.category}
                 </span>
               </div>
 
               {/* Title & Description */}
-              <h3 className="text-sm font-semibold text-white dark:text-white light:text-slate-900 group-hover:text-[#2997ff] transition-colors">
+              <h3 className="text-sm font-semibold text-apple-primary group-hover:text-apple-blue transition-colors">
                 {screen.title}
               </h3>
-              <p className="text-xs text-slate-400 mt-1.5 line-clamp-2 leading-relaxed">
+              <p className="text-xs text-apple-secondary mt-1.5 line-clamp-2 leading-relaxed">
                 {screen.description}
               </p>
 
               {/* Query Box */}
-              <div className="mt-3.5 p-2.5 rounded-xl bg-black/40 border border-white/[0.04] font-mono text-[11px] text-slate-400 line-clamp-2 leading-relaxed">
+              <div className="mt-3.5 p-2.5 rounded-xl bg-apple-subtle border border-apple-border-subtle font-mono text-[11px] text-apple-secondary line-clamp-2 leading-relaxed">
                 {screen.query}
               </div>
             </div>
 
             {/* Bottom Controls */}
-            <div className="mt-5 pt-3.5 border-t border-white/[0.06] flex items-center justify-between gap-2">
-              <span className="text-[11px] text-slate-500 font-medium">
-                By {screen.author || 'Quant Team'}
+            <div className="mt-5 pt-3.5 border-t border-apple-border-subtle flex items-center justify-between gap-2">
+              <span className="text-[11px] text-apple-muted font-medium">
+                {screen.author || 'Quant Model'}
               </span>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <button
                   onClick={(e) => handleCopy(screen.id, screen.query, e)}
-                  className="p-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-all text-xs border border-white/[0.06]"
+                  className="p-1.5 rounded-lg bg-apple-subtle hover:bg-apple-surface-active text-apple-muted hover:text-apple-primary border border-apple-border transition-all text-xs"
                   title="Copy Query"
+                  aria-label="Copy Query Formula"
                 >
-                  {copiedId === screen.id ? <Check className="w-3.5 h-3.5 text-[#30d158]" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copiedId === screen.id ? <Check className="w-3.5 h-3.5 text-apple-green" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
                 <button
                   onClick={(e) => {
@@ -147,7 +148,7 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({
                     navigate(`/screen?q=${encodeURIComponent(screen.query)}`);
                     if (onRunScreen) onRunScreen(screen.query);
                   }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#2997ff]/15 hover:bg-[#2997ff] text-[#2997ff] hover:text-white border border-[#2997ff]/30 text-xs font-semibold transition-all shadow-xs"
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold transition-all shadow-xs active:scale-95"
                 >
                   <Play className="w-3 h-3 fill-current" />
                   <span>Run</span>

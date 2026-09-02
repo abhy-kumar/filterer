@@ -233,6 +233,7 @@ export interface ScreenFilter {
   category: 'Popular' | 'Growth' | 'Valuation' | 'Technicals' | 'Safety' | 'Dividends';
   iconName: string;
   author?: string;
+  createdAt?: string;
 }
 
 export interface ScreenResult {

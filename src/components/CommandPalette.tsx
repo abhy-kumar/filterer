@@ -9,9 +9,9 @@ import { METRICS_DICTIONARY } from '../engine/metricsDictionary';
 interface CommandPaletteProps {
   isOpen: boolean;
   onClose: () => void;
-  onSelectStock: (stock: Stock) => void;
-  onSelectScreen: (screen: ScreenFilter) => void;
-  onInsertMetric: (metricName: string) => void;
+  onSelectStock?: (stock: Stock) => void;
+  onSelectScreen?: (screen: ScreenFilter) => void;
+  onInsertMetric?: (metricName: string) => void;
 }
 
 export const CommandPalette: React.FC<CommandPaletteProps> = ({
@@ -23,13 +23,11 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
 }) => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (isOpen) {
       setSearchTerm('');
-      setSelectedIndex(0);
       setTimeout(() => inputRef.current?.focus(), 50);
     }
   }, [isOpen]);
@@ -39,9 +37,6 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         if (isOpen) onClose();
-        else {
-          // Open
-        }
       }
       if (e.key === 'Escape' && isOpen) {
         onClose();
@@ -60,63 +55,63 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       s.symbol.toLowerCase().includes(query) ||
       s.name.toLowerCase().includes(query) ||
       s.sector.toLowerCase().includes(query)
-  ).slice(0, 5);
+  ).slice(0, 6);
 
   const matchingScreens = CURATED_SCREENS.filter(
-    (sc) =>
-      sc.title.toLowerCase().includes(query) ||
-      sc.description.toLowerCase().includes(query) ||
-      sc.category.toLowerCase().includes(query)
-  ).slice(0, 3);
+    (s) =>
+      s.title.toLowerCase().includes(query) ||
+      s.description.toLowerCase().includes(query) ||
+      s.category.toLowerCase().includes(query)
+  ).slice(0, 4);
 
   const matchingMetrics = METRICS_DICTIONARY.filter(
     (m) =>
       m.name.toLowerCase().includes(query) ||
-      m.aliases.some((a) => a.toLowerCase().includes(query)) ||
-      m.description.toLowerCase().includes(query)
-  ).slice(0, 4);
+      m.description.toLowerCase().includes(query) ||
+      m.aliases.some((a) => a.toLowerCase().includes(query))
+  ).slice(0, 5);
 
-  const totalResults = matchingStocks.length + matchingScreens.length + matchingMetrics.length;
+  const hasResults =
+    matchingStocks.length > 0 || matchingScreens.length > 0 || matchingMetrics.length > 0;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-xs flex items-start justify-center pt-20 p-4 animate-fade-in">
-      <div className="bg-[#0e141f] dark:bg-[#0e141f] light:bg-white w-full max-w-2xl rounded-2xl border border-white/10 dark:border-white/10 light:border-slate-300 shadow-2xl overflow-hidden flex flex-col">
-        {/* Search Header */}
-        <div className="p-4 border-b border-white/10 flex items-center gap-3">
-          <Search className="w-5 h-5 text-sky-400 shrink-0" />
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-start justify-center pt-16 sm:pt-24 p-4 animate-fade-in">
+      <div className="bg-apple-card w-full max-w-2xl rounded-3xl border border-apple shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+        {/* Top Search Bar */}
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-apple-border-subtle bg-apple-subtle">
+          <Search className="w-5 h-5 text-apple-muted shrink-0" />
           <input
             ref={inputRef}
             type="text"
             value={searchTerm}
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-              setSelectedIndex(0);
-            }}
-            placeholder="Type a stock symbol, company name, formula ratio, or screen..."
-            className="w-full bg-transparent text-sm sm:text-base text-white dark:text-white light:text-slate-900 placeholder-slate-500 focus:outline-hidden"
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search across 500 stocks, curated screens, financial ratios..."
+            className="w-full bg-transparent text-sm sm:text-base text-apple-primary placeholder-apple-muted focus:outline-hidden"
           />
-          <button
-            onClick={onClose}
-            className="p-1 rounded-md text-slate-400 hover:text-white"
-          >
-            <X className="w-4 h-4" />
-          </button>
+          {searchTerm && (
+            <button onClick={() => setSearchTerm('')} className="p-1 text-apple-muted hover:text-apple-primary">
+              <X className="w-4 h-4" />
+            </button>
+          )}
+          <kbd className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono text-apple-muted bg-apple-card rounded-md border border-apple-border">
+            ESC
+          </kbd>
         </div>
 
-        {/* Results Body */}
-        <div className="max-h-96 overflow-y-auto p-3 space-y-4">
-          {totalResults === 0 ? (
-            <div className="py-8 text-center text-xs text-slate-500">
-              No results found for "{searchTerm}".
+        {/* Search Results Area */}
+        <div className="overflow-y-auto p-3 space-y-4 flex-1">
+          {!hasResults && query ? (
+            <div className="py-12 text-center text-apple-muted text-xs">
+              No results found for "{searchTerm}". Try searching by ticker (e.g. RELIANCE), screen name, or ratio.
             </div>
           ) : (
             <>
               {/* Stocks Section */}
               {matchingStocks.length > 0 && (
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1 flex items-center gap-1.5">
-                    <Building2 className="w-3.5 h-3.5 text-sky-400" />
-                    Stocks & Companies
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-apple-muted px-3 py-1 flex items-center gap-1.5 font-display">
+                    <Building2 className="w-3.5 h-3.5 text-apple-blue" />
+                    Stocks ({matchingStocks.length})
                   </div>
                   <div className="space-y-1 mt-1">
                     {matchingStocks.map((stock) => (
@@ -127,25 +122,25 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                           if (onSelectStock) onSelectStock(stock);
                           onClose();
                         }}
-                        className="p-2.5 rounded-xl hover:bg-slate-800/80 cursor-pointer flex items-center justify-between group transition-colors"
+                        className="p-2.5 rounded-xl hover:bg-apple-surface-hover cursor-pointer flex items-center justify-between group transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <span className="font-bold text-sky-400 font-mono text-sm group-hover:text-sky-300">
+                          <span className="font-bold text-apple-blue font-mono text-sm group-hover:underline">
                             {stock.symbol}
                           </span>
-                          <span className="text-xs text-slate-200 dark:text-slate-200 light:text-slate-800 truncate max-w-xs">
+                          <span className="text-xs text-apple-primary truncate max-w-xs">
                             {stock.name}
                           </span>
-                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 hidden sm:inline">
+                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-apple-subtle text-apple-muted hidden sm:inline border border-apple-border-subtle">
                             {stock.sector}
                           </span>
                         </div>
                         <div className="flex items-center gap-3 font-mono text-xs">
-                          <span className="text-white font-semibold">₹{stock.current_price.toLocaleString('en-IN')}</span>
-                          <span className={`text-[11px] ${stock.change_pct >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                          <span className="text-apple-primary font-semibold">₹{stock.current_price.toLocaleString('en-IN')}</span>
+                          <span className={`text-[11px] ${stock.change_pct >= 0 ? 'text-apple-green' : 'text-apple-red'}`}>
                             {stock.change_pct >= 0 ? '+' : ''}{stock.change_pct.toFixed(2)}%
                           </span>
-                          <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-white" />
+                          <ChevronRight className="w-4 h-4 text-apple-muted group-hover:text-apple-primary" />
                         </div>
                       </div>
                     ))}
@@ -156,8 +151,8 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
               {/* Screens Section */}
               {matchingScreens.length > 0 && (
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-apple-muted px-3 py-1 flex items-center gap-1.5 font-display">
+                    <Sparkles className="w-3.5 h-3.5 text-apple-amber" />
                     Curated Screens
                   </div>
                   <div className="space-y-1 mt-1">
@@ -169,17 +164,17 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                           if (onSelectScreen) onSelectScreen(screen);
                           onClose();
                         }}
-                        className="p-2.5 rounded-xl hover:bg-slate-800/80 cursor-pointer flex items-center justify-between group transition-colors"
+                        className="p-2.5 rounded-xl hover:bg-apple-surface-hover cursor-pointer flex items-center justify-between group transition-colors"
                       >
                         <div>
-                          <div className="text-xs font-bold text-slate-200 dark:text-slate-200 light:text-slate-800 group-hover:text-amber-400">
+                          <div className="text-xs font-bold text-apple-primary group-hover:text-apple-blue">
                             {screen.title}
                           </div>
-                          <div className="text-[11px] text-slate-400 truncate max-w-md mt-0.5">
+                          <div className="text-[11px] text-apple-muted truncate max-w-md mt-0.5">
                             {screen.description}
                           </div>
                         </div>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400 uppercase">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-apple-subtle text-apple-muted uppercase border border-apple-border-subtle">
                           {screen.category}
                         </span>
                       </div>
@@ -191,8 +186,8 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
               {/* Ratios & Metrics Section */}
               {matchingMetrics.length > 0 && (
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1 flex items-center gap-1.5">
-                    <Hash className="w-3.5 h-3.5 text-emerald-400" />
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-apple-muted px-3 py-1 flex items-center gap-1.5 font-display">
+                    <Hash className="w-3.5 h-3.5 text-apple-green" />
                     Screener Ratios
                   </div>
                   <div className="space-y-1 mt-1">
@@ -200,27 +195,25 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                       <div
                         key={metric.id}
                         onClick={() => {
-                          onInsertMetric(metric.name);
+                          if (onInsertMetric) onInsertMetric(metric.name);
                           onClose();
                         }}
-                        className="p-2.5 rounded-xl hover:bg-slate-800/80 cursor-pointer flex items-center justify-between group transition-colors"
+                        className="p-2.5 rounded-xl hover:bg-apple-surface-hover cursor-pointer flex items-center justify-between group transition-colors"
                       >
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="text-xs font-bold text-slate-200 group-hover:text-emerald-400">
+                            <span className="text-xs font-bold text-apple-primary group-hover:text-apple-green">
                               {metric.name}
                             </span>
-                            <span className="text-[10px] font-mono px-1 rounded bg-slate-800 text-sky-400">
+                            <span className="text-[10px] font-mono px-1 rounded bg-apple-subtle text-apple-blue border border-apple-border-subtle">
                               {metric.unit}
                             </span>
                           </div>
-                          <div className="text-[11px] text-slate-400 truncate max-w-md mt-0.5">
+                          <div className="text-[11px] text-apple-muted truncate max-w-md mt-0.5">
                             {metric.description}
                           </div>
                         </div>
-                        <span className="text-[10px] text-slate-500 font-mono">
-                          Insert +
-                        </span>
+                        <span className="text-[10px] text-apple-muted font-mono">Insert &crarr;</span>
                       </div>
                     ))}
                   </div>
@@ -230,10 +223,10 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
           )}
         </div>
 
-        {/* Footer */}
-        <div className="p-3 bg-slate-950/80 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-500">
-          <span>Search stocks, screens, or formulas</span>
-          <span>Press <kbd className="px-1.5 py-0.5 bg-slate-800 rounded font-mono text-slate-400">Esc</kbd> to exit</span>
+        {/* Footer info */}
+        <div className="px-4 py-2.5 border-t border-apple-border-subtle bg-apple-subtle text-[11px] text-apple-muted flex items-center justify-between">
+          <span>Search stocks, strategies, or formulas</span>
+          <span>Press ESC to exit</span>
         </div>
       </div>
     </div>
