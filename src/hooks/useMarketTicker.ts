@@ -71,7 +71,9 @@ export function useMarketTicker() {
     return () => clearInterval(timer);
   }, []);
 
-  // Fetch or simulate live index micro-ticks
+  const [dataAsOf, setDataAsOf] = useState<string>('2024-03-15 15:30:00 IST');
+
+  // Fetch live index data
   const fetchIndices = useCallback(async () => {
     setIsRefreshing(true);
     try {
@@ -89,6 +91,8 @@ export function useMarketTicker() {
           });
 
           setIndices(data.indices);
+          if (data.dataAsOf) setDataAsOf(data.dataAsOf);
+          
           if (Object.keys(newFlashes).length > 0) {
             setFlashingIndex(newFlashes);
             setTimeout(() => setFlashingIndex({}), 1000);
@@ -98,34 +102,6 @@ export function useMarketTicker() {
         }
       }
     } catch {}
-
-    // Fallback: apply micro-fluctuations during live market simulation
-    setIndices((prev) => {
-      const updated = prev.map((idx) => {
-        const jitterPct = (Math.random() - 0.48) * 0.05;
-        const newPrice = Math.round((idx.price * (1 + jitterPct / 100)) * 100) / 100;
-        const diff = newPrice - (idx.price - idx.change);
-        const diffPct = Math.round(((diff / (idx.price - idx.change)) * 100) * 100) / 100;
-        return {
-          ...idx,
-          price: newPrice,
-          change: Math.round(diff * 100) / 100,
-          change_pct: diffPct,
-          is_up: diff >= 0,
-        };
-      });
-
-      const flashes: Record<string, 'up' | 'down'> = {};
-      updated.forEach((idx, i) => {
-        if (idx.price !== prev[i].price) {
-          flashes[idx.name] = idx.price > prev[i].price ? 'up' : 'down';
-        }
-      });
-      setFlashingIndex(flashes);
-      setTimeout(() => setFlashingIndex({}), 1000);
-
-      return updated;
-    });
 
     setIsRefreshing(false);
   }, []);
@@ -146,6 +122,7 @@ export function useMarketTicker() {
     isMarketOpen,
     timeIST,
     dateIST,
+    dataAsOf,
     isRefreshing,
     flashingIndex,
     refreshIndices: fetchIndices,

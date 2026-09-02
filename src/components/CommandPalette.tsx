@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, Sparkles, Building2, HelpCircle, X, ChevronRight, Hash } from 'lucide-react';
 import { Stock, ScreenFilter, MetricDefinition } from '../types/stock';
 import { STOCKS_DATA } from '../data/stocksData';
@@ -20,6 +21,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
   onSelectScreen,
   onInsertMetric,
 }) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -121,7 +123,8 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                       <div
                         key={stock.symbol}
                         onClick={() => {
-                          onSelectStock(stock);
+                          navigate(`/stock/${stock.symbol}`);
+                          if (onSelectStock) onSelectStock(stock);
                           onClose();
                         }}
                         className="p-2.5 rounded-xl hover:bg-slate-800/80 cursor-pointer flex items-center justify-between group transition-colors"
@@ -162,7 +165,8 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
                       <div
                         key={screen.id}
                         onClick={() => {
-                          onSelectScreen(screen);
+                          navigate(`/screen?q=${encodeURIComponent(screen.query)}`);
+                          if (onSelectScreen) onSelectScreen(screen);
                           onClose();
                         }}
                         className="p-2.5 rounded-xl hover:bg-slate-800/80 cursor-pointer flex items-center justify-between group transition-colors"

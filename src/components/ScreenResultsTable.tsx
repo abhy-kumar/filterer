@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   ArrowUpDown,
   ArrowUp,
@@ -34,6 +35,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({
   onSelectStock,
   onExportCSV,
 }) => {
+  const navigate = useNavigate();
   const [searchFilter, setSearchFilter] = useState('');
   const [sectorFilter, setSectorFilter] = useState('All');
   const [sortKey, setSortKey] = useState<string>('market_cap');
@@ -237,7 +239,10 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({
               paginatedStocks.map((stock) => (
                 <tr
                   key={stock.symbol}
-                  onClick={() => onSelectStock(stock)}
+                  onClick={() => {
+                    navigate(`/stock/${stock.symbol}`);
+                    if (onSelectStock) onSelectStock(stock);
+                  }}
                   className="group hover:bg-[#2997ff]/[0.05] transition-colors cursor-pointer"
                 >
                   {/* Symbol & Name Column */}

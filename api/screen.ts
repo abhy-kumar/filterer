@@ -12,8 +12,18 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const query = (req.query.q as string) || (req.body && req.body.query) || '';
-  const limit = req.query.limit ? parseInt(req.query.limit as string) : 50;
-  const page = req.query.page ? parseInt(req.query.page as string) : 1;
+  const limitStr = req.query.limit as string;
+  const pageStr = req.query.page as string;
+  const limit = limitStr ? parseInt(limitStr, 10) : 25;
+  const page = pageStr ? parseInt(pageStr, 10) : 1;
+
+  if (isNaN(limit) || limit <= 0) {
+    return res.status(400).json({ success: false, error: 'Invalid limit parameter' });
+  }
+
+  if (isNaN(page) || page <= 0) {
+    return res.status(400).json({ success: false, error: 'Invalid page parameter' });
+  }
 
   try {
     const result = executeScreenerQuery(query, STOCKS_DATA);

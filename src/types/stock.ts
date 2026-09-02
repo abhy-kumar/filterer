@@ -131,6 +131,7 @@ export interface Stock {
   price_to_fcf: number;
   dividend_yield: number;
   book_value: number;
+  eps: number;
 
   // Profitability & Margins
   roce: number;

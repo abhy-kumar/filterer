@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Layers, ExternalLink } from 'lucide-react';
 import { Stock, PeerInfo } from '../../types/stock';
 
@@ -8,6 +9,7 @@ interface PeersTableProps {
 }
 
 export const PeersTable: React.FC<PeersTableProps> = ({ stock, onSelectPeer }) => {
+  const navigate = useNavigate();
   const peers = stock.peers || [];
 
   if (peers.length === 0) return null;
@@ -83,7 +85,10 @@ export const PeersTable: React.FC<PeersTableProps> = ({ stock, onSelectPeer }) =
             {peers.map((peer) => (
               <tr
                 key={peer.symbol}
-                onClick={() => onSelectPeer && onSelectPeer(peer.symbol)}
+                onClick={() => {
+                  navigate(`/stock/${peer.symbol}`);
+                  if (onSelectPeer) onSelectPeer(peer.symbol);
+                }}
                 className="hover:bg-slate-800/40 transition-colors cursor-pointer group"
               >
                 <td className="py-2.5 px-4 sticky left-0 z-10 bg-[#0c1017] dark:bg-[#0c1017] light:bg-white text-slate-200 dark:text-slate-200 light:text-slate-800 group-hover:text-sky-400 font-medium">

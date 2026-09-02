@@ -1,7 +1,13 @@
-import pytest
 import os
+import sys
+import pytest
 import pandas as pd
+
+# Ensure repository root is on sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from data_pipeline.screener_engine import translate_screener_query_to_sql, run_query
+from data_pipeline.stock_universe import get_symbols, get_universe
 import db_split_join
 
 def test_sql_translation():
@@ -20,3 +26,14 @@ def test_run_query_against_db():
     assert "symbol" in df.columns
     assert "roce" in df.columns
     assert "current_price" in df.columns
+
+
+def test_stock_universe_nifty500():
+    universe = get_universe()
+    assert len(universe) == 500
+    symbols = get_symbols()
+    assert len(symbols) == 500
+    assert "RELIANCE" in symbols
+    assert "TCS" in symbols
+    assert "INFY" in symbols
+    assert "HDFCBANK" in symbols

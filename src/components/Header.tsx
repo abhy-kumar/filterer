@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import {
   SlidersHorizontal,
   Bookmark,
@@ -9,15 +10,12 @@ import {
   RotateCw,
   TrendingUp,
   TrendingDown,
-  Layers,
-  Circle
+  Layers
 } from 'lucide-react';
 import { GithubLogo } from '@phosphor-icons/react';
 import { useMarketTicker } from '../hooks/useMarketTicker';
 
 interface HeaderProps {
-  currentTab: 'screens' | 'query' | 'saved';
-  onSelectTab: (tab: 'screens' | 'query' | 'saved') => void;
   onOpenSearch: () => void;
   isDark: boolean;
   onToggleTheme: () => void;
@@ -25,18 +23,28 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  currentTab,
-  onSelectTab,
   onOpenSearch,
   isDark,
   onToggleTheme,
   savedScreensCount,
 }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const currentTab = location.pathname === '/' 
+    ? 'screens' 
+    : location.pathname.startsWith('/screen') 
+      ? 'query' 
+      : location.pathname === '/saved' 
+        ? 'saved' 
+        : '';
+
   const {
     indices,
     isMarketOpen,
     timeIST,
     dateIST,
+    dataAsOf,
     isRefreshing,
     flashingIndex,
     refreshIndices
@@ -109,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span>{isRefreshing ? 'Updating...' : 'Live'}</span>
           </button>
           <span>•</span>
-          <span className="text-slate-400">{dateIST}</span>
+          <span className="text-slate-400">Data as of {dataAsOf}</span>
         </div>
       </div>
 
@@ -117,8 +125,8 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Left: Apple Brand Logo */}
         <div className="flex items-center gap-8">
-          <div
-            onClick={() => onSelectTab('screens')}
+          <Link
+            to="/"
             className="flex items-center gap-2.5 cursor-pointer select-none group"
           >
             <div className="w-9 h-9 rounded-2xl bg-gradient-to-b from-[#2997ff] to-[#0071e3] flex items-center justify-center text-white shadow-lg shadow-[#0071e3]/25 group-hover:scale-105 transition-transform">
@@ -129,20 +137,20 @@ export const Header: React.FC<HeaderProps> = ({
                 <span className="text-base font-bold tracking-tight text-white dark:text-white light:text-slate-900 font-sans">
                   Filterer
                 </span>
-                <span className="px-1.5 py-0.2 rounded-full text-[9px] font-semibold bg-[#2997ff]/15 text-[#2997ff] border border-[#2997ff]/30 tracking-wider">
-                  PRO
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 tracking-wider">
+                  NIFTY 500
                 </span>
               </div>
               <p className="text-[10px] text-slate-400 leading-none hidden sm:block">
-                Open Screener.in Platform
+                Quantitative Equity Screener
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Center: Apple Segmented Pill Navigation */}
           <nav className="hidden md:flex items-center apple-segmented p-1">
             <button
-              onClick={() => onSelectTab('screens')}
+              onClick={() => navigate('/')}
               className={`apple-segmented-item flex items-center gap-1.5 ${
                 currentTab === 'screens' ? 'active' : ''
               }`}
@@ -152,7 +160,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             <button
-              onClick={() => onSelectTab('query')}
+              onClick={() => navigate('/screen')}
               className={`apple-segmented-item flex items-center gap-1.5 ${
                 currentTab === 'query' ? 'active' : ''
               }`}
@@ -162,7 +170,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             <button
-              onClick={() => onSelectTab('saved')}
+              onClick={() => navigate('/saved')}
               className={`apple-segmented-item flex items-center gap-1.5 ${
                 currentTab === 'saved' ? 'active' : ''
               }`}

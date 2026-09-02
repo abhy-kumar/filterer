@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Sparkles,
   ShieldCheck,
@@ -43,6 +44,7 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({
   onSelectScreen,
   onRunScreen,
 }) => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
@@ -94,7 +96,10 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({
         {filteredScreens.map((screen) => (
           <div
             key={screen.id}
-            onClick={() => onSelectScreen(screen)}
+            onClick={() => {
+              navigate(`/screen?q=${encodeURIComponent(screen.query)}`);
+              if (onSelectScreen) onSelectScreen(screen);
+            }}
             className="apple-card p-5 cursor-pointer flex flex-col justify-between group"
           >
             <div>
@@ -139,7 +144,8 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    onRunScreen(screen.query);
+                    navigate(`/screen?q=${encodeURIComponent(screen.query)}`);
+                    if (onRunScreen) onRunScreen(screen.query);
                   }}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#2997ff]/15 hover:bg-[#2997ff] text-[#2997ff] hover:text-white border border-[#2997ff]/30 text-xs font-semibold transition-all shadow-xs"
                 >

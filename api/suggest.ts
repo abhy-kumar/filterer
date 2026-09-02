@@ -26,7 +26,19 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     }
   }
 
-  const suggestions = METRICS_DICTIONARY.map((m) => ({
+  const q = query.toLowerCase().trim();
+  let filteredMetrics = METRICS_DICTIONARY;
+  
+  if (q) {
+    filteredMetrics = filteredMetrics.filter((m) => {
+      const matchName = m.name.toLowerCase().startsWith(q);
+      const matchShortName = m.short_name?.toLowerCase().startsWith(q);
+      const matchAlias = m.aliases?.some(alias => alias.toLowerCase().startsWith(q));
+      return matchName || matchShortName || matchAlias;
+    });
+  }
+
+  const suggestions = filteredMetrics.slice(0, 15).map((m) => ({
     name: m.name,
     category: m.category,
     unit: m.unit,

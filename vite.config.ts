@@ -10,13 +10,14 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 1500,
     rollupOptions: {
       output: {
         manualChunks: {
-          'vendor-react': ['react', 'react-dom'],
-          'vendor-charts': ['recharts', 'lightweight-charts'],
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-charts': ['recharts'],
           'vendor-icons': ['lucide-react', '@phosphor-icons/react'],
+          'vendor-firebase': ['firebase/app', 'firebase/firestore'],
         },
       },
     },

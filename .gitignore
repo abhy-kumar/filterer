@@ -30,6 +30,14 @@ data/market_scans.db
 !data/screener.db.part_*
 !data/market_scans.db.part_*
 
+# Firebase credentials (NEVER commit)
+data_pipeline/firebase-credentials.json
+firebase-credentials.json
+*.json.key
+
+# Generated stock detail JSONs (too large for git)
+public/data/stocks/
+
 # Environment & OS
 .env
 .env.local

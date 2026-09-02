@@ -1,8 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Filter, Heart, Shield, Code2, Database } from 'lucide-react';
 import { GithubLogo } from '@phosphor-icons/react';
+import { CURATED_SCREENS } from '../data/screens';
 
 export const Footer: React.FC = () => {
+  const getScreenUrl = (id: string) => {
+    const screen = CURATED_SCREENS.find(s => s.id === id);
+    if (!screen) return '/screen';
+    return `/screen?q=${encodeURIComponent(screen.query)}`;
+  };
+
   return (
     <footer className="w-full border-t border-white/10 dark:border-white/10 light:border-slate-200 bg-[#06090e] dark:bg-[#06090e] light:bg-slate-50 py-12 mt-16 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,11 +47,11 @@ export const Footer: React.FC = () => {
               Popular Screens
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Magic Formula</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Debt Free Compounders</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Graham Undervalued</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">High Piotroski F-Score</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Institutional Buying</a></li>
+              <li><Link to={getScreenUrl('magic-formula')} className="hover:text-sky-400 transition-colors">Magic Formula</Link></li>
+              <li><Link to={getScreenUrl('debt-free-compounders')} className="hover:text-sky-400 transition-colors">Debt Free Compounders</Link></li>
+              <li><Link to={getScreenUrl('undervalued-bargains')} className="hover:text-sky-400 transition-colors">Graham Undervalued</Link></li>
+              <li><Link to={getScreenUrl('piotroski-high-score')} className="hover:text-sky-400 transition-colors">High Piotroski F-Score</Link></li>
+              <li><Link to={getScreenUrl('fii-dii-buying')} className="hover:text-sky-400 transition-colors">Institutional Buying</Link></li>
             </ul>
           </div>
 
@@ -64,9 +72,9 @@ export const Footer: React.FC = () => {
                   GitHub Repository
                 </a>
               </li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">API Documentation</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Formula Dictionary</a></li>
-              <li><a href="#" className="hover:text-sky-400 transition-colors">Python Pipeline</a></li>
+              <li><a href="https://github.com/abhy-kumar/filterer" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">API Documentation</a></li>
+              <li><Link to="/screen" className="hover:text-sky-400 transition-colors">Formula Dictionary</Link></li>
+              <li><a href="https://github.com/abhy-kumar/filterer" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">Python Pipeline</a></li>
             </ul>
           </div>
         </div>
