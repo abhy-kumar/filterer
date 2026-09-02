@@ -1,151 +1,155 @@
 import React from 'react';
-import {
-  TrendingUp,
-  TrendingDown,
-  Globe,
-  Building2,
-  ShieldCheck
-} from 'lucide-react';
-import { Stock } from '../../types/stock';
+import { Globe, ShieldCheck } from 'lucide-react';
+import type { Stock } from '../../types/stock';
+import { crore, isReported, multiple, pct, price, signClass } from '../../lib/format';
 
-interface StockHeaderProps {
-  stock: Stock;
+interface KeyFigure {
+  label: string;
+  value: string;
+  /** Set when the figure is worth calling out either way. */
+  tone?: 'good' | 'bad';
+  hint?: string;
 }
 
-export const StockHeader: React.FC<StockHeaderProps> = ({ stock }) => {
+export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
   const isUp = stock.change >= 0;
 
-  const ratioCards = [
-    { label: 'Market Cap', value: `₹ ${stock.market_cap.toLocaleString('en-IN')} Cr`, isPrimary: true },
-    { label: 'Current Price', value: `₹ ${stock.current_price.toLocaleString('en-IN')}`, isPrimary: true },
-    { label: 'High / Low', value: `₹ ${stock.high_52w.toLocaleString('en-IN')} / ${stock.low_52w.toLocaleString('en-IN')}` },
-    { label: 'Stock P/E', value: stock.pe_ratio > 0 ? stock.pe_ratio.toFixed(1) : '-' },
-    { label: 'Book Value', value: `₹ ${stock.book_value.toFixed(1)}` },
-    { label: 'Dividend Yield', value: `${stock.dividend_yield.toFixed(2)} %` },
-    { label: 'ROCE', value: `${stock.roce.toFixed(1)} %`, isHighlight: stock.roce >= 20 },
-    { label: 'ROE', value: `${stock.roe.toFixed(1)} %`, isHighlight: stock.roe >= 18 },
-    { label: 'Face Value', value: `₹ ${stock.face_value.toFixed(1)}` },
-    { label: 'Industry P/E', value: stock.industry_pe.toFixed(1) },
-    { label: 'PEG Ratio', value: stock.peg_ratio.toFixed(2) },
-    { label: 'Graham Number', value: `₹ ${stock.graham_number.toFixed(1)}` },
+  const figures: KeyFigure[] = [
+    { label: 'Market cap', value: crore(stock.market_cap) },
+    { label: '52-week range', value: `${price(stock.low_52w)} – ${price(stock.high_52w)}` },
+    {
+      label: 'P/E',
+      value: multiple(stock.pe_ratio),
+      hint: isReported(stock.industry_pe) ? `sector median ${stock.industry_pe.toFixed(1)}` : undefined,
+      tone:
+        isReported(stock.pe_ratio) && isReported(stock.industry_pe)
+          ? stock.pe_ratio < stock.industry_pe
+            ? 'good'
+            : undefined
+          : undefined,
+    },
+    { label: 'P/B', value: multiple(stock.pb_ratio, 2) },
+    { label: 'Book value', value: price(stock.book_value) },
+    { label: 'Dividend yield', value: pct(stock.dividend_yield, 2) },
+    {
+      label: 'ROCE',
+      value: pct(stock.roce),
+      tone: isReported(stock.roce) && stock.roce >= 20 ? 'good' : undefined,
+    },
+    {
+      label: 'ROE',
+      value: pct(stock.roe),
+      tone: isReported(stock.roe) && stock.roe >= 18 ? 'good' : undefined,
+    },
+    {
+      label: 'Debt / equity',
+      value: multiple(stock.debt_to_equity, 2),
+      tone: isReported(stock.debt_to_equity) && stock.debt_to_equity > 1.5 ? 'bad' : undefined,
+    },
+    { label: 'PEG', value: multiple(stock.peg_ratio, 2) },
+    { label: 'Graham number', value: price(stock.graham_number) },
+    { label: 'Face value', value: price(stock.face_value) },
   ];
 
-  const rangePct = Math.min(
-    100,
-    Math.max(
-      0,
-      ((stock.current_price - stock.low_52w) / (stock.high_52w - stock.low_52w || 1)) * 100
-    )
-  );
+  const band = stock.high_52w - stock.low_52w;
+  const position = band > 0
+    ? Math.min(100, Math.max(0, ((stock.current_price - stock.low_52w) / band) * 100))
+    : 50;
 
   return (
-    <div className="w-full apple-card p-6 sm:p-7 shadow-sm mb-6 border border-apple">
-      {/* Top Identity Row */}
-      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 border-b border-apple-border-subtle">
-        <div>
-          <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl sm:text-3xl font-bold text-apple-primary tracking-tight font-display">
+    <div className="apple-card p-5 sm:p-6">
+      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2.5 flex-wrap">
+            <h1 className="text-2xl sm:text-[1.75rem] font-bold tracking-[-0.03em] text-apple-primary font-display">
               {stock.name}
             </h1>
-            <span className="px-2.5 py-0.5 rounded-full bg-apple-blue-subtle text-apple-blue font-mono font-bold text-xs border border-apple-blue/20">
-              {stock.symbol}
-            </span>
-            {stock.bse_code && (
-              <span className="px-2 py-0.5 rounded-full bg-apple-subtle text-apple-muted font-mono text-[11px] border border-apple-border-subtle">
-                BSE: {stock.bse_code}
-              </span>
-            )}
-            {stock.debt_to_equity < 0.1 && (
-              <span className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-apple-green-subtle text-apple-green text-xs font-semibold border border-apple-green/20">
-                <ShieldCheck className="w-3.5 h-3.5" />
-                Virtually Debt Free
+            <span className="apple-tag font-mono">{stock.symbol}</span>
+            {stock.bse_code && <span className="apple-tag font-mono">BSE {stock.bse_code}</span>}
+            {isReported(stock.debt_to_equity) && stock.debt_to_equity < 0.1 && (
+              <span className="apple-tag" style={{ color: 'var(--apple-green)' }}>
+                <ShieldCheck className="w-3 h-3" />
+                Virtually debt free
               </span>
             )}
           </div>
 
-          <div className="flex items-center gap-4 mt-2 text-xs text-apple-muted flex-wrap">
-            <span className="flex items-center gap-1">
-              <Building2 className="w-3.5 h-3.5 text-apple-muted" />
-              {stock.sector} • {stock.industry}
+          <p className="flex items-center gap-3 mt-2 text-xs text-apple-muted flex-wrap">
+            <span>
+              {stock.sector} · {stock.industry}
             </span>
             {stock.website && (
               <a
                 href={stock.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-apple-blue hover:underline"
+                className="inline-flex items-center gap-1 text-apple-blue hover:underline"
               >
-                <Globe className="w-3.5 h-3.5" />
-                Official Website
+                <Globe className="w-3 h-3" />
+                Website
               </a>
             )}
-          </div>
-
-          <p className="text-xs text-apple-secondary mt-3 max-w-3xl leading-relaxed">
-            {stock.about}
           </p>
+
+          {stock.about && (
+            <p className="text-xs text-apple-secondary mt-3.5 max-w-3xl leading-relaxed line-clamp-4">
+              {stock.about}
+            </p>
+          )}
         </div>
 
-        {/* Live Price Display & 52W Gauge */}
-        <div className="flex flex-col items-start lg:items-end shrink-0 bg-apple-subtle p-4 rounded-2xl border border-apple-border shadow-xs">
-          <div className="text-3xl font-bold font-mono text-apple-primary">
-            ₹{stock.current_price.toLocaleString('en-IN')}
+        {/* Price block */}
+        <div className="shrink-0 lg:text-right">
+          <div className="text-[2rem] font-semibold font-mono tabular-nums text-apple-primary leading-none">
+            {price(stock.current_price)}
           </div>
-          <div
-            className={`flex items-center gap-1 font-mono text-sm font-semibold mt-1 ${
-              isUp ? 'text-apple-green' : 'text-apple-red'
-            }`}
-          >
-            {isUp ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
-            <span>{isUp ? '+' : ''}{stock.change.toFixed(2)}</span>
-            <span>({isUp ? '+' : ''}{stock.change_pct.toFixed(2)}%)</span>
+          <div className={`mt-1.5 font-mono text-sm tabular-nums ${signClass(stock.change_pct)}`}>
+            {isUp ? '+' : ''}
+            {stock.change.toFixed(2)} ({isUp ? '+' : ''}
+            {stock.change_pct.toFixed(2)}%)
           </div>
 
-          {/* 52W Range Indicator */}
-          <div className="w-48 sm:w-56 mt-3">
-            <div className="flex justify-between text-[10px] font-mono text-apple-muted mb-1">
-              <span>L: ₹{stock.low_52w}</span>
-              <span>52W Range</span>
-              <span>H: ₹{stock.high_52w}</span>
-            </div>
-            <div className="w-full h-1.5 rounded-full bg-apple-border overflow-hidden relative">
-              <div
-                className="h-full bg-gradient-to-r from-apple-blue to-apple-green rounded-full"
-                style={{ width: `${rangePct}%` }}
+          <div className="w-full lg:w-56 mt-4">
+            <div
+              className="h-1 rounded-full relative"
+              style={{ background: 'var(--apple-bg-tertiary)' }}
+              role="img"
+              aria-label={`Trading at ${position.toFixed(0)}% of its 52-week range`}
+            >
+              <span
+                className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full ring-2"
+                style={{
+                  left: `${position}%`,
+                  background: 'var(--apple-blue)',
+                  boxShadow: '0 0 0 3px var(--apple-card-bg)',
+                }}
               />
             </div>
+            <div className="flex justify-between text-[10px] font-mono text-apple-faint mt-1.5">
+              <span>{price(stock.low_52w)}</span>
+              <span className="text-apple-muted">52-week range</span>
+              <span>{price(stock.high_52w)}</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Ratios Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-6">
-        {ratioCards.map((card) => (
-          <div
-            key={card.label}
-            className={`p-3.5 rounded-xl border transition-all ${
-              card.isHighlight
-                ? 'bg-apple-green-subtle border-apple-green/25'
-                : 'bg-apple-subtle border-apple-border'
-            }`}
-          >
-            <div className="text-[11px] font-medium text-apple-muted truncate">
-              {card.label}
-            </div>
-            <div
-              className={`text-sm sm:text-base font-bold font-mono mt-1 ${
-                card.isHighlight
-                  ? 'text-apple-green'
-                  : card.isPrimary
-                  ? 'text-apple-blue'
-                  : 'text-apple-primary'
+      {/* Key figures */}
+      <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-4 mt-6 pt-5 border-t border-apple-border-subtle">
+        {figures.map((figure) => (
+          <div key={figure.label}>
+            <dt className="text-[11px] text-apple-muted truncate">{figure.label}</dt>
+            <dd
+              className={`text-sm font-semibold font-mono tabular-nums mt-0.5 ${
+                figure.tone === 'good' ? 'num-pos' : figure.tone === 'bad' ? 'num-neg' : 'text-apple-primary'
               }`}
             >
-              {card.value}
-            </div>
+              {figure.value}
+            </dd>
+            {figure.hint && <dd className="text-[10px] text-apple-faint mt-0.5">{figure.hint}</dd>}
           </div>
         ))}
-      </div>
+      </dl>
     </div>
   );
 };

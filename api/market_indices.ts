@@ -54,7 +54,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     // Try to read cached indices from the pipeline-generated JSON
-    const cachePath = join(process.cwd(), 'data', 'market_indices.json');
+    // Bundled into the deployment under public/, and also present at the repo
+    // root where the Python pipeline writes it.
+    const candidates = [
+      join(process.cwd(), 'public', 'data', 'market_indices.json'),
+      join(process.cwd(), 'data', 'market_indices.json'),
+    ];
+    const cachePath = candidates.find((p) => existsSync(p)) || candidates[candidates.length - 1];
     let indicesData: IndicesCache | null = null;
 
     if (existsSync(cachePath)) {
@@ -77,7 +83,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       is_market_open: isMarketOpen,
       time_ist: istDate.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }) + ' IST',
       date_ist: istDate.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
-      last_updated: indicesData?.lastUpdated || 'unknown',
+      last_updated: indicesData?.lastUpdated || null,
+      dataAsOf: indicesData?.lastUpdated || null,
       source: indicesData?.source || 'cache',
       indices,
     });

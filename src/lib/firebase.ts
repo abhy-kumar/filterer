@@ -9,9 +9,19 @@
  * by Firestore Security Rules (read-only for clients).
  */
 
-import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, getDoc, collection, getDocs, query, where, DocumentData } from 'firebase/firestore';
+import type { Firestore } from 'firebase/firestore';
 import type { Stock } from '../types/stock';
+import { normalizeRemoteStock } from './normalizeStock';
+
+/**
+ * Filesystem- and URL-safe name for a company's detail file, matching
+ * scripts/split_dataset.mjs. Symbols such as M&M cannot be used raw: the old
+ * code fetched /data/stocks/M&M.json while the file on disk was M%26M.json,
+ * so that company's statements never loaded.
+ */
+export function detailSlug(symbol: string): string {
+  return symbol.toUpperCase().replace(/[^A-Z0-9]+/g, '_');
+}
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
@@ -23,20 +33,31 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || ''
 };
 
-// Initialize Firebase conditionally if client credentials are provided
+// Firestore is optional: without credentials the app runs entirely off the
+// static JSON tier. The SDK is 530 kB, so it is imported on demand rather than
+// pulled into the entry chunk for a page most visitors never open.
 const isConfigured = Boolean(firebaseConfig.apiKey && firebaseConfig.projectId);
 
-export const db = isConfigured
-  ? (() => {
+let firestorePromise: Promise<Firestore | null> | null = null;
+
+async function getDb(): Promise<Firestore | null> {
+  if (!isConfigured) return null;
+  if (!firestorePromise) {
+    firestorePromise = (async () => {
       try {
-        const app = initializeApp(firebaseConfig);
-        return getFirestore(app);
+        const [{ initializeApp }, { getFirestore }] = await Promise.all([
+          import('firebase/app'),
+          import('firebase/firestore'),
+        ]);
+        return getFirestore(initializeApp(firebaseConfig));
       } catch (err) {
-        console.warn('Firebase initialization failed; using static JSON fallback:', err);
+        console.warn('Firebase unavailable; using the static JSON tier instead:', err);
         return null;
       }
-    })()
-  : null;
+    })();
+  }
+  return firestorePromise;
+}
 
 // ────────────────────────────────────────────────────────
 //  FIRESTORE DATA ACCESS
@@ -49,16 +70,21 @@ export const db = isConfigured
  * Falls back to static JSON if Firestore is unavailable or unconfigured.
  */
 export async function fetchStockDetail(symbol: string): Promise<Partial<Stock> | null> {
+  const db = await getDb();
   if (!db) {
     return await fetchStockDetailFromJSON(symbol);
   }
 
   try {
+    const { doc, getDoc } = await import('firebase/firestore');
     const docRef = doc(db, 'stocks', symbol.toUpperCase());
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      return docSnap.data() as Partial<Stock>;
+      // Runtime statements get the same treatment as the bundled ones, so a
+      // fetched copy cannot reintroduce zeros where a figure was never
+      // reported. See src/lib/normalizeStock.ts.
+      return normalizeRemoteStock(docSnap.data() as Partial<Stock>);
     }
 
     // Fallback: try static JSON file
@@ -75,9 +101,9 @@ export async function fetchStockDetail(symbol: string): Promise<Partial<Stock> |
  */
 async function fetchStockDetailFromJSON(symbol: string): Promise<Partial<Stock> | null> {
   try {
-    const response = await fetch(`/data/stocks/${symbol.toUpperCase()}.json`);
+    const response = await fetch(`/data/stocks/${detailSlug(symbol)}.json`);
     if (!response.ok) return null;
-    return await response.json();
+    return normalizeRemoteStock((await response.json()) as Partial<Stock>);
   } catch {
     return null;
   }
@@ -108,12 +134,13 @@ export interface MarketIndicesCache {
 }
 
 export async function fetchMarketIndices(): Promise<MarketIndicesCache | null> {
+  const db = await getDb();
   if (!db) {
     return await fetchMarketIndicesFromJSON();
   }
 
   try {
-    // Try Firestore first
+    const { doc, getDoc } = await import('firebase/firestore');
     const docRef = doc(db, 'market', 'indices');
     const docSnap = await getDoc(docRef);
 

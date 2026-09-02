@@ -9,17 +9,21 @@ export default {
     extend: {
       colors: {
         apple: {
+          DEFAULT: 'var(--apple-border)',
           bg: 'var(--apple-bg)',
-          secondary: 'var(--apple-bg-secondary)',
           subtle: 'var(--apple-bg-subtle)',
           tertiary: 'var(--apple-bg-tertiary)',
           surface: 'var(--apple-surface)',
+          'surface-hover': 'var(--apple-surface-hover)',
+          'surface-active': 'var(--apple-surface-active)',
           card: 'var(--apple-card-bg)',
+          raised: 'var(--apple-card-raised)',
           border: 'var(--apple-border)',
           'border-subtle': 'var(--apple-border-subtle)',
           'border-strong': 'var(--apple-border-strong)',
           primary: 'var(--apple-text-primary)',
           label: 'var(--apple-text-primary)',
+          secondary: 'var(--apple-text-secondary)',
           muted: 'var(--apple-text-muted)',
           faint: 'var(--apple-text-faint)',
           blue: 'var(--apple-blue)',
@@ -34,6 +38,12 @@ export default {
           'indigo-subtle': 'var(--apple-indigo-subtle)',
         },
       },
+      boxShadow: {
+        xs: 'var(--apple-shadow-sm)',
+        sm: 'var(--apple-shadow-sm)',
+        DEFAULT: 'var(--apple-shadow)',
+        lg: 'var(--apple-shadow-lg)',
+      },
       fontFamily: {
         sans: [
           '-apple-system',
@@ -43,7 +53,6 @@ export default {
           '"Plus Jakarta Sans"',
           'Inter',
           'system-ui',
-          '-system-ui',
           'sans-serif',
         ],
         display: [

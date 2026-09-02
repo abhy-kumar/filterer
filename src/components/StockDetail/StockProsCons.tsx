@@ -1,58 +1,56 @@
-import React from 'react';
-import { ThumbsUp, ThumbsDown, CheckCircle2, AlertCircle } from 'lucide-react';
-import { Stock } from '../../types/stock';
+import React, { useMemo } from 'react';
+import { Plus, Minus } from 'lucide-react';
+import type { Stock } from '../../types/stock';
 import { generateProsAndCons } from '../../engine/prosAndConsGenerator';
 
-interface StockProsConsProps {
-  stock: Stock;
-}
+export const StockProsCons: React.FC<{ stock: Stock }> = ({ stock }) => {
+  const { pros, cons } = useMemo(() => generateProsAndCons(stock), [stock]);
 
-export const StockProsCons: React.FC<StockProsConsProps> = ({ stock }) => {
-  const { pros, cons } = generateProsAndCons(stock);
+  if (!pros.length && !cons.length) return null;
+
+  const column = (
+    heading: string,
+    items: string[],
+    tone: 'good' | 'bad',
+    empty: string
+  ) => (
+    <div className="apple-card p-5">
+      <h3 className="text-[11px] font-semibold uppercase tracking-[0.06em] mb-3.5" style={{ color: tone === 'good' ? 'var(--apple-green)' : 'var(--apple-red)' }}>
+        {heading}
+      </h3>
+      {items.length === 0 ? (
+        <p className="text-xs text-apple-muted leading-relaxed">{empty}</p>
+      ) : (
+        <ul className="space-y-2.5">
+          {items.map((item) => (
+            <li key={item} className="flex items-start gap-2.5 text-xs text-apple-secondary leading-relaxed">
+              {tone === 'good' ? (
+                <Plus className="w-3 h-3 shrink-0 mt-1 num-pos" strokeWidth={3} />
+              ) : (
+                <Minus className="w-3 h-3 shrink-0 mt-1 num-neg" strokeWidth={3} />
+              )}
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-      {/* Pros Box */}
-      <div className="apple-card p-6 shadow-sm border border-apple-green/20 relative overflow-hidden">
-        <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-apple-green/10">
-          <div className="w-8 h-8 rounded-xl bg-apple-green-subtle text-apple-green flex items-center justify-center">
-            <ThumbsUp className="w-4 h-4" />
-          </div>
-          <h3 className="text-sm font-bold text-apple-green uppercase tracking-wider font-display">
-            Key Strengths & Merits
-          </h3>
-        </div>
-
-        <ul className="space-y-2.5">
-          {pros.map((pro, index) => (
-            <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-apple-secondary leading-relaxed">
-              <CheckCircle2 className="w-4 h-4 text-apple-green shrink-0 mt-0.5" />
-              <span>{pro}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Cons Box */}
-      <div className="apple-card p-6 shadow-sm border border-apple-red/20 relative overflow-hidden">
-        <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-apple-red/10">
-          <div className="w-8 h-8 rounded-xl bg-apple-red-subtle text-apple-red flex items-center justify-center">
-            <ThumbsDown className="w-4 h-4" />
-          </div>
-          <h3 className="text-sm font-bold text-apple-red uppercase tracking-wider font-display">
-            Key Risks & Limitations
-          </h3>
-        </div>
-
-        <ul className="space-y-2.5">
-          {cons.map((con, index) => (
-            <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-apple-secondary leading-relaxed">
-              <AlertCircle className="w-4 h-4 text-apple-red shrink-0 mt-0.5" />
-              <span>{con}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {column(
+        'In its favour',
+        pros,
+        'good',
+        'None of the reported figures clear the thresholds used here. That is an absence of evidence, not a negative signal.'
+      )}
+      {column(
+        'Against it',
+        cons,
+        'bad',
+        'Nothing in the reported figures trips the thresholds used here.'
+      )}
     </div>
   );
 };

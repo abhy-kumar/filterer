@@ -1,0 +1,90 @@
+{
+  "indices": [
+    {
+      "id": "NIFTY50",
+      "symbol": "^NSEI",
+      "name": "NIFTY 50",
+      "exchange": "NSE",
+      "price": 23914.45,
+      "change": -165.95,
+      "changePct": -0.69,
+      "previousClose": 24080.4,
+      "dayHigh": 23914.45,
+      "dayLow": 23786.8,
+      "high52w": 26373.2,
+      "low52w": 22182.55
+    },
+    {
+      "id": "SENSEX",
+      "symbol": "^BSESN",
+      "name": "SENSEX",
+      "exchange": "BSE",
+      "price": 76570.35,
+      "change": -386.95,
+      "changePct": -0.5,
+      "previousClose": 76957.3,
+      "dayHigh": 76570.35,
+      "dayLow": 76135.72,
+      "high52w": 86159.02,
+      "low52w": 71545.81
+    },
+    {
+      "id": "BANKNIFTY",
+      "symbol": "^NSEBANK",
+      "name": "NIFTY BANK",
+      "exchange": "NSE",
+      "price": 57172.0,
+      "change": -852.9,
+      "changePct": -1.47,
+      "previousClose": 58024.9,
+      "dayHigh": 57221.1,
+      "dayLow": 56823.2,
+      "high52w": 61764.85,
+      "low52w": 49954.85
+    },
+    {
+      "id": "NIFTYIT",
+      "symbol": "^CNXIT",
+      "name": "NIFTY IT",
+      "exchange": "NSE",
+      "price": 31102.9,
+      "change": -88.5,
+      "changePct": -0.28,
+      "previousClose": 31191.4,
+      "dayHigh": 31241.15,
+      "dayLow": 30668.1,
+      "high52w": 40301.4,
+      "low52w": 25699.1
+    },
+    {
+      "id": "NIFTYPHARMA",
+      "symbol": "^CNXPHARMA",
+      "name": "NIFTY PHARMA",
+      "exchange": "NSE",
+      "price": 26780.7,
+      "change": -405.7,
+      "changePct": -1.49,
+      "previousClose": 27186.4,
+      "dayHigh": 26818.5,
+      "dayLow": 26611.75,
+      "high52w": 27188.45,
+      "low52w": 21149.9
+    },
+    {
+      "id": "NIFTYAUTO",
+      "symbol": "^CNXAUTO",
+      "name": "NIFTY AUTO",
+      "exchange": "NSE",
+      "price": 27981.95,
+      "change": -509.1,
+      "changePct": -1.79,
+      "previousClose": 28491.05,
+      "dayHigh": 28225.55,
+      "dayLow": 27541.65,
+      "high52w": 28225.55,
+      "low52w": 10092.6
+    }
+  ],
+  "lastUpdated": "2026-09-02T19:38:37.402627Z",
+  "source": "Yahoo Finance (yfinance)"
+}

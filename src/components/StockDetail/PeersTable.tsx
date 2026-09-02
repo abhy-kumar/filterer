@@ -1,114 +1,124 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Layers } from 'lucide-react';
-import { Stock } from '../../types/stock';
+import type { Stock, PeerInfo } from '../../types/stock';
+import { STOCKS_DATA } from '../../data/stocksData';
+import { stockPath } from '../../lib/routes';
+import { crore, isReported, multiple, pct, price, signClass, statement } from '../../lib/format';
 
-interface PeersTableProps {
-  stock: Stock;
-  onSelectPeer?: (symbol: string) => void;
-}
+const COLUMNS: Array<{
+  label: string;
+  value: (p: PeerInfo) => React.ReactNode;
+}> = [
+  { label: 'Price', value: (p) => price(p.current_price) },
+  { label: 'P/E', value: (p) => multiple(p.pe_ratio) },
+  { label: 'Mkt cap', value: (p) => crore(p.market_cap) },
+  { label: 'Div yld', value: (p) => pct(p.dividend_yield, 2) },
+  { label: 'Qtr profit', value: (p) => (isReported(p.net_profit_qtr) ? statement(p.net_profit_qtr) : null) },
+  {
+    label: 'Profit var',
+    value: (p) =>
+      isReported(p.qtr_profit_var_pct) ? (
+        <span className={signClass(p.qtr_profit_var_pct)}>{p.qtr_profit_var_pct.toFixed(1)}%</span>
+      ) : null,
+  },
+  { label: 'Qtr sales', value: (p) => (isReported(p.sales_qtr) ? statement(p.sales_qtr) : null) },
+  {
+    label: 'Sales var',
+    value: (p) =>
+      isReported(p.qtr_sales_var_pct) ? (
+        <span className={signClass(p.qtr_sales_var_pct)}>{p.qtr_sales_var_pct.toFixed(1)}%</span>
+      ) : null,
+  },
+  { label: 'ROCE', value: (p) => pct(p.roce) },
+];
 
-export const PeersTable: React.FC<PeersTableProps> = ({ stock, onSelectPeer }) => {
+export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
   const navigate = useNavigate();
   const peers = stock.peers || [];
+  if (!peers.length) return null;
 
-  if (peers.length === 0) return null;
+  const known = new Set(STOCKS_DATA.map((s) => s.symbol));
+
+  // The company itself, shaped like a peer row so it sits in the comparison.
+  const self: PeerInfo = {
+    symbol: stock.symbol,
+    name: stock.name,
+    current_price: stock.current_price,
+    pe_ratio: stock.pe_ratio as number,
+    market_cap: stock.market_cap,
+    dividend_yield: stock.dividend_yield,
+    net_profit_qtr: stock.quarterly_results?.[stock.quarterly_results.length - 1]?.net_profit ?? (null as never),
+    qtr_profit_var_pct: null as never,
+    sales_qtr: stock.quarterly_results?.[stock.quarterly_results.length - 1]?.sales ?? (null as never),
+    qtr_sales_var_pct: null as never,
+    roce: stock.roce as number,
+  };
+
+  const rows = [{ peer: self, isSelf: true }, ...peers.map((peer) => ({ peer, isSelf: false }))];
 
   return (
-    <div className="w-full apple-card p-6 shadow-sm mb-8 overflow-hidden border border-apple">
-      <div className="flex items-center justify-between gap-4 pb-4 border-b border-apple-border-subtle mb-4">
-        <div>
-          <h3 className="text-base font-bold text-apple-primary flex items-center gap-2 font-display">
-            <Layers className="w-4 h-4 text-apple-blue" />
-            Peer Comparison
-          </h3>
-          <p className="text-xs text-apple-muted mt-0.5">
-            Sector: <strong className="text-apple-primary">{stock.sector}</strong> • Industry: <strong className="text-apple-primary">{stock.industry}</strong>
-          </p>
-        </div>
+    <div className="apple-card overflow-hidden">
+      <div className="px-4 sm:px-5 py-3 border-b border-apple-border">
+        <h2 className="text-sm font-semibold text-apple-primary font-display">Peers</h2>
+        <p className="text-xs text-apple-muted mt-0.5">
+          {stock.industry} · {stock.sector}
+        </p>
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse apple-table text-xs font-mono">
+        <table className="apple-table">
           <thead>
             <tr>
-              <th className="py-3 px-4 sticky left-0 z-10 bg-apple-subtle min-w-[160px] border-b border-apple-border">
-                Company
-              </th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">CMP (₹)</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">P/E</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">Mar Cap (₹ Cr)</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">Div Yld %</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">NP Qtr (₹ Cr)</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">Qtr Profit Var %</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">Sales Qtr (₹ Cr)</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">Qtr Sales Var %</th>
-              <th className="py-3 px-3 text-right border-b border-apple-border">ROCE %</th>
+              <th className="apple-sticky-col text-left min-w-[180px]">Company</th>
+              {COLUMNS.map((col) => (
+                <th key={col.label} className="text-right">
+                  {col.label}
+                </th>
+              ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-apple-border-subtle">
-            {/* Current Stock Row Highlighted */}
-            <tr className="bg-apple-blue-subtle/50 font-semibold">
-              <td className="py-3 px-4 sticky left-0 z-10 bg-apple-card border-r border-apple-border-subtle">
-                <div className="flex items-center gap-2">
-                  <span className="text-apple-blue">{stock.name}</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-apple-blue text-white font-sans font-bold">
-                    Current
-                  </span>
-                </div>
-              </td>
-              <td className="py-3 px-3 text-right text-apple-primary">₹{stock.current_price.toLocaleString('en-IN')}</td>
-              <td className="py-3 px-3 text-right text-apple-primary">{stock.pe_ratio > 0 ? stock.pe_ratio.toFixed(1) : '-'}</td>
-              <td className="py-3 px-3 text-right text-apple-primary">₹{stock.market_cap.toLocaleString('en-IN')}</td>
-              <td className="py-3 px-3 text-right text-apple-primary">{stock.dividend_yield.toFixed(2)}%</td>
-              <td className="py-3 px-3 text-right text-apple-primary">-</td>
-              <td className="py-3 px-3 text-right text-apple-primary">-</td>
-              <td className="py-3 px-3 text-right text-apple-primary">-</td>
-              <td className="py-3 px-3 text-right text-apple-primary">-</td>
-              <td className="py-3 px-3 text-right text-apple-primary">{stock.roce.toFixed(1)}%</td>
-            </tr>
-
-            {/* Peer Rows */}
-            {peers.map((peer, idx) => (
-              <tr
-                key={peer.symbol || idx}
-                onClick={() => {
-                  navigate(`/stock/${peer.symbol}`);
-                  if (onSelectPeer) onSelectPeer(peer.symbol);
-                }}
-                className="hover:bg-apple-surface-hover transition-colors cursor-pointer group"
-              >
-                <td className="py-3 px-4 sticky left-0 z-10 bg-apple-card group-hover:bg-apple-subtle border-r border-apple-border-subtle transition-colors">
-                  <div className="text-apple-blue group-hover:underline">
-                    {peer.name}
-                  </div>
-                </td>
-                <td className="py-3 px-3 text-right text-apple-primary">₹{peer.current_price.toLocaleString('en-IN')}</td>
-                <td className="py-3 px-3 text-right text-apple-primary">{peer.pe_ratio > 0 ? peer.pe_ratio.toFixed(1) : '-'}</td>
-                <td className="py-3 px-3 text-right text-apple-primary">₹{peer.market_cap.toLocaleString('en-IN')}</td>
-                <td className="py-3 px-3 text-right text-apple-primary">{peer.dividend_yield ? `${peer.dividend_yield.toFixed(2)}%` : '-'}</td>
-                <td className="py-3 px-3 text-right text-apple-primary">{peer.net_profit_qtr ? `₹${peer.net_profit_qtr.toLocaleString('en-IN')}` : '-'}</td>
-                <td className="py-3 px-3 text-right text-apple-primary">
-                  {peer.qtr_profit_var_pct ? (
-                    <span className={peer.qtr_profit_var_pct >= 0 ? 'text-apple-green' : 'text-apple-red'}>
-                      {peer.qtr_profit_var_pct >= 0 ? '+' : ''}{peer.qtr_profit_var_pct.toFixed(1)}%
-                    </span>
-                  ) : '-'}
-                </td>
-                <td className="py-3 px-3 text-right text-apple-primary">{peer.sales_qtr ? `₹${peer.sales_qtr.toLocaleString('en-IN')}` : '-'}</td>
-                <td className="py-3 px-3 text-right text-apple-primary">
-                  {peer.qtr_sales_var_pct ? (
-                    <span className={peer.qtr_sales_var_pct >= 0 ? 'text-apple-green' : 'text-apple-red'}>
-                      {peer.qtr_sales_var_pct >= 0 ? '+' : ''}{peer.qtr_sales_var_pct.toFixed(1)}%
-                    </span>
-                  ) : '-'}
-                </td>
-                <td className="py-3 px-3 text-right text-apple-primary">{peer.roce ? `${peer.roce.toFixed(1)}%` : '-'}</td>
-              </tr>
-            ))}
+          <tbody>
+            {rows.map(({ peer, isSelf }) => {
+              const clickable = !isSelf && known.has(peer.symbol);
+              return (
+                <tr
+                  key={peer.symbol}
+                  onClick={clickable ? () => navigate(stockPath(peer.symbol)) : undefined}
+                  className={clickable ? 'cursor-pointer' : ''}
+                  style={isSelf ? { background: 'var(--apple-blue-subtle)' } : undefined}
+                >
+                  <td
+                    className="apple-sticky-col"
+                    style={isSelf ? { background: 'var(--apple-blue-subtle)' } : undefined}
+                  >
+                    <div className="flex items-baseline gap-2">
+                      <span
+                        className={`font-mono text-xs font-semibold ${
+                          isSelf ? 'text-apple-primary' : 'text-apple-blue'
+                        }`}
+                      >
+                        {peer.symbol}
+                      </span>
+                      <span className="text-xs text-apple-muted truncate max-w-[130px]">{peer.name}</span>
+                      {isSelf && <span className="text-[10px] text-apple-faint">this page</span>}
+                    </div>
+                  </td>
+                  {COLUMNS.map((col) => (
+                    <td key={col.label} className="text-right font-mono whitespace-nowrap">
+                      {col.value(peer) ?? <span className="num-nil">—</span>}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
+
+      <p className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-[11px] text-apple-muted">
+        Peer figures are kept in step with each company&rsquo;s own page. Rows without a page here are outside
+        this universe and are not clickable.
+      </p>
     </div>
   );
 };

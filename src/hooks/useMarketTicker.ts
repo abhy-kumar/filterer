@@ -9,113 +9,156 @@ export interface MarketIndex {
   is_up: boolean;
 }
 
-const INITIAL_INDICES: MarketIndex[] = [
-  { symbol: '^NSEI', name: 'NIFTY 50', price: 24862.35, change: 128.45, change_pct: 0.52, is_up: true },
-  { symbol: '^BSESN', name: 'SENSEX', price: 81498.70, change: 395.20, change_pct: 0.49, is_up: true },
-  { symbol: '^NSEBANK', name: 'NIFTY BANK', price: 53340.80, change: 260.15, change_pct: 0.49, is_up: true },
-  { symbol: '^CNXIT', name: 'NIFTY IT', price: 38910.40, change: -85.60, change_pct: -0.22, is_up: false },
-  { symbol: 'NIFTY_MIDCAP', name: 'NIFTY MIDCAP', price: 58450.20, change: 425.80, change_pct: 0.73, is_up: true },
-  { symbol: 'NIFTY_AUTO', name: 'NIFTY AUTO', price: 25840.10, change: 310.50, change_pct: 1.22, is_up: true },
-  { symbol: 'NIFTY_PHARMA', name: 'NIFTY PHARMA', price: 22480.90, change: 185.30, change_pct: 0.83, is_up: true },
-];
+interface CachedIndex {
+  symbol: string;
+  name: string;
+  price: number;
+  change: number;
+  changePct: number;
+}
+
+/**
+ * Index ticker.
+ *
+ * Reads the serverless endpoint in production and the static cache the Python
+ * pipeline writes in development, where there is no serverless runtime. The
+ * previous version shipped a hard-coded list of prices, never fetched on
+ * mount, and read a `dataAsOf` field the API does not return — so the strip
+ * showed invented numbers with a 2024 timestamp indefinitely.
+ */
+const SOURCES = ['/api/market_indices', '/data/market_indices.json'];
+
+const MARKET_OPEN_MINUTES = 9 * 60 + 15;
+const MARKET_CLOSE_MINUTES = 15 * 60 + 30;
+
+function istNow(): Date {
+  const now = new Date();
+  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+  return new Date(utc + 3600000 * 5.5);
+}
+
+function normalize(raw: unknown): MarketIndex[] | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const list = (raw as { indices?: unknown }).indices;
+  if (!Array.isArray(list)) return null;
+
+  const indices = list
+    .map((entry) => {
+      const idx = entry as CachedIndex & { change_pct?: number };
+      const changePct = typeof idx.changePct === 'number' ? idx.changePct : idx.change_pct;
+      if (typeof idx.price !== 'number' || typeof changePct !== 'number') return null;
+      return {
+        symbol: idx.symbol,
+        name: idx.name,
+        price: idx.price,
+        change: idx.change,
+        change_pct: changePct,
+        is_up: idx.change >= 0,
+      };
+    })
+    .filter((i): i is MarketIndex => i !== null);
+
+  return indices.length ? indices : null;
+}
+
+function readTimestamp(raw: unknown): string | null {
+  const obj = raw as { lastUpdated?: string; last_updated?: string; dataAsOf?: string };
+  return obj?.dataAsOf || obj?.lastUpdated || obj?.last_updated || null;
+}
 
 export function useMarketTicker() {
-  const [indices, setIndices] = useState<MarketIndex[]>(INITIAL_INDICES);
+  const [indices, setIndices] = useState<MarketIndex[]>([]);
   const [isMarketOpen, setIsMarketOpen] = useState(false);
   const [timeIST, setTimeIST] = useState('');
   const [dateIST, setDateIST] = useState('');
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isRefreshing, setIsRefreshing] = useState(true);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [flashingIndex, setFlashingIndex] = useState<Record<string, 'up' | 'down'>>({});
+  const [dataAsOf, setDataAsOf] = useState<string | null>(null);
+
   const indicesRef = useRef<MarketIndex[]>(indices);
+  const flashTimer = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     indicesRef.current = indices;
   }, [indices]);
 
-  // Update IST clock & Open/Closed status every second
   useEffect(() => {
     const updateTime = () => {
-      const now = new Date();
-      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-      const istDate = new Date(utc + (3600000 * 5.5));
-      
-      const day = istDate.getDay();
-      const hours = istDate.getHours();
-      const minutes = istDate.getMinutes();
-      const timeInMinutes = hours * 60 + minutes;
-      
-      // Mon-Fri 9:15 AM to 3:30 PM IST
-      const open = day >= 1 && day <= 5 && timeInMinutes >= 555 && timeInMinutes <= 930;
-      setIsMarketOpen(open);
-      
+      const ist = istNow();
+      const day = ist.getDay();
+      const minutes = ist.getHours() * 60 + ist.getMinutes();
+
+      setIsMarketOpen(day >= 1 && day <= 5 && minutes >= MARKET_OPEN_MINUTES && minutes <= MARKET_CLOSE_MINUTES);
       setTimeIST(
-        istDate.toLocaleTimeString('en-IN', {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: true,
-        }) + ' IST'
+        ist.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: false }) + ' IST'
       );
-      
-      setDateIST(
-        istDate.toLocaleDateString('en-IN', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric',
-        })
-      );
+      setDateIST(ist.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }));
     };
 
     updateTime();
-    const timer = setInterval(updateTime, 1000);
+    const timer = setInterval(updateTime, 30000);
     return () => clearInterval(timer);
   }, []);
 
-  const [dataAsOf, setDataAsOf] = useState<string>('2024-03-15 15:30:00 IST');
-
-  // Fetch live index data
   const fetchIndices = useCallback(async () => {
     setIsRefreshing(true);
-    try {
-      const res = await fetch('/api/market_indices');
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.indices && Array.isArray(data.indices)) {
-          // Detect price changes for flash highlights
-          const newFlashes: Record<string, 'up' | 'down'> = {};
-          data.indices.forEach((idx: MarketIndex) => {
-            const old = indicesRef.current.find((o) => o.name === idx.name);
-            if (old && old.price !== idx.price) {
-              newFlashes[idx.name] = idx.price > old.price ? 'up' : 'down';
-            }
-          });
 
-          setIndices(data.indices);
-          if (data.dataAsOf) setDataAsOf(data.dataAsOf);
-          
-          if (Object.keys(newFlashes).length > 0) {
-            setFlashingIndex(newFlashes);
-            setTimeout(() => setFlashingIndex({}), 1000);
+    for (const source of SOURCES) {
+      try {
+        const res = await fetch(source, { cache: 'no-store' });
+        if (!res.ok) continue;
+        const payload = await res.json();
+        const next = normalize(payload);
+        if (!next) continue;
+
+        const flashes: Record<string, 'up' | 'down'> = {};
+        for (const idx of next) {
+          const previous = indicesRef.current.find((o) => o.name === idx.name);
+          if (previous && previous.price !== idx.price) {
+            flashes[idx.name] = idx.price > previous.price ? 'up' : 'down';
           }
-          setIsRefreshing(false);
-          return;
         }
-      }
-    } catch {}
 
+        setIndices(next);
+        setDataAsOf(readTimestamp(payload));
+        setError(null);
+        setHasLoaded(true);
+        setIsRefreshing(false);
+
+        if (Object.keys(flashes).length) {
+          setFlashingIndex(flashes);
+          clearTimeout(flashTimer.current);
+          flashTimer.current = setTimeout(() => setFlashingIndex({}), 1000);
+        }
+        return;
+      } catch {
+        // Try the next source.
+      }
+    }
+
+    setError('Index feed unavailable');
+    setHasLoaded(true);
     setIsRefreshing(false);
   }, []);
 
-  // Continuous live polling every 12 seconds
+  // Load once on mount, then poll only while the market is open and the tab
+  // is visible. Polling a static cache every 12 seconds around the clock, as
+  // the previous version did, achieved nothing but requests.
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (document.visibilityState === 'visible') {
-        fetchIndices();
-      }
-    }, 12000);
-
-    return () => clearInterval(interval);
+    fetchIndices();
   }, [fetchIndices]);
+
+  useEffect(() => {
+    if (!isMarketOpen) return;
+    const interval = setInterval(() => {
+      if (document.visibilityState === 'visible') fetchIndices();
+    }, 60000);
+    return () => clearInterval(interval);
+  }, [isMarketOpen, fetchIndices]);
+
+  useEffect(() => () => clearTimeout(flashTimer.current), []);
 
   return {
     indices,
@@ -123,6 +166,8 @@ export function useMarketTicker() {
     timeIST,
     dateIST,
     dataAsOf,
+    error,
+    hasLoaded,
     isRefreshing,
     flashingIndex,
     refreshIndices: fetchIndices,

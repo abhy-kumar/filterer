@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Routes, Route, useNavigate, useSearchParams, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useMemo, useCallback, Suspense, lazy } from 'react';
+import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-dom';
+import { Bookmark, Trash2, ArrowRight, Plus } from 'lucide-react';
 import { Header } from './components/Header';
 import { ScreenQueryBuilder } from './components/ScreenQueryBuilder';
 import { ScreenResultsTable } from './components/ScreenResultsTable';
@@ -7,312 +8,360 @@ import { PresetScreens } from './components/PresetScreens';
 import { CommandPalette } from './components/CommandPalette';
 import { SaveScreenModal } from './components/SaveScreenModal';
 import { Footer } from './components/Footer';
-import { StockDetailPage } from './pages/StockDetailPage';
-import { ScreenFilter } from './types/stock';
+// The detail page pulls in Recharts and the statement tables; neither is
+// needed to render a screen, so it loads on navigation.
+const StockDetailPage = lazy(() =>
+  import('./pages/StockDetailPage').then((m) => ({ default: m.StockDetailPage }))
+);
+import { ScreenFilter, Stock } from './types/stock';
 import { STOCKS_DATA } from './data/stocksData';
 import { executeScreenerQuery } from './engine/screenerParser';
-import { SlidersHorizontal, Bookmark, Trash2, Play, Search, Zap, ShieldCheck } from 'lucide-react';
-import { useTheme } from './context/ThemeContext';
+import { getMetric } from './engine/metricsDictionary';
+import { screenPath } from './lib/routes';
 
-export const App: React.FC = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [searchParams] = useSearchParams();
-  const { isDark } = useTheme();
+const SAVED_KEY = 'filterer_saved_screens';
 
-  const queryFromUrl = searchParams.get('q') || 'Market Capitalization > 500 AND Return on capital employed > 18 AND Debt to equity < 0.2';
-  const [query, setQuery] = useState<string>(queryFromUrl);
+const DEFAULT_QUERY =
+  'Market Capitalization > 500 AND Return on capital employed > 18 AND Debt to equity < 0.2';
 
-  useEffect(() => {
-    setQuery(queryFromUrl);
-  }, [queryFromUrl]);
+/** CSV field escaping, so a company name with a comma cannot shift a column. */
+function csvCell(value: unknown): string {
+  if (value === null || value === undefined) return '';
+  const text = String(value);
+  return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+}
 
-  const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
-  const [isSaveModalOpen, setIsSaveModalOpen] = useState(false);
+const EXPORT_COLUMNS: Array<[string, (s: Stock) => unknown]> = [
+  ['Symbol', (s) => s.symbol],
+  ['Name', (s) => s.name],
+  ['Sector', (s) => s.sector],
+  ['Industry', (s) => s.industry],
+  ['Current Price', (s) => s.current_price],
+  ['Market Cap (Cr)', (s) => s.market_cap],
+  ['P/E', (s) => s.pe_ratio],
+  ['P/B', (s) => s.pb_ratio],
+  ['ROCE %', (s) => s.roce],
+  ['ROE %', (s) => s.roe],
+  ['Debt to Equity', (s) => s.debt_to_equity],
+  ['OPM %', (s) => s.opm],
+  ['Sales Growth 3Y %', (s) => s.sales_growth_3y],
+  ['Profit Growth 3Y %', (s) => s.profit_growth_3y],
+  ['Dividend Yield %', (s) => s.dividend_yield],
+  ['Piotroski Score', (s) => s.piotroski_score],
+  ['FCF Yield %', (s) => s.fcf_yield],
+  ['RSI 14', (s) => s.rsi_14],
+];
 
-  // Saved Screens in LocalStorage
+function useSavedScreens() {
   const [savedScreens, setSavedScreens] = useState<ScreenFilter[]>(() => {
     try {
-      const saved = localStorage.getItem('filterer_saved_screens');
-      return saved ? JSON.parse(saved) : [];
+      const raw = localStorage.getItem(SAVED_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
     } catch {
       return [];
     }
   });
 
-  // Execute Query on Stocks Data
-  const screenResult = useMemo(() => {
-    return executeScreenerQuery(queryFromUrl, STOCKS_DATA);
-  }, [queryFromUrl]);
-
-  // Save new custom screen
-  const handleSaveScreen = (newScreen: ScreenFilter) => {
-    const updated = [newScreen, ...savedScreens];
-    setSavedScreens(updated);
+  const persist = useCallback((next: ScreenFilter[]) => {
+    setSavedScreens(next);
     try {
-      localStorage.setItem('filterer_saved_screens', JSON.stringify(updated));
-    } catch {}
-  };
+      localStorage.setItem(SAVED_KEY, JSON.stringify(next));
+    } catch {
+      // Private browsing; the list stays for this session only.
+    }
+  }, []);
 
-  // Delete saved screen
-  const handleDeleteSavedScreen = (id: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    const updated = savedScreens.filter((s) => s.id !== id);
-    setSavedScreens(updated);
-    try {
-      localStorage.setItem('filterer_saved_screens', JSON.stringify(updated));
-    } catch {}
-  };
+  return { savedScreens, persist };
+}
 
-  // Run screen from preset or saved
-  const handleRunScreen = (screenQuery: string) => {
-    navigate(`/screen?q=${encodeURIComponent(screenQuery)}`);
-  };
+export const App: React.FC = () => {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
-  const handleRunQuery = () => {
-    navigate(`/screen?q=${encodeURIComponent(query)}`);
-  };
+  const committedQuery = searchParams.get('q') ?? DEFAULT_QUERY;
+  const [draftQuery, setDraftQuery] = useState(committedQuery);
 
-  // Export CSV
-  const handleExportCSV = () => {
-    const stocks = screenResult.matches;
-    if (stocks.length === 0) return;
+  const [isPaletteOpen, setPaletteOpen] = useState(false);
+  const [isSaveOpen, setSaveOpen] = useState(false);
+  const { savedScreens, persist } = useSavedScreens();
 
-    const headers = [
-      'Symbol', 'Name', 'Sector', 'Industry', 'Current Price', 'Market Cap (Cr)',
-      'PE Ratio', 'ROCE %', 'ROE %', 'Debt to Equity', 'Sales Growth 3Y %',
-      'Profit Growth 3Y %', 'Dividend Yield %', 'Piotroski Score', 'FCF Yield %'
-    ];
+  useEffect(() => {
+    setDraftQuery(committedQuery);
+  }, [committedQuery]);
 
-    const rows = stocks.map((s) => [
-      s.symbol, `"${s.name}"`, `"${s.sector}"`, `"${s.industry}"`,
-      s.current_price, s.market_cap, s.pe_ratio, s.roce, s.roe,
-      s.debt_to_equity, s.sales_growth_3y, s.profit_growth_3y,
-      s.dividend_yield, s.piotroski_score, s.fcf_yield
-    ]);
+  // The shortcut the header advertises has to actually open the palette; the
+  // previous handler only ever closed it.
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setPaletteOpen((open) => !open);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
-    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map((e) => e.join(','))].join('\n');
-    const encodedUri = encodeURI(csvContent);
+  const result = useMemo(() => executeScreenerQuery(committedQuery, STOCKS_DATA), [committedQuery]);
+
+  const runScreen = useCallback(
+    (query: string) => navigate(screenPath(query)),
+    [navigate]
+  );
+
+  const handleExportCSV = useCallback(() => {
+    const rows = result.matches;
+    if (!rows.length) return;
+
+    const csv = [
+      EXPORT_COLUMNS.map(([label]) => csvCell(label)).join(','),
+      ...rows.map((stock) => EXPORT_COLUMNS.map(([, read]) => csvCell(read(stock))).join(',')),
+    ].join('\r\n');
+
+    // A Blob, not a data: URI — the old encodeURI approach mangled '#' and
+    // broke outright on large result sets.
+    const blob = new Blob([`﻿${csv}`], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `filterer_screen_results_${Date.now()}.csv`);
+    link.href = url;
+    link.download = `filterer-screen-${new Date().toISOString().slice(0, 10)}.csv`;
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
+    link.remove();
+    URL.revokeObjectURL(url);
+  }, [result.matches]);
+
+  const handleSaveScreen = (screen: ScreenFilter) => persist([screen, ...savedScreens]);
+
+  const handleDeleteScreen = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    persist(savedScreens.filter((s) => s.id !== id));
   };
 
+  const resultsTable = (
+    <ScreenResultsTable
+      stocks={result.matches}
+      onExportCSV={handleExportCSV}
+      emphasise={result.metrics}
+    />
+  );
+
   return (
-    <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary transition-colors duration-200">
-      <Header
-        onOpenSearch={() => setIsCommandPaletteOpen(true)}
-        savedScreensCount={savedScreens.length}
-      />
+    <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary">
+      <Header onOpenSearch={() => setPaletteOpen(true)} savedScreensCount={savedScreens.length} />
 
       <Routes>
-        <Route path="/" element={
-          <>
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-              <div className="animate-fade-in">
-                {/* Apple macOS-Style Command Banner */}
-                <div className="mb-8 p-6 sm:p-8 rounded-3xl apple-card relative overflow-hidden">
-                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                    <div className="max-w-2xl">
-                      <div className="flex items-center gap-2 mb-3 flex-wrap">
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-apple-blue-subtle text-apple-blue text-xs font-semibold font-mono border border-apple-blue/20">
-                          <Zap className="w-3 h-3" />
-                          Sub-10ms AST Engine
-                        </span>
-                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-apple-green-subtle text-apple-green text-xs font-semibold font-mono border border-apple-green/20">
-                          <ShieldCheck className="w-3 h-3" />
-                          500 Nifty Equities
-                        </span>
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-apple-subtle text-apple-muted text-xs font-mono border border-apple-border">
-                          Zero Paywalls • 100% Free
-                        </span>
+        <Route
+          path="/"
+          element={
+            <>
+              <main className="flex-1 w-full apple-canvas">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 animate-fade-in">
+                  {/* Statement of what this is, without the badge soup. */}
+                  <div className="max-w-2xl">
+                    <h1 className="text-3xl sm:text-[2.75rem] font-bold tracking-[-0.035em] text-apple-primary font-display leading-[1.08]">
+                      Screen Indian equities
+                      <br />
+                      the way you would write it down.
+                    </h1>
+                    <p className="text-[15px] text-apple-secondary mt-4 leading-relaxed">
+                      Type a condition in plain language, join a few with AND, and the whole universe is filtered
+                      in the browser. Figures a company never reported stay blank instead of counting as zero.
+                    </p>
+
+                    <div className="flex items-center gap-2.5 mt-6">
+                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary px-5 py-2.5 text-[13px]">
+                        Open the query editor
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      <button onClick={() => setPaletteOpen(true)} className="apple-btn apple-btn-secondary px-4 py-2.5 text-[13px]">
+                        Find a company
+                        <kbd className="text-[10px] font-mono text-apple-faint ml-0.5">⌘K</kbd>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="mt-14">
+                    <PresetScreens onRunScreen={runScreen} universe={STOCKS_DATA} />
+                  </div>
+
+                  <div className="mt-14">
+                    <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
+                      <div className="min-w-0">
+                        <h2 className="text-lg font-semibold text-apple-primary font-display">Live result</h2>
+                        <p className="text-xs text-apple-muted mt-1 font-mono truncate max-w-2xl">{committedQuery}</p>
                       </div>
-
-                      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-apple-primary font-display">
-                        Indian Equity Screener
-                      </h1>
-                      <p className="text-sm text-apple-secondary mt-2 leading-relaxed">
-                        Construct quantitative valuation screens with Screener.in natural query syntax, multi-variable financial formulas, and instant in-browser AST evaluation.
-                      </p>
+                      <Link to={screenPath(committedQuery)} className="text-xs font-semibold text-apple-blue hover:underline shrink-0">
+                        Edit this query →
+                      </Link>
                     </div>
-
-                    <div className="flex items-center gap-3 shrink-0 flex-wrap">
-                      <button
-                        onClick={() => navigate('/screen')}
-                        className="px-5 py-2.5 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold shadow-sm transition-all flex items-center gap-2 active:scale-95"
-                      >
-                        <SlidersHorizontal className="w-3.5 h-3.5" />
-                        <span>Query Builder</span>
-                      </button>
-                      <button
-                        onClick={() => setIsCommandPaletteOpen(true)}
-                        className="px-4 py-2.5 rounded-xl bg-apple-subtle hover:bg-apple-surface-active text-apple-primary text-xs font-medium border border-apple-border transition-all flex items-center gap-2 active:scale-95 shadow-xs"
-                      >
-                        <Search className="w-3.5 h-3.5 text-apple-muted" />
-                        <span>Search (⌘K)</span>
-                      </button>
-                    </div>
+                    {resultsTable}
                   </div>
                 </div>
+              </main>
+              <Footer />
+            </>
+          }
+        />
 
-                <PresetScreens
-                  onSelectScreen={(s) => handleRunScreen(s.query)}
-                  onRunScreen={handleRunScreen}
-                />
-
-                <div className="mt-10">
-                  <div className="flex items-center justify-between gap-4 mb-4">
-                    <div>
-                      <h3 className="text-lg font-bold text-apple-primary font-display">
-                        Featured Strategy: Debt-Free High Return Leaders
-                      </h3>
-                      <p className="text-xs text-apple-muted mt-0.5">
-                        Matches: <code className="text-apple-blue font-mono font-medium">{queryFromUrl}</code>
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => navigate('/screen')}
-                      className="text-xs font-semibold text-apple-blue hover:underline flex items-center gap-1"
-                    >
-                      Edit Query &rarr;
-                    </button>
-                  </div>
-
-                  <ScreenResultsTable
-                    stocks={screenResult.matches}
-                    onSelectStock={(s) => navigate(`/stock/${s.symbol}`)}
-                    onExportCSV={handleExportCSV}
+        <Route
+          path="/screen"
+          element={
+            <>
+              <main className="flex-1 w-full">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in space-y-6">
+                  <ScreenQueryBuilder
+                    query={draftQuery}
+                    onChangeQuery={setDraftQuery}
+                    onRunQuery={() => runScreen(draftQuery)}
+                    onSaveScreen={() => setSaveOpen(true)}
+                    universe={STOCKS_DATA}
+                    executionTimeMs={result.executionTimeMs}
+                    totalMatches={result.matches.length}
+                    runError={result.error}
+                    isDirty={draftQuery !== committedQuery}
                   />
+                  {resultsTable}
                 </div>
-              </div>
-            </main>
-            <Footer />
-          </>
-        } />
+              </main>
+              <Footer />
+            </>
+          }
+        />
 
-        <Route path="/screen" element={
-          <>
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-              <div className="animate-fade-in">
-                <ScreenQueryBuilder
-                  query={query}
-                  onChangeQuery={setQuery}
-                  onRunQuery={handleRunQuery}
-                  onSaveScreen={() => setIsSaveModalOpen(true)}
-                  executionTimeMs={screenResult.executionTimeMs}
-                  totalMatches={screenResult.matches.length}
-                />
-
-                <ScreenResultsTable
-                  stocks={screenResult.matches}
-                  onSelectStock={(s) => navigate(`/stock/${s.symbol}`)}
-                  onExportCSV={handleExportCSV}
-                />
-              </div>
-            </main>
-            <Footer />
-          </>
-        } />
-
-        <Route path="/saved" element={
-          <>
-            <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-              <div className="animate-fade-in">
-                <div className="flex items-center justify-between gap-4 mb-6">
-                  <div>
-                    <h2 className="text-2xl font-bold text-apple-primary font-display flex items-center gap-2">
-                      <Bookmark className="w-6 h-6 text-apple-blue" />
-                      Saved Screens
-                    </h2>
-                    <p className="text-xs text-apple-muted mt-1">
-                      Custom financial filters stored locally in your browser session.
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => navigate('/screen')}
-                    className="px-4 py-2 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold shadow-sm transition-all"
-                  >
-                    + Create New Screen
-                  </button>
-                </div>
-
-                {savedScreens.length === 0 ? (
-                  <div className="apple-card p-12 text-center my-8">
-                    <Bookmark className="w-12 h-12 text-apple-muted mx-auto mb-3 opacity-40" />
-                    <h3 className="text-base font-semibold text-apple-primary">No Saved Screens Yet</h3>
-                    <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1 mb-5">
-                      Save your custom screening formulas to quickly re-run quantitative analyses across the Nifty 500.
-                    </p>
-                    <button
-                      onClick={() => navigate('/screen')}
-                      className="px-5 py-2.5 rounded-xl bg-apple-blue hover:opacity-90 text-white text-xs font-semibold transition-all shadow-sm"
-                    >
-                      Open Query Builder
+        <Route
+          path="/saved"
+          element={
+            <>
+              <main className="flex-1 w-full">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+                  <div className="flex items-end justify-between gap-4 mb-6 flex-wrap">
+                    <div>
+                      <h1 className="text-xl font-semibold text-apple-primary font-display">Saved screens</h1>
+                      <p className="text-xs text-apple-muted mt-1">
+                        Stored in this browser only. Clearing site data removes them.
+                      </p>
+                    </div>
+                    <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary">
+                      <Plus className="w-3.5 h-3.5" />
+                      New screen
                     </button>
                   </div>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {savedScreens.map((screen) => (
-                      <div
-                        key={screen.id}
-                        onClick={() => handleRunScreen(screen.query)}
-                        className="apple-card p-5 cursor-pointer flex flex-col justify-between group"
-                      >
-                        <div>
-                          <div className="flex items-start justify-between gap-2 mb-2">
+
+                  {savedScreens.length === 0 ? (
+                    <div className="apple-card py-16 px-6 text-center">
+                      <Bookmark className="w-7 h-7 text-apple-faint mx-auto mb-3" />
+                      <h2 className="text-sm font-semibold text-apple-primary">Nothing saved yet</h2>
+                      <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
+                        Build a query you want to come back to, then hit Save. It will show up here with the
+                        formula intact.
+                      </p>
+                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary mt-5">
+                        Open the query editor
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+                      {savedScreens.map((screen) => (
+                        <Link
+                          key={screen.id}
+                          to={screenPath(screen.query)}
+                          className="apple-card apple-card-interactive p-4 flex flex-col group"
+                        >
+                          <div className="flex items-start justify-between gap-2">
                             <h3 className="text-sm font-semibold text-apple-primary group-hover:text-apple-blue transition-colors">
                               {screen.title}
                             </h3>
                             <button
-                              onClick={(e) => handleDeleteSavedScreen(screen.id, e)}
-                              className="p-1.5 rounded-lg text-apple-muted hover:text-apple-red hover:bg-apple-red-subtle transition-colors"
-                              title="Delete screen"
+                              onClick={(e) => handleDeleteScreen(screen.id, e)}
+                              className="apple-btn apple-btn-quiet p-1 -mr-1 -mt-1 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+                              title={`Delete ${screen.title}`}
+                              aria-label={`Delete ${screen.title}`}
                             >
                               <Trash2 className="w-3.5 h-3.5" />
                             </button>
                           </div>
-                          <p className="text-xs text-apple-muted line-clamp-2">
-                            {screen.description || 'Custom user formula'}
-                          </p>
-                          <div className="mt-3 p-2.5 rounded-xl bg-apple-subtle border border-apple-border font-mono text-[11px] text-apple-secondary line-clamp-2">
+
+                          {screen.description && (
+                            <p className="text-xs text-apple-muted mt-1 line-clamp-2 leading-relaxed">
+                              {screen.description}
+                            </p>
+                          )}
+
+                          <code className="apple-well mt-3 p-2.5 block font-mono text-[11px] text-apple-secondary leading-relaxed line-clamp-3">
                             {screen.query}
+                          </code>
+
+                          <div className="mt-auto pt-3 flex items-center justify-between text-[11px]">
+                            <span className="text-apple-faint font-mono">
+                              {screen.createdAt ? new Date(screen.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}
+                            </span>
+                            <span className="text-apple-blue font-semibold">Run →</span>
                           </div>
-                        </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </main>
+              <Footer />
+            </>
+          }
+        />
 
-                        <div className="mt-4 pt-3 border-t border-apple-border flex items-center justify-between">
-                          <span className="text-[10px] font-mono text-apple-muted">
-                            {screen.createdAt ? new Date(screen.createdAt).toLocaleDateString() : 'Curated'}
-                          </span>
-                          <span className="text-xs font-semibold text-apple-blue flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                            Run Screen &rarr;
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </main>
-            <Footer />
-          </>
-        } />
+        <Route
+          path="/stock/:symbol"
+          element={
+            <Suspense
+              fallback={
+                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-5">
+                  <div className="skeleton h-56" />
+                  <div className="skeleton h-40" />
+                </main>
+              }
+            >
+              <StockDetailPage />
+            </Suspense>
+          }
+        />
 
-        <Route path="/stock/:symbol" element={<StockDetailPage />} />
+        <Route
+          path="*"
+          element={
+            <>
+              <main className="flex-1 flex items-center justify-center p-8">
+                <div className="text-center">
+                  <h1 className="text-lg font-semibold text-apple-primary font-display">Page not found</h1>
+                  <p className="text-xs text-apple-muted mt-1.5">That address does not match anything here.</p>
+                  <Link to="/" className="apple-btn apple-btn-primary mt-5">
+                    Back to the screener
+                  </Link>
+                </div>
+              </main>
+              <Footer />
+            </>
+          }
+        />
       </Routes>
 
       <CommandPalette
-        isOpen={isCommandPaletteOpen}
-        onClose={() => setIsCommandPaletteOpen(false)}
+        isOpen={isPaletteOpen}
+        onClose={() => setPaletteOpen(false)}
+        onInsertMetric={(metricName) => {
+          const metric = getMetric(metricName) ?? undefined;
+          const text = metric ? metric.name : metricName;
+          setDraftQuery((q) => (q.trim() ? `${q.trim()} AND ${text} ` : `${text} `));
+          navigate('/screen');
+        }}
       />
 
       <SaveScreenModal
-        isOpen={isSaveModalOpen}
-        onClose={() => setIsSaveModalOpen(false)}
+        isOpen={isSaveOpen}
+        onClose={() => setSaveOpen(false)}
         onSave={handleSaveScreen}
-        query={query}
+        query={draftQuery}
       />
     </div>
   );

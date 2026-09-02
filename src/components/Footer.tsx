@@ -1,93 +1,91 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Filter, Heart, Shield, Code2, Database } from 'lucide-react';
 import { GithubLogo } from '@phosphor-icons/react';
 import { CURATED_SCREENS } from '../data/screens';
+import { STOCKS_DATA } from '../data/stocksData';
+import { screenPath } from '../lib/routes';
+
+const REPO = 'https://github.com/abhy-kumar/filterer';
+
+const FEATURED = ['magic-formula', 'debt-free-compounders', 'undervalued-bargains', 'piotroski-high-score'];
 
 export const Footer: React.FC = () => {
-  const getScreenUrl = (id: string) => {
-    const screen = CURATED_SCREENS.find(s => s.id === id);
-    if (!screen) return '/screen';
-    return `/screen?q=${encodeURIComponent(screen.query)}`;
+  const screenUrl = (id: string) => {
+    const screen = CURATED_SCREENS.find((s) => s.id === id);
+    return screen ? screenPath(screen.query) : '/screen';
   };
 
   return (
-    <footer className="w-full border-t border-white/10 dark:border-white/10 light:border-slate-200 bg-[#06090e] dark:bg-[#06090e] light:bg-slate-50 py-12 mt-16 text-slate-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-white/5">
-          {/* Col 1: Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg bg-sky-500 flex items-center justify-center text-white font-bold text-xs">
-                <Filter className="w-4 h-4" />
-              </div>
-              <span className="font-bold text-base text-white dark:text-white light:text-slate-900 font-mono tracking-tight">
-                FILTERER
-              </span>
-            </div>
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
-              A high-performance, open-source, and free alternative to Screener.in for Indian Equities. Designed for value investors, quant traders, and equity researchers.
+    <footer className="w-full border-t border-apple-border mt-20">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="col-span-2">
+            <span className="text-sm font-bold tracking-[-0.03em] text-apple-primary font-display">Filterer</span>
+            <p className="text-xs text-apple-secondary mt-2 max-w-sm leading-relaxed">
+              An open-source stock screener for Indian equities. Everything runs in the browser; nothing about
+              your queries leaves this page.
             </p>
-            <div className="flex items-center gap-3 text-xs text-slate-400">
-              <span className="flex items-center gap-1.5">
-                <Code2 className="w-3.5 h-3.5 text-sky-400" />
-                Next-Gen TypeScript Engine
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1.5">
-                <Database className="w-3.5 h-3.5 text-emerald-400" />
-                Vercel Ready
-              </span>
-            </div>
+            <p className="text-xs text-apple-muted mt-4 leading-relaxed max-w-sm">
+              Covering {STOCKS_DATA.length} companies with four years of annual statements. Figures the source
+              feed does not carry are shown as not reported rather than as zero.
+            </p>
           </div>
 
-          {/* Col 2: Screener Queries */}
           <div>
-            <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 uppercase tracking-wider mb-3">
-              Popular Screens
-            </h4>
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.06em] text-apple-faint mb-3">Screens</h2>
             <ul className="space-y-2 text-xs">
-              <li><Link to={getScreenUrl('magic-formula')} className="hover:text-sky-400 transition-colors">Magic Formula</Link></li>
-              <li><Link to={getScreenUrl('debt-free-compounders')} className="hover:text-sky-400 transition-colors">Debt Free Compounders</Link></li>
-              <li><Link to={getScreenUrl('undervalued-bargains')} className="hover:text-sky-400 transition-colors">Graham Undervalued</Link></li>
-              <li><Link to={getScreenUrl('piotroski-high-score')} className="hover:text-sky-400 transition-colors">High Piotroski F-Score</Link></li>
-              <li><Link to={getScreenUrl('fii-dii-buying')} className="hover:text-sky-400 transition-colors">Institutional Buying</Link></li>
+              {FEATURED.map((id) => {
+                const screen = CURATED_SCREENS.find((s) => s.id === id);
+                if (!screen) return null;
+                return (
+                  <li key={id}>
+                    <Link to={screenUrl(id)} className="text-apple-secondary hover:text-apple-blue transition-colors">
+                      {screen.title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          {/* Col 3: Resources & Links */}
           <div>
-            <h4 className="text-xs font-bold text-white dark:text-white light:text-slate-900 uppercase tracking-wider mb-3">
-              Developer & Source
-            </h4>
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.06em] text-apple-faint mb-3">Project</h2>
             <ul className="space-y-2 text-xs">
               <li>
                 <a
-                  href="https://github.com/abhy-kumar/filterer"
+                  href={REPO}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 text-apple-secondary hover:text-apple-blue transition-colors"
                 >
-                  <GithubLogo className="w-4 h-4" />
-                  GitHub Repository
+                  <GithubLogo className="w-3.5 h-3.5" />
+                  Source
                 </a>
               </li>
-              <li><a href="https://github.com/abhy-kumar/filterer" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">API Documentation</a></li>
-              <li><Link to="/screen" className="hover:text-sky-400 transition-colors">Formula Dictionary</Link></li>
-              <li><a href="https://github.com/abhy-kumar/filterer" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">Python Pipeline</a></li>
+              <li>
+                <Link to="/screen" className="text-apple-secondary hover:text-apple-blue transition-colors">
+                  Query syntax
+                </Link>
+              </li>
+              <li>
+                <a
+                  href={`${REPO}/issues`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-apple-secondary hover:text-apple-blue transition-colors"
+                >
+                  Report a data problem
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Disclaimer */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>
-            Disclaimer: All data and analytical tools are provided for informational and educational purposes only. Not financial or investment advice.
-          </p>
-          <div className="flex items-center gap-1 shrink-0">
-            <span>Built with precision for Indian Equities</span>
-          </div>
-        </div>
+        <p className="mt-10 pt-6 border-t border-apple-border-subtle text-[11px] text-apple-muted leading-relaxed">
+          For research and education. Not investment advice, and not affiliated with Screener.in or Mittal
+          Analytics. Figures come from public sources and are not guaranteed to be accurate or current —
+          check anything you intend to act on against the company&rsquo;s own filings.
+        </p>
       </div>
     </footer>
   );

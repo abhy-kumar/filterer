@@ -55,12 +55,12 @@ export interface CashFlow {
 export interface RatioHistory {
   year: string;
   roce: number;
-  roe: number;
-  debtor_days: number;
-  inventory_days: number;
-  days_payable: number;
-  working_capital_days: number;
-  cash_conversion_cycle: number;
+  roe: number | null;
+  debtor_days: number | null;
+  inventory_days: number | null;
+  days_payable: number | null;
+  working_capital_days: number | null;
+  cash_conversion_cycle: number | null;
 }
 
 export interface ShareholdingPeriod {
@@ -87,7 +87,7 @@ export interface PeerInfo {
   symbol: string;
   name: string;
   current_price: number;
-  pe_ratio: number;
+  pe_ratio: number | null;
   market_cap: number;
   dividend_yield: number;
   net_profit_qtr: number;
@@ -122,13 +122,13 @@ export interface Stock {
 
   // Valuation
   pe_ratio: number;
-  industry_pe: number;
+  industry_pe: number | null;
   pb_ratio: number;
-  peg_ratio: number;
-  graham_number: number;
-  ev_ebitda: number;
+  peg_ratio: number | null;
+  graham_number: number | null;
+  ev_ebitda: number | null;
   price_to_sales: number;
-  price_to_fcf: number;
+  price_to_fcf: number | null;
   dividend_yield: number;
   book_value: number;
   eps: number;
@@ -142,29 +142,29 @@ export interface Stock {
 
   // Compounded Growth Rates (%)
   sales_growth_ttm?: number;
-  sales_growth_3y: number;
-  sales_growth_5y: number;
-  sales_growth_10y: number;
+  sales_growth_3y: number | null;
+  sales_growth_5y: number | null;
+  sales_growth_10y: number | null;
   profit_growth_ttm?: number;
-  profit_growth_3y: number;
-  profit_growth_5y: number;
-  profit_growth_10y: number;
+  profit_growth_3y: number | null;
+  profit_growth_5y: number | null;
+  profit_growth_10y: number | null;
   price_cagr_1y: number;
   price_cagr_3y: number;
   price_cagr_5y: number;
   price_cagr_10y: number;
-  roe_3y: number;
-  roe_5y: number;
-  roe_10y: number;
+  roe_3y: number | null;
+  roe_5y: number | null;
+  roe_10y: number | null;
 
   // Financial Health & Leverage
   debt: number; // in Cr
   debt_to_equity: number;
-  interest_coverage: number;
-  current_ratio: number;
+  interest_coverage: number | null;
+  current_ratio: number | null;
   quick_ratio?: number;
   piotroski_score: number; // 0-9
-  altman_z_score: number;
+  altman_z_score: number | null;
 
   // Working Capital Ratios
   debtor_days: number;
@@ -219,7 +219,9 @@ export interface MetricDefinition {
   short_name?: string;
   aliases: string[];
   category: 'Valuation' | 'Profitability' | 'Growth' | 'Financial Health' | 'Cash Flow' | 'Technicals' | 'Shareholding' | 'General';
-  unit: 'Cr' | 'Rs' | '%' | 'x' | 'Days' | 'Score' | 'Number';
+  unit: 'Cr' | 'Rs' | '%' | 'x' | 'Days' | 'Score' | 'Number' | 'Text';
+  /** Text metrics compare with quoted strings; everything else is numeric. */
+  valueType?: 'number' | 'text';
   description: string;
   formula?: string;
   defaultSortAscending?: boolean;

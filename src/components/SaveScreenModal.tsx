@@ -28,11 +28,11 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
     const newScreen: ScreenFilter = {
       id: `custom-${Date.now()}`,
       title: title.trim(),
-      description: description.trim() || 'Custom quantitative formula filter.',
+      description: description.trim(),
       query: query.trim(),
       category,
       iconName: 'Zap',
-      author: 'You',
+      author: 'Saved by you',
       createdAt: new Date().toISOString(),
     };
 
@@ -43,16 +43,19 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-md flex items-center justify-center p-4 animate-fade-in">
-      <div className="bg-apple-card w-full max-w-lg rounded-3xl border border-apple shadow-2xl p-6">
+    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true">
+      <div className="apple-card w-full max-w-lg p-5 shadow-lg" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4 pb-3 border-b border-apple-border-subtle">
-          <h3 className="text-base font-bold text-apple-primary flex items-center gap-2 font-display">
+          <h3 className="text-sm font-semibold text-apple-primary flex items-center gap-2 font-display">
             <Bookmark className="w-4 h-4 text-apple-blue" />
-            Save Custom Screener
+            Save this screen
           </h3>
           <button
             onClick={onClose}
-            className="p-1 rounded-lg text-apple-muted hover:text-apple-primary hover:bg-apple-subtle transition-colors"
+            className="apple-btn apple-btn-quiet p-1"
             aria-label="Close"
           >
             <X className="w-4 h-4" />
@@ -62,15 +65,15 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-xs font-semibold text-apple-primary mb-1">
-              Screen Title *
+              Name
             </label>
             <input
               type="text"
               required
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="e.g. High ROCE Midcaps with Low Leverage"
-              className="w-full bg-apple-subtle text-xs px-3.5 py-2.5 rounded-xl border border-apple-border text-apple-primary focus:outline-hidden focus:border-apple-blue transition-colors shadow-xs"
+              placeholder="High ROCE midcaps with low leverage"
+              className="apple-input w-full text-xs px-3 py-2"
             />
           </div>
 
@@ -81,9 +84,9 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="e.g. Filters companies generating >20% return on capital with low D/E ratio..."
+              placeholder="What this screen is looking for, and why"
               rows={2}
-              className="w-full bg-apple-subtle text-xs px-3.5 py-2 rounded-xl border border-apple-border text-apple-primary focus:outline-hidden focus:border-apple-blue resize-none transition-colors shadow-xs"
+              className="apple-input w-full text-xs px-3 py-2 resize-none"
             />
           </div>
 
@@ -94,7 +97,7 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value as any)}
-              className="w-full bg-apple-subtle text-xs px-3.5 py-2.5 rounded-xl border border-apple-border text-apple-secondary focus:outline-hidden focus:border-apple-blue transition-colors shadow-xs"
+              className="apple-input w-full text-xs px-3 py-2 text-apple-secondary"
             >
               <option value="Popular">Popular</option>
               <option value="Growth">Growth</option>
@@ -107,9 +110,9 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
 
           <div>
             <label className="block text-xs font-semibold text-apple-primary mb-1">
-              Filter Query
+              Formula
             </label>
-            <div className="p-3 bg-apple-subtle rounded-xl border border-apple-border font-mono text-[11px] text-apple-blue max-h-24 overflow-y-auto">
+            <div className="apple-well p-2.5 font-mono text-[11px] text-apple-secondary max-h-24 overflow-y-auto leading-relaxed">
               {query}
             </div>
           </div>
@@ -118,16 +121,16 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 rounded-xl bg-apple-subtle hover:bg-apple-surface-active text-xs font-semibold text-apple-secondary hover:text-apple-primary border border-apple-border transition-colors shadow-xs"
+              className="apple-btn apple-btn-secondary"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={!title.trim()}
-              className="px-5 py-2 rounded-xl bg-apple-blue hover:opacity-90 disabled:opacity-50 text-xs font-semibold text-white shadow-sm transition-all"
+              className="apple-btn apple-btn-primary"
             >
-              Save Screen
+              Save
             </button>
           </div>
         </form>
