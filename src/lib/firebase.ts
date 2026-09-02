@@ -103,6 +103,15 @@ async function fetchStockDetailFromJSON(symbol: string): Promise<Partial<Stock> 
   try {
     const response = await fetch(`/data/stocks/${detailSlug(symbol)}.json`);
     if (!response.ok) return null;
+
+    // A misconfigured SPA rewrite answers a missing file with index.html and
+    // a 200, so `ok` is not enough to trust the body.
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('json')) {
+      console.warn(`Expected JSON for ${symbol}, got ${contentType || 'no content-type'}. ` +
+        'The static data files are probably missing from this deployment.');
+      return null;
+    }
     return normalizeRemoteStock((await response.json()) as Partial<Stock>);
   } catch {
     return null;
