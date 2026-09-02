@@ -74,6 +74,8 @@ export const StockDetailPage: React.FC = () => {
     if (!remoteData) return bundledStock;
     return {
       ...bundledStock,
+      about: remoteData.about ?? bundledStock.about,
+      website: remoteData.website ?? bundledStock.website,
       annual_pnl: remoteData.annual_pnl || bundledStock.annual_pnl,
       quarterly_results: remoteData.quarterly_results || bundledStock.quarterly_results,
       balance_sheet: remoteData.balance_sheet || bundledStock.balance_sheet,

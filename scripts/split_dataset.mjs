@@ -21,6 +21,11 @@ const DETAIL_DIR = path.join(ROOT, 'public', 'data', 'stocks');
 
 /** Fields the screener never reads, moved out of the bundle. */
 const DETAIL_FIELDS = [
+  // Prose and links only the company page renders. `about` alone was 23% of
+  // the screening tier: 243 KB shipped on first paint so a table could sort
+  // on market cap.
+  'about',
+  'website',
   'quarterly_results',
   'annual_pnl',
   'balance_sheet',

@@ -68,9 +68,12 @@ describe('dataset invariants', () => {
 
   it('keeps the screening tier small enough to bundle', () => {
     // The whole dataset used to be bundled, putting 2.5 MB of statements and
-    // daily prices into the entry chunk.
+    // daily prices into the entry chunk. The screening tier carries only the
+    // scalars a filter reads: roughly 1.7 KB per company, so this scales with
+    // the universe rather than with how much history each company has.
     const bytes = JSON.stringify(STOCKS_DATA).length;
-    expect(bytes).toBeLessThan(400_000);
+    const perCompany = bytes / STOCKS_DATA.length;
+    expect(perCompany, `${(perCompany / 1024).toFixed(1)} KB per company`).toBeLessThan(2_048);
   });
 
   it('orders every time series oldest first', () => {

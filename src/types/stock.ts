@@ -109,7 +109,8 @@ export interface Stock {
   industry: string;
   /** NSE's own industry classification, which is what a domestic screener should show. */
   nse_industry?: string;
-  about: string;
+  /** Loaded with the detail tier, not bundled. */
+  about?: string;
   website?: string;
 
   // Price & Market
