@@ -27,6 +27,7 @@ from __future__ import annotations
 import logging
 import re
 from typing import Any, Optional
+from urllib.parse import quote
 
 from data_pipeline.http_client import HttpClient, shared_client
 
@@ -135,7 +136,10 @@ def parse_nse_patterns(payload: dict) -> list[dict]:
 def fetch_nse_shareholding(symbol: str, client: Optional[HttpClient] = None) -> list[dict]:
     """Filed quarterly shareholding for one company. Empty list if unavailable."""
     client = client or shared_client()
-    quoted = symbol.upper()
+    # Percent-encode the symbol: M&M, ARE&M and J&KBANK would otherwise split
+    # the query string at the ampersand and return the wrong company's data,
+    # or none. This silently skipped 5 companies on the first backfill.
+    quoted = quote(symbol.upper(), safe="")
 
     try:
         client.prime(NSE_QUOTE_PAGE.format(symbol=quoted))
