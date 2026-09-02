@@ -189,18 +189,21 @@ function repair(stock) {
   if (next.peg_ratio !== null && next.peg_ratio >= 99) { next.peg_ratio = null; count('clamped PEG sentinel (99) dropped'); }
 
   // ── Shareholding ───────────────────────────────────────────
-  // The history is a straight line for every company in the universe
-  // (promoter -0.02, FII +0.03, DII +0.02 every quarter without exception),
-  // so the quarter-on-quarter deltas carry no information at all. They are
-  // dropped rather than offered as something to screen on; see
-  // SYNTHETIC_HOLDING_RAMP in src/engine/dataQuality.ts, which labels the
-  // table itself.
+  // Filed data (NSE quarterly shareholding pattern) is trusted as-is. The
+  // generated fallback is not: it moved every company by the same amount
+  // every quarter, so its deltas carried no information and are dropped.
+  const filed = stock.shareholding_source === 'NSE filings';
+
   if (holding.length) {
     const latest = holding[holding.length - 1];
+    const prev = holding[holding.length - 2];
 
     const assign = (key, value) => {
-      if (typeof value === 'number' && Math.abs((next[key] ?? 0) - value) > 0.01) count('shareholding snapshot re-sourced from history');
-      next[key] = typeof value === 'number' ? round(value) : null;
+      const rounded = typeof value === 'number' ? round(value) : null;
+      if (rounded !== null && Math.abs((next[key] ?? 0) - rounded) > 0.01) {
+        count('shareholding snapshot re-sourced from history');
+      }
+      next[key] = rounded;
     };
 
     assign('promoter_holding', latest.promoter);
@@ -208,12 +211,24 @@ function repair(stock) {
     assign('dii_holding', latest.dii);
     assign('public_holding', latest.public);
     next.pledged_percentage = typeof latest.pledged === 'number' ? round(latest.pledged) : null;
+
+    if (filed && prev) {
+      // Real quarter-on-quarter movement, so it is worth screening on.
+      const delta = (a, b) =>
+        typeof a === 'number' && typeof b === 'number' ? round(a - b) : null;
+      next.change_in_promoter_holding_quarter = delta(latest.promoter, prev.promoter);
+      next.change_in_fii_holding_quarter = delta(latest.fii, prev.fii);
+      next.change_in_dii_holding_quarter = delta(latest.dii, prev.dii);
+      count('ownership delta computed from filed data');
+    }
   }
 
-  next.change_in_promoter_holding_quarter = null;
-  next.change_in_fii_holding_quarter = null;
-  next.change_in_dii_holding_quarter = null;
-  count('synthetic ownership delta dropped', 3);
+  if (!filed) {
+    next.change_in_promoter_holding_quarter = null;
+    next.change_in_fii_holding_quarter = null;
+    next.change_in_dii_holding_quarter = null;
+    count('synthetic ownership delta dropped', 3);
+  }
 
   // ── Cash flow snapshot must agree with the statement ───────
   if (cash.length) {
@@ -258,6 +273,8 @@ function repair(stock) {
   }
 
   // ── Peers should quote the same price this app shows ───────
+  if (stock.shareholding_source) next.shareholding_source = stock.shareholding_source;
+
   next.peers = (stock.peers || []).map((peer) => ({ ...peer, symbol: decodeURIComponent(peer.symbol) }));
 
   return next;

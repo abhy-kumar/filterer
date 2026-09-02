@@ -64,14 +64,22 @@ export interface RatioHistory {
 }
 
 export interface ShareholdingPeriod {
-  period: string; // e.g. "Sep 2023", "Dec 2023", "Mar 2024", "Jun 2024", "Sep 2024", "Dec 2024"
-  promoter: number;
-  fii: number;
-  dii: number;
-  public: number;
-  others: number;
-  total?: number;
-  pledged: number;
+  period: string; // e.g. "Jun 2026"
+  promoter: number | null;
+  /**
+   * NSE's filing endpoint reports the public holding as one figure and does
+   * not split it into foreign and domestic institutions, so these are null
+   * for filed data rather than estimated. BSE publishes the fuller breakdown.
+   */
+  fii: number | null;
+  dii: number | null;
+  public: number | null;
+  /** Shares held by employee trusts, where disclosed. */
+  others: number | null;
+  total?: number | null;
+  pledged: number | null;
+  /** Where the row came from, e.g. "NSE filings". */
+  source?: string;
 }
 
 export interface PricePoint {
@@ -211,6 +219,8 @@ export interface Stock {
   balance_sheet?: BalanceSheet[];
   cash_flow?: CashFlow[];
   shareholding_history?: ShareholdingPeriod[];
+  /** Provenance for the shareholding block, e.g. "NSE filings". */
+  shareholding_source?: string;
   ratios_history?: RatioHistory[];
   historical_prices?: PricePoint[];
   peers?: PeerInfo[];

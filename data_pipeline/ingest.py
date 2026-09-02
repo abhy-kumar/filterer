@@ -205,6 +205,7 @@ def run(
     rate_limit: float = 1.2,
 ) -> int:
     from data_pipeline.data_fetcher import StockDataFetcher
+    from data_pipeline.shareholding import attach_shareholding
     from data_pipeline.universe_source import fetch_index_constituents
 
     ledger = Ledger()
@@ -251,6 +252,14 @@ def run(
                     payload["industry"] = nse_industry
 
             payload["isin"] = row["isin"] or payload.get("isin", "")
+
+            # Replace the generated shareholding ramp with the filed pattern.
+            # A failure here leaves the company's other fields intact.
+            try:
+                attach_shareholding(payload)
+            except Exception as exc:
+                logger.debug("  shareholding for %s: %s", symbol, exc)
+
             ledger.record_success(symbol, payload)
             succeeded += 1
 
@@ -270,6 +279,49 @@ def run(
             )
 
     logger.info("Run complete: %d succeeded, %d failed. Ledger: %s", succeeded, failed, ledger.counts())
+    return 0
+
+
+def backfill_shareholding(limit: int = 0) -> int:
+    """
+    Apply filed shareholding to companies already ingested.
+
+    Lets the fabricated ramp be replaced without re-fetching statements for the
+    whole universe. Only the shareholding block of each payload is rewritten.
+    """
+    from data_pipeline.shareholding import attach_shareholding
+
+    ledger = Ledger()
+    rows = ledger.conn.execute(
+        "SELECT c.symbol, p.payload FROM payloads p JOIN companies c ON c.symbol=p.symbol"
+        " WHERE c.status='ok' ORDER BY c.symbol" + (f" LIMIT {int(limit)}" if limit else "")
+    ).fetchall()
+
+    logger.info("Backfilling shareholding for %d companies", len(rows))
+    filled = skipped = 0
+
+    for i, row in enumerate(rows, 1):
+        payload = json.loads(row["payload"])
+        if payload.get("shareholding_source") == "NSE filings":
+            skipped += 1
+            continue
+        try:
+            if attach_shareholding(payload):
+                ledger.record_success(row["symbol"], payload)
+                filled += 1
+            else:
+                skipped += 1
+        except KeyboardInterrupt:
+            logger.warning("Interrupted; %d already saved.", filled)
+            break
+        except Exception as exc:
+            logger.debug("  %s: %s", row["symbol"], exc)
+            skipped += 1
+
+        if i % 50 == 0:
+            logger.info("  ... %d/%d (%d filed, %d without a filing)", i, len(rows), filled, skipped)
+
+    logger.info("Backfill complete: %d filed, %d without a filing", filled, skipped)
     return 0
 
 
@@ -325,12 +377,16 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--rate-limit", type=float, default=1.2, help="Seconds between calls")
     parser.add_argument("--status", action="store_true", help="Show ledger progress and exit")
     parser.add_argument("--export", action="store_true", help="Write the app's data files and exit")
+    parser.add_argument("--backfill-shareholding", action="store_true",
+                        help="Fetch filed shareholding for companies already ingested")
     args = parser.parse_args(argv)
 
     if args.status:
         return status()
     if args.export:
         return export()
+    if args.backfill_shareholding:
+        return backfill_shareholding(limit=args.limit)
     return run(
         limit=args.limit,
         retry_failed=args.retry_failed,

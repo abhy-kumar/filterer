@@ -31,6 +31,7 @@ const DETAIL_FIELDS = [
   'balance_sheet',
   'cash_flow',
   'shareholding_history',
+  'shareholding_source',
   'ratios_history',
   'historical_prices',
   'peers',

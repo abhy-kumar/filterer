@@ -90,6 +90,9 @@ export function holdingSeriesLooksSynthetic(stock: Stock): boolean {
   const history = stock.shareholding_history || [];
   if (history.length < 3) return false;
 
+  // Filed data is never the generated ramp.
+  if (stock.shareholding_source) return false;
+
   for (let i = 1; i < history.length; i++) {
     const prev = history[i - 1];
     const curr = history[i];
@@ -102,6 +105,11 @@ export function holdingSeriesLooksSynthetic(stock: Stock): boolean {
   return true;
 }
 
+/** True when the shareholding block came from exchange filings. */
+export function hasFiledShareholding(stock: Stock): boolean {
+  return Boolean(stock.shareholding_source);
+}
+
 export function assessStock(stock: Stock): QualityFinding[] {
   const findings: QualityFinding[] = [];
 
@@ -112,6 +120,16 @@ export function assessStock(stock: Stock): QualityFinding[] {
       title: 'Shareholding series is placeholder data',
       detail:
         'Every company in this dataset shows the identical quarterly drift in promoter, FII and DII stakes, which means the series was generated rather than read from exchange filings. The latest split is shown for reference; the quarter-on-quarter changes have been withdrawn from the screener.',
+    });
+  }
+
+  if (hasFiledShareholding(stock)) {
+    findings.push({
+      id: 'shareholding-partial',
+      severity: 'note',
+      title: 'Shareholding is filed, but not broken down',
+      detail:
+        "Promoter and public holdings come from the company's own quarterly filings with NSE. That filing reports the public holding as a single figure, so the split between foreign and domestic institutions, and the promoter pledge, are shown as not disclosed rather than estimated.",
     });
   }
 

@@ -166,6 +166,26 @@ truncated run, just the ~13% that happened to get through.
 
 `data/ingest.db` is the job ledger. It is safe to interrupt a run and resume.
 
+### Sources
+
+| Data | Source | Notes |
+|---|---|---|
+| Universe | NSE index constituent CSV | Live, with ISIN and NSE industry |
+| Prices, statements, ratios | Yahoo Finance via `yfinance` | Four years of annual statements |
+| Shareholding | NSE quarterly filing (`top-corp-info`) | Promoter, public and employee trusts, per filed quarter |
+| Institutional split, pledge | Not sourced | BSE publishes these; endpoint paths not yet found |
+
+`data_pipeline/shareholding.py` reads the filed pattern. Backfill it onto an
+existing ingest without re-fetching statements:
+
+```bash
+python -m data_pipeline.ingest --backfill-shareholding
+```
+
+Anything the filing does not disclose stays `None`. The rule throughout this
+pipeline is that a figure is either sourced or absent, never inferred to fill a
+column.
+
 ---
 
 ## Data Honesty
@@ -191,7 +211,7 @@ Anything that could not be repaired is surfaced on the company page instead of h
 
 ### Known gaps
 
-- **Shareholding history is generated, not filed.** Every company moves by the same amount every quarter. It needs a real source.
+- **Shareholding is filed, but not broken down.** Promoter and public holdings now come from each company's quarterly filing with NSE. That filing reports the public holding as a single figure, so the foreign/domestic institutional split and the promoter pledge are not disclosed rather than estimated. BSE publishes the fuller pattern; its shareholding endpoints are not reachable at the paths its own site appears to use, while the rest of its API answers normally, so this is a discovery problem rather than a block.
 - **Quarterly series have holes.** Roughly three quarters of the universe is missing at least one quarter.
 - **Four years of annual history**, so anything needing five or ten years is unavailable.
 - **`scanner.py` is not verified against the browser engine.** The two parsers can disagree.
