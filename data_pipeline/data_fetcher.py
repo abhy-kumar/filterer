@@ -78,8 +78,10 @@ def _round(val: Any, decimals: int = 2) -> float:
 YAHOO_TICKER_ALIASES = {
     "TATAMOTORS": "TMCV.NS",
     "L&TFH": "LTF.NS",
+    # Keyed by the plain NSE symbol. "M&M" was previously keyed as the
+    # percent-encoded "M%26M", which could never match the symbol coming out
+    # of the universe, so the alias silently did nothing.
     "M&M": "M&M.NS",
-    "M%26M": "M&M.NS",
     "BAJAJ-AUTO": "BAJAJ-AUTO.NS",
     "MCDOWELL-N": "MCDOWELL-N.NS",
 }

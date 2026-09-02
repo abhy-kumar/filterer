@@ -199,6 +199,27 @@ def generate_sqlite_db(stocks: list[dict], db_path: str = "data/screener.db") ->
     logger.info(f"Generated {db_path} ({len(stocks)} stocks, {size_kb:.1f} KB)")
 
 
+def detail_slug(symbol: str) -> str:
+    """
+    Filesystem- and URL-safe name for a company's detail file.
+
+    Must match detailSlug() in scripts/split_dataset.mjs and
+    src/lib/firebase.ts. Naming these files after the raw symbol is what broke
+    Mahindra: the file landed as "M%26M.json" while the app asked for
+    "M&M.json", so that company's statements never loaded.
+    """
+    out = []
+    prev_us = False
+    for ch in symbol.upper():
+        if ch.isalnum() and ch.isascii():
+            out.append(ch)
+            prev_us = False
+        elif not prev_us:
+            out.append("_")
+            prev_us = True
+    return "".join(out)
+
+
 def generate_stock_detail_jsons(stocks: list[dict], output_dir: str = "public/data/stocks") -> None:
     """
     Generate individual JSON files per stock for lazy-loading stock detail pages.
@@ -220,7 +241,7 @@ def generate_stock_detail_jsons(stocks: list[dict], output_dir: str = "public/da
             "peers": s.get("peers", []),
         }
 
-        filepath = os.path.join(output_dir, f"{s['symbol']}.json")
+        filepath = os.path.join(output_dir, f"{detail_slug(s['symbol'])}.json")
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(detail, f)
 

@@ -148,6 +148,46 @@ describe('dataset invariants', () => {
   });
 });
 
+/**
+ * Coverage floors.
+ *
+ * The pipeline's own QC report graded this universe at 100% health while five
+ * columns were empty for every company. These thresholds are the guard against
+ * that: a run that loses a core metric fails the build instead of shipping a
+ * screener whose filters quietly match nothing.
+ */
+describe('metric coverage', () => {
+  const FLOORS: Array<[keyof (typeof STOCKS_DATA)[number], number]> = [
+    ['current_price', 1.0],
+    ['market_cap', 1.0],
+    ['sector', 1.0],
+    ['roce', 0.9],
+    ['roe', 0.9],
+    ['pe_ratio', 0.85],
+    ['pb_ratio', 0.9],
+    ['debt_to_equity', 0.9],
+    ['opm', 0.9],
+    ['piotroski_score', 0.9],
+    ['sales_growth_3y', 0.85],
+    ['profit_growth_3y', 0.85],
+    ['dividend_yield', 0.9],
+    ['rsi_14', 0.9],
+    ['promoter_holding', 0.85],
+  ];
+
+  it.each(FLOORS)('reports %s for at least %s of the universe', (key, floor) => {
+    const reported = STOCKS_DATA.filter((s) => {
+      const value = s[key];
+      return value !== null && value !== undefined && value !== '';
+    }).length;
+    const ratio = reported / STOCKS_DATA.length;
+    expect(
+      ratio,
+      `${String(key)}: ${reported}/${STOCKS_DATA.length} = ${(ratio * 100).toFixed(0)}%`
+    ).toBeGreaterThanOrEqual(floor);
+  });
+});
+
 describe('curated screens', () => {
   it('all parse', () => {
     for (const screen of CURATED_SCREENS) {

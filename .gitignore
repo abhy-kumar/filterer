@@ -45,3 +45,7 @@ public/data/stocks/
 .DS_Store
 Thumbs.db
 *.log
+
+# Ingestion working files
+.cache/
+data/ingest.db

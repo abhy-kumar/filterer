@@ -2,7 +2,7 @@
 
 Filterer is an open-source stock screener for Indian equities (NSE / BSE). It executes Screener.in-style natural language queries against a bundled universe of large-cap listings, evaluates multi-variable fundamental formulas in the browser, and renders financial statements, peer comparisons and technical indicators.
 
-**Current coverage: 67 companies, four years of annual statements.** The screening tier is bundled with the app; statements and price history are fetched per company. Figures the data pipeline cannot source are shown as *not reported* rather than as zero — see [Data honesty](#data-honesty) below, which is load-bearing rather than a footnote.
+**Coverage: the live NSE Nifty 500 constituents, with four years of annual statements per company.** The screening tier is bundled with the app; statements and price history are fetched per company. Figures the data pipeline cannot source are shown as *not reported* rather than as zero — see [Data honesty](#data-honesty) below, which is load-bearing rather than a footnote.
 
 ---
 
@@ -131,6 +131,39 @@ Filterer adheres to the **Apple Human Interface Guidelines (HIG)** and Microsoft
 
 ---
 
+## Ingestion
+
+### Why the universe was 67 companies
+
+The previous orchestrator accumulated results in memory and wrote once at the
+end, discarding anything that failed:
+
+```python
+if stock_data: stocks.append(stock_data)
+else:          failed.append(sym)     # and that was the end of it
+```
+
+Each company cost roughly seven sequential Yahoo calls — `info`, four
+statements, price history, holders — so a 500-name run issued about 3,500
+requests behind a fixed 0.8s delay and three linear retries. Yahoo throttled
+most of it. The 67 survivors sat at index positions 4 through 485: not a
+truncated run, just the ~13% that happened to get through.
+
+### What replaced it
+
+| Concern | Before | Now |
+|---|---|---|
+| Universe | 502 names hardcoded in `stock_universe.py` | `universe_source.py` reads the live NSE constituent CSV, with ISIN and NSE industry, snapshotted to `data/universe/` and falling back to the checked-in list offline |
+| Progress | In memory, written once at the end | `ingest.py` commits each company to a SQLite ledger as it arrives |
+| Failures | Dropped silently | Recorded with attempt count and error; `--retry-failed` re-runs only those |
+| Transport | Fixed 0.8s delay, 3 linear retries | `http_client.py`: per-host token buckets, 429/`Retry-After` awareness, exponential backoff with jitter, on-disk response cache, browser impersonation via `curl_cffi` |
+| Price history | One request per company | `batch_price_history()` downloads in chunks of 40, turning ~500 requests into ~13 |
+| Interruption | Lost the whole run | Costs one company |
+
+`data/ingest.db` is the job ledger. It is safe to interrupt a run and resume.
+
+---
+
 ## Data Honesty
 
 The upstream pipeline reports itself as 100% healthy while leaving whole columns unpopulated. Reading those zeros as real figures is what made the screener useless: `Cash conversion cycle < 45` matched every company in the universe, because none of them reported one.
@@ -206,6 +239,20 @@ pip install -r requirements.txt
 
 # Assemble the SQLite database from chunked Git parts
 python db_split_join.py join
+
+# Refresh the universe from the live NSE index constituent file
+python -m data_pipeline.universe_source --index nifty500
+
+# Ingest. Resumable: re-run it and it continues where it stopped.
+python -m data_pipeline.ingest --status         # what is left to do
+python -m data_pipeline.ingest --limit 25       # a small run first
+python -m data_pipeline.ingest                  # everything still pending
+python -m data_pipeline.ingest --retry-failed   # mop up throttled names
+python -m data_pipeline.ingest --export         # write the app's data files
+
+# Then rebuild the two front-end tiers and check the invariants
+npm run data:rebuild
+npm test
 
 # Run CLI scanner with a preset filter
 python scanner.py --preset debt-free

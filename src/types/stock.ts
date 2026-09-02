@@ -103,8 +103,12 @@ export interface Stock {
   name: string;
   bse_code?: string;
   nse_symbol: string;
+  /** ISIN from the NSE constituent file, where the ingest captured one. */
+  isin?: string;
   sector: string;
   industry: string;
+  /** NSE's own industry classification, which is what a domestic screener should show. */
+  nse_industry?: string;
   about: string;
   website?: string;
 
