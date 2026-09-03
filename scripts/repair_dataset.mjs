@@ -340,7 +340,15 @@ for (const stock of repaired) {
 }
 if (peerFixes) count('peer rows re-synced with the company row', peerFixes);
 
-fs.writeFileSync(DATA_FILE, `${header}export const STOCKS_DATA: Stock[] = ${JSON.stringify(repaired, null, 2)};\n`, 'utf8');
+for (let attempt = 0; attempt < 5; attempt++) {
+  try {
+    fs.writeFileSync(DATA_FILE, `${header}export const STOCKS_DATA: Stock[] = ${JSON.stringify(repaired, null, 2)};\n`, 'utf8');
+    break;
+  } catch (err) {
+    if (attempt === 4) throw err;
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 500);
+  }
+}
 
 console.log(`Repaired ${repaired.length} companies.\n`);
 for (const [key, value] of Object.entries(stats).sort((a, b) => b[1] - a[1])) {

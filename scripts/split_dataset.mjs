@@ -56,7 +56,13 @@ fs.mkdirSync(DETAIL_DIR, { recursive: true });
 
 // Clear out the previous generation, including any stale %-encoded names.
 for (const file of fs.readdirSync(DETAIL_DIR)) {
-  if (file.endsWith('.json')) fs.unlinkSync(path.join(DETAIL_DIR, file));
+  if (file.endsWith('.json')) {
+    try {
+      fs.unlinkSync(path.join(DETAIL_DIR, file));
+    } catch {
+      // Ignore if file is momentarily locked on Windows; it will be overwritten below
+    }
+  }
 }
 
 const lean = [];

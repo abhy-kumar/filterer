@@ -123,7 +123,7 @@ export function assessStock(stock: Stock): QualityFinding[] {
     });
   }
 
-  if (hasFiledShareholding(stock)) {
+  if (hasFiledShareholding(stock) && (stock.fii_holding === null || stock.dii_holding === null)) {
     findings.push({
       id: 'shareholding-partial',
       severity: 'note',
@@ -200,7 +200,7 @@ export function assessStock(stock: Stock): QualityFinding[] {
     }
   }
 
-  if (annual.length < 5) {
+  if (annual.length < 5 && stock.sales_growth_5y === null && stock.profit_growth_5y === null) {
     findings.push({
       id: 'short-history',
       severity: 'note',

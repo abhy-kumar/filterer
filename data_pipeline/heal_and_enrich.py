@@ -178,6 +178,22 @@ def heal_statements_and_scores(stock: Dict[str, Any]) -> None:
         )
 
 
+def heal_quarterly_results(stock: Dict[str, Any]) -> None:
+    """Populate quarterly financial results from authentic filed sources, never synthesizing figures."""
+    sym = stock.get("symbol", "").strip().upper()
+    cache_path = ROOT / "data" / "authentic_quarters.json"
+    if cache_path.exists():
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                cache = json.load(f)
+            if sym in cache and cache[sym]:
+                # Overwrite with authentic filed exchange data
+                stock["quarterly_results"] = cache[sym][-8:] if len(cache[sym]) > 8 else cache[sym]
+                return
+        except Exception:
+            pass
+
+
 def heal_all(rate_limit: float = 0.05) -> int:
     """Execute complete healing and enrichment pass."""
     ledger = Ledger()
@@ -209,6 +225,9 @@ def heal_all(rate_limit: float = 0.05) -> int:
         # Authentic Piotroski & Altman + Statement footings
         heal_statements_and_scores(stock)
 
+        # Contiguous quarterly results (backfill Sep 2025)
+        heal_quarterly_results(stock)
+
         # 5Y and 10Y CAGRs from statements / Tickertape if missing
         if stock.get("sales_growth_5y") is None or stock.get("profit_growth_5y") is None:
             try:
@@ -239,7 +258,9 @@ def heal_all(rate_limit: float = 0.05) -> int:
 
     # Run data:rebuild (repair + split) via node
     logger.info("Running node scripts/repair_dataset.mjs and split_dataset.mjs...")
+    time.sleep(1.0)
     subprocess.run(["node", "scripts/repair_dataset.mjs"], check=True)
+    time.sleep(0.5)
     subprocess.run(["node", "scripts/split_dataset.mjs"], check=True)
 
     logger.info("Comprehensive healing and enrichment completed successfully!")

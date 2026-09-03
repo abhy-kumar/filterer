@@ -45,53 +45,55 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
     <header className="sticky top-0 z-40 w-full apple-glass border-b border-apple-border">
       {/* Index strip */}
       <div className="border-b border-apple-border-subtle">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-8 flex items-center gap-5 overflow-x-auto no-scrollbar text-[11px]">
-          <div className="flex items-center gap-1.5 shrink-0">
-            <span
-              className={`w-1.5 h-1.5 rounded-full ${isMarketOpen ? 'bg-apple-green' : 'bg-apple-text-faint'}`}
-              style={isMarketOpen ? undefined : { background: 'var(--apple-text-faint)' }}
-            />
-            <span className="font-semibold text-apple-primary tracking-tight">
-              {isMarketOpen ? 'NSE open' : 'NSE closed'}
-            </span>
-            <span className="text-apple-faint font-mono tabular-nums">{timeIST}</span>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-8 flex items-center justify-between text-[11px]">
+          <div className="flex items-center gap-5 overflow-x-auto no-scrollbar min-w-0 pr-4">
+            <div className="flex items-center gap-1.5 shrink-0">
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${isMarketOpen ? 'bg-apple-green' : 'bg-apple-text-faint'}`}
+                style={isMarketOpen ? undefined : { background: 'var(--apple-text-faint)' }}
+              />
+              <span className="font-semibold text-apple-primary tracking-tight">
+                {isMarketOpen ? 'NSE open' : 'NSE closed'}
+              </span>
+              <span className="text-apple-faint font-mono tabular-nums">{timeIST}</span>
+            </div>
+
+            <div className="w-px h-3.5 bg-apple-border shrink-0" />
+
+            {!hasLoaded ? (
+              <div className="flex items-center gap-5 shrink-0">
+                {[0, 1, 2, 3].map((i) => (
+                  <div key={i} className="skeleton h-3 w-28" />
+                ))}
+              </div>
+            ) : error ? (
+              <span className="text-apple-muted shrink-0">{error} — showing no index prices rather than stale ones.</span>
+            ) : (
+              indices.map((idx) => {
+                const flash = flashingIndex[idx.name];
+                return (
+                  <div
+                    key={idx.name}
+                    className={`flex items-baseline gap-1.5 shrink-0 px-1 rounded ${
+                      flash === 'up' ? 'flash-up' : flash === 'down' ? 'flash-down' : ''
+                    }`}
+                  >
+                    <span className="text-apple-muted">{idx.name}</span>
+                    <span className="font-mono font-medium text-apple-primary tabular-nums">
+                      {idx.price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </span>
+                    <span className={`font-mono tabular-nums ${signClass(idx.change_pct)}`}>
+                      {idx.change_pct >= 0 ? '+' : ''}
+                      {idx.change_pct.toFixed(2)}%
+                    </span>
+                  </div>
+                );
+              })
+            )}
           </div>
 
-          <div className="w-px h-3.5 bg-apple-border shrink-0" />
-
-          {!hasLoaded ? (
-            <div className="flex items-center gap-5 shrink-0">
-              {[0, 1, 2, 3].map((i) => (
-                <div key={i} className="skeleton h-3 w-28" />
-              ))}
-            </div>
-          ) : error ? (
-            <span className="text-apple-muted shrink-0">{error} — showing no index prices rather than stale ones.</span>
-          ) : (
-            indices.map((idx) => {
-              const flash = flashingIndex[idx.name];
-              return (
-                <div
-                  key={idx.name}
-                  className={`flex items-baseline gap-1.5 shrink-0 px-1 rounded ${
-                    flash === 'up' ? 'flash-up' : flash === 'down' ? 'flash-down' : ''
-                  }`}
-                >
-                  <span className="text-apple-muted">{idx.name}</span>
-                  <span className="font-mono font-medium text-apple-primary tabular-nums">
-                    {idx.price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                  </span>
-                  <span className={`font-mono tabular-nums ${signClass(idx.change_pct)}`}>
-                    {idx.change_pct >= 0 ? '+' : ''}
-                    {idx.change_pct.toFixed(2)}%
-                  </span>
-                </div>
-              );
-            })
-          )}
-
           {age && (
-            <span className="ml-auto shrink-0 text-apple-faint hidden lg:inline pl-6">
+            <span className="shrink-0 text-apple-faint whitespace-nowrap hidden lg:inline pl-3 select-none">
               Prices {age}
             </span>
           )}

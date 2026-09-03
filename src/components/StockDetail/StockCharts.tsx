@@ -391,15 +391,13 @@ const TradingViewLightweightChart: React.FC<{
         </div>
 
         {/* Timeframe Range Selector */}
-        <div className="flex items-center gap-1">
+        <div className="apple-segmented">
           {(['1m', '6m', '1y', '3y', '5y', 'max'] as Range[]).map((r) => (
             <button
               key={r}
               onClick={() => handleRangeChange(r)}
-              className={`px-2 py-0.5 rounded text-[11px] font-medium uppercase transition-colors ${
-                selectedRange === r
-                  ? 'bg-apple-primary text-apple-primary-invert font-semibold'
-                  : 'text-apple-muted hover:text-apple-primary'
+              className={`apple-segmented-item px-2.5 py-0.5 text-[11px] uppercase ${
+                selectedRange === r ? 'active' : ''
               }`}
             >
               {r}
