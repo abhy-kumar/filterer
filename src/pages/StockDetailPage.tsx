@@ -14,15 +14,19 @@ import { CashFlowTable } from '../components/StockDetail/CashFlowTable';
 import { RatiosTable } from '../components/StockDetail/RatiosTable';
 import { ShareholdingPatternTable } from '../components/StockDetail/ShareholdingPatternTable';
 import { StockDocuments } from '../components/StockDetail/StockDocuments';
+import { SegmentResultsTable } from '../components/StockDetail/SegmentResultsTable';
+import { AIInsightsSummary } from '../components/StockDetail/AIInsightsSummary';
 import { DataQualityPanel } from '../components/StockDetail/DataQualityPanel';
 import { Footer } from '../components/Footer';
 import type { Stock } from '../types/stock';
 
 const SECTIONS = [
   { id: 'sec-analysis', label: 'Analysis' },
+  { id: 'sec-insights', label: 'AI Concall' },
   { id: 'sec-charts', label: 'Charts' },
   { id: 'sec-peers', label: 'Peers' },
   { id: 'sec-quarters', label: 'Quarters' },
+  { id: 'sec-segments', label: 'Segments' },
   { id: 'sec-pnl', label: 'P&L' },
   { id: 'sec-balancesheet', label: 'Balance sheet' },
   { id: 'sec-cashflows', label: 'Cash flow' },
@@ -194,6 +198,9 @@ export const StockDetailPage: React.FC = () => {
           <section id="sec-analysis" className="scroll-mt-32">
             <StockProsCons stock={stock} />
           </section>
+          <section id="sec-insights" className="scroll-mt-32">
+            <AIInsightsSummary stock={stock} />
+          </section>
           {detailStatus === 'loading' && (
             <div className="space-y-5" aria-busy="true" aria-label="Loading statements">
               {[320, 220, 380, 300].map((height, i) => (
@@ -224,6 +231,9 @@ export const StockDetailPage: React.FC = () => {
           </section>
           <section id="sec-quarters" className="scroll-mt-32">
             <QuarterlyResultsTable stock={stock} />
+          </section>
+          <section id="sec-segments" className="scroll-mt-32">
+            <SegmentResultsTable stock={stock} />
           </section>
           <section id="sec-pnl" className="scroll-mt-32">
             <ProfitLossTable stock={stock} />

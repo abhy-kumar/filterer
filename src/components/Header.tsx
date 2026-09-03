@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
-import { SlidersHorizontal, Bookmark, Search, Moon, Sun, Compass, RefreshCw } from 'lucide-react';
+import { SlidersHorizontal, Bookmark, Search, Moon, Sun, Compass, RefreshCw, Users, Activity } from 'lucide-react';
 import { GithubLogo } from '@phosphor-icons/react';
 import { useMarketTicker } from '../hooks/useMarketTicker';
 import { useTheme } from '../context/ThemeContext';
@@ -34,9 +34,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
     ? 'screens'
     : location.pathname.startsWith('/screen')
       ? 'query'
-      : location.pathname === '/saved'
+      : location.pathname === '/saved' || location.pathname === '/watchlists'
         ? 'saved'
-        : '';
+        : location.pathname.startsWith('/people') || location.pathname.startsWith('/investors')
+          ? 'people'
+          : location.pathname.startsWith('/commodities')
+            ? 'commodities'
+            : '';
 
   const {
     indices,
@@ -192,10 +196,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
               className={`apple-segmented-item flex items-center gap-1.5 ${currentTab === 'saved' ? 'active' : ''}`}
             >
               <Bookmark className="w-3.5 h-3.5" />
-              Saved
+              Watchlists
               {savedScreensCount > 0 && (
                 <span className="text-[10px] font-mono text-apple-muted">{savedScreensCount}</span>
               )}
+            </button>
+            <button
+              onClick={() => navigate('/people')}
+              className={`apple-segmented-item flex items-center gap-1.5 ${currentTab === 'people' ? 'active' : ''}`}
+            >
+              <Users className="w-3.5 h-3.5" />
+              Super-Investors
+            </button>
+            <button
+              onClick={() => navigate('/commodities')}
+              className={`apple-segmented-item flex items-center gap-1.5 ${currentTab === 'commodities' ? 'active' : ''}`}
+            >
+              <Activity className="w-3.5 h-3.5" />
+              Commodities
             </button>
           </nav>
         </div>

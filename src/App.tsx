@@ -8,10 +8,17 @@ import { PresetScreens } from './components/PresetScreens';
 import { CommandPalette } from './components/CommandPalette';
 import { SaveScreenModal } from './components/SaveScreenModal';
 import { Footer } from './components/Footer';
-// The detail page pulls in Recharts and the statement tables; neither is
-// needed to render a screen, so it loads on navigation.
 const StockDetailPage = lazy(() =>
   import('./pages/StockDetailPage').then((m) => ({ default: m.StockDetailPage }))
+);
+const SuperInvestorsPage = lazy(() =>
+  import('./pages/SuperInvestorsPage').then((m) => ({ default: m.SuperInvestorsPage }))
+);
+const CommoditiesPage = lazy(() =>
+  import('./pages/CommoditiesPage').then((m) => ({ default: m.CommoditiesPage }))
+);
+const SavedAndWatchlistsPage = lazy(() =>
+  import('./pages/SavedAndWatchlistsPage').then((m) => ({ default: m.SavedAndWatchlistsPage }))
 );
 import { ScreenFilter, Stock } from './types/stock';
 import { STOCKS_DATA } from './data/stocksData';
@@ -232,79 +239,88 @@ export const App: React.FC = () => {
         <Route
           path="/saved"
           element={
-            <>
-              <main className="flex-1 w-full">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
-                  <div className="flex items-end justify-between gap-4 mb-6 flex-wrap">
-                    <div>
-                      <h1 className="text-xl font-semibold text-apple-primary font-display">Saved Screens</h1>
-                      <p className="text-xs text-apple-muted mt-1">
-                        Saved locally in your browser.
-                      </p>
-                    </div>
-                    <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary">
-                      <Plus className="w-3.5 h-3.5" />
-                      New Screen
-                    </button>
-                  </div>
+            <Suspense
+              fallback={
+                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
+                  <div className="skeleton h-44" />
+                  <div className="skeleton h-72" />
+                </main>
+              }
+            >
+              <SavedAndWatchlistsPage
+                savedScreens={savedScreens}
+                onDeleteScreen={handleDeleteScreen}
+                defaultTab="watchlists"
+              />
+            </Suspense>
+          }
+        />
 
-                  {savedScreens.length === 0 ? (
-                    <div className="apple-card py-16 px-6 text-center">
-                      <Bookmark className="w-7 h-7 text-apple-faint mx-auto mb-3" />
-                      <h2 className="text-sm font-semibold text-apple-primary">No saved screens</h2>
-                      <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
-                        No saved screens yet. Build and save queries from the query editor to find them here.
-                      </p>
-                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary mt-5">
-                        Open Query Editor
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-                      {savedScreens.map((screen) => (
-                        <Link
-                          key={screen.id}
-                          to={screenPath(screen.query)}
-                          className="apple-card apple-card-interactive p-4 flex flex-col group"
-                        >
-                          <div className="flex items-start justify-between gap-2">
-                            <h3 className="text-sm font-semibold text-apple-primary group-hover:text-apple-blue transition-colors">
-                              {screen.title}
-                            </h3>
-                            <button
-                              onClick={(e) => handleDeleteScreen(screen.id, e)}
-                              className="apple-btn apple-btn-quiet p-1 -mr-1 -mt-1 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
-                              title={`Delete ${screen.title}`}
-                              aria-label={`Delete ${screen.title}`}
-                            >
-                              <Trash2 className="w-3.5 h-3.5" />
-                            </button>
-                          </div>
+        <Route
+          path="/watchlists"
+          element={
+            <Suspense
+              fallback={
+                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
+                  <div className="skeleton h-44" />
+                  <div className="skeleton h-72" />
+                </main>
+              }
+            >
+              <SavedAndWatchlistsPage
+                savedScreens={savedScreens}
+                onDeleteScreen={handleDeleteScreen}
+                defaultTab="watchlists"
+              />
+            </Suspense>
+          }
+        />
 
-                          {screen.description && (
-                            <p className="text-xs text-apple-muted mt-1 line-clamp-2 leading-relaxed">
-                              {screen.description}
-                            </p>
-                          )}
+        <Route
+          path="/people"
+          element={
+            <Suspense
+              fallback={
+                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
+                  <div className="skeleton h-44" />
+                  <div className="skeleton h-72" />
+                </main>
+              }
+            >
+              <SuperInvestorsPage />
+            </Suspense>
+          }
+        />
 
-                          <code className="apple-well mt-3 p-2.5 block font-mono text-[11px] text-apple-secondary leading-relaxed line-clamp-3">
-                            {screen.query}
-                          </code>
+        <Route
+          path="/investors"
+          element={
+            <Suspense
+              fallback={
+                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
+                  <div className="skeleton h-44" />
+                  <div className="skeleton h-72" />
+                </main>
+              }
+            >
+              <SuperInvestorsPage />
+            </Suspense>
+          }
+        />
 
-                          <div className="mt-auto pt-3 flex items-center justify-between text-[11px]">
-                            <span className="text-apple-faint font-mono">
-                              {screen.createdAt ? new Date(screen.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : ''}
-                            </span>
-                            <span className="text-apple-blue font-semibold">Run →</span>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </main>
-              <Footer />
-            </>
+        <Route
+          path="/commodities"
+          element={
+            <Suspense
+              fallback={
+                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
+                  <div className="skeleton h-44" />
+                  <div className="skeleton h-72" />
+                </main>
+              }
+            >
+              <CommoditiesPage />
+            </Suspense>
           }
         />
 

@@ -260,3 +260,13 @@ export interface ScreenResult {
   query: string;
   error?: string;
 }
+
+export interface Watchlist {
+  id: string;
+  name: string;
+  description?: string;
+  symbols: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+

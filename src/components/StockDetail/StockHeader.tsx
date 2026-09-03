@@ -1,7 +1,9 @@
-import React from 'react';
-import { AlertTriangle, Globe, ShieldCheck } from 'lucide-react';
+import React, { useState } from 'react';
+import { AlertTriangle, Globe, ShieldCheck, Bookmark } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 import { crore, isReported, multiple, pct, price, signClass } from '../../lib/format';
+import { useWatchlists } from '../../context/WatchlistContext';
+import { WatchlistModal } from '../WatchlistModal';
 
 interface KeyFigure {
   label: string;
@@ -12,6 +14,10 @@ interface KeyFigure {
 }
 
 export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
+  const [isWatchlistModalOpen, setIsWatchlistModalOpen] = useState(false);
+  const { getWatchlistsForStock } = useWatchlists();
+  const stockWatchlists = getWatchlistsForStock(stock.symbol);
+  const inWatchlist = stockWatchlists.length > 0;
   const isUp = stock.change >= 0;
 
   const figures: KeyFigure[] = [
@@ -82,6 +88,18 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
                 Negative Net Worth
               </span>
             )}
+            <button
+              onClick={() => setIsWatchlistModalOpen(true)}
+              className={`apple-btn text-xs px-2.5 py-0.5 flex items-center gap-1.5 transition-all ${
+                inWatchlist
+                  ? 'bg-apple-blue/10 text-apple-blue border border-apple-blue/30 font-medium'
+                  : 'apple-btn-secondary'
+              }`}
+              title="Add or remove from watchlists"
+            >
+              <Bookmark className={`w-3 h-3 ${inWatchlist ? 'fill-apple-blue text-apple-blue' : ''}`} />
+              <span>{inWatchlist ? `In ${stockWatchlists.length} ${stockWatchlists.length === 1 ? 'Watchlist' : 'Watchlists'}` : '+ Watchlist'}</span>
+            </button>
           </div>
 
           <p className="flex items-center gap-3 mt-2 text-xs text-apple-muted flex-wrap">
@@ -160,6 +178,13 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
           </div>
         ))}
       </dl>
+
+      <WatchlistModal
+        isOpen={isWatchlistModalOpen}
+        onClose={() => setIsWatchlistModalOpen(false)}
+        symbol={stock.symbol}
+        stockName={stock.name}
+      />
     </div>
   );
 };

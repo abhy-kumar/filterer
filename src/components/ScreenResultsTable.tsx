@@ -112,6 +112,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
   const navigate = useNavigate();
   const [searchFilter, setSearchFilter] = useState('');
   const [sectorFilter, setSectorFilter] = useState('All');
+  const [industryFilter, setIndustryFilter] = useState('All');
   const [sortKey, setSortKey] = useState('market_cap');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [currentPage, setCurrentPage] = useState(1);
@@ -145,15 +146,25 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
     return ['All', ...Array.from(set).sort()];
   }, [stocks]);
 
+  const industries = useMemo(() => {
+    const pool = sectorFilter === 'All' ? stocks : stocks.filter((s) => s.sector === sectorFilter);
+    const set = new Set(pool.map((s) => s.industry).filter(Boolean));
+    return ['All', ...Array.from(set).sort()];
+  }, [stocks, sectorFilter]);
+
   // A new result set has to reset the page, or a screen that matches five
   // companies while the reader sits on page three renders an empty table.
   useEffect(() => {
     setCurrentPage(1);
-  }, [stocks, searchFilter, sectorFilter, sortKey, sortOrder, pageSize]);
+  }, [stocks, searchFilter, sectorFilter, industryFilter, sortKey, sortOrder, pageSize]);
 
   useEffect(() => {
     if (sectorFilter !== 'All' && !sectors.includes(sectorFilter)) setSectorFilter('All');
   }, [sectors, sectorFilter]);
+
+  useEffect(() => {
+    if (industryFilter !== 'All' && !industries.includes(industryFilter)) setIndustryFilter('All');
+  }, [industries, industryFilter]);
 
   const handleSort = (key: string) => {
     if (sortKey === key) {
@@ -172,9 +183,10 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         stock.name.toLowerCase().includes(needle) ||
         stock.symbol.toLowerCase().includes(needle);
       const matchSector = sectorFilter === 'All' || stock.sector === sectorFilter;
-      return matchSearch && matchSector;
+      const matchIndustry = industryFilter === 'All' || stock.industry === industryFilter;
+      return matchSearch && matchSector && matchIndustry;
     });
-  }, [stocks, searchFilter, sectorFilter]);
+  }, [stocks, searchFilter, sectorFilter, industryFilter]);
 
   const sortedStocks = useMemo(() => {
     const dir = sortOrder === 'asc' ? 1 : -1;
@@ -242,12 +254,29 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
 
         <select
           value={sectorFilter}
-          onChange={(e) => setSectorFilter(e.target.value)}
+          onChange={(e) => {
+            setSectorFilter(e.target.value);
+            setIndustryFilter('All');
+          }}
           className="apple-input text-xs px-2.5 h-8 text-apple-secondary"
+          title="Filter by sector"
         >
           {sectors.map((s) => (
             <option key={s} value={s}>
               {s === 'All' ? 'All sectors' : s}
+            </option>
+          ))}
+        </select>
+
+        <select
+          value={industryFilter}
+          onChange={(e) => setIndustryFilter(e.target.value)}
+          className="apple-input text-xs px-2.5 h-8 text-apple-secondary max-w-[200px]"
+          title="Filter by industry"
+        >
+          {industries.map((ind) => (
+            <option key={ind} value={ind}>
+              {ind === 'All' ? 'All industries' : ind}
             </option>
           ))}
         </select>
@@ -310,13 +339,14 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                   <p className="text-sm text-apple-secondary">
                     {stocks.length === 0
                       ? 'No companies match your query conditions.'
-                      : 'No companies match the current search or sector filter.'}
+                      : 'No companies match the current search, sector, or industry filter.'}
                   </p>
                   {stocks.length > 0 && (
                     <button
                       onClick={() => {
                         setSearchFilter('');
                         setSectorFilter('All');
+                        setIndustryFilter('All');
                       }}
                       className="mt-3 text-xs font-semibold text-apple-blue hover:underline"
                     >

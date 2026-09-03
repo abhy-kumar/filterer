@@ -175,7 +175,7 @@ export function tokenize(query: string): Token[] {
       i++;
       continue;
     }
-    if (ch === '=') {
+    if (ch === '=' || ch === ':') {
       tokens.push({ type: 'COMPARISON', value: '==', pos: i, end: i + 1 });
       i++;
       continue;
@@ -391,6 +391,16 @@ export class ScreenerParser {
 
     if (this.match('COMPARISON')) {
       const operator = this.previous().value;
+
+      if ((operator === '==' || operator === '!=') && this.check('UNKNOWN')) {
+        let strVal = this.advance().value;
+        while (this.check('UNKNOWN')) {
+          strVal += ' ' + this.advance().value;
+        }
+        const right: ASTNode = { type: 'Literal', value: strVal };
+        return { type: 'BinaryExpr', operator, left, right };
+      }
+
       const right = this.parseAdditive();
 
       if (this.check('COMPARISON')) {
@@ -516,7 +526,8 @@ export function evaluateAST(node: ASTNode | null, stock: Stock): MetricValue {
         if (left === null || right === null) return false;
         const equal =
           typeof left === 'string' || typeof right === 'string'
-            ? String(left).trim().toLowerCase() === String(right).trim().toLowerCase()
+            ? String(left).trim().toLowerCase() === String(right).trim().toLowerCase() ||
+              String(left).trim().toLowerCase().includes(String(right).trim().toLowerCase())
             : Number(left) === Number(right);
         return op === '==' ? equal : !equal;
       }

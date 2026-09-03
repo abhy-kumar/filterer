@@ -31,8 +31,8 @@ function stock(overrides: Partial<Stock>): Stock {
   } as Stock;
 }
 
-const TCS = stock({ symbol: 'TCS', name: 'Tata Consultancy Services', pe_ratio: 29.8, roe: 49.8, roce: 58.4, debt_to_equity: 0, sector: 'Technology' });
-const TATAMOTORS = stock({ symbol: 'TATAMOTORS', name: 'Tata Motors', pe_ratio: 8.5, roe: 36.5, roce: 22.8, debt_to_equity: 0.62, sector: 'Consumer Cyclical', graham_number: 880, current_price: 725 });
+const TCS = stock({ symbol: 'TCS', name: 'Tata Consultancy Services', pe_ratio: 29.8, roe: 49.8, roce: 58.4, debt_to_equity: 0, sector: 'Technology', industry: 'IT Services' });
+const TATAMOTORS = stock({ symbol: 'TATAMOTORS', name: 'Tata Motors', pe_ratio: 8.5, roe: 36.5, roce: 22.8, debt_to_equity: 0.62, sector: 'Consumer Cyclical', industry: 'Auto Manufacturers', graham_number: 880, current_price: 725 });
 const UNKNOWN_ROE = stock({ symbol: 'NOROE', roe: null, current_ratio: null });
 
 const UNIVERSE = [TCS, TATAMOTORS];
@@ -129,6 +129,20 @@ describe('parser', () => {
   it('supports equality against text', () => {
     const result = executeScreenerQuery('Sector == "Technology"', UNIVERSE);
     expect(result.matches.map((s) => s.symbol)).toEqual(['TCS']);
+  });
+
+  it('supports industry filtering with =, :, and quotes', () => {
+    const res1 = executeScreenerQuery('Industry = "IT Services"', UNIVERSE);
+    expect(res1.matches.map((s) => s.symbol)).toEqual(['TCS']);
+
+    const res2 = executeScreenerQuery('Industry: "IT Services"', UNIVERSE);
+    expect(res2.matches.map((s) => s.symbol)).toEqual(['TCS']);
+
+    const res3 = executeScreenerQuery('Industry: IT Services', UNIVERSE);
+    expect(res3.matches.map((s) => s.symbol)).toEqual(['TCS']);
+
+    const res4 = executeScreenerQuery('Industry = "Services"', UNIVERSE);
+    expect(res4.matches.map((s) => s.symbol)).toEqual(['TCS']);
   });
 
   it('reports which metrics a query reads', () => {
