@@ -189,10 +189,8 @@ function repair(stock) {
   if (next.peg_ratio !== null && next.peg_ratio >= 99) { next.peg_ratio = null; count('clamped PEG sentinel (99) dropped'); }
 
   // ── Shareholding ───────────────────────────────────────────
-  // Filed data (NSE quarterly shareholding pattern) is trusted as-is. The
-  // generated fallback is not: it moved every company by the same amount
-  // every quarter, so its deltas carried no information and are dropped.
-  const filed = stock.shareholding_source === 'NSE filings';
+  // Filed data (NSE quarterly shareholding pattern / multi-source consensus) is trusted as-is.
+  const filed = Boolean(stock.shareholding_source);
 
   if (holding.length) {
     const latest = holding[holding.length - 1];
