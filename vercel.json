@@ -1,6 +1,11 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "build": {
+    "env": {
+      "UV_LINK_MODE": "copy"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
