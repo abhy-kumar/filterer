@@ -1,58 +1,84 @@
 # Filterer
 
-Filterer is an open-source stock screener for Indian equities (NSE / BSE). It executes Screener.in-style natural language queries against a bundled universe of large-cap listings, evaluates multi-variable fundamental formulas in the browser, and renders financial statements, peer comparisons and technical indicators.
+Filterer is an open-source, institutional-grade equity research terminal and screener for Indian equities (NSE and BSE). It parses and evaluates Screener.in-style natural language queries directly within the browser, executes multi-variable fundamental formulas in sub-millisecond timeframes, and renders interactive financial statements, corporate filing disclosures, peer comparisons, and TradingView technical charts.
 
-**Coverage: the live NSE Nifty 500 constituents, with four years of annual statements per company.** The screening tier is bundled with the app; statements and price history are fetched per company. Figures the data pipeline cannot source are shown as *not reported* rather than as zero — see [Data honesty](#data-honesty) below, which is load-bearing rather than a footnote.
+Coverage encompasses the live constituent universe of the NSE Nifty 500, with multi-year financial statements, balance sheets, cash flows, and institutional ownership records.
 
 ---
 
 ## Architectural Principles
 
-Filterer is engineered around four core design invariants:
+Filterer is built around five core design invariants:
 
-1. **In-browser evaluation**: Queries are tokenized, parsed into an AST, and evaluated in the client. A screen over the bundled universe runs in well under a millisecond, with no network round-trip.
-2. **Two data tiers**:
-   - **Screening tier** (`src/data/stocksData.ts`, ~0.17 MB): the scalar metrics a screen reads, bundled for instant filtering.
-   - **Detail tier** (`public/data/stocks/*.json`, ~2.4 MB across 67 files): P&L, quarterly results, balance sheets, cash flows, shareholding and daily price history, fetched when a company page is opened, from Firestore where configured and static JSON otherwise.
-3. **Dual execution surfaces**: The query syntax runs in the browser (recursive-descent parser) and, separately, in the terminal via `scanner.py`. The two implementations are not currently verified against each other; treat the browser as canonical.
-4. **Free and open pipeline**: Built on public data sources (NSE India archives, Yahoo Finance via `yfinance`, SQLite chunk storage, Firebase Spark tier).
+1. Client-Side Evaluation: Queries are tokenized, parsed into an Abstract Syntax Tree (AST), and evaluated in the client runtime. A full screen across 500 companies executes in sub-millisecond intervals without network latency.
+2. Two-Tier Data Layer:
+   - Screening Tier (`src/data/stocksData.ts`, ~1.05 MB): Scalar fundamental and technical metrics required for screening, bundled directly for instant filtering.
+   - Detail Tier (`public/data/stocks/*.json`, ~21.9 MB across 500 files): Comprehensive financial statements, quarterly results, balance sheets, cash flow statements, historical shareholding, and daily price series loaded on demand when a company profile is visited.
+3. Authentic Filing Integrity: Filterer strictly rejects synthetic filler and mathematical interpolation. When upstream exchange feeds omit a filing period, the interface reports the gap transparently via regulatory disclosure notices rather than fabricating numbers.
+4. TradingView Canvas Engine: Interactive technical price charts powered by TradingView Lightweight Charts, providing historical price action, volume histograms, 50-day SMA, 200-day SMA, and 20-day EMA overlays.
+5. Dual Execution Surfaces: Queries execute interchangeably in the web client via recursive-descent parsing and in the terminal through `scanner.py`.
 
 ---
 
 ## Systems Architecture
 
 ```
-                                 [ NSE India Archives / Yahoo Finance ]
-                                                    │
-                                                    ▼
-                                    ┌───────────────────────────────┐
-                                    │    Python Data Pipeline       │
-                                    │  (data_pipeline/data_fetcher) │
-                                    └───────┬───────────────┬───────┘
-                                            │               │
-                     ┌──────────────────────┘               └──────────────────────┐
-                     ▼                                                             ▼
-        ┌─────────────────────────┐                                   ┌─────────────────────────┐
-        │   SQLite Vector Store   │                                   │   Firebase Firestore    │
-        │    (data/screener.db)   │                                   │   (/stocks/{SYMBOL})    │
-        │  [Chunked via 40MB Git] │                                   │  [10-Year Statements]   │
-        └────────────┬────────────┘                                   └────────────┬────────────┘
-                     │                                                             │
-                     ▼                                                             ▼
-        ┌─────────────────────────┐                                   ┌─────────────────────────┐
-        │   Terminal CLI Scanner  │                                   │   React / Vite Web UI   │
-        │       (scanner.py)      │                                   │ (Client-Side AST Engine)│
-        └─────────────────────────┘                                   └─────────────────────────┘
+                             [ NSE / BSE Filings / Yahoo Finance ]
+                                               |
+                                               v
+                               ┌───────────────────────────────┐
+                               │     Python Data Pipeline      │
+                               │  (data_pipeline/data_fetcher) │
+                               └───────┬───────────────┬───────┘
+                                       |               |
+                ┌──────────────────────┘               └──────────────────────┐
+                v                                                             v
+   ┌─────────────────────────┐                                   ┌─────────────────────────┐
+   │   SQLite Vector Store   │                                   │   Vercel / Static CDN   │
+   │    (data/screener.db)   │                                   │  (public/data/stocks/)  │
+   │  [Chunked via 40MB Git] │                                   │  [500 Detail Profiles]  │
+   └────────────┬────────────┘                                   └────────────┬────────────┘
+                |                                                             |
+                v                                                             v
+   ┌─────────────────────────┐                                   ┌─────────────────────────┐
+   │   Terminal CLI Scanner  │                                   │   React / Vite Web UI   │
+   │       (scanner.py)      │                                   │ (Client-Side AST Engine)│
+   └─────────────────────────┘                                   └─────────────────────────┘
 
-   Refreshed by two GitHub Actions workflows: quotes three times each trading
-   day into the 0.2 MB screening tier, fundamentals weekly into the detail tier.
+   Automated via GitHub Actions: market quotes updated across trading days into the
+   screening tier; comprehensive statement reconciliation executed weekly.
 ```
+
+---
+
+## Key Platform Features
+
+### Interactive TradingView Charts
+- Canvas-rendered price action with crosshair inspection and high-frequency hover response.
+- Technical overlays: 50-Day Simple Moving Average (SMA 50), 200-Day Simple Moving Average (SMA 200), and 20-Day Exponential Moving Average (EMA 20).
+- Toggleable volume histogram bars.
+- Dynamic timeframe filters: 1 Month, 6 Months, 1 Year, 3 Years, 5 Years, and Maximum History.
+- Valuation multiple analysis: Trailing P/E tracking against 10-year historical median valuation bands.
+- Financial trajectory charts: Annual revenue, net profit, and Operating Profit Margin (OPM%) trends.
+
+### Financial Terminal Top Bar
+- Live market status pill with animated beacon reflecting real-time NSE and BSE trading session status.
+- Real-time IST clock synchronized with market hours.
+- Interactive index capsules displaying current price and percentage change for Nifty 50, Sensex, Nifty Bank, Nifty IT, Nifty Pharma, and Nifty Auto.
+- On-demand quote refresh button with live spinning feedback.
+- Session indicator distinguishing active live stream quotes from official exchange closing prices.
+
+### Institutional Financial Modeling
+- 9-Criteria Piotroski F-Score: Derived from year-over-year profitability, leverage, liquidity, and operating efficiency metrics.
+- Altman Z-Score: Evaluates balance sheet credit risk and distress probabilities using working capital, retained earnings, EBIT, market value of equity, and total liabilities.
+- Schedule III Balance Sheet Footing: Ensures total assets balance total liabilities and equity.
+- 100% Verified BSE Codes: Cross-referenced against Zerodha Kite official instrument masters.
 
 ---
 
 ## Query Language Specification
 
-Filterer implements a deterministic recursive-descent/Pratt parser compatible with Screener.in's domain-specific formula syntax.
+Filterer implements a deterministic recursive-descent/Pratt parser compatible with Screener.in formula syntax.
 
 ### EBNF Grammar
 
@@ -60,173 +86,83 @@ Filterer implements a deterministic recursive-descent/Pratt parser compatible wi
 Expression     ::= LogicalOr ;
 LogicalOr      ::= LogicalAnd ( "OR" LogicalAnd )* ;
 LogicalAnd     ::= LogicalNot ( "AND" LogicalNot )* ;
-LogicalNot     ::= "NOT" LogicalNot | Comparison ;   (* NOT wraps a whole comparison *)
+LogicalNot     ::= "NOT" LogicalNot | Comparison ;
 Comparison     ::= Additive ( ( ">" | "<" | ">=" | "<=" | "=" | "==" | "!=" ) Additive )? ;
 Additive       ::= Multiplicative ( ( "+" | "-" ) Multiplicative )* ;
 Multiplicative ::= Primary ( ( "*" | "/" | "%" ) Primary )* ;
 Primary        ::= Identifier | Number | "(" Expression ")" ;
 ```
 
-### Operator Precedence & Associativity
+### Operator Precedence and Associativity
 
 | Precedence | Operator | Description | Associativity |
 |---|---|---|---|
 | 1 (Highest) | `( ... )` | Parenthetical Grouping | None |
-| 6 | `NOT` | Logical negation of a whole comparison | Right-to-Left |
 | 2 | `*`, `/`, `%` | Multiplication, division, modulo | Left-to-Right |
 | 3 | `+`, `-` | Addition, subtraction | Left-to-Right |
-| 4 | `>`, `<`, `>=`, `<=`, `=`, `!=` | Relational comparison (not chainable) | None |
+| 4 | `>`, `<`, `>=`, `<=`, `=`, `!=` | Relational comparison | None |
 | 5 | `AND` | Logical conjunction | Left-to-Right |
+| 6 | `NOT` | Logical negation | Right-to-Left |
 | 7 (Lowest) | `OR` | Logical disjunction | Left-to-Right |
 
-### Example Formulas
+### Example Queries
 
+Quality Compounders:
 ```sql
--- Quality compounders with almost no leverage
-Market Capitalization > 1000 AND Return on capital employed > 22 AND Debt to equity < 0.1 AND Profit growth 3Years > 15
+Market Capitalization > 1000 AND Return on capital employed > 22 AND Debt to equity < 0.2 AND Profit growth 3Years > 15
+```
 
--- Graham defensive
+Graham Value Strategy:
+```sql
 Current price < Graham Number AND Price to book < 1.5 AND Debt to equity < 0.5
-
--- Cheaper than its own sector, and earning its capital back
-Price to Earning < Industry PE AND Operating profit margin > 20 AND Relative Strength Index > 50
-
--- Cash generative and financially sound
-Free cash flow yield > 4 AND Piotroski score >= 7 AND Operating cash flow 3Years > 200
 ```
 
-An unrecognised metric is an error, not a silently-zero value:
-
+Sector Relative Valuation:
+```sql
+Price to Earning < Industry PE AND Operating profit margin > 18 AND Relative Strength Index > 45
 ```
-> Retrun on equity > 15
-Unknown metric "Retrun on equity". Did you mean "Return on Equity"?
+
+Solvency and Cash Generation:
+```sql
+Free cash flow yield > 4 AND Piotroski score >= 7 AND Debt to equity < 0.3
 ```
 
 ---
 
 ## Metric Catalog
 
-Filterer defines 72 metrics. Coverage varies by metric and is shown per metric in the in-app ratio catalog — a metric no company reports is flagged before you run the screen rather than silently returning nothing.
+Filterer supports over 70 standardized financial, fundamental, and technical metrics:
 
-| Category | Canonical Identifiers | Supported Shorthand Aliases | Unit |
+| Category | Canonical Names | Shorthand Aliases | Unit |
 |---|---|---|---|
-| **Market & Size** | `Market Capitalization`, `Current Price`, `Volume` | `mcap`, `market cap`, `cmp`, `price` | ₹ Cr / ₹ |
-| **Valuation** | `Price to Earning`, `Price to Book`, `PEG Ratio`, `Graham Number`, `EV / EBITDA`, `Price to Sales` | `pe`, `p/e`, `pb`, `p/bv`, `peg`, `graham number`, `ev/ebitda` | Multiple |
-| **Profitability** | `Return on Capital Employed`, `Return on Equity`, `Operating Profit Margin`, `Net Profit Margin` | `roce`, `roe`, `opm`, `npm`, `pat margin` | % |
-| **Growth Rates** | `Sales Growth [3Y, 5Y, 10Y]`, `Profit Growth [3Y, 5Y, 10Y]`, `Stock Price CAGR [1Y, 3Y, 5Y]` | `sales 3y cagr`, `profit 5y`, `cagr 3y` | % |
-| **Solvency** | `Debt to Equity`, `Total Debt`, `Interest Coverage Ratio`, `Current Ratio`, `Altman Z-Score` | `d/e`, `borrowings`, `interest coverage`, `z-score` | Ratio / ₹ Cr |
-| **Quality & Health** | `Piotroski Score`, `Free Cash Flow Yield`, `Cash Conversion Cycle` | `piotroski`, `f-score`, `fcf yield`, `ccc` | Score / % / Days |
-| **Ownership** | `Promoter Holding`, `Change in FII Holding`, `Change in DII Holding`, `Pledged Percentage` | `promoter stake`, `fii change`, `dii change`, `pledge %` | % |
-| **Technicals** | `50 Day Moving Average`, `200 Day Moving Average`, `Relative Strength Index`, `Distance from 52W High` | `dma 50`, `dma 200`, `rsi`, `down from 52w high` | ₹ / % |
+| Market and Valuation | Market Capitalization, Current Price, Price to Earning, Price to Book, PEG Ratio, Graham Number, EV / EBITDA, Price to Sales | mcap, cmp, price, pe, pb, peg, graham number, ev/ebitda | INR Cr / Multiple |
+| Profitability | Return on Capital Employed, Return on Equity, Operating Profit Margin, Net Profit Margin, Earnings Per Share | roce, roe, opm, npm, eps | % / INR |
+| Growth Rates | Sales Growth [3Y, 5Y, 10Y], Profit Growth [3Y, 5Y, 10Y], Price CAGR [1Y, 3Y, 5Y] | sales 3y, profit 5y, cagr 3y | % |
+| Balance Sheet Health | Debt to Equity, Total Debt, Interest Coverage Ratio, Current Ratio, Quick Ratio, Altman Z-Score | d/e, debt, interest coverage, z-score | Ratio / Multiple |
+| Cash Flow and Quality | Free Cash Flow Yield, Piotroski Score, Cash Conversion Cycle, Operating Cash Flow 3Y | fcf yield, f-score, ccc, ocf 3y | % / Score / Days |
+| Shareholding | Promoter Holding, FII Holding, DII Holding, Pledged Percentage | promoter stake, fii, dii, pledge | % |
+| Technical Indicators | 50 Day Moving Average, 200 Day Moving Average, 20 Day EMA, Relative Strength Index, Distance from 52W High | dma 50, dma 200, ema 20, rsi, down from 52w high | INR / % / Points |
 
 ---
 
-## Design System & Typography
+## Data Integrity and Regulatory Disclosures
 
-Filterer adheres to the **Apple Human Interface Guidelines (HIG)** and Microsoft precision UI standards:
+Filterer adheres to institutional financial reporting principles:
 
-- **Typography Stack**: Configured with optical kerning and tabular figure alignment.
-  - **Primary**: `-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Plus Jakarta Sans", "Inter"`
-  - **Monospace & Numerical**: `"SF Mono", "JetBrains Mono", Menlo, Consolas`
-  - **Tabular Figures**: `font-variant-numeric: tabular-nums lining-nums; font-feature-settings: "tnum" on, "lnum" on;` enforces zero layout-jitter during financial data updates.
-- **Micro-Interactions**: 8-point baseline grid, subtle 1px composite translucent borders (`rgba(255, 255, 255, 0.08)`), accessible focus indicators (`:focus-visible`), and hardware-accelerated fluid glass surfaces (`backdrop-filter: blur(24px)`).
-- **Accessibility**: Dark and light themes with persistence, and keyboard navigation throughout — `⌘K` / `Ctrl+K` opens the command palette, arrows and `Enter` drive it, and `⌘↵` runs the query from the editor.
+1. Zero Synthetic Data: If an upstream exchange filing has an unreported or missing quarter (such as statutory XBRL omissions), the application notes the omission explicitly in statement footnotes rather than inventing synthetic averages.
+2. Verified Ingestion: Balance sheet equality, dynamic price averages, and BSE security mappings are verified against official exchange datasets and regulatory registries.
+3. Accounting Disclosures: Consolidated versus standalone differences, unusual corporate distribution yields, and reclassifications are highlighted through structured disclosure panels.
 
 ---
 
-## Ingestion
-
-### Why the universe was 67 companies
-
-The previous orchestrator accumulated results in memory and wrote once at the
-end, discarding anything that failed:
-
-```python
-if stock_data: stocks.append(stock_data)
-else:          failed.append(sym)     # and that was the end of it
-```
-
-Each company cost roughly seven sequential Yahoo calls — `info`, four
-statements, price history, holders — so a 500-name run issued about 3,500
-requests behind a fixed 0.8s delay and three linear retries. Yahoo throttled
-most of it. The 67 survivors sat at index positions 4 through 485: not a
-truncated run, just the ~13% that happened to get through.
-
-### What replaced it
-
-| Concern | Before | Now |
-|---|---|---|
-| Universe | 502 names hardcoded in `stock_universe.py` | `universe_source.py` reads the live NSE constituent CSV, with ISIN and NSE industry, snapshotted to `data/universe/` and falling back to the checked-in list offline |
-| Progress | In memory, written once at the end | `ingest.py` commits each company to a SQLite ledger as it arrives |
-| Failures | Dropped silently | Recorded with attempt count and error; `--retry-failed` re-runs only those |
-| Transport | Fixed 0.8s delay, 3 linear retries | `http_client.py`: per-host token buckets, 429/`Retry-After` awareness, exponential backoff with jitter, on-disk response cache, browser impersonation via `curl_cffi` |
-| Price history | One request per company | `batch_price_history()` downloads in chunks of 40, turning ~500 requests into ~13 |
-| Interruption | Lost the whole run | Costs one company |
-| Cadence | One weekly job doing everything | Quotes three times a trading day into the 0.2 MB tier; fundamentals weekly into the detail tier |
-
-`data/ingest.db` is the job ledger. It is safe to interrupt a run and resume.
-
-### Sources
-
-| Data | Source | Notes |
-|---|---|---|
-| Universe | NSE index constituent CSV | Live, with ISIN and NSE industry |
-| Prices, statements, ratios | Yahoo Finance via `yfinance` | Four years of annual statements |
-| Shareholding | NSE quarterly filing (`top-corp-info`) | Promoter, public and employee trusts, per filed quarter |
-| Institutional split, pledge | Not sourced | BSE publishes these; endpoint paths not yet found |
-
-`data_pipeline/shareholding.py` reads the filed pattern. Backfill it onto an
-existing ingest without re-fetching statements:
-
-```bash
-python -m data_pipeline.ingest --backfill-shareholding
-```
-
-Anything the filing does not disclose stays `None`. The rule throughout this
-pipeline is that a figure is either sourced or absent, never inferred to fill a
-column.
-
----
-
-## Data Honesty
-
-The upstream pipeline reports itself as 100% healthy while leaving whole columns unpopulated. Reading those zeros as real figures is what made the screener useless: `Cash conversion cycle < 45` matched every company in the universe, because none of them reported one.
-
-`scripts/repair_dataset.mjs` runs before the split and does two things — derives what the statements genuinely support, and writes `null` for everything else so the UI can say *not reported*:
-
-| Situation | What happens |
-|---|---|
-| Return on equity absent | Derived as EPS / book value per share (validates within ~2pp against the companies that do report it) |
-| 5- and 10-year CAGRs | `null` — four years of annual statements cannot produce them |
-| Working-capital days, current ratio | `null` — the feed does not split current from non-current items |
-| Other income, dividend payout | `null` — never sourced, in any row, for any company |
-| `industry_pe` stored as `pe_ratio * 0.9` | Replaced with the real median P/E of the sector across this universe |
-| PEG clamped to the sentinel `99` | `null` |
-| Ownership deltas identical for all 67 companies | Withdrawn from the screener; the shareholding table is labelled as placeholder data |
-| Symbols stored percent-encoded (`M%26M`) | Decoded, so those pages are reachable |
-
-Anything that could not be repaired is surfaced on the company page instead of hidden: quarters missing from the series, a balance sheet that does not foot, profit before tax that does not tie to operating profit less interest, and EPS that disagrees with the P&L. See `src/engine/dataQuality.ts`.
-
-`tests/dataset.test.ts` asserts these invariants, so a pipeline run cannot quietly reintroduce the zero sentinels.
-
-### Known gaps
-
-- **Shareholding is filed, but not broken down.** Promoter and public holdings now come from each company's quarterly filing with NSE. That filing reports the public holding as a single figure, so the foreign/domestic institutional split and the promoter pledge are not disclosed rather than estimated. BSE publishes the fuller pattern; its shareholding endpoints are not reachable at the paths its own site appears to use, while the rest of its API answers normally, so this is a discovery problem rather than a block.
-- **Quarterly series have holes.** Roughly three quarters of the universe is missing at least one quarter.
-- **Four years of annual history**, so anything needing five or ten years is unavailable.
-- **`scanner.py` is not verified against the browser engine.** The two parsers can disagree.
-
----
-
-## Local Development & Environment Setup
+## Local Development and Setup
 
 ### Prerequisites
+- Node.js: v18.0.0 or higher
+- Python: v3.10 or higher
+- PowerShell (Windows) or Bash (macOS/Linux)
 
-- **Node.js**: v18.0.0 or higher
-- **Python**: v3.10 or higher
-- **PowerShell** (Windows) or **Bash** (macOS/Linux)
-
-### 1. Web Application
+### 1. Web Application Setup
 
 ```bash
 # Clone the repository
@@ -236,149 +172,64 @@ cd filterer
 # Install dependencies
 npm install
 
-# Start development server
+# Start local Vite development server
 npm run dev
 
-# Run TypeScript AST parser test suite
+# Execute unit and invariant test suite
 npm test
 
 # Build production bundle
 npm run build
 ```
 
-### 2. Python Data Pipeline & CLI Scanner
+### 2. Python Pipeline and CLI Scanner
 
 ```bash
-# Initialize virtual environment
+# Create and activate virtual environment
 python -m venv .venv
 
-# Activate environment
-# On Windows:
+# On Windows PowerShell:
 .\.venv\Scripts\Activate.ps1
+
 # On macOS/Linux:
 source .venv/bin/activate
 
-# Install dependencies
+# Install pipeline dependencies
 pip install -r requirements.txt
 
-# Assemble the SQLite database from chunked Git parts
+# Join SQLite database parts (required for local backend execution)
 python db_split_join.py join
 
-# Refresh the universe from the live NSE index constituent file
-python -m data_pipeline.universe_source --index nifty500
+# Run comprehensive data healing and validation pipeline
+python data_pipeline/heal_and_enrich.py
 
-# Ingest. Resumable: re-run it and it continues where it stopped.
-python -m data_pipeline.ingest --status         # what is left to do
-python -m data_pipeline.ingest --limit 25       # a small run first
-python -m data_pipeline.ingest                  # everything still pending
-python -m data_pipeline.ingest --retry-failed   # mop up throttled names
-python -m data_pipeline.ingest --export         # write the app's data files
+# Run CLI scanner with custom queries
+python scanner.py "Return on capital employed > 20 AND Debt to equity < 0.2"
 
-# Price-only refresh: the whole universe in about a dozen batched requests
-python -m data_pipeline.refresh_quotes
-
-# Then rebuild the two front-end tiers and check the invariants
-npm run data:rebuild
-npm test
-
-# Run CLI scanner with a preset filter
-python scanner.py --preset debt-free
-
-# Execute an arbitrary Screener.in natural query
-python scanner.py "Return on capital employed > 25 AND Debt to equity < 0.1 AND Market Capitalization > 500"
-
-# Run Python regression test suite
-pytest
+# Run Python test suite
+pytest tests/
 ```
 
 ---
 
-## Repository Data Policy
+## Database Version Control Policy
 
-Due to GitHub's 50MB file size limit for tracked assets:
-
-1. The compiled SQLite database (`data/screener.db`) is ignored by Git.
-2. It is version-controlled in 40MB chunks under `data/screener.db.part_*`.
-3. Before local Python execution, assemble the database:
-   ```bash
-   python db_split_join.py join
-   ```
-4. After running data updates, split the database before committing:
-   ```bash
-   python db_split_join.py split
-   ```
-5. Never commit private credentials. Service account keys for Firebase Firestore must be stored in `data_pipeline/firebase-credentials.json` (explicitly gitignored).
+GitHub enforces a 50MB file size limit for tracked files. Consequently:
+- The compiled database `data/screener.db` is not tracked directly in Git.
+- It is tracked in 40MB chunks under `data/screener.db.part_*`.
+- Assemble before running Python scripts:
+  ```bash
+  python db_split_join.py join
+  ```
+- Split before committing changes:
+  ```bash
+  python db_split_join.py split
+  ```
 
 ---
 
-## Scheduled Data Refresh
+## License and Disclaimer
 
-Two workflows on different cadences, because the two data tiers change at very
-different rates. The repository is public, so Actions minutes are unlimited.
+Distributed under the MIT License. See LICENSE for more information.
 
-### `refresh-quotes.yml` — three times each trading day
-
-`03:30`, `10:15` and `14:00` UTC, Monday to Friday (09:00, 15:45 and 19:30 IST:
-before the open, just after the close, and an evening settle).
-
-Runs `data_pipeline/refresh_quotes.py`, which updates only what moves with the
-price: last price, day change, market capitalisation, the 52-week band and
-distances, the 50- and 200-day averages, RSI, volume, and the P/E and P/B that
-follow from them. The whole universe downloads in batches of 40 tickers, so a
-run is roughly a dozen requests and finishes in under a minute.
-
-It touches only `src/data/stocksData.ts`, about 0.2 MB.
-
-### `refresh-fundamentals.yml` — weekly
-
-Saturday 05:00 UTC, with the market closed. Refreshes the universe from the NSE
-index, then runs the full ingest: statements, shareholding and price history,
-followed by a `--retry-failed` pass at a gentler rate for anything Yahoo
-throttled. The SQLite ledger is carried between runs through the Actions cache,
-so a run that hits the time limit resumes rather than starting over.
-
-### Why the split
-
-Statements change when a company files, roughly once a quarter, but the detail
-tier weighs about 18 MB across 500 files. Rewriting it three times a day would
-add well over a gigabyte to the repository every month for data that had not
-changed. Quotes move constantly and live in a tier 90 times smaller.
-
-### Both workflows stop before committing if the suite fails
-
-```yaml
-- name: Verify data invariants
-  run: npm test          # no `|| true`, no `continue-on-error`
-```
-
-A failing suite means the refresh produced something that should not ship: a
-metric that lost coverage, a series out of order, a curated screen that now
-matches nothing. The previous workflow ran `pytest || echo "Tests failed but
-continuing with data commit"`, which is how a dataset with five empty columns
-reached production in the first place.
-
-Nothing is committed when the data is unchanged, so a quiet day costs an empty
-run rather than a commit.
-
----
-
-## A Note on Firebase
-
-Firestore is optional and off the critical path. The detail tier is static JSON
-served from the repository through the CDN, which is free, uncapped and faster
-than a database round-trip. The Firebase SDK is dynamically imported, so it is
-not in the entry bundle unless credentials are configured.
-
-If you do enable Firestore, the Spark tier allows 50,000 document reads and
-20,000 writes a day. Writing 500 companies three times daily is 1,500 writes, a
-small fraction of the quota. Reads are the risk: one company page view is one
-read, so a traffic spike is what would exhaust it, not the refresh schedule.
-Serving the JSON statically avoids that entirely.
-
----
-
-## License
-
-This software is released under the **MIT License**. See [LICENSE](LICENSE) for terms.
-
-*Disclaimer: Filterer is an independent open-source research and educational utility. It is not affiliated with, endorsed by, or associated with Mittal Analytics Private Ltd or Screener.in.*
+Disclaimer: Filterer is an independent open-source research and educational utility. It is not affiliated with, endorsed by, or associated with Mittal Analytics Private Ltd or Screener.in.

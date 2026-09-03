@@ -96,5 +96,5 @@ def upload_stocks_to_firestore(stocks_data):
 | Strategy | Frequency | Cost | Security Exposure |
 |---|---|---|---|
 | **GitHub Actions (Default)** | Daily Post-Close (3:45 PM IST) | $0 / month | Zero external DB exposure |
-| **Client Live Ticker Hook** | 12s interval (Active tab) | $0 / month | Public read proxy `/api/market_indices` |
+| **Client Live Ticker Hook** | 60s interval (Active tab, market hours) + On-demand | $0 / month | Public read proxy `/api/market_indices` or static cache |
 | **Firebase Firestore** | Real-time | Free Spark Plan | Public read-only, Private Admin write |
