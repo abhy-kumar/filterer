@@ -309,8 +309,8 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                 <td colSpan={visibleColumns.length + 1} className="py-14 text-center">
                   <p className="text-sm text-apple-secondary">
                     {stocks.length === 0
-                      ? 'No company in this universe meets every condition.'
-                      : 'Nothing left after the filters above.'}
+                      ? 'No companies currently meet all active screening criteria.'
+                      : 'No securities match the specified search or sector filter.'}
                   </p>
                   {stocks.length > 0 && (
                     <button

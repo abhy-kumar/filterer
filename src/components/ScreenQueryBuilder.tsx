@@ -139,10 +139,10 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
             onClick={() => onChangeQuery(formatScreenerQuery(query))}
             disabled={!query.trim() || !validation.ok}
             className="apple-btn apple-btn-secondary h-8"
-            title="Rewrite with canonical names, one condition per line"
+            title="Format query with canonical names and line breaks"
           >
             <WrapText className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Tidy</span>
+            <span className="hidden sm:inline">Format</span>
           </button>
           <button
             onClick={() => {
@@ -206,18 +206,18 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                   {thinMetrics
                     .map((m) => `${m.metric?.name ?? m.key} covers ${m.coverage.reported}/${m.coverage.total}`)
                     .join(', ')}
-                  . Companies without the figure are excluded rather than treated as zero.
+                  . Companies with undisclosed values are excluded from results.
                 </span>
               </p>
             ) : query.trim() ? (
               <p className="flex items-center gap-1.5 num-pos">
                 <Check className="w-3.5 h-3.5 shrink-0" />
                 <span>
-                  Reads {validation.metrics.length} {validation.metrics.length === 1 ? 'metric' : 'metrics'}
+                  Active criteria: {validation.metrics.length} {validation.metrics.length === 1 ? 'metric' : 'metrics'}
                 </span>
               </p>
             ) : (
-              <p className="text-apple-muted">An empty query returns the whole universe.</p>
+              <p className="text-apple-muted">Enter screening criteria above, or run an empty query to view all companies.</p>
             )}
           </div>
 

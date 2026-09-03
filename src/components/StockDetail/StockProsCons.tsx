@@ -40,16 +40,16 @@ export const StockProsCons: React.FC<{ stock: Stock }> = ({ stock }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {column(
-        'In its favour',
+        'Financial Strengths',
         pros,
         'good',
-        'None of the reported figures clear the thresholds used here. That is an absence of evidence, not a negative signal.'
+        'No major positive fundamental triggers meet the criteria for this category.'
       )}
       {column(
-        'Against it',
+        'Key Considerations',
         cons,
         'bad',
-        'Nothing in the reported figures trips the thresholds used here.'
+        'No major operational or valuation risk flags identified.'
       )}
     </div>
   );

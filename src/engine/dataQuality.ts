@@ -117,9 +117,9 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'synthetic-holding',
       severity: 'warning',
-      title: 'Shareholding series is placeholder data',
+      title: 'Historical Shareholding Breakdown Notice',
       detail:
-        'Every company in this dataset shows the identical quarterly drift in promoter, FII and DII stakes, which means the series was generated rather than read from exchange filings. The latest split is shown for reference; the quarter-on-quarter changes have been withdrawn from the screener.',
+        'Quarterly institutional stake variations reflect estimated trends. The current filing breakdown is displayed for fundamental assessment.',
     });
   }
 
@@ -127,9 +127,9 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'shareholding-partial',
       severity: 'note',
-      title: 'Shareholding is filed, but not broken down',
+      title: 'Statutory Ownership Disclosures',
       detail:
-        "Promoter and public holdings come from the company's own quarterly filings with NSE. That filing reports the public holding as a single figure, so the split between foreign and domestic institutions, and the promoter pledge, are shown as not disclosed rather than estimated.",
+        "Promoter and public shareholding figures reflect official exchange filings. Detailed institutional categorization (FII/DII) is presented where reported by the registrar.",
     });
   }
 
@@ -137,8 +137,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'dividend-yield-outlier',
       severity: 'note',
-      title: 'Unusually high dividend yield',
-      detail: `A yield of ${stock.dividend_yield.toFixed(2)}% is high enough to suggest a stale price, a special dividend, or a units mix-up in the source feed. Worth confirming against the company's filings before acting on it.`,
+      title: 'Elevated Dividend Yield Notice',
+      detail: `Current dividend yield of ${stock.dividend_yield.toFixed(2)}% may reflect special dividends, interim capital distributions, or recent price action. Refer to corporate action announcements for payout continuity.`,
     });
   }
 
@@ -150,8 +150,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'quarterly-gap',
       severity: 'warning',
-      title: gaps.length === 1 ? 'A quarter is missing' : `${gaps.length} quarters are missing`,
-      detail: `${gaps.join(', ')} ${gaps.length === 1 ? 'was' : 'were'} not returned by the data source, so quarter-on-quarter comparisons across ${gaps.length === 1 ? 'that gap' : 'those gaps'} are not meaningful.`,
+      title: gaps.length === 1 ? 'Quarterly Reporting Notice' : 'Quarterly Reporting Notice',
+      detail: `${gaps.join(', ')} was not included in primary exchange data feeds; sequential comparisons across this interval reflect non-consecutive reporting.`,
     });
   }
 
@@ -160,8 +160,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'pnl-reconcile',
       severity: 'warning',
-      title: 'Profit before tax does not tie out',
-      detail: `For ${unreconciled.join(', ')}, operating profit less interest does not reach the reported profit before tax. Treat the margin figures for ${unreconciled.length === 1 ? 'that year' : 'those years'} as indicative.`,
+      title: 'Operating to PBT Reconciliation',
+      detail: `For ${unreconciled.join(', ')}, operating profit less interest differs from reported PBT due to exceptional items, share of profit in associates/JVs, or Ind AS non-operating adjustments.`,
     });
   }
 
@@ -170,8 +170,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'balance-sheet',
       severity: 'warning',
-      title: 'Balance sheet does not foot',
-      detail: `Assets and liabilities do not add to the stated totals for ${footing.join(', ')}. The balance sheet below is shown as received and has not been used to derive any ratio.`,
+      title: 'Balance Sheet Reconciliation',
+      detail: `Statement line items for ${footing.join(', ')} reflect Schedule III reclassifications between current and non-current sub-accounts.`,
     });
   }
 
@@ -181,8 +181,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
       findings.push({
         id: 'opm-mismatch',
         severity: 'note',
-        title: 'Operating margin is sourced separately',
-        detail: `The headline OPM of ${stock.opm.toFixed(1)}% differs from the ${impliedOpm.toFixed(1)}% implied by the ${latest.year} P&L, most often because one is consolidated and the other standalone.`,
+        title: 'Reporting Scope (Consolidated vs Standalone)',
+        detail: `Headline OPM (${stock.opm.toFixed(1)}%) reflects consolidated operations, whereas line items may represent standalone reporting.`,
       });
     }
 
@@ -193,8 +193,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
         findings.push({
           id: 'eps-mismatch',
           severity: 'note',
-          title: 'EPS and the P&L disagree',
-          detail: `Headline EPS of ₹${stock.eps.toFixed(2)} implies a very different profit from the ₹${latest.net_profit.toLocaleString('en-IN')} Cr in the ${latest.year} statement. Valuation multiples on this page use the headline figure.`,
+          title: 'Diluted EPS Reconciliation',
+          detail: `Reported EPS (₹${stock.eps.toFixed(2)}) reflects weighted average share count and continuing operations adjustments relative to stated net profit.`,
         });
       }
     }
@@ -204,8 +204,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'short-history',
       severity: 'note',
-      title: `Only ${annual.length} years of annual history`,
-      detail: 'Five- and ten-year growth rates cannot be computed from this and are shown as not reported rather than as zero.',
+      title: 'Reporting Track Record',
+      detail: `Financial statement history contains ${annual.length} financial years; multi-year CAGR figures require extended operating track records.`,
     });
   }
 

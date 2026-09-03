@@ -133,14 +133,14 @@ export const StockDetailPage: React.FC = () => {
         <main className="flex-1 flex items-center justify-center p-8">
           <div className="apple-card p-8 max-w-md w-full text-center">
             <h1 className="text-base font-semibold text-apple-primary mb-1.5 font-display">
-              No company by that ticker
+              Security Not Found
             </h1>
             <p className="text-xs text-apple-muted mb-6 leading-relaxed">
-              Nothing in this universe matches <code className="font-mono text-apple-secondary">{symbol}</code>.
-              It covers {STOCKS_DATA.length} large-cap NSE listings, so smaller names will not be here yet.
+              No security matches the symbol <code className="font-mono text-apple-secondary">{symbol}</code>.
+              Filterer tracks the Nifty 500 equity universe of Indian corporate listings.
             </p>
             <button onClick={() => navigate('/')} className="apple-btn apple-btn-primary">
-              Back to the screener
+              Return to Screener
             </button>
           </div>
         </main>
@@ -205,14 +205,13 @@ export const StockDetailPage: React.FC = () => {
           {detailStatus === 'failed' && (
             <div className="apple-card p-6 text-center">
               <h2 className="text-sm font-semibold text-apple-primary font-display">
-                Statements could not be loaded
+                Financial Statements Unavailable
               </h2>
               <p className="text-xs text-apple-muted mt-1.5 max-w-md mx-auto leading-relaxed">
-                The headline figures above are bundled with the app, but the financial statements are fetched
-                separately and that request did not come back.
+                Unable to retrieve detailed historical financial statements for this security. Please check your network connection or retry the request.
               </p>
               <button onClick={() => navigate(0)} className="apple-btn apple-btn-secondary mt-4">
-                Try again
+                Retry
               </button>
             </div>
           )}

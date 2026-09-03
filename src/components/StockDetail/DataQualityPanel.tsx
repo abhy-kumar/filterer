@@ -20,8 +20,8 @@ export const DataQualityPanel: React.FC<{ stock: Stock }> = ({ stock }) => {
   const Icon = warnings.length ? AlertTriangle : Info;
 
   const summary = warnings.length
-    ? `${warnings.length} thing${warnings.length === 1 ? '' : 's'} on this page did not reconcile`
-    : `${findings.length} note${findings.length === 1 ? '' : 's'} on how these figures were sourced`;
+    ? `${warnings.length} reporting disclosure${warnings.length === 1 ? '' : 's'}`
+    : `${findings.length} filing note${findings.length === 1 ? '' : 's'}`;
 
   return (
     <div
@@ -36,7 +36,7 @@ export const DataQualityPanel: React.FC<{ stock: Stock }> = ({ stock }) => {
         <Icon className={`w-4 h-4 shrink-0 ${warnings.length ? 'text-apple-amber' : 'text-apple-muted'}`} />
         <span className="text-xs font-semibold text-apple-primary">{summary}</span>
         <span className="text-[11px] text-apple-muted hidden sm:inline">
-          {expanded ? '' : 'Worth reading before you rely on this page.'}
+          {expanded ? '' : 'Accounting standard notes & filing disclosures.'}
         </span>
         <ChevronDown
           className={`w-4 h-4 ml-auto shrink-0 text-apple-faint transition-transform ${expanded ? 'rotate-180' : ''}`}

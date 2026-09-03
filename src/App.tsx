@@ -164,20 +164,19 @@ export const App: React.FC = () => {
                     <h1 className="text-3xl sm:text-[2.75rem] font-bold tracking-[-0.035em] text-apple-primary font-display leading-[1.08]">
                       Screen Indian equities
                       <br />
-                      the way you would write it down.
+                      with natural query syntax.
                     </h1>
                     <p className="text-[15px] text-apple-secondary mt-4 leading-relaxed">
-                      Type a condition in plain language, join a few with AND, and the whole universe is filtered
-                      in the browser. Figures a company never reported stay blank instead of counting as zero.
+                      Express fundamental criteria in plain terms, combine formulas with logical operators, and evaluate 100+ metrics across the Nifty 500 instantaneously.
                     </p>
 
                     <div className="flex items-center gap-2.5 mt-6">
                       <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary px-5 py-2.5 text-[13px]">
-                        Open the query editor
+                        Query Editor
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
                       <button onClick={() => setPaletteOpen(true)} className="apple-btn apple-btn-secondary px-4 py-2.5 text-[13px]">
-                        Find a company
+                        Search Company
                         <kbd className="text-[10px] font-mono text-apple-faint ml-0.5">⌘K</kbd>
                       </button>
                     </div>
@@ -190,11 +189,11 @@ export const App: React.FC = () => {
                   <div className="mt-14">
                     <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
                       <div className="min-w-0">
-                        <h2 className="text-lg font-semibold text-apple-primary font-display">Live result</h2>
+                        <h2 className="text-lg font-semibold text-apple-primary font-display">Active Screen</h2>
                         <p className="text-xs text-apple-muted mt-1 font-mono truncate max-w-2xl">{committedQuery}</p>
                       </div>
                       <Link to={screenPath(committedQuery)} className="text-xs font-semibold text-apple-blue hover:underline shrink-0">
-                        Edit this query →
+                        Customize query →
                       </Link>
                     </div>
                     {resultsTable}
@@ -239,27 +238,26 @@ export const App: React.FC = () => {
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
                   <div className="flex items-end justify-between gap-4 mb-6 flex-wrap">
                     <div>
-                      <h1 className="text-xl font-semibold text-apple-primary font-display">Saved screens</h1>
+                      <h1 className="text-xl font-semibold text-apple-primary font-display">Saved Screens</h1>
                       <p className="text-xs text-apple-muted mt-1">
-                        Stored in this browser only. Clearing site data removes them.
+                        Screens saved to local storage for quick access across sessions.
                       </p>
                     </div>
                     <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary">
                       <Plus className="w-3.5 h-3.5" />
-                      New screen
+                      New Screen
                     </button>
                   </div>
 
                   {savedScreens.length === 0 ? (
                     <div className="apple-card py-16 px-6 text-center">
                       <Bookmark className="w-7 h-7 text-apple-faint mx-auto mb-3" />
-                      <h2 className="text-sm font-semibold text-apple-primary">Nothing saved yet</h2>
+                      <h2 className="text-sm font-semibold text-apple-primary">No saved screens</h2>
                       <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
-                        Build a query you want to come back to, then hit Save. It will show up here with the
-                        formula intact.
+                        Construct your investment screens in the Query Editor and save them here for continuous tracking.
                       </p>
                       <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary mt-5">
-                        Open the query editor
+                        Open Query Editor
                       </button>
                     </div>
                   ) : (

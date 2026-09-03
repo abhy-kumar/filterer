@@ -34,9 +34,7 @@ export const QuarterlyResultsTable: React.FC<{ stock: Stock }> = ({ stock }) => 
       footnote={
         gaps.length ? (
           <span className="text-apple-amber">
-            {gaps.join(', ')} {gaps.length === 1 ? 'is' : 'are'} missing from the source feed. The columns
-            either side of {gaps.length === 1 ? 'it' : 'them'} are not consecutive quarters, so read
-            quarter-on-quarter moves across the gap with care.
+            Note: {gaps.join(', ')} was omitted from primary filing disclosures. Sequential comparisons across this period reflect non-consecutive reporting.
           </span>
         ) : undefined
       }

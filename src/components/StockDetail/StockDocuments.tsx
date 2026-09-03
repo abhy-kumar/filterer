@@ -34,32 +34,32 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
       ? [
           {
             title: 'Annual reports',
-            source: `BSE archive for scrip ${bseCode}`,
+            source: `BSE Annual Reports Archive (${bseCode})`,
             url: `https://www.bseindia.com/corporates/AnnualReport_New.aspx?expandable=0&scrip_cd=${bseCode}`,
           },
           {
             title: 'Corporate announcements',
-            source: 'BSE, filed as they happen',
+            source: 'BSE Regulatory Announcements',
             url: `https://www.bseindia.com/corporates/ann.html?scrip=${bseCode}`,
           },
           {
             title: 'Results and board outcomes',
-            source: 'BSE financial results',
+            source: 'BSE Financial Results & Board Outcomes',
             url: `https://www.bseindia.com/corporates/Comp_Resultsnew.aspx?scripcode=${bseCode}`,
           },
         ]
       : []),
     {
       title: 'Quote and filings',
-      source: 'NSE India',
+      source: 'NSE Corporate Filings',
       url: `https://www.nseindia.com/get-quotes/equity?symbol=${encodeURIComponent(symbol)}`,
     },
   ];
 
   const research: DocLink[] = [
     {
-      title: 'Screener.in page',
-      source: 'The same company, fuller history',
+      title: 'Screener.in profile',
+      source: 'Corporate Financial Archive',
       url: `https://www.screener.in/company/${encodeURIComponent(symbol)}/consolidated/`,
     },
     ...(website

@@ -49,9 +49,9 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
     <section>
       <div className="flex items-end justify-between gap-4 mb-5 flex-wrap">
         <div>
-          <h2 className="text-lg font-semibold text-apple-primary font-display">Starting points</h2>
+          <h2 className="text-lg font-semibold text-apple-primary font-display">Curated Strategies</h2>
           <p className="text-xs text-apple-muted mt-1">
-            Twelve screens written against the metrics this dataset reports. Open one and change a number.
+            Institutional fundamental models, valuation filters, and quantitative screening strategies.
           </p>
         </div>
 

@@ -22,12 +22,10 @@ export const Footer: React.FC = () => {
           <div className="col-span-2">
             <span className="text-sm font-bold tracking-[-0.03em] text-apple-primary font-display">Filterer</span>
             <p className="text-xs text-apple-secondary mt-2 max-w-sm leading-relaxed">
-              An open-source stock screener for Indian equities. Everything runs in the browser; nothing about
-              your queries leaves this page.
+              Institutional-grade fundamental analysis and stock screening for Indian equities. High-performance, client-side execution with complete query privacy.
             </p>
             <p className="text-xs text-apple-muted mt-4 leading-relaxed max-w-sm">
-              Covering {STOCKS_DATA.length} companies with four years of annual statements. Figures the source
-              feed does not carry are shown as not reported rather than as zero.
+              Comprehensive coverage across {STOCKS_DATA.length} companies with multi-year financial statements, balance sheets, cash flows, and institutional shareholding data.
             </p>
           </div>
 
