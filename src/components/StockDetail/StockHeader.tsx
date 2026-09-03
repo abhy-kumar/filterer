@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, ShieldCheck } from 'lucide-react';
+import { AlertTriangle, Globe, ShieldCheck } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 import { crore, isReported, multiple, pct, price, signClass } from '../../lib/format';
 
@@ -66,10 +66,20 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
             </h1>
             <span className="apple-tag font-mono">{stock.symbol}</span>
             {stock.bse_code && <span className="apple-tag font-mono">BSE {stock.bse_code}</span>}
-            {isReported(stock.debt_to_equity) && stock.debt_to_equity < 0.1 && (
-              <span className="apple-tag" style={{ color: 'var(--apple-green)' }}>
-                <ShieldCheck className="w-3 h-3" />
-                Virtually debt free
+            {stock.sector !== 'Financial Services' &&
+              stock.book_value > 0 &&
+              isReported(stock.debt_to_equity) &&
+              stock.debt_to_equity <= 0.05 &&
+              (stock.debt === 0 || stock.debt < 100 || (stock.market_cap > 0 && stock.debt / stock.market_cap < 0.02)) && (
+                <span className="apple-tag" style={{ color: 'var(--apple-green)' }}>
+                  <ShieldCheck className="w-3 h-3" />
+                  Virtually debt free
+                </span>
+              )}
+            {stock.book_value !== null && stock.book_value <= 0 && (
+              <span className="apple-tag" style={{ color: 'var(--apple-red)' }}>
+                <AlertTriangle className="w-3 h-3" />
+                Negative Net Worth
               </span>
             )}
           </div>

@@ -19,7 +19,8 @@ export const ShareholdingPatternTable: React.FC<{ stock: Stock }> = ({ stock }) 
     history.some((h) => isReported(h[key] as number | null));
 
   const total = (h: ShareholdingPeriod) => {
-    const parts = [h.promoter, h.public, h.others].filter(isReported);
+    if (isReported(h.total)) return h.total;
+    const parts = [h.promoter, h.fii, h.dii, h.public, h.others].filter(isReported);
     return parts.length ? parts.reduce((a, b) => a + b, 0) : null;
   };
 

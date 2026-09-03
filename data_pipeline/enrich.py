@@ -27,6 +27,7 @@ from data_pipeline.consensus_engine import (
     reconcile_shareholding,
     reconcile_ratios_history,
     extract_snapshot_metrics,
+    reconcile_fundamentals,
 )
 from data_pipeline.ingest import Ledger, LEDGER_DB
 
@@ -131,6 +132,45 @@ def enrich_stock(
 
         for k, v in snapshot.items():
             payload[k] = v
+
+        # 4. Reconcile Fundamentals with Zero-Poisoning Immunity
+        scr_top = scr_data.get("top_ratios") or {}
+        scr_bs = scr_data.get("balance_sheet") or {}
+        tt_bal = tt_client.fetch_balance_sheet_and_debt(symbol) or {}
+
+        fund_sources = {
+            "Yahoo Finance": {
+                "debt": payload.get("debt"),
+                "book_value": payload.get("book_value"),
+                "market_cap": payload.get("market_cap"),
+                "roce": payload.get("roce"),
+                "pe_ratio": payload.get("pe_ratio"),
+            },
+            "Screener.in": {
+                "debt": scr_bs.get("borrowings"),
+                "book_value": scr_top.get("book_value"),
+                "market_cap": scr_top.get("market_cap"),
+                "roce": scr_top.get("roce"),
+                "pe_ratio": scr_top.get("pe_ratio"),
+            },
+            "Tickertape": {
+                "debt": tt_bal.get("debt"),
+            },
+        }
+
+        reconciled_fund = reconcile_fundamentals(
+            symbol=symbol,
+            sources_dict=fund_sources,
+            sector=payload.get("sector") or "",
+            current_price=payload.get("current_price"),
+            market_cap=payload.get("market_cap"),
+        )
+
+        for k in ("debt", "debt_to_equity", "book_value", "roce", "pe_ratio"):
+            if reconciled_fund.get(k) is not None:
+                payload[k] = reconciled_fund[k]
+        if reconciled_fund.get("debt_source"):
+            payload["debt_source"] = reconciled_fund["debt_source"]
 
         return True
     except Exception as exc:

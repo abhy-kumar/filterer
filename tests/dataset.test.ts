@@ -51,6 +51,25 @@ describe('dataset invariants', () => {
     }
   });
 
+  it('leaves debt_to_equity null for financial services and negative net worth companies', () => {
+    const invalid = STOCKS_DATA.filter(
+      (s) => (s.sector === 'Financial Services' || (s.book_value !== null && s.book_value <= 0)) && s.debt_to_equity !== null
+    );
+    expect(invalid.map((s) => `${s.symbol} (D/E=${s.debt_to_equity})`)).toEqual([]);
+  });
+
+  it('does not report 0.0 debt_to_equity for companies with substantial debt (>500 Cr)', () => {
+    const falseZeros = STOCKS_DATA.filter(
+      (s) => s.debt_to_equity === 0 && s.debt > 500
+    );
+    expect(falseZeros.map((s) => `${s.symbol} (debt=${s.debt})`)).toEqual([]);
+  });
+
+  it('drops abnormal margins (>100%)', () => {
+    const abnormal = STOCKS_DATA.filter((s) => s.opm !== null && Math.abs(s.opm) > 100);
+    expect(abnormal.map((s) => `${s.symbol} (opm=${s.opm})`)).toEqual([]);
+  });
+
   it('stores symbols decoded, not percent-encoded', () => {
     // Mahindra arrived as "M%26M". React Router decodes the route parameter,
     // so the lookup never matched and that page was unreachable.
@@ -168,7 +187,8 @@ describe('metric coverage', () => {
     ['roe', 0.9],
     ['pe_ratio', 0.85],
     ['pb_ratio', 0.9],
-    ['debt_to_equity', 0.9],
+    // D/E is null for ~20% of universe (Financial Services and negative net worth)
+    ['debt_to_equity', 0.78],
     ['opm', 0.9],
     ['piotroski_score', 0.9],
     ['sales_growth_3y', 0.85],

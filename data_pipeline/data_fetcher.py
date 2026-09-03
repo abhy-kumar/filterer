@@ -290,7 +290,11 @@ class StockDataFetcher:
             "roe_10y": 0.0,
             # Financial Health (filled later)
             "debt": 0.0,
-            "debt_to_equity": _round(info.get("debtToEquity", 0) / 100) if info.get("debtToEquity") else 0.0,
+            "debt_to_equity": _round(info.get("debtToEquity") / 100) if (
+                info.get("debtToEquity") is not None
+                and info.get("sector") != "Financial Services"
+                and (info.get("bookValue") is None or info.get("bookValue") > 0)
+            ) else None,
             "interest_coverage": 0.0,
             "current_ratio": _round(info.get("currentRatio", 0)),
             "piotroski_score": 0,
@@ -565,6 +569,15 @@ class StockDataFetcher:
             if balance_sheets:
                 latest_bs = balance_sheets[-1]
                 stock["debt"] = latest_bs["borrowings"]
+
+                # If debt is 0 and non-financial, debt_to_equity is 0
+                if stock["debt"] == 0 and stock.get("sector") != "Financial Services" and (stock.get("book_value") is None or stock.get("book_value", 0) > 0):
+                    stock["debt_to_equity"] = 0.0
+                elif stock.get("debt_to_equity") is None and stock.get("sector") != "Financial Services" and stock.get("book_value", 0) > 0 and stock.get("market_cap", 0) > 0 and stock.get("current_price", 0) > 0:
+                    shares = (stock["market_cap"] * INR_CRORE) / stock["current_price"]
+                    equity = (stock["book_value"] * shares) / INR_CRORE
+                    if equity > 0:
+                        stock["debt_to_equity"] = _round(stock["debt"] / equity)
                 
                 # Compute ROCE more accurately: EBIT / Capital Employed
                 # Capital Employed = Total Assets - Current Liabilities

@@ -267,6 +267,104 @@ class ScreenerScraper:
 
         return metrics
 
+    def parse_top_ratios(self, soup: BeautifulSoup) -> Dict[str, Optional[float]]:
+        """Parse Screener.in top ratios card (Market Cap, P/E, Book Value, ROCE, ROE, etc.)."""
+        metrics: Dict[str, Optional[float]] = {
+            "market_cap": None,
+            "current_price": None,
+            "pe_ratio": None,
+            "book_value": None,
+            "dividend_yield": None,
+            "roce": None,
+            "roe": None,
+            "face_value": None,
+        }
+
+        top_ratios = soup.find("ul", id="top-ratios")
+        if not top_ratios:
+            return metrics
+
+        for li in top_ratios.find_all("li"):
+            name_elem = li.find("span", class_="name")
+            val_elem = li.find("span", class_="nowrap value") or li.find("span", class_="value")
+            if not name_elem or not val_elem:
+                continue
+
+            name = name_elem.get_text(strip=True).lower()
+            val_text = val_elem.get_text(strip=True)
+
+            if "market cap" in name:
+                metrics["market_cap"] = _clean_float(val_text)
+            elif "current price" in name:
+                metrics["current_price"] = _clean_float(val_text)
+            elif "stock p/e" in name or "p/e" in name:
+                metrics["pe_ratio"] = _clean_float(val_text)
+            elif "book value" in name:
+                metrics["book_value"] = _clean_float(val_text)
+            elif "dividend yield" in name:
+                metrics["dividend_yield"] = _clean_float(val_text)
+            elif "roce" in name:
+                metrics["roce"] = _clean_float(val_text)
+            elif "roe" in name:
+                metrics["roe"] = _clean_float(val_text)
+            elif "face value" in name:
+                metrics["face_value"] = _clean_float(val_text)
+
+        return metrics
+
+    def parse_balance_sheet_fundamentals(self, soup: BeautifulSoup) -> Dict[str, Optional[float]]:
+        """Parse the latest annual balance sheet row for borrowings, equity, and assets."""
+        bs_section = soup.find("section", id="balance-sheet")
+        if not bs_section:
+            return {}
+
+        table = bs_section.find("table")
+        if not table:
+            return {}
+
+        rows = table.find_all("tr")
+        if len(rows) < 2:
+            return {}
+
+        header_cells = [th.get_text(strip=True) for th in rows[0].find_all(["th", "td"])]
+        years = [h for h in header_cells if h]
+        if not years:
+            return {}
+
+        last_col_idx = len(years)
+
+        borrowings = None
+        equity_capital = None
+        reserves = None
+        total_liabilities = None
+        total_assets = None
+
+        for tr in rows[1:]:
+            cells = [td.get_text(strip=True) for td in tr.find_all(["th", "td"])]
+            if len(cells) <= last_col_idx:
+                continue
+            label = cells[0].replace("+", "").strip().lower()
+            val = _clean_float(cells[last_col_idx])
+
+            if "borrowings" in label:
+                borrowings = val
+            elif "equity capital" in label:
+                equity_capital = val
+            elif "reserves" in label:
+                reserves = val
+            elif "total liabilities" in label:
+                total_liabilities = val
+            elif "total assets" in label:
+                total_assets = val
+
+        return {
+            "borrowings": borrowings,
+            "equity_capital": equity_capital,
+            "reserves": reserves,
+            "total_liabilities": total_liabilities,
+            "total_assets": total_assets,
+        }
+
     def scrape(self, symbol: str) -> Optional[Dict[str, Any]]:
         """Fetch and parse all sections for a company."""
         html = self.fetch_company_page(symbol)
@@ -277,10 +375,14 @@ class ScreenerScraper:
         shareholding = self.parse_shareholding_table(soup)
         ratios = self.parse_ratios_table(soup)
         growth = self.parse_growth_ranges(soup)
+        top_ratios = self.parse_top_ratios(soup)
+        balance_sheet = self.parse_balance_sheet_fundamentals(soup)
 
         return {
             "symbol": symbol.upper(),
             "shareholding": shareholding,
             "ratios": ratios,
             "growth": growth,
+            "top_ratios": top_ratios,
+            "balance_sheet": balance_sheet,
         }

@@ -254,3 +254,174 @@ def extract_snapshot_metrics(
             snapshot[k] = val
 
     return snapshot
+
+
+def reconcile_scalar_metric(
+    metric_name: str,
+    values_by_source: Dict[str, Optional[float]],
+    tolerance_pct: float = 0.05,
+    zero_is_sentinel: bool = True,
+    priority_order: Optional[List[str]] = None,
+) -> Tuple[Optional[float], str]:
+    """
+    Reconciles a numeric metric across multiple independent sources with
+    strict Zero-Poisoning Immunity:
+
+    1. Missing (None/NaN) is cleanly separated from real 0.
+    2. Zero-Poisoning Immunity: If any source reports a valid positive number,
+       uncorroborated zeros from failed/defaulted sources are rejected and NEVER
+       allowed to pull down the average or win by default.
+    3. Tolerance Clustering: Values within tolerance_pct are averaged to form a consensus.
+    4. Single Source: If only one source succeeded, its value is safely retained.
+    """
+    if priority_order is None:
+        priority_order = ["Screener.in", "Tickertape", "Yahoo Finance", "NSE/BSE"]
+
+    # 1. Clean valid inputs (ignore None, NaN)
+    valid_entries: Dict[str, float] = {}
+    for src, val in values_by_source.items():
+        if val is not None:
+            try:
+                f_val = float(val)
+                if not (f_val != f_val):  # not NaN
+                    valid_entries[src] = f_val
+            except (ValueError, TypeError):
+                continue
+
+    if not valid_entries:
+        return None, "None"
+
+    positive_entries = {k: v for k, v in valid_entries.items() if v > 0}
+
+    # 2. Zero-Poisoning Immunity Guard
+    # If any source has a positive reading and zero is a common failure sentinel,
+    # discard uncorroborated zeroes!
+    if positive_entries and zero_is_sentinel:
+        working_entries = positive_entries
+    else:
+        working_entries = valid_entries
+
+    # Check if all sources reported 0
+    if not positive_entries and all(v == 0 for v in working_entries.values()):
+        sources_str = " + ".join(sorted(working_entries.keys()))
+        return 0.0, f"Corroborated Zero ({sources_str})"
+
+    # Single source case
+    if len(working_entries) == 1:
+        src, val = next(iter(working_entries.items()))
+        return round(val, 2), f"Single Source ({src})"
+
+    # 3. Multi-source tolerance clustering
+    items = list(working_entries.items())
+    best_cluster: List[Tuple[str, float]] = []
+
+    for i in range(len(items)):
+        cluster = [items[i]]
+        val_i = items[i][1]
+        for j in range(len(items)):
+            if i == j:
+                continue
+            val_j = items[j][1]
+            denom = max(abs(val_i), abs(val_j), 1.0)
+            diff_pct = abs(val_i - val_j) / denom
+            if diff_pct <= tolerance_pct:
+                cluster.append(items[j])
+        if len(cluster) > len(best_cluster):
+            best_cluster = cluster
+
+    if len(best_cluster) >= 2:
+        avg_val = sum(v for _, v in best_cluster) / len(best_cluster)
+        sources_str = " + ".join(src for src, _ in best_cluster)
+        return round(avg_val, 2), f"Consensus ({sources_str})"
+
+    # Disagreement fallback: follow priority order
+    for preferred in priority_order:
+        if preferred in working_entries:
+            return round(working_entries[preferred], 2), f"{preferred} (Disagreement fallback)"
+
+    # Fallback to first available working entry
+    src, val = next(iter(working_entries.items()))
+    return round(val, 2), f"{src} (Fallback)"
+
+
+def reconcile_fundamentals(
+    symbol: str,
+    sources_dict: Dict[str, Dict[str, Any]],
+    sector: str = "",
+    current_price: Optional[float] = None,
+    market_cap: Optional[float] = None,
+) -> Dict[str, Any]:
+    """
+    Cross-validates debt, book value, ROCE, and P/E across sources,
+    applying zero-poisoning immunity and domain constraints.
+    """
+    is_financial = "financial" in sector.lower() or "bank" in sector.lower()
+
+    debt_sources: Dict[str, Optional[float]] = {}
+    bv_sources: Dict[str, Optional[float]] = {}
+    roce_sources: Dict[str, Optional[float]] = {}
+    pe_sources: Dict[str, Optional[float]] = {}
+    mcap_sources: Dict[str, Optional[float]] = {}
+
+    for src_name, payload in sources_dict.items():
+        if not payload:
+            continue
+        d = payload.get("debt") if payload.get("debt") is not None else payload.get("borrowings")
+        if d is not None:
+            debt_sources[src_name] = d
+        if payload.get("book_value") is not None:
+            bv_sources[src_name] = payload["book_value"]
+        if payload.get("roce") is not None:
+            roce_sources[src_name] = payload["roce"]
+        if payload.get("pe_ratio") is not None:
+            pe_sources[src_name] = payload["pe_ratio"]
+        if payload.get("market_cap") is not None:
+            mcap_sources[src_name] = payload["market_cap"]
+
+    reconciled_debt, debt_src = reconcile_scalar_metric(
+        "debt", debt_sources, tolerance_pct=0.08, zero_is_sentinel=True
+    )
+    reconciled_bv, bv_src = reconcile_scalar_metric(
+        "book_value", bv_sources, tolerance_pct=0.05, zero_is_sentinel=False
+    )
+    reconciled_roce, roce_src = reconcile_scalar_metric(
+        "roce", roce_sources, tolerance_pct=0.10, zero_is_sentinel=False
+    )
+    reconciled_pe, pe_src = reconcile_scalar_metric(
+        "pe_ratio", pe_sources, tolerance_pct=0.05, zero_is_sentinel=False
+    )
+    reconciled_mcap, mcap_src = reconcile_scalar_metric(
+        "market_cap", mcap_sources, tolerance_pct=0.05, zero_is_sentinel=True
+    )
+
+    cmp = current_price
+    mcap = reconciled_mcap if reconciled_mcap is not None else market_cap
+
+    de_ratio = None
+    if is_financial:
+        de_ratio = None
+    elif reconciled_bv is not None and reconciled_bv <= 0:
+        de_ratio = None
+    elif reconciled_debt is not None:
+        if reconciled_debt == 0:
+            de_ratio = 0.0
+        elif reconciled_bv is not None and reconciled_bv > 0 and cmp and mcap and cmp > 0:
+            shares = (mcap * 10000000) / cmp
+            equity = (reconciled_bv * shares) / 10000000
+            if equity > 0:
+                de_ratio = round(reconciled_debt / equity, 2)
+
+    return {
+        "debt": reconciled_debt,
+        "debt_source": debt_src,
+        "debt_to_equity": de_ratio,
+        "book_value": reconciled_bv,
+        "book_value_source": bv_src,
+        "roce": reconciled_roce,
+        "roce_source": roce_src,
+        "pe_ratio": reconciled_pe,
+        "pe_source": pe_src,
+        "market_cap": reconciled_mcap,
+        "market_cap_source": mcap_src,
+    }
+

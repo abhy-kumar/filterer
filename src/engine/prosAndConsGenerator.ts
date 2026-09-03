@@ -19,8 +19,14 @@ export function generateProsAndCons(stock: Stock): ProsAndCons {
   const cons: string[] = [];
 
   // Leverage
-  if (has(stock.debt_to_equity)) {
-    if (stock.debt === 0 || stock.debt_to_equity <= 0.05) {
+  if (stock.book_value !== null && stock.book_value !== undefined && stock.book_value <= 0) {
+    cons.push('Company has negative net worth, reflecting accumulated losses and balance sheet distress.');
+  } else if (stock.sector !== 'Financial Services' && has(stock.debt_to_equity)) {
+    const isVirtuallyDebtFree =
+      stock.debt_to_equity <= 0.05 &&
+      (stock.debt === 0 || stock.debt < 100 || (stock.market_cap > 0 && stock.debt / stock.market_cap < 0.02));
+
+    if (isVirtuallyDebtFree) {
       pros.push('Company is virtually debt free.');
     } else if (stock.debt_to_equity < 0.3) {
       pros.push(`Low debt with a debt to equity ratio of ${stock.debt_to_equity.toFixed(2)}.`);

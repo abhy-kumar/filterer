@@ -98,9 +98,17 @@ function repair(stock) {
   for (const row of pnl) {
     if (row.other_income === 0) { row.other_income = null; count('P&L other income marked unreported'); }
     if (row.dividend_payout_pct === 0) { row.dividend_payout_pct = null; count('P&L dividend payout marked unreported'); }
+    if (row.opm_pct !== null && Math.abs(row.opm_pct) > 100) {
+      row.opm_pct = null;
+      count('abnormal P&L OPM% (>100%) dropped');
+    }
   }
   for (const row of quarters) {
     if (row.other_income === 0) { row.other_income = null; count('quarterly other income marked unreported'); }
+    if (row.opm_pct !== null && Math.abs(row.opm_pct) > 100) {
+      row.opm_pct = null;
+      count('abnormal quarterly OPM% (>100%) dropped');
+    }
   }
 
   const next = { ...stock };
@@ -179,7 +187,72 @@ function repair(stock) {
     }
   }
 
-  // ── Valuation multiples that are meaningless at zero ───────
+  // ── Leverage (Debt to Equity) ──────────────────────────────
+  // Corporate D/E does not apply to banks/NBFCs, and is mathematically
+  // undefined/misleading when net worth is negative.
+  if (stock.sector === 'Financial Services') {
+    next.debt_to_equity = null;
+    count('BFSI D/E marked not applicable');
+  } else if (next.book_value !== null && next.book_value <= 0) {
+    next.debt_to_equity = null;
+    count('negative net worth D/E marked not applicable');
+  } else if (next.debt === 0) {
+    next.debt_to_equity = 0;
+  } else if (next.debt > 0 && next.book_value > 0 && next.market_cap > 0 && next.current_price > 0) {
+    if (next.debt_to_equity === 0 || next.debt_to_equity === null) {
+      const shares = (next.market_cap * 10000000) / next.current_price;
+      const equity = (next.book_value * shares) / 10000000;
+      if (equity > 0) {
+        next.debt_to_equity = round(next.debt / equity);
+        count('D/E derived from debt and book equity');
+      }
+    }
+  }
+
+  // ── Margins sanity check ───────────────────────────────────
+  if (next.opm !== null && Math.abs(next.opm) > 100) {
+    next.opm = null;
+    count('abnormal OPM (>100%) dropped');
+  }
+  if (next.npm !== null && Math.abs(next.npm) > 100) {
+    next.npm = null;
+    count('abnormal NPM (>100%) dropped');
+  }
+
+  // ── Valuation multiples that are meaningless at zero or negative ──
+  if (next.book_value !== null && next.book_value <= 0) {
+    next.pb_ratio = null;
+    next.roe = null;
+    count('negative net worth P/B and ROE marked not applicable');
+  }
+  if (next.pb_ratio !== null && next.pb_ratio <= 0) {
+    next.pb_ratio = null;
+    count('negative P/B marked not applicable');
+  }
+
+  // Corrupted ROE (>100%) when balance sheet equity is intact
+  if (next.roe !== null && next.roe > 120 && balance.length && annual.length) {
+    const latestBs = balance[balance.length - 1];
+    const latestAnnual = annual[annual.length - 1];
+    const totalEq = (latestBs.equity_capital ?? 0) + (latestBs.reserves ?? 0);
+    if (totalEq > 0 && latestAnnual.net_profit) {
+      next.roe = round((latestAnnual.net_profit / totalEq) * 100);
+      count('distorted ROE recomputed from net profit and book equity');
+    }
+  }
+
+  // Corrupted P/E (<5 on non-cyclical with healthy annual EPS)
+  if (next.pe_ratio !== null && next.pe_ratio > 0 && next.pe_ratio < 5 && annual.length) {
+    const latestAnnual = annual[annual.length - 1];
+    if (latestAnnual.eps > 0 && next.current_price > 0) {
+      const derivedPE = round(next.current_price / latestAnnual.eps);
+      if (derivedPE > 20) {
+        next.pe_ratio = derivedPE;
+        count('corrupted P/E recomputed from annual EPS');
+      }
+    }
+  }
+
   for (const key of ['peg_ratio', 'ev_ebitda', 'graham_number', 'altman_z_score', 'price_to_fcf']) {
     if (!orNull(next[key])) { next[key] = null; count('valuation multiple left unreported'); }
   }
@@ -207,7 +280,14 @@ function repair(stock) {
     assign('promoter_holding', latest.promoter);
     assign('fii_holding', latest.fii);
     assign('dii_holding', latest.dii);
-    assign('public_holding', latest.public);
+    
+    // Only add others (Government / Trusts) if public does not already include it
+    const subtotal = (latest.promoter ?? 0) + (latest.fii ?? 0) + (latest.dii ?? 0) + (latest.public ?? 0);
+    let publicVal = latest.public;
+    if (subtotal < 95 && latest.others && (subtotal + latest.others) <= 102) {
+      publicVal = round((latest.public ?? 0) + latest.others);
+    }
+    assign('public_holding', publicVal);
     next.pledged_percentage = typeof latest.pledged === 'number' ? round(latest.pledged) : null;
 
     if (filed && prev) {

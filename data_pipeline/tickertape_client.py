@@ -300,3 +300,45 @@ class TickertapeClient:
 
         return ratios_history, growth
 
+    def fetch_balance_sheet_and_debt(self, symbol: str) -> Dict[str, Optional[float]]:
+        """Fetch latest debt, equity, and asset figures from Tickertape balance sheet API."""
+        clean = symbol.strip().upper()
+        sid = self.resolve_sid(clean) or clean
+        result: Dict[str, Optional[float]] = {
+            "debt": None,
+            "equity": None,
+            "total_assets": None,
+            "current_assets": None,
+            "current_liabilities": None,
+        }
+
+        try:
+            if self.delay > 0:
+                time.sleep(self.delay)
+
+            r_bal = self.session.get(
+                f"https://api.tickertape.in/stocks/financials/balancesheet/{sid}/annual/normal",
+                timeout=5,
+            )
+            if r_bal.status_code != 200 and sid != clean:
+                r_bal = self.session.get(
+                    f"https://api.tickertape.in/stocks/financials/balancesheet/{clean}/annual/normal",
+                    timeout=5,
+                )
+
+            if r_bal.status_code == 200:
+                bal_items = r_bal.json().get("data", [])
+                valid_items = [x for x in bal_items if x.get("displayPeriod") and x.get("displayPeriod") != "TTM"]
+                if valid_items:
+                    latest = valid_items[-1]
+                    result["debt"] = latest.get("balTdeb")
+                    result["equity"] = latest.get("balTeq")
+                    result["total_assets"] = latest.get("balTota")
+                    result["current_assets"] = latest.get("balTca")
+                    result["current_liabilities"] = latest.get("balTcl")
+        except Exception as exc:
+            logger.debug("Tickertape balance sheet failed for %s: %s", symbol, exc)
+
+        return result
+
+
