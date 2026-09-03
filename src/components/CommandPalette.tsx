@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
 import { Search, Building2, Hash, Compass, CornerDownLeft } from 'lucide-react';
 import { STOCKS_DATA } from '../data/stocksData';
@@ -143,6 +144,15 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
       ?.scrollIntoView({ block: 'nearest' });
   }, [activeIndex]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   let cursor = -1;
@@ -153,7 +163,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
     else sections.push({ kind: item.kind, items: [item] });
   }
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-4 pt-[10vh] animate-fade-in"
       onClick={onClose}
@@ -261,6 +271,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
           </span>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

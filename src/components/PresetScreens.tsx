@@ -46,13 +46,10 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
   };
 
   return (
-    <section>
-      <div className="flex items-end justify-between gap-4 mb-5 flex-wrap">
-        <div>
-          <h2 className="text-lg font-semibold text-apple-primary font-display">Popular Screens</h2>
-          <p className="text-xs text-apple-muted mt-1">
-            Pre-built screens for value, growth, debt-free, and dividend stocks.
-          </p>
+    <section className="space-y-4">
+      <div className="flex items-center justify-between gap-3 flex-wrap">
+        <div className="text-xs font-semibold text-apple-muted">
+          {filtered.length} Curated Screens
         </div>
 
         <div className="apple-segmented overflow-x-auto no-scrollbar max-w-full">
@@ -60,7 +57,7 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
             <button
               key={cat}
               onClick={() => setCategory(cat)}
-              className={`apple-segmented-item ${category === cat ? 'active' : ''}`}
+              className={`apple-segmented-item text-xs whitespace-nowrap ${category === cat ? 'active' : ''}`}
             >
               {cat}
             </button>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Play, Eraser, WrapText, Bookmark, Check, AlertTriangle, BookOpen, Copy, Info } from 'lucide-react';
+import { createPortal } from 'react-dom';
+import { Play, Eraser, WrapText, Bookmark, Check, AlertTriangle, BookOpen, Copy, Info, Code2 } from 'lucide-react';
 import { METRICS_DICTIONARY, getMetric } from '../engine/metricsDictionary';
 import { formatScreenerQuery, validateQuery } from '../engine/screenerParser';
 import { fieldCoverage } from '../engine/dataQuality';
@@ -74,6 +75,15 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
     return () => clearTimeout(t);
   }, [copied]);
 
+  useEffect(() => {
+    if (!showCatalog) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [showCatalog]);
+
   const insertText = (text: string) => {
     const textarea = textareaRef.current;
     if (!textarea) {
@@ -121,12 +131,10 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
 
   return (
     <div className="apple-card overflow-hidden">
-      <div className="px-4 sm:px-5 py-3 border-b border-apple-border flex items-center justify-between gap-3 flex-wrap">
-        <div>
-          <h2 className="text-sm font-semibold text-apple-primary font-display">Query</h2>
-          <p className="text-xs text-apple-muted mt-0.5">
-            Screener.in syntax. Combine conditions with AND, OR, NOT and brackets.
-          </p>
+      <div className="px-4 sm:px-5 py-2.5 border-b border-apple-border flex items-center justify-between gap-3 flex-wrap bg-apple-surface-hover/30">
+        <div className="flex items-center gap-2">
+          <Code2 className="w-3.5 h-3.5 text-apple-blue" />
+          <span className="text-xs font-semibold text-apple-primary font-mono">Formula Editor</span>
         </div>
 
         <div className="flex items-center gap-1.5">
@@ -272,96 +280,98 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
         </div>
       </div>
 
-      {showCatalog && (
-        <div
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-4 pt-[8vh]"
-          onClick={() => setShowCatalog(false)}
-        >
+      {showCatalog &&
+        createPortal(
           <div
-            className="apple-card w-full max-w-2xl flex flex-col max-h-[80vh] shadow-lg"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-4 pt-[8vh]"
+            onClick={() => setShowCatalog(false)}
           >
-            <div className="p-4 border-b border-apple-border">
-              <div className="flex items-center justify-between gap-3 mb-3">
-                <div>
-                  <h3 className="text-sm font-semibold text-apple-primary font-display">Ratio catalog</h3>
-                  <p className="text-xs text-apple-muted mt-0.5">
-                    Click a ratio to insert it. Coverage is over the {universe.length} companies loaded.
-                  </p>
+            <div
+              className="apple-card w-full max-w-2xl flex flex-col max-h-[80vh] shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-4 border-b border-apple-border">
+                <div className="flex items-center justify-between gap-3 mb-3">
+                  <div>
+                    <h3 className="text-sm font-semibold text-apple-primary font-display">Ratio catalog</h3>
+                    <p className="text-xs text-apple-muted mt-0.5">
+                      Click a ratio to insert it. Coverage is over the {universe.length} companies loaded.
+                    </p>
+                  </div>
+                  <button onClick={() => setShowCatalog(false)} className="apple-btn apple-btn-quiet">
+                    Close
+                  </button>
                 </div>
-                <button onClick={() => setShowCatalog(false)} className="apple-btn apple-btn-quiet">
-                  Close
-                </button>
+
+                <input
+                  autoFocus
+                  value={catalogSearch}
+                  onChange={(e) => setCatalogSearch(e.target.value)}
+                  placeholder="Search ratios"
+                  className="apple-input w-full text-xs px-3 h-8 mb-2.5"
+                />
+
+                <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
+                  {CATEGORIES.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setCategory(cat)}
+                      className={`px-2.5 py-1 rounded-lg text-xs whitespace-nowrap transition-colors ${
+                        category === cat
+                          ? 'bg-apple-blue text-white font-semibold'
+                          : 'text-apple-muted hover:text-apple-primary hover:bg-apple-surface-hover'
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
               </div>
 
-              <input
-                autoFocus
-                value={catalogSearch}
-                onChange={(e) => setCatalogSearch(e.target.value)}
-                placeholder="Search ratios"
-                className="apple-input w-full text-xs px-3 h-8 mb-2.5"
-              />
-
-              <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
-                {CATEGORIES.map((cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setCategory(cat)}
-                    className={`px-2.5 py-1 rounded-lg text-xs whitespace-nowrap transition-colors ${
-                      category === cat
-                        ? 'bg-apple-blue text-white font-semibold'
-                        : 'text-apple-muted hover:text-apple-primary hover:bg-apple-surface-hover'
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ))}
+              <div className="overflow-y-auto p-2 flex-1">
+                {catalog.length === 0 && (
+                  <p className="text-xs text-apple-muted text-center py-10">No ratio matches that.</p>
+                )}
+                {catalog.map((item) => {
+                  const coverage = fieldCoverage(universe, item.id);
+                  const full = coverage.reported === coverage.total;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => {
+                        insertText(item.name);
+                        setShowCatalog(false);
+                      }}
+                      className="w-full text-left p-3 rounded-xl hover:bg-apple-surface-hover transition-colors group"
+                    >
+                      <div className="flex items-baseline justify-between gap-3">
+                        <span className="text-xs font-semibold text-apple-primary group-hover:text-apple-blue">
+                          {item.name}
+                        </span>
+                        <span
+                          className={`text-[10px] font-mono shrink-0 ${
+                            coverage.reported === 0 ? 'num-neg' : full ? 'text-apple-faint' : 'text-apple-amber'
+                          }`}
+                        >
+                          {full ? item.unit : `${coverage.reported}/${coverage.total} reported`}
+                        </span>
+                      </div>
+                      <p className="text-xs text-apple-muted mt-1 leading-relaxed">{item.description}</p>
+                      <div className="mt-1.5 flex items-center gap-1 flex-wrap">
+                        {item.aliases.slice(0, 5).map((alias) => (
+                          <code key={alias} className="text-[10px] font-mono text-apple-faint">
+                            {alias}
+                          </code>
+                        ))}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
-
-            <div className="overflow-y-auto p-2 flex-1">
-              {catalog.length === 0 && (
-                <p className="text-xs text-apple-muted text-center py-10">No ratio matches that.</p>
-              )}
-              {catalog.map((item) => {
-                const coverage = fieldCoverage(universe, item.id);
-                const full = coverage.reported === coverage.total;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      insertText(item.name);
-                      setShowCatalog(false);
-                    }}
-                    className="w-full text-left p-3 rounded-xl hover:bg-apple-surface-hover transition-colors group"
-                  >
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-xs font-semibold text-apple-primary group-hover:text-apple-blue">
-                        {item.name}
-                      </span>
-                      <span
-                        className={`text-[10px] font-mono shrink-0 ${
-                          coverage.reported === 0 ? 'num-neg' : full ? 'text-apple-faint' : 'text-apple-amber'
-                        }`}
-                      >
-                        {full ? item.unit : `${coverage.reported}/${coverage.total} reported`}
-                      </span>
-                    </div>
-                    <p className="text-xs text-apple-muted mt-1 leading-relaxed">{item.description}</p>
-                    <div className="mt-1.5 flex items-center gap-1 flex-wrap">
-                      {item.aliases.slice(0, 5).map((alias) => (
-                        <code key={alias} className="text-[10px] font-mono text-apple-faint">
-                          {alias}
-                        </code>
-                      ))}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </div>
   );
 };

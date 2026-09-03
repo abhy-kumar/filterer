@@ -119,42 +119,52 @@ export const SuperInvestorsPage: React.FC = () => {
   return (
     <>
       <main className="flex-1 w-full apple-canvas animate-fade-in">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
           {/* Header Banner */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-apple-border pb-5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-apple-primary font-display flex items-center gap-2.5">
-                <Users className="w-6 h-6 text-apple-blue" />
-                Super-Investors
-              </h1>
+              <div className="flex items-center gap-2.5">
+                <Users className="w-5 h-5 text-apple-blue shrink-0" />
+                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                  Super-Investors
+                </h1>
+              </div>
+              <p className="text-xs text-apple-muted mt-1 leading-normal">
+                Track 1%+ public equity holdings and quarterly portfolio allocations of marquee Indian investors.
+              </p>
             </div>
 
-            {/* Aggregated KPIs */}
-            <div className="flex items-center gap-3 flex-wrap">
-              <div className="apple-card px-4 py-2.5 min-w-[120px]">
-                <div className="text-[10px] uppercase font-semibold text-apple-muted tracking-wider">
-                  Super-Investors
-                </div>
-                <div className="text-lg font-bold font-mono text-apple-primary mt-0.5">
-                  {aggregateStats.totalInvestors}
-                </div>
-              </div>
-              <div className="apple-card px-4 py-2.5 min-w-[140px]">
-                <div className="text-[10px] uppercase font-semibold text-apple-muted tracking-wider">
-                  Tracked Wealth
-                </div>
-                <div className="text-lg font-bold font-mono text-apple-primary mt-0.5">
-                  ₹{Math.round(aggregateStats.totalWorthCr).toLocaleString('en-IN')} Cr
-                </div>
-              </div>
-              <div className="apple-card px-4 py-2.5 min-w-[120px]">
-                <div className="text-[10px] uppercase font-semibold text-apple-muted tracking-wider">
-                  Unique Stocks
-                </div>
-                <div className="text-lg font-bold font-mono text-apple-primary mt-0.5">
-                  {aggregateStats.totalStocksTracked}
-                </div>
-              </div>
+            {/* Investor Type Filter Pills */}
+            <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar">
+              {['All', 'Individual HNI', 'Institutional / PMS', 'Family Office'].map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setTypeFilter(t)}
+                  className={`apple-segmented-item text-xs whitespace-nowrap ${typeFilter === t ? 'active' : ''}`}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Aggregate Stats Strip */}
+          <div className="flex items-center gap-4 sm:gap-6 text-xs text-apple-muted flex-wrap">
+            <div className="flex items-center gap-1.5">
+              <span className="font-semibold text-apple-primary font-mono text-sm">{aggregateStats.totalInvestors}</span>
+              <span>Tracked Investors</span>
+            </div>
+            <span className="text-apple-faint">•</span>
+            <div className="flex items-center gap-1.5">
+              <span className="font-semibold text-apple-primary font-mono text-sm">
+                ₹{Math.round(aggregateStats.totalWorthCr).toLocaleString('en-IN')} Cr
+              </span>
+              <span>Disclosed Wealth</span>
+            </div>
+            <span className="text-apple-faint">•</span>
+            <div className="flex items-center gap-1.5">
+              <span className="font-semibold text-apple-primary font-mono text-sm">{aggregateStats.totalStocksTracked}</span>
+              <span>Unique Stocks</span>
             </div>
           </div>
 
@@ -186,32 +196,16 @@ export const SuperInvestorsPage: React.FC = () => {
             </div>
           )}
 
-          {/* Search & Filters */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-            <div className="relative flex-1 max-w-md">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-apple-faint pointer-events-none" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search by investor, company, or symbol (e.g. Damani, Titan, Rare)..."
-                className="apple-input text-xs pl-9 pr-4 h-9 w-full"
-              />
-            </div>
-
-            <div className="flex items-center gap-2">
-              <div className="apple-segmented">
-                {['All', 'Individual HNI', 'Institutional / PMS', 'Family Office'].map((t) => (
-                  <button
-                    key={t}
-                    onClick={() => setTypeFilter(t)}
-                    className={`apple-segmented-item text-xs ${typeFilter === t ? 'active' : ''}`}
-                  >
-                    {t}
-                  </button>
-                ))}
-              </div>
-            </div>
+          {/* Search Input */}
+          <div className="relative max-w-md">
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-apple-faint pointer-events-none" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search by investor, company, or symbol (e.g. Damani, Titan, Rare)..."
+              className="apple-input text-xs pl-9 pr-4 h-9 w-full"
+            />
           </div>
 
           {/* Master-Detail Layout */}

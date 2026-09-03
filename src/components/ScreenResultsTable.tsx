@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
 import { ArrowUp, ArrowDown, Download, Columns3, Search, ChevronLeft, ChevronRight, Check, X } from 'lucide-react';
 import { Stock } from '../types/stock';
@@ -221,6 +222,15 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
     [visibleKeys]
   );
 
+  useEffect(() => {
+    if (!showColumnPicker) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [showColumnPicker]);
+
   const onScroll = useCallback(() => {
     setIsScrolled((scrollRef.current?.scrollLeft ?? 0) > 2);
   }, []);
@@ -433,58 +443,60 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         </div>
       </div>
 
-      {showColumnPicker && (
-        <div
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
-          onClick={() => setShowColumnPicker(false)}
-        >
+      {showColumnPicker &&
+        createPortal(
           <div
-            className="apple-card w-full max-w-sm p-5 shadow-lg"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setShowColumnPicker(false)}
           >
-            <div className="flex items-center justify-between mb-1">
-              <h3 className="text-sm font-semibold text-apple-primary font-display">Columns</h3>
-              <button
-                onClick={() => setVisibleKeys(DEFAULT_VISIBLE)}
-                className="text-xs text-apple-blue hover:underline"
-              >
-                Reset
-              </button>
-            </div>
-            <p className="text-xs text-apple-muted mb-4">Your selection is remembered on this device.</p>
+            <div
+              className="apple-card w-full max-w-sm p-5 shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="text-sm font-semibold text-apple-primary font-display">Columns</h3>
+                <button
+                  onClick={() => setVisibleKeys(DEFAULT_VISIBLE)}
+                  className="text-xs text-apple-blue hover:underline"
+                >
+                  Reset
+                </button>
+              </div>
+              <p className="text-xs text-apple-muted mb-4">Your selection is remembered on this device.</p>
 
-            <div className="grid grid-cols-2 gap-1 max-h-72 overflow-y-auto -mr-2 pr-2">
-              {COLUMNS.map((col) => {
-                const on = visibleKeys.includes(col.key);
-                return (
-                  <button
-                    key={col.key}
-                    onClick={() => toggleColumn(col.key)}
-                    className={`flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs text-left transition-colors ${
-                      on ? 'text-apple-primary bg-apple-blue-subtle' : 'text-apple-muted hover:bg-apple-surface-hover'
-                    }`}
-                  >
-                    <span
-                      className={`w-3.5 h-3.5 rounded flex items-center justify-center shrink-0 border ${
-                        on ? 'bg-apple-blue border-apple-blue text-white' : 'border-apple-border'
+              <div className="grid grid-cols-2 gap-1 max-h-72 overflow-y-auto -mr-2 pr-2">
+                {COLUMNS.map((col) => {
+                  const on = visibleKeys.includes(col.key);
+                  return (
+                    <button
+                      key={col.key}
+                      onClick={() => toggleColumn(col.key)}
+                      className={`flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs text-left transition-colors ${
+                        on ? 'text-apple-primary bg-apple-blue-subtle' : 'text-apple-muted hover:bg-apple-surface-hover'
                       }`}
                     >
-                      {on && <Check className="w-2.5 h-2.5" strokeWidth={3} />}
-                    </span>
-                    {col.label}
-                  </button>
-                );
-              })}
-            </div>
+                      <span
+                        className={`w-3.5 h-3.5 rounded flex items-center justify-center shrink-0 border ${
+                          on ? 'bg-apple-blue border-apple-blue text-white' : 'border-apple-border'
+                        }`}
+                      >
+                        {on && <Check className="w-2.5 h-2.5" strokeWidth={3} />}
+                      </span>
+                      {col.label}
+                    </button>
+                  );
+                })}
+              </div>
 
-            <div className="mt-5 flex justify-end">
-              <button onClick={() => setShowColumnPicker(false)} className="apple-btn apple-btn-primary">
-                Done
-              </button>
+              <div className="mt-5 flex justify-end">
+                <button onClick={() => setShowColumnPicker(false)} className="apple-btn apple-btn-primary">
+                  Done
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </div>
   );
 };

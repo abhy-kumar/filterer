@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback, Suspense, lazy } from 'react';
 import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { Bookmark, Trash2, ArrowRight, Plus } from 'lucide-react';
+import { Bookmark, Trash2, ArrowRight, Plus, SlidersHorizontal, Code2 } from 'lucide-react';
 import { Header } from './components/Header';
 import { ScreenQueryBuilder } from './components/ScreenQueryBuilder';
 import { ScreenResultsTable } from './components/ScreenResultsTable';
@@ -163,47 +163,47 @@ export const App: React.FC = () => {
           path="/"
           element={
             <>
-              <main className="flex-1 w-full apple-canvas">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 animate-fade-in">
-                  {/* Statement of what this is, without the badge soup. */}
-                  <div className="max-w-2xl">
-                    <h1 className="text-3xl sm:text-[2.75rem] font-bold tracking-[-0.035em] text-apple-primary font-display leading-[1.08]">
-                      Screen Indian stocks
-                      <br />
-                      with simple financial formulas.
-                    </h1>
-                    <p className="text-[15px] text-apple-secondary mt-4 leading-relaxed">
-                      Filter 500 Indian companies using Screener-compatible syntax. Run custom queries, view complete financial statements, and track ratios directly in your browser.
-                    </p>
-
-                    <div className="flex items-center gap-2.5 mt-6">
-                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary px-5 py-2.5 text-[13px]">
+              <main className="flex-1 w-full apple-canvas animate-fade-in">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
+                  {/* Harmonized Top Header Bar */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
+                    <div>
+                      <div className="flex items-center gap-2.5">
+                        <SlidersHorizontal className="w-5 h-5 text-apple-blue shrink-0" />
+                        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                          Screens
+                        </h1>
+                      </div>
+                      <p className="text-xs text-apple-muted mt-1 leading-normal">
+                        Pre-built investment formulas across value, growth, quality, and technical indicators for 500 Indian equities.
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 flex-wrap shrink-0">
+                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-secondary text-xs">
+                        <Code2 className="w-3.5 h-3.5 text-apple-blue" />
                         Query Editor
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                      <button onClick={() => setPaletteOpen(true)} className="apple-btn apple-btn-secondary px-4 py-2.5 text-[13px]">
-                        Search Stocks
-                        <kbd className="text-[10px] font-mono text-apple-faint ml-0.5">Ctrl+K</kbd>
                       </button>
                     </div>
                   </div>
 
-                  <div className="mt-14">
+                  <div>
                     <PresetScreens onRunScreen={runScreen} universe={STOCKS_DATA} />
                   </div>
 
-                  <div className="mt-14">
-                    <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
-                      <div className="min-w-0">
-                        <h2 className="text-lg font-semibold text-apple-primary font-display">Results for query</h2>
-                        <p className="text-xs text-apple-muted mt-1 font-mono truncate max-w-2xl">{committedQuery}</p>
+                  {committedQuery && (
+                    <div className="pt-2">
+                      <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
+                        <div className="min-w-0">
+                          <h2 className="text-base font-semibold text-apple-primary font-display">Results for query</h2>
+                          <p className="text-xs text-apple-muted mt-0.5 font-mono truncate max-w-2xl">{committedQuery}</p>
+                        </div>
+                        <Link to={screenPath(committedQuery)} className="text-xs font-semibold text-apple-blue hover:underline shrink-0">
+                          Edit query →
+                        </Link>
                       </div>
-                      <Link to={screenPath(committedQuery)} className="text-xs font-semibold text-apple-blue hover:underline shrink-0">
-                        Edit query →
-                      </Link>
+                      {resultsTable}
                     </div>
-                    {resultsTable}
-                  </div>
+                  )}
                 </div>
               </main>
               <Footer />
@@ -215,8 +215,29 @@ export const App: React.FC = () => {
           path="/screen"
           element={
             <>
-              <main className="flex-1 w-full">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in space-y-6">
+              <main className="flex-1 w-full apple-canvas animate-fade-in">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
+                  {/* Harmonized Top Header Bar */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
+                    <div>
+                      <div className="flex items-center gap-2.5">
+                        <Code2 className="w-5 h-5 text-apple-blue shrink-0" />
+                        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                          Query Builder
+                        </h1>
+                      </div>
+                      <p className="text-xs text-apple-muted mt-1 leading-normal">
+                        Screen 500 Indian companies using Screener.in syntax. Combine conditions with AND, OR, NOT and custom formulas.
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 flex-wrap shrink-0">
+                      <Link to="/" className="apple-btn apple-btn-secondary text-xs">
+                        <SlidersHorizontal className="w-3.5 h-3.5 text-apple-blue" />
+                        Browse Screens
+                      </Link>
+                    </div>
+                  </div>
+
                   <ScreenQueryBuilder
                     query={draftQuery}
                     onChangeQuery={setDraftQuery}

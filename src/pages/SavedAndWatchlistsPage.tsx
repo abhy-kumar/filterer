@@ -111,14 +111,19 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
   return (
     <>
       <main className="flex-1 w-full apple-canvas animate-fade-in">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
           {/* Header with Title and Mode Tabs */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-apple-primary font-display flex items-center gap-2.5">
-                <Bookmark className="w-6 h-6 text-apple-blue" />
-                Watchlists & Saved Screens
-              </h1>
+              <div className="flex items-center gap-2.5">
+                <Bookmark className="w-5 h-5 text-apple-blue shrink-0" />
+                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                  Watchlists
+                </h1>
+              </div>
+              <p className="text-xs text-apple-muted mt-1 leading-normal">
+                Track custom stock portfolios, monitor valuation ratios, and manage saved screener queries.
+              </p>
             </div>
 
             {/* Tab switch */}

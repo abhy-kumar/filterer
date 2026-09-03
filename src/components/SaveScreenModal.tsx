@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Bookmark, X } from 'lucide-react';
 import { ScreenFilter } from '../types/stock';
 
@@ -18,6 +19,15 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState<'Popular' | 'Growth' | 'Valuation' | 'Technicals' | 'Safety' | 'Dividends'>('Popular');
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -42,7 +52,7 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
     onClose();
   };
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
       onClick={onClose}
       role="dialog"
@@ -135,6 +145,7 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
           </div>
         </form>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

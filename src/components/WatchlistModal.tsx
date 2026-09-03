@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Bookmark, Plus, Check, Trash2, X } from 'lucide-react';
 import { useWatchlists } from '../context/WatchlistContext';
 
@@ -14,6 +15,15 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
   const [newWatchlistName, setNewWatchlistName] = useState('');
   const [showCreateInput, setShowCreateInput] = useState(false);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const handleCreate = (e: React.FormEvent) => {
@@ -24,8 +34,11 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
     setShowCreateInput(false);
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in">
+  return createPortal(
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in"
+      onClick={onClose}
+    >
       <div
         className="apple-card max-w-sm w-full p-5 shadow-2xl space-y-4 border border-apple-border"
         onClick={(e) => e.stopPropagation()}
@@ -125,6 +138,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
           </button>
         )}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
