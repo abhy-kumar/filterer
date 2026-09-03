@@ -121,18 +121,12 @@ export const SuperInvestorsPage: React.FC = () => {
       <main className="flex-1 w-full apple-canvas animate-fade-in">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
           {/* Header Banner */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-apple-border pb-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-apple-border pb-5">
             <div>
-              <div className="flex items-center gap-2 text-apple-blue font-semibold text-xs uppercase tracking-wider">
-                <Users className="w-4 h-4" />
-                <span>Super-Investors & 1%+ Shareholder Hub</span>
-              </div>
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-apple-primary font-display mt-1">
-                Indian Super-Investor Portfolios
+              <h1 className="text-2xl font-bold tracking-tight text-apple-primary font-display flex items-center gap-2.5">
+                <Users className="w-6 h-6 text-apple-blue" />
+                Super-Investors
               </h1>
-              <p className="text-xs sm:text-sm text-apple-secondary mt-1 max-w-2xl leading-relaxed">
-                Track disclosed 1%+ equity holdings, portfolio net worths, and quarterly shareholding deltas of India's most accomplished investors.
-              </p>
             </div>
 
             {/* Aggregated KPIs */}

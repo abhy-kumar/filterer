@@ -92,22 +92,16 @@ export const CommoditiesPage: React.FC = () => {
       <main className="flex-1 w-full apple-canvas animate-fade-in">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
           {/* Header Banner */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-apple-border pb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
             <div>
-              <div className="flex items-center gap-2 text-apple-blue font-semibold text-xs uppercase tracking-wider">
-                <Activity className="w-4 h-4" />
-                <span>Commodities & Input Cost Tracker</span>
-              </div>
-              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-apple-primary font-display mt-1">
-                Commodity Cycles & Indian Equities
+              <h1 className="text-2xl font-bold tracking-tight text-apple-primary font-display flex items-center gap-2.5">
+                <Activity className="w-6 h-6 text-apple-blue" />
+                Commodities
               </h1>
-              <p className="text-xs sm:text-sm text-apple-secondary mt-1 max-w-2xl leading-relaxed">
-                Monitor key raw material cycles, energy benchmarks, and chemical spreads with direct sensitivity mapping to Indian stocks.
-              </p>
             </div>
 
             {/* Category Filter Pills */}
-            <div className="flex items-center apple-segmented self-start md:self-auto overflow-x-auto no-scrollbar">
+            <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -123,7 +117,7 @@ export const CommoditiesPage: React.FC = () => {
           </div>
 
           {/* Commodity Cards Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-2.5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
             {filteredCommodities.map((comm) => {
               const isSelected = comm.id === activeCommodity?.id;
               const isPositive = comm.change1mPct >= 0;

@@ -119,9 +119,6 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                 <Bookmark className="w-6 h-6 text-apple-blue" />
                 Watchlists & Saved Screens
               </h1>
-              <p className="text-xs text-apple-muted mt-1">
-                Monitor your custom portfolios and saved screener formulas in one place.
-              </p>
             </div>
 
             {/* Tab switch */}
@@ -171,16 +168,16 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       }}
                       className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all flex items-center gap-2 border ${
                         isActive
-                          ? 'bg-apple-primary text-apple-canvas border-apple-primary shadow-sm font-semibold'
-                          : 'bg-apple-surface/60 hover:bg-apple-surface text-apple-secondary border-apple-border/70'
+                          ? 'bg-apple-primary text-apple-bg border-apple-primary shadow-sm font-semibold'
+                          : 'bg-apple-card hover:bg-apple-surface text-apple-secondary border-apple-border'
                       }`}
                     >
                       <span>{wl.name}</span>
                       <span
-                        className={`text-[10px] font-mono px-1.5 py-0.2 rounded-full ${
+                        className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${
                           isActive
-                            ? 'bg-apple-canvas/20 text-apple-canvas'
-                            : 'bg-apple-border/60 text-apple-muted'
+                            ? 'bg-apple-bg/20 text-apple-bg'
+                            : 'bg-apple-bg-subtle text-apple-muted'
                         }`}
                       >
                         {wl.symbols.length}
