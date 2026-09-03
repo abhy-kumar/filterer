@@ -1,5 +1,14 @@
 import React, { useMemo, useState, useEffect, useRef } from 'react';
 import {
+  createChart,
+  ColorType,
+  AreaSeries,
+  LineSeries,
+  HistogramSeries,
+  IChartApi,
+  ISeriesApi,
+} from 'lightweight-charts';
+import {
   ResponsiveContainer,
   ComposedChart,
   Line,
@@ -17,20 +26,47 @@ import {
   Maximize2,
   Minimize2,
   BarChart3,
-  Compass,
+  ExternalLink,
   Layers,
+  Check,
 } from 'lucide-react';
-import type { Stock } from '../../types/stock';
+import type { Stock, PricePoint } from '../../types/stock';
 import { useTheme } from '../../context/ThemeContext';
 
-type Tab = 'tradingview' | 'technical_gauge' | 'pe' | 'sales';
-type Range = '1y' | '3y' | '5y' | 'max';
+type Tab = 'tradingview' | 'pe' | 'sales';
+type Range = '1m' | '6m' | '1y' | '3y' | '5y' | 'max';
 
-const RANGE_DAYS: Record<Range, number> = { '1y': 365, '3y': 365 * 3, '5y': 365 * 5, max: Infinity };
+const RANGE_DAYS: Record<Range, number> = {
+  '1m': 30,
+  '6m': 180,
+  '1y': 365,
+  '3y': 365 * 3,
+  '5y': 365 * 5,
+  max: Infinity,
+};
 
-/** Formats NSE symbol for TradingView (handles symbols with ampersands or hyphens) */
+/** Formats NSE symbol for TradingView Web deep links */
 function toTradingViewSymbol(symbol: string): string {
   return symbol.replace(/&/g, '_').replace(/-/g, '_');
+}
+
+/** Compute 20-period Exponential Moving Average */
+function computeEma(prices: number[], period: number = 20): Array<number | null> {
+  const k = 2 / (period + 1);
+  const out: Array<number | null> = new Array(prices.length).fill(null);
+  let ema: number | null = null;
+  for (let i = 0; i < prices.length; i++) {
+    const p = prices[i];
+    if (i < period - 1) continue;
+    if (ema === null) {
+      const sum = prices.slice(0, period).reduce((a, b) => a + b, 0);
+      ema = sum / period;
+    } else {
+      ema = p * k + ema * (1 - k);
+    }
+    out[i] = ema;
+  }
+  return out;
 }
 
 /** Annual EPS in effect on a given date, for the historical P/E series. */
@@ -44,150 +80,368 @@ function epsTimeline(stock: Stock): Array<{ from: string; eps: number }> {
     .sort((a, b) => a.from.localeCompare(b.from));
 }
 
-/** TradingView Advanced Real-Time Chart Widget */
-const TradingViewAdvancedChart: React.FC<{
-  symbol: string;
-  exchange: 'NSE' | 'BSE';
-  bseCode?: string;
+/**
+ * TradingView Lightweight Charts Engine
+ * Built by TradingView for high-performance canvas charting of custom data.
+ * Solves the "This symbol is only available on TradingView" exchange licensing restriction.
+ */
+const TradingViewLightweightChart: React.FC<{
+  stock: Stock;
   isDark: boolean;
-}> = ({ symbol, exchange, bseCode, isDark }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+  isExpanded: boolean;
+}> = ({ stock, isDark, isExpanded }) => {
+  const chartContainerRef = useRef<HTMLDivElement>(null);
+  const chartRef = useRef<IChartApi | null>(null);
 
-  const tvSymbol = useMemo(() => {
-    if (exchange === 'BSE' && bseCode) {
-      return `BSE:${bseCode}`;
-    }
-    return `NSE:${toTradingViewSymbol(symbol)}`;
-  }, [exchange, symbol, bseCode]);
+  // Indicators toggle state
+  const [showSma50, setShowSma50] = useState(true);
+  const [showSma200, setShowSma200] = useState(true);
+  const [showEma20, setShowEma20] = useState(true);
+  const [showVolume, setShowVolume] = useState(true);
+  const [selectedRange, setSelectedRange] = useState<Range>('3y');
+
+  // Hover crosshair info
+  const [legendInfo, setLegendInfo] = useState<{
+    date: string;
+    price: number;
+    dma50?: number | null;
+    dma200?: number | null;
+    ema20?: number | null;
+    volume?: number | null;
+  } | null>(null);
+
+  const allPrices = useMemo(() => {
+    return (stock.historical_prices || [])
+      .filter((p) => p.price > 0 && p.date)
+      .sort((a, b) => a.date.localeCompare(b.date));
+  }, [stock.historical_prices]);
+
+  const ema20Values = useMemo(() => {
+    const closes = allPrices.map((p) => p.price);
+    return computeEma(closes, 20);
+  }, [allPrices]);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    const container = chartContainerRef.current;
+    if (!container || !allPrices.length) return;
 
     container.innerHTML = '';
 
-    const widgetContainer = document.createElement('div');
-    widgetContainer.className = 'tradingview-widget-container';
-    widgetContainer.style.height = '100%';
-    widgetContainer.style.width = '100%';
+    const bg = isDark ? '#141416' : '#ffffff';
+    const text = isDark ? '#a1a1a6' : '#6e6e73';
+    const grid = isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.04)';
+    const border = isDark ? '#2c2c2e' : '#e5e5ea';
 
-    const widgetDiv = document.createElement('div');
-    widgetDiv.className = 'tradingview-widget-container__widget';
-    widgetDiv.style.height = '100%';
-    widgetDiv.style.width = '100%';
-    widgetContainer.appendChild(widgetDiv);
-
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    script.innerHTML = JSON.stringify({
-      autosize: true,
-      symbol: tvSymbol,
-      interval: 'D',
-      timezone: 'Asia/Kolkata',
-      theme: isDark ? 'dark' : 'light',
-      style: '1',
-      locale: 'in',
-      enable_publishing: false,
-      withdateranges: true,
-      hide_side_toolbar: false,
-      allow_symbol_change: true,
-      details: true,
-      hotlist: false,
-      calendar: false,
-      studies: [
-        'STD;SMA',
-        'STD;EMA',
-        'STD;RSI',
-        'STD;MACD',
-        'STD;Volume',
-      ],
-      support_host: 'https://www.tradingview.com',
+    const chart = createChart(container, {
+      layout: {
+        background: { type: ColorType.Solid, color: bg },
+        textColor: text,
+        fontSize: 11,
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
+      },
+      grid: {
+        vertLines: { color: grid },
+        horzLines: { color: grid },
+      },
+      crosshair: {
+        vertLine: { color: isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)', width: 1, style: 3 },
+        horzLine: { color: isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)', width: 1, style: 3 },
+      },
+      rightPriceScale: {
+        borderColor: border,
+        scaleMargins: { top: 0.1, bottom: showVolume ? 0.22 : 0.08 },
+      },
+      timeScale: {
+        borderColor: border,
+        timeVisible: false,
+      },
+      handleScale: true,
+      handleScroll: true,
     });
 
-    widgetContainer.appendChild(script);
-    container.appendChild(widgetContainer);
+    chartRef.current = chart;
 
-    return () => {
-      container.innerHTML = '';
-    };
-  }, [tvSymbol, isDark]);
+    // 1. Price Area Series
+    const areaSeries = chart.addSeries(AreaSeries, {
+      topColor: isDark ? 'rgba(61, 155, 255, 0.35)' : 'rgba(0, 98, 204, 0.25)',
+      bottomColor: isDark ? 'rgba(61, 155, 255, 0.01)' : 'rgba(0, 98, 204, 0.01)',
+      lineColor: isDark ? '#3d9bff' : '#0062cc',
+      lineWidth: 2,
+      priceFormat: { type: 'price', precision: 2, minMove: 0.05 },
+    });
 
-  return (
-    <div className="relative w-full h-full bg-apple-surface">
-      <div ref={containerRef} className="w-full h-full min-h-[500px]" />
-    </div>
-  );
-};
+    areaSeries.setData(allPrices.map((p) => ({ time: p.date, value: p.price })));
 
-/** TradingView Technical Analysis Consensus Gauge Widget */
-const TradingViewTechnicalGauge: React.FC<{
-  symbol: string;
-  exchange: 'NSE' | 'BSE';
-  bseCode?: string;
-  isDark: boolean;
-}> = ({ symbol, exchange, bseCode, isDark }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const tvSymbol = useMemo(() => {
-    if (exchange === 'BSE' && bseCode) {
-      return `BSE:${bseCode}`;
+    // 2. Volume Series (Overlayed at bottom)
+    let volumeSeries: ISeriesApi<'Histogram'> | null = null;
+    if (showVolume) {
+      volumeSeries = chart.addSeries(HistogramSeries, {
+        priceFormat: { type: 'volume' },
+        priceScaleId: 'volume',
+      });
+      chart.priceScale('volume').applyOptions({
+        scaleMargins: { top: 0.8, bottom: 0 },
+      });
+      volumeSeries.setData(
+        allPrices.map((p, i) => {
+          const prev = i > 0 ? allPrices[i - 1].price : p.price;
+          const isUp = p.price >= prev;
+          return {
+            time: p.date,
+            value: p.volume || 0,
+            color: isUp
+              ? isDark ? 'rgba(58, 212, 106, 0.35)' : 'rgba(23, 122, 61, 0.3)'
+              : isDark ? 'rgba(255, 69, 58, 0.35)' : 'rgba(215, 0, 21, 0.3)',
+          };
+        })
+      );
     }
-    return `NSE:${toTradingViewSymbol(symbol)}`;
-  }, [exchange, symbol, bseCode]);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    // 3. SMA 50 Line
+    let sma50Series: ISeriesApi<'Line'> | null = null;
+    if (showSma50) {
+      sma50Series = chart.addSeries(LineSeries, {
+        color: isDark ? '#3ad46a' : '#177a3d',
+        lineWidth: 1,
+        title: 'SMA 50',
+      });
+      sma50Series.setData(
+        allPrices
+          .filter((p) => p.dma_50 !== null && p.dma_50 !== undefined)
+          .map((p) => ({ time: p.date, value: p.dma_50! }))
+      );
+    }
 
-    container.innerHTML = '';
+    // 4. SMA 200 Line
+    let sma200Series: ISeriesApi<'Line'> | null = null;
+    if (showSma200) {
+      sma200Series = chart.addSeries(LineSeries, {
+        color: isDark ? '#ff9f0a' : '#d97706',
+        lineWidth: 1,
+        title: 'SMA 200',
+      });
+      sma200Series.setData(
+        allPrices
+          .filter((p) => p.dma_200 !== null && p.dma_200 !== undefined)
+          .map((p) => ({ time: p.date, value: p.dma_200! }))
+      );
+    }
 
-    const widgetContainer = document.createElement('div');
-    widgetContainer.className = 'tradingview-widget-container';
-    widgetContainer.style.height = '100%';
-    widgetContainer.style.width = '100%';
+    // 5. EMA 20 Line
+    let ema20Series: ISeriesApi<'Line'> | null = null;
+    if (showEma20) {
+      ema20Series = chart.addSeries(LineSeries, {
+        color: isDark ? '#bf5af2' : '#8944ab',
+        lineWidth: 1,
+        title: 'EMA 20',
+      });
+      const emaData: Array<{ time: string; value: number }> = [];
+      for (let i = 0; i < allPrices.length; i++) {
+        const v = ema20Values[i];
+        if (v !== null) emaData.push({ time: allPrices[i].date, value: Number(v.toFixed(2)) });
+      }
+      ema20Series.setData(emaData);
+    }
 
-    const widgetDiv = document.createElement('div');
-    widgetDiv.className = 'tradingview-widget-container__widget';
-    widgetDiv.style.height = '100%';
-    widgetDiv.style.width = '100%';
-    widgetContainer.appendChild(widgetDiv);
+    // Set Default Visible Range
+    if (allPrices.length) {
+      const lastDate = new Date(allPrices[allPrices.length - 1].date);
+      const days = RANGE_DAYS[selectedRange];
+      if (Number.isFinite(days)) {
+        const fromDate = new Date(lastDate);
+        fromDate.setDate(fromDate.getDate() - days);
+        const fromIso = fromDate.toISOString().slice(0, 10);
+        chart.timeScale().setVisibleRange({ from: fromIso, to: allPrices[allPrices.length - 1].date });
+      } else {
+        chart.timeScale().fitContent();
+      }
+    }
 
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    script.innerHTML = JSON.stringify({
-      interval: '1D',
-      width: '100%',
-      isTransparent: true,
-      height: '100%',
-      symbol: tvSymbol,
-      showIntervalTabs: true,
-      displayMode: 'multiple',
-      locale: 'in',
-      colorTheme: isDark ? 'dark' : 'light',
+    // Crosshair move handler
+    chart.subscribeCrosshairMove((param) => {
+      if (!param.time || !param.point) {
+        // Default to latest point
+        const latest = allPrices[allPrices.length - 1];
+        if (latest) {
+          setLegendInfo({
+            date: latest.date,
+            price: latest.price,
+            dma50: latest.dma_50,
+            dma200: latest.dma_200,
+            ema20: ema20Values[allPrices.length - 1],
+            volume: latest.volume,
+          });
+        }
+        return;
+      }
+      const timeStr = String(param.time);
+      const pt = allPrices.find((p) => p.date === timeStr);
+      if (pt) {
+        const idx = allPrices.indexOf(pt);
+        setLegendInfo({
+          date: pt.date,
+          price: pt.price,
+          dma50: pt.dma_50,
+          dma200: pt.dma_200,
+          ema20: ema20Values[idx],
+          volume: pt.volume,
+        });
+      }
     });
 
-    widgetContainer.appendChild(script);
-    container.appendChild(widgetContainer);
+    // Resize observer
+    const handleResize = () => {
+      if (chartContainerRef.current) {
+        chart.applyOptions({
+          width: chartContainerRef.current.clientWidth,
+          height: chartContainerRef.current.clientHeight,
+        });
+      }
+    };
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      container.innerHTML = '';
+      window.removeEventListener('resize', handleResize);
+      chart.remove();
     };
-  }, [tvSymbol, isDark]);
+  }, [allPrices, isDark, showSma50, showSma200, showEma20, showVolume, ema20Values, isExpanded]);
+
+  // Handle Range Button Clicks
+  const handleRangeChange = (r: Range) => {
+    setSelectedRange(r);
+    const chart = chartRef.current;
+    if (!chart || !allPrices.length) return;
+
+    const lastDate = new Date(allPrices[allPrices.length - 1].date);
+    const days = RANGE_DAYS[r];
+    if (Number.isFinite(days)) {
+      const fromDate = new Date(lastDate);
+      fromDate.setDate(fromDate.getDate() - days);
+      const fromIso = fromDate.toISOString().slice(0, 10);
+      chart.timeScale().setVisibleRange({ from: fromIso, to: allPrices[allPrices.length - 1].date });
+    } else {
+      chart.timeScale().fitContent();
+    }
+  };
+
+  const latest = allPrices[allPrices.length - 1];
+  const info = legendInfo || (latest ? {
+    date: latest.date,
+    price: latest.price,
+    dma50: latest.dma_50,
+    dma200: latest.dma_200,
+    ema20: ema20Values[allPrices.length - 1],
+    volume: latest.volume,
+  } : null);
 
   return (
-    <div className="relative w-full h-full p-4 flex items-center justify-center">
-      <div ref={containerRef} className="w-full h-full max-w-4xl min-h-[460px]" />
+    <div className="flex flex-col h-full w-full">
+      {/* Interactive Controls & Legend Sub-Header */}
+      <div className="px-4 sm:px-5 py-2.5 bg-apple-surface/50 border-b border-apple-border flex items-center justify-between gap-3 flex-wrap text-xs">
+        {/* Indicators Toggle Buttons */}
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <span className="text-apple-muted text-[11px] font-medium flex items-center gap-1 mr-1">
+            <Layers className="w-3 h-3" />
+            Indicators:
+          </span>
+          <button
+            onClick={() => setShowSma50(!showSma50)}
+            className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+              showSma50
+                ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
+                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
+            }`}
+          >
+            {showSma50 && <Check className="w-2.5 h-2.5" />}
+            SMA 50
+          </button>
+          <button
+            onClick={() => setShowSma200(!showSma200)}
+            className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+              showSma200
+                ? 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30'
+                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
+            }`}
+          >
+            {showSma200 && <Check className="w-2.5 h-2.5" />}
+            SMA 200
+          </button>
+          <button
+            onClick={() => setShowEma20(!showEma20)}
+            className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+              showEma20
+                ? 'bg-purple-500/15 text-purple-600 dark:text-purple-400 border border-purple-500/30'
+                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
+            }`}
+          >
+            {showEma20 && <Check className="w-2.5 h-2.5" />}
+            EMA 20
+          </button>
+          <button
+            onClick={() => setShowVolume(!showVolume)}
+            className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all flex items-center gap-1 ${
+              showVolume
+                ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30'
+                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
+            }`}
+          >
+            {showVolume && <Check className="w-2.5 h-2.5" />}
+            Volume
+          </button>
+        </div>
+
+        {/* Timeframe Range Selector */}
+        <div className="flex items-center gap-1">
+          {(['1m', '6m', '1y', '3y', '5y', 'max'] as Range[]).map((r) => (
+            <button
+              key={r}
+              onClick={() => handleRangeChange(r)}
+              className={`px-2 py-0.5 rounded text-[11px] font-medium uppercase transition-colors ${
+                selectedRange === r
+                  ? 'bg-apple-primary text-apple-primary-invert font-semibold'
+                  : 'text-apple-muted hover:text-apple-primary'
+              }`}
+            >
+              {r}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Floating Dynamic Metric Readout */}
+      {info && (
+        <div className="px-4 sm:px-5 py-1.5 bg-apple-card-bg border-b border-apple-border-subtle flex items-center gap-4 text-[11px] text-apple-muted font-mono flex-wrap">
+          <span>Date: <strong className="text-apple-primary">{info.date}</strong></span>
+          <span>Price: <strong className="text-apple-primary">₹{info.price.toLocaleString('en-IN')}</strong></span>
+          {showSma50 && info.dma50 && (
+            <span className="text-emerald-600 dark:text-emerald-400">
+              SMA 50: <strong>₹{info.dma50.toFixed(2)}</strong>
+            </span>
+          )}
+          {showSma200 && info.dma200 && (
+            <span className="text-amber-600 dark:text-amber-400">
+              SMA 200: <strong>₹{info.dma200.toFixed(2)}</strong>
+            </span>
+          )}
+          {showEma20 && info.ema20 && (
+            <span className="text-purple-600 dark:text-purple-400">
+              EMA 20: <strong>₹{info.ema20.toFixed(2)}</strong>
+            </span>
+          )}
+          {showVolume && info.volume && (
+            <span>Vol: <strong className="text-apple-secondary">{(info.volume / 1e5).toFixed(1)}L</strong></span>
+          )}
+        </div>
+      )}
+
+      {/* Canvas Mount Container */}
+      <div ref={chartContainerRef} className="flex-1 w-full min-h-[420px]" />
     </div>
   );
 };
 
 export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
   const [tab, setTab] = useState<Tab>('tradingview');
-  const [exchange, setExchange] = useState<'NSE' | 'BSE'>('NSE');
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [range, setRange] = useState<Range>('3y');
   const { isDark } = useTheme();
@@ -198,13 +452,15 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
     const timeline = epsTimeline(stock);
     if (!timeline.length || !allPrices.length) return [];
 
-    const enriched = allPrices.map((point) => {
-      let eps: number | null = null;
-      for (const entry of timeline) {
-        if (point.date >= entry.from) eps = entry.eps;
-      }
-      return eps && eps > 0 ? { date: point.date, pe: point.price / eps } : null;
-    }).filter((p): p is { date: string; pe: number } => p !== null);
+    const enriched = allPrices
+      .map((point) => {
+        let eps: number | null = null;
+        for (const entry of timeline) {
+          if (point.date >= entry.from) eps = entry.eps;
+        }
+        return eps && eps > 0 ? { date: point.date, pe: point.price / eps } : null;
+      })
+      .filter((p): p is { date: string; pe: number } => p !== null);
 
     if (range === 'max') return enriched;
     const cutoff = new Date(allPrices[allPrices.length - 1].date);
@@ -249,17 +505,17 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
   };
 
   const TABS: Array<{ id: Tab; label: string; icon: React.ReactNode; available: boolean }> = [
-    { id: 'tradingview', label: 'TradingView Pro', icon: <TrendingUp className="w-3.5 h-3.5" />, available: true },
-    { id: 'technical_gauge', label: 'Technical Gauge', icon: <Compass className="w-3.5 h-3.5" />, available: true },
+    { id: 'tradingview', label: 'TradingView Chart', icon: <TrendingUp className="w-3.5 h-3.5" />, available: true },
     { id: 'pe', label: 'P/E Multiple', icon: <Activity className="w-3.5 h-3.5" />, available: peSeries.length > 0 },
     { id: 'sales', label: 'Financial Growth', icon: <BarChart3 className="w-3.5 h-3.5" />, available: salesSeries.length > 0 },
   ];
 
   const activeTab = TABS.find((t) => t.id === tab)?.available ? tab : 'tradingview';
+  const tvWebUrl = `https://www.tradingview.com/chart/?symbol=NSE:${encodeURIComponent(toTradingViewSymbol(stock.symbol))}`;
 
   return (
     <div className={`apple-card overflow-hidden transition-all duration-300 ${isExpanded ? 'shadow-2xl ring-1 ring-apple-primary/20' : ''}`}>
-      {/* Chart Top Navigation Bar */}
+      {/* Primary Toolbar */}
       <div className="px-4 sm:px-5 py-3 border-b border-apple-border flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-2 flex-wrap">
           <div className="apple-segmented">
@@ -275,38 +531,21 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
             ))}
           </div>
 
-          {/* Exchange Switcher (NSE / BSE) for TradingView */}
-          {(activeTab === 'tradingview' || activeTab === 'technical_gauge') && (
-            <div className="inline-flex rounded-lg p-0.5 bg-apple-surface border border-apple-border text-[11px] font-medium">
-              <button
-                onClick={() => setExchange('NSE')}
-                className={`px-2 py-0.5 rounded-md transition-colors ${
-                  exchange === 'NSE'
-                    ? 'bg-apple-card-bg text-apple-primary shadow-sm'
-                    : 'text-apple-muted hover:text-apple-secondary'
-                }`}
-              >
-                NSE
-              </button>
-              {stock.bse_code && (
-                <button
-                  onClick={() => setExchange('BSE')}
-                  className={`px-2 py-0.5 rounded-md transition-colors ${
-                    exchange === 'BSE'
-                      ? 'bg-apple-card-bg text-apple-primary shadow-sm'
-                      : 'text-apple-muted hover:text-apple-secondary'
-                  }`}
-                  title={`BSE Scrip: ${stock.bse_code}`}
-                >
-                  BSE
-                </button>
-              )}
-            </div>
-          )}
+          {/* Deep link button to TradingView Web */}
+          <a
+            href={tvWebUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-medium text-apple-secondary hover:text-apple-primary hover:bg-apple-surface border border-apple-border transition-colors"
+            title="Open real-time interactive workspace on TradingView.com"
+          >
+            <span>TradingView Web</span>
+            <ExternalLink className="w-3 h-3 opacity-70" />
+          </a>
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Historical P/E Horizon Switcher */}
+          {/* P/E Horizon Switcher */}
           {activeTab === 'pe' && (
             <div className="apple-segmented">
               {(['1y', '3y', '5y', 'max'] as Range[]).map((r) => (
@@ -333,56 +572,13 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
         </div>
       </div>
 
-      {/* Indicator Chips Bar for TradingView Pro */}
-      {activeTab === 'tradingview' && (
-        <div className="px-4 sm:px-5 py-2 bg-apple-surface/40 border-b border-apple-border-subtle flex items-center justify-between gap-3 text-[11px] overflow-x-auto">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-apple-muted font-medium flex items-center gap-1">
-              <Layers className="w-3 h-3" />
-              Pre-loaded Indicators:
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-medium">
-              SMA 50
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400 font-medium">
-              SMA 200
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 font-medium">
-              EMA 20
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-medium">
-              RSI (14)
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium">
-              MACD
-            </span>
-            <span className="px-2 py-0.5 rounded-full bg-teal-500/10 text-teal-600 dark:text-teal-400 font-medium">
-              Volume
-            </span>
-          </div>
-          <span className="text-apple-muted text-[10px] shrink-0 hidden md:inline">
-            Use TradingView top toolbar to customize studies or draw trendlines
-          </span>
-        </div>
-      )}
-
-      {/* Chart Canvas */}
-      <div className={`w-full transition-all duration-300 ${isExpanded ? 'h-[720px]' : 'h-[540px]'}`}>
+      {/* Chart Canvas Area */}
+      <div className={`w-full transition-all duration-300 ${isExpanded ? 'h-[700px]' : 'h-[520px]'}`}>
         {activeTab === 'tradingview' && (
-          <TradingViewAdvancedChart
-            symbol={stock.symbol}
-            exchange={exchange}
-            bseCode={stock.bse_code}
+          <TradingViewLightweightChart
+            stock={stock}
             isDark={isDark}
-          />
-        )}
-
-        {activeTab === 'technical_gauge' && (
-          <TradingViewTechnicalGauge
-            symbol={stock.symbol}
-            exchange={exchange}
-            bseCode={stock.bse_code}
-            isDark={isDark}
+            isExpanded={isExpanded}
           />
         )}
 
@@ -436,19 +632,17 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
         )}
       </div>
 
-      {/* Chart Footer Note */}
+      {/* Footer Info */}
       <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-[11px] text-apple-muted flex items-center justify-between gap-3 flex-wrap">
         <span>
           {activeTab === 'tradingview'
-            ? `Real-time interactive chart via TradingView on ${exchange}. Supports all drawing tools, multi-timeframe candles, and technical indicators.`
-            : activeTab === 'technical_gauge'
-              ? `Live technical analysis consensus across 26 technical oscillators and moving averages.`
-              : activeTab === 'pe'
-                ? 'Historical P/E multiple calculated from daily close against applicable financial year earnings per share.'
-                : 'Annual revenue and profit progression in ₹ crore with operating profit margin on the right axis.'}
+            ? 'TradingView Canvas Engine with SMA 50, SMA 200, EMA 20, and Volume. Drag, scroll, or pinch to zoom.'
+            : activeTab === 'pe'
+              ? 'Historical P/E multiple calculated from daily close against applicable financial year earnings per share.'
+              : 'Annual revenue and profit progression in ₹ crore with operating profit margin on the right axis.'}
         </span>
         <span className="text-[10px] opacity-75">
-          Filterer Market Terminal
+          Filterer Terminal
         </span>
       </div>
     </div>
