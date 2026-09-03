@@ -22,6 +22,7 @@ import sqlite3
 import argparse
 import logging
 from datetime import datetime
+from pathlib import Path
 
 # Add project root to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -241,9 +242,15 @@ def generate_stock_detail_jsons(stocks: list[dict], output_dir: str = "public/da
             "peers": s.get("peers", []),
         }
 
-        filepath = os.path.join(output_dir, f"{detail_slug(s['symbol'])}.json")
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(detail, f)
+        filepath = Path(output_dir) / f"{detail_slug(s['symbol'])}.json"
+        for attempt in range(5):
+            try:
+                filepath.write_text(json.dumps(detail), encoding="utf-8")
+                break
+            except OSError:
+                if attempt == 4:
+                    raise
+                time.sleep(0.1)
 
     logger.info(f"Generated {len(stocks)} stock detail JSONs in {output_dir}/")
 
