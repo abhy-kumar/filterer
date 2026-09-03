@@ -103,6 +103,9 @@ export interface PeerInfo {
   sales_qtr: number;
   qtr_sales_var_pct: number;
   roce: number;
+  pb_ratio?: number | null;
+  opm?: number | null;
+  debt_to_equity?: number | null;
 }
 
 export interface Stock {

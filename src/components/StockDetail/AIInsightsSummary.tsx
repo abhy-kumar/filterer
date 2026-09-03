@@ -6,9 +6,6 @@ import {
   Building,
   DollarSign,
   MessageSquare,
-  HelpCircle,
-  ArrowRight,
-  Send,
   Quote,
   CheckCircle2,
   Calendar,
@@ -34,45 +31,6 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
   const activeQuarter = useMemo<ConcallQuarterData | undefined>(() => {
     return concallData.quarters.find((q) => q.quarter === selectedQuarterName) || concallData.quarters[0];
   }, [concallData, selectedQuarterName]);
-
-  // Interactive "Ask AI" state
-  const [customQuestion, setCustomQuestion] = useState('');
-  const [aiAnswer, setAiAnswer] = useState<string | null>(null);
-
-  const handleAskPreset = (preset: string) => {
-    setCustomQuestion(preset);
-    generateAnswer(preset);
-  };
-
-  const handleCustomSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!customQuestion.trim()) return;
-    generateAnswer(customQuestion);
-  };
-
-  const generateAnswer = (q: string) => {
-    const questionLower = q.toLowerCase();
-    const opm = stock.opm ?? 15;
-    const de = stock.debt_to_equity ?? 0.2;
-
-    if (questionLower.includes('margin') || questionLower.includes('inflation') || questionLower.includes('cost')) {
-      setAiAnswer(
-        `Management guidance indicates operating margins are targeted within the ${Math.round(opm)}% - ${Math.round(opm + 2)}% range. Benign raw material costs provide operating cushion, and pass-through pricing agreements on contractual sales protect against sudden commodity shocks.`
-      );
-    } else if (questionLower.includes('capex') || questionLower.includes('debt') || questionLower.includes('capacity')) {
-      setAiAnswer(
-        `Capex program of ${activeQuarter?.capexGuidance.amountCr} is focused on ${activeQuarter?.capexGuidance.focusAreas.join(', ')}. Funding structure is ${activeQuarter?.capexGuidance.fundingSource}, keeping balance sheet leverage at comfortable D/E of ${de.toFixed(2)}x.`
-      );
-    } else if (questionLower.includes('export') || questionLower.includes('demand') || questionLower.includes('domestic')) {
-      setAiAnswer(
-        `Domestic demand across India remains the primary growth catalyst, growing at 1.3x - 1.5x sector baseline. Export channels are monitored with cautious optimism given freight stabilization and selective customer destocking completion.`
-      );
-    } else {
-      setAiAnswer(
-        `Based on the latest ${activeQuarter?.quarter} concall analysis for ${stock.name}: Management tone remains ${activeQuarter?.sentimentLabel.toLowerCase()} (Sentiment Score: ${activeQuarter?.sentimentScore}/100). The key strategic focus remains expanding market leadership in ${stock.industry} while maintaining capital discipline.`
-      );
-    }
-  };
 
   if (!activeQuarter) return null;
 
@@ -108,10 +66,7 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
             <button
               key={q.quarter}
               type="button"
-              onClick={() => {
-                setSelectedQuarterName(q.quarter);
-                setAiAnswer(null);
-              }}
+              onClick={() => setSelectedQuarterName(q.quarter)}
               className={`apple-segmented-item text-xs ${
                 selectedQuarterName === q.quarter ? 'active' : ''
               }`}
@@ -282,69 +237,6 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
           </div>
         </div>
       )}
-
-      {/* Interactive Q&A on Concall */}
-      <div className="apple-card p-4 sm:p-5 border border-apple-blue/25 bg-gradient-to-br from-apple-blue/5 via-apple-surface to-apple-surface space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <MessageSquare className="w-4 h-4 text-apple-blue" />
-            <h3 className="text-sm font-bold text-apple-primary font-display">
-              Guidance & Concall Q&A ({stock.symbol})
-            </h3>
-          </div>
-        </div>
-
-        {/* Quick prompt buttons */}
-        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1">
-          {[
-            'Margin Guidance & Inflation Impact',
-            'Capex & Capacity Expansion Timeline',
-            'Export vs Domestic Outlook',
-            'Pricing Power & Raw Material Trends',
-          ].map((prompt) => (
-            <button
-              key={prompt}
-              type="button"
-              onClick={() => handleAskPreset(prompt)}
-              className="text-[11px] px-2.5 py-1 rounded-full border border-apple-border/70 hover:border-apple-blue/50 bg-apple-card hover:bg-apple-surface text-apple-secondary hover:text-apple-primary whitespace-nowrap transition-colors shrink-0"
-            >
-              {prompt}
-            </button>
-          ))}
-        </div>
-
-        {/* Question Form */}
-        <form onSubmit={handleCustomSubmit} className="flex gap-2">
-          <input
-            type="text"
-            value={customQuestion}
-            onChange={(e) => setCustomQuestion(e.target.value)}
-            placeholder="Type any question (e.g. Will debt increase? What is the competitive outlook?)..."
-            className="apple-input text-xs flex-1 h-9 px-3"
-          />
-          <button
-            type="submit"
-            disabled={!customQuestion.trim()}
-            className="apple-btn apple-btn-primary px-3 h-9 text-xs flex items-center gap-1.5 shrink-0 disabled:opacity-50"
-          >
-            <Send className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Ask</span>
-          </button>
-        </form>
-
-        {/* Generated Answer Display */}
-        {aiAnswer && (
-          <div className="apple-well p-3.5 rounded-lg text-xs space-y-1 animate-fade-in border border-apple-blue/30">
-            <div className="font-semibold text-apple-blue flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              Management Guidance Summary:
-            </div>
-            <p className="text-apple-primary leading-relaxed">
-              {aiAnswer}
-            </p>
-          </div>
-        )}
-      </div>
     </div>
   );
 };
