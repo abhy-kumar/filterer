@@ -105,7 +105,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                   </td>
                   {COLUMNS.map((col) => (
                     <td key={col.label} className="text-right font-mono whitespace-nowrap">
-                      {col.value(peer) ?? <span className="num-nil">—</span>}
+                      {col.value(peer) ?? <span className="num-nil">-</span>}
                     </td>
                   ))}
                 </tr>

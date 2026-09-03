@@ -5,7 +5,7 @@
  * the figure is absent, so a missing line item can never be mistaken for zero.
  */
 
-export const NOT_REPORTED = '—';
+export const NOT_REPORTED = '-';
 
 type Maybe = number | null | undefined;
 

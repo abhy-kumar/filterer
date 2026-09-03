@@ -16,13 +16,15 @@ import { ShareholdingPatternTable } from '../components/StockDetail/Shareholding
 import { StockDocuments } from '../components/StockDetail/StockDocuments';
 import { SegmentResultsTable } from '../components/StockDetail/SegmentResultsTable';
 import { AIInsightsSummary } from '../components/StockDetail/AIInsightsSummary';
+import { CompanyInsightsTable } from '../components/StockDetail/CompanyInsightsTable';
 import { DataQualityPanel } from '../components/StockDetail/DataQualityPanel';
 import { Footer } from '../components/Footer';
 import type { Stock } from '../types/stock';
 
 const SECTIONS = [
   { id: 'sec-analysis', label: 'Analysis' },
-  { id: 'sec-insights', label: 'AI Concall' },
+  { id: 'sec-insights-kpi', label: 'Insights' },
+  { id: 'sec-insights', label: 'Concall Notes' },
   { id: 'sec-charts', label: 'Charts' },
   { id: 'sec-peers', label: 'Peers' },
   { id: 'sec-quarters', label: 'Quarters' },
@@ -197,6 +199,9 @@ export const StockDetailPage: React.FC = () => {
 
           <section id="sec-analysis" className="scroll-mt-32">
             <StockProsCons stock={stock} />
+          </section>
+          <section id="sec-insights-kpi" className="scroll-mt-32">
+            <CompanyInsightsTable stock={stock} />
           </section>
           <section id="sec-insights" className="scroll-mt-32">
             <AIInsightsSummary stock={stock} />

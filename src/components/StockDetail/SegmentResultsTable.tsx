@@ -185,7 +185,7 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
                         {seg.growth_yoy_pct.toFixed(1)}%
                       </span>
                     ) : (
-                      <span className="text-apple-faint">—</span>
+                      <span className="text-apple-faint">-</span>
                     )}
                   </td>
                 </tr>
@@ -205,7 +205,7 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
               <td className="text-right font-mono font-bold text-apple-primary">
                 {blendedMargin.toFixed(1)}%
               </td>
-              <td className="text-right font-mono text-apple-muted">—</td>
+              <td className="text-right font-mono text-apple-muted">-</td>
             </tr>
           </tfoot>
         </table>

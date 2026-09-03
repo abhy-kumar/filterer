@@ -89,16 +89,16 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-apple-blue" />
+            <FileText className="w-5 h-5 text-apple-blue" />
             <h2 className="text-lg font-bold text-apple-primary font-display">
-              AI Concall & Earnings Analysis
+              Concall & Earnings Analysis
             </h2>
             <span className="apple-tag text-[10px] font-semibold text-apple-blue bg-apple-blue/10 border-apple-blue/25">
-              Algorithmic Synthesis
+              Transcript Highlights
             </span>
           </div>
           <p className="text-xs text-apple-muted">
-            Automated intelligence on management commentary, capex pipeline, tailwinds, and earnings call Q&A.
+            Management commentary, capex pipeline, industry tailwinds, and earnings call Q&A.
           </p>
         </div>
 
@@ -283,18 +283,15 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
         </div>
       )}
 
-      {/* Interactive "Ask AI About This Concall" */}
+      {/* Interactive Q&A on Concall */}
       <div className="apple-card p-4 sm:p-5 border border-apple-blue/25 bg-gradient-to-br from-apple-blue/5 via-apple-surface to-apple-surface space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-apple-blue" />
+            <MessageSquare className="w-4 h-4 text-apple-blue" />
             <h3 className="text-sm font-bold text-apple-primary font-display">
-              Ask AI about {stock.symbol}'s Earnings & Guidance
+              Guidance & Concall Q&A ({stock.symbol})
             </h3>
           </div>
-          <span className="text-[10px] text-apple-muted font-mono hidden sm:inline">
-            Interactive LLM Summarizer
-          </span>
         </div>
 
         {/* Quick prompt buttons */}
@@ -331,7 +328,7 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
             className="apple-btn apple-btn-primary px-3 h-9 text-xs flex items-center gap-1.5 shrink-0 disabled:opacity-50"
           >
             <Send className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Ask AI</span>
+            <span className="hidden sm:inline">Ask</span>
           </button>
         </form>
 
@@ -339,8 +336,8 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
         {aiAnswer && (
           <div className="apple-well p-3.5 rounded-lg text-xs space-y-1 animate-fade-in border border-apple-blue/30">
             <div className="font-semibold text-apple-blue flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5" />
-              AI Synthesis:
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              Management Guidance Summary:
             </div>
             <p className="text-apple-primary leading-relaxed">
               {aiAnswer}

@@ -6,7 +6,7 @@ import type { Stock } from '../../types/stock';
  * Where to read the filings.
  *
  * This app does not host documents, and the previous version papered over that
- * by presenting Google searches as "FY 2023-24 Annual Report — Official Filing
+ * by presenting Google searches as "FY 2023-24 Annual Report - Official Filing
  * PDF". Those titles named documents nobody had checked existed, and the BSE
  * links fell back to scrip code 532174 whenever a company had none, sending
  * the reader to a completely different company's filings.

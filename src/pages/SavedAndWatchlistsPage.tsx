@@ -269,7 +269,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
 
                       {activeWatchlist.description && (
                         <span className="text-xs text-apple-muted hidden md:inline">
-                          — {activeWatchlist.description}
+                          • {activeWatchlist.description}
                         </span>
                       )}
                     </div>
@@ -346,13 +346,13 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       <div>
                         <div className="text-[10.5px] text-apple-muted">Average P/E</div>
                         <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
-                          {kpis.avgPe !== null ? kpis.avgPe.toFixed(1) : '—'}
+                          {kpis.avgPe !== null ? kpis.avgPe.toFixed(1) : '-'}
                         </div>
                       </div>
                       <div>
                         <div className="text-[10.5px] text-apple-muted">Average ROCE</div>
                         <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
-                          {kpis.avgRoce !== null ? `${kpis.avgRoce.toFixed(1)}%` : '—'}
+                          {kpis.avgRoce !== null ? `${kpis.avgRoce.toFixed(1)}%` : '-'}
                         </div>
                       </div>
                       <div>

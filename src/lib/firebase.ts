@@ -5,7 +5,7 @@
  * - Stock detail data (fetched on demand when user opens /stock/:symbol)
  * - Market index data (updated by the Python pipeline)
  *
- * The Firebase config below is public (client-side) — security is enforced
+ * The Firebase config below is public (client-side) - security is enforced
  * by Firestore Security Rules (read-only for clients).
  */
 

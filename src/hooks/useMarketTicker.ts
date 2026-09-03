@@ -23,7 +23,7 @@ interface CachedIndex {
  * Reads the serverless endpoint in production and the static cache the Python
  * pipeline writes in development, where there is no serverless runtime. The
  * previous version shipped a hard-coded list of prices, never fetched on
- * mount, and read a `dataAsOf` field the API does not return — so the strip
+ * mount, and read a `dataAsOf` field the API does not return - so the strip
  * showed invented numbers with a 2024 timestamp indefinitely.
  */
 const SOURCES = ['/api/market_indices', '/data/market_indices.json'];
