@@ -119,8 +119,7 @@ export const App: React.FC = () => {
       ...rows.map((stock) => EXPORT_COLUMNS.map(([, read]) => csvCell(read(stock))).join(',')),
     ].join('\r\n');
 
-    // A Blob, not a data: URI — the old encodeURI approach mangled '#' and
-    // broke outright on large result sets.
+    // Uses a Blob URL instead of a data URI to avoid encoding issues with special characters.
     const blob = new Blob([`﻿${csv}`], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -162,12 +161,12 @@ export const App: React.FC = () => {
                   {/* Statement of what this is, without the badge soup. */}
                   <div className="max-w-2xl">
                     <h1 className="text-3xl sm:text-[2.75rem] font-bold tracking-[-0.035em] text-apple-primary font-display leading-[1.08]">
-                      Screen Indian equities
+                      Screen Indian stocks
                       <br />
-                      with natural query syntax.
+                      with simple financial formulas.
                     </h1>
                     <p className="text-[15px] text-apple-secondary mt-4 leading-relaxed">
-                      Express fundamental criteria in plain terms, combine formulas with logical operators, and evaluate 100+ metrics across the Nifty 500 instantaneously.
+                      Filter 500 Indian companies using Screener-compatible syntax. Run custom queries, view complete financial statements, and track ratios directly in your browser.
                     </p>
 
                     <div className="flex items-center gap-2.5 mt-6">
@@ -176,8 +175,8 @@ export const App: React.FC = () => {
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
                       <button onClick={() => setPaletteOpen(true)} className="apple-btn apple-btn-secondary px-4 py-2.5 text-[13px]">
-                        Search Company
-                        <kbd className="text-[10px] font-mono text-apple-faint ml-0.5">⌘K</kbd>
+                        Search Stocks
+                        <kbd className="text-[10px] font-mono text-apple-faint ml-0.5">Ctrl+K</kbd>
                       </button>
                     </div>
                   </div>
@@ -189,11 +188,11 @@ export const App: React.FC = () => {
                   <div className="mt-14">
                     <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
                       <div className="min-w-0">
-                        <h2 className="text-lg font-semibold text-apple-primary font-display">Active Screen</h2>
+                        <h2 className="text-lg font-semibold text-apple-primary font-display">Results for query</h2>
                         <p className="text-xs text-apple-muted mt-1 font-mono truncate max-w-2xl">{committedQuery}</p>
                       </div>
                       <Link to={screenPath(committedQuery)} className="text-xs font-semibold text-apple-blue hover:underline shrink-0">
-                        Customize query →
+                        Edit query →
                       </Link>
                     </div>
                     {resultsTable}
@@ -240,7 +239,7 @@ export const App: React.FC = () => {
                     <div>
                       <h1 className="text-xl font-semibold text-apple-primary font-display">Saved Screens</h1>
                       <p className="text-xs text-apple-muted mt-1">
-                        Screens saved to local storage for quick access across sessions.
+                        Saved locally in your browser.
                       </p>
                     </div>
                     <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary">
@@ -254,7 +253,7 @@ export const App: React.FC = () => {
                       <Bookmark className="w-7 h-7 text-apple-faint mx-auto mb-3" />
                       <h2 className="text-sm font-semibold text-apple-primary">No saved screens</h2>
                       <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
-                        Construct your investment screens in the Query Editor and save them here for continuous tracking.
+                        No saved screens yet. Build and save queries from the query editor to find them here.
                       </p>
                       <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary mt-5">
                         Open Query Editor

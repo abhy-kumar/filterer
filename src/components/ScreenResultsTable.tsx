@@ -309,8 +309,8 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                 <td colSpan={visibleColumns.length + 1} className="py-14 text-center">
                   <p className="text-sm text-apple-secondary">
                     {stocks.length === 0
-                      ? 'No companies currently meet all active screening criteria.'
-                      : 'No securities match the specified search or sector filter.'}
+                      ? 'No companies match your query conditions.'
+                      : 'No companies match the current search or sector filter.'}
                   </p>
                   {stocks.length > 0 && (
                     <button
@@ -360,7 +360,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         <span>
           {sortedStocks.length === 0
             ? 'No rows'
-            : `${(page - 1) * pageSize + 1}–${Math.min(page * pageSize, sortedStocks.length)} of ${sortedStocks.length}`}
+            : `${(page - 1) * pageSize + 1} to ${Math.min(page * pageSize, sortedStocks.length)} of ${sortedStocks.length}`}
         </span>
 
         <div className="flex items-center gap-3">

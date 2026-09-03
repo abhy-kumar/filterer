@@ -22,10 +22,10 @@ export const Footer: React.FC = () => {
           <div className="col-span-2">
             <span className="text-sm font-bold tracking-[-0.03em] text-apple-primary font-display">Filterer</span>
             <p className="text-xs text-apple-secondary mt-2 max-w-sm leading-relaxed">
-              Institutional-grade fundamental analysis and stock screening for Indian equities. High-performance, client-side execution with complete query privacy.
+              Open source stock screener for Indian equities. All queries execute locally in your browser with complete privacy.
             </p>
             <p className="text-xs text-apple-muted mt-4 leading-relaxed max-w-sm">
-              Comprehensive coverage across {STOCKS_DATA.length} companies with multi-year financial statements, balance sheets, cash flows, and institutional shareholding data.
+              Covers {STOCKS_DATA.length} companies across the Nifty 500 with annual and quarterly statements, balance sheets, cash flows, and shareholding data.
             </p>
           </div>
 
@@ -72,17 +72,24 @@ export const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-apple-secondary hover:text-apple-blue transition-colors"
                 >
-                  Report a data problem
+                  Report an issue
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <p className="mt-10 pt-6 border-t border-apple-border-subtle text-[11px] text-apple-muted leading-relaxed">
-          For research and education. Not investment advice, and not affiliated with Screener.in or Mittal
-          Analytics. Figures come from public sources and are not guaranteed to be accurate or current —
-          check anything you intend to act on against the company&rsquo;s own filings.
+        <div className="mt-10 pt-6 border-t border-apple-border-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11px] text-apple-muted leading-relaxed">
+          <p>
+            Developed by Abhishek K (FT-25-202) for the Mergers & Acquisitions course at Faculty of Management Studies (FMS), University of Delhi.
+          </p>
+          <span className="shrink-0 text-apple-secondary font-medium">
+            FMS Delhi
+          </span>
+        </div>
+
+        <p className="mt-3 text-[11px] text-apple-muted/80 leading-relaxed">
+          For research and educational purposes only. Not investment advice, and not affiliated with Screener.in or Mittal Analytics. Figures come from public exchange filings and should be verified before making investment decisions.
         </p>
       </div>
     </footer>

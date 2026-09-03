@@ -466,9 +466,9 @@ export class ScreenerParser {
     const tok = this.peek();
     if (tok.type === 'UNKNOWN') throw this.unknownMetric(tok);
     if (tok.type === 'EOF') {
-      throw new QueryError('The query ends early — a value or metric is missing.', tok.pos);
+      throw new QueryError('The query ends early: a value or metric is missing.', tok.pos);
     }
-    throw new QueryError(`Unexpected "${tok.value}" — expected a metric, number or "(".`, tok.pos);
+    throw new QueryError(`Unexpected "${tok.value}": expected a metric, number, or "(".`, tok.pos);
   }
 }
 

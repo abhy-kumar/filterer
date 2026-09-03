@@ -150,8 +150,7 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
       </div>
 
       <p className="text-[11px] text-apple-muted leading-relaxed">
-        Exchange pages are indexes rather than direct document links — BSE and NSE both render their archives in
-        the browser, so the specific report opens one click further in.
+        Exchange pages link to official filing archives on BSE and NSE, where full annual reports and announcements can be viewed.
       </p>
     </div>
   );

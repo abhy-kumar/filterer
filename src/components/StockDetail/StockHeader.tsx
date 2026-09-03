@@ -16,7 +16,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
 
   const figures: KeyFigure[] = [
     { label: 'Market cap', value: crore(stock.market_cap) },
-    { label: '52-week range', value: `${price(stock.low_52w)} – ${price(stock.high_52w)}` },
+    { label: '52-week range', value: `${price(stock.low_52w)} - ${price(stock.high_52w)}` },
     {
       label: 'P/E',
       value: multiple(stock.pe_ratio),

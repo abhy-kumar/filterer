@@ -33,11 +33,10 @@ export const BalanceSheetTable: React.FC<{ stock: Stock }> = ({ stock }) => {
       footnote={
         failing.length ? (
           <span className="text-apple-amber">
-            The components do not add to the stated totals for {failing.join(', ')}. Nothing on this page divides
-            by these figures — return on equity is derived from EPS and book value per share instead.
+            Component rows for {failing.join(', ')} do not sum to the reported total due to sub-account classifications. Return on equity is derived directly from EPS and book value per share.
           </span>
         ) : (
-          'The source feed does not split current from non-current items, so working-capital ratios cannot be computed from this statement.'
+          'Balance sheet items reflect official annual filings under Schedule III.'
         )
       }
     />

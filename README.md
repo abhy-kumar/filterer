@@ -228,6 +228,12 @@ GitHub enforces a 50MB file size limit for tracked files. Consequently:
 
 ---
 
+## Project Information
+
+Developed by Abhishek K (FT-25-202) for the Mergers & Acquisitions course at Faculty of Management Studies (FMS), University of Delhi.
+
+---
+
 ## License and Disclaimer
 
 Distributed under the MIT License. See LICENSE for more information.

@@ -49,9 +49,9 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
     <section>
       <div className="flex items-end justify-between gap-4 mb-5 flex-wrap">
         <div>
-          <h2 className="text-lg font-semibold text-apple-primary font-display">Curated Strategies</h2>
+          <h2 className="text-lg font-semibold text-apple-primary font-display">Popular Screens</h2>
           <p className="text-xs text-apple-muted mt-1">
-            Institutional fundamental models, valuation filters, and quantitative screening strategies.
+            Pre-built screens for value, growth, debt-free, and dividend stocks.
           </p>
         </div>
 

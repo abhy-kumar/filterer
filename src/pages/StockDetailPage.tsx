@@ -133,14 +133,14 @@ export const StockDetailPage: React.FC = () => {
         <main className="flex-1 flex items-center justify-center p-8">
           <div className="apple-card p-8 max-w-md w-full text-center">
             <h1 className="text-base font-semibold text-apple-primary mb-1.5 font-display">
-              Security Not Found
+              Stock not found
             </h1>
             <p className="text-xs text-apple-muted mb-6 leading-relaxed">
-              No security matches the symbol <code className="font-mono text-apple-secondary">{symbol}</code>.
-              Filterer tracks the Nifty 500 equity universe of Indian corporate listings.
+              No company found for symbol <code className="font-mono text-apple-secondary">{symbol}</code>.
+              Filterer currently covers the Nifty 500 universe.
             </p>
             <button onClick={() => navigate('/')} className="apple-btn apple-btn-primary">
-              Return to Screener
+              Back to Screener
             </button>
           </div>
         </main>
@@ -205,13 +205,13 @@ export const StockDetailPage: React.FC = () => {
           {detailStatus === 'failed' && (
             <div className="apple-card p-6 text-center">
               <h2 className="text-sm font-semibold text-apple-primary font-display">
-                Financial Statements Unavailable
+                Could not load financial statements
               </h2>
               <p className="text-xs text-apple-muted mt-1.5 max-w-md mx-auto leading-relaxed">
-                Unable to retrieve detailed historical financial statements for this security. Please check your network connection or retry the request.
+                Unable to load financial statements for this company. Please check your connection and refresh the page.
               </p>
               <button onClick={() => navigate(0)} className="apple-btn apple-btn-secondary mt-4">
-                Retry
+                Refresh
               </button>
             </div>
           )}

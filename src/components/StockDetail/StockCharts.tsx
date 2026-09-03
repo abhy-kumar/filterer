@@ -634,13 +634,13 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
       <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-[11px] text-apple-muted flex items-center justify-between gap-3 flex-wrap">
         <span>
           {activeTab === 'tradingview'
-            ? 'Interactive daily price action with 50-day & 200-day simple moving averages, 20-day EMA, and volume overlay.'
+            ? 'Daily price history with 50-day SMA, 200-day SMA, 20-day EMA, and volume.'
             : activeTab === 'pe'
-              ? 'Historical valuation multiple: trailing P/E relative to 10-year median valuation band.'
-              : 'Annual revenue and net profit trajectory (₹ crore) with operating profit margin (OPM%).'}
+              ? 'Historical price to earnings (P/E) compared with the median.'
+              : 'Annual sales and net profit in ₹ crore with operating margin (OPM%).'}
         </span>
         <span className="text-[10px] opacity-75">
-          Filterer Terminal
+          Filterer
         </span>
       </div>
     </div>

@@ -117,9 +117,9 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'synthetic-holding',
       severity: 'warning',
-      title: 'Historical Shareholding Breakdown Notice',
+      title: 'Shareholding trend note',
       detail:
-        'Quarterly institutional stake variations reflect estimated trends. The current filing breakdown is displayed for fundamental assessment.',
+        'Historical changes in holding are estimated. The current shareholding breakdown reflects filed numbers.',
     });
   }
 
@@ -127,9 +127,9 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'shareholding-partial',
       severity: 'note',
-      title: 'Statutory Ownership Disclosures',
+      title: 'Shareholding breakdown',
       detail:
-        "Promoter and public shareholding figures reflect official exchange filings. Detailed institutional categorization (FII/DII) is presented where reported by the registrar.",
+        'Promoter and public shareholding come from official exchange filings. Detailed institutional breakdown (FII and DII) is shown where disclosed.',
     });
   }
 
@@ -137,8 +137,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'dividend-yield-outlier',
       severity: 'note',
-      title: 'Elevated Dividend Yield Notice',
-      detail: `Current dividend yield of ${stock.dividend_yield.toFixed(2)}% may reflect special dividends, interim capital distributions, or recent price action. Refer to corporate action announcements for payout continuity.`,
+      title: 'High dividend yield',
+      detail: `Dividend yield of ${stock.dividend_yield.toFixed(2)}% may include special or one-off dividends. Check recent corporate announcements.`,
     });
   }
 
@@ -150,8 +150,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'quarterly-gap',
       severity: 'warning',
-      title: gaps.length === 1 ? 'Quarterly Reporting Notice' : 'Quarterly Reporting Notice',
-      detail: `${gaps.join(', ')} was not included in primary exchange data feeds; sequential comparisons across this interval reflect non-consecutive reporting.`,
+      title: 'Missing quarterly results',
+      detail: `${gaps.join(', ')} was not reported in the exchange feed. Comparisons across this gap skip non-consecutive quarters.`,
     });
   }
 
@@ -160,8 +160,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'pnl-reconcile',
       severity: 'warning',
-      title: 'Operating to PBT Reconciliation',
-      detail: `For ${unreconciled.join(', ')}, operating profit less interest differs from reported PBT due to exceptional items, share of profit in associates/JVs, or Ind AS non-operating adjustments.`,
+      title: 'Profit before tax reconciliation',
+      detail: `For ${unreconciled.join(', ')}, operating profit minus interest differs from profit before tax, typically due to other income or exceptional items.`,
     });
   }
 
@@ -170,8 +170,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'balance-sheet',
       severity: 'warning',
-      title: 'Balance Sheet Reconciliation',
-      detail: `Statement line items for ${footing.join(', ')} reflect Schedule III reclassifications between current and non-current sub-accounts.`,
+      title: 'Balance sheet line items',
+      detail: `Balance sheet items for ${footing.join(', ')} reflect sub-account groupings under Schedule III standards.`,
     });
   }
 
@@ -181,8 +181,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
       findings.push({
         id: 'opm-mismatch',
         severity: 'note',
-        title: 'Reporting Scope (Consolidated vs Standalone)',
-        detail: `Headline OPM (${stock.opm.toFixed(1)}%) reflects consolidated operations, whereas line items may represent standalone reporting.`,
+        title: 'Consolidated versus standalone margin',
+        detail: `Headline OPM of ${stock.opm.toFixed(1)}% is consolidated, while statement rows may reflect standalone results.`,
       });
     }
 
@@ -193,8 +193,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
         findings.push({
           id: 'eps-mismatch',
           severity: 'note',
-          title: 'Diluted EPS Reconciliation',
-          detail: `Reported EPS (₹${stock.eps.toFixed(2)}) reflects weighted average share count and continuing operations adjustments relative to stated net profit.`,
+          title: 'EPS reconciliation',
+          detail: `Headline EPS of ₹${stock.eps.toFixed(2)} reflects weighted average shares and continuing operations.`,
         });
       }
     }
@@ -204,8 +204,8 @@ export function assessStock(stock: Stock): QualityFinding[] {
     findings.push({
       id: 'short-history',
       severity: 'note',
-      title: 'Reporting Track Record',
-      detail: `Financial statement history contains ${annual.length} financial years; multi-year CAGR figures require extended operating track records.`,
+      title: 'Limited historical data',
+      detail: `Only ${annual.length} years of annual statements are available for this company. 5-year and 10-year growth metrics require longer reporting history.`,
     });
   }
 
