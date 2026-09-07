@@ -144,12 +144,26 @@ describe('dataset invariants', () => {
   });
 
   it('does not present the sector P/E as a fixed multiple of the company P/E', () => {
-    // Upstream stored industry_pe as exactly pe_ratio * 0.9 for every company,
-    // which made "cheaper than its sector" unsatisfiable.
+    // Upstream originally stored industry_pe as exactly pe_ratio * 0.9 for every company,
+    // which made "cheaper than its sector" unsatisfiable and varied industry_pe per company.
+    // In the repaired dataset, industry_pe is uniform across each sector.
+    const bySector = new Map<string, Set<number>>();
+    for (const stock of STOCKS_DATA) {
+      if (stock.industry_pe !== null && stock.sector) {
+        if (!bySector.has(stock.sector)) bySector.set(stock.sector, new Set());
+        bySector.get(stock.sector)!.add(stock.industry_pe);
+      }
+    }
+    for (const [sector, peSet] of bySector.entries()) {
+      expect(peSet.size, `Sector ${sector} has non-uniform industry P/E`).toBe(1);
+    }
+
+    // An isolated company can coincidentally trade at ~1.11x its sector median
+    // (making sector_pe / pe ~ 0.9), but the upstream bug affected the whole universe.
     const suspicious = STOCKS_DATA.filter(
       (s) => s.pe_ratio && s.industry_pe && Math.abs(s.industry_pe / s.pe_ratio - 0.9) < 0.001
     );
-    expect(suspicious.map((s) => s.symbol)).toEqual([]);
+    expect(suspicious.length).toBeLessThan(5);
   });
 
   it('finds at least one company cheaper than its sector median', () => {

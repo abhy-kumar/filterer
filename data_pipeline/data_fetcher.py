@@ -257,7 +257,7 @@ class StockDataFetcher:
             "volume": _safe_int(info.get("regularMarketVolume", 0)),
             # Valuation (some filled later from statements)
             "pe_ratio": pe,
-            "industry_pe": _round(info.get("industryPe") or info.get("sectorPe") or pe * 0.9),
+            "industry_pe": _round(info.get("industryPe") or info.get("sectorPe")),
             "pb_ratio": pb,
             "dividend_yield": div_yield,
             "book_value": book_value,

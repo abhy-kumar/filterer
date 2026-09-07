@@ -9,6 +9,7 @@ import json
 import logging
 import time
 from datetime import datetime
+from pathlib import Path
 from typing import Any
 
 import yfinance as yf
@@ -112,6 +113,12 @@ def save_indices_cache(output_path: str = "data/market_indices.json") -> None:
         json.dump(cache, f, indent=2)
     
     logger.info(f"Saved {len(indices)} indices to {output_path}")
+
+    public_path = Path("public/data/market_indices.json")
+    if public_path.parent.exists():
+        with open(public_path, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=2)
+        logger.info(f"Synced {len(indices)} indices to {public_path}")
 
 
 if __name__ == "__main__":
