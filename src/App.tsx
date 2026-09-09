@@ -8,6 +8,7 @@ import { PresetScreens } from './components/PresetScreens';
 import { CommandPalette } from './components/CommandPalette';
 import { SaveScreenModal } from './components/SaveScreenModal';
 import { Footer } from './components/Footer';
+import { MobileBottomNav } from './components/MobileBottomNav';
 const StockDetailPage = lazy(() =>
   import('./pages/StockDetailPage').then((m) => ({ default: m.StockDetailPage }))
 );
@@ -155,7 +156,7 @@ export const App: React.FC = () => {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary">
+    <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary pb-16 md:pb-0">
       <Header onOpenSearch={() => setPaletteOpen(true)} savedScreensCount={savedScreens.length} />
 
       <Routes>
@@ -397,8 +398,11 @@ export const App: React.FC = () => {
         onSave={handleSaveScreen}
         query={draftQuery}
       />
+
+      <MobileBottomNav savedScreensCount={savedScreens.length} />
     </div>
   );
 };
+
 
 export default App;

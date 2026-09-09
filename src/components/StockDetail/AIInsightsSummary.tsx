@@ -61,7 +61,7 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
         </div>
 
         {/* Quarter Selector */}
-        <div className="flex items-center apple-segmented self-start sm:self-auto">
+        <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar max-w-full">
           {concallData.quarters.map((q) => (
             <button
               key={q.quarter}

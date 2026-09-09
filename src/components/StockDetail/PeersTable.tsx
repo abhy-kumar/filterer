@@ -171,7 +171,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
           <thead>
             <tr>
               <th className="text-center w-10 text-apple-faint text-[11px]">#</th>
-              <th className="apple-sticky-col text-left min-w-[180px]">Company</th>
+              <th className="apple-sticky-col text-left min-w-[120px] sm:min-w-[180px]">Company</th>
               {COLUMNS.map((col) => (
                 <th key={col.label} className="text-right">
                   {col.label}
@@ -194,7 +194,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                     className="apple-sticky-col"
                     style={isSelf ? { background: 'var(--apple-blue-subtle)' } : undefined}
                   >
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2">
                       <span
                         className={`font-mono text-xs font-semibold ${
                           isSelf ? 'text-apple-primary' : 'text-apple-blue'
@@ -202,14 +202,17 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                       >
                         {peer.symbol}
                       </span>
-                      <span className="text-xs text-apple-muted truncate max-w-[130px]">{peer.name}</span>
+                      <span className="text-[10.5px] sm:text-xs text-apple-muted truncate max-w-[100px] sm:max-w-[130px]">
+                        {peer.name}
+                      </span>
                       {isSelf && (
-                        <span className="text-[10px] font-semibold text-apple-blue bg-apple-blue/10 px-1.5 py-0.5 rounded-full">
+                        <span className="text-[9px] sm:text-[10px] font-semibold text-apple-blue bg-apple-blue/10 px-1 sm:px-1.5 py-0.5 rounded-full w-fit">
                           Current
                         </span>
                       )}
                     </div>
                   </td>
+
                   {COLUMNS.map((col) => (
                     <td key={col.label} className="text-right font-mono whitespace-nowrap">
                       {col.value(peer) ?? <span className="num-nil">-</span>}

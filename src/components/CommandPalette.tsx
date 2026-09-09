@@ -165,27 +165,43 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-4 pt-[10vh] animate-fade-in"
+      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-0 sm:p-4 pt-0 sm:pt-[10vh] animate-fade-in"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-label="Search"
     >
       <div
-        className="apple-card w-full max-w-xl overflow-hidden flex flex-col max-h-[70vh] shadow-lg"
+        className="apple-card w-full sm:max-w-xl overflow-hidden flex flex-col h-full sm:h-auto sm:max-h-[70vh] shadow-lg rounded-none sm:rounded-2xl border-0 sm:border"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-2.5 px-3.5 h-12 border-b border-apple-border">
+        <div className="flex items-center gap-2.5 px-3.5 h-14 sm:h-12 border-b border-apple-border pt-safe sm:pt-0">
           <Search className="w-4 h-4 text-apple-faint shrink-0" />
           <input
             ref={inputRef}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder={`Search ${STOCKS_DATA.length} companies, screens and ratios`}
-            className="w-full bg-transparent text-sm text-apple-primary placeholder-apple-faint focus:outline-none"
+            placeholder={`Search ${STOCKS_DATA.length} companies, screens, ratios`}
+            className="w-full bg-transparent text-base sm:text-sm text-apple-primary placeholder-apple-faint focus:outline-none"
             aria-label="Search"
           />
+          {searchTerm && (
+            <button
+              onClick={() => setSearchTerm('')}
+              className="text-apple-faint hover:text-apple-primary p-1 text-xs"
+              aria-label="Clear search"
+            >
+              ✕
+            </button>
+          )}
+          <button
+            onClick={onClose}
+            className="sm:hidden text-xs font-semibold text-apple-blue shrink-0 px-2 py-1"
+          >
+            Cancel
+          </button>
         </div>
+
 
         <div ref={listRef} className="overflow-y-auto p-1.5 flex-1">
           {items.length === 0 ? (
@@ -258,7 +274,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
           )}
         </div>
 
-        <div className="px-3.5 py-2 border-t border-apple-border flex items-center gap-4 text-[10px] text-apple-faint">
+        <div className="px-3.5 py-2 border-t border-apple-border hidden sm:flex items-center gap-4 text-[10px] text-apple-faint">
           <span className="flex items-center gap-1">
             <kbd className="font-mono">↑</kbd>
             <kbd className="font-mono">↓</kbd> navigate
@@ -270,6 +286,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
             <kbd className="font-mono">esc</kbd> dismiss
           </span>
         </div>
+
       </div>
     </div>,
     document.body

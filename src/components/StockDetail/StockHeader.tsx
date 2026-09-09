@@ -63,11 +63,11 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
     : 50;
 
   return (
-    <div className="apple-card p-5 sm:p-6">
-      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+    <div className="apple-card p-4 sm:p-6">
+      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6">
         <div className="min-w-0">
-          <div className="flex items-center gap-2.5 flex-wrap">
-            <h1 className="text-2xl sm:text-[1.75rem] font-bold tracking-[-0.03em] text-apple-primary font-display">
+          <div className="flex items-center gap-2 flex-wrap">
+            <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] font-bold tracking-[-0.03em] text-apple-primary font-display">
               {stock.name}
             </h1>
             <span className="apple-tag font-mono">{stock.symbol}</span>
@@ -120,32 +120,34 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
           </p>
 
           {stock.about && (
-            <p className="text-xs text-apple-secondary mt-3.5 max-w-3xl leading-relaxed line-clamp-4">
+            <p className="text-xs text-apple-secondary mt-3 max-w-3xl leading-relaxed line-clamp-3 sm:line-clamp-4">
               {stock.about}
             </p>
           )}
         </div>
 
         {/* Price block */}
-        <div className="shrink-0 lg:text-right">
-          <div className="text-[2rem] font-semibold font-mono tabular-nums text-apple-primary leading-none">
-            {price(stock.current_price)}
-          </div>
-          <div className={`mt-1.5 font-mono text-sm tabular-nums ${signClass(stock.change_pct)}`}>
-            {isUp ? '+' : ''}
-            {stock.change.toFixed(2)} ({isUp ? '+' : ''}
-            {stock.change_pct.toFixed(2)}%)
+        <div className="shrink-0 lg:text-right flex flex-col sm:flex-row lg:flex-col justify-between sm:items-center lg:items-end gap-2 lg:gap-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-apple-border-subtle">
+          <div>
+            <div className="text-[1.75rem] sm:text-[2rem] font-semibold font-mono tabular-nums text-apple-primary leading-none">
+              {price(stock.current_price)}
+            </div>
+            <div className={`mt-1 font-mono text-xs sm:text-sm tabular-nums ${signClass(stock.change_pct)}`}>
+              {isUp ? '+' : ''}
+              {stock.change.toFixed(2)} ({isUp ? '+' : ''}
+              {stock.change_pct.toFixed(2)}%)
+            </div>
           </div>
 
-          <div className="w-full lg:w-56 mt-4">
+          <div className="w-full sm:w-60 lg:w-56 mt-2 sm:mt-0 lg:mt-4">
             <div
-              className="h-1 rounded-full relative"
+              className="h-1.5 sm:h-1 rounded-full relative"
               style={{ background: 'var(--apple-bg-tertiary)' }}
               role="img"
               aria-label={`Trading at ${position.toFixed(0)}% of its 52-week range`}
             >
               <span
-                className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2 h-2 rounded-full ring-2"
+                className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2.5 h-2.5 sm:w-2 sm:h-2 rounded-full ring-2"
                 style={{
                   left: `${position}%`,
                   background: 'var(--apple-blue)',
@@ -163,12 +165,12 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
       </div>
 
       {/* Key figures */}
-      <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-4 mt-6 pt-5 border-t border-apple-border-subtle">
+      <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-3.5 sm:gap-y-4 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-apple-border-subtle">
         {figures.map((figure) => (
           <div key={figure.label}>
-            <dt className="text-[11px] text-apple-muted truncate">{figure.label}</dt>
+            <dt className="text-[10.5px] sm:text-[11px] text-apple-muted truncate">{figure.label}</dt>
             <dd
-              className={`text-sm font-semibold font-mono tabular-nums mt-0.5 ${
+              className={`text-xs sm:text-sm font-semibold font-mono tabular-nums mt-0.5 ${
                 figure.tone === 'good' ? 'num-pos' : figure.tone === 'bad' ? 'num-neg' : 'text-apple-primary'
               }`}
             >
@@ -178,6 +180,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
           </div>
         ))}
       </dl>
+
 
       <WatchlistModal
         isOpen={isWatchlistModalOpen}

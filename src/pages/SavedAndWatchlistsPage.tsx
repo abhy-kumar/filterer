@@ -127,7 +127,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
             </div>
 
             {/* Tab switch */}
-            <div className="flex items-center apple-segmented self-start sm:self-auto">
+            <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar max-w-full">
               <button
                 onClick={() => setActiveTab('watchlists')}
                 className={`apple-segmented-item flex items-center gap-1.5 ${
@@ -279,9 +279,9 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       )}
                     </div>
 
-                    <div className="flex items-center gap-2 relative">
+                    <div className="flex items-center gap-2 relative w-full sm:w-auto">
                       {/* Add stock to watchlist input */}
-                      <div className="relative">
+                      <div className="relative flex-1 sm:flex-initial">
                         <input
                           type="text"
                           value={stockSearchQuery}
@@ -291,7 +291,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                           }}
                           onFocus={() => setIsSearchingStock(true)}
                           placeholder="+ Add stock by symbol or name..."
-                          className="apple-input text-xs pl-8 pr-3 h-8 w-60"
+                          className="apple-input text-xs pl-8 pr-3 h-8 w-full sm:w-60"
                         />
                         <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-apple-faint pointer-events-none" />
 
@@ -324,7 +324,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                               deleteWatchlist(activeWatchlist.id);
                             }
                           }}
-                          className="apple-btn apple-btn-quiet text-rose-500 hover:bg-rose-500/10 p-1.5"
+                          className="apple-btn apple-btn-quiet text-rose-500 hover:bg-rose-500/10 p-1.5 shrink-0"
                           title="Delete watchlist"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -335,7 +335,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
 
                   {/* Summary Metric Stats */}
                   {kpis && (
-                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-3 border-t border-apple-border/60">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 pt-3 border-t border-apple-border/60">
                       <div>
                         <div className="text-[10.5px] text-apple-muted">Tracked Stocks</div>
                         <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
@@ -436,7 +436,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                         </h3>
                         <button
                           onClick={(e) => onDeleteScreen(screen.id, e)}
-                          className="apple-btn apple-btn-quiet p-1 -mr-1 -mt-1 opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+                          className="apple-btn apple-btn-quiet p-1 -mr-1 -mt-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
                           title={`Delete ${screen.title}`}
                           aria-label={`Delete ${screen.title}`}
                         >

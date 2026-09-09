@@ -131,22 +131,22 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
 
   return (
     <div className="apple-card overflow-hidden">
-      <div className="px-4 sm:px-5 py-2.5 border-b border-apple-border flex items-center justify-between gap-3 flex-wrap bg-apple-surface-hover/30">
-        <div className="flex items-center gap-2">
+      <div className="px-3 sm:px-5 py-2.5 border-b border-apple-border flex items-center justify-between gap-2 overflow-x-auto no-scrollbar bg-apple-surface-hover/30">
+        <div className="flex items-center gap-2 shrink-0">
           <Code2 className="w-3.5 h-3.5 text-apple-blue" />
           <span className="text-xs font-semibold text-apple-primary font-mono">Formula Editor</span>
         </div>
 
-        <div className="flex items-center gap-1.5">
-          <button onClick={() => setShowCatalog(true)} className="apple-btn apple-btn-secondary h-8">
+        <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
+          <button onClick={() => setShowCatalog(true)} className="apple-btn apple-btn-secondary h-8 px-2.5 sm:px-3">
             <BookOpen className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Ratios</span>
-            <span className="text-apple-faint font-mono">{METRICS_DICTIONARY.length}</span>
+            <span className="text-apple-faint font-mono text-[10px] sm:text-xs">{METRICS_DICTIONARY.length}</span>
           </button>
           <button
             onClick={() => onChangeQuery(formatScreenerQuery(query))}
             disabled={!query.trim() || !validation.ok}
-            className="apple-btn apple-btn-secondary h-8"
+            className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3"
             title="Format query with canonical names and line breaks"
           >
             <WrapText className="w-3.5 h-3.5" />
@@ -158,7 +158,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
               setCopied(true);
             }}
             disabled={!query.trim()}
-            className="apple-btn apple-btn-secondary h-8"
+            className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3"
           >
             {copied ? <Check className="w-3.5 h-3.5 num-pos" /> : <Copy className="w-3.5 h-3.5" />}
             <span className="hidden sm:inline">{copied ? 'Copied' : 'Copy'}</span>
@@ -175,7 +175,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
         </div>
       </div>
 
-      <div className="p-4 sm:p-5">
+      <div className="p-3.5 sm:p-5">
         <textarea
           ref={textareaRef}
           value={query}
@@ -184,14 +184,14 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
           spellCheck={false}
           placeholder="Market Capitalization > 500 AND Return on capital employed > 20 AND Debt to equity < 0.1"
           rows={3}
-          className={`apple-input w-full font-mono text-sm p-3.5 resize-y leading-relaxed ${
+          className={`apple-input w-full font-mono text-base sm:text-sm p-3 sm:p-3.5 resize-y leading-relaxed ${
             errorMessage ? 'border-apple-red' : ''
           }`}
           style={errorMessage ? { borderColor: 'var(--apple-red)' } : undefined}
         />
 
         {/* Status line */}
-        <div className="mt-2.5 flex items-start justify-between gap-4 flex-wrap text-xs">
+        <div className="mt-2.5 flex items-start justify-between gap-3 flex-wrap text-xs">
           <div className="min-w-0 flex-1">
             {errorMessage ? (
               <p className="flex items-start gap-1.5 num-neg">
@@ -236,25 +236,25 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
           )}
         </div>
 
-        {/* Insert chips */}
+        {/* Insert chips - horizontally scrollable on mobile */}
         <div className="mt-4 pt-3.5 border-t border-apple-border-subtle space-y-2">
-          <div className="flex items-center gap-1 flex-wrap">
+          <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5">
             {OPERATORS.map((op) => (
               <button
                 key={op}
                 onClick={() => insertText(op)}
-                className="px-2 py-1 text-[11px] font-mono rounded-md text-apple-blue hover:bg-apple-blue-subtle transition-colors"
+                className="px-2.5 py-1 text-xs font-mono rounded-md bg-apple-surface hover:bg-apple-blue-subtle text-apple-blue border border-apple-border/50 transition-colors shrink-0 active:scale-95"
               >
                 {op}
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-1 flex-wrap">
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
             {QUICK_PICKS.map((chip) => (
               <button
                 key={chip.label}
                 onClick={() => insertText(chip.snippet)}
-                className="apple-tag hover:text-apple-primary transition-colors"
+                className="apple-tag hover:text-apple-primary transition-colors shrink-0 active:scale-95 text-[11px] py-1 px-2"
               >
                 {chip.label}
               </button>
@@ -262,17 +262,17 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
           </div>
         </div>
 
-        <div className="mt-4 pt-3.5 border-t border-apple-border-subtle flex items-center justify-between gap-3 flex-wrap">
-          <p className="text-xs text-apple-faint">
+        <div className="mt-4 pt-3.5 border-t border-apple-border-subtle flex items-center justify-between gap-3">
+          <p className="text-xs text-apple-faint hidden sm:block">
             <kbd className="font-mono">⌘</kbd>
             <kbd className="font-mono">↵</kbd> to run · screening {universe.length} companies
           </p>
-          <div className="flex items-center gap-2">
-            <button onClick={onSaveScreen} disabled={!query.trim()} className="apple-btn apple-btn-secondary">
+          <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+            <button onClick={onSaveScreen} disabled={!query.trim()} className="apple-btn apple-btn-secondary flex-1 sm:flex-initial">
               <Bookmark className="w-3.5 h-3.5" />
               Save
             </button>
-            <button onClick={onRunQuery} disabled={!validation.ok} className="apple-btn apple-btn-primary px-5">
+            <button onClick={onRunQuery} disabled={!validation.ok} className="apple-btn apple-btn-primary flex-1 sm:flex-initial px-6">
               <Play className="w-3.5 h-3.5 fill-current" />
               {isDirty ? 'Run' : 'Re-run'}
             </button>
@@ -280,17 +280,18 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
         </div>
       </div>
 
+
       {showCatalog &&
         createPortal(
           <div
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-4 pt-[8vh]"
+            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-0 sm:p-4 pt-0 sm:pt-[8vh]"
             onClick={() => setShowCatalog(false)}
           >
             <div
-              className="apple-card w-full max-w-2xl flex flex-col max-h-[80vh] shadow-lg"
+              className="apple-card w-full max-w-2xl flex flex-col h-full sm:h-auto sm:max-h-[80vh] shadow-lg rounded-none sm:rounded-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="p-4 border-b border-apple-border">
+              <div className="p-4 border-b border-apple-border pt-safe sm:pt-4">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <div>
                     <h3 className="text-sm font-semibold text-apple-primary font-display">Ratio catalog</h3>
@@ -308,8 +309,9 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                   value={catalogSearch}
                   onChange={(e) => setCatalogSearch(e.target.value)}
                   placeholder="Search ratios"
-                  className="apple-input w-full text-xs px-3 h-8 mb-2.5"
+                  className="apple-input w-full text-base sm:text-xs px-3 h-9 sm:h-8 mb-2.5"
                 />
+
 
                 <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
                   {CATEGORIES.map((cat) => (

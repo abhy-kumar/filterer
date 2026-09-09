@@ -129,7 +129,7 @@ export const StockDetailPage: React.FC = () => {
   const scrollTo = useCallback((id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 120;
+    const top = el.getBoundingClientRect().top + window.scrollY - 136;
     window.scrollTo({ top, behavior: 'smooth' });
   }, []);
 
@@ -170,7 +170,7 @@ export const StockDetailPage: React.FC = () => {
               <span className="font-mono font-semibold text-apple-primary">{stock.symbol}</span>
             </div>
 
-            <div ref={navRef} className="flex items-center gap-0.5 overflow-x-auto no-scrollbar ml-auto">
+            <div ref={navRef} className="flex items-center gap-0.5 overflow-x-auto no-scrollbar scroll-touch ml-auto">
               {SECTIONS.map((section) => (
                 <button
                   key={section.id}

@@ -65,7 +65,7 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
         </div>
 
         {/* Period Selector Tabs */}
-        <div className="flex items-center apple-segmented self-start sm:self-auto">
+        <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar max-w-full">
           {periods.map((p) => (
             <button
               key={p.period}
@@ -118,11 +118,11 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
       </div>
 
       {/* Segment Breakdown Table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto scroll-touch">
         <table className="apple-table">
           <thead>
             <tr>
-              <th className="text-left min-w-[200px]">Divisional Segment</th>
+              <th className="text-left min-w-[140px] sm:min-w-[200px]">Divisional Segment</th>
               <th className="text-right">Revenue (₹ Cr)</th>
               <th className="text-right min-w-[130px]">Revenue Share</th>
               <th className="text-right">EBIT (₹ Cr)</th>

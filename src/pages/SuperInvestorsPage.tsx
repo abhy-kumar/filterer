@@ -34,8 +34,10 @@ export const SuperInvestorsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [typeFilter, setTypeFilter] = useState<string>('All');
   const [selectedInvestorId, setSelectedInvestorId] = useState<string>(SUPER_INVESTORS_DATA[0].id);
+  const [mobileTab, setMobileTab] = useState<'portfolio' | 'list'>('portfolio');
 
   // Watchlist modal state
+
   const [watchlistModalStock, setWatchlistModalStock] = useState<{ symbol: string; name: string } | null>(null);
 
   // Pre-calculate live net worths
@@ -208,10 +210,63 @@ export const SuperInvestorsPage: React.FC = () => {
             />
           </div>
 
+          {/* Mobile view switch & investor selector rail */}
+          <div className="lg:hidden space-y-2.5">
+            <div className="apple-segmented w-full">
+              <button
+                onClick={() => setMobileTab('portfolio')}
+                className={`apple-segmented-item flex-1 text-center py-1.5 text-xs ${
+                  mobileTab === 'portfolio' ? 'active' : ''
+                }`}
+              >
+                Portfolio
+              </button>
+              <button
+                onClick={() => setMobileTab('list')}
+                className={`apple-segmented-item flex-1 text-center py-1.5 text-xs ${
+                  mobileTab === 'list' ? 'active' : ''
+                }`}
+              >
+                All Investors ({filteredInvestors.length})
+              </button>
+            </div>
+
+            {mobileTab === 'portfolio' && (
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-touch">
+                {filteredInvestors.map((inv) => {
+                  const isSelected = inv.id === selectedInvestor?.id;
+                  return (
+                    <button
+                      key={inv.id}
+                      onClick={() => setSelectedInvestorId(inv.id)}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs whitespace-nowrap shrink-0 transition-all ${
+                        isSelected
+                          ? 'bg-apple-blue text-white border-apple-blue font-semibold shadow-sm'
+                          : 'bg-apple-card text-apple-secondary border-apple-border hover:bg-apple-surface'
+                      }`}
+                    >
+                      <span
+                        className={`w-5 h-5 rounded-full text-[10px] flex items-center justify-center font-bold ${
+                          isSelected ? 'bg-white/20 text-white' : 'bg-apple-surface text-apple-primary'
+                        }`}
+                      >
+                        {inv.avatar_initials}
+                      </span>
+                      <span>{inv.name}</span>
+                      <span className="font-mono text-[10px] opacity-80">₹{Math.round(inv.liveNetWorthCr)}Cr</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
           {/* Master-Detail Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Left Column: Investor Cards List */}
-            <div className="lg:col-span-4 space-y-2.5 max-h-[850px] overflow-y-auto no-scrollbar pr-1">
+            <div className={`lg:col-span-4 space-y-2.5 max-h-[850px] overflow-y-auto no-scrollbar pr-1 ${
+              mobileTab === 'list' ? 'block' : 'hidden lg:block'
+            }`}>
               <div className="text-xs font-semibold text-apple-muted px-1">
                 {filteredInvestors.length} Investors Found
               </div>
@@ -221,7 +276,10 @@ export const SuperInvestorsPage: React.FC = () => {
                 return (
                   <div
                     key={inv.id}
-                    onClick={() => setSelectedInvestorId(inv.id)}
+                    onClick={() => {
+                      setSelectedInvestorId(inv.id);
+                      setMobileTab('portfolio');
+                    }}
                     className={`apple-card p-4 cursor-pointer transition-all border ${
                       isSelected
                         ? 'border-apple-blue ring-1 ring-apple-blue/25 bg-apple-surface shadow-md'
@@ -280,9 +338,10 @@ export const SuperInvestorsPage: React.FC = () => {
             </div>
 
             {/* Right Column: Selected Investor Portfolio Deep Dive */}
-            <div className="lg:col-span-8 space-y-4">
+            <div className={`lg:col-span-8 space-y-4 ${mobileTab === 'portfolio' ? 'block' : 'hidden lg:block'}`}>
               {selectedInvestor && (
-                <div className="apple-card p-5 sm:p-6 space-y-6">
+                <div className="apple-card p-4 sm:p-6 space-y-5 sm:space-y-6">
+
                   {/* Top Profile Card */}
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-apple-border pb-5">
                     <div className="space-y-1.5">
@@ -356,7 +415,7 @@ export const SuperInvestorsPage: React.FC = () => {
                     <table className="apple-table">
                       <thead>
                         <tr>
-                          <th className="text-left">Company</th>
+                          <th className="apple-sticky-col text-left min-w-[125px] sm:min-w-[200px]">Company</th>
                           <th className="text-right">Price</th>
                           <th className="text-right">Day</th>
                           <th className="text-right">Holding %</th>
@@ -372,7 +431,7 @@ export const SuperInvestorsPage: React.FC = () => {
 
                           return (
                             <tr key={h.symbol} className="hover:bg-apple-surface/40 transition-colors">
-                              <td>
+                              <td className="apple-sticky-col">
                                 <div>
                                   <Link
                                     to={stockPath(h.symbol)}
@@ -381,11 +440,12 @@ export const SuperInvestorsPage: React.FC = () => {
                                     {h.symbol}
                                     <ArrowUpRight className="w-3 h-3 text-apple-faint" />
                                   </Link>
-                                  <div className="text-[11px] text-apple-muted truncate max-w-[170px]">
+                                  <div className="text-[10.5px] sm:text-[11px] text-apple-muted truncate max-w-[110px] sm:max-w-[170px]">
                                     {h.companyName}
                                   </div>
                                 </div>
                               </td>
+
 
                               <td className="text-right font-mono text-xs">
                                 {price(h.currentPrice)}

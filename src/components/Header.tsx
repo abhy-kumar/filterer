@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
-import { SlidersHorizontal, Bookmark, Search, Moon, Sun, Compass, RefreshCw, Users, Activity, Menu, X } from 'lucide-react';
+import { SlidersHorizontal, Bookmark, Search, Moon, Sun, Compass, RefreshCw, Users, Activity } from 'lucide-react';
 import { GithubLogo } from '@phosphor-icons/react';
 import { useMarketTicker } from '../hooks/useMarketTicker';
 import { useTheme } from '../context/ThemeContext';
@@ -29,11 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
   const location = useLocation();
   const navigate = useNavigate();
   const { isDark, toggleTheme } = useTheme();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [location.pathname]);
 
   const currentTab = location.pathname === '/'
     ? 'screens'
@@ -212,21 +208,33 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
           </nav>
         </div>
 
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {onOpenSearch && (
-            <button
-              onClick={onOpenSearch}
-              className="apple-input flex items-center gap-2 px-2.5 h-8 text-xs text-apple-muted hover:text-apple-primary hover:border-apple-border-strong transition-colors w-32 sm:w-44 xl:w-60"
-            >
-              <Search className="w-3.5 h-3.5 shrink-0" />
-              <span className="truncate">Search companies, ratios</span>
-              <kbd className="hidden xl:inline ml-auto text-[10px] font-mono text-apple-faint">⌘K</kbd>
-            </button>
+            <>
+              {/* Mobile search icon button */}
+              <button
+                onClick={onOpenSearch}
+                className="apple-btn apple-btn-quiet p-2 md:hidden text-apple-secondary hover:text-apple-primary"
+                aria-label="Search companies and ratios"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+
+              {/* Desktop search bar */}
+              <button
+                onClick={onOpenSearch}
+                className="hidden md:flex apple-input items-center gap-2 px-2.5 h-8 text-xs text-apple-muted hover:text-apple-primary hover:border-apple-border-strong transition-colors w-36 lg:w-44 xl:w-60"
+              >
+                <Search className="w-3.5 h-3.5 shrink-0" />
+                <span className="truncate">Search companies, ratios</span>
+                <kbd className="hidden xl:inline ml-auto text-[10px] font-mono text-apple-faint">⌘K</kbd>
+              </button>
+            </>
           )}
 
           <button
             onClick={toggleTheme}
-            className="apple-btn apple-btn-quiet px-2"
+            className="apple-btn apple-btn-quiet p-2 sm:px-2"
             title={isDark ? 'Switch to light appearance' : 'Switch to dark appearance'}
             aria-label="Toggle appearance"
           >
@@ -242,90 +250,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
           >
             <GithubLogo className="w-4 h-4" />
           </a>
-
-          {/* Mobile hamburger button */}
-          <button
-            onClick={() => setMobileMenuOpen((o) => !o)}
-            className="apple-btn apple-btn-quiet px-2 md:hidden"
-            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
         </div>
       </div>
-
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t border-apple-border bg-apple-card/95 backdrop-blur-xl px-4 py-3 space-y-1 animate-fade-in shadow-lg">
-          <button
-            onClick={() => {
-              navigate('/');
-              setMobileMenuOpen(false);
-            }}
-            className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-              currentTab === 'screens' ? 'bg-apple-surface-active text-apple-primary font-semibold' : 'text-apple-secondary hover:bg-apple-surface-hover'
-            }`}
-          >
-            <Compass className="w-4 h-4" />
-            <span>Screens</span>
-          </button>
-          <button
-            onClick={() => {
-              navigate('/screen');
-              setMobileMenuOpen(false);
-            }}
-            className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-              currentTab === 'query' ? 'bg-apple-surface-active text-apple-primary font-semibold' : 'text-apple-secondary hover:bg-apple-surface-hover'
-            }`}
-          >
-            <SlidersHorizontal className="w-4 h-4" />
-            <span>Query</span>
-          </button>
-          <button
-            onClick={() => {
-              navigate('/saved');
-              setMobileMenuOpen(false);
-            }}
-            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-              currentTab === 'saved' ? 'bg-apple-surface-active text-apple-primary font-semibold' : 'text-apple-secondary hover:bg-apple-surface-hover'
-            }`}
-          >
-            <div className="flex items-center gap-2.5">
-              <Bookmark className="w-4 h-4" />
-              <span>Watchlists</span>
-            </div>
-            {savedScreensCount > 0 && (
-              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-apple-bg-subtle text-apple-muted">
-                {savedScreensCount}
-              </span>
-            )}
-          </button>
-          <button
-            onClick={() => {
-              navigate('/people');
-              setMobileMenuOpen(false);
-            }}
-            className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-              currentTab === 'people' ? 'bg-apple-surface-active text-apple-primary font-semibold' : 'text-apple-secondary hover:bg-apple-surface-hover'
-            }`}
-          >
-            <Users className="w-4 h-4" />
-            <span>Super-Investors</span>
-          </button>
-          <button
-            onClick={() => {
-              navigate('/commodities');
-              setMobileMenuOpen(false);
-            }}
-            className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-              currentTab === 'commodities' ? 'bg-apple-surface-active text-apple-primary font-semibold' : 'text-apple-secondary hover:bg-apple-surface-hover'
-            }`}
-          >
-            <Activity className="w-4 h-4" />
-            <span>Commodities</span>
-          </button>
-        </div>
-      )}
     </header>
   );
 };
+

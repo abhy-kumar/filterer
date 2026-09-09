@@ -191,11 +191,11 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
         <table className="apple-table text-left">
           <thead>
             <tr>
-              <th className="apple-sticky-col min-w-[240px] sm:min-w-[280px] bg-apple-bg-subtle text-apple-muted font-semibold text-[11px]">
+              <th className="apple-sticky-col min-w-[130px] sm:min-w-[240px] bg-apple-bg-subtle text-apple-muted font-semibold text-[10.5px] sm:text-[11px] px-2.5 sm:px-3">
                 OPERATIONAL KPI
               </th>
               {periods.map((p) => (
-                <th key={p} className="text-right text-[11px] font-mono min-w-[95px] px-3">
+                <th key={p} className="text-right text-[10.5px] sm:text-[11px] font-mono min-w-[80px] sm:min-w-[95px] px-2.5 sm:px-3">
                   {p}
                 </th>
               ))}
@@ -215,16 +215,17 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
                   }`}
                   title="Click to view historical trend chart"
                 >
-                  <td className="apple-sticky-col py-2.5 px-3 min-w-[240px] sm:min-w-[280px]">
+                  <td className="apple-sticky-col py-2 sm:py-2.5 px-2.5 sm:px-3 min-w-[130px] sm:min-w-[240px]">
                     <div className="flex items-center justify-between gap-2">
-                      <div>
-                        <div className="font-semibold text-xs text-apple-primary group-hover:text-apple-blue transition-colors">
+                      <div className="min-w-0">
+                        <div className="font-semibold text-xs text-apple-primary group-hover:text-apple-blue transition-colors truncate max-w-[120px] sm:max-w-none">
                           {metric.name}
                         </div>
                         <div className="text-[10px] text-apple-muted font-mono mt-0.5">
                           {metric.unit}
                         </div>
                       </div>
+
                       <span className="text-apple-faint group-hover:text-apple-blue opacity-0 group-hover:opacity-100 transition-opacity">
                         {isSelected ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
                       </span>

@@ -106,7 +106,7 @@ export const CommoditiesPage: React.FC = () => {
             </div>
 
             {/* Category Filter Pills */}
-            <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar">
+            <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar max-w-full scroll-touch">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -121,8 +121,8 @@ export const CommoditiesPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Commodity Cards Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
+          {/* Commodity Cards Rail / Grid */}
+          <div className="flex sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 overflow-x-auto no-scrollbar scroll-touch pb-1 sm:pb-0">
             {filteredCommodities.map((comm) => {
               const isSelected = comm.id === activeCommodity?.id;
               const isPositive = comm.change1mPct >= 0;
@@ -131,7 +131,7 @@ export const CommoditiesPage: React.FC = () => {
                 <button
                   key={comm.id}
                   onClick={() => setSelectedCommodityId(comm.id)}
-                  className={`p-3 rounded-xl text-left transition-all border ${
+                  className={`p-3 rounded-xl text-left transition-all border shrink-0 w-[145px] sm:w-auto ${
                     isSelected
                       ? 'bg-apple-surface border-apple-blue shadow-sm ring-1 ring-apple-blue/20'
                       : 'bg-apple-card hover:bg-apple-surface border-apple-border/70'
@@ -161,7 +161,7 @@ export const CommoditiesPage: React.FC = () => {
           {activeCommodity && (
             <div className="space-y-6">
               {/* Top Overview & Chart Card */}
-              <div className="apple-card p-5 sm:p-6 space-y-6">
+              <div className="apple-card p-4 sm:p-6 space-y-5 sm:space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2.5 flex-wrap">
@@ -178,10 +178,10 @@ export const CommoditiesPage: React.FC = () => {
                   </div>
 
                   {/* Price & Changes */}
-                  <div className="flex items-center gap-4 shrink-0 sm:text-right">
+                  <div className="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-apple-border/50 shrink-0">
                     <div>
                       <div className="text-[10.5px] text-apple-muted">Current Benchmark</div>
-                      <div className="text-2xl font-bold font-mono text-apple-primary mt-0.5">
+                      <div className="text-xl sm:text-2xl font-bold font-mono text-apple-primary mt-0.5">
                         {activeCommodity.unit.startsWith('$')
                           ? `$${activeCommodity.currentPrice}`
                           : `₹${activeCommodity.currentPrice.toLocaleString('en-IN')}`}
@@ -229,9 +229,9 @@ export const CommoditiesPage: React.FC = () => {
                 <div className="space-y-2">
                   <div className="text-xs font-semibold text-apple-secondary flex items-center justify-between">
                     <span>16-Month Price Trajectory ({activeCommodity.unit})</span>
-                    <span className="text-[11px] text-apple-muted font-normal font-mono">Monthly Average Closes</span>
+                    <span className="text-[11px] text-apple-muted font-normal font-mono hidden sm:inline">Monthly Average Closes</span>
                   </div>
-                  <div className="h-60 w-full pt-2">
+                  <div className="h-48 sm:h-60 w-full pt-2">
                     <ResponsiveContainer width="100%" height="100%">
                       <AreaChart
                         data={activeCommodity.history}

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
-import { ArrowUp, ArrowDown, Download, Columns3, Search, ChevronLeft, ChevronRight, Check, X } from 'lucide-react';
+import { ArrowUp, ArrowDown, Download, Columns3, Search, ChevronLeft, ChevronRight, Check, X, LayoutGrid, TableProperties } from 'lucide-react';
 import { Stock } from '../types/stock';
 import { stockPath } from '../lib/routes';
 import { getMetric } from '../engine/metricsDictionary';
@@ -92,6 +92,7 @@ const DEFAULT_VISIBLE = [
 
 const VISIBLE_KEY = 'filterer_visible_columns';
 const PAGE_SIZE_KEY = 'filterer_page_size';
+const VIEW_MODE_KEY = 'filterer_view_mode';
 
 function readStored<T>(key: string, fallback: T): T {
   try {
@@ -111,6 +112,12 @@ interface ScreenResultsTableProps {
 
 export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, onExportCSV, emphasise = [] }) => {
   const navigate = useNavigate();
+  const [viewMode, setViewMode] = useState<'cards' | 'table'>(() => {
+    const stored = readStored<'cards' | 'table' | null>(VIEW_MODE_KEY, null);
+    if (stored) return stored;
+    if (typeof window !== 'undefined' && window.innerWidth < 768) return 'cards';
+    return 'table';
+  });
   const [searchFilter, setSearchFilter] = useState('');
   const [sectorFilter, setSectorFilter] = useState('All');
   const [industryFilter, setIndustryFilter] = useState('All');
@@ -123,6 +130,11 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
   const [isScrolled, setIsScrolled] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    try { localStorage.setItem(VIEW_MODE_KEY, JSON.stringify(viewMode)); } catch { /* private mode */ }
+  }, [viewMode]);
+
 
   // Columns the active query filtered on are worth seeing without hunting for
   // them in the picker.
@@ -241,14 +253,14 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
   return (
     <div className="apple-card overflow-hidden">
       {/* Filter bar */}
-      <div className="px-4 py-3 border-b border-apple-border flex flex-wrap items-center gap-2.5">
-        <div className="relative flex-1 min-w-[180px] max-w-xs">
+      <div className="px-3 sm:px-4 py-2.5 sm:py-3 border-b border-apple-border flex flex-wrap items-center gap-2 sm:gap-2.5">
+        <div className="relative flex-1 min-w-[150px] sm:min-w-[180px] max-w-xs">
           <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-apple-faint pointer-events-none" />
           <input
             type="text"
             value={searchFilter}
             onChange={(e) => setSearchFilter(e.target.value)}
-            placeholder="Filter these results"
+            placeholder="Filter results"
             className="apple-input w-full text-xs pl-8 pr-7 h-8"
           />
           {searchFilter && (
@@ -262,13 +274,36 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
           )}
         </div>
 
+        {/* Mobile sort selector */}
+        <select
+          value={`${sortKey}-${sortOrder}`}
+          onChange={(e) => {
+            const [k, o] = e.target.value.split('-');
+            setSortKey(k);
+            setSortOrder(o as 'asc' | 'desc');
+          }}
+          className="apple-input text-xs px-2 h-8 text-apple-secondary sm:hidden"
+          title="Sort results"
+        >
+          <option value="market_cap-desc">Mkt Cap: High → Low</option>
+          <option value="market_cap-asc">Mkt Cap: Low → High</option>
+          <option value="current_price-desc">Price: High → Low</option>
+          <option value="current_price-asc">Price: Low → High</option>
+          <option value="change_pct-desc">Day Gainers</option>
+          <option value="change_pct-asc">Day Losers</option>
+          <option value="pe_ratio-asc">P/E: Low → High</option>
+          <option value="pe_ratio-desc">P/E: High → Low</option>
+          <option value="roce-desc">ROCE: High → Low</option>
+          <option value="roe-desc">ROE: High → Low</option>
+        </select>
+
         <select
           value={sectorFilter}
           onChange={(e) => {
             setSectorFilter(e.target.value);
             setIndustryFilter('All');
           }}
-          className="apple-input text-xs px-2.5 h-8 text-apple-secondary"
+          className="apple-input text-xs px-2.5 h-8 text-apple-secondary hidden sm:inline-block"
           title="Filter by sector"
         >
           {sectors.map((s) => (
@@ -281,7 +316,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         <select
           value={industryFilter}
           onChange={(e) => setIndustryFilter(e.target.value)}
-          className="apple-input text-xs px-2.5 h-8 text-apple-secondary max-w-[200px]"
+          className="apple-input text-xs px-2.5 h-8 text-apple-secondary max-w-[200px] hidden md:inline-block"
           title="Filter by industry"
         >
           {industries.map((ind) => (
@@ -291,14 +326,40 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
           ))}
         </select>
 
-        <div className="ml-auto flex items-center gap-2">
-          <button onClick={() => setShowColumnPicker(true)} className="apple-btn apple-btn-secondary h-8">
+        <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
+          {/* View mode toggle */}
+          <div className="apple-segmented">
+            <button
+              onClick={() => setViewMode('cards')}
+              className={`apple-segmented-item flex items-center gap-1 text-xs py-1 px-2 sm:px-2.5 ${
+                viewMode === 'cards' ? 'active' : ''
+              }`}
+              title="Cards view"
+              aria-label="Cards view"
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Cards</span>
+            </button>
+            <button
+              onClick={() => setViewMode('table')}
+              className={`apple-segmented-item flex items-center gap-1 text-xs py-1 px-2 sm:px-2.5 ${
+                viewMode === 'table' ? 'active' : ''
+              }`}
+              title="Table view"
+              aria-label="Table view"
+            >
+              <TableProperties className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Table</span>
+            </button>
+          </div>
+
+          <button onClick={() => setShowColumnPicker(true)} className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3">
             <Columns3 className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Columns</span>
-            <span className="text-apple-faint font-mono">{visibleColumns.length}</span>
+            <span className="text-apple-faint font-mono text-[10px] sm:text-xs">{visibleColumns.length}</span>
           </button>
           {onExportCSV && (
-            <button onClick={onExportCSV} className="apple-btn apple-btn-secondary h-8" disabled={!sortedStocks.length}>
+            <button onClick={onExportCSV} className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3" disabled={!sortedStocks.length}>
               <Download className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">CSV</span>
             </button>
@@ -306,94 +367,202 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         </div>
       </div>
 
-      {/* Table */}
-      <div ref={scrollRef} onScroll={onScroll} className={`overflow-x-auto ${isScrolled ? 'is-scrolled' : ''}`}>
-        <table className="apple-table">
-          <thead>
-            <tr>
-              <th className="apple-sticky-col text-left min-w-[210px]">Company</th>
-              {visibleColumns.map((col) => {
-                const isSorted = sortKey === col.key;
-                const metric = getMetric(col.key);
+      {/* Cards View */}
+      {viewMode === 'cards' ? (
+        <div className="p-3 sm:p-4">
+          {paginatedStocks.length === 0 ? (
+            <div className="py-14 text-center">
+              <p className="text-sm text-apple-secondary">
+                {stocks.length === 0
+                  ? 'No companies match your query conditions.'
+                  : 'No companies match the current search, sector, or industry filter.'}
+              </p>
+              {stocks.length > 0 && (
+                <button
+                  onClick={() => {
+                    setSearchFilter('');
+                    setSectorFilter('All');
+                    setIndustryFilter('All');
+                  }}
+                  className="mt-3 text-xs font-semibold text-apple-blue hover:underline"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {paginatedStocks.map((stock) => {
+                const isPositive = (stock.change_pct ?? 0) >= 0;
                 return (
-                  <th
-                    key={col.key}
-                    onClick={() => handleSort(col.key)}
-                    title={metric?.description}
-                    className={`cursor-pointer transition-colors hover:text-apple-primary ${
-                      col.align === 'right' ? 'text-right' : col.align === 'center' ? 'text-center' : 'text-left'
-                    } ${isSorted ? 'text-apple-primary' : ''}`}
+                  <div
+                    key={stock.symbol}
+                    onClick={() => navigate(stockPath(stock.symbol))}
+                    className="apple-card p-3.5 sm:p-4 hover:border-apple-border-strong hover:bg-apple-surface transition-all cursor-pointer flex flex-col justify-between group active:scale-[0.99]"
                   >
-                    <span
-                      className={`inline-flex items-center gap-1 ${
-                        col.align === 'right' ? 'flex-row-reverse' : ''
-                      }`}
-                    >
-                      {isSorted &&
-                        (sortOrder === 'asc' ? (
-                          <ArrowUp className="w-3 h-3 text-apple-blue" />
-                        ) : (
-                          <ArrowDown className="w-3 h-3 text-apple-blue" />
-                        ))}
-                      {col.label}
-                    </span>
-                  </th>
+                    <div>
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="min-w-0">
+                          <div className="flex items-baseline gap-2">
+                            <span className="font-mono text-sm font-bold text-apple-blue group-hover:underline">
+                              {stock.symbol}
+                            </span>
+                            <span className="text-xs text-apple-muted truncate max-w-[150px]">
+                              {stock.name}
+                            </span>
+                          </div>
+                          <div className="text-[11px] text-apple-faint truncate mt-0.5">
+                            {stock.sector} {stock.industry ? `· ${stock.industry}` : ''}
+                          </div>
+                        </div>
+
+                        <div className="text-right shrink-0">
+                          <div className="font-mono text-sm font-bold text-apple-primary">
+                            {price(stock.current_price)}
+                          </div>
+                          <div className={`font-mono text-[11px] font-semibold ${signClass(stock.change_pct)}`}>
+                            {isPositive ? '+' : ''}{stock.change_pct?.toFixed(2) ?? '0.00'}%
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Key metrics grid */}
+                      <div className="grid grid-cols-3 gap-2 mt-3 pt-2.5 border-t border-apple-border-subtle text-xs">
+                        <div>
+                          <span className="text-[10px] text-apple-muted block">Mkt Cap</span>
+                          <span className="font-mono font-semibold text-apple-primary">{crore(stock.market_cap)}</span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-apple-muted block">P/E</span>
+                          <span className="font-mono font-semibold text-apple-primary">
+                            {isReported(stock.pe_ratio) ? stock.pe_ratio.toFixed(1) : '-'}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-apple-muted block">ROCE</span>
+                          <span className="font-mono font-semibold text-apple-primary">
+                            {isReported(stock.roce) ? `${stock.roce.toFixed(1)}%` : '-'}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-apple-muted block">ROE</span>
+                          <span className="font-mono font-semibold text-apple-primary">
+                            {isReported(stock.roe) ? `${stock.roe.toFixed(1)}%` : '-'}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-apple-muted block">D/E</span>
+                          <span className="font-mono font-semibold text-apple-primary">
+                            {isReported(stock.debt_to_equity) ? stock.debt_to_equity.toFixed(2) : '-'}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[10px] text-apple-muted block">Sales 3Y</span>
+                          <span className={`font-mono font-semibold ${signClass(stock.sales_growth_3y)}`}>
+                            {isReported(stock.sales_growth_3y) ? `${stock.sales_growth_3y.toFixed(1)}%` : '-'}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 );
               })}
-            </tr>
-          </thead>
-          <tbody>
-            {paginatedStocks.length === 0 ? (
+            </div>
+          )}
+        </div>
+      ) : (
+        /* Table View */
+        <div ref={scrollRef} onScroll={onScroll} className={`overflow-x-auto ${isScrolled ? 'is-scrolled' : ''}`}>
+          <table className="apple-table">
+            <thead>
               <tr>
-                <td colSpan={visibleColumns.length + 1} className="py-14 text-center">
-                  <p className="text-sm text-apple-secondary">
-                    {stocks.length === 0
-                      ? 'No companies match your query conditions.'
-                      : 'No companies match the current search, sector, or industry filter.'}
-                  </p>
-                  {stocks.length > 0 && (
-                    <button
-                      onClick={() => {
-                        setSearchFilter('');
-                        setSectorFilter('All');
-                        setIndustryFilter('All');
-                      }}
-                      className="mt-3 text-xs font-semibold text-apple-blue hover:underline"
-                    >
-                      Clear filters
-                    </button>
-                  )}
-                </td>
-              </tr>
-            ) : (
-              paginatedStocks.map((stock) => (
-                <tr
-                  key={stock.symbol}
-                  onClick={() => navigate(stockPath(stock.symbol))}
-                  className="cursor-pointer"
-                >
-                  <td className="apple-sticky-col">
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-mono text-xs font-semibold text-apple-blue">{stock.symbol}</span>
-                      <span className="text-xs text-apple-muted truncate max-w-[140px]">{stock.name}</span>
-                    </div>
-                  </td>
-                  {visibleColumns.map((col) => (
-                    <td
+                <th className="apple-sticky-col text-left min-w-[125px] sm:min-w-[210px]">Company</th>
+                {visibleColumns.map((col) => {
+                  const isSorted = sortKey === col.key;
+                  const metric = getMetric(col.key);
+                  return (
+                    <th
                       key={col.key}
-                      className={`font-mono ${
+                      onClick={() => handleSort(col.key)}
+                      title={metric?.description}
+                      className={`cursor-pointer transition-colors hover:text-apple-primary ${
                         col.align === 'right' ? 'text-right' : col.align === 'center' ? 'text-center' : 'text-left'
-                      }`}
+                      } ${isSorted ? 'text-apple-primary' : ''}`}
                     >
-                      {col.render(stock)}
-                    </td>
-                  ))}
+                      <span
+                        className={`inline-flex items-center gap-1 ${
+                          col.align === 'right' ? 'flex-row-reverse' : ''
+                        }`}
+                      >
+                        {isSorted &&
+                          (sortOrder === 'asc' ? (
+                            <ArrowUp className="w-3 h-3 text-apple-blue" />
+                          ) : (
+                            <ArrowDown className="w-3 h-3 text-apple-blue" />
+                          ))}
+                        {col.label}
+                      </span>
+                    </th>
+                  );
+                })}
+              </tr>
+            </thead>
+            <tbody>
+              {paginatedStocks.length === 0 ? (
+                <tr>
+                  <td colSpan={visibleColumns.length + 1} className="py-14 text-center">
+                    <p className="text-sm text-apple-secondary">
+                      {stocks.length === 0
+                        ? 'No companies match your query conditions.'
+                        : 'No companies match the current search, sector, or industry filter.'}
+                    </p>
+                    {stocks.length > 0 && (
+                      <button
+                        onClick={() => {
+                          setSearchFilter('');
+                          setSectorFilter('All');
+                          setIndustryFilter('All');
+                        }}
+                        className="mt-3 text-xs font-semibold text-apple-blue hover:underline"
+                      >
+                        Clear filters
+                      </button>
+                    )}
+                  </td>
                 </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-      </div>
+              ) : (
+                paginatedStocks.map((stock) => (
+                  <tr
+                    key={stock.symbol}
+                    onClick={() => navigate(stockPath(stock.symbol))}
+                    className="cursor-pointer"
+                  >
+                    <td className="apple-sticky-col">
+                      <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2">
+                        <span className="font-mono text-xs font-semibold text-apple-blue">{stock.symbol}</span>
+                        <span className="text-[10.5px] sm:text-xs text-apple-muted truncate max-w-[105px] sm:max-w-[140px]">
+                          {stock.name}
+                        </span>
+                      </div>
+                    </td>
+                    {visibleColumns.map((col) => (
+                      <td
+                        key={col.key}
+                        className={`font-mono ${
+                          col.align === 'right' ? 'text-right' : col.align === 'center' ? 'text-center' : 'text-left'
+                        }`}
+                      >
+                        {col.render(stock)}
+                      </td>
+                    ))}
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      )}
+
 
       {/* Pagination */}
       <div className="px-4 py-2.5 border-t border-apple-border flex flex-wrap items-center justify-between gap-3 text-xs text-apple-muted">
