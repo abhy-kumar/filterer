@@ -290,7 +290,8 @@ export const METRICS_DICTIONARY: MetricDefinition[] = [
     aliases: ['piotroski score', 'piotroski', 'f-score', 'f score', 'piotroski_score'],
     category: 'Financial Health',
     unit: 'Score',
-    description: '9-point fundamental financial strength score developed by Joseph Piotroski.',
+    description:
+      'Piotroski F-score, computed from the filed statements. Eight of the nine signals are scored here; the liquidity test needs a current asset and liability split the statements in this dataset do not carry, so it is left unassessed rather than awarded.',
   },
   {
     id: 'altman_z_score',
@@ -299,7 +300,8 @@ export const METRICS_DICTIONARY: MetricDefinition[] = [
     aliases: ['altman z-score', 'altman z score', 'z-score', 'z score', 'altman_z_score'],
     category: 'Financial Health',
     unit: 'Score',
-    description: 'Formula for predicting bankruptcy risk (>2.99 safe, <1.81 distressed).',
+    description:
+      'Altman Z-score for bankruptcy risk (>2.99 safe, <1.81 distressed). Not reported for banks and NBFCs: the coefficients are calibrated on manufacturers, and a lender’s balance sheet reads as distress under them.',
   },
 
   // Cash Flow & Working Capital

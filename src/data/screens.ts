@@ -79,7 +79,7 @@ export const CURATED_SCREENS: ScreenFilter[] = [
     id: 'piotroski-high-score',
     title: 'High Piotroski F-Score',
     description:
-      'Seven or more of the nine Piotroski tests passed, paired with an Altman Z-score out of the distress zone.',
+      'Seven or more Piotroski tests passed, paired with an Altman Z-score out of the distress zone. Eight of the nine tests are scored from the filed statements; banks carry no Z-score, so this screen is non-financials.',
     query: 'Piotroski score >= 7 AND Altman Z-Score > 2.9 AND Return on equity > 14',
     category: 'Safety',
     iconName: 'Award',

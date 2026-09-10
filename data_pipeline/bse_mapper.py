@@ -23,9 +23,15 @@ CACHE_FILE = Path("data/bse_code_map.json")
 
 # Explicit overrides for exchanges/special entities
 EXPLICIT_BSE_CODES = {
-    "BSE": "543066",
     "CDSL": "540608",
 }
+
+# Companies in the universe that have no BSE listing at all. BSE Ltd is the
+# case that matters: an exchange cannot list on itself, so BSE Ltd trades on
+# the NSE alone. It used to be overridden to 543066, which is SBI Cards' scrip
+# code, so the company page linked to another company's filings and the
+# universe carried the same code twice.
+NSE_ONLY_SYMBOLS = {"BSE"}
 
 
 class BSEMapper:
@@ -90,6 +96,9 @@ class BSEMapper:
 
         for s in stocks:
             sym = s["symbol"].strip().upper()
+            if sym in NSE_ONLY_SYMBOLS:
+                self._map.pop(sym, None)
+                continue
             if sym in EXPLICIT_BSE_CODES:
                 self._map[sym] = EXPLICIT_BSE_CODES[sym]
                 continue
@@ -123,4 +132,7 @@ class BSEMapper:
         return self._map
 
     def get_code(self, symbol: str) -> Optional[str]:
-        return self._map.get(symbol.strip().upper()) or EXPLICIT_BSE_CODES.get(symbol.strip().upper())
+        sym = symbol.strip().upper()
+        if sym in NSE_ONLY_SYMBOLS:
+            return None
+        return self._map.get(sym) or EXPLICIT_BSE_CODES.get(sym)
