@@ -67,6 +67,183 @@ function cagr(from, to, years) {
   return round((Math.pow(to / from, 1 / years) - 1) * 100);
 }
 
+/** A finite number, or null. Unlike orNull, zero is a legitimate value here. */
+function num(value) {
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
+}
+
+/**
+ * Authentic BSE scrip codes, built by data_pipeline/bse_mapper.py into
+ * data/bse_code_map.json. The heal pass that used to apply them is not
+ * reachable from either workflow, so 490 of the 500 companies shipped without
+ * a code and the exchange links on their pages had nothing to point at. This
+ * pass is the one the workflows do run, so the codes are applied here.
+ *
+ * BSE Ltd is dropped: an exchange cannot list on itself, so BSE Ltd trades on
+ * the NSE alone. The mapper matched it to 543066 by name, which is SBI Cards.
+ */
+const BSE_CODES = (() => {
+  try {
+    const map = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'bse_code_map.json'), 'utf8'));
+    delete map.BSE;
+    return map;
+  } catch {
+    return {};
+  }
+})();
+
+/** Statement rows by fiscal year label. The TTM column is not a fiscal year. */
+function indexByYear(rows) {
+  const out = new Map();
+  for (const row of rows || []) {
+    if (row.year && row.year !== 'TTM') out.set(row.year, row);
+  }
+  return out;
+}
+
+/**
+ * Piotroski F-score, computed from the filed statements.
+ *
+ * The pipeline invented the prior-year side of this score: previous operating
+ * cash flow as 90% of the current year, previous long-term debt as 110%,
+ * previous current ratio as 95%, previous gross margin as 95%, the share count
+ * as a constant 1 on both sides, and total assets as the market
+ * capitalisation. Five of the nine tests passed by construction. That is why
+ * no company in the universe scored below 3, why 37% of them landed on exactly
+ * 8, and why a "seven or more of nine" screen matched 363 of 500 companies.
+ *
+ * Eight signals are recoverable from the statements this dataset carries. The
+ * liquidity signal is not: the balance sheet has no current asset / current
+ * liability split, so it is left unassessed rather than awarded. The count of
+ * signals actually used is returned alongside the score.
+ */
+function piotroski(stock, pnl, balance, cash) {
+  const annual = pnl.filter((r) => r.year !== 'TTM');
+  if (annual.length < 2) return { score: null, assessed: 0 };
+
+  const bs = indexByYear(balance);
+  const cf = indexByYear(cash);
+  const now = annual[annual.length - 1];
+  const prev = annual[annual.length - 2];
+  const bsNow = bs.get(now.year);
+  const bsPrev = bs.get(prev.year);
+  const cfNow = cf.get(now.year);
+
+  let score = 0;
+  let assessed = 0;
+  const test = (passed) => {
+    assessed += 1;
+    if (passed) score += 1;
+  };
+
+  const niNow = num(now.net_profit);
+  const niPrev = num(prev.net_profit);
+  const cfoNow = num(cfNow?.operating_cf);
+  const taNow = num(bsNow?.total_assets);
+  const taPrev = num(bsPrev?.total_assets);
+  const scaled = taNow > 0 && taPrev > 0;
+
+  // Profitability
+  if (niNow !== null) test(niNow > 0);
+  if (cfoNow !== null) test(cfoNow > 0);
+  if (niNow !== null && niPrev !== null && scaled) test(niNow / taNow > niPrev / taPrev);
+  if (cfoNow !== null && niNow !== null) test(cfoNow > niNow);
+
+  // Leverage and liquidity. The current-ratio signal is not assessable here.
+  const brNow = num(bsNow?.borrowings);
+  const brPrev = num(bsPrev?.borrowings);
+  if (brNow !== null && brPrev !== null && scaled) test(brNow / taNow < brPrev / taPrev);
+
+  // Share capital standing in for the share count: at a constant face value a
+  // rising figure is an issue of new shares.
+  const scNow = num(bsNow?.equity_capital);
+  const scPrev = num(bsPrev?.equity_capital);
+  if (scNow !== null && scPrev !== null) test(scNow <= scPrev * 1.001);
+
+  // Operating efficiency
+  const omNow = num(now.opm_pct);
+  const omPrev = num(prev.opm_pct);
+  if (omNow !== null && omPrev !== null) test(omNow > omPrev);
+
+  const sNow = num(now.sales);
+  const sPrev = num(prev.sales);
+  if (sNow !== null && sPrev !== null && scaled) test(sNow / taNow > sPrev / taPrev);
+
+  // A score drawn from a handful of signals is not a score.
+  return assessed >= 6 ? { score, assessed } : { score: null, assessed };
+}
+
+/**
+ * Altman Z-score from the filed balance sheet.
+ *
+ * The pipeline passed the market capitalisation in as total assets, putting
+ * four of the five ratios on the wrong denominator. It also applied the
+ * manufacturing coefficients to banks and NBFCs, whose balance sheets are
+ * deposits and advances: the leverage terms read as distress for institutions
+ * that are not distressed. Financial companies are left unscored, the same
+ * treatment debt-to-equity already gets.
+ */
+function altman(stock, pnl, balance) {
+  if (stock.sector === 'Financial Services') return null;
+
+  const annual = pnl.filter((r) => r.year !== 'TTM');
+  const bsNow = balance[balance.length - 1];
+  const pnlNow = annual[annual.length - 1];
+  if (!bsNow || !pnlNow) return null;
+
+  const ta = num(bsNow.total_assets);
+  const tl = num(bsNow.total_liabilities);
+  const ebit = num(pnlNow.operating_profit);
+  const sales = num(pnlNow.sales);
+  const mcap = num(stock.market_cap);
+  if (!(ta > 0) || !(tl > 0) || ebit === null || sales === null || !(mcap > 0)) return null;
+
+  // Working capital needs a current/non-current split the dataset does not
+  // carry. Other assets net of other liabilities is the closest stand-in: both
+  // are the residual buckets, and both are dominated by current items.
+  const workingCapital = (num(bsNow.other_assets) ?? 0) - (num(bsNow.other_liabilities) ?? 0);
+  const reserves = num(bsNow.reserves) ?? 0;
+
+  const z =
+    1.2 * (workingCapital / ta) +
+    1.4 * (reserves / ta) +
+    3.3 * (ebit / ta) +
+    0.6 * (mcap / tl) +
+    1.0 * (sales / ta);
+
+  return Number.isFinite(z) ? round(z) : null;
+}
+
+/**
+ * Moving-average overlay for the price chart.
+ *
+ * The pipeline stamped one scalar onto the last 52 points, so all 500 charts
+ * drew their 50- and 200-day averages as flat horizontal lines. The series is
+ * weekly — a strict 7-day step across ten years — so a 50-day average spans
+ * about seven points and a 200-day average about twenty-nine. Averaging 50
+ * consecutive points, as the unreachable heal pass did, would have drawn a
+ * 50-week line under a 50-day label.
+ */
+function movingAverageOverlay(prices) {
+  const TRADING_DAYS_PER_POINT = 7;
+  const windows = [
+    ['dma_50', Math.round(50 / TRADING_DAYS_PER_POINT)],
+    ['dma_200', Math.round(200 / TRADING_DAYS_PER_POINT)],
+  ];
+  const closes = prices.map((p) => num(p.price));
+
+  for (const [field, window] of windows) {
+    for (let i = 0; i < prices.length; i += 1) {
+      const slice = closes.slice(i + 1 - window, i + 1);
+      if (i + 1 < window || slice.some((v) => v === null)) {
+        delete prices[i][field];
+        continue;
+      }
+      prices[i][field] = round(slice.reduce((a, b) => a + b, 0) / window);
+    }
+  }
+}
+
 const stats = {};
 function count(key, n = 1) {
   stats[key] = (stats[key] || 0) + n;
@@ -121,6 +298,92 @@ function repair(stock) {
   next.ratios_history = ratios;
   next.shareholding_history = holding;
   next.historical_prices = prices;
+
+  // ── Identifiers ────────────────────────────────────────────
+  const bseCode = BSE_CODES[decodedSymbol];
+  if (bseCode && next.bse_code !== bseCode) {
+    next.bse_code = bseCode;
+    count('BSE scrip code applied from the mapped universe');
+  }
+
+  // ── Statements reported in a foreign currency ──────────────
+  // Yahoo quotes some Indian companies in rupees but reports their statements
+  // in dollars — Infosys comes back with financialCurrency 'USD'. The ingest
+  // then divides those figures by a crore as though they were rupees, so
+  // Infosys shipped total assets of 1,742 crore against a real 1.6 lakh crore.
+  //
+  // The tell is internal: net worth from the screening tier (book value per
+  // share times the share count) should be within a small factor of the
+  // balance sheet's own equity. At 88x it is the exchange rate. The statements
+  // are withheld rather than rescaled, because a multi-year statement needs
+  // each year's own rate and an assumed one would put a derived figure where a
+  // filed one belongs.
+  const latestSheet = balance[balance.length - 1];
+  if (latestSheet && next.current_price > 0 && next.market_cap > 0 && next.book_value > 0) {
+    const sheetEquity = (num(latestSheet.total_assets) ?? 0) - (num(latestSheet.total_liabilities) ?? 0);
+    const shares = (next.market_cap * 1e7) / next.current_price;
+    const netWorth = (next.book_value * shares) / 1e7;
+    if (sheetEquity > 0 && netWorth / sheetEquity > 20) {
+      const factor = Math.round(netWorth / sheetEquity);
+      next.statements_unavailable_reason =
+        `Upstream reports this company's statements in a foreign currency; at roughly ${factor}x ` +
+        'the rupee figures they are withheld rather than converted at an assumed rate.';
+      next.annual_pnl = [];
+      next.quarterly_results = [];
+      next.balance_sheet = [];
+      next.cash_flow = [];
+      next.ratios_history = [];
+      balance.length = 0;
+      pnl.length = 0;
+      cash.length = 0;
+
+      // Scalars carried over from those statements are in the same wrong
+      // currency. Growth rates and margins survive: a CAGR is a ratio, so the
+      // currency cancels. Absolute figures do not.
+      for (const key of ['debt', 'cfo_latest', 'cfo_3y', 'cfo_5y', 'fcf_latest', 'fcf_3y', 'fcf_5y']) {
+        next[key] = null;
+      }
+      count('statements withheld: reported in a foreign currency');
+    }
+  }
+
+  // ── Balance sheet: make the two sides foot ─────────────────
+  // total_liabilities as fetched is Yahoo's liabilities *excluding* equity: it
+  // equals borrowings + other liabilities on all 1,979 sheets here. Reserves,
+  // though, was read from Retained Earnings, which leaves out share premium
+  // and the other reserve accounts. So equity capital + reserves + borrowings
+  // + other liabilities fell short of total assets on 1,672 sheets, by a
+  // median of 17%, and the company page carried a footnote blaming
+  // "sub-account classifications" for the gap.
+  //
+  // The identity settles it: shareholders' funds are total assets less total
+  // liabilities, and reserves are that less the share capital. This is the
+  // same residual derivation the pipeline already uses for other assets and
+  // other liabilities, not an estimate.
+  for (const sheet of balance) {
+    const ta = num(sheet.total_assets);
+    if (!(ta > 0)) continue;
+
+    // A few sheets arrive with no total-liabilities figure at all while still
+    // reporting borrowings — Tata Capital is one. Falling back to the sum of
+    // the named liability rows keeps the identity from being fed a zero.
+    let liabilities = num(sheet.total_liabilities);
+    if (!(liabilities > 0)) {
+      liabilities = (num(sheet.borrowings) ?? 0) + (num(sheet.other_liabilities) ?? 0);
+      if (liabilities > 0) {
+        sheet.total_liabilities = round(liabilities);
+        count('total liabilities summed from the named rows');
+      }
+    }
+    if (!(liabilities > 0)) continue;
+
+    const reserves = round(ta - liabilities - (num(sheet.equity_capital) ?? 0));
+    if (reserves !== sheet.reserves) count('reserves restated so the balance sheet foots');
+    sheet.reserves = reserves;
+  }
+
+  // ── Chart overlays ─────────────────────────────────────────
+  movingAverageOverlay(prices);
 
   // ── Return on equity ───────────────────────────────────────
   // Derived as EPS / book value per share. The balance sheets in this dataset
@@ -349,6 +612,18 @@ function repair(stock) {
     }
     if (!orNull(row.roce)) row.roce = null;
   }
+
+  // ── Financial-health scores ────────────────────────────────
+  // Recomputed from the statements above, after the balance sheet has been
+  // made to foot, because both scores divide by total assets.
+  const fScore = piotroski(next, pnl, balance, cash);
+  if (fScore.score !== next.piotroski_score) count('Piotroski score recomputed from the filed statements');
+  next.piotroski_score = fScore.score;
+  next.piotroski_assessed = fScore.assessed;
+
+  const zScore = altman(next, pnl, balance);
+  if (zScore !== next.altman_z_score) count('Altman Z-score recomputed from the balance sheet');
+  next.altman_z_score = zScore;
 
   // ── Peers should quote the same price this app shows ───────
   if (stock.shareholding_source) next.shareholding_source = stock.shareholding_source;

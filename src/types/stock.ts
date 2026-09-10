@@ -113,6 +113,13 @@ export interface Stock {
   symbol: string;
   name: string;
   bse_code?: string;
+  /**
+   * Set when the statements could not be shipped. Yahoo reports some Indian
+   * companies' financials in dollars while quoting them in rupees, which the
+   * crore conversion then scales by the exchange rate; the statements are
+   * withheld rather than converted at an assumed rate.
+   */
+  statements_unavailable_reason?: string;
   nse_symbol: string;
   /** ISIN from the NSE constituent file, where the ingest captured one. */
   isin?: string;
@@ -179,7 +186,14 @@ export interface Stock {
   interest_coverage: number | null;
   current_ratio: number | null;
   quick_ratio?: number;
-  piotroski_score: number; // 0-9
+  /**
+   * Piotroski F-score. Null when the statements do not carry two comparable
+   * years to score against. Eight of the nine signals are recoverable from
+   * this dataset; see piotroski_assessed.
+   */
+  piotroski_score: number | null;
+  /** How many of the nine Piotroski signals the score was actually drawn from. */
+  piotroski_assessed?: number;
   altman_z_score: number | null;
 
   // Working Capital Ratios

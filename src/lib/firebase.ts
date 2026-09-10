@@ -64,16 +64,31 @@ async function getDb(): Promise<Firestore | null> {
 // ────────────────────────────────────────────────────────
 
 /**
- * Fetch full stock detail data from Firestore.
- * Used by the StockDetailPage when a user navigates to /stock/:symbol.
+ * Fetch full stock detail data for /stock/:symbol.
  *
- * Falls back to static JSON if Firestore is unavailable or unconfigured.
+ * The static tier under public/data/stocks/ is the source of truth, and
+ * Firestore is only consulted when a company has no file there.
+ *
+ * It used to be the other way round, which quietly broke the refresh loop.
+ * Both workflows rewrite the static tier — three times a trading day for
+ * quotes, weekly for statements — but nothing uploads to Firestore:
+ * data_pipeline/firebase_uploader.py is not reachable from either of them. So
+ * on any deployment that had Firebase configured, every company page rendered
+ * whatever snapshot was last pushed by hand and never requested the file CI
+ * had just refreshed. Locally that meant Reliance's balance sheet still showed
+ * reserves of 3.9 lakh crore from Firestore while the file on disk carried the
+ * corrected 10.1 lakh crore.
+ *
+ * Reading the static file first also keeps the project free to run: Firestore
+ * bills per document read, one per company page view, and needs an account to
+ * exist at all. The files are already on the CDN that serves the app.
  */
 export async function fetchStockDetail(symbol: string): Promise<Partial<Stock> | null> {
+  const fromFile = await fetchStockDetailFromJSON(symbol);
+  if (fromFile) return fromFile;
+
   const db = await getDb();
-  if (!db) {
-    return await fetchStockDetailFromJSON(symbol);
-  }
+  if (!db) return null;
 
   try {
     const { doc, getDoc } = await import('firebase/firestore');
@@ -86,12 +101,10 @@ export async function fetchStockDetail(symbol: string): Promise<Partial<Stock> |
       // reported. See src/lib/normalizeStock.ts.
       return normalizeRemoteStock(docSnap.data() as Partial<Stock>);
     }
-
-    // Fallback: try static JSON file
-    return await fetchStockDetailFromJSON(symbol);
+    return null;
   } catch (error) {
-    console.warn(`Firestore fetch failed for ${symbol}, falling back to static JSON:`, error);
-    return await fetchStockDetailFromJSON(symbol);
+    console.warn(`Firestore fetch failed for ${symbol}:`, error);
+    return null;
   }
 }
 
@@ -142,11 +155,18 @@ export interface MarketIndicesCache {
   lastUpdated: string;
 }
 
+/**
+ * Index quotes, static tier first for the same reason as fetchStockDetail: the
+ * quotes workflow rewrites data/market_indices.json three times a trading day
+ * and nothing writes the Firestore copy, so consulting Firestore first served
+ * a snapshot that only ever got staler.
+ */
 export async function fetchMarketIndices(): Promise<MarketIndicesCache | null> {
+  const fromFile = await fetchMarketIndicesFromJSON();
+  if (fromFile) return fromFile;
+
   const db = await getDb();
-  if (!db) {
-    return await fetchMarketIndicesFromJSON();
-  }
+  if (!db) return null;
 
   try {
     const { doc, getDoc } = await import('firebase/firestore');
@@ -156,12 +176,10 @@ export async function fetchMarketIndices(): Promise<MarketIndicesCache | null> {
     if (docSnap.exists()) {
       return docSnap.data() as MarketIndicesCache;
     }
-
-    // Fallback to static JSON
-    return await fetchMarketIndicesFromJSON();
+    return null;
   } catch (error) {
-    console.warn('Firestore indices fetch failed, falling back to static JSON:', error);
-    return await fetchMarketIndicesFromJSON();
+    console.warn('Firestore indices fetch failed:', error);
+    return null;
   }
 }
 

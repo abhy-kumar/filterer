@@ -45,6 +45,27 @@ def _round(value: Any, places: int = 2) -> Optional[float]:
     return round(num, places)
 
 
+def _shares_outstanding(ticker: str) -> Optional[float]:
+    """
+    Share count for a company whose stored market cap is 0 and so cannot be
+    rescaled from the price. One extra request, only for the handful of
+    companies in that state.
+    """
+    try:
+        import yfinance as yf
+
+        info = yf.Ticker(ticker).get_info()
+    except Exception as exc:
+        logger.debug("  %s: no share count available (%s)", ticker, exc)
+        return None
+
+    for key in ("sharesOutstanding", "impliedSharesOutstanding"):
+        value = info.get(key)
+        if isinstance(value, (int, float)) and value > 0:
+            return float(value)
+    return None
+
+
 def load_dataset() -> tuple[str, list[dict]]:
     source = DATA_FILE.read_text(encoding="utf-8")
     marker = "export const STOCKS_DATA: Stock[] = "
@@ -121,10 +142,22 @@ def refresh(chunk_size: int = 40, period: str = "1y") -> int:
 
             # Market cap moves with price. Shares outstanding are implied by
             # the figure already stored, so rescale rather than re-fetch.
+            #
+            # A zero could never recover from this, because rescaling zero
+            # leaves zero and the guard then skipped it forever. Reliance and
+            # TCS — the two largest companies in the universe — sat at a market
+            # cap of 0 through every refresh, so any screen with a size floor
+            # silently dropped them. When there is no figure to rescale, take
+            # the share count from Yahoo once and rebuild it.
             old_price = stock.get("current_price") or 0
             if old_price > 0 and stock.get("market_cap"):
                 shares = (stock["market_cap"] * INR_CRORE) / old_price
                 stock["market_cap"] = _round((last * shares) / INR_CRORE, 0)
+            elif not stock.get("market_cap"):
+                shares = _shares_outstanding(ticker)
+                if shares:
+                    stock["market_cap"] = _round((last * shares) / INR_CRORE, 0)
+                    logger.info("  %s: rebuilt a market cap that was 0", symbol)
 
             stock["current_price"] = _round(last)
             stock["change"] = _round(last - previous)

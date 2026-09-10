@@ -58,13 +58,25 @@ export function pnlRowsThatDoNotReconcile(pnl: AnnualPnL[]): string[] {
     .map((row) => row.year);
 }
 
+/**
+ * Years where the balance sheet does not balance.
+ *
+ * This used to check the equity and liability rows against `total_liabilities`,
+ * which cannot hold: that field holds liabilities *excluding* equity, so the
+ * sum overshot it by the whole of shareholders' funds on nearly every sheet.
+ * The company page then carried a permanent footnote blaming "sub-account
+ * classifications" for a gap that was really a reserves figure read from
+ * retained earnings alone. Both sides foot to total assets.
+ */
 export function balanceSheetFootingErrors(stock: Stock): string[] {
   const years: string[] = [];
   for (const sheet of stock.balance_sheet || []) {
-    const liabilities = sheet.equity_capital + sheet.reserves + sheet.borrowings + sheet.other_liabilities;
+    if (!sheet.total_assets) continue;
+    const equityAndLiabilities =
+      sheet.equity_capital + sheet.reserves + sheet.borrowings + sheet.other_liabilities;
     const assets = sheet.fixed_assets + sheet.cwip + sheet.investments + sheet.other_assets;
     if (
-      relativeGap(liabilities, sheet.total_liabilities) > 0.02 ||
+      relativeGap(equityAndLiabilities, sheet.total_assets) > 0.02 ||
       relativeGap(assets, sheet.total_assets) > 0.02
     ) {
       years.push(sheet.year);
@@ -142,6 +154,17 @@ export function assessStock(stock: Stock): QualityFinding[] {
     });
   }
 
+  // Statements the pipeline refused to ship. Without this the company page
+  // would simply render no statements at all, with nothing to say why.
+  if (stock.statements_unavailable_reason) {
+    findings.push({
+      id: 'statements-withheld',
+      severity: 'warning',
+      title: 'Financial statements not available',
+      detail: stock.statements_unavailable_reason,
+    });
+  }
+
   const annual = (stock.annual_pnl || []).filter((p) => p.year !== 'TTM');
   const latest = annual[annual.length - 1];
 
@@ -171,7 +194,7 @@ export function assessStock(stock: Stock): QualityFinding[] {
       id: 'balance-sheet',
       severity: 'warning',
       title: 'Balance sheet line items',
-      detail: `Balance sheet items for ${footing.join(', ')} reflect sub-account groupings under Schedule III standards.`,
+      detail: `The balance sheet for ${footing.join(', ')} does not balance: the component rows do not add up to total assets. Treat those years as incompletely sourced.`,
     });
   }
 

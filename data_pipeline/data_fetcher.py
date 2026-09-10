@@ -94,6 +94,26 @@ def _fiscal_year_label(date: pd.Timestamp) -> str:
     return date.strftime("%b %Y")
 
 
+# The price history stored per company is weekly, so a moving average quoted in
+# days spans days/7 points. scripts/repair_dataset.mjs applies the same windows
+# on the way to the app; this keeps the ingest's own output consistent with it.
+_DAYS_PER_PRICE_POINT = 7
+
+
+def _add_moving_average_overlay(prices_list: list[dict]) -> None:
+    """Attach rolling 50- and 200-day averages to a weekly price series."""
+    closes = [p.get("price") for p in prices_list]
+
+    for field, days in (("dma_50", 50), ("dma_200", 200)):
+        window = round(days / _DAYS_PER_PRICE_POINT)
+        for i, point in enumerate(prices_list):
+            chunk = closes[i + 1 - window : i + 1]
+            if i + 1 < window or any(not isinstance(c, (int, float)) for c in chunk):
+                point.pop(field, None)
+                continue
+            point[field] = _round(sum(chunk) / window)
+
+
 class StockDataFetcher:
     """
     Comprehensive stock data fetcher using Yahoo Finance.
@@ -152,21 +172,51 @@ class StockDataFetcher:
                 mcap_cr = _round(
                     _safe_float(info.get("marketCap")) / INR_CRORE, 0
                 )
-                
+
                 stock = self._build_basic_info(clean_sym, name, info, cmp, mcap_cr)
 
+                # Yahoo quotes some Indian companies in rupees but reports their
+                # statements in dollars: Infosys comes back with
+                # financialCurrency 'USD' against a currency of 'INR'. Every
+                # statement figure was then divided by a crore as though it were
+                # rupees, so Infosys shipped total assets of 1,742 crore against
+                # a real 1.6 lakh crore — about 88x out, the exchange rate.
+                #
+                # The statements are not rescaled here. A multi-year statement
+                # needs each year's own rate, and inventing one would put a
+                # derived figure where a filed one belongs. The statements are
+                # skipped instead, so the company page reports them as
+                # unavailable rather than off by two orders of magnitude.
+                # Only the statements are affected: the price series, market cap
+                # and shareholding all stay in rupees, so those are still
+                # collected below.
+                financial_ccy = (info.get("financialCurrency") or "INR").upper()
+                statements_in_inr = financial_ccy == "INR"
+                if not statements_in_inr:
+                    logger.warning(
+                        "  %s: Yahoo reports statements in %s, not INR — skipping "
+                        "statements rather than shipping mis-scaled figures.",
+                        clean_sym,
+                        financial_ccy,
+                    )
+                    stock["statements_unavailable_reason"] = (
+                        f"Upstream reports this company's statements in {financial_ccy}; "
+                        "they are withheld rather than converted at an assumed rate."
+                    )
+
                 # ── Financial Statements ──
-                self._rate_limit()
-                self._add_annual_pnl(stock, ticker)
-                
-                self._rate_limit()
-                self._add_quarterly_results(stock, ticker)
-                
-                self._rate_limit()
-                self._add_balance_sheet(stock, ticker)
-                
-                self._rate_limit()
-                self._add_cash_flow(stock, ticker)
+                if statements_in_inr:
+                    self._rate_limit()
+                    self._add_annual_pnl(stock, ticker)
+
+                    self._rate_limit()
+                    self._add_quarterly_results(stock, ticker)
+
+                    self._rate_limit()
+                    self._add_balance_sheet(stock, ticker)
+
+                    self._rate_limit()
+                    self._add_cash_flow(stock, ticker)
 
                 # ── Price History & Technicals ──
                 self._rate_limit()
@@ -430,10 +480,11 @@ class StockDataFetcher:
                 stock["opm"] = latest["opm_pct"]
                 stock["npm"] = _round(safe_div(latest["net_profit"], latest["sales"]) * 100) if latest["sales"] else 0.0
                 
-                # Compute ROCE from latest: EBIT / (Total Assets - Current Liabilities)
-                # This is approximate; will refine with balance sheet data
-                if latest["sales"] > 0:
-                    stock["roce"] = _round(latest["opm_pct"] * 0.8)  # Rough estimate
+                # ROCE needs capital employed, which only the balance sheet
+                # carries. _add_balance_sheet computes it there. Guessing it as
+                # four fifths of the operating margin, as this used to, put a
+                # number that is not a return on capital into a field the
+                # screener treats as one.
                     
         except Exception as e:
             logger.warning(f"  Annual P&L error for {stock['symbol']}: {e}")
@@ -539,7 +590,6 @@ class StockDataFetcher:
                     return 0.0
 
                 equity_capital = _bs_val(["Share Issued", "Common Stock"])
-                reserves = _bs_val(["Retained Earnings", "Stockholders Equity"]) 
                 borrowings = _bs_val(["Total Debt", "Long Term Debt", "Current Debt"])
                 total_assets = _bs_val(["Total Assets"])
                 total_liab = _bs_val(["Total Liabilities Net Minority Interest", "Total Liabilities"])
@@ -548,6 +598,24 @@ class StockDataFetcher:
                 cwip = _bs_val(["Capital Work In Progress"])
                 other_liab = _round(total_liab - borrowings) if total_liab else 0.0
                 other_assets = _round(total_assets - fixed_assets - cwip - investments) if total_assets else 0.0
+
+                # Reserves used to be read from Retained Earnings, which leaves
+                # out share premium and the other reserve accounts. Reliance
+                # came out at 392k crore against a real 1,008k, and equity
+                # capital + reserves + borrowings + other liabilities then fell
+                # short of total assets on 1,672 of the 1,979 sheets here, by a
+                # median of 17%.
+                #
+                # Yahoo's total_liab excludes equity, so shareholders' funds are
+                # total assets less total liabilities and reserves are that less
+                # the share capital. Same residual derivation already used for
+                # other assets and other liabilities, and it makes the sheet
+                # foot by construction.
+                if total_assets and total_liab:
+                    reserves = _round(total_assets - total_liab - equity_capital)
+                else:
+                    reserves = _bs_val(["Stockholders Equity", "Retained Earnings"]) - equity_capital
+                    reserves = _round(reserves)
 
                 balance_sheets.append({
                     "year": year_label,
@@ -586,8 +654,12 @@ class StockDataFetcher:
                     capital_employed = latest_bs["total_assets"] - latest_bs.get("other_liabilities", 0)
                     if capital_employed > 0:
                         stock["roce"] = _round(safe_div(latest_pnl["operating_profit"], capital_employed) * 100)
-                if stock["roce"] == 0 and stock.get("roe", 0) > 0:
-                    stock["roce"] = _round(stock["roe"] * 1.05)
+                # A return on equity marked up 5% is not a return on capital
+                # employed: the two differ by exactly the leverage the metric
+                # exists to expose, so the substitution was worst for the
+                # companies it mattered most for. Left unreported instead.
+                if not stock.get("roce"):
+                    stock["roce"] = None
 
         except Exception as e:
             logger.warning(f"  Balance sheet error for {stock['symbol']}: {e}")
@@ -684,15 +756,21 @@ class StockDataFetcher:
                 daily_closes = [_safe_float(row.get("Close")) for _, row in daily_hist.iterrows() if _safe_float(row.get("Close")) > 0]
 
             if daily_closes:
-                stock["dma_50"] = compute_moving_average(daily_closes, 50) or _round(current_price * 0.98)
-                stock["dma_200"] = compute_moving_average(daily_closes, 200) or _round(current_price * 0.94)
+                # A moving average that cannot be computed is not reported. It
+                # used to fall back to 98% and 94% of the current price, which
+                # puts a number shaped like a moving average on a chart that has
+                # none, and makes "price above its 200-day average" answerable
+                # for companies with no history to answer it from.
+                stock["dma_50"] = compute_moving_average(daily_closes, 50)
+                stock["dma_200"] = compute_moving_average(daily_closes, 200)
                 stock["rsi_14"] = compute_rsi(daily_closes, 14)
-            
-            # Add DMA/PE data to price points (for chart overlays)
-            if daily_closes and len(daily_closes) >= 50:
-                for i, pp in enumerate(prices_list[-52:]):  # Last year of weekly data
-                    pp["dma_50"] = stock["dma_50"]
-                    pp["dma_200"] = stock["dma_200"]
+
+            # Chart overlay. The scalar above is one number: stamping it onto
+            # the last 52 points, as this used to, drew both averages as flat
+            # horizontal lines on all 500 charts. prices_list is weekly, so the
+            # windows are in weeks — averaging 50 weekly closes would plot a
+            # 50-week line under a 50-day label.
+            _add_moving_average_overlay(prices_list)
 
             stock["historical_prices"] = prices_list
 
@@ -796,55 +874,125 @@ class StockDataFetcher:
             })
         stock["ratios_history"] = ratios_history
 
-        # ── Piotroski Score (simplified) ──
-        try:
-            net_income = pnl[-1]["net_profit"] if pnl else 0
-            prev_income = pnl[-2]["net_profit"] if len(pnl) >= 2 else 0
-            cfo = stock["cfo_latest"]
-            
-            roa = safe_div(net_income, stock.get("debt", 1) + stock["market_cap"]) if stock["market_cap"] else 0
-            prev_roa = safe_div(prev_income, stock.get("debt", 1) + stock["market_cap"]) if stock["market_cap"] else 0
-
-            stock["piotroski_score"] = compute_piotroski_score(
-                net_income=net_income,
-                prev_net_income=prev_income,
-                operating_cf=cfo,
-                prev_operating_cf=cfo * 0.9,
-                total_assets=stock["market_cap"],
-                prev_total_assets=stock["market_cap"],
-                roa=roa,
-                prev_roa=prev_roa,
-                long_term_debt=stock["debt"],
-                prev_long_term_debt=stock["debt"] * 1.1,
-                current_ratio=stock["current_ratio"],
-                prev_current_ratio=stock["current_ratio"] * 0.95,
-                shares_outstanding=1,
-                prev_shares_outstanding=1,
-                gross_margin=stock["opm"],
-                prev_gross_margin=stock["opm"] * 0.95,
-                asset_turnover=1,
-                prev_asset_turnover=0.95,
-            )
-        except Exception:
-            stock["piotroski_score"] = 5
+        # ── Piotroski F-Score ──
+        #
+        # Every prior-year input here used to be invented from the current one:
+        # operating cash flow at 90%, long-term debt at 110%, the current ratio
+        # and gross margin at 95%, the share count as a constant 1 on both
+        # sides, and the market capitalisation standing in for total assets.
+        # Five of the nine tests therefore passed for any company that was
+        # merely alive, which is why nothing in the universe scored below 3 and
+        # 37% of it scored exactly 8.
+        #
+        # The statements assembled above carry the real prior year, so use it.
+        # The liquidity test is the one signal this dataset cannot support: the
+        # balance sheet has no current asset / current liability split. It is
+        # left unassessed rather than awarded, and the number of signals the
+        # score was drawn from is recorded alongside it.
+        stock["piotroski_score"], stock["piotroski_assessed"] = self._piotroski(stock, pnl)
 
         # ── Altman Z-Score ──
-        try:
-            bs_data = stock.get("balance_sheet", [])
-            if bs_data and pnl:
-                latest_bs = bs_data[-1]
-                latest_pnl = pnl[-1]
-                stock["altman_z_score"] = compute_altman_z_score(
-                    working_capital=latest_bs.get("other_assets", 0) - latest_bs.get("other_liabilities", 0),
-                    retained_earnings=latest_bs.get("reserves", 0),
-                    ebit=latest_pnl.get("operating_profit", 0),
-                    market_cap=stock["market_cap"],
-                    total_liabilities=latest_bs.get("total_liabilities", 1),
-                    sales=latest_pnl.get("sales", 0),
-                    total_assets=latest_bs.get("total_assets", 1),
-                )
-        except Exception:
-            stock["altman_z_score"] = 3.0
+        #
+        # total_assets was the market capitalisation, putting four of the five
+        # ratios on the wrong denominator. The coefficients are also calibrated
+        # on manufacturers: a bank's balance sheet is deposits, so the leverage
+        # terms read as distress for institutions that are not distressed.
+        stock["altman_z_score"] = self._altman(stock, pnl)
+
+    @staticmethod
+    def _piotroski(stock: dict, pnl: list[dict]) -> tuple[Optional[int], int]:
+        """F-score from the filed statements. Returns (score, signals assessed)."""
+        annual = [r for r in pnl if r.get("year") != "TTM"]
+        if len(annual) < 2:
+            return None, 0
+
+        by_year = lambda rows: {r["year"]: r for r in rows if r.get("year") != "TTM"}
+        bs = by_year(stock.get("balance_sheet") or [])
+        cf = by_year(stock.get("cash_flow") or [])
+
+        now, prev = annual[-1], annual[-2]
+        bs_now, bs_prev = bs.get(now["year"]), bs.get(prev["year"])
+        cf_now = cf.get(now["year"])
+
+        def val(row: Optional[dict], key: str) -> Optional[float]:
+            if not row:
+                return None
+            v = row.get(key)
+            return v if isinstance(v, (int, float)) else None
+
+        score = 0
+        assessed = 0
+
+        def test(passed: bool) -> None:
+            nonlocal score, assessed
+            assessed += 1
+            if passed:
+                score += 1
+
+        ni_now, ni_prev = val(now, "net_profit"), val(prev, "net_profit")
+        cfo = val(cf_now, "operating_cf")
+        ta_now, ta_prev = val(bs_now, "total_assets"), val(bs_prev, "total_assets")
+        scaled = bool(ta_now and ta_prev and ta_now > 0 and ta_prev > 0)
+
+        if ni_now is not None:
+            test(ni_now > 0)
+        if cfo is not None:
+            test(cfo > 0)
+        if ni_now is not None and ni_prev is not None and scaled:
+            test(ni_now / ta_now > ni_prev / ta_prev)
+        if cfo is not None and ni_now is not None:
+            test(cfo > ni_now)
+
+        br_now, br_prev = val(bs_now, "borrowings"), val(bs_prev, "borrowings")
+        if br_now is not None and br_prev is not None and scaled:
+            test(br_now / ta_now < br_prev / ta_prev)
+
+        # Share capital stands in for the share count: at a constant face value
+        # a rising figure means new shares were issued.
+        sc_now, sc_prev = val(bs_now, "equity_capital"), val(bs_prev, "equity_capital")
+        if sc_now is not None and sc_prev is not None:
+            test(sc_now <= sc_prev * 1.001)
+
+        om_now, om_prev = val(now, "opm_pct"), val(prev, "opm_pct")
+        if om_now is not None and om_prev is not None:
+            test(om_now > om_prev)
+
+        s_now, s_prev = val(now, "sales"), val(prev, "sales")
+        if s_now is not None and s_prev is not None and scaled:
+            test(s_now / ta_now > s_prev / ta_prev)
+
+        # A score drawn from a handful of signals is not a score.
+        return (score, assessed) if assessed >= 6 else (None, assessed)
+
+    @staticmethod
+    def _altman(stock: dict, pnl: list[dict]) -> Optional[float]:
+        """Z-score from the filed balance sheet. Not meaningful for financials."""
+        if stock.get("sector") == "Financial Services":
+            return None
+
+        annual = [r for r in pnl if r.get("year") != "TTM"]
+        bs_data = stock.get("balance_sheet") or []
+        if not annual or not bs_data:
+            return None
+
+        latest_bs, latest_pnl = bs_data[-1], annual[-1]
+        total_assets = latest_bs.get("total_assets") or 0
+        total_liabilities = latest_bs.get("total_liabilities") or 0
+        market_cap = stock.get("market_cap") or 0
+        if total_assets <= 0 or total_liabilities <= 0 or market_cap <= 0:
+            return None
+
+        return compute_altman_z_score(
+            # Working capital needs a current/non-current split the dataset does
+            # not carry. The two residual buckets are the closest stand-in.
+            working_capital=(latest_bs.get("other_assets") or 0) - (latest_bs.get("other_liabilities") or 0),
+            retained_earnings=latest_bs.get("reserves") or 0,
+            ebit=latest_pnl.get("operating_profit") or 0,
+            market_cap=market_cap,
+            total_liabilities=total_liabilities,
+            sales=latest_pnl.get("sales") or 0,
+            total_assets=total_assets,
+        )
 
     def _add_shareholding(self, stock: dict, ticker: yf.Ticker, info: dict) -> None:
         """Extract shareholding pattern from info and holders."""

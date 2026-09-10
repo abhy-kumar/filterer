@@ -6,7 +6,7 @@
 [![Vite](https://img.shields.io/badge/Vite-6.0-646cff?logo=vite)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com/)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776ab?logo=python)](https://python.org/)
-[![Test Suite](https://img.shields.io/badge/Tests-59%20Passed-emerald)](tests/)
+[![Test Suite](https://img.shields.io/badge/Tests-95%20Passed-emerald)](tests/)
 
 Filterer is an open-source, institutional-grade equity research terminal and screener for Indian equities (NSE and BSE). It provides sub-millisecond client-side formula evaluation, complete financial statements, company operational KPIs, marquee investor holdings, global input commodity cycles, and interactive TradingView technical charting across the NSE Nifty 500 constituent universe.
 
@@ -162,7 +162,7 @@ Price to Earning < Industry PE AND Operating profit margin > 18 AND Relative Str
 
 ## Supported Metric Catalog
 
-Filterer provides native screening and analysis support for over 70 standardized financial metrics:
+Filterer provides native screening and analysis support for the standardized financial metrics below:
 
 | Category | Standard Identifier | Shorthand Aliases | Unit |
 |---|---|---|---|
@@ -173,6 +173,26 @@ Filterer provides native screening and analysis support for over 70 standardized
 | **Cash Generation** | Free Cash Flow Yield, Piotroski Score, Cash Conversion Cycle, Operating Cash Flow 3Y | `fcf yield`, `f-score`, `ccc`, `ocf 3y` | % / Score / Days |
 | **Shareholding** | Promoter Holding, FII Holding, DII Holding, Pledged Percentage | `promoter stake`, `fii`, `dii`, `pledge` | % |
 | **Technicals** | 50 Day Moving Average, 200 Day Moving Average, 20 Day EMA, Relative Strength Index, Distance from 52W High | `dma 50`, `dma 200`, `ema 20`, `rsi`, `down from 52w high` | INR / % / Points |
+
+
+### Metric coverage
+
+Not every metric in the catalog is populated for this universe, and the ones that
+are not report as "not reported" rather than as zero. Screening on them returns
+nothing rather than everything, and the formula editor flags a metric with low
+coverage as you type.
+
+| Metric | Coverage | Why |
+|---|---|---|
+| Sales / profit growth 5Y and 10Y | none | The upstream feed carries four years of annual statements; a five-year CAGR needs six. |
+| Current ratio, quick ratio | 7% | The balance sheet has no current asset / current liability split. |
+| Debtor days, inventory days, days payable, working capital days, cash conversion cycle | none | Same missing split. |
+| FII / DII holding, pledged percentage | under 1% | Only promoter and public holdings come through the shareholding feed. |
+| Multi-year ROE (3Y, 5Y, 10Y) | 11% | Needs a per-year book value the statements do not carry. |
+
+The Piotroski F-score is scored on eight of its nine signals for the same reason:
+the liquidity test needs the current split. The Altman Z-score is not reported for
+banks and NBFCs, whose balance sheets the manufacturing coefficients misread.
 
 ---
 
