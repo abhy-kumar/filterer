@@ -20,19 +20,22 @@ interface AIInsightsSummaryProps {
 }
 
 export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) => {
-  const concallData = useMemo<StockConcallInsights>(() => {
+  const concallData = useMemo<StockConcallInsights | null>(() => {
     return generateStockConcallInsights(stock);
   }, [stock]);
 
+  const quarters = concallData?.quarters || [];
+
   const [selectedQuarterName, setSelectedQuarterName] = useState<string>(
-    concallData.quarters[0]?.quarter || 'Q3 FY25'
+    quarters[0]?.quarter || 'Q3 FY25'
   );
 
   const activeQuarter = useMemo<ConcallQuarterData | undefined>(() => {
+    if (!concallData) return undefined;
     return concallData.quarters.find((q) => q.quarter === selectedQuarterName) || concallData.quarters[0];
   }, [concallData, selectedQuarterName]);
 
-  if (!activeQuarter) return null;
+  if (!concallData || !activeQuarter || quarters.length === 0) return null;
 
   const sentimentColor =
     activeQuarter.sentimentScore >= 80

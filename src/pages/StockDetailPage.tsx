@@ -19,23 +19,10 @@ import { AIInsightsSummary } from '../components/StockDetail/AIInsightsSummary';
 import { CompanyInsightsTable } from '../components/StockDetail/CompanyInsightsTable';
 import { DataQualityPanel } from '../components/StockDetail/DataQualityPanel';
 import { Footer } from '../components/Footer';
+import { hasStockCompanyInsights } from '../engine/companyInsightsGenerator';
+import { hasStockConcallInsights } from '../engine/concallInsightsGenerator';
+import { hasCompanySegments } from '../data/segmentData';
 import type { Stock } from '../types/stock';
-
-const SECTIONS = [
-  { id: 'sec-analysis', label: 'Analysis' },
-  { id: 'sec-insights-kpi', label: 'Insights' },
-  { id: 'sec-insights', label: 'Concall Notes' },
-  { id: 'sec-charts', label: 'Charts' },
-  { id: 'sec-peers', label: 'Peers' },
-  { id: 'sec-quarters', label: 'Quarters' },
-  { id: 'sec-segments', label: 'Segments' },
-  { id: 'sec-pnl', label: 'P&L' },
-  { id: 'sec-balancesheet', label: 'Balance sheet' },
-  { id: 'sec-cashflows', label: 'Cash flow' },
-  { id: 'sec-ratios', label: 'Ratios' },
-  { id: 'sec-shareholding', label: 'Shareholding' },
-  { id: 'sec-documents', label: 'Filings' },
-];
 
 export const StockDetailPage: React.FC = () => {
   const { symbol } = useParams<{ symbol: string }>();
@@ -44,7 +31,7 @@ export const StockDetailPage: React.FC = () => {
   // Statements live in the detail tier now, not the bundle, so the page has a
   // real loading state rather than silently rendering nothing.
   const [detailStatus, setDetailStatus] = useState<'loading' | 'ready' | 'failed'>('loading');
-  const [activeSection, setActiveSection] = useState(SECTIONS[0].id);
+  const [activeSection, setActiveSection] = useState('sec-analysis');
   const navRef = useRef<HTMLDivElement>(null);
 
   const bundledStock = useMemo(
@@ -94,9 +81,40 @@ export const StockDetailPage: React.FC = () => {
     };
   }, [bundledStock, remoteData]);
 
+  const hasInsights = useMemo(() => hasStockCompanyInsights(stock), [stock]);
+  const hasConcall = useMemo(() => hasStockConcallInsights(stock), [stock]);
+  const hasSegments = useMemo(() => hasCompanySegments(stock), [stock]);
+
+  const sections = useMemo(() => {
+    const list = [{ id: 'sec-analysis', label: 'Analysis' }];
+    if (hasInsights) {
+      list.push({ id: 'sec-insights-kpi', label: 'Insights' });
+    }
+    if (hasConcall) {
+      list.push({ id: 'sec-insights', label: 'Concall Notes' });
+    }
+    list.push(
+      { id: 'sec-charts', label: 'Charts' },
+      { id: 'sec-peers', label: 'Peers' },
+      { id: 'sec-quarters', label: 'Quarters' }
+    );
+    if (hasSegments) {
+      list.push({ id: 'sec-segments', label: 'Segments' });
+    }
+    list.push(
+      { id: 'sec-pnl', label: 'P&L' },
+      { id: 'sec-balancesheet', label: 'Balance sheet' },
+      { id: 'sec-cashflows', label: 'Cash flow' },
+      { id: 'sec-ratios', label: 'Ratios' },
+      { id: 'sec-shareholding', label: 'Shareholding' },
+      { id: 'sec-documents', label: 'Filings' }
+    );
+    return list;
+  }, [hasInsights, hasConcall, hasSegments]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveSection(SECTIONS[0].id);
+    setActiveSection('sec-analysis');
   }, [symbol]);
 
   // Highlight the section the reader is actually looking at.
@@ -113,12 +131,12 @@ export const StockDetailPage: React.FC = () => {
       { rootMargin: '-140px 0px -60% 0px', threshold: 0 }
     );
 
-    for (const section of SECTIONS) {
+    for (const section of sections) {
       const el = document.getElementById(section.id);
       if (el) observer.observe(el);
     }
     return () => observer.disconnect();
-  }, [stock]);
+  }, [stock, sections]);
 
   useEffect(() => {
     navRef.current
@@ -171,7 +189,7 @@ export const StockDetailPage: React.FC = () => {
             </div>
 
             <div ref={navRef} className="flex items-center gap-0.5 overflow-x-auto no-scrollbar scroll-touch ml-auto">
-              {SECTIONS.map((section) => (
+              {sections.map((section) => (
                 <button
                   key={section.id}
                   data-section={section.id}
@@ -200,12 +218,16 @@ export const StockDetailPage: React.FC = () => {
           <section id="sec-analysis" className="scroll-mt-32">
             <StockProsCons stock={stock} />
           </section>
-          <section id="sec-insights-kpi" className="scroll-mt-32">
-            <CompanyInsightsTable stock={stock} />
-          </section>
-          <section id="sec-insights" className="scroll-mt-32">
-            <AIInsightsSummary stock={stock} />
-          </section>
+          {hasInsights && (
+            <section id="sec-insights-kpi" className="scroll-mt-32">
+              <CompanyInsightsTable stock={stock} />
+            </section>
+          )}
+          {hasConcall && (
+            <section id="sec-insights" className="scroll-mt-32">
+              <AIInsightsSummary stock={stock} />
+            </section>
+          )}
           {detailStatus === 'loading' && (
             <div className="space-y-5" aria-busy="true" aria-label="Loading statements">
               {[320, 220, 380, 300].map((height, i) => (
@@ -237,9 +259,11 @@ export const StockDetailPage: React.FC = () => {
           <section id="sec-quarters" className="scroll-mt-32">
             <QuarterlyResultsTable stock={stock} />
           </section>
-          <section id="sec-segments" className="scroll-mt-32">
-            <SegmentResultsTable stock={stock} />
-          </section>
+          {hasSegments && (
+            <section id="sec-segments" className="scroll-mt-32">
+              <SegmentResultsTable stock={stock} />
+            </section>
+          )}
           <section id="sec-pnl" className="scroll-mt-32">
             <ProfitLossTable stock={stock} />
           </section>

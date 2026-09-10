@@ -20,7 +20,7 @@ const SEGMENT_COLORS = [
 
 export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock }) => {
   const segmentData = useMemo(() => getCompanySegments(stock), [stock]);
-  const periods = segmentData.periods;
+  const periods = segmentData?.periods || [];
   const [selectedPeriodName, setSelectedPeriodName] = useState<string>(periods[0]?.period || 'FY24');
 
   const selectedPeriod = useMemo<SegmentPeriod | undefined>(() => {
@@ -39,7 +39,7 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
     return { largestRev, highestMargin };
   }, [selectedPeriod]);
 
-  if (!selectedPeriod || !selectedPeriod.segments.length) {
+  if (!segmentData || !selectedPeriod || !selectedPeriod.segments.length) {
     return null;
   }
 

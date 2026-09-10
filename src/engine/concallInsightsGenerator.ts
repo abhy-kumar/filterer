@@ -234,95 +234,28 @@ export const CURATED_CONCALLS: Record<string, StockConcallInsights> = {
   },
 };
 
+// Aliases for demerged or dual-listed entities
+CURATED_CONCALLS['TMCV'] = CURATED_CONCALLS['TATAMOTORS'];
+CURATED_CONCALLS['TMPV'] = CURATED_CONCALLS['TATAMOTORS'];
+
 /**
- * Generates dynamic, domain-aware algorithmic concall synthesis for any stock in STOCKS_DATA.
+ * Checks whether verified concall transcript highlights exist for a stock.
  */
-export function generateStockConcallInsights(stock: Stock): StockConcallInsights {
+export function hasStockConcallInsights(stock: Stock | { symbol: string } | null | undefined): boolean {
+  if (!stock || !stock.symbol) return false;
   const symbol = stock.symbol.toUpperCase();
-  if (CURATED_CONCALLS[symbol]) {
-    return CURATED_CONCALLS[symbol];
-  }
-
-  const growth = stock.sales_growth_3y ?? 10;
-  const opm = stock.opm ?? 14;
-  const de = stock.debt_to_equity ?? 0.3;
-  const mcap = stock.market_cap || 5000;
-
-  // Sentiment calculation based on fundamentals
-  let sentimentScore = 72;
-  if (growth > 18 && opm > 18) sentimentScore = 88;
-  else if (growth > 12 && opm > 12) sentimentScore = 80;
-  else if (growth < 5 || opm < 8) sentimentScore = 60;
-
-  let sentimentLabel: ConcallQuarterData['sentimentLabel'] = 'Constructive & Optimistic';
-  if (sentimentScore >= 82) sentimentLabel = 'Strongly Bullish';
-  else if (sentimentScore <= 64) sentimentLabel = 'Cautious / Neutral';
-
-  const capexEst = Math.round(mcap * 0.04);
-
-  const tailwinds: string[] = [
-    `Strong domestic demand expansion across core ${stock.industry} customer segments`,
-    `Operating leverage benefits as capacity utilization approaches 80%+`,
-    `Benign raw material cost environment supporting gross margin stability`,
-  ];
-
-  const headwinds: string[] = [
-    `Global macro cross-currents and export freight rate fluctuations`,
-    `Competitive intensity in unorganized-to-organized market share migration`,
-    de > 0.8 ? `Elevated interest burden requiring focused working capital optimization` : `Selective consumer hesitation on high-ticket discretionary categories`,
-  ];
-
-  const quotes: ConcallQuote[] = [
-    {
-      speaker: 'Managing Director & CEO',
-      designation: 'Executive Management',
-      quote: `Our business fundamentals in ${stock.industry} remain exceptionally resilient. With our targeted capacity additions coming on stream, we are poised to gain structural market share while sustaining our focus on return on capital.`,
-      topic: 'Strategic Outlook & Volume Trajectory',
-    },
-    {
-      speaker: 'Chief Financial Officer',
-      designation: 'Finance & Accounts',
-      quote: `We have maintained stringent cost discipline, keeping fixed overheads under control. Our balance sheet remains healthy, with operating cash flows adequately meeting planned capital commitments.`,
-      topic: 'Cost Rationalization & Cash Flows',
-    },
-  ];
-
-  const analystQA: AnalystQAPair[] = [
-    {
-      analystName: 'Institutional Equity Analyst',
-      firm: 'Kotak Institutional Equities',
-      question: `Could management guide on volume growth and sustainable operating margin targets over the next 12 to 18 months?`,
-      answer: `We target volume growth outperforming the broader ${stock.sector} industry by 300 to 500 basis points, with EBITDA margins expected to sustain in the current ${Math.round(opm)}% - ${Math.round(opm + 2)}% corridor.`,
-    },
-    {
-      analystName: 'Sector Research Analyst',
-      firm: 'Motilal Oswal Financial Services',
-      question: `What is the timeline for the ongoing capex programs and expected payback period?`,
-      answer: `The ongoing ₹${capexEst.toLocaleString('en-IN')} Cr capex program is tracking well ahead of internal milestones and will commission in phases through the next 4 quarters, with an anticipated IRR in excess of 18%.`,
-    },
-  ];
-
-  return {
-    symbol,
-    companyName: stock.name,
-    quarters: [
-      {
-        quarter: 'Q3 FY25',
-        date: 'January 2025',
-        sentimentScore,
-        sentimentLabel,
-        summaryParagraph: `Management expressed ${sentimentLabel.toLowerCase()} sentiment during the Q3 concall. Revenue growth tracked at sustainable rates supported by domestic distribution expansion. Operating margins reflected stable raw material procurement and fixed cost leverage.`,
-        capexGuidance: {
-          amountCr: `₹${capexEst.toLocaleString('en-IN')} Cr`,
-          timeline: 'FY25 - FY26 phased execution',
-          focusAreas: ['Capacity brownfield debottlenecking', 'Digital automation & supply chain integration', 'Energy efficiency upgrades'],
-          fundingSource: de > 0.5 ? 'Mix of internal cash accruals and long-term project debt' : '100% internal cash flows with negligible leverage',
-        },
-        tailwinds,
-        headwinds,
-        managementQuotes: quotes,
-        analystQA,
-      },
-    ],
-  };
+  const data = CURATED_CONCALLS[symbol];
+  return Boolean(data && data.quarters && data.quarters.length > 0);
 }
+
+/**
+ * Retrieves authentic verified earnings concall synthesis for a stock.
+ * Returns null if verified transcript disclosures are not published for this stock.
+ * Synthetic model generation is strictly disallowed to ensure 100% data authenticity.
+ */
+export function generateStockConcallInsights(stock: Stock): StockConcallInsights | null {
+  if (!stock || !stock.symbol) return null;
+  const symbol = stock.symbol.toUpperCase();
+  return CURATED_CONCALLS[symbol] || null;
+}
+

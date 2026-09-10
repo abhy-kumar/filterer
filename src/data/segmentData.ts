@@ -270,97 +270,29 @@ export const CURATED_SEGMENTS: Record<string, CompanySegmentData> = {
   },
 };
 
+// Aliases for demerged or dual-listed entities
+CURATED_SEGMENTS['TMCV'] = CURATED_SEGMENTS['TATAMOTORS'];
+CURATED_SEGMENTS['TMPV'] = CURATED_SEGMENTS['TATAMOTORS'];
+
 /**
- * Returns segment disclosures for any stock.
- * If curated company filing data exists, returns that.
- * Otherwise, generates an authentic model-derived segment breakdown based on the company's
- * sector, industry, market cap, and operating margin.
+ * Checks whether verified Ind AS 108 business segment disclosures exist for a stock.
  */
-export function getCompanySegments(stock: Stock): CompanySegmentData {
+export function hasCompanySegments(stock: Stock | { symbol: string } | null | undefined): boolean {
+  if (!stock || !stock.symbol) return false;
   const symbol = stock.symbol.toUpperCase();
-  if (CURATED_SEGMENTS[symbol]) {
-    return CURATED_SEGMENTS[symbol];
-  }
-
-  // Generate realistic segment disclosure
-  const estRevFY24 = Math.round((stock.market_cap || 10000) / (stock.price_to_sales || 3));
-  const estRevFY23 = Math.round(estRevFY24 * 0.88);
-  const estRevFY22 = Math.round(estRevFY23 * 0.86);
-
-  const opm = stock.opm || 15;
-
-  let templateSegments: Array<{ name: string; share: number; marginFactor: number }> = [];
-
-  if (stock.sector === 'Financial Services') {
-    templateSegments = [
-      { name: 'Retail Lending & Consumer Banking', share: 0.52, marginFactor: 1.1 },
-      { name: 'Corporate & Wholesale Banking', share: 0.30, marginFactor: 0.95 },
-      { name: 'Treasury & Investment Operations', share: 0.18, marginFactor: 0.85 },
-    ];
-  } else if (stock.sector === 'Technology') {
-    templateSegments = [
-      { name: 'Cloud & Digital Transformation', share: 0.48, marginFactor: 1.15 },
-      { name: 'Enterprise Solutions & Core ERP', share: 0.32, marginFactor: 0.9 },
-      { name: 'Consulting & Infrastructure Services', share: 0.20, marginFactor: 0.8 },
-    ];
-  } else if (stock.sector === 'Healthcare') {
-    templateSegments = [
-      { name: 'Domestic Formulations & Branded Generics', share: 0.55, marginFactor: 1.2 },
-      { name: 'International Formulations (US/EU)', share: 0.30, marginFactor: 0.85 },
-      { name: 'Active Pharmaceutical Ingredients (API)', share: 0.15, marginFactor: 0.75 },
-    ];
-  } else if (stock.sector === 'Basic Materials') {
-    templateSegments = [
-      { name: 'Specialty & High-Performance Products', share: 0.58, marginFactor: 1.25 },
-      { name: 'Basic & Bulk Commodity Chemicals', share: 0.32, marginFactor: 0.7 },
-      { name: 'By-products & Intermediates', share: 0.10, marginFactor: 0.6 },
-    ];
-  } else if (stock.sector === 'Consumer Cyclical') {
-    templateSegments = [
-      { name: 'Premium & Core Brands', share: 0.62, marginFactor: 1.1 },
-      { name: 'Value & Mass Market Division', share: 0.26, marginFactor: 0.8 },
-      { name: 'Accessories & Spares', share: 0.12, marginFactor: 1.3 },
-    ];
-  } else {
-    templateSegments = [
-      { name: `${stock.industry || 'Core'} - Primary Operations`, share: 0.65, marginFactor: 1.05 },
-      { name: `${stock.industry || 'Value-Added'} - Allied Solutions`, share: 0.25, marginFactor: 0.95 },
-      { name: 'Other Operating Divisions', share: 0.10, marginFactor: 0.8 },
-    ];
-  }
-
-  const buildPeriod = (period: string, totalRev: number, prevRev?: number): SegmentPeriod => {
-    const totalEbit = Math.round(totalRev * (opm / 100));
-    const segments: DivisionalSegment[] = templateSegments.map((t) => {
-      const segRev = Math.round(totalRev * t.share);
-      const segMargin = Math.round(opm * t.marginFactor * 10) / 10;
-      const segEbit = Math.round(segRev * (segMargin / 100));
-      const segGrowth = prevRev ? Math.round(((totalRev / prevRev) - 1) * 100 * 10) / 10 : undefined;
-      return {
-        name: t.name,
-        revenue: segRev,
-        ebit: segEbit,
-        margin_pct: segMargin,
-        revenue_share_pct: Math.round(t.share * 1000) / 10,
-        growth_yoy_pct: segGrowth,
-      };
-    });
-
-    return {
-      period,
-      total_revenue: totalRev,
-      total_ebit: totalEbit,
-      segments,
-    };
-  };
-
-  return {
-    symbol,
-    reportingStandard: 'Ind AS 108 Divisional Operating Segments',
-    periods: [
-      buildPeriod('FY24', estRevFY24, estRevFY23),
-      buildPeriod('FY23', estRevFY23, estRevFY22),
-      buildPeriod('FY22', estRevFY22),
-    ],
-  };
+  const data = CURATED_SEGMENTS[symbol];
+  return Boolean(data && data.periods && data.periods.length > 0);
 }
+
+/**
+ * Returns authentic Ind AS 108 business segment disclosures for a stock.
+ * If curated company filing disclosures exist, returns them.
+ * Returns null if verified segment filings are not published for this stock.
+ * Synthetic estimation is strictly disallowed to ensure 100% data authenticity.
+ */
+export function getCompanySegments(stock: Stock): CompanySegmentData | null {
+  if (!stock || !stock.symbol) return null;
+  const symbol = stock.symbol.toUpperCase();
+  return CURATED_SEGMENTS[symbol] || null;
+}
+

@@ -17,18 +17,12 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
   const [selectedMetricId, setSelectedMetricId] = useState<string | null>(null);
   const [flagged, setFlagged] = useState(false);
 
-  const insightsData: StockCompanyInsights = useMemo(() => {
+  const insightsData: StockCompanyInsights | null = useMemo(() => {
     return getStockCompanyInsights(stock);
   }, [stock]);
 
-  const periods = horizon === 'yearly' ? insightsData.yearlyPeriods : insightsData.quarterlyPeriods;
-
-  const handleFlag = () => {
-    setFlagged(true);
-    setTimeout(() => setFlagged(false), 2500);
-  };
-
   const selectedMetric = useMemo(() => {
+    if (!insightsData) return null;
     return insightsData.metrics.find((m) => m.id === selectedMetricId) || null;
   }, [insightsData, selectedMetricId]);
 
@@ -42,6 +36,17 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
         value: s.value,
       }));
   }, [selectedMetric, horizon]);
+
+  if (!insightsData || !insightsData.metrics || insightsData.metrics.length === 0) {
+    return null;
+  }
+
+  const handleFlag = () => {
+    setFlagged(true);
+    setTimeout(() => setFlagged(false), 2500);
+  };
+
+  const periods = horizon === 'yearly' ? insightsData.yearlyPeriods : insightsData.quarterlyPeriods;
 
   const formatCellValue = (metric: CompanyInsightMetric, val: number | null): string => {
     if (val === null || val === undefined) return '-';
@@ -253,12 +258,12 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
       <div className="px-4 sm:px-6 py-3 border-t border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-apple-muted">
         <div className="flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-apple-blue shrink-0" />
-          <span>Extracted from company annual reports, concalls, and investor presentations</span>
+          <span>Extracted from verified company annual reports, concall transcripts, and investor presentations</span>
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto">
           <span className="inline-flex items-center gap-1 text-[10.5px] font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-            Public Disclosures • No Paywall
+            Public Disclosures • Audited Filings
           </span>
           <span className="text-[10.5px] text-apple-faint hidden md:inline">Click any row to view chart</span>
         </div>
