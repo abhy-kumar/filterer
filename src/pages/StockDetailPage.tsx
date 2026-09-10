@@ -156,10 +156,10 @@ export const StockDetailPage: React.FC = () => {
       <>
         <main className="flex-1 flex items-center justify-center p-8">
           <div className="apple-card p-8 max-w-md w-full text-center">
-            <h1 className="text-base font-semibold text-apple-primary mb-1.5 font-display">
+            <h1 className="text-headline text-apple-primary mb-1.5 font-display">
               Stock not found
             </h1>
-            <p className="text-xs text-apple-muted mb-6 leading-relaxed">
+            <p className="text-caption1 text-apple-muted mb-6 leading-relaxed">
               No company found for symbol <code className="font-mono text-apple-secondary">{symbol}</code>.
               Filterer currently covers the Nifty 500 universe.
             </p>
@@ -179,7 +179,7 @@ export const StockDetailPage: React.FC = () => {
         {/* Breadcrumb and section nav */}
         <div className="sticky top-[88px] z-30 apple-glass border-b border-apple-border">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-11 flex items-center gap-4">
-            <div className="flex items-center gap-1.5 text-xs shrink-0">
+            <div className="flex items-center gap-1.5 text-caption1 shrink-0">
               <Link to="/" className="flex items-center gap-1 text-apple-muted hover:text-apple-primary transition-colors">
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Screener</span>
@@ -194,7 +194,7 @@ export const StockDetailPage: React.FC = () => {
                   key={section.id}
                   data-section={section.id}
                   onClick={() => scrollTo(section.id)}
-                  className={`px-2.5 py-1 rounded-md text-[11px] whitespace-nowrap transition-colors ${
+                  className={`px-2.5 py-1 rounded-md text-caption2 whitespace-nowrap transition-colors ${
                     activeSection === section.id
                       ? 'text-apple-primary font-semibold bg-apple-surface-active'
                       : 'text-apple-muted hover:text-apple-primary'
@@ -238,10 +238,10 @@ export const StockDetailPage: React.FC = () => {
 
           {detailStatus === 'failed' && (
             <div className="apple-card p-6 text-center">
-              <h2 className="text-sm font-semibold text-apple-primary font-display">
+              <h2 className="text-subheadline font-semibold text-apple-primary font-display">
                 Could not load financial statements
               </h2>
-              <p className="text-xs text-apple-muted mt-1.5 max-w-md mx-auto leading-relaxed">
+              <p className="text-caption1 text-apple-muted mt-1.5 max-w-md mx-auto leading-relaxed">
                 Unable to load financial statements for this company. Please check your connection and refresh the page.
               </p>
               <button onClick={() => navigate(0)} className="apple-btn apple-btn-secondary mt-4">

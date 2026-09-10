@@ -67,8 +67,8 @@ export function StatementTable<T>({
     <div className="apple-card overflow-hidden">
       <div className="px-3.5 sm:px-5 py-2.5 sm:py-3 border-b border-apple-border flex items-center justify-between gap-2 flex-wrap">
         <div>
-          <h2 className="text-xs sm:text-sm font-semibold text-apple-primary font-display">{title}</h2>
-          {subtitle && <p className="text-[11px] sm:text-xs text-apple-muted mt-0.5">{subtitle}</p>}
+          <h2 className="text-caption1 sm:text-subheadline font-semibold text-apple-primary font-display">{title}</h2>
+          {subtitle && <p className="text-caption2 sm:text-caption1 text-apple-muted mt-0.5">{subtitle}</p>}
         </div>
         <div className="flex items-center gap-1.5 ml-auto">
           {/* Quick period jump on mobile */}
@@ -76,7 +76,7 @@ export function StatementTable<T>({
             <button
               type="button"
               onClick={scrollToOldest}
-              className="apple-btn apple-btn-secondary px-2 py-0.5 text-[10px]"
+              className="apple-btn apple-btn-secondary px-2 py-0.5 text-caption2"
               title="Jump to oldest years"
             >
               Oldest
@@ -84,7 +84,7 @@ export function StatementTable<T>({
             <button
               type="button"
               onClick={scrollToLatest}
-              className="apple-btn apple-btn-secondary px-2 py-0.5 text-[10px] text-apple-blue font-semibold"
+              className="apple-btn apple-btn-secondary px-2 py-0.5 text-caption2 text-apple-blue font-semibold"
               title="Jump to latest numbers"
             >
               Latest →
@@ -98,13 +98,13 @@ export function StatementTable<T>({
         <table className="apple-table">
           <thead>
             <tr>
-              <th className="apple-sticky-col text-left min-w-[125px] sm:min-w-[170px] px-2.5 sm:px-3 py-2 sm:py-2.5 text-[10.5px] sm:text-[11px]">
+              <th className="apple-sticky-col text-left min-w-[125px] sm:min-w-[170px] px-2.5 sm:px-3 py-2 sm:py-2.5 text-caption2 sm:text-caption2">
                 {labelHeader}
               </th>
               {periods.map((period, i) => (
                 <th
                   key={columnLabel(period)}
-                  className={`text-right px-2.5 sm:px-3 py-2 sm:py-2.5 text-[10.5px] sm:text-[11px] ${
+                  className={`text-right px-2.5 sm:px-3 py-2 sm:py-2.5 text-caption2 sm:text-caption2 ${
                     highlightLast && i === periods.length - 1 ? 'text-apple-primary font-bold' : ''
                   }`}
                 >
@@ -117,7 +117,7 @@ export function StatementTable<T>({
             {rows.map((row) => (
               <tr key={row.label}>
                 <td
-                  className={`apple-sticky-col px-2.5 sm:px-3 py-2 sm:py-2.5 text-xs ${
+                  className={`apple-sticky-col px-2.5 sm:px-3 py-2 sm:py-2.5 text-caption1 ${
                     row.emphasis === 'total'
                       ? 'font-semibold text-apple-primary'
                       : row.emphasis === 'subtotal'
@@ -128,7 +128,7 @@ export function StatementTable<T>({
                   <span className="truncate block max-w-[115px] sm:max-w-none" title={row.label}>
                     {row.label}
                   </span>
-                  {row.hint && <span className="block text-[9.5px] sm:text-[10px] text-apple-faint font-normal">{row.hint}</span>}
+                  {row.hint && <span className="block text-caption2 text-apple-faint font-normal">{row.hint}</span>}
                 </td>
                 {periods.map((period, i) => {
                   const value = row.value(period);
@@ -136,7 +136,7 @@ export function StatementTable<T>({
                   return (
                     <td
                       key={columnLabel(period)}
-                      className={`text-right font-mono whitespace-nowrap px-2.5 sm:px-3 py-2 sm:py-2.5 text-[11px] sm:text-xs ${
+                      className={`text-right num whitespace-nowrap px-2.5 sm:px-3 py-2 sm:py-2.5 text-caption2 sm:text-caption1 ${
                         row.emphasis === 'total' ? 'font-semibold' : ''
                       } ${highlightLast && isLast ? 'text-apple-primary font-semibold' : 'text-apple-secondary'}`}
                     >
@@ -152,7 +152,7 @@ export function StatementTable<T>({
 
 
       {footnote && (
-        <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-[11px] text-apple-muted leading-relaxed">
+        <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-caption2 text-apple-muted leading-relaxed">
           {footnote}
         </div>
       )}

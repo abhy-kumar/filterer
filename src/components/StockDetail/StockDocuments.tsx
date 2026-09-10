@@ -107,8 +107,8 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
 
   const group = (heading: string, note: string, links: DocLink[]) => (
     <div className="apple-card p-4 flex flex-col">
-      <h3 className="text-xs font-semibold text-apple-primary font-display">{heading}</h3>
-      <p className="text-[11px] text-apple-muted mt-0.5 mb-3 leading-relaxed">{note}</p>
+      <h3 className="text-caption1 font-semibold text-apple-primary font-display">{heading}</h3>
+      <p className="text-caption2 text-apple-muted mt-0.5 mb-3 leading-relaxed">{note}</p>
 
       <ul className="space-y-0.5 -mx-2">
         {links.map((link) => (
@@ -125,10 +125,10 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
                 <ExternalLink className="w-3.5 h-3.5 shrink-0 mt-0.5 text-apple-faint group-hover:text-apple-blue transition-colors" />
               )}
               <span className="min-w-0">
-                <span className="block text-xs text-apple-primary group-hover:text-apple-blue transition-colors">
+                <span className="block text-caption1 text-apple-primary group-hover:text-apple-blue transition-colors">
                   {link.title}
                 </span>
-                <span className="block text-[11px] text-apple-faint truncate">{link.source}</span>
+                <span className="block text-caption2 text-apple-faint truncate">{link.source}</span>
               </span>
             </a>
           </li>
@@ -149,7 +149,7 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
         )}
       </div>
 
-      <p className="text-[11px] text-apple-muted leading-relaxed">
+      <p className="text-caption2 text-apple-muted leading-relaxed">
         Exchange pages link to official filing archives on BSE and NSE, where full annual reports and announcements can be viewed.
       </p>
     </div>

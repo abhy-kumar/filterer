@@ -59,11 +59,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
     <header className="sticky top-0 z-40 w-full apple-glass border-b border-apple-border">
       {/* Sleek Financial Market Ticker Bar - strictly single row, never wraps */}
       <div className="border-b border-apple-border/50 bg-apple-bg-subtle/50 dark:bg-[#0f0f12]/90 backdrop-blur-md overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-8 h-8 flex items-center justify-between gap-3 text-xs select-none">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-8 h-8 flex items-center justify-between gap-3 text-caption1 select-none">
           {/* Left: Market Live / Closed Status */}
           <div className="flex items-center gap-2 shrink-0">
             <span
-              className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wider uppercase transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-caption2 font-semibold tracking-wider uppercase transition-colors ${
                 isMarketOpen
                   ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/25'
                   : 'bg-apple-surface/60 text-apple-muted border border-apple-border/50'
@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
               </span>
               <span>{isMarketOpen ? 'NSE Live' : 'Market Closed'}</span>
             </span>
-            <span className="text-[10.5px] font-mono text-apple-muted hidden sm:inline tabular-nums">
+            <span className="text-caption2 num text-apple-muted hidden sm:inline">
               {timeIST}
             </span>
           </div>
@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
                 ))}
               </div>
             ) : error ? (
-              <span className="text-apple-muted text-[11px] whitespace-nowrap">{error}</span>
+              <span className="text-apple-muted text-caption2 whitespace-nowrap">{error}</span>
             ) : (
               <div className="flex items-center gap-3 sm:gap-4 lg:gap-5 flex-nowrap whitespace-nowrap shrink-0">
                 {indices.map((idx) => {
@@ -105,21 +105,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
                   return (
                     <div
                       key={idx.name}
-                      className={`flex items-center gap-1.5 text-[11px] transition-colors py-0.5 shrink-0 ${
+                      className={`flex items-center gap-1.5 text-caption2 transition-colors py-0.5 shrink-0 ${
                         flash === 'up' ? 'flash-up' : flash === 'down' ? 'flash-down' : ''
                       }`}
                     >
-                      <span className="font-medium text-apple-muted text-[10.5px] tracking-tight">
+                      <span className="font-medium text-apple-muted text-caption2 tracking-tight">
                         {idx.name}
                       </span>
-                      <span className="font-mono font-semibold text-apple-primary tabular-nums">
+                      <span className="num font-semibold text-apple-primary">
                         {idx.price.toLocaleString('en-IN', {
                           minimumFractionDigits: 2,
                           maximumFractionDigits: 2,
                         })}
                       </span>
                       <span
-                        className={`font-mono text-[10px] font-semibold tabular-nums ${
+                        className={`num text-caption2 font-semibold ${
                           isPositive
                             ? 'text-emerald-600 dark:text-emerald-400'
                             : 'text-rose-600 dark:text-rose-400'
@@ -136,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
 
           {/* Right: Refresh button and status */}
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-[10px] font-mono text-apple-muted hidden lg:inline">
+            <span className="text-caption2 text-apple-muted hidden lg:inline">
               {isMarketOpen ? 'Real-time' : 'Prev Close'}
             </span>
             <button
@@ -160,47 +160,47 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
         <div className="flex items-center gap-4 lg:gap-6 min-w-0">
           <Link to="/" className="flex items-baseline gap-2 select-none shrink-0">
-            <span className="text-[17px] font-bold tracking-[-0.03em] text-apple-primary font-display">
+            <span className="text-headline font-bold tracking-[-0.028em] text-apple-primary font-display">
               Filterer
             </span>
-            <span className="text-[11px] text-apple-faint font-mono hidden sm:inline">NSE / BSE</span>
+            <span className="text-caption2 text-apple-faint hidden sm:inline">NSE / BSE</span>
           </Link>
 
           <nav className="hidden md:flex items-center apple-segmented overflow-x-auto no-scrollbar shrink-0">
             <button
               onClick={() => navigate('/')}
-              className={`apple-segmented-item flex items-center gap-1.5 text-xs py-1.5 px-3 ${currentTab === 'screens' ? 'active' : ''}`}
+              className={`apple-segmented-item flex items-center gap-1.5 text-caption1 py-1.5 px-3 ${currentTab === 'screens' ? 'active' : ''}`}
             >
               <Compass className="w-3.5 h-3.5 shrink-0" />
               <span>Screens</span>
             </button>
             <button
               onClick={() => navigate('/screen')}
-              className={`apple-segmented-item flex items-center gap-1.5 text-xs py-1.5 px-3 ${currentTab === 'query' ? 'active' : ''}`}
+              className={`apple-segmented-item flex items-center gap-1.5 text-caption1 py-1.5 px-3 ${currentTab === 'query' ? 'active' : ''}`}
             >
               <SlidersHorizontal className="w-3.5 h-3.5 shrink-0" />
               <span>Query</span>
             </button>
             <button
               onClick={() => navigate('/saved')}
-              className={`apple-segmented-item flex items-center gap-1.5 text-xs py-1.5 px-3 ${currentTab === 'saved' ? 'active' : ''}`}
+              className={`apple-segmented-item flex items-center gap-1.5 text-caption1 py-1.5 px-3 ${currentTab === 'saved' ? 'active' : ''}`}
             >
               <Bookmark className="w-3.5 h-3.5 shrink-0" />
               <span>Watchlists</span>
               {savedScreensCount > 0 && (
-                <span className="text-[10px] font-mono text-apple-muted">{savedScreensCount}</span>
+                <span className="text-caption2 num text-apple-muted">{savedScreensCount}</span>
               )}
             </button>
             <button
               onClick={() => navigate('/people')}
-              className={`apple-segmented-item flex items-center gap-1.5 text-xs py-1.5 px-3 ${currentTab === 'people' ? 'active' : ''}`}
+              className={`apple-segmented-item flex items-center gap-1.5 text-caption1 py-1.5 px-3 ${currentTab === 'people' ? 'active' : ''}`}
             >
               <Users className="w-3.5 h-3.5 shrink-0" />
               <span>Super-Investors</span>
             </button>
             <button
               onClick={() => navigate('/commodities')}
-              className={`apple-segmented-item flex items-center gap-1.5 text-xs py-1.5 px-3 ${currentTab === 'commodities' ? 'active' : ''}`}
+              className={`apple-segmented-item flex items-center gap-1.5 text-caption1 py-1.5 px-3 ${currentTab === 'commodities' ? 'active' : ''}`}
             >
               <Activity className="w-3.5 h-3.5 shrink-0" />
               <span>Commodities</span>
@@ -223,11 +223,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch, savedScreensCount 
               {/* Desktop search bar */}
               <button
                 onClick={onOpenSearch}
-                className="hidden md:flex apple-input items-center gap-2 px-2.5 h-8 text-xs text-apple-muted hover:text-apple-primary hover:border-apple-border-strong transition-colors w-36 lg:w-44 xl:w-60"
+                className="hidden md:flex apple-input items-center gap-2 px-2.5 h-8 text-caption1 text-apple-muted hover:text-apple-primary hover:border-apple-border-strong transition-colors w-36 lg:w-44 xl:w-60"
               >
                 <Search className="w-3.5 h-3.5 shrink-0" />
                 <span className="truncate">Search companies, ratios</span>
-                <kbd className="hidden xl:inline ml-auto text-[10px] font-mono text-apple-faint">⌘K</kbd>
+                <kbd className="hidden xl:inline ml-auto text-caption2 font-mono text-apple-faint">⌘K</kbd>
               </button>
             </>
           )}

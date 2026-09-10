@@ -51,14 +51,14 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <FileText className="w-5 h-5 text-apple-blue" />
-            <h2 className="text-lg font-bold text-apple-primary font-display">
+            <h2 className="text-title3 text-apple-primary font-display">
               Concall & Earnings Analysis
             </h2>
-            <span className="apple-tag text-[10px] font-semibold text-apple-blue bg-apple-blue/10 border-apple-blue/25">
+            <span className="apple-tag text-caption2 font-semibold text-apple-blue bg-apple-blue/10 border-apple-blue/25">
               Transcript Highlights
             </span>
           </div>
-          <p className="text-xs text-apple-muted">
+          <p className="text-caption1 text-apple-muted">
             Management commentary, capex pipeline, industry tailwinds, and earnings call Q&A.
           </p>
         </div>
@@ -70,7 +70,7 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
               key={q.quarter}
               type="button"
               onClick={() => setSelectedQuarterName(q.quarter)}
-              className={`apple-segmented-item text-xs ${
+              className={`apple-segmented-item text-caption1 ${
                 selectedQuarterName === q.quarter ? 'active' : ''
               }`}
             >
@@ -84,52 +84,52 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
       <div className="apple-well p-4 sm:p-5 rounded-xl space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-apple-border/50 pb-3">
           <div className="flex items-center gap-3">
-            <div className="text-3xl font-bold font-mono text-apple-primary leading-none">
+            <div className="text-title1 font-display tabular-nums text-apple-primary leading-none">
               <span className={sentimentColor}>{activeQuarter.sentimentScore}</span>
-              <span className="text-sm font-normal text-apple-muted font-sans">/100</span>
+              <span className="text-subheadline font-normal text-apple-muted font-sans">/100</span>
             </div>
             <div>
-              <div className="text-xs font-bold text-apple-primary">
+              <div className="text-caption1 font-bold text-apple-primary">
                 Management Tone: {activeQuarter.sentimentLabel}
               </div>
-              <div className="text-[10.5px] text-apple-muted">
+              <div className="text-caption2 text-apple-muted">
                 Analyzed from {activeQuarter.date} earnings conference call
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-xs font-mono text-apple-muted">
+          <div className="flex items-center gap-2 text-caption1 num text-apple-muted">
             <Calendar className="w-3.5 h-3.5" />
             <span>Filing: {activeQuarter.date}</span>
           </div>
         </div>
 
-        <p className="text-xs sm:text-sm text-apple-secondary leading-relaxed">
+        <p className="text-caption1 sm:text-subheadline text-apple-secondary leading-relaxed">
           {activeQuarter.summaryParagraph}
         </p>
       </div>
 
       {/* Capex & Capacity Guidance Card */}
       <div className="apple-card p-4 border border-apple-border/80 space-y-2.5 bg-apple-surface/30">
-        <div className="flex items-center gap-2 text-xs font-bold text-apple-primary uppercase tracking-wider">
+        <div className="flex items-center gap-2 text-caption1 font-bold text-apple-primary uppercase tracking-wider">
           <Building className="w-4 h-4 text-apple-blue" />
           <span>Capex & Capacity Guidance</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-caption1">
           <div>
-            <div className="text-[10.5px] text-apple-muted">Budgeted Outlay</div>
-            <div className="font-mono font-bold text-apple-primary text-sm mt-0.5">
+            <div className="text-caption2 text-apple-muted">Budgeted Outlay</div>
+            <div className="num font-bold text-apple-primary text-subheadline mt-0.5">
               {activeQuarter.capexGuidance.amountCr}
             </div>
-            <div className="text-[10.5px] text-apple-faint mt-0.5">
+            <div className="text-caption2 text-apple-faint mt-0.5">
               Timeline: {activeQuarter.capexGuidance.timeline}
             </div>
           </div>
 
           <div>
-            <div className="text-[10.5px] text-apple-muted">Key Focus Facilities</div>
-            <ul className="list-disc list-inside text-apple-secondary mt-0.5 space-y-0.5 text-[11px]">
+            <div className="text-caption2 text-apple-muted">Key Focus Facilities</div>
+            <ul className="list-disc list-inside text-apple-secondary mt-0.5 space-y-0.5 text-caption2">
               {activeQuarter.capexGuidance.focusAreas.map((area, i) => (
                 <li key={i} className="truncate">{area}</li>
               ))}
@@ -137,8 +137,8 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
           </div>
 
           <div>
-            <div className="text-[10.5px] text-apple-muted">Funding & Leverage</div>
-            <div className="text-apple-secondary text-[11px] mt-0.5 leading-relaxed">
+            <div className="text-caption2 text-apple-muted">Funding & Leverage</div>
+            <div className="text-apple-secondary text-caption2 mt-0.5 leading-relaxed">
               {activeQuarter.capexGuidance.fundingSource}
             </div>
           </div>
@@ -149,11 +149,11 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Tailwinds */}
         <div className="p-4 rounded-xl border border-emerald-500/20 bg-emerald-500/5 space-y-2.5">
-          <div className="flex items-center gap-2 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+          <div className="flex items-center gap-2 text-caption1 font-bold text-emerald-600 dark:text-emerald-400">
             <TrendingUp className="w-4 h-4" />
             <span>Growth Drivers & Tailwinds</span>
           </div>
-          <ul className="space-y-2 text-xs text-apple-secondary">
+          <ul className="space-y-2 text-caption1 text-apple-secondary">
             {activeQuarter.tailwinds.map((t, idx) => (
               <li key={idx} className="flex items-start gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
@@ -165,11 +165,11 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
 
         {/* Headwinds */}
         <div className="p-4 rounded-xl border border-rose-500/20 bg-rose-500/5 space-y-2.5">
-          <div className="flex items-center gap-2 text-xs font-bold text-rose-600 dark:text-rose-400">
+          <div className="flex items-center gap-2 text-caption1 font-bold text-rose-600 dark:text-rose-400">
             <AlertTriangle className="w-4 h-4" />
             <span>Operational Headwinds & Risks</span>
           </div>
-          <ul className="space-y-2 text-xs text-apple-secondary">
+          <ul className="space-y-2 text-caption1 text-apple-secondary">
             {activeQuarter.headwinds.map((h, idx) => (
               <li key={idx} className="flex items-start gap-2">
                 <AlertTriangle className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
@@ -183,7 +183,7 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
       {/* Executive Management Direct Commentary */}
       {activeQuarter.managementQuotes.length > 0 && (
         <div className="space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold text-apple-primary uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-caption1 font-bold text-apple-primary uppercase tracking-wider">
             <Quote className="w-3.5 h-3.5 text-apple-blue" />
             <span>Key Executive Commentary</span>
           </div>
@@ -194,13 +194,13 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
                 key={idx}
                 className="apple-card p-4 border border-apple-border/70 space-y-2 bg-apple-surface/20"
               >
-                <div className="text-[10.5px] uppercase font-semibold text-apple-blue tracking-wider">
+                <div className="text-caption2 uppercase font-semibold text-apple-blue tracking-wider">
                   {q.topic}
                 </div>
-                <p className="text-xs text-apple-primary italic leading-relaxed">
+                <p className="text-caption1 text-apple-primary italic leading-relaxed">
                   "{q.quote}"
                 </p>
-                <div className="text-[11px] font-medium text-apple-muted pt-1 border-t border-apple-border/40">
+                <div className="text-caption2 font-medium text-apple-muted pt-1 border-t border-apple-border/40">
                   <span className="font-semibold text-apple-secondary">{q.speaker}</span>, {q.designation}
                 </div>
               </div>
@@ -212,7 +212,7 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
       {/* Institutional Analyst Q&A Highlights */}
       {activeQuarter.analystQA.length > 0 && (
         <div className="space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold text-apple-primary uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-caption1 font-bold text-apple-primary uppercase tracking-wider">
             <MessageSquare className="w-3.5 h-3.5 text-apple-blue" />
             <span>Key Analyst Q&A Nuggets</span>
           </div>
@@ -221,11 +221,11 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
             {activeQuarter.analystQA.map((qa, idx) => (
               <div
                 key={idx}
-                className="apple-well p-4 rounded-xl space-y-2 text-xs"
+                className="apple-well p-4 rounded-xl space-y-2 text-caption1"
               >
-                <div className="flex items-center justify-between text-[11px] font-medium text-apple-muted">
+                <div className="flex items-center justify-between text-caption2 font-medium text-apple-muted">
                   <span className="font-semibold text-apple-secondary">{qa.analystName}</span>
-                  <span className="apple-tag text-[10px]">{qa.firm}</span>
+                  <span className="apple-tag text-caption2">{qa.firm}</span>
                 </div>
                 <div className="text-apple-primary font-medium">
                   <span className="text-apple-blue font-bold mr-1.5">Q:</span>

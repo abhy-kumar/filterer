@@ -35,23 +35,23 @@ export const RatiosTable: React.FC<{ stock: Stock }> = ({ stock }) => {
     const latest = ratios[ratios.length - 1];
     return (
       <div className="apple-card p-5">
-        <h2 className="text-sm font-semibold text-apple-primary font-display">Ratio history</h2>
+        <h2 className="text-subheadline font-semibold text-apple-primary font-display">Ratio history</h2>
         <div className="flex items-start gap-2.5 mt-3">
           <Info className="w-4 h-4 shrink-0 mt-0.5 text-apple-muted" />
           <div>
-            <p className="text-xs text-apple-secondary leading-relaxed">
+            <p className="text-caption1 text-apple-secondary leading-relaxed">
               No usable history. The feed repeats today&rsquo;s return on capital across every year rather than
               reporting it per year, and the working-capital cycle was never sourced at all, so there is a
               single data point here and nothing to trend.
             </p>
             {isReported(latest?.roce) && (
-              <p className="text-xs text-apple-muted mt-2.5">
+              <p className="text-caption1 text-apple-muted mt-2.5">
                 Latest ROCE{' '}
-                <span className="font-mono font-semibold text-apple-primary">{pct(latest.roce)}</span>
+                <span className="num font-semibold text-apple-primary">{pct(latest.roce)}</span>
                 {isReported(stock.roe) && (
                   <>
                     {' · '}ROE{' '}
-                    <span className="font-mono font-semibold text-apple-primary">{pct(stock.roe)}</span>
+                    <span className="num font-semibold text-apple-primary">{pct(stock.roe)}</span>
                   </>
                 )}
               </p>

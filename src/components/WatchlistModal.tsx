@@ -46,7 +46,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Bookmark className="w-4 h-4 text-apple-blue" />
-            <h2 className="text-sm font-semibold text-apple-primary font-display">
+            <h2 className="text-subheadline font-semibold text-apple-primary font-display">
               Add {symbol} to Watchlist
             </h2>
           </div>
@@ -60,7 +60,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
         </div>
 
         {stockName && (
-          <p className="text-xs text-apple-muted -mt-2">
+          <p className="text-caption1 text-apple-muted -mt-2">
             {stockName}
           </p>
         )}
@@ -73,7 +73,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
                 key={wl.id}
                 type="button"
                 onClick={() => toggleStockInWatchlist(wl.id, symbol)}
-                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-left text-xs transition-colors border ${
+                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-left text-caption1 transition-colors border ${
                   inList
                     ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20 font-medium'
                     : 'bg-apple-surface/40 hover:bg-apple-surface text-apple-secondary border-apple-border/50'
@@ -81,7 +81,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
               >
                 <div className="min-w-0 pr-2">
                   <div className="font-medium truncate">{wl.name}</div>
-                  <div className="text-[10px] text-apple-muted mt-0.5">
+                  <div className="text-caption2 text-apple-muted mt-0.5">
                     {wl.symbols.length} {wl.symbols.length === 1 ? 'stock' : 'stocks'}
                   </div>
                 </div>
@@ -107,12 +107,12 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
               onChange={(e) => setNewWatchlistName(e.target.value)}
               placeholder="e.g. Smallcap Gems"
               autoFocus
-              className="apple-input text-xs flex-1 h-8 px-2.5"
+              className="apple-input text-caption1 flex-1 h-8 px-2.5"
             />
             <button
               type="submit"
               disabled={!newWatchlistName.trim()}
-              className="apple-btn apple-btn-primary text-xs px-3 h-8 shrink-0 disabled:opacity-50"
+              className="apple-btn apple-btn-primary text-caption1 px-3 h-8 shrink-0 disabled:opacity-50"
             >
               Save
             </button>
@@ -122,7 +122,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
                 setShowCreateInput(false);
                 setNewWatchlistName('');
               }}
-              className="apple-btn apple-btn-secondary text-xs px-2.5 h-8 shrink-0"
+              className="apple-btn apple-btn-secondary text-caption1 px-2.5 h-8 shrink-0"
             >
               Cancel
             </button>
@@ -131,7 +131,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
           <button
             type="button"
             onClick={() => setShowCreateInput(true)}
-            className="w-full flex items-center justify-center gap-1.5 py-2 text-xs font-medium text-apple-blue hover:underline"
+            className="w-full flex items-center justify-center gap-1.5 py-2 text-caption1 font-medium text-apple-blue hover:underline"
           >
             <Plus className="w-3.5 h-3.5" />
             Create new watchlist

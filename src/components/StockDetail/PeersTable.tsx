@@ -157,11 +157,11 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
         <div>
           <div className="flex items-center gap-2">
             <Building2 className="w-4 h-4 text-apple-blue" />
-            <h2 className="text-sm font-semibold text-apple-primary font-display">Peer Comparison</h2>
+            <h2 className="text-subheadline font-semibold text-apple-primary font-display">Peer Comparison</h2>
           </div>
-          <p className="text-xs text-apple-muted mt-0.5">{filterContext}</p>
+          <p className="text-caption1 text-apple-muted mt-0.5">{filterContext}</p>
         </div>
-        <div className="text-xs text-apple-muted font-mono">
+        <div className="text-caption1 text-apple-muted">
           {peerCount > 0 ? `${peerCount} peers in universe` : 'Sole constituent in universe'}
         </div>
       </div>
@@ -170,7 +170,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
         <table className="apple-table">
           <thead>
             <tr>
-              <th className="text-center w-10 text-apple-faint text-[11px]">#</th>
+              <th className="text-center w-10 text-apple-faint text-caption2">#</th>
               <th className="apple-sticky-col text-left min-w-[120px] sm:min-w-[180px]">Company</th>
               {COLUMNS.map((col) => (
                 <th key={col.label} className="text-right">
@@ -189,24 +189,24 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                   className={clickable ? 'cursor-pointer hover:bg-apple-surface-hover transition-colors' : ''}
                   style={isSelf ? { background: 'var(--apple-blue-subtle)' } : undefined}
                 >
-                  <td className="text-center font-mono text-xs text-apple-faint">{idx + 1}</td>
+                  <td className="text-center num text-caption1 text-apple-faint">{idx + 1}</td>
                   <td
                     className="apple-sticky-col"
                     style={isSelf ? { background: 'var(--apple-blue-subtle)' } : undefined}
                   >
                     <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2">
                       <span
-                        className={`font-mono text-xs font-semibold ${
+                        className={`font-mono text-caption1 font-semibold ${
                           isSelf ? 'text-apple-primary' : 'text-apple-blue'
                         }`}
                       >
                         {peer.symbol}
                       </span>
-                      <span className="text-[10.5px] sm:text-xs text-apple-muted truncate max-w-[100px] sm:max-w-[130px]">
+                      <span className="text-caption2 sm:text-caption1 text-apple-muted truncate max-w-[100px] sm:max-w-[130px]">
                         {peer.name}
                       </span>
                       {isSelf && (
-                        <span className="text-[9px] sm:text-[10px] font-semibold text-apple-blue bg-apple-blue/10 px-1 sm:px-1.5 py-0.5 rounded-full w-fit">
+                        <span className="text-caption2 sm:text-caption2 font-semibold text-apple-blue bg-apple-blue/10 px-1 sm:px-1.5 py-0.5 rounded-full w-fit">
                           Current
                         </span>
                       )}
@@ -214,7 +214,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                   </td>
 
                   {COLUMNS.map((col) => (
-                    <td key={col.label} className="text-right font-mono whitespace-nowrap">
+                    <td key={col.label} className="text-right num whitespace-nowrap">
                       {col.value(peer) ?? <span className="num-nil">-</span>}
                     </td>
                   ))}
@@ -225,7 +225,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
         </table>
       </div>
 
-      <p className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-[11px] text-apple-muted">
+      <p className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-caption2 text-apple-muted">
         Peers are selected from the Nifty 500 universe sharing the same industry and sector, ordered by market
         capitalization. Click on any peer to view its complete financial statement profile.
       </p>

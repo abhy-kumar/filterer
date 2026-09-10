@@ -182,13 +182,13 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={`Search ${STOCKS_DATA.length} companies, screens, ratios`}
-            className="w-full bg-transparent text-base sm:text-sm text-apple-primary placeholder-apple-faint focus:outline-none"
+            className="w-full bg-transparent text-subheadline text-apple-primary placeholder-apple-faint focus:outline-none"
             aria-label="Search"
           />
           {searchTerm && (
             <button
               onClick={() => setSearchTerm('')}
-              className="text-apple-faint hover:text-apple-primary p-1 text-xs"
+              className="text-apple-faint hover:text-apple-primary p-1 text-caption1"
               aria-label="Clear search"
             >
               ✕
@@ -196,7 +196,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
           )}
           <button
             onClick={onClose}
-            className="sm:hidden text-xs font-semibold text-apple-blue shrink-0 px-2 py-1"
+            className="sm:hidden text-caption1 font-semibold text-apple-blue shrink-0 px-2 py-1"
           >
             Cancel
           </button>
@@ -205,7 +205,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
 
         <div ref={listRef} className="overflow-y-auto p-1.5 flex-1">
           {items.length === 0 ? (
-            <p className="py-12 text-center text-xs text-apple-muted">
+            <p className="py-12 text-center text-caption1 text-apple-muted">
               Nothing matches “{searchTerm}”. Try a ticker, a screen name, or a ratio.
             </p>
           ) : (
@@ -213,7 +213,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
               const { label, Icon } = SECTION_LABEL[section.kind];
               return (
                 <div key={section.kind} className="mb-1.5 last:mb-0">
-                  <div className="flex items-center gap-1.5 px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.06em] text-apple-faint">
+                  <div className="flex items-center gap-1.5 px-2.5 py-1.5 text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint">
                     <Icon className="w-3 h-3" />
                     {label}
                   </div>
@@ -236,10 +236,10 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
                         {item.kind === 'stock' && (
                           <>
                             <span className="flex items-baseline gap-2.5 min-w-0">
-                              <span className="font-mono text-xs font-semibold text-apple-blue shrink-0">{item.symbol}</span>
-                              <span className="text-xs text-apple-primary truncate">{item.name}</span>
+                              <span className="font-mono text-caption1 font-semibold text-apple-blue shrink-0">{item.symbol}</span>
+                              <span className="text-caption1 text-apple-primary truncate">{item.name}</span>
                             </span>
-                            <span className="flex items-baseline gap-2.5 font-mono text-xs shrink-0">
+                            <span className="flex items-baseline gap-2.5 num text-caption1 shrink-0">
                               <span className="text-apple-primary">{price(item.price)}</span>
                               <span className={`${signClass(item.changePct)} w-14 text-right`}>
                                 {item.changePct >= 0 ? '+' : ''}
@@ -251,18 +251,18 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
 
                         {item.kind === 'screen' && (
                           <span className="min-w-0">
-                            <span className="block text-xs font-semibold text-apple-primary">{item.title}</span>
-                            <span className="block text-[11px] text-apple-muted truncate mt-0.5">{item.description}</span>
+                            <span className="block text-caption1 font-semibold text-apple-primary">{item.title}</span>
+                            <span className="block text-caption2 text-apple-muted truncate mt-0.5">{item.description}</span>
                           </span>
                         )}
 
                         {item.kind === 'metric' && (
                           <>
                             <span className="min-w-0">
-                              <span className="block text-xs font-semibold text-apple-primary">{item.name}</span>
-                              <span className="block text-[11px] text-apple-muted truncate mt-0.5">{item.description}</span>
+                              <span className="block text-caption1 font-semibold text-apple-primary">{item.name}</span>
+                              <span className="block text-caption2 text-apple-muted truncate mt-0.5">{item.description}</span>
                             </span>
-                            <span className="text-[10px] font-mono text-apple-faint shrink-0">{item.unit}</span>
+                            <span className="text-caption2 text-apple-faint shrink-0">{item.unit}</span>
                           </>
                         )}
                       </button>
@@ -274,7 +274,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
           )}
         </div>
 
-        <div className="px-3.5 py-2 border-t border-apple-border hidden sm:flex items-center gap-4 text-[10px] text-apple-faint">
+        <div className="px-3.5 py-2 border-t border-apple-border hidden sm:flex items-center gap-4 text-caption2 text-apple-faint">
           <span className="flex items-center gap-1">
             <kbd className="font-mono">↑</kbd>
             <kbd className="font-mono">↓</kbd> navigate

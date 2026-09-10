@@ -34,8 +34,8 @@ export const DataQualityPanel: React.FC<{ stock: Stock }> = ({ stock }) => {
         aria-expanded={expanded}
       >
         <Icon className={`w-4 h-4 shrink-0 ${warnings.length ? 'text-apple-amber' : 'text-apple-muted'}`} />
-        <span className="text-xs font-semibold text-apple-primary">{summary}</span>
-        <span className="text-[11px] text-apple-muted hidden sm:inline">
+        <span className="text-caption1 font-semibold text-apple-primary">{summary}</span>
+        <span className="text-caption2 text-apple-muted hidden sm:inline">
           {expanded ? '' : 'Click to view reporting notes for this stock.'}
         </span>
         <ChevronDown
@@ -57,8 +57,8 @@ export const DataQualityPanel: React.FC<{ stock: Stock }> = ({ stock }) => {
                 }}
               />
               <div>
-                <p className="text-xs font-semibold text-apple-primary">{finding.title}</p>
-                <p className="text-xs text-apple-secondary mt-0.5 leading-relaxed">{finding.detail}</p>
+                <p className="text-caption1 font-semibold text-apple-primary">{finding.title}</p>
+                <p className="text-caption1 text-apple-secondary mt-0.5 leading-relaxed">{finding.detail}</p>
               </div>
             </li>
           ))}

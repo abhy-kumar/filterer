@@ -4,18 +4,25 @@
 
 @layer base {
   /* ────────────────────────────────────────────────────────
-     Design tokens.
+     Foundations
 
      Three surface planes, not one: the page ground, a recessed
      panel (inputs, wells, table chrome) and a raised card. The
      old system painted everything on a single plane with the
      same border, which is what made every screen read alike.
+
+     Sizes, radii and spacing are tokens rather than literals.
+     Before this, 167 call sites set a font size in raw pixels
+     and four different values (9, 10, 10.5, 11) all meant
+     "small print", which is why no two panels lined up.
      ──────────────────────────────────────────────────────── */
   :root, .light {
+    color-scheme: light;
+
     --apple-bg: #f7f7f8;
     --apple-bg-subtle: #efeff1;
     --apple-bg-tertiary: #e4e4e7;
-    --apple-surface: rgba(252, 252, 253, 0.82);
+    --apple-surface: rgba(252, 252, 253, 0.72);
     --apple-surface-hover: rgba(0, 0, 0, 0.032);
     --apple-surface-active: rgba(0, 0, 0, 0.058);
     --apple-card-bg: #ffffff;
@@ -37,18 +44,24 @@
     --apple-amber-subtle: rgba(154, 91, 0, 0.10);
     --apple-indigo: #4f46c9;
     --apple-indigo-subtle: rgba(79, 70, 201, 0.09);
-    --apple-shadow-sm: 0 1px 1px rgba(16, 16, 22, 0.04), 0 0 0 0.5px rgba(16, 16, 22, 0.05);
-    --apple-shadow: 0 2px 4px rgba(16, 16, 22, 0.05), 0 8px 24px -12px rgba(16, 16, 22, 0.16);
-    --apple-shadow-lg: 0 8px 16px rgba(16, 16, 22, 0.07), 0 24px 56px -20px rgba(16, 16, 22, 0.28);
+
+    /* Elevation is mostly a hairline plus a short, tight shadow.
+       A long blurred drop reads as a web card, not a Mac window. */
+    --apple-shadow-sm: 0 0.5px 1px rgba(16, 16, 22, 0.05), 0 0 0 0.5px rgba(16, 16, 22, 0.045);
+    --apple-shadow: 0 1px 2px rgba(16, 16, 22, 0.05), 0 6px 18px -10px rgba(16, 16, 22, 0.18);
+    --apple-shadow-lg: 0 6px 14px rgba(16, 16, 22, 0.07), 0 22px 48px -20px rgba(16, 16, 22, 0.3);
     --apple-sticky-shade: linear-gradient(to right, rgba(16, 16, 22, 0.07), rgba(16, 16, 22, 0));
-    --apple-canvas-glow: radial-gradient(120% 60% at 50% -10%, rgba(0, 98, 204, 0.07), transparent 70%);
+    --apple-canvas-glow: radial-gradient(120% 60% at 50% -10%, rgba(0, 98, 204, 0.06), transparent 70%);
+    --apple-material-tint: rgba(255, 255, 255, 0.6);
   }
 
   .dark {
+    color-scheme: dark;
+
     --apple-bg: #0a0a0c;
     --apple-bg-subtle: #141417;
     --apple-bg-tertiary: #1f1f24;
-    --apple-surface: rgba(18, 18, 21, 0.78);
+    --apple-surface: rgba(18, 18, 21, 0.68);
     --apple-surface-hover: rgba(255, 255, 255, 0.04);
     --apple-surface-active: rgba(255, 255, 255, 0.075);
     --apple-card-bg: #121215;
@@ -70,36 +83,102 @@
     --apple-amber-subtle: rgba(255, 171, 46, 0.14);
     --apple-indigo: #7d7bf0;
     --apple-indigo-subtle: rgba(125, 123, 240, 0.14);
-    --apple-shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 0 0.5px rgba(255, 255, 255, 0.035);
-    --apple-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 12px 32px -16px rgba(0, 0, 0, 0.8);
-    --apple-shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.6), 0 32px 64px -24px rgba(0, 0, 0, 0.9);
+
+    --apple-shadow-sm: 0 0.5px 1px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.035);
+    --apple-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 8px 24px -12px rgba(0, 0, 0, 0.8);
+    --apple-shadow-lg: 0 6px 16px rgba(0, 0, 0, 0.6), 0 28px 56px -22px rgba(0, 0, 0, 0.9);
     --apple-sticky-shade: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    --apple-canvas-glow: radial-gradient(120% 60% at 50% -10%, rgba(61, 155, 255, 0.08), transparent 70%);
+    --apple-canvas-glow: radial-gradient(120% 60% at 50% -10%, rgba(61, 155, 255, 0.07), transparent 70%);
+    --apple-material-tint: rgba(255, 255, 255, 0.035);
+  }
+
+  /* ── Type scale ──────────────────────────────────────────
+     Named for the role, sized for a dense desktop tool. Apple's
+     smallest UI text is Caption 2 at 11pt and nothing goes under
+     it, so 11px is the floor here; the old 9px and 10.5px labels
+     were below the size the guidelines will vouch for.
+
+     Tracking tightens as the size grows, which is what SF does
+     optically. Small text needs air, headlines need none.
+     ──────────────────────────────────────────────────────── */
+  :root {
+    --text-caption2: 0.6875rem;   /* 11px — table headers, tags, eyebrows */
+    --text-caption1: 0.75rem;     /* 12px — secondary metadata */
+    --text-footnote: 0.8125rem;   /* 13px — dense table cells */
+    --text-subheadline: 0.875rem; /* 14px — body copy */
+    --text-callout: 0.9375rem;    /* 15px — emphasised body */
+    --text-headline: 1rem;        /* 16px — section leads */
+    --text-title3: 1.125rem;      /* 18px */
+    --text-title2: 1.375rem;      /* 22px */
+    --text-title1: 1.75rem;       /* 28px */
+    --text-largetitle: 2.125rem;  /* 34px */
+
+    --tracking-caption2: 0.006em;
+    --tracking-caption1: 0.002em;
+    --tracking-body: -0.006em;
+    --tracking-title: -0.019em;
+    --tracking-largetitle: -0.026em;
+
+    /* Radii. Nested corners are concentric: an inner radius is the
+       outer one less the padding between them, otherwise the gap
+       between the two curves visibly wobbles. */
+    --radius-xs: 5px;
+    --radius-sm: 7px;
+    --radius-md: 9px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+
+    /* Control heights, on the 4pt grid Apple lays controls out on. */
+    --control-sm: 24px;
+    --control-md: 30px;
+    --control-lg: 36px;
+
+    /* A hairline is one device pixel, not one CSS pixel. */
+    --hairline: 1px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    :root { --hairline: 0.5px; }
   }
 
   body {
     background-color: var(--apple-bg);
     color: var(--apple-text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI Variable Text',
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--text-footnote);
+    line-height: 1.45;
+    letter-spacing: var(--tracking-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    /* SF and Segoe Variable both carry optical size axes: let the
+       face pick its own drawing for the size it is set at. */
+    font-optical-sizing: auto;
     min-height: 100vh;
     overflow-x: hidden;
-    letter-spacing: -0.011em;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   h1, h2, h3, h4, .font-display {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter", sans-serif;
-    letter-spacing: -0.026em;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI Variable Display',
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: var(--tracking-title);
+    /* Stops a heading breaking to a one-word last line. */
+    text-wrap: balance;
   }
 
-  /* Tabular numerics everywhere a figure can change under the reader */
-  td, th, .tabular-nums, [data-numeric], .font-mono, code, kbd {
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Figures that sit in a column must share a width, or the column
+     jitters as prices tick. font-variant-numeric is the high-level
+     property; setting font-feature-settings here instead used to
+     wipe out the rest of the feature list on the same element. */
+  td, th, .tabular-nums, [data-numeric], .font-mono, code, kbd, input, output {
     font-variant-numeric: tabular-nums lining-nums;
-    font-feature-settings: "tnum" on, "lnum" on;
   }
 
   ::selection {
@@ -109,232 +188,331 @@
 }
 
 /* ────────────────────────────────────────────────────────
-   Surfaces
+   Type utilities
+
+   The size steps themselves (text-caption2 … text-largetitle) are
+   generated from the fontSize scale in tailwind.config.js, which reads
+   the same custom properties declared above. Defining them here as well
+   would shadow Tailwind's copy and put the scale in two places.
    ──────────────────────────────────────────────────────── */
-.apple-glass {
-  background: var(--apple-surface);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+/* These are utilities, not components: they sit in Tailwind's utilities
+   layer so that a utility class on the element still wins. */
+@layer utilities {
+  /* A figure.
+
+     Apple sets numeric data in the system face with tabular figures and
+     reserves the monospace for code — Stocks and Numbers both do this. A
+     monospace is drawn on a fixed advance for every glyph, so letters get
+     cramped and digits get loose; SF's tabular figures give the columns
+     the alignment they need without the letters paying for it.
+
+     Monospace still belongs on the formula editor, on <kbd>, and on metric
+     keys and aliases, because those really are code. */
+  .num {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI Variable Text',
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: 'ss01';
+  }
+
+  /* An eyebrow: the small capitalised label above a group. Caps need
+     letterspacing to stay readable; lowercase does not. */
+  .text-eyebrow {
+    font-size: var(--text-caption2);
+    text-transform: uppercase;
+    letter-spacing: 0.055em;
+    font-weight: 600;
+    color: var(--apple-text-muted);
+  }
 }
 
-/* The page's top plane: one quiet glow, rather than a gradient per box. */
-.apple-canvas {
-  position: relative;
-}
-.apple-canvas::before {
-  content: '';
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 420px;
-  background: var(--apple-canvas-glow);
-  pointer-events: none;
-  z-index: 0;
-}
-.apple-canvas > * {
-  position: relative;
-  z-index: 1;
-}
 
-.apple-card {
-  background: var(--apple-card-bg);
-  border: 1px solid var(--apple-border-subtle);
-  border-radius: 14px;
-  box-shadow: var(--apple-shadow-sm);
-  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
-}
+/* Components live in Tailwind's components layer, which is emitted
+   before utilities.
 
-/* Only things that actually go somewhere get lift on hover. */
-.apple-card-interactive {
-  cursor: pointer;
-}
-.apple-card-interactive:hover {
-  border-color: var(--apple-border-strong);
-  box-shadow: var(--apple-shadow);
-  background: var(--apple-card-raised);
-}
+   They used to sit after `@tailwind utilities` at the bottom of this
+   file, where a bare class selector such as `.apple-segmented` beat the
+   utility of the same specificity that came earlier. `display:
+   inline-flex` on the segmented control therefore overrode `hidden`, and
+   the header nav rendered under 768px on top of the action buttons even
+   though it is marked `hidden md:flex`. Layering settles the order by
+   intent rather than by position in the file. */
+@layer components {
+  /* ────────────────────────────────────────────────────────
+     Materials
 
-/* A recessed plane, for inputs, wells and table chrome. */
-.apple-well {
-  background: var(--apple-bg-subtle);
-  border: 1px solid var(--apple-border-subtle);
-  border-radius: 12px;
-}
+     Apple layers translucency in weights. A toolbar over scrolling
+     content wants a thicker blur than a popover over a static page,
+     because the content moving underneath is what gives the blur
+     away. Saturation is boosted so colour survives the blur.
+     ──────────────────────────────────────────────────────── */
+  .apple-material-thin,
+  .apple-glass {
+    background: var(--apple-surface);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
 
-/* ────────────────────────────────────────────────────────
-   Controls
-   ──────────────────────────────────────────────────────── */
-.apple-segmented {
-  background: var(--apple-bg-subtle);
-  border-radius: 10px;
-  padding: 2px;
-  border: 1px solid var(--apple-border-subtle);
-  display: inline-flex;
-  align-items: center;
-  gap: 1px;
-}
+  .apple-material-regular {
+    background: var(--apple-surface);
+    backdrop-filter: blur(30px) saturate(190%);
+    -webkit-backdrop-filter: blur(30px) saturate(190%);
+  }
 
-.apple-segmented-item {
-  border-radius: 8px;
-  padding: 5px 12px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--apple-text-secondary);
-  transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
-  white-space: nowrap;
-  user-select: none;
-}
+  .apple-material-thick {
+    background: var(--apple-card-bg);
+    backdrop-filter: blur(40px) saturate(200%);
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+  }
 
-.apple-segmented-item:hover:not(.active) {
-  color: var(--apple-text-primary);
-  background: var(--apple-surface-hover);
-}
+  /* Without backdrop-filter the translucent fill would let text
+     underneath show straight through, so fall back to the opaque plane. */
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .apple-glass,
+    .apple-material-thin,
+    .apple-material-regular,
+    .apple-material-thick {
+      background: var(--apple-card-bg);
+    }
+  }
 
-.apple-segmented-item.active {
-  background: var(--apple-card-raised);
-  color: var(--apple-text-primary);
-  box-shadow: var(--apple-shadow-sm);
-  font-weight: 590;
-}
+  /* ────────────────────────────────────────────────────────
+     Surfaces
+     ──────────────────────────────────────────────────────── */
 
-.apple-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  border-radius: 10px;
-  font-size: 0.75rem;
-  font-weight: 590;
-  padding: 8px 14px;
-  white-space: nowrap;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease,
-              filter 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
-}
-.apple-btn:active:not(:disabled) { transform: scale(0.975); }
-.apple-btn:disabled { opacity: 0.42; cursor: not-allowed; }
+  /* The page's top plane: one quiet glow, rather than a gradient per box. */
+  .apple-canvas {
+    position: relative;
+  }
+  .apple-canvas::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 420px;
+    background: var(--apple-canvas-glow);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .apple-canvas > * {
+    position: relative;
+    z-index: 1;
+  }
 
-.apple-btn-primary {
-  background: var(--apple-blue);
-  color: #fff;
-  border: 1px solid transparent;
-}
-.apple-btn-primary:hover:not(:disabled) { filter: brightness(1.1); }
+  .apple-card {
+    background: var(--apple-card-bg);
+    border: var(--hairline) solid var(--apple-border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--apple-shadow-sm);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  }
 
-.apple-btn-secondary {
-  background: var(--apple-card-bg);
-  color: var(--apple-text-secondary);
-  border: 1px solid var(--apple-border);
-  box-shadow: var(--apple-shadow-sm);
-}
-.apple-btn-secondary:hover:not(:disabled) {
-  background: var(--apple-surface-active);
-  color: var(--apple-text-primary);
-}
+  /* Only things that actually go somewhere get lift on hover. */
+  .apple-card-interactive {
+    cursor: pointer;
+  }
+  .apple-card-interactive:hover {
+    border-color: var(--apple-border-strong);
+    box-shadow: var(--apple-shadow);
+    background: var(--apple-card-raised);
+  }
+  .apple-card-interactive:active {
+    transform: scale(0.994);
+  }
 
-.apple-btn-quiet {
-  background: transparent;
-  color: var(--apple-text-secondary);
-  border: 1px solid transparent;
-}
-.apple-btn-quiet:hover:not(:disabled) {
-  background: var(--apple-surface-hover);
-  color: var(--apple-text-primary);
-}
+  /* A recessed plane, for inputs, wells and table chrome. */
+  .apple-well {
+    background: var(--apple-bg-subtle);
+    border: var(--hairline) solid var(--apple-border-subtle);
+    border-radius: var(--radius-md);
+  }
 
-.apple-input {
-  background: var(--apple-bg-subtle);
-  border: 1px solid var(--apple-border);
-  border-radius: 10px;
-  color: var(--apple-text-primary);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-}
-.apple-input::placeholder { color: var(--apple-text-faint); }
-.apple-input:focus {
-  outline: none;
-  background: var(--apple-card-bg);
-  border-color: var(--apple-blue);
-  box-shadow: 0 0 0 3.5px var(--apple-blue-subtle);
-}
+  /* ────────────────────────────────────────────────────────
+     Controls
+     ──────────────────────────────────────────────────────── */
+  .apple-segmented {
+    background: var(--apple-bg-subtle);
+    border-radius: var(--radius-md);
+    padding: 2px;
+    border: var(--hairline) solid var(--apple-border-subtle);
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+  }
 
-/* A tag that carries meaning, not decoration. */
-.apple-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 7px;
-  border-radius: 6px;
-  font-size: 0.6875rem;
-  font-weight: 550;
-  letter-spacing: 0.005em;
-  background: var(--apple-bg-subtle);
-  color: var(--apple-text-secondary);
-  border: 1px solid var(--apple-border-subtle);
+  .apple-segmented-item {
+    /* Concentric with the track: 9px outer less 2px padding. */
+    border-radius: calc(var(--radius-md) - 2px);
+    padding: 0 12px;
+    height: calc(var(--control-md) - 6px);
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--text-caption1);
+    font-weight: 510;
+    color: var(--apple-text-secondary);
+    transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .apple-segmented-item:hover:not(.active) {
+    color: var(--apple-text-primary);
+    background: var(--apple-surface-hover);
+  }
+
+  .apple-segmented-item.active {
+    background: var(--apple-card-raised);
+    color: var(--apple-text-primary);
+    box-shadow: var(--apple-shadow-sm);
+    font-weight: 590;
+  }
+
+  .apple-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: var(--control-md);
+    padding: 0 13px;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-caption1);
+    font-weight: 590;
+    letter-spacing: var(--tracking-caption1);
+    white-space: nowrap;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+                filter 0.15s ease, opacity 0.15s ease, transform 0.1s ease;
+  }
+  .apple-btn:active:not(:disabled) { transform: scale(0.97); }
+  .apple-btn:disabled { opacity: 0.42; cursor: not-allowed; }
+
+  .apple-btn-sm { height: var(--control-sm); padding: 0 9px; border-radius: var(--radius-xs); }
+  .apple-btn-lg { height: var(--control-lg); padding: 0 18px; border-radius: var(--radius-md); font-size: var(--text-footnote); }
+
+  .apple-btn-primary {
+    background: var(--apple-blue);
+    color: #fff;
+    border: var(--hairline) solid transparent;
+  }
+  .apple-btn-primary:hover:not(:disabled) { filter: brightness(1.1); }
+
+  .apple-btn-secondary {
+    background: var(--apple-card-bg);
+    color: var(--apple-text-secondary);
+    border: var(--hairline) solid var(--apple-border);
+    box-shadow: var(--apple-shadow-sm);
+  }
+  .apple-btn-secondary:hover:not(:disabled) {
+    background: var(--apple-surface-active);
+    color: var(--apple-text-primary);
+  }
+
+  .apple-btn-quiet {
+    background: transparent;
+    color: var(--apple-text-secondary);
+    border: var(--hairline) solid transparent;
+  }
+  .apple-btn-quiet:hover:not(:disabled) {
+    background: var(--apple-surface-hover);
+    color: var(--apple-text-primary);
+  }
+
+  .apple-input {
+    background: var(--apple-bg-subtle);
+    border: var(--hairline) solid var(--apple-border);
+    border-radius: var(--radius-sm);
+    color: var(--apple-text-primary);
+    font-size: var(--text-footnote);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+  .apple-input::placeholder { color: var(--apple-text-faint); }
+  .apple-input:focus {
+    outline: none;
+    background: var(--apple-card-bg);
+    border-color: var(--apple-blue);
+    box-shadow: 0 0 0 3.5px var(--apple-blue-subtle);
+  }
+
+  /* A tag that carries meaning, not decoration. */
+  .apple-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 7px;
+    border-radius: var(--radius-xs);
+    font-size: var(--text-caption2);
+    font-weight: 550;
+    letter-spacing: var(--tracking-caption2);
+    background: var(--apple-bg-subtle);
+    color: var(--apple-text-secondary);
+    border: var(--hairline) solid var(--apple-border-subtle);
+  }
+
+  /* ────────────────────────────────────────────────────────
+     Financial tables
+
+     Density first. Hairlines only between rows; the frozen
+     column is separated by a shadow rather than a border, so it
+     reads as an overlapping plane while the body scrolls.
+     ──────────────────────────────────────────────────────── */
+  .apple-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .apple-table th {
+    font-size: var(--text-caption2);
+    text-transform: uppercase;
+    letter-spacing: 0.055em;
+    font-weight: 600;
+    color: var(--apple-text-muted);
+    padding: 0.5rem 0.75rem;
+    border-bottom: var(--hairline) solid var(--apple-border);
+    background: var(--apple-bg-subtle);
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .apple-table td {
+    padding: 0.4375rem 0.75rem;
+    font-size: var(--text-footnote);
+    border-bottom: var(--hairline) solid var(--apple-border-subtle);
+    color: var(--apple-text-primary);
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .apple-table tbody tr:last-child td { border-bottom: none; }
+  .apple-table tbody tr:hover td { background-color: var(--apple-surface-hover); }
+
+  /* Frozen first column */
+  .apple-sticky-col {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--apple-card-bg);
+  }
+  .apple-table thead .apple-sticky-col { background: var(--apple-bg-subtle); z-index: 3; }
+  .apple-table tbody tr:hover .apple-sticky-col { background: var(--apple-bg-subtle); }
+  .apple-sticky-col::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    bottom: -1px;
+    width: 10px;
+    background: var(--apple-sticky-shade);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+  .is-scrolled .apple-sticky-col::after { opacity: 1; }
+
+  /* A signed figure: colour carries the sign, weight carries emphasis. */
+  .num-pos { color: var(--apple-green); }
+  .num-neg { color: var(--apple-red); }
+  .num-nil { color: var(--apple-text-faint); }
 }
-
-/* ────────────────────────────────────────────────────────
-   Financial tables
-
-   Density first. Hairlines only between rows; the frozen
-   column is separated by a shadow rather than a border, so it
-   reads as an overlapping plane while the body scrolls.
-   ──────────────────────────────────────────────────────── */
-.apple-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-.apple-table th {
-  font-size: 0.6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
-  font-weight: 600;
-  color: var(--apple-text-muted);
-  padding: 0.625rem 0.75rem;
-  border-bottom: 1px solid var(--apple-border);
-  background: var(--apple-bg-subtle);
-  user-select: none;
-  white-space: nowrap;
-}
-
-.apple-table td {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.8125rem;
-  border-bottom: 1px solid var(--apple-border-subtle);
-  color: var(--apple-text-primary);
-  font-variant-numeric: tabular-nums lining-nums;
-}
-
-.apple-table tbody tr:last-child td { border-bottom: none; }
-.apple-table tbody tr:hover td { background-color: var(--apple-surface-hover); }
-
-/* Frozen first column */
-.apple-sticky-col {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  background: var(--apple-card-bg);
-}
-.apple-table thead .apple-sticky-col { background: var(--apple-bg-subtle); z-index: 3; }
-.apple-table tbody tr:hover .apple-sticky-col { background: var(--apple-bg-subtle); }
-.apple-sticky-col::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -10px;
-  bottom: -1px;
-  width: 10px;
-  background: var(--apple-sticky-shade);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-.is-scrolled .apple-sticky-col::after { opacity: 1; }
-
-/* A signed figure: colour carries the sign, weight carries emphasis. */
-.num-pos { color: var(--apple-green); }
-.num-neg { color: var(--apple-red); }
-.num-nil { color: var(--apple-text-faint); }
 
 /* ────────────────────────────────────────────────────────
    Chrome
@@ -366,7 +544,7 @@
   background: linear-gradient(90deg, var(--apple-bg-subtle) 25%, var(--apple-surface-hover) 50%, var(--apple-bg-subtle) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.4s ease-in-out infinite;
-  border-radius: 6px;
+  border-radius: var(--radius-xs);
 }
 
 @keyframes flashUp   { 0% { background-color: var(--apple-green-subtle); } 100% { background-color: transparent; } }
@@ -374,10 +552,12 @@
 .flash-up   { animation: flashUp 1s ease-out; }
 .flash-down { animation: flashDown 1s ease-out; }
 
+/* Keyboard focus only. A mouse click on a button should not leave
+   a ring behind it, but a tab stop must always be visible. */
 *:focus-visible {
   outline: 2px solid var(--apple-blue);
   outline-offset: 2px;
-  border-radius: 6px;
+  border-radius: var(--radius-xs);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -390,6 +570,16 @@
   .skeleton { animation: none; background: var(--apple-bg-subtle); }
 }
 
+/* Someone who has asked for more contrast gets borders they can
+   actually see, not the hairlines the rest of the design leans on. */
+@media (prefers-contrast: more) {
+  :root, .light, .dark {
+    --apple-border: var(--apple-border-strong);
+    --apple-border-subtle: var(--apple-border-strong);
+  }
+  .apple-table td { border-bottom-color: var(--apple-border-strong); }
+}
+
 /* Mobile safe area and touch ergonomics */
 .pb-safe {
   padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
@@ -400,14 +590,19 @@
 }
 
 @media (max-width: 640px) {
+  /* Under 16px iOS zooms the whole page in on focus. */
   input:not([type="checkbox"]):not([type="radio"]),
   textarea,
   select {
     font-size: 16px !important;
   }
+
+  /* Touch targets. Apple's minimum is 44pt square; the desktop
+     control heights are too small to hit reliably with a thumb. */
+  .apple-btn { height: var(--control-lg); }
+  .apple-segmented-item { height: calc(var(--control-lg) - 6px); }
 }
 
 .scroll-touch {
   -webkit-overflow-scrolling: touch;
 }
-

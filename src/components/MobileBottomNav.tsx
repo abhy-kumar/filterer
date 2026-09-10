@@ -79,12 +79,12 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ savedScreensCo
               <div className="relative">
                 <Icon className={`w-5 h-5 transition-transform ${isActive ? 'scale-110' : ''}`} />
                 {item.badge !== undefined && (
-                  <span className="absolute -top-1 -right-2.5 bg-apple-blue text-white text-[9px] font-bold font-mono px-1 min-w-[14px] h-[14px] rounded-full flex items-center justify-center leading-none">
+                  <span className="absolute -top-1 -right-2.5 bg-apple-blue text-white text-caption2 font-bold num px-1 min-w-[14px] h-[14px] rounded-full flex items-center justify-center leading-none">
                     {item.badge}
                   </span>
                 )}
               </div>
-              <span className={`text-[10px] mt-1 leading-tight tracking-tight ${isActive ? 'font-semibold' : 'font-normal'}`}>
+              <span className={`text-caption2 mt-1 leading-tight tracking-tight ${isActive ? 'font-semibold' : 'font-normal'}`}>
                 {item.label}
               </span>
               {isActive && (

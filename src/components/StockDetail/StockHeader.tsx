@@ -67,7 +67,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
       <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6">
         <div className="min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <h1 className="text-xl sm:text-2xl lg:text-[1.75rem] font-bold tracking-[-0.03em] text-apple-primary font-display">
+            <h1 className="text-title3 sm:text-title2 lg:text-title1 text-apple-primary font-display">
               {stock.name}
             </h1>
             <span className="apple-tag font-mono">{stock.symbol}</span>
@@ -90,7 +90,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
             )}
             <button
               onClick={() => setIsWatchlistModalOpen(true)}
-              className={`apple-btn text-xs px-2.5 py-0.5 flex items-center gap-1.5 transition-all ${
+              className={`apple-btn text-caption1 px-2.5 py-0.5 flex items-center gap-1.5 transition-all ${
                 inWatchlist
                   ? 'bg-apple-blue/10 text-apple-blue border border-apple-blue/30 font-medium'
                   : 'apple-btn-secondary'
@@ -102,7 +102,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
             </button>
           </div>
 
-          <p className="flex items-center gap-3 mt-2 text-xs text-apple-muted flex-wrap">
+          <p className="flex items-center gap-3 mt-2 text-caption1 text-apple-muted flex-wrap">
             <span>
               {stock.sector} · {stock.industry}
             </span>
@@ -120,7 +120,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
           </p>
 
           {stock.about && (
-            <p className="text-xs text-apple-secondary mt-3 max-w-3xl leading-relaxed line-clamp-3 sm:line-clamp-4">
+            <p className="text-caption1 text-apple-secondary mt-3 max-w-3xl leading-relaxed line-clamp-3 sm:line-clamp-4">
               {stock.about}
             </p>
           )}
@@ -129,10 +129,10 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
         {/* Price block */}
         <div className="shrink-0 lg:text-right flex flex-col sm:flex-row lg:flex-col justify-between sm:items-center lg:items-end gap-2 lg:gap-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-apple-border-subtle">
           <div>
-            <div className="text-[1.75rem] sm:text-[2rem] font-semibold font-mono tabular-nums text-apple-primary leading-none">
+            <div className="text-title1 sm:text-largetitle font-display tabular-nums text-apple-primary leading-none">
               {price(stock.current_price)}
             </div>
-            <div className={`mt-1 font-mono text-xs sm:text-sm tabular-nums ${signClass(stock.change_pct)}`}>
+            <div className={`mt-1 num text-caption1 sm:text-subheadline ${signClass(stock.change_pct)}`}>
               {isUp ? '+' : ''}
               {stock.change.toFixed(2)} ({isUp ? '+' : ''}
               {stock.change_pct.toFixed(2)}%)
@@ -155,7 +155,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
                 }}
               />
             </div>
-            <div className="flex justify-between text-[10px] font-mono text-apple-faint mt-1.5">
+            <div className="flex justify-between text-caption2 num text-apple-faint mt-1.5">
               <span>{price(stock.low_52w)}</span>
               <span className="text-apple-muted">52-week range</span>
               <span>{price(stock.high_52w)}</span>
@@ -168,15 +168,15 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
       <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-3.5 sm:gap-y-4 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-apple-border-subtle">
         {figures.map((figure) => (
           <div key={figure.label}>
-            <dt className="text-[10.5px] sm:text-[11px] text-apple-muted truncate">{figure.label}</dt>
+            <dt className="text-caption2 sm:text-caption2 text-apple-muted truncate">{figure.label}</dt>
             <dd
-              className={`text-xs sm:text-sm font-semibold font-mono tabular-nums mt-0.5 ${
+              className={`text-caption1 sm:text-subheadline font-semibold num mt-0.5 ${
                 figure.tone === 'good' ? 'num-pos' : figure.tone === 'bad' ? 'num-neg' : 'text-apple-primary'
               }`}
             >
               {figure.value}
             </dd>
-            {figure.hint && <dd className="text-[10px] text-apple-faint mt-0.5">{figure.hint}</dd>}
+            {figure.hint && <dd className="text-caption2 text-apple-faint mt-0.5">{figure.hint}</dd>}
           </div>
         ))}
       </dl>

@@ -117,11 +117,11 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
             <div>
               <div className="flex items-center gap-2.5">
                 <Bookmark className="w-5 h-5 text-apple-blue shrink-0" />
-                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
                   Watchlists
                 </h1>
               </div>
-              <p className="text-xs text-apple-muted mt-1 leading-normal">
+              <p className="text-caption1 text-apple-muted mt-1 leading-normal">
                 Track custom stock portfolios, monitor valuation ratios, and manage saved screener queries.
               </p>
             </div>
@@ -136,7 +136,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
               >
                 <ListFilter className="w-3.5 h-3.5" />
                 Custom Watchlists
-                <span className="text-[10px] font-mono text-apple-muted ml-0.5">
+                <span className="text-caption2 num text-apple-muted ml-0.5">
                   {watchlists.length}
                 </span>
               </button>
@@ -149,7 +149,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                 <SlidersHorizontal className="w-3.5 h-3.5" />
                 Saved Screens
                 {savedScreens.length > 0 && (
-                  <span className="text-[10px] font-mono text-apple-muted ml-0.5">
+                  <span className="text-caption2 num text-apple-muted ml-0.5">
                     {savedScreens.length}
                   </span>
                 )}
@@ -171,7 +171,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                         setActiveWatchlistId(wl.id);
                         setIsEditingWl(false);
                       }}
-                      className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all flex items-center gap-2 border ${
+                      className={`px-3.5 py-1.5 rounded-full text-caption1 font-medium whitespace-nowrap transition-all flex items-center gap-2 border ${
                         isActive
                           ? 'bg-apple-primary text-apple-bg border-apple-primary shadow-sm font-semibold'
                           : 'bg-apple-card hover:bg-apple-surface text-apple-secondary border-apple-border'
@@ -179,7 +179,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                     >
                       <span>{wl.name}</span>
                       <span
-                        className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${
+                        className={`text-caption2 num px-1.5 py-0.5 rounded-full ${
                           isActive
                             ? 'bg-apple-bg/20 text-apple-bg'
                             : 'bg-apple-bg-subtle text-apple-muted'
@@ -199,19 +199,19 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       onChange={(e) => setNewWlName(e.target.value)}
                       placeholder="Watchlist Name"
                       autoFocus
-                      className="apple-input text-xs h-8 px-2.5 w-36"
+                      className="apple-input text-caption1 h-8 px-2.5 w-36"
                     />
                     <button
                       type="submit"
                       disabled={!newWlName.trim()}
-                      className="apple-btn apple-btn-primary text-xs h-8 px-2.5 disabled:opacity-50"
+                      className="apple-btn apple-btn-primary text-caption1 h-8 px-2.5 disabled:opacity-50"
                     >
                       Add
                     </button>
                     <button
                       type="button"
                       onClick={() => setIsCreatingWl(false)}
-                      className="apple-btn apple-btn-secondary text-xs h-8 px-2"
+                      className="apple-btn apple-btn-secondary text-caption1 h-8 px-2"
                     >
                       ✕
                     </button>
@@ -219,7 +219,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                 ) : (
                   <button
                     onClick={() => setIsCreatingWl(true)}
-                    className="apple-btn apple-btn-secondary text-xs h-8 px-3 rounded-full shrink-0 flex items-center gap-1"
+                    className="apple-btn apple-btn-secondary text-caption1 h-8 px-3 rounded-full shrink-0 flex items-center gap-1"
                   >
                     <Plus className="w-3.5 h-3.5" />
                     New Watchlist
@@ -238,25 +238,25 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                             type="text"
                             value={editingName}
                             onChange={(e) => setEditingName(e.target.value)}
-                            className="apple-input text-sm font-semibold h-8 px-2.5 w-48 font-display"
+                            className="apple-input text-subheadline font-semibold h-8 px-2.5 w-48 font-display"
                             autoFocus
                           />
                           <button
                             onClick={handleSaveRename}
-                            className="apple-btn apple-btn-primary text-xs px-2.5 h-8"
+                            className="apple-btn apple-btn-primary text-caption1 px-2.5 h-8"
                           >
                             <Check className="w-3.5 h-3.5" />
                           </button>
                           <button
                             onClick={() => setIsEditingWl(false)}
-                            className="apple-btn apple-btn-secondary text-xs px-2 h-8"
+                            className="apple-btn apple-btn-secondary text-caption1 px-2 h-8"
                           >
                             ✕
                           </button>
                         </div>
                       ) : (
                         <div className="flex items-center gap-2">
-                          <h2 className="text-lg font-bold text-apple-primary font-display">
+                          <h2 className="text-title3 text-apple-primary font-display">
                             {activeWatchlist.name}
                           </h2>
                           <button
@@ -273,7 +273,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       )}
 
                       {activeWatchlist.description && (
-                        <span className="text-xs text-apple-muted hidden md:inline">
+                        <span className="text-caption1 text-apple-muted hidden md:inline">
                           • {activeWatchlist.description}
                         </span>
                       )}
@@ -291,7 +291,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                           }}
                           onFocus={() => setIsSearchingStock(true)}
                           placeholder="+ Add stock by symbol or name..."
-                          className="apple-input text-xs pl-8 pr-3 h-8 w-full sm:w-60"
+                          className="apple-input text-caption1 pl-8 pr-3 h-8 w-full sm:w-60"
                         />
                         <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-apple-faint pointer-events-none" />
 
@@ -303,12 +303,12 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                                 key={s.symbol}
                                 type="button"
                                 onClick={() => handleAddStock(s.symbol)}
-                                className="w-full px-3 py-2 text-left text-xs hover:bg-apple-surface flex items-center justify-between transition-colors"
+                                className="w-full px-3 py-2 text-left text-caption1 hover:bg-apple-surface flex items-center justify-between transition-colors"
                               >
-                                <span className="font-mono font-semibold text-apple-primary">
+                                <span className="num font-semibold text-apple-primary">
                                   {s.symbol}
                                 </span>
-                                <span className="text-[11px] text-apple-muted truncate max-w-[130px]">
+                                <span className="text-caption2 text-apple-muted truncate max-w-[130px]">
                                   {s.name}
                                 </span>
                               </button>
@@ -337,33 +337,33 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                   {kpis && (
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 pt-3 border-t border-apple-border/60">
                       <div>
-                        <div className="text-[10.5px] text-apple-muted">Tracked Stocks</div>
-                        <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
+                        <div className="text-caption2 text-apple-muted">Tracked Stocks</div>
+                        <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           {kpis.count}
                         </div>
                       </div>
                       <div>
-                        <div className="text-[10.5px] text-apple-muted">Total Market Cap</div>
-                        <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
+                        <div className="text-caption2 text-apple-muted">Total Market Cap</div>
+                        <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           ₹{Math.round(kpis.totalMcap).toLocaleString('en-IN')} Cr
                         </div>
                       </div>
                       <div>
-                        <div className="text-[10.5px] text-apple-muted">Average P/E</div>
-                        <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
+                        <div className="text-caption2 text-apple-muted">Average P/E</div>
+                        <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           {kpis.avgPe !== null ? kpis.avgPe.toFixed(1) : '-'}
                         </div>
                       </div>
                       <div>
-                        <div className="text-[10.5px] text-apple-muted">Average ROCE</div>
-                        <div className="text-base font-bold font-mono text-apple-primary mt-0.5">
+                        <div className="text-caption2 text-apple-muted">Average ROCE</div>
+                        <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           {kpis.avgRoce !== null ? `${kpis.avgRoce.toFixed(1)}%` : '-'}
                         </div>
                       </div>
                       <div>
-                        <div className="text-[10.5px] text-apple-muted">Avg Day Change</div>
+                        <div className="text-caption2 text-apple-muted">Avg Day Change</div>
                         <div
-                          className={`text-base font-bold font-mono mt-0.5 ${
+                          className={`text-headline font-display tabular-nums mt-0.5 ${
                             kpis.avgDayChange >= 0
                               ? 'text-emerald-600 dark:text-emerald-400'
                               : 'text-rose-600 dark:text-rose-400'
@@ -382,8 +382,8 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
               {watchlistStocks.length === 0 ? (
                 <div className="apple-card py-16 px-6 text-center">
                   <Bookmark className="w-8 h-8 text-apple-faint mx-auto mb-3" />
-                  <h3 className="text-sm font-semibold text-apple-primary">Watchlist is empty</h3>
-                  <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1.5">
+                  <h3 className="text-subheadline font-semibold text-apple-primary">Watchlist is empty</h3>
+                  <p className="text-caption1 text-apple-muted max-w-sm mx-auto mt-1.5">
                     Use the search bar above or click "Add to Watchlist" on any stock page to add companies to {activeWatchlist?.name}.
                   </p>
                 </div>
@@ -400,8 +400,8 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-lg font-bold text-apple-primary font-display">Saved Screens</h2>
-                  <p className="text-xs text-apple-muted mt-0.5">
+                  <h2 className="text-title3 text-apple-primary font-display">Saved Screens</h2>
+                  <p className="text-caption1 text-apple-muted mt-0.5">
                     Queries saved in your browser localStorage.
                   </p>
                 </div>
@@ -414,8 +414,8 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
               {savedScreens.length === 0 ? (
                 <div className="apple-card py-16 px-6 text-center">
                   <Bookmark className="w-7 h-7 text-apple-faint mx-auto mb-3" />
-                  <h3 className="text-sm font-semibold text-apple-primary">No saved screens</h3>
-                  <p className="text-xs text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
+                  <h3 className="text-subheadline font-semibold text-apple-primary">No saved screens</h3>
+                  <p className="text-caption1 text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
                     Build and save queries from the query editor to find them here.
                   </p>
                   <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary mt-5">
@@ -431,7 +431,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       className="apple-card apple-card-interactive p-4 flex flex-col group"
                     >
                       <div className="flex items-start justify-between gap-2">
-                        <h3 className="text-sm font-semibold text-apple-primary group-hover:text-apple-blue transition-colors">
+                        <h3 className="text-subheadline font-semibold text-apple-primary group-hover:text-apple-blue transition-colors">
                           {screen.title}
                         </h3>
                         <button
@@ -445,17 +445,17 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       </div>
 
                       {screen.description && (
-                        <p className="text-xs text-apple-muted mt-1 line-clamp-2 leading-relaxed">
+                        <p className="text-caption1 text-apple-muted mt-1 line-clamp-2 leading-relaxed">
                           {screen.description}
                         </p>
                       )}
 
-                      <code className="apple-well mt-3 p-2.5 block font-mono text-[11px] text-apple-secondary leading-relaxed line-clamp-3">
+                      <code className="apple-well mt-3 p-2.5 block font-mono text-caption2 text-apple-secondary leading-relaxed line-clamp-3">
                         {screen.query}
                       </code>
 
-                      <div className="mt-auto pt-3 flex items-center justify-between text-[11px]">
-                        <span className="text-apple-faint font-mono">
+                      <div className="mt-auto pt-3 flex items-center justify-between text-caption2">
+                        <span className="text-apple-faint num">
                           {screen.createdAt
                             ? new Date(screen.createdAt).toLocaleDateString('en-IN', {
                                 day: 'numeric',

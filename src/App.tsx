@@ -171,16 +171,16 @@ export const App: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2.5">
                         <SlidersHorizontal className="w-5 h-5 text-apple-blue shrink-0" />
-                        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                        <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
                           Screens
                         </h1>
                       </div>
-                      <p className="text-xs text-apple-muted mt-1 leading-normal">
+                      <p className="text-caption1 text-apple-muted mt-1 leading-normal">
                         Pre-built investment formulas across value, growth, quality, and technical indicators for 500 Indian equities.
                       </p>
                     </div>
                     <div className="flex items-center gap-2 flex-wrap shrink-0">
-                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-secondary text-xs">
+                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-secondary text-caption1">
                         <Code2 className="w-3.5 h-3.5 text-apple-blue" />
                         Query Editor
                       </button>
@@ -195,10 +195,10 @@ export const App: React.FC = () => {
                     <div className="pt-2">
                       <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
                         <div className="min-w-0">
-                          <h2 className="text-base font-semibold text-apple-primary font-display">Results for query</h2>
-                          <p className="text-xs text-apple-muted mt-0.5 font-mono truncate max-w-2xl">{committedQuery}</p>
+                          <h2 className="text-headline text-apple-primary font-display">Results for query</h2>
+                          <p className="text-caption1 text-apple-muted mt-0.5 font-mono truncate max-w-2xl">{committedQuery}</p>
                         </div>
-                        <Link to={screenPath(committedQuery)} className="text-xs font-semibold text-apple-blue hover:underline shrink-0">
+                        <Link to={screenPath(committedQuery)} className="text-caption1 font-semibold text-apple-blue hover:underline shrink-0">
                           Edit query →
                         </Link>
                       </div>
@@ -223,16 +223,16 @@ export const App: React.FC = () => {
                     <div>
                       <div className="flex items-center gap-2.5">
                         <Code2 className="w-5 h-5 text-apple-blue shrink-0" />
-                        <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                        <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
                           Query Builder
                         </h1>
                       </div>
-                      <p className="text-xs text-apple-muted mt-1 leading-normal">
+                      <p className="text-caption1 text-apple-muted mt-1 leading-normal">
                         Screen 500 Indian companies using Screener.in syntax. Combine conditions with AND, OR, NOT and custom formulas.
                       </p>
                     </div>
                     <div className="flex items-center gap-2 flex-wrap shrink-0">
-                      <Link to="/" className="apple-btn apple-btn-secondary text-xs">
+                      <Link to="/" className="apple-btn apple-btn-secondary text-caption1">
                         <SlidersHorizontal className="w-3.5 h-3.5 text-apple-blue" />
                         Browse Screens
                       </Link>
@@ -368,8 +368,8 @@ export const App: React.FC = () => {
             <>
               <main className="flex-1 flex items-center justify-center p-8">
                 <div className="text-center">
-                  <h1 className="text-lg font-semibold text-apple-primary font-display">Page not found</h1>
-                  <p className="text-xs text-apple-muted mt-1.5">That address does not match anything here.</p>
+                  <h1 className="text-title3 text-apple-primary font-display">Page not found</h1>
+                  <p className="text-caption1 text-apple-muted mt-1.5">That address does not match anything here.</p>
                   <Link to="/" className="apple-btn apple-btn-primary mt-5">
                     Back to the screener
                   </Link>

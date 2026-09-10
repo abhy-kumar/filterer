@@ -134,14 +134,14 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
       <div className="px-3 sm:px-5 py-2.5 border-b border-apple-border flex items-center justify-between gap-2 overflow-x-auto no-scrollbar bg-apple-surface-hover/30">
         <div className="flex items-center gap-2 shrink-0">
           <Code2 className="w-3.5 h-3.5 text-apple-blue" />
-          <span className="text-xs font-semibold text-apple-primary font-mono">Formula Editor</span>
+          <span className="text-caption1 font-semibold text-apple-primary">Formula Editor</span>
         </div>
 
         <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
           <button onClick={() => setShowCatalog(true)} className="apple-btn apple-btn-secondary h-8 px-2.5 sm:px-3">
             <BookOpen className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Ratios</span>
-            <span className="text-apple-faint font-mono text-[10px] sm:text-xs">{METRICS_DICTIONARY.length}</span>
+            <span className="text-apple-faint num text-caption2 sm:text-caption1">{METRICS_DICTIONARY.length}</span>
           </button>
           <button
             onClick={() => onChangeQuery(formatScreenerQuery(query))}
@@ -184,14 +184,14 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
           spellCheck={false}
           placeholder="Market Capitalization > 500 AND Return on capital employed > 20 AND Debt to equity < 0.1"
           rows={3}
-          className={`apple-input w-full font-mono text-base sm:text-sm p-3 sm:p-3.5 resize-y leading-relaxed ${
+          className={`apple-input w-full font-mono text-subheadline p-3 sm:p-3.5 resize-y leading-relaxed ${
             errorMessage ? 'border-apple-red' : ''
           }`}
           style={errorMessage ? { borderColor: 'var(--apple-red)' } : undefined}
         />
 
         {/* Status line */}
-        <div className="mt-2.5 flex items-start justify-between gap-3 flex-wrap text-xs">
+        <div className="mt-2.5 flex items-start justify-between gap-3 flex-wrap text-caption1">
           <div className="min-w-0 flex-1">
             {errorMessage ? (
               <p className="flex items-start gap-1.5 num-neg">
@@ -230,7 +230,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
           </div>
 
           {executionTimeMs !== undefined && !errorMessage && (
-            <p className="text-apple-faint font-mono tabular-nums shrink-0">
+            <p className="text-apple-faint num shrink-0">
               {totalMatches} matched · {executionTimeMs} ms
             </p>
           )}
@@ -243,7 +243,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
               <button
                 key={op}
                 onClick={() => insertText(op)}
-                className="px-2.5 py-1 text-xs font-mono rounded-md bg-apple-surface hover:bg-apple-blue-subtle text-apple-blue border border-apple-border/50 transition-colors shrink-0 active:scale-95"
+                className="px-2.5 py-1 text-caption1 font-mono rounded-md bg-apple-surface hover:bg-apple-blue-subtle text-apple-blue border border-apple-border/50 transition-colors shrink-0 active:scale-95"
               >
                 {op}
               </button>
@@ -254,7 +254,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
               <button
                 key={chip.label}
                 onClick={() => insertText(chip.snippet)}
-                className="apple-tag hover:text-apple-primary transition-colors shrink-0 active:scale-95 text-[11px] py-1 px-2"
+                className="apple-tag hover:text-apple-primary transition-colors shrink-0 active:scale-95 text-caption2 py-1 px-2"
               >
                 {chip.label}
               </button>
@@ -263,7 +263,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
         </div>
 
         <div className="mt-4 pt-3.5 border-t border-apple-border-subtle flex items-center justify-between gap-3">
-          <p className="text-xs text-apple-faint hidden sm:block">
+          <p className="text-caption1 text-apple-faint hidden sm:block">
             <kbd className="font-mono">⌘</kbd>
             <kbd className="font-mono">↵</kbd> to run · screening {universe.length} companies
           </p>
@@ -294,8 +294,8 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
               <div className="p-4 border-b border-apple-border pt-safe sm:pt-4">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <div>
-                    <h3 className="text-sm font-semibold text-apple-primary font-display">Ratio catalog</h3>
-                    <p className="text-xs text-apple-muted mt-0.5">
+                    <h3 className="text-subheadline font-semibold text-apple-primary font-display">Ratio catalog</h3>
+                    <p className="text-caption1 text-apple-muted mt-0.5">
                       Click a ratio to insert it. Coverage is over the {universe.length} companies loaded.
                     </p>
                   </div>
@@ -309,7 +309,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                   value={catalogSearch}
                   onChange={(e) => setCatalogSearch(e.target.value)}
                   placeholder="Search ratios"
-                  className="apple-input w-full text-base sm:text-xs px-3 h-9 sm:h-8 mb-2.5"
+                  className="apple-input w-full text-caption1 px-3 h-9 sm:h-8 mb-2.5"
                 />
 
 
@@ -318,7 +318,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                     <button
                       key={cat}
                       onClick={() => setCategory(cat)}
-                      className={`px-2.5 py-1 rounded-lg text-xs whitespace-nowrap transition-colors ${
+                      className={`px-2.5 py-1 rounded-lg text-caption1 whitespace-nowrap transition-colors ${
                         category === cat
                           ? 'bg-apple-blue text-white font-semibold'
                           : 'text-apple-muted hover:text-apple-primary hover:bg-apple-surface-hover'
@@ -332,7 +332,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
 
               <div className="overflow-y-auto p-2 flex-1">
                 {catalog.length === 0 && (
-                  <p className="text-xs text-apple-muted text-center py-10">No ratio matches that.</p>
+                  <p className="text-caption1 text-apple-muted text-center py-10">No ratio matches that.</p>
                 )}
                 {catalog.map((item) => {
                   const coverage = fieldCoverage(universe, item.id);
@@ -347,21 +347,21 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                       className="w-full text-left p-3 rounded-xl hover:bg-apple-surface-hover transition-colors group"
                     >
                       <div className="flex items-baseline justify-between gap-3">
-                        <span className="text-xs font-semibold text-apple-primary group-hover:text-apple-blue">
+                        <span className="text-caption1 font-semibold text-apple-primary group-hover:text-apple-blue">
                           {item.name}
                         </span>
                         <span
-                          className={`text-[10px] font-mono shrink-0 ${
+                          className={`text-caption2 font-mono shrink-0 ${
                             coverage.reported === 0 ? 'num-neg' : full ? 'text-apple-faint' : 'text-apple-amber'
                           }`}
                         >
                           {full ? item.unit : `${coverage.reported}/${coverage.total} reported`}
                         </span>
                       </div>
-                      <p className="text-xs text-apple-muted mt-1 leading-relaxed">{item.description}</p>
+                      <p className="text-caption1 text-apple-muted mt-1 leading-relaxed">{item.description}</p>
                       <div className="mt-1.5 flex items-center gap-1 flex-wrap">
                         {item.aliases.slice(0, 5).map((alias) => (
-                          <code key={alias} className="text-[10px] font-mono text-apple-faint">
+                          <code key={alias} className="text-caption2 font-mono text-apple-faint">
                             {alias}
                           </code>
                         ))}

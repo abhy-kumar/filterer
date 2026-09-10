@@ -337,16 +337,16 @@ const TradingViewLightweightChart: React.FC<{
   return (
     <div className="flex flex-col h-full w-full">
       {/* Interactive Controls & Legend Sub-Header */}
-      <div className="px-3 sm:px-5 py-2 sm:py-2.5 bg-apple-surface/50 border-b border-apple-border flex items-center justify-between gap-2 sm:gap-3 text-xs overflow-x-auto no-scrollbar">
+      <div className="px-3 sm:px-5 py-2 sm:py-2.5 bg-apple-surface/50 border-b border-apple-border flex items-center justify-between gap-2 sm:gap-3 text-caption1 overflow-x-auto no-scrollbar">
         {/* Indicators Toggle Buttons */}
         <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
-          <span className="text-apple-muted text-[10.5px] sm:text-[11px] font-medium flex items-center gap-1 mr-0.5 sm:mr-1">
+          <span className="text-apple-muted text-caption2 sm:text-caption2 font-medium flex items-center gap-1 mr-0.5 sm:mr-1">
             <Layers className="w-3 h-3" />
             <span className="hidden sm:inline">Indicators:</span>
           </span>
           <button
             onClick={() => setShowSma50(!showSma50)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-[11px] font-medium transition-all flex items-center gap-1 ${
+            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
               showSma50
                 ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
                 : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
@@ -357,7 +357,7 @@ const TradingViewLightweightChart: React.FC<{
           </button>
           <button
             onClick={() => setShowSma200(!showSma200)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-[11px] font-medium transition-all flex items-center gap-1 ${
+            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
               showSma200
                 ? 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30'
                 : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
@@ -368,7 +368,7 @@ const TradingViewLightweightChart: React.FC<{
           </button>
           <button
             onClick={() => setShowEma20(!showEma20)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-[11px] font-medium transition-all flex items-center gap-1 ${
+            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
               showEma20
                 ? 'bg-purple-500/15 text-purple-600 dark:text-purple-400 border border-purple-500/30'
                 : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
@@ -379,7 +379,7 @@ const TradingViewLightweightChart: React.FC<{
           </button>
           <button
             onClick={() => setShowVolume(!showVolume)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-[11px] font-medium transition-all flex items-center gap-1 ${
+            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
               showVolume
                 ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30'
                 : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
@@ -396,7 +396,7 @@ const TradingViewLightweightChart: React.FC<{
             <button
               key={r}
               onClick={() => handleRangeChange(r)}
-              className={`apple-segmented-item px-2 sm:px-2.5 py-0.5 text-[10.5px] sm:text-[11px] uppercase ${
+              className={`apple-segmented-item px-2 sm:px-2.5 py-0.5 text-caption2 sm:text-caption2 uppercase ${
                 selectedRange === r ? 'active' : ''
               }`}
             >
@@ -408,7 +408,7 @@ const TradingViewLightweightChart: React.FC<{
 
       {/* Floating Dynamic Metric Readout */}
       {info && (
-        <div className="px-3 sm:px-5 py-1.5 bg-apple-card-bg border-b border-apple-border-subtle flex items-center gap-2.5 sm:gap-4 text-[10.5px] sm:text-[11px] text-apple-muted font-mono overflow-x-auto no-scrollbar whitespace-nowrap">
+        <div className="px-3 sm:px-5 py-1.5 bg-apple-card-bg border-b border-apple-border-subtle flex items-center gap-2.5 sm:gap-4 text-caption2 sm:text-caption2 text-apple-muted num overflow-x-auto no-scrollbar whitespace-nowrap">
           <span>Date: <strong className="text-apple-primary">{info.date}</strong></span>
           <span>Price: <strong className="text-apple-primary">₹{info.price.toLocaleString('en-IN')}</strong></span>
           {showSma50 && info.dma50 && (
@@ -522,7 +522,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
               <button
                 key={t.id}
                 onClick={() => setTab(t.id)}
-                className={`apple-segmented-item flex items-center gap-1 text-xs py-1 px-2 sm:px-2.5 ${activeTab === t.id ? 'active' : ''}`}
+                className={`apple-segmented-item flex items-center gap-1 text-caption1 py-1 px-2 sm:px-2.5 ${activeTab === t.id ? 'active' : ''}`}
               >
                 {t.icon}
                 <span>{t.label}</span>
@@ -535,7 +535,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
             href={tvWebUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-medium text-apple-secondary hover:text-apple-primary hover:bg-apple-surface border border-apple-border transition-colors"
+            className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption2 font-medium text-apple-secondary hover:text-apple-primary hover:bg-apple-surface border border-apple-border transition-colors"
             title="Open real-time interactive workspace on TradingView.com"
           >
             <span>TradingView Web</span>
@@ -551,7 +551,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
                 <button
                   key={r}
                   onClick={() => setRange(r)}
-                  className={`apple-segmented-item px-2 sm:px-2.5 py-1 text-[11px] uppercase ${range === r ? 'active' : ''}`}
+                  className={`apple-segmented-item px-2 sm:px-2.5 py-1 text-caption2 uppercase ${range === r ? 'active' : ''}`}
                 >
                   {r}
                 </button>
@@ -633,7 +633,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
       </div>
 
       {/* Footer Info */}
-      <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-[11px] text-apple-muted flex items-center justify-between gap-3 flex-wrap">
+      <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-caption2 text-apple-muted flex items-center justify-between gap-3 flex-wrap">
         <span>
           {activeTab === 'tradingview'
             ? 'Daily price history with 50-day SMA, 200-day SMA, 20-day EMA, and volume.'
@@ -641,7 +641,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
               ? 'Historical price to earnings (P/E) compared with the median.'
               : 'Annual sales and net profit in ₹ crore with operating margin (OPM%).'}
         </span>
-        <span className="text-[10px] opacity-75">
+        <span className="text-caption2 opacity-75">
           Filterer
         </span>
       </div>

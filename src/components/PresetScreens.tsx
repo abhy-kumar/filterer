@@ -48,7 +48,7 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
   return (
     <section className="space-y-4">
       <div className="flex items-center justify-between gap-3 flex-wrap">
-        <div className="text-xs font-semibold text-apple-muted">
+        <div className="text-caption1 font-semibold text-apple-muted">
           {filtered.length} Curated Screens
         </div>
 
@@ -57,7 +57,7 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
             <button
               key={cat}
               onClick={() => setCategory(cat)}
-              className={`apple-segmented-item text-xs whitespace-nowrap ${category === cat ? 'active' : ''}`}
+              className={`apple-segmented-item text-caption1 whitespace-nowrap ${category === cat ? 'active' : ''}`}
             >
               {cat}
             </button>
@@ -78,12 +78,12 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <Icon className="w-4 h-4 text-apple-blue shrink-0" />
-                  <h3 className="text-sm font-semibold text-apple-primary group-hover:text-apple-blue transition-colors truncate">
+                  <h3 className="text-subheadline font-semibold text-apple-primary group-hover:text-apple-blue transition-colors truncate">
                     {screen.title}
                   </h3>
                 </div>
                 <span
-                  className={`text-xs font-mono tabular-nums shrink-0 ${
+                  className={`text-caption1 num shrink-0 ${
                     screen.matches === 0 ? 'text-apple-faint' : 'text-apple-primary'
                   }`}
                   title={`${screen.matches} of ${universe.length} companies match`}
@@ -92,12 +92,12 @@ export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, unive
                 </span>
               </div>
 
-              <p className="text-xs text-apple-secondary mt-2 leading-relaxed line-clamp-3">
+              <p className="text-caption1 text-apple-secondary mt-2 leading-relaxed line-clamp-3">
                 {screen.description}
               </p>
 
               <div className="mt-auto pt-3.5 flex items-center justify-between gap-2">
-                <span className="text-[11px] text-apple-faint truncate">{screen.author}</span>
+                <span className="text-caption2 text-apple-faint truncate">{screen.author}</span>
                 <button
                   onClick={(e) => copy(screen.id, screen.query, e)}
                   className="apple-btn apple-btn-quiet p-1 text-apple-faint hover:text-apple-primary"

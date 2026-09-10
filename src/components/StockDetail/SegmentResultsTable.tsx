@@ -55,11 +55,11 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
         <div>
           <div className="flex items-center gap-2">
             <Layers className="w-5 h-5 text-apple-blue" />
-            <h2 className="text-lg font-bold text-apple-primary font-display">
+            <h2 className="text-title3 text-apple-primary font-display">
               Business Segment Disclosures
             </h2>
           </div>
-          <p className="text-xs text-apple-muted mt-0.5">
+          <p className="text-caption1 text-apple-muted mt-0.5">
             Divisional revenue, operating profit (EBIT), and segment margins ({segmentData.reportingStandard}).
           </p>
         </div>
@@ -71,7 +71,7 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
               key={p.period}
               type="button"
               onClick={() => setSelectedPeriodName(p.period)}
-              className={`apple-segmented-item text-xs ${
+              className={`apple-segmented-item text-caption1 ${
                 selectedPeriodName === p.period ? 'active' : ''
               }`}
             >
@@ -83,9 +83,9 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
 
       {/* Visual Revenue Share Stacked Bar */}
       <div className="space-y-2">
-        <div className="flex items-center justify-between text-xs">
+        <div className="flex items-center justify-between text-caption1">
           <span className="font-medium text-apple-secondary">Revenue Contribution by Division</span>
-          <span className="font-mono text-apple-muted text-[11px]">Total: ₹{selectedPeriod.total_revenue.toLocaleString('en-IN')} Cr</span>
+          <span className="num text-apple-muted text-caption2">Total: ₹{selectedPeriod.total_revenue.toLocaleString('en-IN')} Cr</span>
         </div>
 
         <div className="h-4 w-full rounded-full overflow-hidden flex bg-apple-surface">
@@ -103,14 +103,14 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-3 flex-wrap pt-1 text-[11px]">
+        <div className="flex items-center gap-3 flex-wrap pt-1 text-caption2">
           {selectedPeriod.segments.map((seg, idx) => {
             const colorClass = SEGMENT_COLORS[idx % SEGMENT_COLORS.length];
             return (
               <div key={seg.name} className="flex items-center gap-1.5">
                 <span className={`w-2.5 h-2.5 rounded-full ${colorClass}`} />
                 <span className="text-apple-secondary truncate max-w-[200px]">{seg.name}:</span>
-                <span className="font-mono font-semibold text-apple-primary">{seg.revenue_share_pct}%</span>
+                <span className="num font-semibold text-apple-primary">{seg.revenue_share_pct}%</span>
               </div>
             );
           })}
@@ -140,11 +140,11 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
                   <td>
                     <div className="flex items-center gap-2">
                       <span className={`w-2 h-2 rounded-full ${colorClass} shrink-0`} />
-                      <span className="font-medium text-apple-primary text-xs">{seg.name}</span>
+                      <span className="font-medium text-apple-primary text-caption1">{seg.name}</span>
                     </div>
                   </td>
 
-                  <td className="text-right font-mono text-xs">
+                  <td className="text-right num text-caption1">
                     ₹{seg.revenue.toLocaleString('en-IN')}
                   </td>
 
@@ -156,19 +156,19 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
                           style={{ width: `${Math.min(100, seg.revenue_share_pct)}%` }}
                         />
                       </div>
-                      <span className="font-mono text-xs text-apple-secondary">
+                      <span className="num text-caption1 text-apple-secondary">
                         {seg.revenue_share_pct.toFixed(1)}%
                       </span>
                     </div>
                   </td>
 
-                  <td className="text-right font-mono text-xs font-semibold text-apple-primary">
+                  <td className="text-right num text-caption1 font-semibold text-apple-primary">
                     ₹{seg.ebit.toLocaleString('en-IN')}
                   </td>
 
-                  <td className="text-right font-mono text-xs">
+                  <td className="text-right num text-caption1">
                     <span
-                      className={`px-1.5 py-0.5 rounded text-[11px] font-semibold ${
+                      className={`px-1.5 py-0.5 rounded text-caption2 font-semibold ${
                         isHighMargin
                           ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
                           : 'text-apple-secondary'
@@ -178,7 +178,7 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
                     </span>
                   </td>
 
-                  <td className="text-right font-mono text-xs">
+                  <td className="text-right num text-caption1">
                     {seg.growth_yoy_pct !== undefined ? (
                       <span className={signClass(seg.growth_yoy_pct)}>
                         {seg.growth_yoy_pct >= 0 ? '+' : ''}
@@ -193,19 +193,19 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
             })}
           </tbody>
           <tfoot>
-            <tr className="border-t-2 border-apple-border font-semibold text-xs bg-apple-surface/30">
+            <tr className="border-t-2 border-apple-border font-semibold text-caption1 bg-apple-surface/30">
               <td className="font-bold text-apple-primary">Consolidated Total</td>
-              <td className="text-right font-mono font-bold text-apple-primary">
+              <td className="text-right num font-bold text-apple-primary">
                 ₹{selectedPeriod.total_revenue.toLocaleString('en-IN')}
               </td>
-              <td className="text-right font-mono font-bold text-apple-primary">100.0%</td>
-              <td className="text-right font-mono font-bold text-apple-primary">
+              <td className="text-right num font-bold text-apple-primary">100.0%</td>
+              <td className="text-right num font-bold text-apple-primary">
                 ₹{selectedPeriod.total_ebit.toLocaleString('en-IN')}
               </td>
-              <td className="text-right font-mono font-bold text-apple-primary">
+              <td className="text-right num font-bold text-apple-primary">
                 {blendedMargin.toFixed(1)}%
               </td>
-              <td className="text-right font-mono text-apple-muted">-</td>
+              <td className="text-right num text-apple-muted">-</td>
             </tr>
           </tfoot>
         </table>
@@ -215,27 +215,27 @@ export const SegmentResultsTable: React.FC<SegmentResultsTableProps> = ({ stock 
       {segmentHighlights && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
           <div className="apple-well p-3 rounded-lg space-y-1">
-            <div className="text-[10.5px] uppercase tracking-wider font-semibold text-apple-muted flex items-center gap-1.5">
+            <div className="text-caption2 uppercase tracking-wider font-semibold text-apple-muted flex items-center gap-1.5">
               <BarChart3 className="w-3.5 h-3.5 text-apple-blue" />
               Largest Revenue Driver (Cash Engine)
             </div>
-            <div className="text-xs font-bold text-apple-primary">
+            <div className="text-caption1 font-bold text-apple-primary">
               {segmentHighlights.largestRev.name}
             </div>
-            <p className="text-[11px] text-apple-muted">
+            <p className="text-caption2 text-apple-muted">
               Contributes {segmentHighlights.largestRev.revenue_share_pct}% of top-line (₹{segmentHighlights.largestRev.revenue.toLocaleString('en-IN')} Cr) at {segmentHighlights.largestRev.margin_pct}% operating margin.
             </p>
           </div>
 
           <div className="apple-well p-3 rounded-lg space-y-1">
-            <div className="text-[10.5px] uppercase tracking-wider font-semibold text-apple-muted flex items-center gap-1.5">
+            <div className="text-caption2 uppercase tracking-wider font-semibold text-apple-muted flex items-center gap-1.5">
               <TrendingUp className="w-3.5 h-3.5 text-emerald-500" />
               Highest Margin Division (Value Driver)
             </div>
-            <div className="text-xs font-bold text-apple-primary">
+            <div className="text-caption1 font-bold text-apple-primary">
               {segmentHighlights.highestMargin.name}
             </div>
-            <p className="text-[11px] text-apple-muted">
+            <p className="text-caption2 text-apple-muted">
               Generates {segmentHighlights.highestMargin.margin_pct}% EBIT margin, delivering ₹{segmentHighlights.highestMargin.ebit.toLocaleString('en-IN')} Cr in divisional operating profit.
             </p>
           </div>

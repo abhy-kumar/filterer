@@ -1,17 +1,53 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Filterer - Free Open-Source Screener.in Alternative</title>
     <meta name="description" content="Free, open-source stock screening and fundamental analysis platform for Indian Equities (NSE/BSE). Powered by natural screener.in query syntax." />
-    <!-- Premium Typography: Apple System Fallback + Google Plus Jakarta Sans & JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- Tints the browser chrome to match the page on iOS and Android. -->
+    <meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)" />
+
+    <!--
+      Typography is the platform's own UI face: SF on Apple, Segoe UI
+      Variable on Windows 11, Roboto on Android. Nothing is downloaded.
+
+      This used to pull Plus Jakarta Sans (300-800, roman and italic) and
+      JetBrains Mono (400-700, roman and italic) from Google Fonts on every
+      visit: two render-blocking round trips to a third party, for several
+      hundred kilobytes of faces that no Apple device ever rendered, since
+      -apple-system already matched ahead of them in the same font stack.
+    -->
+
+    <script>
+      /*
+        Resolve the colour scheme before the first paint.
+
+        The document used to ship with class="dark" hardcoded while
+        ThemeContext read localStorage on mount, so anyone who had chosen
+        light, or whose system was set to light, watched the app load dark
+        and then snap. This runs synchronously in the head, so the first
+        frame is already correct. Keep the storage key in step with
+        src/context/ThemeContext.tsx.
+      */
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem('filterer_color_theme');
+        } catch (e) {
+          /* Storage can throw in a private window; fall through to the system setting. */
+        }
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
   </head>
-  <body class="antialiased selection:bg-[#0071e3]/20 selection:text-[#0071e3] transition-colors duration-200">
+  <body class="antialiased">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

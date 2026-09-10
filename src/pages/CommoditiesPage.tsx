@@ -96,11 +96,11 @@ export const CommoditiesPage: React.FC = () => {
             <div>
               <div className="flex items-center gap-2.5">
                 <Activity className="w-5 h-5 text-apple-blue shrink-0" />
-                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
                   Commodities
                 </h1>
               </div>
-              <p className="text-xs text-apple-muted mt-1 leading-normal">
+              <p className="text-caption1 text-apple-muted mt-1 leading-normal">
                 Track global and domestic input commodity prices, multi-year cycles, and stock margin impacts.
               </p>
             </div>
@@ -111,7 +111,7 @@ export const CommoditiesPage: React.FC = () => {
                 <button
                   key={cat}
                   onClick={() => setCategoryFilter(cat)}
-                  className={`apple-segmented-item text-xs whitespace-nowrap ${
+                  className={`apple-segmented-item text-caption1 whitespace-nowrap ${
                     categoryFilter === cat ? 'active' : ''
                   }`}
                 >
@@ -137,16 +137,16 @@ export const CommoditiesPage: React.FC = () => {
                       : 'bg-apple-card hover:bg-apple-surface border-apple-border/70'
                   }`}
                 >
-                  <div className="text-[10px] font-semibold uppercase text-apple-muted tracking-wider truncate">
+                  <div className="text-caption2 font-semibold uppercase text-apple-muted tracking-wider truncate">
                     {comm.category}
                   </div>
-                  <div className="text-xs font-bold text-apple-primary truncate mt-0.5" title={comm.name}>
+                  <div className="text-caption1 font-bold text-apple-primary truncate mt-0.5" title={comm.name}>
                     {comm.name}
                   </div>
-                  <div className="font-mono text-xs font-bold text-apple-primary mt-2">
+                  <div className="num text-caption1 font-bold text-apple-primary mt-2">
                     {comm.unit.startsWith('$') ? `$${comm.currentPrice}` : `₹${comm.currentPrice.toLocaleString('en-IN')}`}
                   </div>
-                  <div className="flex items-center justify-between text-[10px] font-mono mt-0.5">
+                  <div className="flex items-center justify-between text-caption2 num mt-0.5">
                     <span className="text-apple-muted">1M</span>
                     <span className={isPositive ? 'text-emerald-600 dark:text-emerald-400 font-semibold' : 'text-rose-600 dark:text-rose-400 font-semibold'}>
                       {isPositive ? '+' : ''}{comm.change1mPct}%
@@ -165,14 +165,14 @@ export const CommoditiesPage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2.5 flex-wrap">
-                      <h2 className="text-xl sm:text-2xl font-bold text-apple-primary font-display">
+                      <h2 className="text-title2 sm:text-title1 text-apple-primary font-display">
                         {activeCommodity.name}
                       </h2>
-                      <span className={`px-2 py-0.5 rounded-full text-[11px] font-semibold border ${cycleBadgeClass(activeCommodity.cycleStage)}`}>
+                      <span className={`px-2 py-0.5 rounded-full text-caption2 font-semibold border ${cycleBadgeClass(activeCommodity.cycleStage)}`}>
                         {activeCommodity.cycleStage}
                       </span>
                     </div>
-                    <p className="text-xs text-apple-muted max-w-2xl">
+                    <p className="text-caption1 text-apple-muted max-w-2xl">
                       {activeCommodity.description}
                     </p>
                   </div>
@@ -180,32 +180,32 @@ export const CommoditiesPage: React.FC = () => {
                   {/* Price & Changes */}
                   <div className="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-apple-border/50 shrink-0">
                     <div>
-                      <div className="text-[10.5px] text-apple-muted">Current Benchmark</div>
-                      <div className="text-xl sm:text-2xl font-bold font-mono text-apple-primary mt-0.5">
+                      <div className="text-caption2 text-apple-muted">Current Benchmark</div>
+                      <div className="text-title2 sm:text-title1 font-display tabular-nums text-apple-primary mt-0.5">
                         {activeCommodity.unit.startsWith('$')
                           ? `$${activeCommodity.currentPrice}`
                           : `₹${activeCommodity.currentPrice.toLocaleString('en-IN')}`}
-                        <span className="text-xs font-normal text-apple-muted ml-1">
+                        <span className="text-caption1 font-normal text-apple-muted ml-1">
                           {activeCommodity.unit}
                         </span>
                       </div>
                     </div>
 
-                    <div className="pl-4 border-l border-apple-border space-y-0.5 text-xs font-mono">
+                    <div className="pl-4 border-l border-apple-border space-y-0.5 text-caption1 num">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="text-[10.5px] text-apple-muted">1M:</span>
+                        <span className="text-caption2 text-apple-muted">1M:</span>
                         <span className={signClass(activeCommodity.change1mPct)}>
                           {activeCommodity.change1mPct >= 0 ? '+' : ''}{activeCommodity.change1mPct}%
                         </span>
                       </div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="text-[10.5px] text-apple-muted">6M:</span>
+                        <span className="text-caption2 text-apple-muted">6M:</span>
                         <span className={signClass(activeCommodity.change6mPct)}>
                           {activeCommodity.change6mPct >= 0 ? '+' : ''}{activeCommodity.change6mPct}%
                         </span>
                       </div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="text-[10.5px] text-apple-muted">1Y:</span>
+                        <span className="text-caption2 text-apple-muted">1Y:</span>
                         <span className={signClass(activeCommodity.change1yPct)}>
                           {activeCommodity.change1yPct >= 0 ? '+' : ''}{activeCommodity.change1yPct}%
                         </span>
@@ -215,7 +215,7 @@ export const CommoditiesPage: React.FC = () => {
                 </div>
 
                 {/* Macro Backdrop commentary */}
-                <div className="apple-well p-3.5 rounded-xl text-xs space-y-1">
+                <div className="apple-well p-3.5 rounded-xl text-caption1 space-y-1">
                   <div className="font-semibold text-apple-primary flex items-center gap-1.5">
                     <Info className="w-3.5 h-3.5 text-apple-blue" />
                     Market Dynamics & Pricing Rationale
@@ -227,9 +227,9 @@ export const CommoditiesPage: React.FC = () => {
 
                 {/* Recharts Price Trend Chart */}
                 <div className="space-y-2">
-                  <div className="text-xs font-semibold text-apple-secondary flex items-center justify-between">
+                  <div className="text-caption1 font-semibold text-apple-secondary flex items-center justify-between">
                     <span>16-Month Price Trajectory ({activeCommodity.unit})</span>
-                    <span className="text-[11px] text-apple-muted font-normal font-mono hidden sm:inline">Monthly Average Closes</span>
+                    <span className="text-caption2 text-apple-muted font-normal hidden sm:inline">Monthly Average Closes</span>
                   </div>
                   <div className="h-48 sm:h-60 w-full pt-2">
                     <ResponsiveContainer width="100%" height="100%">
@@ -291,10 +291,10 @@ export const CommoditiesPage: React.FC = () => {
                   <div className="flex items-center gap-2 border-b border-apple-border pb-3">
                     <TrendingUp className="w-4 h-4 text-emerald-500" />
                     <div>
-                      <h3 className="text-sm font-bold text-apple-primary font-display">
+                      <h3 className="text-subheadline font-bold text-apple-primary font-display">
                         Beneficiaries / Raw Material Producers
                       </h3>
-                      <p className="text-[11px] text-apple-muted">
+                      <p className="text-caption2 text-apple-muted">
                         Revenue & EBITDA expand when {activeCommodity.name} benchmark rises
                       </p>
                     </div>
@@ -309,22 +309,22 @@ export const CommoditiesPage: React.FC = () => {
                         <div className="flex items-center justify-between gap-2">
                           <Link
                             to={stockPath(s.symbol)}
-                            className="font-mono text-xs font-bold text-apple-blue hover:underline inline-flex items-center gap-1"
+                            className="font-mono text-caption1 font-bold text-apple-blue hover:underline inline-flex items-center gap-1"
                           >
                             {s.symbol}
                             <ArrowUpRight className="w-3 h-3 text-apple-faint" />
                           </Link>
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-xs font-semibold text-apple-primary">
+                            <span className="num text-caption1 font-semibold text-apple-primary">
                               {price(s.currentPrice)}
                             </span>
-                            <span className={`font-mono text-[11px] ${signClass(s.changePct)}`}>
+                            <span className={`num text-caption2 ${signClass(s.changePct)}`}>
                               {s.changePct >= 0 ? '+' : ''}{s.changePct.toFixed(2)}%
                             </span>
                             <button
                               type="button"
                               onClick={() => setWatchlistModalStock({ symbol: s.symbol, name: s.name })}
-                              className="apple-btn apple-btn-secondary p-1 text-[10px]"
+                              className="apple-btn apple-btn-secondary p-1 text-caption2"
                               title={`Add ${s.symbol} to watchlist`}
                             >
                               <Bookmark className="w-3 h-3" />
@@ -332,11 +332,11 @@ export const CommoditiesPage: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="text-xs text-apple-secondary font-medium">
+                        <div className="text-caption1 text-apple-secondary font-medium">
                           {s.name}
                         </div>
 
-                        <p className="text-[11px] text-apple-muted leading-relaxed">
+                        <p className="text-caption2 text-apple-muted leading-relaxed">
                           {s.impactDescription}
                         </p>
                       </div>
@@ -349,10 +349,10 @@ export const CommoditiesPage: React.FC = () => {
                   <div className="flex items-center gap-2 border-b border-apple-border pb-3">
                     <TrendingDown className="w-4 h-4 text-rose-500" />
                     <div>
-                      <h3 className="text-sm font-bold text-apple-primary font-display">
+                      <h3 className="text-subheadline font-bold text-apple-primary font-display">
                         Input Users / Margin Tailwinds from Softening
                       </h3>
-                      <p className="text-[11px] text-apple-muted">
+                      <p className="text-caption2 text-apple-muted">
                         Gross margins expand when {activeCommodity.name} benchmark softens
                       </p>
                     </div>
@@ -367,22 +367,22 @@ export const CommoditiesPage: React.FC = () => {
                         <div className="flex items-center justify-between gap-2">
                           <Link
                             to={stockPath(s.symbol)}
-                            className="font-mono text-xs font-bold text-apple-blue hover:underline inline-flex items-center gap-1"
+                            className="font-mono text-caption1 font-bold text-apple-blue hover:underline inline-flex items-center gap-1"
                           >
                             {s.symbol}
                             <ArrowUpRight className="w-3 h-3 text-apple-faint" />
                           </Link>
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-xs font-semibold text-apple-primary">
+                            <span className="num text-caption1 font-semibold text-apple-primary">
                               {price(s.currentPrice)}
                             </span>
-                            <span className={`font-mono text-[11px] ${signClass(s.changePct)}`}>
+                            <span className={`num text-caption2 ${signClass(s.changePct)}`}>
                               {s.changePct >= 0 ? '+' : ''}{s.changePct.toFixed(2)}%
                             </span>
                             <button
                               type="button"
                               onClick={() => setWatchlistModalStock({ symbol: s.symbol, name: s.name })}
-                              className="apple-btn apple-btn-secondary p-1 text-[10px]"
+                              className="apple-btn apple-btn-secondary p-1 text-caption2"
                               title={`Add ${s.symbol} to watchlist`}
                             >
                               <Bookmark className="w-3 h-3" />
@@ -390,11 +390,11 @@ export const CommoditiesPage: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="text-xs text-apple-secondary font-medium">
+                        <div className="text-caption1 text-apple-secondary font-medium">
                           {s.name}
                         </div>
 
-                        <p className="text-[11px] text-apple-muted leading-relaxed">
+                        <p className="text-caption2 text-apple-muted leading-relaxed">
                           {s.impactDescription}
                         </p>
                       </div>

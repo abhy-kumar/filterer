@@ -261,7 +261,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             value={searchFilter}
             onChange={(e) => setSearchFilter(e.target.value)}
             placeholder="Filter results"
-            className="apple-input w-full text-xs pl-8 pr-7 h-8"
+            className="apple-input w-full text-caption1 pl-8 pr-7 h-8"
           />
           {searchFilter && (
             <button
@@ -282,7 +282,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             setSortKey(k);
             setSortOrder(o as 'asc' | 'desc');
           }}
-          className="apple-input text-xs px-2 h-8 text-apple-secondary sm:hidden"
+          className="apple-input text-caption1 px-2 h-8 text-apple-secondary sm:hidden"
           title="Sort results"
         >
           <option value="market_cap-desc">Mkt Cap: High → Low</option>
@@ -303,7 +303,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             setSectorFilter(e.target.value);
             setIndustryFilter('All');
           }}
-          className="apple-input text-xs px-2.5 h-8 text-apple-secondary hidden sm:inline-block"
+          className="apple-input text-caption1 px-2.5 h-8 text-apple-secondary hidden sm:inline-block"
           title="Filter by sector"
         >
           {sectors.map((s) => (
@@ -316,7 +316,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         <select
           value={industryFilter}
           onChange={(e) => setIndustryFilter(e.target.value)}
-          className="apple-input text-xs px-2.5 h-8 text-apple-secondary max-w-[200px] hidden md:inline-block"
+          className="apple-input text-caption1 px-2.5 h-8 text-apple-secondary max-w-[200px] hidden md:inline-block"
           title="Filter by industry"
         >
           {industries.map((ind) => (
@@ -331,7 +331,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
           <div className="apple-segmented">
             <button
               onClick={() => setViewMode('cards')}
-              className={`apple-segmented-item flex items-center gap-1 text-xs py-1 px-2 sm:px-2.5 ${
+              className={`apple-segmented-item flex items-center gap-1 text-caption1 py-1 px-2 sm:px-2.5 ${
                 viewMode === 'cards' ? 'active' : ''
               }`}
               title="Cards view"
@@ -342,7 +342,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             </button>
             <button
               onClick={() => setViewMode('table')}
-              className={`apple-segmented-item flex items-center gap-1 text-xs py-1 px-2 sm:px-2.5 ${
+              className={`apple-segmented-item flex items-center gap-1 text-caption1 py-1 px-2 sm:px-2.5 ${
                 viewMode === 'table' ? 'active' : ''
               }`}
               title="Table view"
@@ -356,7 +356,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
           <button onClick={() => setShowColumnPicker(true)} className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3">
             <Columns3 className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Columns</span>
-            <span className="text-apple-faint font-mono text-[10px] sm:text-xs">{visibleColumns.length}</span>
+            <span className="text-apple-faint num text-caption2 sm:text-caption1">{visibleColumns.length}</span>
           </button>
           {onExportCSV && (
             <button onClick={onExportCSV} className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3" disabled={!sortedStocks.length}>
@@ -372,7 +372,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
         <div className="p-3 sm:p-4">
           {paginatedStocks.length === 0 ? (
             <div className="py-14 text-center">
-              <p className="text-sm text-apple-secondary">
+              <p className="text-subheadline text-apple-secondary">
                 {stocks.length === 0
                   ? 'No companies match your query conditions.'
                   : 'No companies match the current search, sector, or industry filter.'}
@@ -384,7 +384,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                     setSectorFilter('All');
                     setIndustryFilter('All');
                   }}
-                  className="mt-3 text-xs font-semibold text-apple-blue hover:underline"
+                  className="mt-3 text-caption1 font-semibold text-apple-blue hover:underline"
                 >
                   Clear filters
                 </button>
@@ -404,61 +404,61 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0">
                           <div className="flex items-baseline gap-2">
-                            <span className="font-mono text-sm font-bold text-apple-blue group-hover:underline">
+                            <span className="font-mono text-subheadline font-bold text-apple-blue group-hover:underline">
                               {stock.symbol}
                             </span>
-                            <span className="text-xs text-apple-muted truncate max-w-[150px]">
+                            <span className="text-caption1 text-apple-muted truncate max-w-[150px]">
                               {stock.name}
                             </span>
                           </div>
-                          <div className="text-[11px] text-apple-faint truncate mt-0.5">
+                          <div className="text-caption2 text-apple-faint truncate mt-0.5">
                             {stock.sector} {stock.industry ? `· ${stock.industry}` : ''}
                           </div>
                         </div>
 
                         <div className="text-right shrink-0">
-                          <div className="font-mono text-sm font-bold text-apple-primary">
+                          <div className="num text-subheadline font-bold text-apple-primary">
                             {price(stock.current_price)}
                           </div>
-                          <div className={`font-mono text-[11px] font-semibold ${signClass(stock.change_pct)}`}>
+                          <div className={`num text-caption2 font-semibold ${signClass(stock.change_pct)}`}>
                             {isPositive ? '+' : ''}{stock.change_pct?.toFixed(2) ?? '0.00'}%
                           </div>
                         </div>
                       </div>
 
                       {/* Key metrics grid */}
-                      <div className="grid grid-cols-3 gap-2 mt-3 pt-2.5 border-t border-apple-border-subtle text-xs">
+                      <div className="grid grid-cols-3 gap-2 mt-3 pt-2.5 border-t border-apple-border-subtle text-caption1">
                         <div>
-                          <span className="text-[10px] text-apple-muted block">Mkt Cap</span>
-                          <span className="font-mono font-semibold text-apple-primary">{crore(stock.market_cap)}</span>
+                          <span className="text-caption2 text-apple-muted block">Mkt Cap</span>
+                          <span className="num font-semibold text-apple-primary">{crore(stock.market_cap)}</span>
                         </div>
                         <div>
-                          <span className="text-[10px] text-apple-muted block">P/E</span>
-                          <span className="font-mono font-semibold text-apple-primary">
+                          <span className="text-caption2 text-apple-muted block">P/E</span>
+                          <span className="num font-semibold text-apple-primary">
                             {isReported(stock.pe_ratio) ? stock.pe_ratio.toFixed(1) : '-'}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] text-apple-muted block">ROCE</span>
-                          <span className="font-mono font-semibold text-apple-primary">
+                          <span className="text-caption2 text-apple-muted block">ROCE</span>
+                          <span className="num font-semibold text-apple-primary">
                             {isReported(stock.roce) ? `${stock.roce.toFixed(1)}%` : '-'}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] text-apple-muted block">ROE</span>
-                          <span className="font-mono font-semibold text-apple-primary">
+                          <span className="text-caption2 text-apple-muted block">ROE</span>
+                          <span className="num font-semibold text-apple-primary">
                             {isReported(stock.roe) ? `${stock.roe.toFixed(1)}%` : '-'}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] text-apple-muted block">D/E</span>
-                          <span className="font-mono font-semibold text-apple-primary">
+                          <span className="text-caption2 text-apple-muted block">D/E</span>
+                          <span className="num font-semibold text-apple-primary">
                             {isReported(stock.debt_to_equity) ? stock.debt_to_equity.toFixed(2) : '-'}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[10px] text-apple-muted block">Sales 3Y</span>
-                          <span className={`font-mono font-semibold ${signClass(stock.sales_growth_3y)}`}>
+                          <span className="text-caption2 text-apple-muted block">Sales 3Y</span>
+                          <span className={`num font-semibold ${signClass(stock.sales_growth_3y)}`}>
                             {isReported(stock.sales_growth_3y) ? `${stock.sales_growth_3y.toFixed(1)}%` : '-'}
                           </span>
                         </div>
@@ -511,7 +511,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
               {paginatedStocks.length === 0 ? (
                 <tr>
                   <td colSpan={visibleColumns.length + 1} className="py-14 text-center">
-                    <p className="text-sm text-apple-secondary">
+                    <p className="text-subheadline text-apple-secondary">
                       {stocks.length === 0
                         ? 'No companies match your query conditions.'
                         : 'No companies match the current search, sector, or industry filter.'}
@@ -523,7 +523,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                           setSectorFilter('All');
                           setIndustryFilter('All');
                         }}
-                        className="mt-3 text-xs font-semibold text-apple-blue hover:underline"
+                        className="mt-3 text-caption1 font-semibold text-apple-blue hover:underline"
                       >
                         Clear filters
                       </button>
@@ -539,8 +539,8 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                   >
                     <td className="apple-sticky-col">
                       <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2">
-                        <span className="font-mono text-xs font-semibold text-apple-blue">{stock.symbol}</span>
-                        <span className="text-[10.5px] sm:text-xs text-apple-muted truncate max-w-[105px] sm:max-w-[140px]">
+                        <span className="font-mono text-caption1 font-semibold text-apple-blue">{stock.symbol}</span>
+                        <span className="text-caption2 sm:text-caption1 text-apple-muted truncate max-w-[105px] sm:max-w-[140px]">
                           {stock.name}
                         </span>
                       </div>
@@ -548,7 +548,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                     {visibleColumns.map((col) => (
                       <td
                         key={col.key}
-                        className={`font-mono ${
+                        className={`num ${
                           col.align === 'right' ? 'text-right' : col.align === 'center' ? 'text-center' : 'text-left'
                         }`}
                       >
@@ -565,7 +565,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
 
 
       {/* Pagination */}
-      <div className="px-4 py-2.5 border-t border-apple-border flex flex-wrap items-center justify-between gap-3 text-xs text-apple-muted">
+      <div className="px-4 py-2.5 border-t border-apple-border flex flex-wrap items-center justify-between gap-3 text-caption1 text-apple-muted">
         <span>
           {sortedStocks.length === 0
             ? 'No rows'
@@ -578,7 +578,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             <select
               value={pageSize}
               onChange={(e) => setPageSize(Number(e.target.value))}
-              className="apple-input text-xs px-1.5 py-0.5"
+              className="apple-input text-caption1 px-1.5 py-0.5"
             >
               {[10, 25, 50, 100].map((n) => (
                 <option key={n} value={n}>{n}</option>
@@ -596,7 +596,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <span className="font-mono tabular-nums px-1">
+              <span className="num px-1">
                 {page} / {totalPages}
               </span>
               <button
@@ -623,15 +623,15 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-1">
-                <h3 className="text-sm font-semibold text-apple-primary font-display">Columns</h3>
+                <h3 className="text-subheadline font-semibold text-apple-primary font-display">Columns</h3>
                 <button
                   onClick={() => setVisibleKeys(DEFAULT_VISIBLE)}
-                  className="text-xs text-apple-blue hover:underline"
+                  className="text-caption1 text-apple-blue hover:underline"
                 >
                   Reset
                 </button>
               </div>
-              <p className="text-xs text-apple-muted mb-4">Your selection is remembered on this device.</p>
+              <p className="text-caption1 text-apple-muted mb-4">Your selection is remembered on this device.</p>
 
               <div className="grid grid-cols-2 gap-1 max-h-72 overflow-y-auto -mr-2 pr-2">
                 {COLUMNS.map((col) => {
@@ -640,7 +640,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                     <button
                       key={col.key}
                       onClick={() => toggleColumn(col.key)}
-                      className={`flex items-center gap-2 px-2 py-1.5 rounded-lg text-xs text-left transition-colors ${
+                      className={`flex items-center gap-2 px-2 py-1.5 rounded-lg text-caption1 text-left transition-colors ${
                         on ? 'text-apple-primary bg-apple-blue-subtle' : 'text-apple-muted hover:bg-apple-surface-hover'
                       }`}
                     >

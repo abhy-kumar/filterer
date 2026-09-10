@@ -72,16 +72,16 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
       {/* Header Bar */}
       <div className="px-4 sm:px-6 py-4 border-b border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-3">
-          <h2 className="text-xl font-bold text-apple-primary font-display flex items-center gap-2">
+          <h2 className="text-title3 text-apple-primary font-display flex items-center gap-2">
             Insights
-            <span className="text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-apple-blue/10 text-apple-blue border border-apple-blue/20">
+            <span className="text-caption2 font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-apple-blue/10 text-apple-blue border border-apple-blue/20">
               in beta
             </span>
           </h2>
 
           <button
             onClick={handleFlag}
-            className="text-xs text-apple-muted hover:text-apple-secondary flex items-center gap-1 transition-colors pl-2 border-l border-apple-border/80"
+            className="text-caption1 text-apple-muted hover:text-apple-secondary flex items-center gap-1 transition-colors pl-2 border-l border-apple-border/80"
             title="Report metric correction"
           >
             {flagged ? (
@@ -103,13 +103,13 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
           <div className="apple-segmented">
             <button
               onClick={() => setHorizon('yearly')}
-              className={`apple-segmented-item text-xs ${horizon === 'yearly' ? 'active' : ''}`}
+              className={`apple-segmented-item text-caption1 ${horizon === 'yearly' ? 'active' : ''}`}
             >
               Yearly
             </button>
             <button
               onClick={() => setHorizon('quarterly')}
-              className={`apple-segmented-item text-xs ${horizon === 'quarterly' ? 'active' : ''}`}
+              className={`apple-segmented-item text-caption1 ${horizon === 'quarterly' ? 'active' : ''}`}
             >
               Quarterly
             </button>
@@ -122,18 +122,18 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
         <div className="p-4 sm:p-5 bg-apple-bg-subtle/40 border-b border-apple-border animate-fade-in space-y-2">
           <div className="flex items-center justify-between">
             <div>
-              <div className="text-xs font-semibold text-apple-primary font-display flex items-center gap-2">
+              <div className="text-caption1 font-semibold text-apple-primary font-display flex items-center gap-2">
                 <ChartIcon className="w-3.5 h-3.5 text-apple-blue" />
                 <span>{selectedMetric.name}</span>
-                <span className="text-[10.5px] font-normal text-apple-muted">({selectedMetric.unit})</span>
+                <span className="text-caption2 font-normal text-apple-muted">({selectedMetric.unit})</span>
               </div>
               {selectedMetric.description && (
-                <p className="text-[11px] text-apple-muted mt-0.5">{selectedMetric.description}</p>
+                <p className="text-caption2 text-apple-muted mt-0.5">{selectedMetric.description}</p>
               )}
             </div>
             <button
               onClick={() => setSelectedMetricId(null)}
-              className="text-xs text-apple-muted hover:text-apple-primary px-2 py-1 rounded bg-apple-surface border border-apple-border text-[11px]"
+              className="text-caption1 text-apple-muted hover:text-apple-primary px-2 py-1 rounded bg-apple-surface border border-apple-border text-caption2"
             >
               Close Chart
             </button>
@@ -166,9 +166,9 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
                     if (active && payload && payload.length) {
                       const data = payload[0].payload;
                       return (
-                        <div className="apple-card px-2.5 py-1.5 text-xs shadow-md border border-apple-border">
-                          <div className="text-[10px] text-apple-muted font-mono">{data.period}</div>
-                          <div className="font-mono font-bold text-apple-primary mt-0.5">
+                        <div className="apple-card px-2.5 py-1.5 text-caption1 shadow-md border border-apple-border">
+                          <div className="text-caption2 text-apple-muted num">{data.period}</div>
+                          <div className="num font-bold text-apple-primary mt-0.5">
                             {formatCellValue(selectedMetric, data.value)}
                           </div>
                         </div>
@@ -196,11 +196,11 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
         <table className="apple-table text-left">
           <thead>
             <tr>
-              <th className="apple-sticky-col min-w-[130px] sm:min-w-[240px] bg-apple-bg-subtle text-apple-muted font-semibold text-[10.5px] sm:text-[11px] px-2.5 sm:px-3">
+              <th className="apple-sticky-col min-w-[130px] sm:min-w-[240px] bg-apple-bg-subtle text-apple-muted font-semibold text-caption2 sm:text-caption2 px-2.5 sm:px-3">
                 OPERATIONAL KPI
               </th>
               {periods.map((p) => (
-                <th key={p} className="text-right text-[10.5px] sm:text-[11px] font-mono min-w-[80px] sm:min-w-[95px] px-2.5 sm:px-3">
+                <th key={p} className="text-right text-caption2 sm:text-caption2 num min-w-[80px] sm:min-w-[95px] px-2.5 sm:px-3">
                   {p}
                 </th>
               ))}
@@ -223,10 +223,10 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
                   <td className="apple-sticky-col py-2 sm:py-2.5 px-2.5 sm:px-3 min-w-[130px] sm:min-w-[240px]">
                     <div className="flex items-center justify-between gap-2">
                       <div className="min-w-0">
-                        <div className="font-semibold text-xs text-apple-primary group-hover:text-apple-blue transition-colors truncate max-w-[120px] sm:max-w-none">
+                        <div className="font-semibold text-caption1 text-apple-primary group-hover:text-apple-blue transition-colors truncate max-w-[120px] sm:max-w-none">
                           {metric.name}
                         </div>
-                        <div className="text-[10px] text-apple-muted font-mono mt-0.5">
+                        <div className="text-caption2 text-apple-muted num mt-0.5">
                           {metric.unit}
                         </div>
                       </div>
@@ -242,7 +242,7 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
                     const val = cell ? cell.value : null;
 
                     return (
-                      <td key={periodName} className="text-right font-mono text-xs tabular-nums px-3 py-2.5">
+                      <td key={periodName} className="text-right num text-caption1 px-3 py-2.5">
                         {formatCellValue(metric, val)}
                       </td>
                     );
@@ -255,17 +255,17 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
       </div>
 
       {/* Footer Attribution */}
-      <div className="px-4 sm:px-6 py-3 border-t border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-apple-muted">
+      <div className="px-4 sm:px-6 py-3 border-t border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-caption1 text-apple-muted">
         <div className="flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-apple-blue shrink-0" />
           <span>Extracted from verified company annual reports, concall transcripts, and investor presentations</span>
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto">
-          <span className="inline-flex items-center gap-1 text-[10.5px] font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+          <span className="inline-flex items-center gap-1 text-caption2 font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
             Public Disclosures • Audited Filings
           </span>
-          <span className="text-[10.5px] text-apple-faint hidden md:inline">Click any row to view chart</span>
+          <span className="text-caption2 text-apple-faint hidden md:inline">Click any row to view chart</span>
         </div>
       </div>
     </div>

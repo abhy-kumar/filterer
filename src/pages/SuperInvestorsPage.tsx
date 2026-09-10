@@ -127,11 +127,11 @@ export const SuperInvestorsPage: React.FC = () => {
             <div>
               <div className="flex items-center gap-2.5">
                 <Users className="w-5 h-5 text-apple-blue shrink-0" />
-                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-apple-primary font-display">
+                <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
                   Super-Investors
                 </h1>
               </div>
-              <p className="text-xs text-apple-muted mt-1 leading-normal">
+              <p className="text-caption1 text-apple-muted mt-1 leading-normal">
                 Track 1%+ public equity holdings and quarterly portfolio allocations of marquee Indian investors.
               </p>
             </div>
@@ -142,7 +142,7 @@ export const SuperInvestorsPage: React.FC = () => {
                 <button
                   key={t}
                   onClick={() => setTypeFilter(t)}
-                  className={`apple-segmented-item text-xs whitespace-nowrap ${typeFilter === t ? 'active' : ''}`}
+                  className={`apple-segmented-item text-caption1 whitespace-nowrap ${typeFilter === t ? 'active' : ''}`}
                 >
                   {t}
                 </button>
@@ -151,21 +151,21 @@ export const SuperInvestorsPage: React.FC = () => {
           </div>
 
           {/* Quick Aggregate Stats Strip */}
-          <div className="flex items-center gap-4 sm:gap-6 text-xs text-apple-muted flex-wrap">
+          <div className="flex items-center gap-4 sm:gap-6 text-caption1 text-apple-muted flex-wrap">
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-apple-primary font-mono text-sm">{aggregateStats.totalInvestors}</span>
+              <span className="font-semibold text-apple-primary num text-subheadline">{aggregateStats.totalInvestors}</span>
               <span>Tracked Investors</span>
             </div>
             <span className="text-apple-faint">•</span>
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-apple-primary font-mono text-sm">
+              <span className="font-semibold text-apple-primary num text-subheadline">
                 ₹{Math.round(aggregateStats.totalWorthCr).toLocaleString('en-IN')} Cr
               </span>
               <span>Disclosed Wealth</span>
             </div>
             <span className="text-apple-faint">•</span>
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-apple-primary font-mono text-sm">{aggregateStats.totalStocksTracked}</span>
+              <span className="font-semibold text-apple-primary num text-subheadline">{aggregateStats.totalStocksTracked}</span>
               <span>Unique Stocks</span>
             </div>
           </div>
@@ -175,7 +175,7 @@ export const SuperInvestorsPage: React.FC = () => {
             <div className="apple-card p-4 bg-gradient-to-r from-apple-blue/5 via-apple-surface to-apple-surface border border-apple-blue/20">
               <div className="flex items-center gap-2 mb-2">
                 <Sparkles className="w-4 h-4 text-apple-blue shrink-0" />
-                <h3 className="text-xs font-semibold text-apple-primary font-display">
+                <h3 className="text-caption1 font-semibold text-apple-primary font-display">
                   Consensus Super-Investor Stock Picks (Held by multiple 1%+ super-investors)
                 </h3>
               </div>
@@ -184,12 +184,12 @@ export const SuperInvestorsPage: React.FC = () => {
                   <Link
                     key={pick.symbol}
                     to={stockPath(pick.symbol)}
-                    className="apple-surface px-3 py-1.5 rounded-lg border border-apple-border/70 hover:border-apple-blue/50 text-xs flex items-center gap-2 whitespace-nowrap transition-colors group shrink-0"
+                    className="apple-surface px-3 py-1.5 rounded-lg border border-apple-border/70 hover:border-apple-blue/50 text-caption1 flex items-center gap-2 whitespace-nowrap transition-colors group shrink-0"
                   >
                     <span className="font-mono font-bold text-apple-blue group-hover:underline">
                       {pick.symbol}
                     </span>
-                    <span className="text-[10px] bg-apple-blue/10 text-apple-blue font-semibold px-1.5 py-0.5 rounded-full">
+                    <span className="text-caption2 bg-apple-blue/10 text-apple-blue font-semibold px-1.5 py-0.5 rounded-full">
                       {pick.investorCount} Investors
                     </span>
                   </Link>
@@ -206,7 +206,7 @@ export const SuperInvestorsPage: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by investor, company, or symbol (e.g. Damani, Titan, Rare)..."
-              className="apple-input text-xs pl-9 pr-4 h-9 w-full"
+              className="apple-input text-caption1 pl-9 pr-4 h-9 w-full"
             />
           </div>
 
@@ -215,7 +215,7 @@ export const SuperInvestorsPage: React.FC = () => {
             <div className="apple-segmented w-full">
               <button
                 onClick={() => setMobileTab('portfolio')}
-                className={`apple-segmented-item flex-1 text-center py-1.5 text-xs ${
+                className={`apple-segmented-item flex-1 text-center py-1.5 text-caption1 ${
                   mobileTab === 'portfolio' ? 'active' : ''
                 }`}
               >
@@ -223,7 +223,7 @@ export const SuperInvestorsPage: React.FC = () => {
               </button>
               <button
                 onClick={() => setMobileTab('list')}
-                className={`apple-segmented-item flex-1 text-center py-1.5 text-xs ${
+                className={`apple-segmented-item flex-1 text-center py-1.5 text-caption1 ${
                   mobileTab === 'list' ? 'active' : ''
                 }`}
               >
@@ -239,21 +239,21 @@ export const SuperInvestorsPage: React.FC = () => {
                     <button
                       key={inv.id}
                       onClick={() => setSelectedInvestorId(inv.id)}
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs whitespace-nowrap shrink-0 transition-all ${
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-caption1 whitespace-nowrap shrink-0 transition-all ${
                         isSelected
                           ? 'bg-apple-blue text-white border-apple-blue font-semibold shadow-sm'
                           : 'bg-apple-card text-apple-secondary border-apple-border hover:bg-apple-surface'
                       }`}
                     >
                       <span
-                        className={`w-5 h-5 rounded-full text-[10px] flex items-center justify-center font-bold ${
+                        className={`w-5 h-5 rounded-full text-caption2 flex items-center justify-center font-bold ${
                           isSelected ? 'bg-white/20 text-white' : 'bg-apple-surface text-apple-primary'
                         }`}
                       >
                         {inv.avatar_initials}
                       </span>
                       <span>{inv.name}</span>
-                      <span className="font-mono text-[10px] opacity-80">₹{Math.round(inv.liveNetWorthCr)}Cr</span>
+                      <span className="num text-caption2 opacity-80">₹{Math.round(inv.liveNetWorthCr)}Cr</span>
                     </button>
                   );
                 })}
@@ -267,7 +267,7 @@ export const SuperInvestorsPage: React.FC = () => {
             <div className={`lg:col-span-4 space-y-2.5 max-h-[850px] overflow-y-auto no-scrollbar pr-1 ${
               mobileTab === 'list' ? 'block' : 'hidden lg:block'
             }`}>
-              <div className="text-xs font-semibold text-apple-muted px-1">
+              <div className="text-caption1 font-semibold text-apple-muted px-1">
                 {filteredInvestors.length} Investors Found
               </div>
 
@@ -289,7 +289,7 @@ export const SuperInvestorsPage: React.FC = () => {
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-3">
                         <div
-                          className={`w-9 h-9 rounded-full flex items-center justify-center font-bold font-display text-xs ${
+                          className={`w-9 h-9 rounded-full flex items-center justify-center font-bold font-display text-caption1 ${
                             isSelected
                               ? 'bg-apple-blue text-white'
                               : 'bg-apple-surface-active text-apple-primary'
@@ -298,11 +298,11 @@ export const SuperInvestorsPage: React.FC = () => {
                           {inv.avatar_initials}
                         </div>
                         <div>
-                          <h3 className="text-sm font-bold text-apple-primary font-display leading-tight">
+                          <h3 className="text-subheadline font-bold text-apple-primary font-display leading-tight">
                             {inv.name}
                           </h3>
                           {inv.alias && (
-                            <p className="text-[11px] text-apple-muted truncate max-w-[170px]">
+                            <p className="text-caption2 text-apple-muted truncate max-w-[170px]">
                               {inv.alias}
                             </p>
                           )}
@@ -310,23 +310,23 @@ export const SuperInvestorsPage: React.FC = () => {
                       </div>
 
                       <div className="text-right shrink-0">
-                        <div className="text-xs font-bold font-mono text-apple-primary">
+                        <div className="text-caption1 font-bold num text-apple-primary">
                           ₹{inv.liveNetWorthCr.toLocaleString('en-IN')} Cr
                         </div>
-                        <div className="text-[10px] text-apple-faint font-mono">
+                        <div className="text-caption2 text-apple-faint num">
                           {inv.holdings.length} stocks
                         </div>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-1.5 mt-3 flex-wrap">
-                      <span className="text-[10px] font-medium px-2 py-0.5 rounded bg-apple-surface text-apple-muted border border-apple-border/40">
+                      <span className="text-caption2 font-medium px-2 py-0.5 rounded bg-apple-surface text-apple-muted border border-apple-border/40">
                         {inv.type}
                       </span>
                       {inv.holdings.slice(0, 3).map((h) => (
                         <span
                           key={h.symbol}
-                          className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded bg-apple-surface text-apple-secondary border border-apple-border/40"
+                          className="text-caption2 num font-medium px-1.5 py-0.5 rounded bg-apple-surface text-apple-secondary border border-apple-border/40"
                         >
                           {h.symbol} ({h.holding_pct}%)
                         </span>
@@ -346,27 +346,27 @@ export const SuperInvestorsPage: React.FC = () => {
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-apple-border pb-5">
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2.5 flex-wrap">
-                        <h2 className="text-xl sm:text-2xl font-bold text-apple-primary font-display">
+                        <h2 className="text-title2 sm:text-title1 text-apple-primary font-display">
                           {selectedInvestor.name}
                         </h2>
-                        <span className="apple-tag text-[11px] font-medium">
+                        <span className="apple-tag text-caption2 font-medium">
                           {selectedInvestor.type}
                         </span>
                         {selectedInvestor.alias && (
-                          <span className="text-xs text-apple-muted">
+                          <span className="text-caption1 text-apple-muted">
                             ({selectedInvestor.alias})
                           </span>
                         )}
                       </div>
-                      <p className="text-xs text-apple-secondary max-w-2xl leading-relaxed">
+                      <p className="text-caption1 text-apple-secondary max-w-2xl leading-relaxed">
                         {selectedInvestor.description}
                       </p>
                       <div className="flex items-center gap-2 pt-1 flex-wrap">
-                        <span className="text-[10.5px] font-semibold text-apple-muted uppercase tracking-wider">
+                        <span className="text-caption2 font-semibold text-apple-muted uppercase tracking-wider">
                           Key Sectors:
                         </span>
                         {selectedInvestor.top_sectors.map((sec) => (
-                          <span key={sec} className="apple-tag text-[10px]">
+                          <span key={sec} className="apple-tag text-caption2">
                             {sec}
                           </span>
                         ))}
@@ -375,36 +375,36 @@ export const SuperInvestorsPage: React.FC = () => {
 
                     {/* Net Worth Card */}
                     <div className="apple-well p-3.5 rounded-xl shrink-0 sm:text-right">
-                      <div className="text-[10.5px] text-apple-muted">Estimated Equity Portfolio</div>
-                      <div className="text-xl font-bold font-mono text-apple-primary mt-0.5">
+                      <div className="text-caption2 text-apple-muted">Estimated Equity Portfolio</div>
+                      <div className="text-title3 font-display tabular-nums text-apple-primary mt-0.5">
                         ₹{selectedInvestor.liveNetWorthCr.toLocaleString('en-IN')} Cr
                       </div>
-                      <div className="text-[10px] text-apple-faint mt-1 flex items-center sm:justify-end gap-1.5 font-mono">
+                      <div className="text-caption2 text-apple-faint mt-1 flex items-center sm:justify-end gap-1.5">
                         <span>Latest: Q3 FY25 filings</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Quarter Activity Delta Badges */}
-                  <div className="flex items-center gap-2 text-xs flex-wrap">
-                    <span className="text-apple-muted text-[11px] font-semibold">Latest Quarter Delta:</span>
+                  <div className="flex items-center gap-2 text-caption1 flex-wrap">
+                    <span className="text-apple-muted text-caption2 font-semibold">Latest Quarter Delta:</span>
                     {deltaSummary.newCount > 0 && (
-                      <span className="px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                      <span className="px-2 py-0.5 rounded-full text-caption2 font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                         +{deltaSummary.newCount} New Entrant
                       </span>
                     )}
                     {deltaSummary.increased > 0 && (
-                      <span className="px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                      <span className="px-2 py-0.5 rounded-full text-caption2 font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
                         +{deltaSummary.increased} Stake Increased
                       </span>
                     )}
                     {deltaSummary.decreased > 0 && (
-                      <span className="px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                      <span className="px-2 py-0.5 rounded-full text-caption2 font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
                         -{deltaSummary.decreased} Stake Trimmed
                       </span>
                     )}
                     {deltaSummary.unchanged > 0 && (
-                      <span className="px-2 py-0.5 rounded-full text-[10.5px] font-medium bg-apple-surface text-apple-muted border border-apple-border/50">
+                      <span className="px-2 py-0.5 rounded-full text-caption2 font-medium bg-apple-surface text-apple-muted border border-apple-border/50">
                         {deltaSummary.unchanged} Unchanged
                       </span>
                     )}
@@ -435,55 +435,55 @@ export const SuperInvestorsPage: React.FC = () => {
                                 <div>
                                   <Link
                                     to={stockPath(h.symbol)}
-                                    className="font-mono text-xs font-semibold text-apple-blue hover:underline inline-flex items-center gap-1"
+                                    className="font-mono text-caption1 font-semibold text-apple-blue hover:underline inline-flex items-center gap-1"
                                   >
                                     {h.symbol}
                                     <ArrowUpRight className="w-3 h-3 text-apple-faint" />
                                   </Link>
-                                  <div className="text-[10.5px] sm:text-[11px] text-apple-muted truncate max-w-[110px] sm:max-w-[170px]">
+                                  <div className="text-caption2 sm:text-caption2 text-apple-muted truncate max-w-[110px] sm:max-w-[170px]">
                                     {h.companyName}
                                   </div>
                                 </div>
                               </td>
 
 
-                              <td className="text-right font-mono text-xs">
+                              <td className="text-right num text-caption1">
                                 {price(h.currentPrice)}
                               </td>
 
-                              <td className={`text-right font-mono text-xs ${signClass(h.changePct)}`}>
+                              <td className={`text-right num text-caption1 ${signClass(h.changePct)}`}>
                                 {isUp ? '+' : ''}
                                 {h.changePct.toFixed(2)}%
                               </td>
 
-                              <td className="text-right font-mono text-xs font-semibold text-apple-primary">
+                              <td className="text-right num text-caption1 font-semibold text-apple-primary">
                                 {h.holding_pct.toFixed(2)}%
                               </td>
 
-                              <td className="text-right font-mono text-xs font-semibold text-apple-primary">
+                              <td className="text-right num text-caption1 font-semibold text-apple-primary">
                                 ₹{h.holdingValueCr.toLocaleString('en-IN')}
                               </td>
 
                               <td className="text-center">
                                 {delta.change === 'new' && (
-                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-caption2 font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                                     NEW ({delta.delta_pct ? `+${delta.delta_pct}%` : 'Entered'})
                                   </span>
                                 )}
                                 {delta.change === 'increased' && (
-                                  <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                                  <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-caption2 font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
                                     <ArrowUp className="w-2.5 h-2.5" />
                                     +{delta.delta_pct?.toFixed(2)}%
                                   </span>
                                 )}
                                 {delta.change === 'decreased' && (
-                                  <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                                  <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded text-caption2 font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
                                     <ArrowDown className="w-2.5 h-2.5" />
                                     {delta.delta_pct?.toFixed(2)}%
                                   </span>
                                 )}
                                 {delta.change === 'unchanged' && (
-                                  <span className="text-[10.5px] font-mono text-apple-muted">
+                                  <span className="text-caption2 num text-apple-muted">
                                     Unchanged
                                   </span>
                                 )}
@@ -493,7 +493,7 @@ export const SuperInvestorsPage: React.FC = () => {
                                 <button
                                   type="button"
                                   onClick={() => setWatchlistModalStock({ symbol: h.symbol, name: h.companyName })}
-                                  className="apple-btn apple-btn-secondary p-1 text-[11px]"
+                                  className="apple-btn apple-btn-secondary p-1 text-caption2"
                                   title={`Add ${h.symbol} to watchlist`}
                                 >
                                   <Bookmark className="w-3.5 h-3.5" />

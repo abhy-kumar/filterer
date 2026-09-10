@@ -9,9 +9,9 @@ interface Props {
 
 function growthRow(label: string, value: number | null | undefined) {
   return (
-    <div key={label} className="flex items-baseline justify-between gap-3 text-xs">
+    <div key={label} className="flex items-baseline justify-between gap-3 text-caption1">
       <span className="text-apple-muted">{label}</span>
-      <span className={`font-mono tabular-nums ${isReported(value) ? signClass(value) : 'num-nil'}`}>
+      <span className={`num ${isReported(value) ? signClass(value) : 'num-nil'}`}>
         {pct(value)}
       </span>
     </div>
@@ -64,7 +64,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
         <div className="apple-well p-4">
-          <h3 className="text-[11px] font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
             Compounded sales growth
           </h3>
           <div className="space-y-1.5">
@@ -76,7 +76,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
         </div>
 
         <div className="apple-well p-4">
-          <h3 className="text-[11px] font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
             Compounded profit growth
           </h3>
           <div className="space-y-1.5">
@@ -88,7 +88,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
         </div>
 
         <div className="apple-well p-4">
-          <h3 className="text-[11px] font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
             Share price CAGR
           </h3>
           <div className="space-y-1.5">
@@ -100,7 +100,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
         </div>
 
         <div className="apple-well p-4">
-          <h3 className="text-[11px] font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
             Return on equity
           </h3>
           <div className="space-y-1.5">
