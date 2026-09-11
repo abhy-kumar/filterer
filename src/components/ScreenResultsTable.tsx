@@ -6,6 +6,8 @@ import { Stock } from '../types/stock';
 import { stockPath } from '../lib/routes';
 import { getMetric } from '../engine/metricsDictionary';
 import { NOT_REPORTED, crore, isReported, price, signClass, compactNumber } from '../lib/format';
+import { useLiveQuotes } from '../context/LiveQuotesContext';
+import { applyLiveQuote } from '../lib/liveStock';
 
 interface ColumnConfig {
   key: string;
@@ -229,6 +231,14 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
     [sortedStocks, page, pageSize]
   );
 
+  // Live quotes for the page on screen only. Sorting still uses the bundled
+  // figures, so rows do not jump about while the reader is looking at them.
+  const liveQuotes = useLiveQuotes(useMemo(() => paginatedStocks.map((s) => s.symbol), [paginatedStocks]));
+  const liveRows = useMemo(
+    () => paginatedStocks.map((s) => applyLiveQuote(s, liveQuotes[s.symbol.toUpperCase()])),
+    [paginatedStocks, liveQuotes]
+  );
+
   const visibleColumns = useMemo(
     () => COLUMNS.filter((c) => visibleKeys.includes(c.key)),
     [visibleKeys]
@@ -392,7 +402,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {paginatedStocks.map((stock) => {
+              {liveRows.map((stock) => {
                 const isPositive = (stock.change_pct ?? 0) >= 0;
                 return (
                   <div
@@ -531,7 +541,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                   </td>
                 </tr>
               ) : (
-                paginatedStocks.map((stock) => (
+                liveRows.map((stock) => (
                   <tr
                     key={stock.symbol}
                     onClick={() => navigate(stockPath(stock.symbol))}

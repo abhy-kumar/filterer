@@ -1,0 +1,334 @@
+{
+  "_about": "Who each investor is and the names they file under. Never what they hold: holdings come only from exchange shareholding filings (data/filings/shareholding.json). Patterns are regular expressions matched from the start of a normalised holder name (upper case, punctuation stripped, & as AND, PVT as PRIVATE, LTD as LIMITED). An investor whose patterns match nothing is left out of the output.",
+  "tracked_symbols": [
+    "ATULAUTO",
+    "CMSINFO",
+    "DHAMPURSUG",
+    "DWARKESH",
+    "FCL",
+    "HIMATSEIDE",
+    "KCP",
+    "LAXMIMACH",
+    "MTARTECH",
+    "NITINSPIN",
+    "NOCIL",
+    "ORIENTBELL",
+    "PANAMAPET",
+    "RAYMOND",
+    "RSYSTEMS",
+    "SAFARI",
+    "SANGAMIND",
+    "SHAILY",
+    "SOLARA",
+    "TALBROAUTO",
+    "TVTODAY",
+    "UTTAMSUGAR",
+    "VAIBHAVGBL",
+    "VSTIND"
+  ],
+  "investors": [
+    {
+      "id": "radhakishan-damani",
+      "name": "Radhakishan Damani",
+      "alias": "DMart founder",
+      "type": "Individual HNI",
+      "description": "Founder of Avenue Supermarts (DMart). Includes holdings through Bright Star Investments and Derive Trading and Resorts.",
+      "patterns": [
+        "^RADHAKISHAN S(HIVKISHAN)? DAMANI\\b",
+        "^RADHAKISHAN DAMANI\\b",
+        "^SHRIKANTADEVI R(ADHAKISHAN)? DAMANI\\b",
+        "^BRIGHT STAR INVESTMENTS PRIVATE LIMITED$",
+        "^DERIVE TRADING AND RESORTS PRIVATE LIMITED$"
+      ]
+    },
+    {
+      "id": "gopikishan-damani",
+      "name": "Gopikishan Damani",
+      "type": "Individual HNI",
+      "description": "Part of the DMart promoter group, alongside his brother Radhakishan Damani.",
+      "patterns": [
+        "^GOPIKISHAN S(HIVKISHAN)? DAMANI\\b"
+      ]
+    },
+    {
+      "id": "rekha-jhunjhunwala",
+      "name": "Rekha Jhunjhunwala",
+      "type": "Individual HNI",
+      "description": "Holds the portfolio built with the late Rakesh Jhunjhunwala. Includes filings still in his name.",
+      "patterns": [
+        "^REKHA (RAKESH )?JHUNJHUNWALA$",
+        "^RAKESH RADHE ?Y?SHYAM JHUNJHUNWALA$",
+        "^RAKESH JHUNJHUNWALA$"
+      ]
+    },
+    {
+      "id": "ashish-kacholia",
+      "name": "Ashish Kacholia",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^ASHISH (RAMESHCHANDRA )?KACHOLIA$"
+      ]
+    },
+    {
+      "id": "vijay-kedia",
+      "name": "Vijay Kedia",
+      "type": "Individual HNI",
+      "description": "Founder of Kedia Securities.",
+      "patterns": [
+        "^VIJAY (KISHANLAL )?KEDIA$",
+        "^KEDIA SECURITIES PRIVATE LIMITED$"
+      ]
+    },
+    {
+      "id": "mukul-agrawal",
+      "name": "Mukul Agrawal",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^MUKUL (MAHAVIR )?AGRAWAL$"
+      ]
+    },
+    {
+      "id": "sunil-singhania",
+      "name": "Sunil Singhania",
+      "alias": "Abakkus Asset Manager",
+      "type": "Institutional / PMS",
+      "description": "Founder of Abakkus Asset Manager; formerly chief investment officer for equities at Reliance Mutual Fund. Holdings are the Abakkus funds'.",
+      "patterns": [
+        "^ABAKKUS\\b"
+      ]
+    },
+    {
+      "id": "dolly-khanna",
+      "name": "Dolly Khanna",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^DOLLY (RAJIV )?KHANNA$"
+      ]
+    },
+    {
+      "id": "porinju-veliyath",
+      "name": "Porinju Veliyath",
+      "alias": "Equity Intelligence India",
+      "type": "Institutional / PMS",
+      "description": "Founder of Equity Intelligence India, a portfolio manager based in Kochi.",
+      "patterns": [
+        "^PORINJU (V )?VELIYATH$",
+        "^EQUITY INTELLIGENCE INDIA PRIVATE LIMITED$"
+      ]
+    },
+    {
+      "id": "nemish-shah",
+      "name": "Nemish Shah",
+      "type": "Individual HNI",
+      "description": "Co-founder of Enam Securities.",
+      "patterns": [
+        "^NEMISH S(HANTILAL)? SHAH$"
+      ]
+    },
+    {
+      "id": "vallabh-bhanshali",
+      "name": "Vallabh Bhanshali",
+      "type": "Individual HNI",
+      "description": "Co-founder of Enam Securities.",
+      "patterns": [
+        "^VALLABH (ROOPCHAND )?BHANSHALI$"
+      ]
+    },
+    {
+      "id": "akash-bhanshali",
+      "name": "Akash Bhanshali",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^AKASH (VALLABH )?BHANSHALI$"
+      ]
+    },
+    {
+      "id": "ramesh-damani",
+      "name": "Ramesh Damani",
+      "type": "Individual HNI",
+      "description": "Individual investor and long-standing member of the BSE.",
+      "patterns": [
+        "^RAMESH S(HRICHAND)? DAMANI$",
+        "^RAMESH DAMANI$"
+      ]
+    },
+    {
+      "id": "prashant-jain",
+      "name": "Prashant Jain",
+      "alias": "3P Investment Managers",
+      "type": "Institutional / PMS",
+      "description": "Founder of 3P Investment Managers; formerly chief investment officer at HDFC Mutual Fund. Holdings are the 3P funds'.",
+      "patterns": [
+        "^3P INDIA EQUITY FUND\\b"
+      ]
+    },
+    {
+      "id": "kenneth-andrade",
+      "name": "Kenneth Andrade",
+      "alias": "Old Bridge Capital",
+      "type": "Institutional / PMS",
+      "description": "Founder of Old Bridge Capital Management; formerly chief investment officer at IDFC Mutual Fund. Holdings are Old Bridge's.",
+      "patterns": [
+        "^OLD BRIDGE\\b"
+      ]
+    },
+    {
+      "id": "madhusudan-kela",
+      "name": "Madhusudan Kela",
+      "alias": "Singularity Holdings",
+      "type": "Individual HNI",
+      "description": "Founder of Singularity Holdings. Includes holdings in the name of Madhuri Kela and the Singularity funds.",
+      "patterns": [
+        "^MADHUSUDAN (MURLIDHAR )?KELA$",
+        "^MADHURI (MADHUSUDAN )?KELA$",
+        "^SINGULARITY (EQUITY|LARGE VALUE|OPPORTUNITIES) FUND\\b"
+      ]
+    },
+    {
+      "id": "ashish-dhawan",
+      "name": "Ashish Dhawan",
+      "type": "Individual HNI",
+      "description": "Co-founder of ChrysCapital.",
+      "patterns": [
+        "^ASHISH DHAWAN$"
+      ]
+    },
+    {
+      "id": "anil-kumar-goel",
+      "name": "Anil Kumar Goel",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^ANIL KUMAR GOEL$"
+      ]
+    },
+    {
+      "id": "shivanand-mankekar",
+      "name": "Shivanand Mankekar",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^SHIVANAND (SHANKAR )?MANKEKAR$"
+      ]
+    },
+    {
+      "id": "sumeet-nagar",
+      "name": "Sumeet Nagar",
+      "alias": "Malabar Investments",
+      "type": "Institutional / PMS",
+      "description": "Founder of Malabar Investments. Holdings are the Malabar funds'.",
+      "patterns": [
+        "^MALABAR (INDIA|SELECT|VALUE)\\b"
+      ]
+    },
+    {
+      "id": "bhavook-tripathi",
+      "name": "Bhavook Tripathi",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^BHAVOOK (CHANDRA )?TRIPATHI$"
+      ]
+    },
+    {
+      "id": "govindlal-gilada",
+      "name": "Govindlal Gilada",
+      "type": "Individual HNI",
+      "description": "Individual investor.",
+      "patterns": [
+        "^GOVINDLAL (M(ANGILAL)? )?GILADA$"
+      ]
+    },
+    {
+      "id": "hemendra-kothari",
+      "name": "Hemendra Kothari",
+      "type": "Individual HNI",
+      "description": "Chairman of the DSP group.",
+      "patterns": [
+        "^HEMENDRA (MADHUSUDAN )?KOTHARI$"
+      ]
+    },
+    {
+      "id": "pulak-prasad",
+      "name": "Pulak Prasad",
+      "alias": "Nalanda Capital",
+      "type": "Institutional / PMS",
+      "description": "Founder of Nalanda Capital, a Singapore-based fund. Holdings are Nalanda's.",
+      "patterns": [
+        "^NALANDA INDIA (EQUITY )?FUND\\b"
+      ]
+    },
+    {
+      "id": "mohnish-pabrai",
+      "name": "Mohnish Pabrai",
+      "alias": "Pabrai Investment Funds",
+      "type": "Institutional / PMS",
+      "description": "Founder of Pabrai Investment Funds. Holdings are the funds'.",
+      "patterns": [
+        "\\bPABRAI INVESTMENT FUND",
+        "^DHANDHO INDIA\\b"
+      ]
+    },
+    {
+      "id": "vikas-khemani",
+      "name": "Vikas Khemani",
+      "alias": "Carnelian Asset Management",
+      "type": "Institutional / PMS",
+      "description": "Founder of Carnelian Asset Management. Holdings are Carnelian's funds'.",
+      "patterns": [
+        "^CARNELIAN\\b"
+      ]
+    },
+    {
+      "id": "aequitas",
+      "name": "Siddhartha Bhaiya",
+      "alias": "Aequitas Investment Consultancy",
+      "type": "Institutional / PMS",
+      "description": "Founder of Aequitas Investment Consultancy. Holdings are Aequitas's funds'.",
+      "patterns": [
+        "^AEQUITAS\\b"
+      ]
+    },
+    {
+      "id": "nikunj-dalmia",
+      "name": "Nikunj Dalmia",
+      "alias": "Sixth Sense Ventures",
+      "type": "Institutional / PMS",
+      "description": "Founder of Sixth Sense Ventures. Holdings are the Sixth Sense funds'.",
+      "patterns": [
+        "^SIXTH SENSE INDIA OPPORTUNITIES\\b"
+      ]
+    },
+    {
+      "id": "mithaq-capital",
+      "name": "Mithaq Capital",
+      "type": "Institutional / PMS",
+      "description": "Value investment fund. Holdings are Mithaq Capital SPC's.",
+      "patterns": [
+        "^MITHAQ CAPITAL\\b"
+      ]
+    },
+    {
+      "id": "negen-capital",
+      "name": "Negen Capital",
+      "type": "Institutional / PMS",
+      "description": "Portfolio manager. Holdings are Negen's funds'.",
+      "patterns": [
+        "^NEGEN (UNDISCOVERED|CAPITAL)\\b"
+      ]
+    },
+    {
+      "id": "plutus-wealth",
+      "name": "Plutus Wealth Management",
+      "type": "Institutional / PMS",
+      "description": "Portfolio manager.",
+      "patterns": [
+        "^PLUTUS WEALTH MANAGEMENT\\b"
+      ]
+    }
+  ]
+}

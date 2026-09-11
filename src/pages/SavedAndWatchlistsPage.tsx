@@ -4,6 +4,8 @@ import { Bookmark, Plus, Trash2, Edit2, Check, ArrowRight, Search, ListFilter, S
 import { useWatchlists } from '../context/WatchlistContext';
 import { ScreenResultsTable } from '../components/ScreenResultsTable';
 import { STOCKS_DATA } from '../data/stocksData';
+import { useLiveQuotes } from '../context/LiveQuotesContext';
+import { applyLiveQuote } from '../lib/liveStock';
 import { ScreenFilter } from '../types/stock';
 import { screenPath } from '../lib/routes';
 import { Footer } from '../components/Footer';
@@ -49,11 +51,18 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
   );
 
   // Stocks in active watchlist
-  const watchlistStocks = useMemo(() => {
+  const bundledWatchlistStocks = useMemo(() => {
     if (!activeWatchlist) return [];
     const symSet = new Set(activeWatchlist.symbols.map((s) => s.toUpperCase()));
     return STOCKS_DATA.filter((s) => symSet.has(s.symbol.toUpperCase()));
   }, [activeWatchlist]);
+
+  // The basket's market cap and day change follow live prices too.
+  const watchlistQuotes = useLiveQuotes(useMemo(() => bundledWatchlistStocks.map((s) => s.symbol), [bundledWatchlistStocks]));
+  const watchlistStocks = useMemo(
+    () => bundledWatchlistStocks.map((s) => applyLiveQuote(s, watchlistQuotes[s.symbol.toUpperCase()])),
+    [bundledWatchlistStocks, watchlistQuotes]
+  );
 
   // Autocomplete suggestions for adding stock
   const searchSuggestions = useMemo(() => {

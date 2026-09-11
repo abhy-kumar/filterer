@@ -22,6 +22,11 @@ import { Footer } from '../components/Footer';
 import { hasStockCompanyInsights } from '../engine/companyInsightsGenerator';
 import { hasStockConcallInsights } from '../engine/concallInsightsGenerator';
 import { hasCompanySegments } from '../data/segmentData';
+import { DerivedInsightsPanel } from '../components/StockDetail/DerivedInsightsPanel';
+import { deriveInsights } from '../engine/derivedInsights';
+import { getInvestorsHolding } from '../data/superInvestorsData';
+import { useLiveQuote } from '../context/LiveQuotesContext';
+import { applyLiveQuote } from '../lib/liveStock';
 import type { Stock } from '../types/stock';
 
 export const StockDetailPage: React.FC = () => {
@@ -85,10 +90,25 @@ export const StockDetailPage: React.FC = () => {
   const hasConcall = useMemo(() => hasStockConcallInsights(stock), [stock]);
   const hasSegments = useMemo(() => hasCompanySegments(stock), [stock]);
 
+  const liveQuote = useLiveQuote(bundledStock?.symbol);
+  const liveStock = useMemo(() => (stock ? applyLiveQuote(stock, liveQuote) : null), [stock, liveQuote]);
+  const investorsHere = useMemo(
+    () => (bundledStock ? getInvestorsHolding(bundledStock.symbol) : []),
+    [bundledStock]
+  );
+  // Statements arrive with the detail tier; until then there is nothing to derive from.
+  const derivedInsights = useMemo(
+    () => (liveStock && detailStatus === 'ready' ? deriveInsights(liveStock, { investors: investorsHere }) : []),
+    [liveStock, detailStatus, investorsHere]
+  );
+
   const sections = useMemo(() => {
     const list = [{ id: 'sec-analysis', label: 'Analysis' }];
+    if (derivedInsights.length) {
+      list.push({ id: 'sec-insights-derived', label: 'Insights' });
+    }
     if (hasInsights) {
-      list.push({ id: 'sec-insights-kpi', label: 'Insights' });
+      list.push({ id: 'sec-insights-kpi', label: 'Operating KPIs' });
     }
     if (hasConcall) {
       list.push({ id: 'sec-insights', label: 'Concall Notes' });
@@ -110,7 +130,7 @@ export const StockDetailPage: React.FC = () => {
       { id: 'sec-documents', label: 'Filings' }
     );
     return list;
-  }, [hasInsights, hasConcall, hasSegments]);
+  }, [derivedInsights.length, hasInsights, hasConcall, hasSegments]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -212,12 +232,18 @@ export const StockDetailPage: React.FC = () => {
         </div>
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-5 animate-fade-in">
-          <StockHeader stock={stock} />
+          <StockHeader stock={liveStock ?? stock} />
           <DataQualityPanel stock={stock} />
 
           <section id="sec-analysis" className="scroll-mt-32">
-            <StockProsCons stock={stock} />
+            {/* Live, so a P/E quoted here agrees with the one in the header above it. */}
+            <StockProsCons stock={liveStock ?? stock} />
           </section>
+          {derivedInsights.length > 0 && (
+            <section id="sec-insights-derived" className="scroll-mt-32">
+              <DerivedInsightsPanel insights={derivedInsights} />
+            </section>
+          )}
           {hasInsights && (
             <section id="sec-insights-kpi" className="scroll-mt-32">
               <CompanyInsightsTable stock={stock} />
@@ -254,7 +280,7 @@ export const StockDetailPage: React.FC = () => {
             <StockCharts stock={stock} />
           </section>
           <section id="sec-peers" className="scroll-mt-32">
-            <PeersTable stock={stock} />
+            <PeersTable stock={liveStock ?? stock} />
           </section>
           <section id="sec-quarters" className="scroll-mt-32">
             <QuarterlyResultsTable stock={stock} />

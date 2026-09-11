@@ -120,6 +120,10 @@ export interface Stock {
    * withheld rather than converted at an assumed rate.
    */
   statements_unavailable_reason?: string;
+  /** Where quarterly_results came from: "NSE XBRL" for filed results, absent for the Yahoo fallback. */
+  quarterly_source?: string;
+  /** Consolidated or standalone. Filed series never mix the two. */
+  quarterly_basis?: 'consolidated' | 'standalone';
   nse_symbol: string;
   /** ISIN from the NSE constituent file, where the ingest captured one. */
   isin?: string;

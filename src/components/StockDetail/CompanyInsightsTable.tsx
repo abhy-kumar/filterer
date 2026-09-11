@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Sparkles, Flag, Check, ChevronDown, ChevronUp, LineChart as ChartIcon, Info } from 'lucide-react';
+import { Flag, ChevronDown, ChevronUp, LineChart as ChartIcon, Info } from 'lucide-react';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts';
 import { Stock } from '../../types/stock';
 import {
@@ -15,7 +15,6 @@ interface CompanyInsightsTableProps {
 export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stock }) => {
   const [horizon, setHorizon] = useState<'yearly' | 'quarterly'>('yearly');
   const [selectedMetricId, setSelectedMetricId] = useState<string | null>(null);
-  const [flagged, setFlagged] = useState(false);
 
   const insightsData: StockCompanyInsights | null = useMemo(() => {
     return getStockCompanyInsights(stock);
@@ -41,10 +40,6 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
     return null;
   }
 
-  const handleFlag = () => {
-    setFlagged(true);
-    setTimeout(() => setFlagged(false), 2500);
-  };
 
   const periods = horizon === 'yearly' ? insightsData.yearlyPeriods : insightsData.quarterlyPeriods;
 
@@ -73,29 +68,19 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
       <div className="px-4 sm:px-6 py-4 border-b border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-3">
           <h2 className="text-title3 text-apple-primary font-display flex items-center gap-2">
-            Insights
-            <span className="text-caption2 font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-apple-blue/10 text-apple-blue border border-apple-blue/20">
-              in beta
-            </span>
+            Operating KPIs
+            <span className="apple-tag">Compiled by hand</span>
           </h2>
 
-          <button
-            onClick={handleFlag}
+          <a
+            href={`https://github.com/abhy-kumar/filterer/issues/new?title=${encodeURIComponent(`KPI correction: ${stock.symbol}`)}&body=${encodeURIComponent('Which figure is wrong, what should it be, and where is it published?')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-caption1 text-apple-muted hover:text-apple-secondary flex items-center gap-1 transition-colors pl-2 border-l border-apple-border/80"
-            title="Report metric correction"
           >
-            {flagged ? (
-              <>
-                <Check className="w-3 h-3 text-emerald-500" />
-                <span className="text-emerald-600 dark:text-emerald-400 font-medium">Flagged</span>
-              </>
-            ) : (
-              <>
-                <Flag className="w-3 h-3" />
-                <span>Flag error</span>
-              </>
-            )}
-          </button>
+            <Flag className="w-3 h-3" aria-hidden="true" />
+            <span>Report an error</span>
+          </a>
         </div>
 
         <div className="flex items-center gap-3">
@@ -257,14 +242,11 @@ export const CompanyInsightsTable: React.FC<CompanyInsightsTableProps> = ({ stoc
       {/* Footer Attribution */}
       <div className="px-4 sm:px-6 py-3 border-t border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-caption1 text-apple-muted">
         <div className="flex items-center gap-1.5">
-          <Sparkles className="w-3.5 h-3.5 text-apple-blue shrink-0" />
-          <span>Extracted from verified company annual reports, concall transcripts, and investor presentations</span>
+          <Info className="w-3.5 h-3.5 text-apple-muted shrink-0" aria-hidden="true" />
+          <span>Entered by hand from annual reports and investor presentations. Not traced to a filing in this app, so check the company’s own disclosures before relying on a figure.</span>
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto">
-          <span className="inline-flex items-center gap-1 text-caption2 font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-            Public Disclosures • Audited Filings
-          </span>
           <span className="text-caption2 text-apple-faint hidden md:inline">Click any row to view chart</span>
         </div>
       </div>

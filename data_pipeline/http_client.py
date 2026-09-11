@@ -63,6 +63,21 @@ class RateLimitError(RuntimeError):
     """Raised when a host keeps refusing after every retry."""
 
 
+class HttpStatusError(RuntimeError):
+    """
+    A status that retrying will not change, such as 404 or 403.
+
+    Raised inside the retry loop, so it needs its own class: as a plain
+    RuntimeError the loop's catch-all swallowed it and retried five times with
+    backoff, which cost about a minute for every file that simply does not
+    exist yet, such as the day's bhavcopy before the evening it is published.
+    """
+
+    def __init__(self, status: int, url: str) -> None:
+        super().__init__(f"HTTP {status} for {url}")
+        self.status = status
+
+
 @dataclass
 class _TokenBucket:
     """Minimum spacing between requests to one host."""
@@ -217,9 +232,9 @@ class HttpClient:
                     last_error = RateLimitError(f"HTTP {status} for {url}")
                     continue
 
-                raise RuntimeError(f"HTTP {status} for {url}")
+                raise HttpStatusError(status, url)
 
-            except RateLimitError:
+            except (RateLimitError, HttpStatusError):
                 raise
             except Exception as exc:
                 last_error = exc

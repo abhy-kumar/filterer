@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AlertTriangle, Globe, ShieldCheck, Bookmark } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 import { crore, isReported, multiple, pct, price, signClass } from '../../lib/format';
 import { useWatchlists } from '../../context/WatchlistContext';
 import { WatchlistModal } from '../WatchlistModal';
+import { LiveBadge } from '../LiveBadge';
+import { useLiveQuote } from '../../context/LiveQuotesContext';
 
 interface KeyFigure {
   label: string;
@@ -19,6 +21,20 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
   const stockWatchlists = getWatchlistsForStock(stock.symbol);
   const inWatchlist = stockWatchlists.length > 0;
   const isUp = stock.change >= 0;
+  const quote = useLiveQuote(stock.symbol);
+
+  // A brief tint when the price ticks. Keyed by symbol as well, so moving to
+  // another company does not read as a price change.
+  const [flash, setFlash] = useState('');
+  const last = useRef({ symbol: stock.symbol, price: stock.current_price });
+  useEffect(() => {
+    const prev = last.current;
+    last.current = { symbol: stock.symbol, price: stock.current_price };
+    if (prev.symbol !== stock.symbol || prev.price === stock.current_price) return;
+    setFlash(stock.current_price > prev.price ? 'flash-up' : 'flash-down');
+    const timer = setTimeout(() => setFlash(''), 1000);
+    return () => clearTimeout(timer);
+  }, [stock.symbol, stock.current_price]);
 
   const figures: KeyFigure[] = [
     { label: 'Market cap', value: crore(stock.market_cap) },
@@ -129,7 +145,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
         {/* Price block */}
         <div className="shrink-0 lg:text-right flex flex-col sm:flex-row lg:flex-col justify-between sm:items-center lg:items-end gap-2 lg:gap-0 pt-2 lg:pt-0 border-t lg:border-t-0 border-apple-border-subtle">
           <div>
-            <div className="text-title1 sm:text-largetitle font-display tabular-nums text-apple-primary leading-none">
+            <div className={`text-title1 sm:text-largetitle font-display tabular-nums text-apple-primary leading-none rounded-md ${flash}`}>
               {price(stock.current_price)}
             </div>
             <div className={`mt-1 num text-caption1 sm:text-subheadline ${signClass(stock.change_pct)}`}>
@@ -137,6 +153,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
               {stock.change.toFixed(2)} ({isUp ? '+' : ''}
               {stock.change_pct.toFixed(2)}%)
             </div>
+            <LiveBadge quote={quote} className="mt-1.5" />
           </div>
 
           <div className="w-full sm:w-60 lg:w-56 mt-2 sm:mt-0 lg:mt-4">

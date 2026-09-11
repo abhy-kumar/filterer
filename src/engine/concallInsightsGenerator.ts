@@ -1,19 +1,14 @@
 import { Stock } from '../types/stock';
 
-export interface ConcallQuote {
-  speaker: string;
-  designation: string;
-  quote: string;
-  topic: string;
-}
-
-export interface AnalystQAPair {
-  analystName: string;
-  firm: string;
-  question: string;
-  answer: string;
-}
-
+/**
+ * A hand-compiled summary of one earnings call.
+ *
+ * These entries were written by hand and are not traced to a transcript in
+ * this app. Verbatim quotations attributed to named executives, and questions
+ * attributed to named analysts at named firms, used to live here too; they were
+ * removed, because a quotation that cannot be sourced puts words in a real
+ * person's mouth.
+ */
 export interface ConcallQuarterData {
   quarter: string; // e.g. "Q3 FY25", "Q2 FY25", "Q1 FY25"
   date: string;
@@ -28,8 +23,6 @@ export interface ConcallQuarterData {
   };
   tailwinds: string[];
   headwinds: string[];
-  managementQuotes: ConcallQuote[];
-  analystQA: AnalystQAPair[];
 }
 
 export interface StockConcallInsights {
@@ -64,34 +57,6 @@ export const CURATED_CONCALLS: Record<string, StockConcallInsights> = {
           'Global refining capacity additions in Middle East pressuring diesel cracks',
           'Raw cotton and synthetic textile intermediates price volatility',
         ],
-        managementQuotes: [
-          {
-            speaker: 'Mukesh Ambani',
-            designation: 'Chairman & Managing Director',
-            quote: 'Our businesses have demonstrated remarkable agility. Jio and Retail have evolved into self-funding consumer giants, while our New Energy giga-factories will position India as a global green hydrogen export leader.',
-            topic: 'Strategic Vision & Green Energy Transition',
-          },
-          {
-            speaker: 'V. Srikanth',
-            designation: 'Joint Chief Financial Officer',
-            quote: 'Capex intensity has peaked as pan-India 5G deployment is complete. Cash generation is robust, and net debt-to-EBITDA remains comfortably sub-1.0x.',
-            topic: 'Capital Allocation & Debt Trajectory',
-          },
-        ],
-        analystQA: [
-          {
-            analystName: 'Sachin Salgaonkar',
-            firm: 'BofA Securities',
-            question: 'Could you provide color on the timeline for Jio and Retail public listings, and how ARPU behaves post tariff revisions?',
-            answer: 'We do not comment on speculative market listing timelines. On ARPU, SIM consolidation is minimal, and 5G data consumption elasticity has resulted in nearly 100% of tariff gains dropping directly into operating profit.',
-          },
-          {
-            analystName: 'Pinakin Parekh',
-            firm: 'J.P. Morgan',
-            question: 'What is the projected cash outflow for the solar module and battery giga-factories over the next 18 months?',
-            answer: 'Phase 1 of our 20 GW integrated solar cell and module facility in Jamnagar commences commissioning this fiscal year. Outflows are budgeted well within our regular ₹30,000 Cr quarterly capex envelope.',
-          },
-        ],
       },
       {
         quarter: 'Q2 FY25',
@@ -107,22 +72,6 @@ export const CURATED_CONCALLS: Record<string, StockConcallInsights> = {
         },
         tailwinds: ['AirFiber subscriber additions reaching 1 million quarterly run-rate', 'Gas production stability at KG-D6'],
         headwinds: ['Soft European fuel export arbitrage', 'Inflationary pressures on discretionary lifestyle retail'],
-        managementQuotes: [
-          {
-            speaker: 'Kiran Thomas',
-            designation: 'President, Reliance Jio',
-            quote: 'Jio AirFiber has transformed home broadband connectivity in tier-2 and tier-3 towns, opening high-margin recurring subscription revenues.',
-            topic: 'Broadband Expansion',
-          },
-        ],
-        analystQA: [
-          {
-            analystName: 'Mayank Maheshwari',
-            firm: 'Morgan Stanley',
-            question: 'How are you viewing the global refining cycle heading into winter?',
-            answer: 'Winter heating oil demand and scheduled refinery turnarounds in the Far East should provide seasonal support to middle distillate cracks.',
-          },
-        ],
       },
     ],
   },
@@ -150,34 +99,6 @@ export const CURATED_CONCALLS: Record<string, StockConcallInsights> = {
         headwinds: [
           'European EV adoption deceleration forcing ICE/PHEV product flexibility',
           'Domestic small passenger car segment demand sluggishness',
-        ],
-        managementQuotes: [
-          {
-            speaker: 'P.B. Balaji',
-            designation: 'Group Chief Financial Officer',
-            quote: 'JLR has achieved its stated target of becoming net debt-free ahead of schedule. De-merging commercial vehicles and passenger vehicles will unlock pure-play market capitalizations for both businesses.',
-            topic: 'De-merger & Deleveraging Milestone',
-          },
-          {
-            speaker: 'Adrian Mardell',
-            designation: 'Chief Executive Officer, JLR',
-            quote: 'Our luxury-first strategy centered on Range Rover and Defender has transformed our structural profitability and cash conversion profile.',
-            topic: 'JLR Operating Performance',
-          },
-        ],
-        analystQA: [
-          {
-            analystName: 'Gunjan Bagaria',
-            firm: 'Citigroup',
-            question: 'How is the order book at JLR trending, and what is your view on discounting pressure in China and North America?',
-            answer: 'Over 70% of our order book continues to be commanded by our highest-margin nameplates: Range Rover, Range Rover Sport, and Defender. Discounting on these vehicles remains well below premium industry medians.',
-          },
-          {
-            analystName: 'Kapil Singh',
-            firm: 'Nomura',
-            question: 'What is the schedule for completing the corporate de-merger into two listed entities?',
-            answer: 'NCLT and shareholder approval processes are on schedule, with completion anticipated within the next 12 to 15 months.',
-          },
         ],
       },
     ],
@@ -207,28 +128,6 @@ export const CURATED_CONCALLS: Record<string, StockConcallInsights> = {
           'Cautious enterprise decision-making cycles on short-term discretionary consulting',
           'Telecom sector capex moderation globally',
         ],
-        managementQuotes: [
-          {
-            speaker: 'K. Krithivasan',
-            designation: 'Chief Executive Officer & Managing Director',
-            quote: 'Our enterprise customers are transitioning from AI experimentation to scalable enterprise deployment. Our pipeline of cost-optimization and modernization deals remains robust.',
-            topic: 'Enterprise AI & Deal Pipeline',
-          },
-          {
-            speaker: 'Samir Seksaria',
-            designation: 'Chief Financial Officer',
-            quote: 'Maintaining industry-leading operating margin of 26% demonstrates our pricing discipline, superior pyramid management, and operational rigor.',
-            topic: 'Margins & Profitability Defense',
-          },
-        ],
-        analystQA: [
-          {
-            analystName: 'Ankur Rudra',
-            firm: 'J.P. Morgan',
-            question: 'Are you seeing tangible recovery in US BFSI spending, or is it primarily non-discretionary cost take-out?',
-            answer: 'We are observing initial discretionary budget unlocks in digital regulatory compliance, cloud migration, and customer experience modernization, particularly among top-tier US banks.',
-          },
-        ],
       },
     ],
   },
@@ -238,9 +137,7 @@ export const CURATED_CONCALLS: Record<string, StockConcallInsights> = {
 CURATED_CONCALLS['TMCV'] = CURATED_CONCALLS['TATAMOTORS'];
 CURATED_CONCALLS['TMPV'] = CURATED_CONCALLS['TATAMOTORS'];
 
-/**
- * Checks whether verified concall transcript highlights exist for a stock.
- */
+/** Whether a hand-compiled concall summary exists for a stock. */
 export function hasStockConcallInsights(stock: Stock | { symbol: string } | null | undefined): boolean {
   if (!stock || !stock.symbol) return false;
   const symbol = stock.symbol.toUpperCase();
@@ -249,9 +146,8 @@ export function hasStockConcallInsights(stock: Stock | { symbol: string } | null
 }
 
 /**
- * Retrieves authentic verified earnings concall synthesis for a stock.
- * Returns null if verified transcript disclosures are not published for this stock.
- * Synthetic model generation is strictly disallowed to ensure 100% data authenticity.
+ * The hand-compiled concall summary for a stock, or null. These are not traced
+ * to a transcript; the page labels them as compiled by hand.
  */
 export function generateStockConcallInsights(stock: Stock): StockConcallInsights | null {
   if (!stock || !stock.symbol) return null;

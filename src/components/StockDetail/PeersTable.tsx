@@ -5,6 +5,8 @@ import type { Stock, PeerInfo } from '../../types/stock';
 import { STOCKS_DATA } from '../../data/stocksData';
 import { stockPath } from '../../lib/routes';
 import { crore, isReported, multiple, pct, price, signClass, statement } from '../../lib/format';
+import { useLiveQuotes } from '../../context/LiveQuotesContext';
+import { applyLiveQuoteToPeer } from '../../lib/liveStock';
 
 const COLUMNS: Array<{
   label: string;
@@ -150,6 +152,17 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
   }, [stock, self]);
 
   const known = useMemo(() => new Set(STOCKS_DATA.map((s) => s.symbol)), []);
+  const epsBySymbol = useMemo(() => new Map(STOCKS_DATA.map((s) => [s.symbol, s.eps])), []);
+
+  const liveQuotes = useLiveQuotes(useMemo(() => rows.map((r) => r.peer.symbol), [rows]));
+  const liveRows = useMemo(
+    () =>
+      rows.map((row) => ({
+        ...row,
+        peer: applyLiveQuoteToPeer(row.peer, liveQuotes[row.peer.symbol.toUpperCase()], epsBySymbol.get(row.peer.symbol)),
+      })),
+    [rows, liveQuotes, epsBySymbol]
+  );
 
   return (
     <div className="apple-card overflow-hidden">
@@ -180,7 +193,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
             </tr>
           </thead>
           <tbody>
-            {rows.map(({ peer, isSelf }, idx) => {
+            {liveRows.map(({ peer, isSelf }, idx) => {
               const clickable = !isSelf && known.has(peer.symbol);
               return (
                 <tr

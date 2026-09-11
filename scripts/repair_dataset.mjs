@@ -38,6 +38,75 @@ function hydrate(stock) {
   return { ...detail, ...stock, ...Object.fromEntries(Object.entries(detail).filter(([k]) => k !== 'symbol' && stock[k] === undefined)) };
 }
 
+/**
+ * Filed data from data/filings/, written by data_pipeline/nse_filings.py.
+ *
+ * Quarterly results replace the Yahoo series outright rather than patching its
+ * gaps. Filed rows use a different layout (expenses exclude depreciation and
+ * finance costs) and one chosen basis, consolidated or standalone, so splicing
+ * them into Yahoo's rows would put columns side by side that do not mean the
+ * same thing.
+ *
+ * Shareholding filings add the foreign and domestic institutional split, which
+ * NSE's summary endpoint never carried; that is why FII and DII holding were
+ * reported for 2 of the 500 companies.
+ */
+function readFiling(name) {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'filings', name), 'utf8'));
+  } catch {
+    return {};
+  }
+}
+
+const FILED_QUARTERS = readFiling('quarterly_results.json');
+const FILED_SHAREHOLDING = readFiling('shareholding.json');
+/** Fewer than this and the Yahoo series, gaps and all, still says more. */
+const MIN_FILED_QUARTERS = 4;
+
+function applyFilings(stock) {
+  const next = { ...stock };
+
+  const filed = FILED_QUARTERS[stock.symbol];
+  if (filed?.quarters?.length >= MIN_FILED_QUARTERS) {
+    next.quarterly_results = filed.quarters.map((q) => ({ ...q }));
+    next.quarterly_source = filed.source;
+    next.quarterly_basis = filed.basis;
+    count('quarterly results taken from NSE filings');
+  }
+
+  const shareholding = FILED_SHAREHOLDING[stock.symbol];
+  if (shareholding?.filings?.length) {
+    const history = (next.shareholding_history || []).map((h) => ({ ...h }));
+    for (const filing of shareholding.filings) {
+      let row = history.find((h) => h.period === filing.period);
+      if (!row) {
+        const promoter = typeof filing.promoter === 'number' ? filing.promoter : 0;
+        row = {
+          period: filing.period,
+          promoter,
+          fii: null,
+          dii: null,
+          public: filing.public,
+          others: null,
+          total: typeof filing.public === 'number' ? round(promoter + filing.public) : null,
+          pledged: null,
+          source: 'NSE filings',
+        };
+        history.push(row);
+        count('shareholding period added from NSE filings');
+      }
+      if (typeof filing.fii === 'number') row.fii = filing.fii;
+      if (typeof filing.dii === 'number') row.dii = filing.dii;
+    }
+    next.shareholding_history = history;
+    next.shareholding_source = next.shareholding_source || 'NSE filings';
+    count('institutional split filled from NSE filings');
+  }
+
+  return next;
+}
+
 const QUARTERS = ['Mar', 'Jun', 'Sep', 'Dec'];
 
 function periodKey(period) {
@@ -639,7 +708,7 @@ const header = source.slice(0, source.indexOf('export const STOCKS_DATA'));
 const json = source.replace(/^[\s\S]*?export const STOCKS_DATA: Stock\[\] = /, '').replace(/;\s*$/, '');
 const universe = JSON.parse(json);
 
-const repaired = universe.map((stock) => repair(hydrate(stock)));
+const repaired = universe.map((stock) => repair(applyFilings(hydrate(stock))));
 
 // ── Industry P/E ─────────────────────────────────────────────
 // The pipeline stores industry_pe as exactly pe_ratio * 0.9 for every single
@@ -691,6 +760,19 @@ for (const stock of repaired) {
     peer.pe_ratio = canonical.pe_ratio;
     peer.dividend_yield = canonical.dividend_yield;
     peer.roce = canonical.roce;
+
+    // The quarter columns too, or a peer's row would quote Yahoo's figures
+    // while that company's own page shows its filed results.
+    const quarters = canonical.quarterly_results || [];
+    const lastQuarter = quarters[quarters.length - 1];
+    if (lastQuarter) {
+      const yearAgo = quarters.find((q) => periodKey(q.period) === periodKey(lastQuarter.period) - 4);
+      const change = (now, then) => (typeof now === 'number' && typeof then === 'number' && then > 0 ? round(((now - then) / then) * 100) : null);
+      peer.sales_qtr = lastQuarter.sales ?? null;
+      peer.net_profit_qtr = lastQuarter.net_profit ?? null;
+      peer.qtr_sales_var_pct = change(lastQuarter.sales, yearAgo?.sales);
+      peer.qtr_profit_var_pct = change(lastQuarter.net_profit, yearAgo?.net_profit);
+    }
   }
 }
 if (peerFixes) count('peer rows re-synced with the company row', peerFixes);

@@ -1,0 +1,98 @@
+name: Refresh filings
+
+# Filed quarterly results and shareholding patterns, straight from NSE's XBRL,
+# every evening except Sunday.
+#
+# The weekly fundamentals run takes quarterly results from Yahoo, which exposes
+# about five quarters and drops some. During results season a company's filing
+# could also sit unseen for up to a week. This picks new filings up the evening
+# they are published.
+#
+# Filed XBRL never changes, so downloaded files are kept in the Actions cache
+# and each run only fetches what is new: the listings, plus any filing made
+# since the last run.
+
+on:
+  schedule:
+    - cron: '30 14 * * 1-6'  # 20:00 IST, after the evening's filings
+  workflow_dispatch:
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  filings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          npm ci
+
+      - name: Restore downloaded filings
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/http
+          key: nse-xbrl-${{ github.run_id }}
+          restore-keys: nse-xbrl-
+
+      # Each step keeps what the previous run wrote for a company it cannot
+      # reach, so a partial NSE outage degrades to yesterday's data, not to none.
+      - name: Shareholding patterns
+        run: python -m data_pipeline.nse_filings shareholding
+        continue-on-error: true
+
+      - name: Quarterly results
+        run: python -m data_pipeline.nse_filings quarters
+        continue-on-error: true
+
+      - name: Super-investor portfolios
+        run: python -m data_pipeline.super_investors
+        continue-on-error: true
+
+      - name: Save downloaded filings
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .cache/http
+          key: nse-xbrl-${{ github.run_id }}
+
+      - name: Rebuild the data tiers
+        run: npm run data:rebuild
+
+      - name: Verify data invariants
+        run: npm test
+
+      - name: Verify data invariants (Python)
+        run: python -m pytest tests/ -q
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/filings src/data/superInvestors.generated.json src/data/stocksData.ts public/data/stocks
+          if git diff --cached --quiet; then
+            echo "No new filings; nothing to commit."
+          else
+            git commit -m "chore(data): refresh filings [skip ci]"
+            git push
+          fi

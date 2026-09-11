@@ -1075,10 +1075,11 @@ export const CURATED_INSIGHTS: Record<string, CompanyInsightMetric[]> = {
 // Aliases for demerged or dual-listed entities
 CURATED_INSIGHTS['TMCV'] = CURATED_INSIGHTS['TATAMOTORS'];
 CURATED_INSIGHTS['TMPV'] = CURATED_INSIGHTS['TATAMOTORS'];
+// Zomato Ltd was renamed Eternal Ltd in 2025 and trades as ETERNAL; keyed by the
+// old symbol, these KPIs matched no company in the universe and never rendered.
+CURATED_INSIGHTS['ETERNAL'] = CURATED_INSIGHTS['ZOMATO'];
 
-/**
- * Checks whether verified authentic operational insights exist for a given stock.
- */
+/** Whether manually compiled operating KPIs exist for a stock. */
 export function hasStockCompanyInsights(stock: Stock | { symbol: string } | null | undefined): boolean {
   if (!stock || !stock.symbol) return false;
   const sym = stock.symbol.toUpperCase();
@@ -1087,9 +1088,11 @@ export function hasStockCompanyInsights(stock: Stock | { symbol: string } | null
 }
 
 /**
- * Retrieves authentic, verified company operational KPI disclosures.
- * Returns null if no verified disclosures are published for this stock.
- * Synthetic heuristic interpolation is strictly disallowed to ensure 100% data authenticity.
+ * Manually compiled operating KPIs for a stock, or null.
+ *
+ * These series were entered by hand from company disclosures and are not traced
+ * to a filing in this app. The table that renders them says so. Insights that
+ * are computed from filings live in derivedInsights.ts.
  */
 export function getStockCompanyInsights(stock: Stock): StockCompanyInsights | null {
   if (!stock || !stock.symbol) return null;

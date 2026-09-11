@@ -53,11 +53,27 @@ Filterer is architected around five operational invariants:
     │       (scanner.py)      │                                   │ (Client-Side AST Engine)│
     └────────────┬────────────┘                                   └────────────┬────────────┘
 
-    Automated via GitHub Actions: Real-time price quotes refreshed on active trading days;
-    comprehensive corporate filing reconciliation executed weekly.
+    Automated via GitHub Actions: bundled prices refreshed three times a trading day,
+    filed results and shareholding every evening, Yahoo fundamentals weekly.
+    Live quotes are served on request by /api/quotes, cached at the CDN.
 ```
 
 ---
+
+## Data Sources
+
+Everything is free to fetch and needs no API key.
+
+| Data | Source | Refreshed |
+|---|---|---|
+| Live prices and index levels | Yahoo Finance spark API, with BSE's quote API as fallback (`api/quotes.ts`, `api/market_indices.ts`) | On request, cached 20 seconds while the market is open |
+| Quarterly results | NSE XBRL filings, integrated and legacy listings, about 12 quarters (`data_pipeline/nse_filings.py`) | Every evening |
+| Shareholding, including the FII / DII split, and every holder of 1% or more | NSE shareholding pattern XBRL | Every evening |
+| Super-investor portfolios | The shareholding filings above, matched to the names in `data/super_investors/registry.json` (`data_pipeline/super_investors.py`) | Every evening |
+| Closing prices for companies outside the Nifty 500 | NSE bhavcopy | Every evening |
+| Annual statements, balance sheets, cash flow, price history | Yahoo Finance via yfinance | Weekly |
+
+Filed data takes precedence: where NSE's XBRL is available, quarterly results come from it rather than from Yahoo, and the quarterly table says which source and which basis (consolidated or standalone) it is showing.
 
 ## Workspace Modules
 
@@ -79,11 +95,11 @@ Filterer is architected around five operational invariants:
 - Local persistence across browser sessions with zero login friction.
 
 ### 4. Super-Investors
-- Detailed tracking of **20 marquee Indian super-investors** (e.g. Radhakishan Damani, Rekha Jhunjhunwala, Ashish Kacholia, Vijay Kedia, Mukul Agrawal, Sunil Singhania, Dolly Khanna, Porinju Veliyath).
-- Filterable by investor class: **Individual HNI**, **Institutional / PMS**, and **Family Office**.
-- Aggregated statistics tracking total disclosed wealth and unique equity holdings.
-- **Consensus Stock Picks**: Equities held concurrently by multiple 1%+ institutional investors.
-- Master-detail portfolio browser displaying holding percentage, current market value, sector concentration, and latest regulatory filing period.
+- Portfolios read from the shareholding patterns companies file with NSE, not typed in: stake, share count, filing quarter and the change since the previous filing all come from the filing.
+- Curated investors are matched by the names they file under, listed in `data/super_investors/registry.json`; the registry says who an investor is, never what they hold. Individuals with 1% or more of several companies are also discovered from the filings.
+- Covers the Nifty 500 plus the smaller companies tracked investors hold, valued at NSE's closing price.
+- Stakes that disappear between filings are listed as no longer disclosed.
+- Limits, stated on the page: filings only name holders of 1% or more, and stakes held through entities not in the registry are missed, so a portfolio is a floor.
 
 ### 5. Input Commodities Tracker
 - Real-time tracking of **27 global and domestic benchmark commodities** across **Energy**, **Chemicals**, **Metals**, **Agriculture**, and **Polymers**.
@@ -93,8 +109,10 @@ Filterer is architected around five operational invariants:
 
 ### 6. Company Analysis & Operational KPIs
 - **Financial Statements**: Multi-year Annual P&L, Balance Sheet (Schedule III compliant), and Cash Flow Statements (Operating, Investing, Financing, Free Cash Flow).
-- **Quarterly Results**: Consecutive quarterly revenue, operating expenses, OPM%, net profit, and EPS trends.
-- **Operational Insights (KPIs)**: Multi-year operational business metrics with yearly and quarterly time series, inline trendline sparklines, and public access:
+- **Quarterly Results**: About twelve quarters from NSE's XBRL filings, on one basis per company, with banks shown in their own layout (interest earned, financing profit).
+- **Insights**: For every company, computed from its own filings: the latest quarter against the same quarter a year earlier, the trailing four quarters, sales record, margin trajectory, where return on equity comes from, cash conversion, debt, ownership changes and valuation against its own five-year history. Each insight names the periods and source it was drawn from.
+- **Live prices**: Quotes update every 20 seconds while the market is open, with a label saying how current each price is.
+- **Operating KPIs**: Hand-compiled operating metrics for about two dozen companies, labelled as compiled by hand and not traced to a filing:
   - *Reliance*: Retail Store Footprint, Jio Subscriber Base, Jio Data Consumption, KG D6 Gas Output, Refinery Throughput, Jio ARPU, Retail Footfall, Jio-bp Network.
   - *HDFC Bank*: CASA Ratio, Net Interest Margin (NIM), GNPA%, Branch Network, Credit-to-Deposit Ratio, Capital Adequacy (CRAR).
   - *Tata Motors*: JLR Wholesales, India Commercial Vehicle Volume, Passenger EV Share, JLR Order Book, EBITDA Margin.

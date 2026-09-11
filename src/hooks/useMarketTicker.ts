@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { MARKET_CLOSE_MINUTES, MARKET_OPEN_MINUTES, istNow } from '../lib/marketHours';
 
 export interface MarketIndex {
   symbol: string;
@@ -28,14 +29,8 @@ interface CachedIndex {
  */
 const SOURCES = ['/api/market_indices', '/data/market_indices.json'];
 
-const MARKET_OPEN_MINUTES = 9 * 60 + 15;
-const MARKET_CLOSE_MINUTES = 15 * 60 + 30;
-
-function istNow(): Date {
-  const now = new Date();
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-  return new Date(utc + 3600000 * 5.5);
-}
+/** The endpoint now reads Yahoo live, so polling faster than the CDN caches it gains nothing. */
+const POLL_MS = 20_000;
 
 function normalize(raw: unknown): MarketIndex[] | null {
   if (!raw || typeof raw !== 'object') return null;
@@ -154,7 +149,7 @@ export function useMarketTicker() {
     if (!isMarketOpen) return;
     const interval = setInterval(() => {
       if (document.visibilityState === 'visible') fetchIndices();
-    }, 60000);
+    }, POLL_MS);
     return () => clearInterval(interval);
   }, [isMarketOpen, fetchIndices]);
 

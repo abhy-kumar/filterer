@@ -5,8 +5,6 @@ import {
   AlertTriangle,
   Building,
   DollarSign,
-  MessageSquare,
-  Quote,
   CheckCircle2,
   Calendar,
   Layers,
@@ -55,11 +53,11 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
               Concall & Earnings Analysis
             </h2>
             <span className="apple-tag text-caption2 font-semibold text-apple-blue bg-apple-blue/10 border-apple-blue/25">
-              Transcript Highlights
+              Compiled by hand
             </span>
           </div>
           <p className="text-caption1 text-apple-muted">
-            Management commentary, capex pipeline, industry tailwinds, and earnings call Q&A.
+            A summary of management commentary, capex plans, tailwinds and headwinds.
           </p>
         </div>
 
@@ -90,17 +88,17 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
             </div>
             <div>
               <div className="text-caption1 font-bold text-apple-primary">
-                Management Tone: {activeQuarter.sentimentLabel}
+                Editorial read of tone: {activeQuarter.sentimentLabel}
               </div>
               <div className="text-caption2 text-apple-muted">
-                Analyzed from {activeQuarter.date} earnings conference call
+                Compiled for the {activeQuarter.date} earnings call
               </div>
             </div>
           </div>
 
           <div className="flex items-center gap-2 text-caption1 num text-apple-muted">
             <Calendar className="w-3.5 h-3.5" />
-            <span>Filing: {activeQuarter.date}</span>
+            <span>{activeQuarter.date}</span>
           </div>
         </div>
 
@@ -180,66 +178,11 @@ export const AIInsightsSummary: React.FC<AIInsightsSummaryProps> = ({ stock }) =
         </div>
       </div>
 
-      {/* Executive Management Direct Commentary */}
-      {activeQuarter.managementQuotes.length > 0 && (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 text-caption1 font-bold text-apple-primary uppercase tracking-wider">
-            <Quote className="w-3.5 h-3.5 text-apple-blue" />
-            <span>Key Executive Commentary</span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {activeQuarter.managementQuotes.map((q, idx) => (
-              <div
-                key={idx}
-                className="apple-card p-4 border border-apple-border/70 space-y-2 bg-apple-surface/20"
-              >
-                <div className="text-caption2 uppercase font-semibold text-apple-blue tracking-wider">
-                  {q.topic}
-                </div>
-                <p className="text-caption1 text-apple-primary italic leading-relaxed">
-                  "{q.quote}"
-                </p>
-                <div className="text-caption2 font-medium text-apple-muted pt-1 border-t border-apple-border/40">
-                  <span className="font-semibold text-apple-secondary">{q.speaker}</span>, {q.designation}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Institutional Analyst Q&A Highlights */}
-      {activeQuarter.analystQA.length > 0 && (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 text-caption1 font-bold text-apple-primary uppercase tracking-wider">
-            <MessageSquare className="w-3.5 h-3.5 text-apple-blue" />
-            <span>Key Analyst Q&A Nuggets</span>
-          </div>
-
-          <div className="space-y-3">
-            {activeQuarter.analystQA.map((qa, idx) => (
-              <div
-                key={idx}
-                className="apple-well p-4 rounded-xl space-y-2 text-caption1"
-              >
-                <div className="flex items-center justify-between text-caption2 font-medium text-apple-muted">
-                  <span className="font-semibold text-apple-secondary">{qa.analystName}</span>
-                  <span className="apple-tag text-caption2">{qa.firm}</span>
-                </div>
-                <div className="text-apple-primary font-medium">
-                  <span className="text-apple-blue font-bold mr-1.5">Q:</span>
-                  {qa.question}
-                </div>
-                <div className="text-apple-secondary leading-relaxed pt-1.5 border-t border-apple-border/50">
-                  <span className="text-emerald-500 font-bold mr-1.5">Management:</span>
-                  {qa.answer}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <p className="text-caption2 text-apple-faint border-t border-apple-border-subtle pt-3 leading-relaxed">
+        Compiled by hand from company disclosures and not traced to a transcript in this app, so it may be
+        incomplete or out of date. Direct quotations and analyst questions have been removed because they could
+        not be sourced. For what was actually said, read the transcript the company files with the exchange.
+      </p>
     </div>
   );
 };

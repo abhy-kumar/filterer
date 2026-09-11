@@ -606,3 +606,24 @@
 .scroll-touch {
   -webkit-overflow-scrolling: touch;
 }
+
+@layer utilities {
+  /* The dot beside a price. It breathes only while quotes are live, and the
+     reduced-motion rule above holds it still for anyone who has asked. */
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--apple-text-faint);
+    flex-shrink: 0;
+  }
+  .live-dot.is-live {
+    background: var(--apple-green);
+    animation: livePulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--apple-green-subtle); }
+  50% { box-shadow: 0 0 0 4px var(--apple-green-subtle); }
+}
