@@ -12763,7 +12763,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE066A01021",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 410076
+    "avg_volume_30d": 410076,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ELECON",
@@ -12845,7 +12847,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE205B01031",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 560778
+    "avg_volume_30d": 560778,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ELGIEQUIP",
@@ -12927,7 +12931,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE285A01027",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 708295
+    "avg_volume_30d": 708295,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "EMAMILTD",
@@ -13009,7 +13015,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE548C01032",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1341250
+    "avg_volume_30d": 1341250,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "EMCURE",
@@ -13091,7 +13099,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE168P01015",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 140895
+    "avg_volume_30d": 140895,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "EMMVEE",
@@ -13173,7 +13183,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE1C6T01020",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1831427
+    "avg_volume_30d": 1831427,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ENDURANCE",
@@ -13255,7 +13267,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE913H01037",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 131629
+    "avg_volume_30d": 131629,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ENGINERSIN",
@@ -13337,7 +13351,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Construction",
     "isin": "INE510A01028",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 4955269
+    "avg_volume_30d": 4955269,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ERIS",
@@ -13419,7 +13435,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE406M01024",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 66886
+    "avg_volume_30d": 66886,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ESCORTS",
@@ -13501,7 +13519,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE042A01014",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 68013
+    "avg_volume_30d": 68013,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ETERNAL",
@@ -13583,7 +13603,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Services",
     "isin": "INE758T01015",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 30046786
+    "avg_volume_30d": 30046786,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "EXIDEIND",
@@ -13665,7 +13687,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE302A01020",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 2852818
+    "avg_volume_30d": 2852818,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "NYKAA",
@@ -13747,7 +13771,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Services",
     "isin": "INE388Y01029",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 5560567
+    "avg_volume_30d": 5560567,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FEDERALBNK",
@@ -13829,7 +13855,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE171A01029",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 4392902
+    "avg_volume_30d": 4392902,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FACT",
@@ -13911,7 +13939,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Chemicals",
     "isin": "INE188A01015",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1332362
+    "avg_volume_30d": 1332362,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FINCABLES",
@@ -13993,7 +14023,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE235A01022",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 2008105
+    "avg_volume_30d": 2008105,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FSL",
@@ -14075,7 +14107,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Services",
     "isin": "INE684F01012",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 3217859
+    "avg_volume_30d": 3217859,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FIVESTAR",
@@ -14157,7 +14191,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE128S01021",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 511893
+    "avg_volume_30d": 511893,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "FORCEMOT",
@@ -14239,7 +14275,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE451A01017",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 75981
+    "avg_volume_30d": 75981,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FORTIS",
@@ -14321,7 +14359,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE061F01013",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1287817
+    "avg_volume_30d": 1287817,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GAIL",
@@ -14403,7 +14443,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Oil Gas & Consumable Fuels",
     "isin": "INE129A01019",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 6887863
+    "avg_volume_30d": 6887863,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GVT&D",
@@ -14485,7 +14527,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE200A01026",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1006457
+    "avg_volume_30d": 1006457,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "GMRAIRPORT",
@@ -14567,7 +14611,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Services",
     "isin": "INE776C01039",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 11492272
+    "avg_volume_30d": 11492272,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GABRIEL",
@@ -14649,7 +14695,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE524A01029",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 282452
+    "avg_volume_30d": 282452,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GALLANTT",
@@ -14731,7 +14779,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE297H01019",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 71979
+    "avg_volume_30d": 71979,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GRSE",
@@ -14813,7 +14863,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE382Z01011",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 436334
+    "avg_volume_30d": 436334,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "GICRE",
@@ -14977,7 +15029,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE322A01010",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 13055
+    "avg_volume_30d": 13055,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "GLAND",
@@ -15059,7 +15113,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE068V01023",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 860398
+    "avg_volume_30d": 860398,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GLAXO",
@@ -15141,7 +15197,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE159A01016",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 143600
+    "avg_volume_30d": 143600,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GLENMARK",
@@ -18357,7 +18415,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE0V6F01027",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 636051
+    "avg_volume_30d": 636051,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ICICIBANK",
@@ -18439,7 +18499,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE090A01021",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 9220716
+    "avg_volume_30d": 9220716,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ICICIGI",
@@ -18767,7 +18829,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE008A01015",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 14751304
+    "avg_volume_30d": 14751304,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IDFCFIRSTB",
@@ -18849,7 +18913,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE092T01019",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 13648993
+    "avg_volume_30d": 13648993,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IFCI",
@@ -18931,7 +18997,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE039A01010",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 89287308
+    "avg_volume_30d": 89287308,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IIFL",
@@ -19013,7 +19081,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE530B01024",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 2743914
+    "avg_volume_30d": 2743914,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IRB",
@@ -19095,7 +19165,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Construction",
     "isin": "INE821I01022",
     "piotroski_assessed": 7,
-    "avg_volume_30d": 12647663
+    "avg_volume_30d": 12647663,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IRCON",
@@ -19177,7 +19249,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Construction",
     "isin": "INE962Y01021",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1284086
+    "avg_volume_30d": 1284086,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ITCHOTELS",
@@ -19259,7 +19333,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Services",
     "isin": "INE379A01028",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1404688
+    "avg_volume_30d": 1404688,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ITC",
@@ -19341,7 +19417,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE154A01025",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 12688843
+    "avg_volume_30d": 12688843,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "ITI",
@@ -19423,7 +19501,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Telecommunication",
     "isin": "INE248A01017",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 267436
+    "avg_volume_30d": 267436,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDGN",
@@ -19505,7 +19585,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE065X01017",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 757716
+    "avg_volume_30d": 757716,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDIACEM",
@@ -19587,7 +19669,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Construction Materials",
     "isin": "INE383A01012",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 109151
+    "avg_volume_30d": 109151,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDIAMART",
@@ -19669,7 +19753,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Services",
     "isin": "INE933S01016",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 98751
+    "avg_volume_30d": 98751,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDIANB",
@@ -19751,7 +19837,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE562A01011",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1212838
+    "avg_volume_30d": 1212838,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IEX",
@@ -19833,7 +19921,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE022Q01020",
     "piotroski_assessed": 7,
-    "avg_volume_30d": 2957499
+    "avg_volume_30d": 2957499,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDHOTEL",
@@ -19915,7 +20005,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Services",
     "isin": "INE053A01029",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1452192
+    "avg_volume_30d": 1452192,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IOC",
@@ -19997,7 +20089,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Oil Gas & Consumable Fuels",
     "isin": "INE242A01010",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 7480499
+    "avg_volume_30d": 7480499,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IOB",
@@ -20079,7 +20173,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE565A01014",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 2203078
+    "avg_volume_30d": 2203078,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IRCTC",
@@ -20161,7 +20257,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Services",
     "isin": "INE335Y01020",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 776811
+    "avg_volume_30d": 776811,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "IRFC",
@@ -20243,7 +20341,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE053F01010",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 6860465
+    "avg_volume_30d": 6860465,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "IREDA",
@@ -20325,7 +20425,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE202E01016",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 3941281
+    "avg_volume_30d": 3941281,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "IGL",
@@ -20407,7 +20509,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Oil Gas & Consumable Fuels",
     "isin": "INE203G01027",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 2007729
+    "avg_volume_30d": 2007729,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDUSTOWER",
@@ -20489,7 +20593,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Telecommunication",
     "isin": "INE121J01017",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 4971144
+    "avg_volume_30d": 4971144,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "INDUSINDBK",
