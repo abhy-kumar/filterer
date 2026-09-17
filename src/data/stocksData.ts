@@ -15281,7 +15281,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE935A01035",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 460765
+    "avg_volume_30d": 460765,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "MEDANTA",
@@ -15363,7 +15365,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE474Q01031",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 284051
+    "avg_volume_30d": 284051,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GODIGIT",
@@ -15527,7 +15531,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE177H01039",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1824620
+    "avg_volume_30d": 1824620,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GODFRYPHLP",
@@ -15609,7 +15615,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE260B01028",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 184540
+    "avg_volume_30d": 184540,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GODREJCP",
@@ -15691,7 +15699,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE102D01028",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 2379323
+    "avg_volume_30d": 2379323,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GODREJIND",
@@ -15773,7 +15783,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Diversified",
     "isin": "INE233A01035",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 125192
+    "avg_volume_30d": 125192,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GODREJPROP",
@@ -15855,7 +15867,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Realty",
     "isin": "INE484J01027",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 631201
+    "avg_volume_30d": 631201,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GRANULES",
@@ -15937,7 +15951,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Healthcare",
     "isin": "INE101D01020",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1152653
+    "avg_volume_30d": 1152653,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "GRAPHITE",
@@ -16775,7 +16791,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE756I01012",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 640173
+    "avg_volume_30d": 640173,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "HDFCAMC",
@@ -16857,7 +16875,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE127D01025",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 744578
+    "avg_volume_30d": 744578,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HDFCBANK",
@@ -16939,7 +16959,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE040A01034",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 26113286
+    "avg_volume_30d": 26113286,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HDFCLIFE",
@@ -17103,7 +17125,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Telecommunication",
     "isin": "INE548A01028",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 13944854
+    "avg_volume_30d": 13944854,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HAVELLS",
@@ -17185,7 +17209,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Consumer Durables",
     "isin": "INE176B01034",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 807718
+    "avg_volume_30d": 807718,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HEROMOTOCO",
@@ -17267,7 +17293,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Automobile and Auto Components",
     "isin": "INE158A01026",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 605872
+    "avg_volume_30d": 605872,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HEXT",
