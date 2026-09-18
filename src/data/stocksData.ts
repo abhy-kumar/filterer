@@ -17377,7 +17377,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Information Technology",
     "isin": "INE093A01041",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 352106
+    "avg_volume_30d": 352106,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HSCL",
@@ -17459,7 +17461,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Chemicals",
     "isin": "INE019C01026",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 6245572
+    "avg_volume_30d": 6245572,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HINDALCO",
@@ -17541,7 +17545,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Metals & Mining",
     "isin": "INE038A01020",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 3763204
+    "avg_volume_30d": 3763204,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HAL",
@@ -17623,7 +17629,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE066F01020",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 913370
+    "avg_volume_30d": 913370,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HINDCOPPER",
@@ -17705,7 +17713,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Metals & Mining",
     "isin": "INE531E01026",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 14318938
+    "avg_volume_30d": 14318938,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HINDPETRO",
@@ -17787,7 +17797,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Oil Gas & Consumable Fuels",
     "isin": "INE094A01015",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 4857027
+    "avg_volume_30d": 4857027,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HINDUNILVR",
@@ -17869,7 +17881,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE030A01027",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1190932
+    "avg_volume_30d": 1190932,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HINDZINC",
@@ -17951,7 +17965,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Metals & Mining",
     "isin": "INE267A01025",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 6064124
+    "avg_volume_30d": 6064124,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "POWERINDIA",
@@ -18033,7 +18049,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE07Y701011",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 112918
+    "avg_volume_30d": 112918,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "HOMEFIRST",
@@ -18115,7 +18133,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE481N01025",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 177848
+    "avg_volume_30d": 177848,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "HONASA",
@@ -18197,7 +18217,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Fast Moving Consumer Goods",
     "isin": "INE0J5401028",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 1699358
+    "avg_volume_30d": 1699358,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HONAUT",
@@ -18279,7 +18301,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Capital Goods",
     "isin": "INE671A01010",
     "piotroski_assessed": 8,
-    "avg_volume_30d": 3272
+    "avg_volume_30d": 3272,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "standalone"
   },
   {
     "symbol": "HUDCO",
@@ -18361,7 +18385,9 @@ export const STOCKS_DATA: Stock[] = [
     "nse_industry": "Financial Services",
     "isin": "INE031A01017",
     "piotroski_assessed": 7,
-    "avg_volume_30d": 1705833
+    "avg_volume_30d": 1705833,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "HYUNDAI",

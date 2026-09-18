@@ -1,7 +1,7 @@
 {
  "360ONE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:42:35+00:00",
+  "fetched_at": "2026-09-18T18:04:08+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -176,7 +176,7 @@
  },
  "3MINDIA": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:42:39+00:00",
+  "fetched_at": "2026-09-18T18:04:12+00:00",
   "quarters": [
    {
     "depreciation": 12.61,
@@ -351,7 +351,7 @@
  },
  "AADHARHFC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:11+00:00",
+  "fetched_at": "2026-09-18T18:04:44+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -498,7 +498,7 @@
  },
  "AARTIIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:15+00:00",
+  "fetched_at": "2026-09-18T18:04:48+00:00",
   "quarters": [
    {
     "depreciation": 93.05,
@@ -673,7 +673,7 @@
  },
  "AAVAS": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:43:19+00:00",
+  "fetched_at": "2026-09-18T18:04:52+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -848,7 +848,7 @@
  },
  "ABB": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:42:43+00:00",
+  "fetched_at": "2026-09-18T18:04:16+00:00",
   "quarters": [
    {
     "depreciation": 30.29,
@@ -1023,7 +1023,7 @@
  },
  "ABCAPITAL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:59+00:00",
+  "fetched_at": "2026-09-18T18:05:32+00:00",
   "quarters": [
    {
     "depreciation": 47.95,
@@ -1198,7 +1198,7 @@
  },
  "ABDL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:47+00:00",
+  "fetched_at": "2026-09-18T18:06:20+00:00",
   "quarters": [
    {
     "depreciation": 18.77,
@@ -1345,7 +1345,7 @@
  },
  "ABFRL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:03+00:00",
+  "fetched_at": "2026-09-18T18:05:36+00:00",
   "quarters": [
    {
     "depreciation": 388.8,
@@ -1520,7 +1520,7 @@
  },
  "ABLBL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:07+00:00",
+  "fetched_at": "2026-09-18T18:05:40+00:00",
   "quarters": [
    {
     "depreciation": 172.51,
@@ -1597,7 +1597,7 @@
  },
  "ABREL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:11+00:00",
+  "fetched_at": "2026-09-18T18:05:44+00:00",
   "quarters": [
    {
     "depreciation": 59.21,
@@ -1772,7 +1772,7 @@
  },
  "ABSLAMC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:15+00:00",
+  "fetched_at": "2026-09-18T18:05:48+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -1947,7 +1947,7 @@
  },
  "ACC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:42:48+00:00",
+  "fetched_at": "2026-09-18T18:04:20+00:00",
   "quarters": [
    {
     "depreciation": 212.8,
@@ -2122,7 +2122,7 @@
  },
  "ACE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:27+00:00",
+  "fetched_at": "2026-09-18T18:05:00+00:00",
   "quarters": [
    {
     "depreciation": 5.43,
@@ -2297,7 +2297,7 @@
  },
  "ACMESOLAR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:42:51+00:00",
+  "fetched_at": "2026-09-18T18:04:24+00:00",
   "quarters": [
    {
     "depreciation": 59.87,
@@ -2416,7 +2416,7 @@
  },
  "ACUTAAS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:31+00:00",
+  "fetched_at": "2026-09-18T18:05:04+00:00",
   "quarters": [
    {
     "depreciation": 3.69,
@@ -2591,7 +2591,7 @@
  },
  "ADANIENSOL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:35+00:00",
+  "fetched_at": "2026-09-18T18:05:08+00:00",
   "quarters": [
    {
     "depreciation": 432.05,
@@ -2766,7 +2766,7 @@
  },
  "ADANIENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:39+00:00",
+  "fetched_at": "2026-09-18T18:05:12+00:00",
   "quarters": [
    {
     "depreciation": 756.96,
@@ -2941,7 +2941,7 @@
  },
  "ADANIGREEN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:43+00:00",
+  "fetched_at": "2026-09-18T18:05:16+00:00",
   "quarters": [
    {
     "depreciation": 392.0,
@@ -3116,7 +3116,7 @@
  },
  "ADANIPORTS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:47+00:00",
+  "fetched_at": "2026-09-18T18:05:20+00:00",
   "quarters": [
    {
     "depreciation": 949.58,
@@ -3291,7 +3291,7 @@
  },
  "ADANIPOWER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:51+00:00",
+  "fetched_at": "2026-09-18T18:05:24+00:00",
   "quarters": [
    {
     "depreciation": 1004.48,
@@ -3466,7 +3466,7 @@
  },
  "AEGISLOG": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:23+00:00",
+  "fetched_at": "2026-09-18T18:05:56+00:00",
   "quarters": [
    {
     "depreciation": 34.14,
@@ -3641,7 +3641,7 @@
  },
  "AEGISVOPAK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:27+00:00",
+  "fetched_at": "2026-09-18T18:06:00+00:00",
   "quarters": [
    {
     "depreciation": 31.64,
@@ -3732,7 +3732,7 @@
  },
  "AFCONS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:31+00:00",
+  "fetched_at": "2026-09-18T18:06:04+00:00",
   "quarters": [
    {
     "depreciation": 119.77,
@@ -3837,7 +3837,7 @@
  },
  "AFFLE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:35+00:00",
+  "fetched_at": "2026-09-18T18:06:08+00:00",
   "quarters": [
    {
     "depreciation": 18.44,
@@ -4012,7 +4012,7 @@
  },
  "AIAENG": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:42:55+00:00",
+  "fetched_at": "2026-09-18T18:04:28+00:00",
   "quarters": [
    {
     "depreciation": 24.51,
@@ -4187,7 +4187,7 @@
  },
  "AIIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:11+00:00",
+  "fetched_at": "2026-09-18T18:07:44+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -4306,7 +4306,7 @@
  },
  "AJANTPHARM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:39+00:00",
+  "fetched_at": "2026-09-18T18:06:12+00:00",
   "quarters": [
    {
     "depreciation": 33.71,
@@ -4481,7 +4481,7 @@
  },
  "ALKEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:43+00:00",
+  "fetched_at": "2026-09-18T18:06:16+00:00",
   "quarters": [
    {
     "depreciation": 73.9,
@@ -4656,7 +4656,7 @@
  },
  "AMBER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:55+00:00",
+  "fetched_at": "2026-09-18T18:06:28+00:00",
   "quarters": [
    {
     "depreciation": 45.22,
@@ -4831,7 +4831,7 @@
  },
  "AMBUJACEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:59+00:00",
+  "fetched_at": "2026-09-18T18:06:32+00:00",
   "quarters": [
    {
     "depreciation": 371.72,
@@ -5006,7 +5006,7 @@
  },
  "ANANDRATHI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:03+00:00",
+  "fetched_at": "2026-09-18T18:06:36+00:00",
   "quarters": [
    {
     "depreciation": 4.61,
@@ -5181,7 +5181,7 @@
  },
  "ANANTRAJ": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:07+00:00",
+  "fetched_at": "2026-09-18T18:06:40+00:00",
   "quarters": [
    {
     "depreciation": 4.23,
@@ -5356,7 +5356,7 @@
  },
  "ANGELONE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:11+00:00",
+  "fetched_at": "2026-09-18T18:06:44+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -5531,7 +5531,7 @@
  },
  "ANTHEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:15+00:00",
+  "fetched_at": "2026-09-18T18:06:48+00:00",
   "quarters": [
    {
     "depreciation": 26.45,
@@ -5608,7 +5608,7 @@
  },
  "ANURAS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:19+00:00",
+  "fetched_at": "2026-09-18T18:06:52+00:00",
   "quarters": [
    {
     "depreciation": 19.85,
@@ -5783,7 +5783,7 @@
  },
  "APARINDS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:23+00:00",
+  "fetched_at": "2026-09-18T18:06:56+00:00",
   "quarters": [
    {
     "depreciation": 28.17,
@@ -5958,7 +5958,7 @@
  },
  "APLAPOLLO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:42:59+00:00",
+  "fetched_at": "2026-09-18T18:04:32+00:00",
   "quarters": [
    {
     "depreciation": 41.34,
@@ -6133,7 +6133,7 @@
  },
  "APOLLOHOSP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:27+00:00",
+  "fetched_at": "2026-09-18T18:07:00+00:00",
   "quarters": [
    {
     "depreciation": 163.4,
@@ -6308,7 +6308,7 @@
  },
  "APOLLOTYRE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:31+00:00",
+  "fetched_at": "2026-09-18T18:07:04+00:00",
   "quarters": [
    {
     "depreciation": 360.25,
@@ -6483,7 +6483,7 @@
  },
  "APTUS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:35+00:00",
+  "fetched_at": "2026-09-18T18:07:08+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -6658,7 +6658,7 @@
  },
  "ARE&M": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:51+00:00",
+  "fetched_at": "2026-09-18T18:06:24+00:00",
   "quarters": [
    {
     "depreciation": 115.7,
@@ -6833,7 +6833,7 @@
  },
  "ASAHIINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:39+00:00",
+  "fetched_at": "2026-09-18T18:07:12+00:00",
   "quarters": [
    {
     "depreciation": 42.95,
@@ -7008,7 +7008,7 @@
  },
  "ASHOKLEY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:43+00:00",
+  "fetched_at": "2026-09-18T18:07:16+00:00",
   "quarters": [
    {
     "depreciation": 226.61,
@@ -7183,7 +7183,7 @@
  },
  "ASIANPAINT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:47+00:00",
+  "fetched_at": "2026-09-18T18:07:20+00:00",
   "quarters": [
    {
     "depreciation": 208.72,
@@ -7358,7 +7358,7 @@
  },
  "ASTERDM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:51+00:00",
+  "fetched_at": "2026-09-18T18:07:24+00:00",
   "quarters": [
    {
     "depreciation": 227.16,
@@ -7533,7 +7533,7 @@
  },
  "ASTRAL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:45:55+00:00",
+  "fetched_at": "2026-09-18T18:07:28+00:00",
   "quarters": [
    {
     "depreciation": 48.7,
@@ -7708,7 +7708,7 @@
  },
  "ATGL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:55+00:00",
+  "fetched_at": "2026-09-18T18:05:28+00:00",
   "quarters": [
    {
     "depreciation": 37.62,
@@ -7883,7 +7883,7 @@
  },
  "ATHERENERG": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:45:59+00:00",
+  "fetched_at": "2026-09-18T18:07:32+00:00",
   "quarters": [
    {
     "depreciation": 45.2,
@@ -7974,7 +7974,7 @@
  },
  "ATUL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:03+00:00",
+  "fetched_at": "2026-09-18T18:07:36+00:00",
   "quarters": [
    {
     "depreciation": 51.07,
@@ -8149,7 +8149,7 @@
  },
  "AUBANK": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:43:03+00:00",
+  "fetched_at": "2026-09-18T18:04:36+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -8324,7 +8324,7 @@
  },
  "AUROPHARMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:07+00:00",
+  "fetched_at": "2026-09-18T18:07:40+00:00",
   "quarters": [
    {
     "depreciation": 417.5,
@@ -8499,7 +8499,7 @@
  },
  "AWL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:43:07+00:00",
+  "fetched_at": "2026-09-18T18:04:40+00:00",
   "quarters": [
    {
     "depreciation": 93.51,
@@ -8674,7 +8674,7 @@
  },
  "AXISBANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:19+00:00",
+  "fetched_at": "2026-09-18T18:07:52+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -8821,7 +8821,7 @@
  },
  "BAJAJ-AUTO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:35+00:00",
+  "fetched_at": "2026-09-18T18:08:08+00:00",
   "quarters": [
    {
     "depreciation": 91.82,
@@ -8996,7 +8996,7 @@
  },
  "BAJAJFINSV": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:43+00:00",
+  "fetched_at": "2026-09-18T18:08:16+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -9171,7 +9171,7 @@
  },
  "BAJAJHFL": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:46:51+00:00",
+  "fetched_at": "2026-09-18T18:08:24+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -9290,7 +9290,7 @@
  },
  "BAJAJHLDNG": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:47+00:00",
+  "fetched_at": "2026-09-18T18:08:20+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -9465,7 +9465,7 @@
  },
  "BAJFINANCE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:39+00:00",
+  "fetched_at": "2026-09-18T18:08:12+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -9640,7 +9640,7 @@
  },
  "BALKRISIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:55+00:00",
+  "fetched_at": "2026-09-18T18:08:28+00:00",
   "quarters": [
    {
     "depreciation": 160.43,
@@ -9801,7 +9801,7 @@
  },
  "BALRAMCHIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:59+00:00",
+  "fetched_at": "2026-09-18T18:08:32+00:00",
   "quarters": [
    {
     "depreciation": 41.24,
@@ -9976,7 +9976,7 @@
  },
  "BANDHANBNK": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:47:03+00:00",
+  "fetched_at": "2026-09-18T18:08:36+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -10137,7 +10137,7 @@
  },
  "BANKBARODA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:07+00:00",
+  "fetched_at": "2026-09-18T18:08:40+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -10312,7 +10312,7 @@
  },
  "BANKINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:11+00:00",
+  "fetched_at": "2026-09-18T18:08:44+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -10473,7 +10473,7 @@
  },
  "BATAINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:19+00:00",
+  "fetched_at": "2026-09-18T18:08:52+00:00",
   "quarters": [
    {
     "depreciation": 81.71,
@@ -10648,7 +10648,7 @@
  },
  "BBTC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:31+00:00",
+  "fetched_at": "2026-09-18T18:10:04+00:00",
   "quarters": [
    {
     "depreciation": 74.7,
@@ -10823,7 +10823,7 @@
  },
  "BDL": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:47:35+00:00",
+  "fetched_at": "2026-09-18T18:09:08+00:00",
   "quarters": [
    {
     "depreciation": 17.43,
@@ -10998,7 +10998,7 @@
  },
  "BEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:39+00:00",
+  "fetched_at": "2026-09-18T18:09:12+00:00",
   "quarters": [
    {
     "depreciation": 108.26,
@@ -11173,7 +11173,7 @@
  },
  "BELRISE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:27+00:00",
+  "fetched_at": "2026-09-18T18:09:00+00:00",
   "quarters": [
    {
     "depreciation": 82.81,
@@ -11250,7 +11250,7 @@
  },
  "BEML": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:23+00:00",
+  "fetched_at": "2026-09-18T18:07:56+00:00",
   "quarters": [
    {
     "depreciation": 15.75,
@@ -11425,7 +11425,7 @@
  },
  "BERGEPAINT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:31+00:00",
+  "fetched_at": "2026-09-18T18:09:04+00:00",
   "quarters": [
    {
     "depreciation": 82.87,
@@ -11600,7 +11600,7 @@
  },
  "BHARATFORG": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:43+00:00",
+  "fetched_at": "2026-09-18T18:09:16+00:00",
   "quarters": [
    {
     "depreciation": 211.33,
@@ -11775,7 +11775,7 @@
  },
  "BHARTIARTL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:55+00:00",
+  "fetched_at": "2026-09-18T18:09:28+00:00",
   "quarters": [
    {
     "depreciation": 9734.3,
@@ -11950,7 +11950,7 @@
  },
  "BHARTIHEXA": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:47:59+00:00",
+  "fetched_at": "2026-09-18T18:09:32+00:00",
   "quarters": [
    {
     "depreciation": 459.8,
@@ -12097,7 +12097,7 @@
  },
  "BHEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:47+00:00",
+  "fetched_at": "2026-09-18T18:09:20+00:00",
   "quarters": [
    {
     "depreciation": 59.91,
@@ -12272,7 +12272,7 @@
  },
  "BIKAJI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:03+00:00",
+  "fetched_at": "2026-09-18T18:09:36+00:00",
   "quarters": [
    {
     "depreciation": 15.6,
@@ -12447,7 +12447,7 @@
  },
  "BIOCON": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:11+00:00",
+  "fetched_at": "2026-09-18T18:09:44+00:00",
   "quarters": [
    {
     "depreciation": 389.3,
@@ -12622,7 +12622,7 @@
  },
  "BLS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:27+00:00",
+  "fetched_at": "2026-09-18T18:08:00+00:00",
   "quarters": [
    {
     "depreciation": 6.36,
@@ -12797,7 +12797,7 @@
  },
  "BLUEDART": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:19+00:00",
+  "fetched_at": "2026-09-18T18:09:52+00:00",
   "quarters": [
    {
     "depreciation": 99.0,
@@ -12972,7 +12972,7 @@
  },
  "BLUEJET": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:48:23+00:00",
+  "fetched_at": "2026-09-18T18:09:56+00:00",
   "quarters": [
    {
     "depreciation": 6.47,
@@ -13147,7 +13147,7 @@
  },
  "BLUESTARCO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:27+00:00",
+  "fetched_at": "2026-09-18T18:10:00+00:00",
   "quarters": [
    {
     "depreciation": 23.01,
@@ -13322,7 +13322,7 @@
  },
  "BOSCHLTD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:35+00:00",
+  "fetched_at": "2026-09-18T18:10:08+00:00",
   "quarters": [
    {
     "depreciation": 120.6,
@@ -13483,7 +13483,7 @@
  },
  "BPCL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:51+00:00",
+  "fetched_at": "2026-09-18T18:09:24+00:00",
   "quarters": [
    {
     "depreciation": 1605.27,
@@ -13658,7 +13658,7 @@
  },
  "BRIGADE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:43+00:00",
+  "fetched_at": "2026-09-18T18:10:16+00:00",
   "quarters": [
    {
     "depreciation": 75.73,
@@ -13833,7 +13833,7 @@
  },
  "BRITANNIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:47+00:00",
+  "fetched_at": "2026-09-18T18:10:20+00:00",
   "quarters": [
    {
     "depreciation": 71.68,
@@ -14008,7 +14008,7 @@
  },
  "BSE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:31+00:00",
+  "fetched_at": "2026-09-18T18:08:04+00:00",
   "quarters": [
    {
     "depreciation": 22.67,
@@ -14183,7 +14183,7 @@
  },
  "BSOFT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:15+00:00",
+  "fetched_at": "2026-09-18T18:09:48+00:00",
   "quarters": [
    {
     "depreciation": 21.5,
@@ -14358,7 +14358,7 @@
  },
  "CAMS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:59+00:00",
+  "fetched_at": "2026-09-18T18:12:32+00:00",
   "quarters": [
    {
     "depreciation": 17.42,
@@ -14533,7 +14533,7 @@
  },
  "CANBK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:19+00:00",
+  "fetched_at": "2026-09-18T18:10:52+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -14708,7 +14708,7 @@
  },
  "CANFINHOME": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:49:15+00:00",
+  "fetched_at": "2026-09-18T18:10:48+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -14883,7 +14883,7 @@
  },
  "CAPLIPOINT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:27+00:00",
+  "fetched_at": "2026-09-18T18:11:00+00:00",
   "quarters": [
    {
     "depreciation": 11.77,
@@ -15058,7 +15058,7 @@
  },
  "CARBORUNIV": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:35+00:00",
+  "fetched_at": "2026-09-18T18:11:08+00:00",
   "quarters": [
    {
     "depreciation": 45.86,
@@ -15233,7 +15233,7 @@
  },
  "CARTRADE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:39+00:00",
+  "fetched_at": "2026-09-18T18:11:12+00:00",
   "quarters": [
    {
     "depreciation": 9.77,
@@ -15408,7 +15408,7 @@
  },
  "CASTROLIND": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:49:43+00:00",
+  "fetched_at": "2026-09-18T18:11:16+00:00",
   "quarters": [
    {
     "depreciation": 22.87,
@@ -15583,7 +15583,7 @@
  },
  "CCL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:55+00:00",
+  "fetched_at": "2026-09-18T18:10:28+00:00",
   "quarters": [
    {
     "depreciation": 22.58,
@@ -15758,7 +15758,7 @@
  },
  "CDSL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:59+00:00",
+  "fetched_at": "2026-09-18T18:11:32+00:00",
   "quarters": [
    {
     "depreciation": 6.49,
@@ -15933,7 +15933,7 @@
  },
  "CEATLTD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:47+00:00",
+  "fetched_at": "2026-09-18T18:11:20+00:00",
   "quarters": [
    {
     "depreciation": 124.49,
@@ -16108,7 +16108,7 @@
  },
  "CEMPRO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:51+00:00",
+  "fetched_at": "2026-09-18T18:11:24+00:00",
   "quarters": [
    {
     "depreciation": 52.75,
@@ -16283,7 +16283,7 @@
  },
  "CENTRALBK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:55+00:00",
+  "fetched_at": "2026-09-18T18:11:28+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -16444,7 +16444,7 @@
  },
  "CESC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:59+00:00",
+  "fetched_at": "2026-09-18T18:10:32+00:00",
   "quarters": [
    {
     "depreciation": 303.0,
@@ -16605,7 +16605,7 @@
  },
  "CGCL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:31+00:00",
+  "fetched_at": "2026-09-18T18:11:04+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -16780,7 +16780,7 @@
  },
  "CGPOWER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:03+00:00",
+  "fetched_at": "2026-09-18T18:10:36+00:00",
   "quarters": [
    {
     "depreciation": 24.26,
@@ -16927,7 +16927,7 @@
  },
  "CHALET": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:03+00:00",
+  "fetched_at": "2026-09-18T18:11:36+00:00",
   "quarters": [
    {
     "depreciation": 34.97,
@@ -17102,7 +17102,7 @@
  },
  "CHAMBLFERT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:07+00:00",
+  "fetched_at": "2026-09-18T18:11:40+00:00",
   "quarters": [
    {
     "depreciation": 78.44,
@@ -17277,7 +17277,7 @@
  },
  "CHENNPETRO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:11+00:00",
+  "fetched_at": "2026-09-18T18:11:44+00:00",
   "quarters": [
    {
     "depreciation": 147.3,
@@ -17452,7 +17452,7 @@
  },
  "CHOICEIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:15+00:00",
+  "fetched_at": "2026-09-18T18:11:48+00:00",
   "quarters": [
    {
     "depreciation": 1.48,
@@ -17627,7 +17627,7 @@
  },
  "CHOLAFIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:23+00:00",
+  "fetched_at": "2026-09-18T18:11:56+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -17802,7 +17802,7 @@
  },
  "CHOLAHLDNG": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:19+00:00",
+  "fetched_at": "2026-09-18T18:11:52+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -17977,7 +17977,7 @@
  },
  "CIEINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:07+00:00",
+  "fetched_at": "2026-09-18T18:10:40+00:00",
   "quarters": [
    {
     "depreciation": 78.34,
@@ -18152,7 +18152,7 @@
  },
  "CIPLA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:27+00:00",
+  "fetched_at": "2026-09-18T18:12:00+00:00",
   "quarters": [
    {
     "depreciation": 290.04,
@@ -18327,7 +18327,7 @@
  },
  "CLEAN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:35+00:00",
+  "fetched_at": "2026-09-18T18:12:08+00:00",
   "quarters": [
    {
     "depreciation": 11.13,
@@ -18502,7 +18502,7 @@
  },
  "COALINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:39+00:00",
+  "fetched_at": "2026-09-18T18:12:12+00:00",
   "quarters": [
    {
     "depreciation": 1138.38,
@@ -18677,7 +18677,7 @@
  },
  "COCHINSHIP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:43+00:00",
+  "fetched_at": "2026-09-18T18:12:16+00:00",
   "quarters": [
    {
     "depreciation": 18.88,
@@ -18852,7 +18852,7 @@
  },
  "COFORGE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:47+00:00",
+  "fetched_at": "2026-09-18T18:12:20+00:00",
   "quarters": [
    {
     "depreciation": 77.2,
@@ -19013,7 +19013,7 @@
  },
  "COHANCE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:50:51+00:00",
+  "fetched_at": "2026-09-18T18:12:24+00:00",
   "quarters": [
    {
     "depreciation": 11.96,
@@ -19174,7 +19174,7 @@
  },
  "COLPAL": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:50:55+00:00",
+  "fetched_at": "2026-09-18T18:12:28+00:00",
   "quarters": [
    {
     "depreciation": 44.28,
@@ -19349,7 +19349,7 @@
  },
  "CONCOR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:07+00:00",
+  "fetched_at": "2026-09-18T18:12:40+00:00",
   "quarters": [
    {
     "depreciation": 142.1,
@@ -19524,7 +19524,7 @@
  },
  "CONCORDBIO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:03+00:00",
+  "fetched_at": "2026-09-18T18:12:36+00:00",
   "quarters": [
    {
     "depreciation": 13.3,
@@ -19699,7 +19699,7 @@
  },
  "COROMANDEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:11+00:00",
+  "fetched_at": "2026-09-18T18:12:44+00:00",
   "quarters": [
    {
     "depreciation": 48.1,
@@ -19874,7 +19874,7 @@
  },
  "CPPLUS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:44:19+00:00",
+  "fetched_at": "2026-09-18T18:05:52+00:00",
   "quarters": [
    {
     "depreciation": 10.36,
@@ -19951,7 +19951,7 @@
  },
  "CRAFTSMAN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:15+00:00",
+  "fetched_at": "2026-09-18T18:12:48+00:00",
   "quarters": [
    {
     "depreciation": 59.93,
@@ -20126,7 +20126,7 @@
  },
  "CREDITACC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:19+00:00",
+  "fetched_at": "2026-09-18T18:12:52+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -20301,7 +20301,7 @@
  },
  "CRISIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:49:11+00:00",
+  "fetched_at": "2026-09-18T18:10:44+00:00",
   "quarters": [
    {
     "depreciation": 26.5,
@@ -20476,7 +20476,7 @@
  },
  "CROMPTON": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:23+00:00",
+  "fetched_at": "2026-09-18T18:12:56+00:00",
   "quarters": [
    {
     "depreciation": 32.12,
@@ -20651,7 +20651,7 @@
  },
  "CUB": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:50:31+00:00",
+  "fetched_at": "2026-09-18T18:12:04+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -20826,7 +20826,7 @@
  },
  "CUMMINSIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:27+00:00",
+  "fetched_at": "2026-09-18T18:13:00+00:00",
   "quarters": [
    {
     "depreciation": 38.26,
@@ -21001,7 +21001,7 @@
  },
  "CYIENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:31+00:00",
+  "fetched_at": "2026-09-18T18:13:04+00:00",
   "quarters": [
    {
     "depreciation": 72.6,
@@ -21176,7 +21176,7 @@
  },
  "DABUR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:47+00:00",
+  "fetched_at": "2026-09-18T18:13:20+00:00",
   "quarters": [
    {
     "depreciation": 98.32,
@@ -21351,7 +21351,7 @@
  },
  "DALBHARAT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:51+00:00",
+  "fetched_at": "2026-09-18T18:13:24+00:00",
   "quarters": [
    {
     "depreciation": 401.0,
@@ -21526,7 +21526,7 @@
  },
  "DATAPATTNS": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:51:55+00:00",
+  "fetched_at": "2026-09-18T18:13:28+00:00",
   "quarters": [
    {
     "depreciation": 3.07,
@@ -21687,7 +21687,7 @@
  },
  "DCMSHRIRAM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:35+00:00",
+  "fetched_at": "2026-09-18T18:13:08+00:00",
   "quarters": [
    {
     "depreciation": 73.97,
@@ -21848,7 +21848,7 @@
  },
  "DEEPAKFERT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:59+00:00",
+  "fetched_at": "2026-09-18T18:13:32+00:00",
   "quarters": [
    {
     "depreciation": 81.17,
@@ -22023,7 +22023,7 @@
  },
  "DEEPAKNTR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:03+00:00",
+  "fetched_at": "2026-09-18T18:13:36+00:00",
   "quarters": [
    {
     "depreciation": 39.43,
@@ -22198,7 +22198,7 @@
  },
  "DELHIVERY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:07+00:00",
+  "fetched_at": "2026-09-18T18:13:40+00:00",
   "quarters": [
    {
     "depreciation": 171.21,
@@ -22373,7 +22373,7 @@
  },
  "DEVYANI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:11+00:00",
+  "fetched_at": "2026-09-18T18:13:44+00:00",
   "quarters": [
    {
     "depreciation": 86.34,
@@ -22548,7 +22548,7 @@
  },
  "DIVISLAB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:15+00:00",
+  "fetched_at": "2026-09-18T18:13:48+00:00",
   "quarters": [
    {
     "depreciation": 95.0,
@@ -22709,7 +22709,7 @@
  },
  "DIXON": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:19+00:00",
+  "fetched_at": "2026-09-18T18:13:52+00:00",
   "quarters": [
    {
     "depreciation": 36.44,
@@ -22884,7 +22884,7 @@
  },
  "DLF": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:39+00:00",
+  "fetched_at": "2026-09-18T18:13:12+00:00",
   "quarters": [
    {
     "depreciation": 36.96,
@@ -23059,7 +23059,7 @@
  },
  "DMART": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:46:15+00:00",
+  "fetched_at": "2026-09-18T18:07:48+00:00",
   "quarters": [
    {
     "depreciation": 174.36,
@@ -23234,7 +23234,7 @@
  },
  "DOMS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:51:43+00:00",
+  "fetched_at": "2026-09-18T18:13:16+00:00",
   "quarters": [
    {
     "depreciation": 14.03,
@@ -23381,7 +23381,7 @@
  },
  "DRREDDY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:28+00:00",
+  "fetched_at": "2026-09-18T18:14:00+00:00",
   "quarters": [
    {
     "depreciation": 375.5,
@@ -23556,7 +23556,7 @@
  },
  "ECLERX": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:50+00:00",
+  "fetched_at": "2026-09-18T20:09:21+00:00",
   "quarters": [
    {
     "depreciation": 30.28,
@@ -23731,7 +23731,7 @@
  },
  "EICHERMOT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:39+00:00",
+  "fetched_at": "2026-09-18T18:14:12+00:00",
   "quarters": [
    {
     "depreciation": 142.54,
@@ -23906,7 +23906,7 @@
  },
  "EIDPARRY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:31+00:00",
+  "fetched_at": "2026-09-18T18:14:04+00:00",
   "quarters": [
    {
     "depreciation": 101.24,
@@ -24081,7 +24081,7 @@
  },
  "EIHOTEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:35+00:00",
+  "fetched_at": "2026-09-18T18:14:08+00:00",
   "quarters": [
    {
     "depreciation": 33.17,
@@ -24256,7 +24256,7 @@
  },
  "ELECON": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:43+00:00",
+  "fetched_at": "2026-09-18T18:14:16+00:00",
   "quarters": [
    {
     "depreciation": 13.28,
@@ -24431,7 +24431,7 @@
  },
  "ELGIEQUIP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:47+00:00",
+  "fetched_at": "2026-09-18T18:14:20+00:00",
   "quarters": [
    {
     "depreciation": 18.66,
@@ -24606,7 +24606,7 @@
  },
  "EMAMILTD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:51+00:00",
+  "fetched_at": "2026-09-18T18:14:24+00:00",
   "quarters": [
    {
     "depreciation": 46.09,
@@ -24781,7 +24781,7 @@
  },
  "EMCURE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:55+00:00",
+  "fetched_at": "2026-09-18T18:14:28+00:00",
   "quarters": [
    {
     "depreciation": 93.59,
@@ -24914,7 +24914,7 @@
  },
  "EMMVEE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:59+00:00",
+  "fetched_at": "2026-09-18T18:14:32+00:00",
   "quarters": [
    {
     "depreciation": 70.87,
@@ -24977,7 +24977,7 @@
  },
  "ENDURANCE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:03+00:00",
+  "fetched_at": "2026-09-18T18:14:36+00:00",
   "quarters": [
    {
     "depreciation": 112.94,
@@ -25152,7 +25152,7 @@
  },
  "ENGINERSIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:07+00:00",
+  "fetched_at": "2026-09-18T18:14:40+00:00",
   "quarters": [
    {
     "depreciation": 8.28,
@@ -25404,7 +25404,7 @@
  },
  "ERIS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:11+00:00",
+  "fetched_at": "2026-09-18T18:14:44+00:00",
   "quarters": [
    {
     "depreciation": 42.09,
@@ -25579,7 +25579,7 @@
  },
  "ESCORTS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:15+00:00",
+  "fetched_at": "2026-09-18T18:14:48+00:00",
   "quarters": [
    {
     "depreciation": 40.8,
@@ -25754,7 +25754,7 @@
  },
  "ETERNAL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:19+00:00",
+  "fetched_at": "2026-09-18T18:14:52+00:00",
   "quarters": [
    {
     "depreciation": 128.0,
@@ -25929,7 +25929,7 @@
  },
  "EXIDEIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:23+00:00",
+  "fetched_at": "2026-09-18T18:14:56+00:00",
   "quarters": [
    {
     "depreciation": 132.43,
@@ -26104,7 +26104,7 @@
  },
  "FACT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:35+00:00",
+  "fetched_at": "2026-09-18T18:15:08+00:00",
   "quarters": [
    {
     "depreciation": 9.15,
@@ -26279,7 +26279,7 @@
  },
  "FEDERALBNK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:31+00:00",
+  "fetched_at": "2026-09-18T18:15:04+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -26440,7 +26440,7 @@
  },
  "FINCABLES": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:40+00:00",
+  "fetched_at": "2026-09-18T18:15:12+00:00",
   "quarters": [
    {
     "depreciation": 10.5,
@@ -26615,7 +26615,7 @@
  },
  "FIRSTCRY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:39+00:00",
+  "fetched_at": "2026-09-18T18:10:12+00:00",
   "quarters": [
    {
     "depreciation": 95.49,
@@ -26748,7 +26748,7 @@
  },
  "FIVESTAR": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:53:47+00:00",
+  "fetched_at": "2026-09-18T18:15:20+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -26923,7 +26923,7 @@
  },
  "FLUOROCHEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:53+00:00",
+  "fetched_at": "2026-09-18T18:17:04+00:00",
   "quarters": [
    {
     "depreciation": 67.55,
@@ -27098,7 +27098,7 @@
  },
  "FORCEMOT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:51+00:00",
+  "fetched_at": "2026-09-18T18:15:24+00:00",
   "quarters": [
    {
     "depreciation": 68.05,
@@ -27245,7 +27245,7 @@
  },
  "FORTIS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:55+00:00",
+  "fetched_at": "2026-09-18T18:15:28+00:00",
   "quarters": [
    {
     "depreciation": 84.12,
@@ -27420,7 +27420,7 @@
  },
  "FSL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:43+00:00",
+  "fetched_at": "2026-09-18T18:15:16+00:00",
   "quarters": [
    {
     "depreciation": 65.37,
@@ -27595,7 +27595,7 @@
  },
  "GABRIEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:11+00:00",
+  "fetched_at": "2026-09-18T18:15:44+00:00",
   "quarters": [
    {
     "depreciation": 14.14,
@@ -27770,7 +27770,7 @@
  },
  "GAIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:59+00:00",
+  "fetched_at": "2026-09-18T18:15:32+00:00",
   "quarters": [
    {
     "depreciation": 721.65,
@@ -27945,7 +27945,7 @@
  },
  "GALLANTT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:15+00:00",
+  "fetched_at": "2026-09-18T18:15:48+00:00",
   "quarters": [
    {
     "depreciation": 27.58,
@@ -28120,7 +28120,7 @@
  },
  "GESHIP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:49+00:00",
+  "fetched_at": "2026-09-18T18:17:00+00:00",
   "quarters": [
    {
     "depreciation": 186.74,
@@ -28295,7 +28295,7 @@
  },
  "GILLETTE": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:54:28+00:00",
+  "fetched_at": "2026-09-18T18:16:00+00:00",
   "quarters": [
    {
     "depreciation": 20.09,
@@ -28456,7 +28456,7 @@
  },
  "GLAND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:31+00:00",
+  "fetched_at": "2026-09-18T18:16:04+00:00",
   "quarters": [
    {
     "depreciation": 81.3,
@@ -28631,7 +28631,7 @@
  },
  "GLAXO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:37+00:00",
+  "fetched_at": "2026-09-18T18:16:08+00:00",
   "quarters": [
    {
     "depreciation": 16.36,
@@ -28806,7 +28806,7 @@
  },
  "GLENMARK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:44+00:00",
+  "fetched_at": "2026-09-18T18:16:12+00:00",
   "quarters": [
    {
     "depreciation": 141.45,
@@ -28981,7 +28981,7 @@
  },
  "GMDCLTD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:58+00:00",
+  "fetched_at": "2026-09-18T18:17:08+00:00",
   "quarters": [
    {
     "depreciation": 18.39,
@@ -29156,7 +29156,7 @@
  },
  "GMRAIRPORT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:07+00:00",
+  "fetched_at": "2026-09-18T18:15:40+00:00",
   "quarters": [
    {
     "depreciation": 373.0,
@@ -29331,7 +29331,7 @@
  },
  "GODFRYPHLP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:08+00:00",
+  "fetched_at": "2026-09-18T18:16:28+00:00",
   "quarters": [
    {
     "depreciation": 36.48,
@@ -29506,7 +29506,7 @@
  },
  "GODREJCP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:15+00:00",
+  "fetched_at": "2026-09-18T18:16:32+00:00",
   "quarters": [
    {
     "depreciation": 60.88,
@@ -29681,7 +29681,7 @@
  },
  "GODREJIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:21+00:00",
+  "fetched_at": "2026-09-18T18:16:36+00:00",
   "quarters": [
    {
     "depreciation": 89.3,
@@ -29856,7 +29856,7 @@
  },
  "GODREJPROP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:28+00:00",
+  "fetched_at": "2026-09-18T18:16:40+00:00",
   "quarters": [
    {
     "depreciation": 7.39,
@@ -30031,7 +30031,7 @@
  },
  "GPIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:01+00:00",
+  "fetched_at": "2026-09-18T18:16:24+00:00",
   "quarters": [
    {
     "depreciation": 34.83,
@@ -30206,7 +30206,7 @@
  },
  "GRANULES": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:34+00:00",
+  "fetched_at": "2026-09-18T18:16:44+00:00",
   "quarters": [
    {
     "depreciation": 52.52,
@@ -30381,7 +30381,7 @@
  },
  "GRAPHITE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:39+00:00",
+  "fetched_at": "2026-09-18T18:16:48+00:00",
   "quarters": [
    {
     "depreciation": 19.0,
@@ -30542,7 +30542,7 @@
  },
  "GRASIM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:41+00:00",
+  "fetched_at": "2026-09-18T18:16:52+00:00",
   "quarters": [
    {
     "depreciation": 1245.15,
@@ -30717,7 +30717,7 @@
  },
  "GRAVITA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:55:46+00:00",
+  "fetched_at": "2026-09-18T18:16:56+00:00",
   "quarters": [
    {
     "depreciation": 8.57,
@@ -30892,7 +30892,7 @@
  },
  "GROWW": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:07+00:00",
+  "fetched_at": "2026-09-18T18:09:40+00:00",
   "quarters": [
    {
     "depreciation": 6.8,
@@ -30955,7 +30955,7 @@
  },
  "GRSE": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:54:19+00:00",
+  "fetched_at": "2026-09-18T18:15:52+00:00",
   "quarters": [
    {
     "depreciation": 10.35,
@@ -31130,7 +31130,7 @@
  },
  "GVT&D": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:54:03+00:00",
+  "fetched_at": "2026-09-18T18:15:36+00:00",
   "quarters": [
    {
     "depreciation": 12.61,
@@ -31303,9 +31303,184 @@
   ],
   "source": "NSE XBRL"
  },
+ "HAL": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:14+00:00",
+  "quarters": [
+   {
+    "depreciation": 349.65,
+    "eps": 18.49,
+    "expenses": 4108.06,
+    "interest": 0.32,
+    "net_profit": 1236.7,
+    "operating_profit": 1527.64,
+    "opm_pct": 27.11,
+    "other_income": 469.37,
+    "period": "Sep 2023",
+    "profit_before_tax": 1647.04,
+    "sales": 5635.7,
+    "tax_pct": 25.18
+   },
+   {
+    "depreciation": 212.17,
+    "eps": 18.86,
+    "expenses": 4625.95,
+    "interest": 0.36,
+    "net_profit": 1261.4,
+    "operating_profit": 1435.33,
+    "opm_pct": 23.68,
+    "other_income": 459.98,
+    "period": "Dec 2023",
+    "profit_before_tax": 1682.78,
+    "sales": 6061.28,
+    "tax_pct": 25.43
+   },
+   {
+    "depreciation": 643.97,
+    "eps": 64.43,
+    "expenses": 8867.49,
+    "interest": 31.41,
+    "net_profit": 4308.71,
+    "operating_profit": 5901.26,
+    "opm_pct": 39.96,
+    "other_income": 557.31,
+    "period": "Mar 2024",
+    "profit_before_tax": 5783.19,
+    "sales": 14768.75,
+    "tax_pct": 25.7
+   },
+   {
+    "depreciation": 149.23,
+    "eps": 21.49,
+    "expenses": 3356.79,
+    "interest": 0.14,
+    "net_profit": 1437.16,
+    "operating_profit": 990.71,
+    "opm_pct": 22.79,
+    "other_income": 736.35,
+    "period": "Jun 2024",
+    "profit_before_tax": 1577.69,
+    "sales": 4347.5,
+    "tax_pct": 9.29
+   },
+   {
+    "depreciation": 177.57,
+    "eps": 22.59,
+    "expenses": 4336.33,
+    "interest": 0.02,
+    "net_profit": 1510.48,
+    "operating_profit": 1639.96,
+    "opm_pct": 27.44,
+    "other_income": 542.41,
+    "period": "Sep 2024",
+    "profit_before_tax": 2010.67,
+    "sales": 5976.29,
+    "tax_pct": 25.47
+   },
+   {
+    "depreciation": 277.08,
+    "eps": 21.53,
+    "expenses": 5274.8,
+    "interest": 0.08,
+    "net_profit": 1439.83,
+    "operating_profit": 1682.51,
+    "opm_pct": 24.18,
+    "other_income": 631.4,
+    "period": "Dec 2024",
+    "profit_before_tax": 2036.75,
+    "sales": 6957.31,
+    "tax_pct": 29.58
+   },
+   {
+    "depreciation": 736.49,
+    "eps": 59.46,
+    "expenses": 8404.95,
+    "interest": 8.44,
+    "net_profit": 3976.66,
+    "operating_profit": 5294.9,
+    "opm_pct": 38.65,
+    "other_income": 651.53,
+    "period": "Mar 2025",
+    "profit_before_tax": 5201.5,
+    "sales": 13699.85,
+    "tax_pct": 23.88
+   },
+   {
+    "depreciation": 185.16,
+    "eps": 20.69,
+    "expenses": 3536.61,
+    "interest": 0.3,
+    "net_profit": 1383.77,
+    "operating_profit": 1282.4,
+    "opm_pct": 26.61,
+    "other_income": 747.09,
+    "period": "Jun 2025",
+    "profit_before_tax": 1844.03,
+    "sales": 4819.01,
+    "tax_pct": 25.52
+   },
+   {
+    "depreciation": 225.56,
+    "eps": 24.96,
+    "expenses": 5070.72,
+    "interest": 0.36,
+    "net_profit": 1669.07,
+    "operating_profit": 1557.89,
+    "opm_pct": 23.5,
+    "other_income": 887.67,
+    "period": "Sep 2025",
+    "profit_before_tax": 2219.64,
+    "sales": 6628.61,
+    "tax_pct": 25.14
+   },
+   {
+    "depreciation": 309.76,
+    "eps": 27.91,
+    "expenses": 5827.83,
+    "interest": 0.98,
+    "net_profit": 1866.68,
+    "operating_profit": 1870.97,
+    "opm_pct": 24.3,
+    "other_income": 913.8,
+    "period": "Dec 2025",
+    "profit_before_tax": 2474.03,
+    "sales": 7698.8,
+    "tax_pct": 25.07
+   },
+   {
+    "depreciation": 634.38,
+    "eps": 62.74,
+    "expenses": 8883.83,
+    "interest": 4.15,
+    "net_profit": 4196.04,
+    "operating_profit": 5058.57,
+    "opm_pct": 36.28,
+    "other_income": 1150.57,
+    "period": "Mar 2026",
+    "profit_before_tax": 5570.61,
+    "sales": 13942.4,
+    "tax_pct": 24.91
+   },
+   {
+    "depreciation": 303.94,
+    "eps": 23.77,
+    "expenses": 3988.4,
+    "interest": 0.35,
+    "net_profit": 1589.68,
+    "operating_profit": 1526.77,
+    "opm_pct": 27.68,
+    "other_income": 900.24,
+    "period": "Jun 2026",
+    "profit_before_tax": 2122.72,
+    "sales": 5515.17,
+    "tax_pct": 25.66
+   }
+  ],
+  "source": "NSE XBRL"
+ },
  "HAVELLS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:49+00:00",
+  "fetched_at": "2026-09-18T18:17:44+00:00",
   "quarters": [
    {
     "depreciation": 81.18,
@@ -31480,7 +31655,7 @@
  },
  "HBLENGINE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:05+00:00",
+  "fetched_at": "2026-09-18T18:17:16+00:00",
   "quarters": [
    {
     "depreciation": 10.01,
@@ -31641,7 +31816,7 @@
  },
  "HCLTECH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:12+00:00",
+  "fetched_at": "2026-09-18T18:17:20+00:00",
   "quarters": [
    {
     "depreciation": 927.0,
@@ -31816,7 +31991,7 @@
  },
  "HDBFS": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T18:56:16+00:00",
+  "fetched_at": "2026-09-18T18:17:24+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -31893,7 +32068,7 @@
  },
  "HDFCAMC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:22+00:00",
+  "fetched_at": "2026-09-18T18:17:28+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -32068,7 +32243,7 @@
  },
  "HDFCBANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:30+00:00",
+  "fetched_at": "2026-09-18T18:17:32+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -32229,7 +32404,7 @@
  },
  "HEG": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:01+00:00",
+  "fetched_at": "2026-09-18T18:17:12+00:00",
   "quarters": [
    {
     "depreciation": 38.48,
@@ -32404,7 +32579,7 @@
  },
  "HEROMOTOCO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:56+00:00",
+  "fetched_at": "2026-09-18T18:17:48+00:00",
   "quarters": [
    {
     "depreciation": 187.09,
@@ -32579,7 +32754,7 @@
  },
  "HEXT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:00:25+00:00",
+  "fetched_at": "2026-09-18T18:17:54+00:00",
   "quarters": [
    {
     "depreciation": 76.3,
@@ -32594,13 +32769,97 @@
     "profit_before_tax": 417.0,
     "sales": 3154.4,
     "tax_pct": 23.09
+   },
+   {
+    "depreciation": 73.5,
+    "eps": 5.38,
+    "expenses": 2680.1,
+    "interest": 22.4,
+    "net_profit": 327.2,
+    "operating_profit": 527.8,
+    "opm_pct": 16.45,
+    "other_income": 4.4,
+    "period": "Mar 2025",
+    "profit_before_tax": 436.3,
+    "sales": 3207.9,
+    "tax_pct": 25.03
+   },
+   {
+    "depreciation": 75.2,
+    "eps": 6.25,
+    "expenses": 2856.3,
+    "interest": 20.9,
+    "net_profit": 379.9,
+    "operating_profit": 404.4,
+    "opm_pct": 12.4,
+    "other_income": 160.0,
+    "period": "Jun 2025",
+    "profit_before_tax": 468.3,
+    "sales": 3260.7,
+    "tax_pct": 18.92
+   },
+   {
+    "depreciation": 88.9,
+    "eps": 6.09,
+    "expenses": 2882.3,
+    "interest": 26.0,
+    "net_profit": 370.2,
+    "operating_profit": 601.3,
+    "opm_pct": 17.26,
+    "other_income": 10.3,
+    "period": "Sep 2025",
+    "profit_before_tax": 496.7,
+    "sales": 3483.6,
+    "tax_pct": 25.53
+   },
+   {
+    "depreciation": 123.7,
+    "eps": 4.79,
+    "expenses": 3100.3,
+    "interest": 31.2,
+    "net_profit": 291.9,
+    "operating_profit": 377.9,
+    "opm_pct": 10.86,
+    "other_income": 213.6,
+    "period": "Dec 2025",
+    "profit_before_tax": 325.5,
+    "sales": 3478.2,
+    "tax_pct": 10.41
+   },
+   {
+    "depreciation": 90.7,
+    "eps": 5.77,
+    "expenses": 3042.2,
+    "interest": 29.0,
+    "net_profit": 351.6,
+    "operating_profit": 570.8,
+    "opm_pct": 15.8,
+    "other_income": 21.7,
+    "period": "Mar 2026",
+    "profit_before_tax": 472.8,
+    "sales": 3613.0,
+    "tax_pct": 25.63
+   },
+   {
+    "depreciation": 81.7,
+    "eps": 5.41,
+    "expenses": 3239.9,
+    "interest": 32.8,
+    "net_profit": 329.9,
+    "operating_profit": 605.3,
+    "opm_pct": 15.74,
+    "other_income": -50.1,
+    "period": "Jun 2026",
+    "profit_before_tax": 440.7,
+    "sales": 3845.2,
+    "tax_pct": 25.07
    }
   ],
   "source": "NSE XBRL"
  },
  "HFCL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:56:42+00:00",
+  "fetched_at": "2026-09-18T18:17:40+00:00",
   "quarters": [
    {
     "depreciation": 21.45,
@@ -32773,9 +33032,1731 @@
   ],
   "source": "NSE XBRL"
  },
+ "HINDALCO": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:07+00:00",
+  "quarters": [
+   {
+    "depreciation": 1843.0,
+    "eps": 9.88,
+    "expenses": 48557.0,
+    "interest": 1034.0,
+    "net_profit": 2196.0,
+    "operating_profit": 5612.0,
+    "opm_pct": 10.36,
+    "other_income": 463.0,
+    "period": "Sep 2023",
+    "profit_before_tax": 3231.0,
+    "sales": 54169.0,
+    "tax_pct": 32.03
+   },
+   {
+    "depreciation": 1874.0,
+    "eps": 10.5,
+    "expenses": 46943.0,
+    "interest": 944.0,
+    "net_profit": 2331.0,
+    "operating_profit": 5865.0,
+    "opm_pct": 11.11,
+    "other_income": 280.0,
+    "period": "Dec 2023",
+    "profit_before_tax": 3327.0,
+    "sales": 52808.0,
+    "tax_pct": 29.97
+   },
+   {
+    "depreciation": 2018.0,
+    "eps": 14.29,
+    "expenses": 49313.0,
+    "interest": 888.0,
+    "net_profit": 3174.0,
+    "operating_profit": 6681.0,
+    "opm_pct": 11.93,
+    "other_income": 362.0,
+    "period": "Mar 2024",
+    "profit_before_tax": 4137.0,
+    "sales": 55994.0,
+    "tax_pct": 23.25
+   },
+   {
+    "depreciation": 1892.0,
+    "eps": 13.84,
+    "expenses": 49510.0,
+    "interest": 859.0,
+    "net_profit": 3074.0,
+    "operating_profit": 7503.0,
+    "opm_pct": 13.16,
+    "other_income": 424.0,
+    "period": "Jun 2024",
+    "profit_before_tax": 4846.0,
+    "sales": 57013.0,
+    "tax_pct": 36.61
+   },
+   {
+    "depreciation": 1932.0,
+    "eps": 17.59,
+    "expenses": 50320.0,
+    "interest": 869.0,
+    "net_profit": 3909.0,
+    "operating_profit": 7883.0,
+    "opm_pct": 13.54,
+    "other_income": 1075.0,
+    "period": "Sep 2024",
+    "profit_before_tax": 5643.0,
+    "sales": 58203.0,
+    "tax_pct": 30.73
+   },
+   {
+    "depreciation": 1939.0,
+    "eps": 16.82,
+    "expenses": 50807.0,
+    "interest": 817.0,
+    "net_profit": 3735.0,
+    "operating_profit": 7583.0,
+    "opm_pct": 12.99,
+    "other_income": 509.0,
+    "period": "Dec 2024",
+    "profit_before_tax": 5295.0,
+    "sales": 58390.0,
+    "tax_pct": 29.48
+   },
+   {
+    "depreciation": 2118.0,
+    "eps": 23.8,
+    "expenses": 56054.0,
+    "interest": 874.0,
+    "net_profit": 5283.0,
+    "operating_profit": 8836.0,
+    "opm_pct": 13.62,
+    "other_income": 700.0,
+    "period": "Mar 2025",
+    "profit_before_tax": 6550.0,
+    "sales": 64890.0,
+    "tax_pct": 19.33
+   },
+   {
+    "depreciation": 2080.0,
+    "eps": 18.03,
+    "expenses": 56326.0,
+    "interest": 754.0,
+    "net_profit": 4004.0,
+    "operating_profit": 7906.0,
+    "opm_pct": 12.31,
+    "other_income": 602.0,
+    "period": "Jun 2025",
+    "profit_before_tax": 5674.0,
+    "sales": 64232.0,
+    "tax_pct": 29.47
+   },
+   {
+    "depreciation": 2155.0,
+    "eps": 21.35,
+    "expenses": 57092.0,
+    "interest": 803.0,
+    "net_profit": 4741.0,
+    "operating_profit": 8966.0,
+    "opm_pct": 13.57,
+    "other_income": 713.0,
+    "period": "Sep 2025",
+    "profit_before_tax": 6539.0,
+    "sales": 66058.0,
+    "tax_pct": 27.51
+   },
+   {
+    "depreciation": 2220.0,
+    "eps": 9.23,
+    "expenses": 58527.0,
+    "interest": 881.0,
+    "net_profit": 2049.0,
+    "operating_profit": 7994.0,
+    "opm_pct": 12.02,
+    "other_income": 549.0,
+    "period": "Dec 2025",
+    "profit_before_tax": 2832.0,
+    "sales": 66521.0,
+    "tax_pct": 27.54
+   },
+   {
+    "depreciation": 2375.0,
+    "eps": 11.7,
+    "expenses": 68115.0,
+    "interest": 1042.0,
+    "net_profit": 2597.0,
+    "operating_profit": 10018.0,
+    "opm_pct": 12.82,
+    "other_income": 1025.0,
+    "period": "Mar 2026",
+    "profit_before_tax": 3455.0,
+    "sales": 78133.0,
+    "tax_pct": 24.72
+   },
+   {
+    "depreciation": 2337.0,
+    "eps": 31.58,
+    "expenses": 70893.0,
+    "interest": 966.0,
+    "net_profit": 7013.0,
+    "operating_profit": 13932.0,
+    "opm_pct": 16.42,
+    "other_income": 1057.0,
+    "period": "Jun 2026",
+    "profit_before_tax": 9387.0,
+    "sales": 84825.0,
+    "tax_pct": 25.35
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HINDCOPPER": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:16+00:00",
+  "quarters": [
+   {
+    "depreciation": 45.59,
+    "eps": 0.63,
+    "expenses": 260.24,
+    "interest": 4.08,
+    "net_profit": 58.31,
+    "operating_profit": 121.16,
+    "opm_pct": 31.77,
+    "other_income": 11.15,
+    "period": "Sep 2023",
+    "profit_before_tax": 82.64,
+    "sales": 381.4,
+    "tax_pct": 26.55
+   },
+   {
+    "depreciation": 29.91,
+    "eps": 0.65,
+    "expenses": 292.69,
+    "interest": 4.46,
+    "net_profit": 60.61,
+    "operating_profit": 106.6,
+    "opm_pct": 26.7,
+    "other_income": 9.95,
+    "period": "Dec 2023",
+    "profit_before_tax": 82.18,
+    "sales": 399.29,
+    "tax_pct": 23.34
+   },
+   {
+    "depreciation": 58.64,
+    "eps": 1.29,
+    "expenses": 339.24,
+    "interest": 3.61,
+    "net_profit": 124.33,
+    "operating_profit": 226.13,
+    "opm_pct": 40.0,
+    "other_income": 19.85,
+    "period": "Mar 2024",
+    "profit_before_tax": 183.73,
+    "sales": 565.37,
+    "tax_pct": 32.1
+   },
+   {
+    "depreciation": 38.05,
+    "eps": 1.17,
+    "expenses": 305.16,
+    "interest": 3.11,
+    "net_profit": 111.56,
+    "operating_profit": 188.44,
+    "opm_pct": 38.18,
+    "other_income": 6.84,
+    "period": "Jun 2024",
+    "profit_before_tax": 154.12,
+    "sales": 493.6,
+    "tax_pct": 26.42
+   },
+   {
+    "depreciation": 47.58,
+    "eps": 1.05,
+    "expenses": 366.39,
+    "interest": 0.76,
+    "net_profit": 99.84,
+    "operating_profit": 151.8,
+    "opm_pct": 29.29,
+    "other_income": 31.86,
+    "period": "Sep 2024",
+    "profit_before_tax": 135.32,
+    "sales": 518.19,
+    "tax_pct": 24.87
+   },
+   {
+    "depreciation": 37.63,
+    "eps": 0.65,
+    "expenses": 220.2,
+    "interest": 1.31,
+    "net_profit": 62.87,
+    "operating_profit": 107.57,
+    "opm_pct": 32.82,
+    "other_income": 15.8,
+    "period": "Dec 2024",
+    "profit_before_tax": 84.43,
+    "sales": 327.77,
+    "tax_pct": 25.54
+   },
+   {
+    "depreciation": 52.3,
+    "eps": 1.94,
+    "expenses": 464.7,
+    "interest": 1.75,
+    "net_profit": 187.18,
+    "operating_profit": 266.7,
+    "opm_pct": 36.46,
+    "other_income": 45.88,
+    "period": "Mar 2025",
+    "profit_before_tax": 258.53,
+    "sales": 731.4,
+    "tax_pct": 26.71
+   },
+   {
+    "depreciation": 41.29,
+    "eps": 1.39,
+    "expenses": 304.36,
+    "interest": 1.64,
+    "net_profit": 134.25,
+    "operating_profit": 212.01,
+    "opm_pct": 41.06,
+    "other_income": 10.28,
+    "period": "Jun 2025",
+    "profit_before_tax": 179.36,
+    "sales": 516.37,
+    "tax_pct": 25.13
+   },
+   {
+    "depreciation": 43.96,
+    "eps": 1.89,
+    "expenses": 435.92,
+    "interest": 0.44,
+    "net_profit": 183.79,
+    "operating_profit": 282.12,
+    "opm_pct": 39.29,
+    "other_income": 10.91,
+    "period": "Sep 2025",
+    "profit_before_tax": 248.63,
+    "sales": 718.04,
+    "tax_pct": 25.18
+   },
+   {
+    "depreciation": 47.94,
+    "eps": 1.62,
+    "expenses": 442.82,
+    "interest": 2.03,
+    "net_profit": 156.23,
+    "operating_profit": 244.52,
+    "opm_pct": 35.57,
+    "other_income": 17.97,
+    "period": "Dec 2025",
+    "profit_before_tax": 212.52,
+    "sales": 687.34,
+    "tax_pct": 26.45
+   },
+   {
+    "depreciation": 67.25,
+    "eps": 4.59,
+    "expenses": 528.5,
+    "interest": 0.8,
+    "net_profit": 444.27,
+    "operating_profit": 627.58,
+    "opm_pct": 54.29,
+    "other_income": 32.68,
+    "period": "Mar 2026",
+    "profit_before_tax": 592.21,
+    "sales": 1156.08,
+    "tax_pct": 25.02
+   },
+   {
+    "depreciation": 49.65,
+    "eps": 3.64,
+    "expenses": 428.98,
+    "interest": 3.2,
+    "net_profit": 352.37,
+    "operating_profit": 507.52,
+    "opm_pct": 54.19,
+    "other_income": 17.1,
+    "period": "Jun 2026",
+    "profit_before_tax": 471.77,
+    "sales": 936.5,
+    "tax_pct": 25.26
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HINDPETRO": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:20+00:00",
+  "quarters": [
+   {
+    "depreciation": 1371.45,
+    "eps": 47.69,
+    "expenses": 109516.64,
+    "interest": 626.82,
+    "net_profit": 0.0,
+    "operating_profit": 9645.62,
+    "opm_pct": 8.09,
+    "other_income": 599.48,
+    "period": "Jun 2023",
+    "profit_before_tax": 8246.83,
+    "sales": 119162.26,
+    "tax_pct": 26.45
+   },
+   {
+    "depreciation": 1247.31,
+    "eps": 41.08,
+    "expenses": 94429.3,
+    "interest": 590.05,
+    "net_profit": 0.0,
+    "operating_profit": 8240.01,
+    "opm_pct": 8.03,
+    "other_income": 341.4,
+    "period": "Sep 2023",
+    "profit_before_tax": 6744.05,
+    "sales": 102669.31,
+    "tax_pct": 23.96
+   },
+   {
+    "depreciation": 1345.44,
+    "eps": 5.03,
+    "expenses": 116323.89,
+    "interest": 619.5,
+    "net_profit": 0.0,
+    "operating_profit": 2160.41,
+    "opm_pct": 1.82,
+    "other_income": 529.03,
+    "period": "Dec 2023",
+    "profit_before_tax": 724.5,
+    "sales": 118484.3,
+    "tax_pct": 37.76
+   },
+   {
+    "depreciation": 1632.23,
+    "eps": 19.09,
+    "expenses": 116771.53,
+    "interest": 719.63,
+    "net_profit": 0.0,
+    "operating_profit": 4881.74,
+    "opm_pct": 4.01,
+    "other_income": 447.03,
+    "period": "Mar 2024",
+    "profit_before_tax": 2976.91,
+    "sales": 121653.27,
+    "tax_pct": 13.94
+   },
+   {
+    "depreciation": 1483.6,
+    "eps": 2.98,
+    "expenses": 118854.56,
+    "interest": 733.41,
+    "net_profit": 0.0,
+    "operating_profit": 2088.74,
+    "opm_pct": 1.73,
+    "other_income": 545.26,
+    "period": "Jun 2024",
+    "profit_before_tax": 416.99,
+    "sales": 120943.3,
+    "tax_pct": 41.04
+   },
+   {
+    "depreciation": 1529.54,
+    "eps": 0.67,
+    "expenses": 105559.69,
+    "interest": 944.49,
+    "net_profit": 142.67,
+    "operating_profit": 2707.9,
+    "opm_pct": 2.5,
+    "other_income": 506.34,
+    "period": "Sep 2024",
+    "profit_before_tax": 740.21,
+    "sales": 108267.59,
+    "tax_pct": 27.77
+   },
+   {
+    "depreciation": 1517.72,
+    "eps": 11.95,
+    "expenses": 113079.51,
+    "interest": 930.7,
+    "net_profit": 0.0,
+    "operating_profit": 5959.24,
+    "opm_pct": 5.01,
+    "other_income": 462.34,
+    "period": "Dec 2024",
+    "profit_before_tax": 3973.16,
+    "sales": 119038.75,
+    "tax_pct": 24.29
+   },
+   {
+    "depreciation": 1604.29,
+    "eps": 19.32,
+    "expenses": 112621.04,
+    "interest": 817.11,
+    "net_profit": 4110.93,
+    "operating_profit": 7571.95,
+    "opm_pct": 6.3,
+    "other_income": 507.35,
+    "period": "Jun 2025",
+    "profit_before_tax": 5657.9,
+    "sales": 120192.99,
+    "tax_pct": 25.37
+   },
+   {
+    "depreciation": 1612.21,
+    "eps": 18.14,
+    "expenses": 103544.8,
+    "interest": 824.17,
+    "net_profit": 0.0,
+    "operating_profit": 6852.18,
+    "opm_pct": 6.21,
+    "other_income": 522.32,
+    "period": "Sep 2025",
+    "profit_before_tax": 4938.12,
+    "sales": 110396.98,
+    "tax_pct": 25.75
+   },
+   {
+    "depreciation": 1674.19,
+    "eps": 18.85,
+    "expenses": 117584.92,
+    "interest": 734.03,
+    "net_profit": 0.0,
+    "operating_profit": 6997.73,
+    "opm_pct": 5.62,
+    "other_income": 606.5,
+    "period": "Dec 2025",
+    "profit_before_tax": 5196.01,
+    "sales": 124582.65,
+    "tax_pct": 25.13
+   },
+   {
+    "depreciation": 2456.8,
+    "eps": 28.5,
+    "expenses": 114482.59,
+    "interest": 1020.44,
+    "net_profit": 6065.26,
+    "operating_profit": 9210.79,
+    "opm_pct": 7.45,
+    "other_income": 619.95,
+    "period": "Mar 2026",
+    "profit_before_tax": 6353.5,
+    "sales": 123693.38,
+    "tax_pct": 24.84
+   },
+   {
+    "depreciation": 1877.73,
+    "eps": -57.64,
+    "expenses": 161347.41,
+    "interest": 818.36,
+    "net_profit": -12264.67,
+    "operating_profit": -16122.3,
+    "opm_pct": -11.1,
+    "other_income": 618.9,
+    "period": "Jun 2026",
+    "profit_before_tax": -18199.49,
+    "sales": 145225.11,
+    "tax_pct": null
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HINDUNILVR": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:24+00:00",
+  "quarters": [
+   {
+    "depreciation": 297.0,
+    "eps": 11.3,
+    "expenses": 11826.0,
+    "interest": 88.0,
+    "net_profit": 2656.0,
+    "operating_profit": 3797.0,
+    "opm_pct": 24.3,
+    "other_income": 183.0,
+    "period": "Sep 2023",
+    "profit_before_tax": 3590.0,
+    "sales": 15623.0,
+    "tax_pct": 25.93
+   },
+   {
+    "depreciation": 313.0,
+    "eps": 10.68,
+    "expenses": 11901.0,
+    "interest": 91.0,
+    "net_profit": 2509.0,
+    "operating_profit": 3666.0,
+    "opm_pct": 23.55,
+    "other_income": 214.0,
+    "period": "Dec 2023",
+    "profit_before_tax": 3446.0,
+    "sales": 15567.0,
+    "tax_pct": 27.19
+   },
+   {
+    "depreciation": 320.0,
+    "eps": 10.89,
+    "expenses": 11675.0,
+    "interest": 105.0,
+    "net_profit": 2558.0,
+    "operating_profit": 3535.0,
+    "opm_pct": 23.24,
+    "other_income": 231.0,
+    "period": "Mar 2024",
+    "profit_before_tax": 3419.0,
+    "sales": 15210.0,
+    "tax_pct": 25.1
+   },
+   {
+    "depreciation": 329.0,
+    "eps": 11.11,
+    "expenses": 11963.0,
+    "interest": 93.0,
+    "net_profit": 2610.0,
+    "operating_profit": 3744.0,
+    "opm_pct": 23.84,
+    "other_income": 257.0,
+    "period": "Jun 2024",
+    "profit_before_tax": 3531.0,
+    "sales": 15707.0,
+    "tax_pct": 25.97
+   },
+   {
+    "depreciation": 338.0,
+    "eps": 11.03,
+    "expenses": 12133.0,
+    "interest": 110.0,
+    "net_profit": 2591.0,
+    "operating_profit": 3793.0,
+    "opm_pct": 23.82,
+    "other_income": 219.0,
+    "period": "Sep 2024",
+    "profit_before_tax": 3548.0,
+    "sales": 15926.0,
+    "tax_pct": 26.69
+   },
+   {
+    "depreciation": 341.0,
+    "eps": 12.7,
+    "expenses": 12123.0,
+    "interest": 112.0,
+    "net_profit": 2984.0,
+    "operating_profit": 3695.0,
+    "opm_pct": 23.36,
+    "other_income": 232.0,
+    "period": "Dec 2024",
+    "profit_before_tax": 3981.0,
+    "sales": 15818.0,
+    "tax_pct": 24.94
+   },
+   {
+    "depreciation": 347.0,
+    "eps": 10.48,
+    "expenses": 12051.0,
+    "interest": 80.0,
+    "net_profit": 2464.0,
+    "operating_profit": 3619.0,
+    "opm_pct": 23.1,
+    "other_income": 309.0,
+    "period": "Mar 2025",
+    "profit_before_tax": 3363.0,
+    "sales": 15670.0,
+    "tax_pct": 26.38
+   },
+   {
+    "depreciation": 361.0,
+    "eps": 11.73,
+    "expenses": 12796.0,
+    "interest": 127.0,
+    "net_profit": 2756.0,
+    "operating_profit": 3718.0,
+    "opm_pct": 22.51,
+    "other_income": 201.0,
+    "period": "Jun 2025",
+    "profit_before_tax": 3304.0,
+    "sales": 16514.0,
+    "tax_pct": 16.19
+   },
+   {
+    "depreciation": 358.0,
+    "eps": 11.43,
+    "expenses": 12512.0,
+    "interest": 129.0,
+    "net_profit": 2685.0,
+    "operating_profit": 3729.0,
+    "opm_pct": 22.96,
+    "other_income": 147.0,
+    "period": "Sep 2025",
+    "profit_before_tax": 3573.0,
+    "sales": 16241.0,
+    "tax_pct": 24.52
+   },
+   {
+    "depreciation": 337.0,
+    "eps": 28.12,
+    "expenses": 12653.0,
+    "interest": 88.0,
+    "net_profit": 6607.0,
+    "operating_profit": 3788.0,
+    "opm_pct": 23.04,
+    "other_income": 139.0,
+    "period": "Dec 2025",
+    "profit_before_tax": 2926.0,
+    "sales": 16441.0,
+    "tax_pct": 27.38
+   },
+   {
+    "depreciation": 348.0,
+    "eps": 12.73,
+    "expenses": 12510.0,
+    "interest": 76.0,
+    "net_profit": 2992.0,
+    "operating_profit": 3841.0,
+    "opm_pct": 23.49,
+    "other_income": 264.0,
+    "period": "Mar 2026",
+    "profit_before_tax": 3928.0,
+    "sales": 16351.0,
+    "tax_pct": 23.47
+   },
+   {
+    "depreciation": 353.0,
+    "eps": 11.38,
+    "expenses": 13394.0,
+    "interest": 75.0,
+    "net_profit": 2673.0,
+    "operating_profit": 3947.0,
+    "opm_pct": 22.76,
+    "other_income": 188.0,
+    "period": "Jun 2026",
+    "profit_before_tax": 3632.0,
+    "sales": 17341.0,
+    "tax_pct": 26.21
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HINDZINC": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:28+00:00",
+  "quarters": [
+   {
+    "depreciation": 825.0,
+    "eps": 4.09,
+    "expenses": 3652.0,
+    "interest": 232.0,
+    "net_profit": 0.0,
+    "operating_profit": 3139.0,
+    "opm_pct": 46.22,
+    "other_income": 223.0,
+    "period": "Sep 2023",
+    "profit_before_tax": 2305.0,
+    "sales": 6791.0,
+    "tax_pct": 24.99
+   },
+   {
+    "depreciation": 905.0,
+    "eps": 4.8,
+    "expenses": 3789.0,
+    "interest": 243.0,
+    "net_profit": 0.0,
+    "operating_profit": 3521.0,
+    "opm_pct": 48.17,
+    "other_income": 296.0,
+    "period": "Dec 2023",
+    "profit_before_tax": 2669.0,
+    "sales": 7310.0,
+    "tax_pct": 24.02
+   },
+   {
+    "depreciation": 937.0,
+    "eps": 4.82,
+    "expenses": 3900.0,
+    "interest": 262.0,
+    "net_profit": 0.0,
+    "operating_profit": 3649.0,
+    "opm_pct": 48.34,
+    "other_income": 273.0,
+    "period": "Mar 2024",
+    "profit_before_tax": 2723.0,
+    "sales": 7549.0,
+    "tax_pct": 25.16
+   },
+   {
+    "depreciation": 844.0,
+    "eps": 5.55,
+    "expenses": 4184.0,
+    "interest": 256.0,
+    "net_profit": 0.0,
+    "operating_profit": 3946.0,
+    "opm_pct": 48.54,
+    "other_income": 268.0,
+    "period": "Jun 2024",
+    "profit_before_tax": 3114.0,
+    "sales": 8130.0,
+    "tax_pct": 24.69
+   },
+   {
+    "depreciation": 877.0,
+    "eps": 5.51,
+    "expenses": 4129.0,
+    "interest": 303.0,
+    "net_profit": 0.0,
+    "operating_profit": 4123.0,
+    "opm_pct": 49.96,
+    "other_income": 270.0,
+    "period": "Sep 2024",
+    "profit_before_tax": 3130.0,
+    "sales": 8252.0,
+    "tax_pct": 25.65
+   },
+   {
+    "depreciation": 905.0,
+    "eps": 6.34,
+    "expenses": 4115.0,
+    "interest": 285.0,
+    "net_profit": 0.0,
+    "operating_profit": 4499.0,
+    "opm_pct": 52.23,
+    "other_income": 218.0,
+    "period": "Dec 2024",
+    "profit_before_tax": 3527.0,
+    "sales": 8614.0,
+    "tax_pct": 24.07
+   },
+   {
+    "depreciation": 1014.0,
+    "eps": 7.11,
+    "expenses": 4267.0,
+    "interest": 251.0,
+    "net_profit": 0.0,
+    "operating_profit": 4820.0,
+    "opm_pct": 53.04,
+    "other_income": 227.0,
+    "period": "Mar 2025",
+    "profit_before_tax": 3782.0,
+    "sales": 9087.0,
+    "tax_pct": 20.6
+   },
+   {
+    "depreciation": 913.0,
+    "eps": 5.29,
+    "expenses": 3912.0,
+    "interest": 240.0,
+    "net_profit": 2234.0,
+    "operating_profit": 3859.0,
+    "opm_pct": 49.66,
+    "other_income": 279.0,
+    "period": "Jun 2025",
+    "profit_before_tax": 2985.0,
+    "sales": 7771.0,
+    "tax_pct": 25.16
+   },
+   {
+    "depreciation": 882.0,
+    "eps": 6.27,
+    "expenses": 4104.0,
+    "interest": 259.0,
+    "net_profit": 0.0,
+    "operating_profit": 4445.0,
+    "opm_pct": 51.99,
+    "other_income": 238.0,
+    "period": "Sep 2025",
+    "profit_before_tax": 3542.0,
+    "sales": 8549.0,
+    "tax_pct": 25.21
+   },
+   {
+    "depreciation": 947.0,
+    "eps": 9.27,
+    "expenses": 4926.0,
+    "interest": 195.0,
+    "net_profit": 0.0,
+    "operating_profit": 6054.0,
+    "opm_pct": 55.14,
+    "other_income": 293.0,
+    "period": "Dec 2025",
+    "profit_before_tax": 5230.0,
+    "sales": 10980.0,
+    "tax_pct": 25.12
+   },
+   {
+    "depreciation": 1048.0,
+    "eps": 11.91,
+    "expenses": 5838.0,
+    "interest": 187.0,
+    "net_profit": 0.0,
+    "operating_profit": 7706.0,
+    "opm_pct": 56.9,
+    "other_income": 280.0,
+    "period": "Mar 2026",
+    "profit_before_tax": 6751.0,
+    "sales": 13544.0,
+    "tax_pct": 25.45
+   },
+   {
+    "depreciation": 920.0,
+    "eps": 12.94,
+    "expenses": 5697.0,
+    "interest": 132.0,
+    "net_profit": 0.0,
+    "operating_profit": 8050.0,
+    "opm_pct": 58.56,
+    "other_income": 316.0,
+    "period": "Jun 2026",
+    "profit_before_tax": 7314.0,
+    "sales": 13747.0,
+    "tax_pct": 25.23
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HOMEFIRST": {
+  "basis": "standalone",
+  "fetched_at": "2026-09-18T18:18:36+00:00",
+  "quarters": [
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 74.31,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 4.65,
+    "period": "Sep 2023",
+    "profit_before_tax": 96.44,
+    "sales": 249.1,
+    "tax_pct": 22.95
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 78.82,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 4.7,
+    "period": "Dec 2023",
+    "profit_before_tax": 102.74,
+    "sales": 264.57,
+    "tax_pct": 23.28
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 83.47,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 4.99,
+    "period": "Mar 2024",
+    "profit_before_tax": 110.75,
+    "sales": 282.68,
+    "tax_pct": 24.63
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 87.77,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 4.91,
+    "period": "Jun 2024",
+    "profit_before_tax": 113.52,
+    "sales": 303.15,
+    "tax_pct": 22.68
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 92.22,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 1.32,
+    "period": "Sep 2024",
+    "profit_before_tax": 120.36,
+    "sales": 332.18,
+    "tax_pct": 23.37
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 97.38,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 1.5,
+    "period": "Dec 2024",
+    "profit_before_tax": 129.82,
+    "sales": 355.78,
+    "tax_pct": 24.98
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 118.89,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 1.65,
+    "period": "Jun 2025",
+    "profit_before_tax": 156.5,
+    "sales": 394.38,
+    "tax_pct": 24.03
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 131.85,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 1.73,
+    "period": "Sep 2025",
+    "profit_before_tax": 173.23,
+    "sales": 409.11,
+    "tax_pct": 23.89
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 140.2,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 1.43,
+    "period": "Dec 2025",
+    "profit_before_tax": 182.83,
+    "sales": 428.8,
+    "tax_pct": 23.32
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 149.44,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 3.33,
+    "period": "Mar 2026",
+    "profit_before_tax": 195.19,
+    "sales": 431.73,
+    "tax_pct": 23.44
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 159.85,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 1.83,
+    "period": "Jun 2026",
+    "profit_before_tax": 207.63,
+    "sales": 461.97,
+    "tax_pct": 23.01
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HONASA": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:40+00:00",
+  "quarters": [
+   {
+    "depreciation": 6.29,
+    "eps": 0.96,
+    "expenses": 455.9,
+    "interest": 1.79,
+    "net_profit": 29.44,
+    "operating_profit": 40.2,
+    "opm_pct": 8.1,
+    "other_income": 7.08,
+    "period": "Sep 2023",
+    "profit_before_tax": 39.2,
+    "sales": 496.11,
+    "tax_pct": 24.91
+   },
+   {
+    "depreciation": 8.06,
+    "eps": 0.82,
+    "expenses": 453.76,
+    "interest": 2.64,
+    "net_profit": 25.9,
+    "operating_profit": 34.45,
+    "opm_pct": 7.06,
+    "other_income": 10.97,
+    "period": "Dec 2023",
+    "profit_before_tax": 34.72,
+    "sales": 488.21,
+    "tax_pct": 25.4
+   },
+   {
+    "depreciation": 9.78,
+    "eps": 0.97,
+    "expenses": 437.97,
+    "interest": 3.14,
+    "net_profit": 30.47,
+    "operating_profit": 33.12,
+    "opm_pct": 7.03,
+    "other_income": 19.05,
+    "period": "Mar 2024",
+    "profit_before_tax": 39.25,
+    "sales": 471.09,
+    "tax_pct": 22.36
+   },
+   {
+    "depreciation": 9.41,
+    "eps": 1.24,
+    "expenses": 507.94,
+    "interest": 3.03,
+    "net_profit": 40.26,
+    "operating_profit": 46.12,
+    "opm_pct": 8.32,
+    "other_income": 18.72,
+    "period": "Jun 2024",
+    "profit_before_tax": 52.4,
+    "sales": 554.06,
+    "tax_pct": 23.16
+   },
+   {
+    "depreciation": 10.56,
+    "eps": -0.57,
+    "expenses": 492.52,
+    "interest": 3.13,
+    "net_profit": -18.58,
+    "operating_profit": -30.7,
+    "opm_pct": -6.65,
+    "other_income": 20.02,
+    "period": "Sep 2024",
+    "profit_before_tax": -24.37,
+    "sales": 461.82,
+    "tax_pct": null
+   },
+   {
+    "depreciation": 12.61,
+    "eps": 0.8,
+    "expenses": 491.38,
+    "interest": 3.31,
+    "net_profit": 26.02,
+    "operating_profit": 26.13,
+    "opm_pct": 5.05,
+    "other_income": 19.21,
+    "period": "Dec 2024",
+    "profit_before_tax": 29.42,
+    "sales": 517.51,
+    "tax_pct": 11.54
+   },
+   {
+    "depreciation": 12.42,
+    "eps": 0.77,
+    "expenses": 506.57,
+    "interest": 3.17,
+    "net_profit": 24.98,
+    "operating_profit": 26.99,
+    "opm_pct": 5.06,
+    "other_income": 20.77,
+    "period": "Mar 2025",
+    "profit_before_tax": 32.17,
+    "sales": 533.56,
+    "tax_pct": 22.35
+   },
+   {
+    "depreciation": 10.82,
+    "eps": 1.27,
+    "expenses": 549.45,
+    "interest": 3.28,
+    "net_profit": 41.33,
+    "operating_profit": 45.8,
+    "opm_pct": 7.7,
+    "other_income": 23.89,
+    "period": "Jun 2025",
+    "profit_before_tax": 55.59,
+    "sales": 595.25,
+    "tax_pct": 25.67
+   },
+   {
+    "depreciation": 11.04,
+    "eps": 1.54,
+    "expenses": 536.04,
+    "interest": 3.23,
+    "net_profit": 50.2,
+    "operating_profit": 65.5,
+    "opm_pct": 10.89,
+    "other_income": 20.68,
+    "period": "Dec 2025",
+    "profit_before_tax": 67.11,
+    "sales": 601.54,
+    "tax_pct": 25.16
+   },
+   {
+    "depreciation": 10.8,
+    "eps": 2.13,
+    "expenses": 579.88,
+    "interest": 3.33,
+    "net_profit": 69.19,
+    "operating_profit": 77.21,
+    "opm_pct": 11.75,
+    "other_income": 18.88,
+    "period": "Mar 2026",
+    "profit_before_tax": 81.96,
+    "sales": 657.08,
+    "tax_pct": 15.13
+   },
+   {
+    "depreciation": 10.49,
+    "eps": 2.77,
+    "expenses": 645.75,
+    "interest": 3.02,
+    "net_profit": 90.25,
+    "operating_profit": 110.19,
+    "opm_pct": 14.58,
+    "other_income": 22.51,
+    "period": "Jun 2026",
+    "profit_before_tax": 119.19,
+    "sales": 755.95,
+    "tax_pct": 24.16
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HONAUT": {
+  "basis": "standalone",
+  "fetched_at": "2026-09-18T18:18:44+00:00",
+  "quarters": [
+   {
+    "depreciation": 13.8,
+    "eps": 137.82,
+    "expenses": 965.9,
+    "interest": 0.7,
+    "net_profit": 121.9,
+    "operating_profit": 138.3,
+    "opm_pct": 12.52,
+    "other_income": 40.1,
+    "period": "Sep 2023",
+    "profit_before_tax": 163.9,
+    "sales": 1104.2,
+    "tax_pct": 25.63
+   },
+   {
+    "depreciation": 12.8,
+    "eps": 144.6,
+    "expenses": 910.4,
+    "interest": 1.4,
+    "net_profit": 127.9,
+    "operating_profit": 160.6,
+    "opm_pct": 15.0,
+    "other_income": 28.1,
+    "period": "Dec 2023",
+    "profit_before_tax": 174.5,
+    "sales": 1071.0,
+    "tax_pct": 26.7
+   },
+   {
+    "depreciation": 13.52,
+    "eps": 167.59,
+    "expenses": 780.82,
+    "interest": 0.65,
+    "net_profit": 148.18,
+    "operating_profit": 169.91,
+    "opm_pct": 17.87,
+    "other_income": 41.6,
+    "period": "Mar 2024",
+    "profit_before_tax": 197.33,
+    "sales": 950.74,
+    "tax_pct": 24.91
+   },
+   {
+    "depreciation": 13.2,
+    "eps": 154.34,
+    "expenses": 806.28,
+    "interest": 1.17,
+    "net_profit": 136.46,
+    "operating_profit": 154.17,
+    "opm_pct": 16.05,
+    "other_income": 44.27,
+    "period": "Jun 2024",
+    "profit_before_tax": 184.07,
+    "sales": 960.45,
+    "tax_pct": 25.87
+   },
+   {
+    "depreciation": 13.5,
+    "eps": 130.18,
+    "expenses": 894.9,
+    "interest": 1.4,
+    "net_profit": 115.1,
+    "operating_profit": 129.0,
+    "opm_pct": 12.6,
+    "other_income": 41.2,
+    "period": "Sep 2024",
+    "profit_before_tax": 155.3,
+    "sales": 1023.9,
+    "tax_pct": 25.89
+   },
+   {
+    "depreciation": 13.79,
+    "eps": 149.35,
+    "expenses": 948.79,
+    "interest": 2.18,
+    "net_profit": 132.05,
+    "operating_profit": 142.0,
+    "opm_pct": 13.02,
+    "other_income": 49.98,
+    "period": "Dec 2024",
+    "profit_before_tax": 176.0,
+    "sales": 1090.78,
+    "tax_pct": 24.97
+   },
+   {
+    "depreciation": 13.9,
+    "eps": 158.26,
+    "expenses": 955.1,
+    "interest": 1.9,
+    "net_profit": 139.9,
+    "operating_profit": 159.4,
+    "opm_pct": 14.3,
+    "other_income": 46.6,
+    "period": "Mar 2025",
+    "profit_before_tax": 190.2,
+    "sales": 1114.5,
+    "tax_pct": 26.45
+   },
+   {
+    "depreciation": 13.4,
+    "eps": 140.95,
+    "expenses": 1041.6,
+    "interest": 1.9,
+    "net_profit": 124.6,
+    "operating_profit": 141.5,
+    "opm_pct": 11.96,
+    "other_income": 41.8,
+    "period": "Jun 2025",
+    "profit_before_tax": 168.0,
+    "sales": 1183.1,
+    "tax_pct": 25.83
+   },
+   {
+    "depreciation": 12.9,
+    "eps": 135.13,
+    "expenses": 1017.8,
+    "interest": 2.2,
+    "net_profit": 119.5,
+    "operating_profit": 131.6,
+    "opm_pct": 11.45,
+    "other_income": 44.2,
+    "period": "Sep 2025",
+    "profit_before_tax": 160.7,
+    "sales": 1149.4,
+    "tax_pct": 25.64
+   },
+   {
+    "depreciation": 12.7,
+    "eps": 137.08,
+    "expenses": 1021.1,
+    "interest": 4.1,
+    "net_profit": 121.2,
+    "operating_profit": 147.6,
+    "opm_pct": 12.63,
+    "other_income": 45.5,
+    "period": "Dec 2025",
+    "profit_before_tax": 164.9,
+    "sales": 1168.7,
+    "tax_pct": 26.5
+   },
+   {
+    "depreciation": 14.7,
+    "eps": 180.6,
+    "expenses": 995.9,
+    "interest": 1.4,
+    "net_profit": 159.7,
+    "operating_profit": 184.8,
+    "opm_pct": 15.65,
+    "other_income": 47.5,
+    "period": "Mar 2026",
+    "profit_before_tax": 215.3,
+    "sales": 1180.7,
+    "tax_pct": 25.82
+   },
+   {
+    "depreciation": 13.5,
+    "eps": 170.45,
+    "expenses": 1031.9,
+    "interest": 2.3,
+    "net_profit": 150.7,
+    "operating_profit": 172.5,
+    "opm_pct": 14.32,
+    "other_income": 46.4,
+    "period": "Jun 2026",
+    "profit_before_tax": 203.1,
+    "sales": 1204.4,
+    "tax_pct": 25.8
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HSCL": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:00+00:00",
+  "quarters": [
+   {
+    "depreciation": 12.43,
+    "eps": 2.29,
+    "expenses": 846.86,
+    "interest": 15.95,
+    "net_profit": 100.64,
+    "operating_profit": 157.66,
+    "opm_pct": 15.7,
+    "other_income": 9.82,
+    "period": "Sep 2023",
+    "profit_before_tax": 139.1,
+    "sales": 1004.52,
+    "tax_pct": 27.66
+   },
+   {
+    "depreciation": 12.72,
+    "eps": 2.47,
+    "expenses": 878.61,
+    "interest": 21.22,
+    "net_profit": 108.82,
+    "operating_profit": 173.9,
+    "opm_pct": 16.52,
+    "other_income": 10.19,
+    "period": "Dec 2023",
+    "profit_before_tax": 150.15,
+    "sales": 1052.51,
+    "tax_pct": 27.55
+   },
+   {
+    "depreciation": 12.61,
+    "eps": 2.41,
+    "expenses": 997.45,
+    "interest": 13.55,
+    "net_profit": 115.16,
+    "operating_profit": 179.5,
+    "opm_pct": 15.25,
+    "other_income": 12.39,
+    "period": "Mar 2024",
+    "profit_before_tax": 165.73,
+    "sales": 1176.95,
+    "tax_pct": 30.5
+   },
+   {
+    "depreciation": 12.93,
+    "eps": 2.49,
+    "expenses": 1008.49,
+    "interest": 12.95,
+    "net_profit": 122.62,
+    "operating_profit": 191.92,
+    "opm_pct": 15.99,
+    "other_income": 12.64,
+    "period": "Jun 2024",
+    "profit_before_tax": 178.68,
+    "sales": 1200.41,
+    "tax_pct": 31.28
+   },
+   {
+    "depreciation": 13.1,
+    "eps": 2.74,
+    "expenses": 928.79,
+    "interest": 11.3,
+    "net_profit": 135.36,
+    "operating_profit": 208.13,
+    "opm_pct": 18.31,
+    "other_income": 13.57,
+    "period": "Sep 2024",
+    "profit_before_tax": 197.3,
+    "sales": 1136.92,
+    "tax_pct": 31.22
+   },
+   {
+    "depreciation": 15.22,
+    "eps": 2.88,
+    "expenses": 919.8,
+    "interest": 11.76,
+    "net_profit": 142.06,
+    "operating_profit": 220.86,
+    "opm_pct": 19.36,
+    "other_income": 11.96,
+    "period": "Dec 2024",
+    "profit_before_tax": 205.84,
+    "sales": 1140.66,
+    "tax_pct": 31.43
+   },
+   {
+    "depreciation": 13.72,
+    "eps": 3.15,
+    "expenses": 901.33,
+    "interest": 8.76,
+    "net_profit": 155.58,
+    "operating_profit": 233.31,
+    "opm_pct": 20.56,
+    "other_income": 13.52,
+    "period": "Mar 2025",
+    "profit_before_tax": 224.35,
+    "sales": 1134.64,
+    "tax_pct": 30.71
+   },
+   {
+    "depreciation": 14.64,
+    "eps": 3.68,
+    "expenses": 873.28,
+    "interest": 15.83,
+    "net_profit": 181.69,
+    "operating_profit": 245.01,
+    "opm_pct": 21.91,
+    "other_income": 26.68,
+    "period": "Jun 2025",
+    "profit_before_tax": 241.22,
+    "sales": 1118.29,
+    "tax_pct": 25.64
+   },
+   {
+    "depreciation": 17.39,
+    "eps": 3.58,
+    "expenses": 838.25,
+    "interest": 14.78,
+    "net_profit": 176.66,
+    "operating_profit": 232.78,
+    "opm_pct": 21.73,
+    "other_income": 35.93,
+    "period": "Sep 2025",
+    "profit_before_tax": 236.54,
+    "sales": 1071.03,
+    "tax_pct": 25.53
+   },
+   {
+    "depreciation": 17.58,
+    "eps": 3.84,
+    "expenses": 941.01,
+    "interest": 16.37,
+    "net_profit": 192.2,
+    "operating_profit": 242.61,
+    "opm_pct": 20.5,
+    "other_income": 46.59,
+    "period": "Dec 2025",
+    "profit_before_tax": 255.25,
+    "sales": 1183.62,
+    "tax_pct": 24.76
+   },
+   {
+    "depreciation": 18.55,
+    "eps": 3.98,
+    "expenses": 1046.02,
+    "interest": 17.39,
+    "net_profit": 200.79,
+    "operating_profit": 241.74,
+    "opm_pct": 18.77,
+    "other_income": 62.09,
+    "period": "Mar 2026",
+    "profit_before_tax": 267.89,
+    "sales": 1287.76,
+    "tax_pct": 22.53
+   },
+   {
+    "depreciation": 21.3,
+    "eps": 4.55,
+    "expenses": 1143.97,
+    "interest": 22.41,
+    "net_profit": 229.52,
+    "operating_profit": 287.91,
+    "opm_pct": 20.11,
+    "other_income": 56.31,
+    "period": "Jun 2026",
+    "profit_before_tax": 300.51,
+    "sales": 1431.88,
+    "tax_pct": 23.99
+   }
+  ],
+  "source": "NSE XBRL"
+ },
+ "HUDCO": {
+  "basis": "consolidated",
+  "fetched_at": "2026-09-18T18:18:48+00:00",
+  "quarters": [
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 0.0,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 16.05,
+    "period": "Sep 2023",
+    "profit_before_tax": 606.42,
+    "sales": 1844.01,
+    "tax_pct": 25.52
+   },
+   {
+    "depreciation": 2.46,
+    "eps": 2.59,
+    "expenses": 11.66,
+    "interest": 1312.73,
+    "net_profit": 0.0,
+    "operating_profit": 2001.0,
+    "opm_pct": 99.42,
+    "other_income": 10.28,
+    "period": "Dec 2023",
+    "profit_before_tax": 696.09,
+    "sales": 2012.66,
+    "tax_pct": 25.41
+   },
+   {
+    "depreciation": 2.48,
+    "eps": 3.5,
+    "expenses": 8.14,
+    "interest": 1240.3,
+    "net_profit": 700.16,
+    "operating_profit": 2057.08,
+    "opm_pct": 99.61,
+    "other_income": 128.82,
+    "period": "Mar 2024",
+    "profit_before_tax": 943.12,
+    "sales": 2065.22,
+    "tax_pct": 25.76
+   },
+   {
+    "depreciation": 1.96,
+    "eps": 2.79,
+    "expenses": 46.84,
+    "interest": 1463.69,
+    "net_profit": 557.75,
+    "operating_profit": 2141.51,
+    "opm_pct": 97.86,
+    "other_income": 8.84,
+    "period": "Jun 2024",
+    "profit_before_tax": 684.7,
+    "sales": 2188.35,
+    "tax_pct": 18.54
+   },
+   {
+    "depreciation": 2.54,
+    "eps": 3.44,
+    "expenses": -138.46,
+    "interest": 1662.02,
+    "net_profit": 0.0,
+    "operating_profit": 2656.18,
+    "opm_pct": 105.5,
+    "other_income": 8.42,
+    "period": "Sep 2024",
+    "profit_before_tax": 1000.04,
+    "sales": 2517.72,
+    "tax_pct": 31.14
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 0.0,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 9.91,
+    "period": "Dec 2024",
+    "profit_before_tax": 931.66,
+    "sales": 2745.54,
+    "tax_pct": 21.11
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 0.0,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 9.92,
+    "period": "Mar 2025",
+    "profit_before_tax": 1020.26,
+    "sales": 2820.88,
+    "tax_pct": 28.67
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 0.0,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 8.16,
+    "period": "Jun 2025",
+    "profit_before_tax": 857.23,
+    "sales": 2924.64,
+    "tax_pct": 26.48
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 709.83,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 31.99,
+    "period": "Sep 2025",
+    "profit_before_tax": 954.71,
+    "sales": 3197.32,
+    "tax_pct": 25.65
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 713.0,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 74.37,
+    "period": "Dec 2025",
+    "profit_before_tax": 788.49,
+    "sales": 3418.9,
+    "tax_pct": 9.57
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 1981.31,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 62.21,
+    "period": "Mar 2026",
+    "profit_before_tax": 621.01,
+    "sales": 3555.39,
+    "tax_pct": -219.05
+   },
+   {
+    "depreciation": null,
+    "eps": null,
+    "expenses": null,
+    "interest": null,
+    "net_profit": 851.11,
+    "operating_profit": null,
+    "opm_pct": null,
+    "other_income": 20.32,
+    "period": "Jun 2026",
+    "profit_before_tax": 1066.2,
+    "sales": 3709.57,
+    "tax_pct": 20.17
+   }
+  ],
+  "source": "NSE XBRL"
+ },
  "HYUNDAI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:35:43+00:00",
+  "fetched_at": "2026-09-18T18:18:52+00:00",
   "quarters": [
    {
     "depreciation": 518.55,
@@ -32894,7 +34875,7 @@
  },
  "ICICIAMC": {
   "basis": "standalone",
-  "fetched_at": "2026-09-16T19:35:55+00:00",
+  "fetched_at": "2026-09-18T18:19:04+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -32943,7 +34924,7 @@
  },
  "ICICIBANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:35:47+00:00",
+  "fetched_at": "2026-09-18T18:18:56+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -33118,7 +35099,7 @@
  },
  "IDBI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:03+00:00",
+  "fetched_at": "2026-09-18T18:19:12+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -33279,7 +35260,7 @@
  },
  "IDEA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:50+00:00",
+  "fetched_at": "2026-09-18T20:08:21+00:00",
   "quarters": [
    {
     "depreciation": 5667.3,
@@ -33454,7 +35435,7 @@
  },
  "IDFCFIRSTB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:07+00:00",
+  "fetched_at": "2026-09-18T18:19:16+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -33615,7 +35596,7 @@
  },
  "IEX": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:55+00:00",
+  "fetched_at": "2026-09-18T18:20:04+00:00",
   "quarters": [
    {
     "depreciation": 5.07,
@@ -33790,7 +35771,7 @@
  },
  "IFCI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:11+00:00",
+  "fetched_at": "2026-09-18T18:19:20+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -33965,7 +35946,7 @@
  },
  "IGIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:22+00:00",
+  "fetched_at": "2026-09-18T18:21:04+00:00",
   "quarters": [
    {
     "depreciation": 10.3,
@@ -34056,7 +36037,7 @@
  },
  "IGL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:42:50+00:00",
+  "fetched_at": "2026-09-18T18:20:32+00:00",
   "quarters": [
    {
     "depreciation": 102.23,
@@ -34231,7 +36212,7 @@
  },
  "IIFL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:15+00:00",
+  "fetched_at": "2026-09-18T18:19:24+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -34406,7 +36387,7 @@
  },
  "IKS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:26+00:00",
+  "fetched_at": "2026-09-18T18:21:08+00:00",
   "quarters": [
    {
     "depreciation": 27.76,
@@ -34511,7 +36492,7 @@
  },
  "INDGN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:39+00:00",
+  "fetched_at": "2026-09-18T18:19:48+00:00",
   "quarters": [
    {
     "depreciation": 18.5,
@@ -34658,7 +36639,7 @@
  },
  "INDHOTEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:59+00:00",
+  "fetched_at": "2026-09-18T18:20:08+00:00",
   "quarters": [
    {
     "depreciation": 111.21,
@@ -34833,7 +36814,7 @@
  },
  "INDIACEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:43+00:00",
+  "fetched_at": "2026-09-18T18:19:52+00:00",
   "quarters": [
    {
     "depreciation": 54.99,
@@ -35008,7 +36989,7 @@
  },
  "INDIAMART": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:47+00:00",
+  "fetched_at": "2026-09-18T18:19:56+00:00",
   "quarters": [
    {
     "depreciation": 7.4,
@@ -35183,7 +37164,7 @@
  },
  "INDIANB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:51+00:00",
+  "fetched_at": "2026-09-18T18:20:00+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -35358,7 +37339,7 @@
  },
  "INDIGO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:18+00:00",
+  "fetched_at": "2026-09-18T18:21:00+00:00",
   "quarters": [
    {
     "depreciation": 1548.97,
@@ -35533,7 +37514,7 @@
  },
  "INDUSINDBK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:42:58+00:00",
+  "fetched_at": "2026-09-18T18:20:40+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -35694,7 +37675,7 @@
  },
  "INDUSTOWER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:42:54+00:00",
+  "fetched_at": "2026-09-18T18:20:36+00:00",
   "quarters": [
    {
     "depreciation": 1525.6,
@@ -35869,7 +37850,7 @@
  },
  "INFY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:06+00:00",
+  "fetched_at": "2026-09-18T18:20:48+00:00",
   "quarters": [
    {
     "depreciation": 1166.0,
@@ -36044,7 +38025,7 @@
  },
  "INOXWIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:10+00:00",
+  "fetched_at": "2026-09-18T18:20:52+00:00",
   "quarters": [
    {
     "depreciation": 26.25,
@@ -36219,7 +38200,7 @@
  },
  "INTELLECT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:14+00:00",
+  "fetched_at": "2026-09-18T18:20:56+00:00",
   "quarters": [
    {
     "depreciation": 33.73,
@@ -36380,7 +38361,7 @@
  },
  "IOB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:37:07+00:00",
+  "fetched_at": "2026-09-18T18:20:16+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -36541,7 +38522,7 @@
  },
  "IOC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:37:03+00:00",
+  "fetched_at": "2026-09-18T18:20:12+00:00",
   "quarters": [
    {
     "depreciation": 3609.62,
@@ -36702,7 +38683,7 @@
  },
  "IPCALAB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:31+00:00",
+  "fetched_at": "2026-09-18T18:21:12+00:00",
   "quarters": [
    {
     "depreciation": 90.34,
@@ -36877,7 +38858,7 @@
  },
  "IRB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:19+00:00",
+  "fetched_at": "2026-09-18T18:19:28+00:00",
   "quarters": [
    {
     "depreciation": 232.69,
@@ -37052,7 +39033,7 @@
  },
  "IRCON": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:23+00:00",
+  "fetched_at": "2026-09-18T18:19:32+00:00",
   "quarters": [
    {
     "depreciation": 27.08,
@@ -37227,7 +39208,7 @@
  },
  "IRCTC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:37:11+00:00",
+  "fetched_at": "2026-09-18T18:20:20+00:00",
   "quarters": [
    {
     "depreciation": 15.62,
@@ -37374,7 +39355,7 @@
  },
  "IREDA": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:42:46+00:00",
+  "fetched_at": "2026-09-18T18:20:28+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -37521,7 +39502,7 @@
  },
  "IRFC": {
   "basis": "standalone",
-  "fetched_at": "2026-09-16T19:37:15+00:00",
+  "fetched_at": "2026-09-18T18:20:24+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -37682,7 +39663,7 @@
  },
  "ITC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:31+00:00",
+  "fetched_at": "2026-09-18T18:19:40+00:00",
   "quarters": [
    {
     "depreciation": 453.04,
@@ -37857,7 +39838,7 @@
  },
  "ITCHOTELS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:27+00:00",
+  "fetched_at": "2026-09-18T18:19:36+00:00",
   "quarters": [
    {
     "depreciation": 99.8,
@@ -37948,7 +39929,7 @@
  },
  "ITI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-16T19:36:35+00:00",
+  "fetched_at": "2026-09-18T18:19:44+00:00",
   "quarters": [
    {
     "depreciation": 13.42,
@@ -38123,7 +40104,7 @@
  },
  "J&KBANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:19+00:00",
+  "fetched_at": "2026-09-18T18:22:01+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -38270,7 +40251,7 @@
  },
  "JAINREC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:10+00:00",
+  "fetched_at": "2026-09-18T18:21:52+00:00",
   "quarters": [
    {
     "depreciation": 3.28,
@@ -38333,7 +40314,7 @@
  },
  "JBMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:38+00:00",
+  "fetched_at": "2026-09-18T18:21:20+00:00",
   "quarters": [
    {
     "depreciation": 41.22,
@@ -38508,7 +40489,7 @@
  },
  "JINDALSAW": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:23+00:00",
+  "fetched_at": "2026-09-18T18:22:04+00:00",
   "quarters": [
    {
     "depreciation": 142.54,
@@ -38683,7 +40664,7 @@
  },
  "JINDALSTEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:30+00:00",
+  "fetched_at": "2026-09-18T18:22:12+00:00",
   "quarters": [
    {
     "depreciation": 603.68,
@@ -38858,7 +40839,7 @@
  },
  "JIOFIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:34+00:00",
+  "fetched_at": "2026-09-18T18:22:16+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -39033,7 +41014,7 @@
  },
  "JKCEMENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:34+00:00",
+  "fetched_at": "2026-09-18T18:21:16+00:00",
   "quarters": [
    {
     "depreciation": 137.06,
@@ -39208,7 +41189,7 @@
  },
  "JKTYRE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:42+00:00",
+  "fetched_at": "2026-09-18T18:21:24+00:00",
   "quarters": [
    {
     "depreciation": 108.04,
@@ -39383,7 +41364,7 @@
  },
  "JMFINANCIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:46+00:00",
+  "fetched_at": "2026-09-18T18:21:28+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -39558,7 +41539,7 @@
  },
  "JPPOWER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:14+00:00",
+  "fetched_at": "2026-09-18T18:21:56+00:00",
   "quarters": [
    {
     "depreciation": 116.44,
@@ -39733,7 +41714,7 @@
  },
  "JSL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:26+00:00",
+  "fetched_at": "2026-09-18T18:22:08+00:00",
   "quarters": [
    {
     "depreciation": 221.94,
@@ -39908,7 +41889,7 @@
  },
  "JSWCEMENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:50+00:00",
+  "fetched_at": "2026-09-18T18:21:32+00:00",
   "quarters": [
    {
     "depreciation": 77.93,
@@ -39985,7 +41966,7 @@
  },
  "JSWDULUX": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:54+00:00",
+  "fetched_at": "2026-09-18T18:21:36+00:00",
   "quarters": [
    {
     "depreciation": 21.11,
@@ -40160,7 +42141,7 @@
  },
  "JSWENERGY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:58+00:00",
+  "fetched_at": "2026-09-18T18:21:40+00:00",
   "quarters": [
    {
     "depreciation": 408.68,
@@ -40335,7 +42316,7 @@
  },
  "JSWINFRA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:02+00:00",
+  "fetched_at": "2026-09-18T18:21:44+00:00",
   "quarters": [
    {
     "depreciation": 100.51,
@@ -40510,7 +42491,7 @@
  },
  "JSWSTEEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:06+00:00",
+  "fetched_at": "2026-09-18T18:21:48+00:00",
   "quarters": [
    {
     "depreciation": 1900.0,
@@ -40685,7 +42666,7 @@
  },
  "JUBLFOOD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:38+00:00",
+  "fetched_at": "2026-09-18T18:22:20+00:00",
   "quarters": [
    {
     "depreciation": 141.88,
@@ -40860,7 +42841,7 @@
  },
  "JUBLINGREA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:42+00:00",
+  "fetched_at": "2026-09-18T18:22:24+00:00",
   "quarters": [
    {
     "depreciation": 33.91,
@@ -41035,7 +43016,7 @@
  },
  "JUBLPHARMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:46+00:00",
+  "fetched_at": "2026-09-18T18:22:28+00:00",
   "quarters": [
    {
     "depreciation": 96.6,
@@ -41210,7 +43191,7 @@
  },
  "JWL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:50+00:00",
+  "fetched_at": "2026-09-18T18:22:32+00:00",
   "quarters": [
    {
     "depreciation": 7.13,
@@ -41385,7 +43366,7 @@
  },
  "JYOTICNC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:54+00:00",
+  "fetched_at": "2026-09-18T18:22:36+00:00",
   "quarters": [
    {
     "depreciation": 8.65,
@@ -42407,7 +44388,7 @@
  },
  "KEI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:45:02+00:00",
+  "fetched_at": "2026-09-18T18:22:44+00:00",
   "quarters": [
    {
     "depreciation": 15.56,
@@ -43443,7 +45424,7 @@
  },
  "KPITTECH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:45:06+00:00",
+  "fetched_at": "2026-09-18T18:22:48+00:00",
   "quarters": [
    {
     "depreciation": 48.09,
@@ -43618,7 +45599,7 @@
  },
  "KPRMILL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:44:58+00:00",
+  "fetched_at": "2026-09-18T18:22:40+00:00",
   "quarters": [
    {
     "depreciation": 45.99,
@@ -43793,7 +45774,7 @@
  },
  "LALPATHLAB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:52:23+00:00",
+  "fetched_at": "2026-09-18T18:13:56+00:00",
   "quarters": [
    {
     "depreciation": 35.9,
@@ -46677,7 +48658,7 @@
  },
  "MAHABANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:47:15+00:00",
+  "fetched_at": "2026-09-18T18:08:48+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -47160,7 +49141,7 @@
  },
  "MAPMYINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:48:51+00:00",
+  "fetched_at": "2026-09-18T18:10:24+00:00",
   "quarters": [
    {
     "depreciation": 3.73,
@@ -47321,7 +49302,7 @@
  },
  "MARICO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:30+00:00",
+  "fetched_at": "2026-09-18T19:04:09+00:00",
   "quarters": [
    {
     "depreciation": 39.0,
@@ -47496,7 +49477,7 @@
  },
  "MARUTI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:34+00:00",
+  "fetched_at": "2026-09-18T19:04:13+00:00",
   "quarters": [
    {
     "depreciation": 794.4,
@@ -47671,7 +49652,7 @@
  },
  "MAXHEALTH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:42+00:00",
+  "fetched_at": "2026-09-18T19:04:21+00:00",
   "quarters": [
    {
     "depreciation": 57.88,
@@ -47846,7 +49827,7 @@
  },
  "MAZDOCK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:46+00:00",
+  "fetched_at": "2026-09-18T19:04:25+00:00",
   "quarters": [
    {
     "depreciation": 20.19,
@@ -48021,7 +50002,7 @@
  },
  "MEDANTA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:54:50+00:00",
+  "fetched_at": "2026-09-18T18:16:16+00:00",
   "quarters": [
    {
     "depreciation": 42.91,
@@ -48196,7 +50177,7 @@
  },
  "MEESHO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:50+00:00",
+  "fetched_at": "2026-09-18T19:04:29+00:00",
   "quarters": [
    {
     "depreciation": 10.92,
@@ -48245,7 +50226,7 @@
  },
  "MFSL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:38+00:00",
+  "fetched_at": "2026-09-18T19:04:17+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -48581,7 +50562,7 @@
  },
  "MINDACORP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:47:54+00:00",
+  "fetched_at": "2026-09-18T19:04:33+00:00",
   "quarters": [
    {
     "depreciation": 41.41,
@@ -49106,7 +51087,7 @@
  },
  "MOTILALOFS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:02+00:00",
+  "fetched_at": "2026-09-18T19:04:41+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -49281,7 +51262,7 @@
  },
  "MPHASIS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:06+00:00",
+  "fetched_at": "2026-09-18T19:04:45+00:00",
   "quarters": [
    {
     "depreciation": 88.97,
@@ -49806,7 +51787,7 @@
  },
  "MSUMI": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:47:58+00:00",
+  "fetched_at": "2026-09-18T19:04:37+00:00",
   "quarters": [
    {
     "depreciation": 36.35,
@@ -49981,7 +51962,7 @@
  },
  "MUTHOOTFIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:14+00:00",
+  "fetched_at": "2026-09-18T19:04:53+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -50156,7 +52137,7 @@
  },
  "NAM-INDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:26+00:00",
+  "fetched_at": "2026-09-18T19:06:05+00:00",
   "quarters": [
    {
     "depreciation": 7.19,
@@ -50317,7 +52298,7 @@
  },
  "NATCOPHARM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:18+00:00",
+  "fetched_at": "2026-09-18T19:04:57+00:00",
   "quarters": [
    {
     "depreciation": 43.6,
@@ -50492,7 +52473,7 @@
  },
  "NATIONALUM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:58+00:00",
+  "fetched_at": "2026-09-18T19:05:37+00:00",
   "quarters": [
    {
     "depreciation": 186.15,
@@ -50653,7 +52634,7 @@
  },
  "NAUKRI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:43:02+00:00",
+  "fetched_at": "2026-09-18T18:20:44+00:00",
   "quarters": [
    {
     "depreciation": 25.95,
@@ -50828,7 +52809,7 @@
  },
  "NAVA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:02+00:00",
+  "fetched_at": "2026-09-18T19:05:41+00:00",
   "quarters": [
    {
     "depreciation": 77.98,
@@ -51003,7 +52984,7 @@
  },
  "NAVINFLUOR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:06+00:00",
+  "fetched_at": "2026-09-18T19:05:45+00:00",
   "quarters": [
    {
     "depreciation": 24.25,
@@ -51178,7 +53159,7 @@
  },
  "NBCC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:22+00:00",
+  "fetched_at": "2026-09-18T19:05:01+00:00",
   "quarters": [
    {
     "depreciation": 1.33,
@@ -51353,7 +53334,7 @@
  },
  "NCC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:26+00:00",
+  "fetched_at": "2026-09-18T19:05:05+00:00",
   "quarters": [
    {
     "depreciation": 53.21,
@@ -51528,7 +53509,7 @@
  },
  "NESTLEIND": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:49:10+00:00",
+  "fetched_at": "2026-09-18T19:05:49+00:00",
   "quarters": [
    {
     "depreciation": 111.16,
@@ -51703,7 +53684,7 @@
  },
  "NETWEB": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:49:14+00:00",
+  "fetched_at": "2026-09-18T19:05:53+00:00",
   "quarters": [
    {
     "depreciation": 1.43,
@@ -51850,7 +53831,7 @@
  },
  "NEULANDLAB": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:18+00:00",
+  "fetched_at": "2026-09-18T19:05:57+00:00",
   "quarters": [
    {
     "depreciation": 14.51,
@@ -52025,7 +54006,7 @@
  },
  "NEWGEN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:22+00:00",
+  "fetched_at": "2026-09-18T19:06:01+00:00",
   "quarters": [
    {
     "depreciation": 6.86,
@@ -52200,7 +54181,7 @@
  },
  "NH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:54+00:00",
+  "fetched_at": "2026-09-18T19:05:33+00:00",
   "quarters": [
    {
     "depreciation": 55.27,
@@ -52375,7 +54356,7 @@
  },
  "NHPC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:30+00:00",
+  "fetched_at": "2026-09-18T19:05:09+00:00",
   "quarters": [
    {
     "depreciation": 294.86,
@@ -52550,7 +54531,7 @@
  },
  "NLCINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:34+00:00",
+  "fetched_at": "2026-09-18T19:05:13+00:00",
   "quarters": [
    {
     "depreciation": 461.38,
@@ -52725,7 +54706,7 @@
  },
  "NMDC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:38+00:00",
+  "fetched_at": "2026-09-18T19:05:17+00:00",
   "quarters": [
    {
     "depreciation": 69.22,
@@ -52900,7 +54881,7 @@
  },
  "NSLNISP": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:48:42+00:00",
+  "fetched_at": "2026-09-18T19:05:21+00:00",
   "quarters": [
    {
     "depreciation": 74.53,
@@ -53075,7 +55056,7 @@
  },
  "NTPC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:50+00:00",
+  "fetched_at": "2026-09-18T19:05:29+00:00",
   "quarters": [
    {
     "depreciation": 4037.68,
@@ -53250,7 +55231,7 @@
  },
  "NTPCGREEN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:48:46+00:00",
+  "fetched_at": "2026-09-18T19:05:25+00:00",
   "quarters": [
    {
     "depreciation": 194.56,
@@ -53355,7 +55336,7 @@
  },
  "NUVAMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:34+00:00",
+  "fetched_at": "2026-09-18T19:06:13+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -53530,7 +55511,7 @@
  },
  "NUVOCO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:38+00:00",
+  "fetched_at": "2026-09-18T19:06:17+00:00",
   "quarters": [
    {
     "depreciation": 225.63,
@@ -53705,7 +55686,7 @@
  },
  "NYKAA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T18:53:27+00:00",
+  "fetched_at": "2026-09-18T18:15:00+00:00",
   "quarters": [
    {
     "depreciation": 54.64,
@@ -53880,7 +55861,7 @@
  },
  "OBEROIRLTY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:42+00:00",
+  "fetched_at": "2026-09-18T19:06:21+00:00",
   "quarters": [
    {
     "depreciation": 11.31,
@@ -54041,7 +56022,7 @@
  },
  "OFSS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:10+00:00",
+  "fetched_at": "2026-09-18T19:06:49+00:00",
   "quarters": [
    {
     "depreciation": 19.01,
@@ -54216,7 +56197,7 @@
  },
  "OIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:50+00:00",
+  "fetched_at": "2026-09-18T19:06:29+00:00",
   "quarters": [
    {
     "depreciation": 499.04,
@@ -54377,7 +56358,7 @@
  },
  "OLAELEC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:54+00:00",
+  "fetched_at": "2026-09-18T19:06:33+00:00",
   "quarters": [
    {
     "depreciation": 125.77,
@@ -54496,7 +56477,7 @@
  },
  "OLECTRA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:58+00:00",
+  "fetched_at": "2026-09-18T19:06:37+00:00",
   "quarters": [
    {
     "depreciation": 8.79,
@@ -54671,7 +56652,7 @@
  },
  "ONESOURCE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:07+00:00",
+  "fetched_at": "2026-09-18T19:06:45+00:00",
   "quarters": [
    {
     "depreciation": 19.06,
@@ -54790,7 +56771,7 @@
  },
  "ONGC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:49:46+00:00",
+  "fetched_at": "2026-09-18T19:06:25+00:00",
   "quarters": [
    {
     "depreciation": 6698.06,
@@ -54965,7 +56946,7 @@
  },
  "PAGEIND": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:50:42+00:00",
+  "fetched_at": "2026-09-18T19:07:21+00:00",
   "quarters": [
    {
     "depreciation": 24.65,
@@ -55126,7 +57107,7 @@
  },
  "PARADEEP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:46+00:00",
+  "fetched_at": "2026-09-18T19:07:25+00:00",
   "quarters": [
    {
     "depreciation": 50.68,
@@ -55301,7 +57282,7 @@
  },
  "PATANJALI": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:50+00:00",
+  "fetched_at": "2026-09-18T19:07:29+00:00",
   "quarters": [
    {
     "depreciation": 56.96,
@@ -55434,7 +57415,7 @@
  },
  "PAYTM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:02+00:00",
+  "fetched_at": "2026-09-18T19:06:41+00:00",
   "quarters": [
    {
     "depreciation": 18.01,
@@ -55609,7 +57590,7 @@
  },
  "PCBL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:18+00:00",
+  "fetched_at": "2026-09-18T19:06:57+00:00",
   "quarters": [
    {
     "depreciation": 48.24,
@@ -55784,7 +57765,7 @@
  },
  "PERSISTENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:54+00:00",
+  "fetched_at": "2026-09-18T19:07:33+00:00",
   "quarters": [
    {
     "depreciation": 74.4,
@@ -55959,7 +57940,7 @@
  },
  "PETRONET": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:58+00:00",
+  "fetched_at": "2026-09-18T19:07:37+00:00",
   "quarters": [
    {
     "depreciation": 194.81,
@@ -56309,7 +58290,7 @@
  },
  "PFIZER": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:51:02+00:00",
+  "fetched_at": "2026-09-18T19:07:41+00:00",
   "quarters": [
    {
     "depreciation": 15.43,
@@ -56631,7 +58612,7 @@
  },
  "PGEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:22+00:00",
+  "fetched_at": "2026-09-18T19:07:01+00:00",
   "quarters": [
    {
     "depreciation": 11.05,
@@ -56806,7 +58787,7 @@
  },
  "PHOENIXLTD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:51:06+00:00",
+  "fetched_at": "2026-09-18T19:07:45+00:00",
   "quarters": [
    {
     "depreciation": 65.91,
@@ -56981,7 +58962,7 @@
  },
  "PIDILITIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:51:14+00:00",
+  "fetched_at": "2026-09-18T19:07:53+00:00",
   "quarters": [
    {
     "depreciation": 75.21,
@@ -57156,7 +59137,7 @@
  },
  "PIIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:26+00:00",
+  "fetched_at": "2026-09-18T19:07:05+00:00",
   "quarters": [
    {
     "depreciation": 80.3,
@@ -57331,7 +59312,7 @@
  },
  "PINELABS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:51:18+00:00",
+  "fetched_at": "2026-09-18T19:07:57+00:00",
   "quarters": [
    {
     "depreciation": 65.87,
@@ -57394,7 +59375,7 @@
  },
  "PIRAMALFIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:51:22+00:00",
+  "fetched_at": "2026-09-18T19:08:01+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -57590,7 +59571,7 @@
  },
  "PNBHOUSING": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:30+00:00",
+  "fetched_at": "2026-09-18T19:07:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -57765,7 +59746,7 @@
  },
  "POLICYBZR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:14+00:00",
+  "fetched_at": "2026-09-18T19:06:53+00:00",
   "quarters": [
    {
     "depreciation": 22.32,
@@ -58638,9 +60619,184 @@
   ],
   "source": "NSE XBRL"
  },
+ "POWERINDIA": {
+  "basis": "standalone",
+  "fetched_at": "2026-09-18T18:18:32+00:00",
+  "quarters": [
+   {
+    "depreciation": 22.5,
+    "eps": 5.84,
+    "expenses": 1162.62,
+    "interest": 10.67,
+    "net_profit": 24.74,
+    "operating_profit": 65.33,
+    "opm_pct": 5.32,
+    "other_income": 0.21,
+    "period": "Sep 2023",
+    "profit_before_tax": 32.37,
+    "sales": 1227.95,
+    "tax_pct": 23.57
+   },
+   {
+    "depreciation": 22.73,
+    "eps": 5.42,
+    "expenses": 1206.2,
+    "interest": 13.71,
+    "net_profit": 22.97,
+    "operating_profit": 68.0,
+    "opm_pct": 5.34,
+    "other_income": 2.22,
+    "period": "Dec 2023",
+    "profit_before_tax": 33.78,
+    "sales": 1274.2,
+    "tax_pct": 32.0
+   },
+   {
+    "depreciation": 22.52,
+    "eps": 26.82,
+    "expenses": 1513.31,
+    "interest": 11.2,
+    "net_profit": 113.66,
+    "operating_profit": 181.97,
+    "opm_pct": 10.73,
+    "other_income": 3.92,
+    "period": "Mar 2024",
+    "profit_before_tax": 152.17,
+    "sales": 1695.28,
+    "tax_pct": 25.31
+   },
+   {
+    "depreciation": 22.05,
+    "eps": 2.46,
+    "expenses": 1279.34,
+    "interest": 10.89,
+    "net_profit": 10.42,
+    "operating_profit": 47.9,
+    "opm_pct": 3.61,
+    "other_income": 0.09,
+    "period": "Jun 2024",
+    "profit_before_tax": 15.05,
+    "sales": 1327.24,
+    "tax_pct": 30.76
+   },
+   {
+    "depreciation": 22.83,
+    "eps": 12.34,
+    "expenses": 1444.0,
+    "interest": 16.39,
+    "net_profit": 52.29,
+    "operating_profit": 109.74,
+    "opm_pct": 7.06,
+    "other_income": 0.09,
+    "period": "Sep 2024",
+    "profit_before_tax": 70.61,
+    "sales": 1553.74,
+    "tax_pct": 25.95
+   },
+   {
+    "depreciation": 22.99,
+    "eps": 32.41,
+    "expenses": 1453.36,
+    "interest": 11.97,
+    "net_profit": 137.38,
+    "operating_profit": 166.91,
+    "opm_pct": 10.3,
+    "other_income": 52.11,
+    "period": "Dec 2024",
+    "profit_before_tax": 184.06,
+    "sales": 1620.27,
+    "tax_pct": 25.36
+   },
+   {
+    "depreciation": 23.48,
+    "eps": 43.15,
+    "expenses": 1645.71,
+    "interest": 5.99,
+    "net_profit": 183.89,
+    "operating_profit": 237.97,
+    "opm_pct": 12.63,
+    "other_income": 38.17,
+    "period": "Mar 2025",
+    "profit_before_tax": 246.67,
+    "sales": 1883.68,
+    "tax_pct": 25.45
+   },
+   {
+    "depreciation": 25.01,
+    "eps": 29.53,
+    "expenses": 1324.0,
+    "interest": 3.95,
+    "net_profit": 131.6,
+    "operating_profit": 154.9,
+    "opm_pct": 10.47,
+    "other_income": 50.94,
+    "period": "Jun 2025",
+    "profit_before_tax": 176.88,
+    "sales": 1478.9,
+    "tax_pct": 25.6
+   },
+   {
+    "depreciation": 25.82,
+    "eps": 59.31,
+    "expenses": 1533.56,
+    "interest": 2.86,
+    "net_profit": 264.36,
+    "operating_profit": 298.99,
+    "opm_pct": 16.32,
+    "other_income": 82.6,
+    "period": "Sep 2025",
+    "profit_before_tax": 352.91,
+    "sales": 1832.55,
+    "tax_pct": 25.09
+   },
+   {
+    "depreciation": 26.56,
+    "eps": 58.65,
+    "expenses": 1736.9,
+    "interest": 2.53,
+    "net_profit": 261.42,
+    "operating_profit": 345.31,
+    "opm_pct": 16.58,
+    "other_income": 85.8,
+    "period": "Dec 2025",
+    "profit_before_tax": 347.78,
+    "sales": 2082.21,
+    "tax_pct": 24.83
+   },
+   {
+    "depreciation": 26.86,
+    "eps": 74.14,
+    "expenses": 2337.77,
+    "interest": 3.44,
+    "net_profit": 330.46,
+    "operating_profit": 416.28,
+    "opm_pct": 15.12,
+    "other_income": 57.37,
+    "period": "Mar 2026",
+    "profit_before_tax": 443.35,
+    "sales": 2754.05,
+    "tax_pct": 25.46
+   },
+   {
+    "depreciation": 28.46,
+    "eps": 65.99,
+    "expenses": 2130.18,
+    "interest": 3.28,
+    "net_profit": 294.15,
+    "operating_profit": 363.51,
+    "opm_pct": 14.58,
+    "other_income": 57.74,
+    "period": "Jun 2026",
+    "profit_before_tax": 389.51,
+    "sales": 2493.69,
+    "tax_pct": 24.48
+   }
+  ],
+  "source": "NSE XBRL"
+ },
  "PPLPHARMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:51:26+00:00",
+  "fetched_at": "2026-09-18T19:08:05+00:00",
   "quarters": [
    {
     "depreciation": 184.51,
@@ -59109,7 +61265,7 @@
  },
  "PTCIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:34+00:00",
+  "fetched_at": "2026-09-18T19:07:13+00:00",
   "quarters": [
    {
     "depreciation": 4.15,
@@ -59284,7 +61440,7 @@
  },
  "PVRINOX": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:50:38+00:00",
+  "fetched_at": "2026-09-18T19:07:17+00:00",
   "quarters": [
    {
     "depreciation": 308.6,
@@ -59459,7 +61615,7 @@
  },
  "PWL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:51:10+00:00",
+  "fetched_at": "2026-09-18T19:07:49+00:00",
   "quarters": [
    {
     "depreciation": 104.69,
@@ -60019,7 +62175,7 @@
  },
  "RAMCOCEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:58+00:00",
+  "fetched_at": "2026-09-18T20:06:29+00:00",
   "quarters": [
    {
     "depreciation": 162.75,
@@ -62063,7 +64219,7 @@
  },
  "SAIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:54:46+00:00",
+  "fetched_at": "2026-09-18T20:04:17+00:00",
   "quarters": [
    {
     "depreciation": 1326.59,
@@ -63379,7 +65535,7 @@
  },
  "SBIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:54:42+00:00",
+  "fetched_at": "2026-09-18T20:04:13+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -65745,7 +67901,7 @@
  },
  "SPLPETRO": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:55:10+00:00",
+  "fetched_at": "2026-09-18T20:04:41+00:00",
   "quarters": [
    {
     "depreciation": 14.26,
@@ -66095,7 +68251,7 @@
  },
  "SUMICHEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:54:50+00:00",
+  "fetched_at": "2026-09-18T20:04:21+00:00",
   "quarters": [
    {
     "depreciation": 15.77,
@@ -66270,7 +68426,7 @@
  },
  "SUNDARMFIN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:02+00:00",
+  "fetched_at": "2026-09-18T20:04:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -66445,7 +68601,7 @@
  },
  "SUNPHARMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:54:54+00:00",
+  "fetched_at": "2026-09-18T20:04:25+00:00",
   "quarters": [
    {
     "depreciation": 632.82,
@@ -66620,7 +68776,7 @@
  },
  "SUNTV": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:54:58+00:00",
+  "fetched_at": "2026-09-18T20:04:29+00:00",
   "quarters": [
    {
     "depreciation": 218.75,
@@ -66795,7 +68951,7 @@
  },
  "SUPREMEIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:06+00:00",
+  "fetched_at": "2026-09-18T20:04:37+00:00",
   "quarters": [
    {
     "depreciation": 71.92,
@@ -66970,7 +69126,7 @@
  },
  "SUZLON": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:14+00:00",
+  "fetched_at": "2026-09-18T20:04:45+00:00",
   "quarters": [
    {
     "depreciation": 51.17,
@@ -67145,7 +69301,7 @@
  },
  "SWANCORP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:18+00:00",
+  "fetched_at": "2026-09-18T20:04:49+00:00",
   "quarters": [
    {
     "depreciation": 27.1,
@@ -67320,7 +69476,7 @@
  },
  "SWIGGY": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:22+00:00",
+  "fetched_at": "2026-09-18T20:04:53+00:00",
   "quarters": [
    {
     "depreciation": 130.88,
@@ -67439,7 +69595,7 @@
  },
  "SYNGENE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:26+00:00",
+  "fetched_at": "2026-09-18T20:04:57+00:00",
   "quarters": [
    {
     "depreciation": 104.6,
@@ -67614,7 +69770,7 @@
  },
  "SYRMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:30+00:00",
+  "fetched_at": "2026-09-18T20:05:01+00:00",
   "quarters": [
    {
     "depreciation": 11.59,
@@ -67761,7 +69917,7 @@
  },
  "TARIL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:26+00:00",
+  "fetched_at": "2026-09-18T20:06:57+00:00",
   "quarters": [
    {
     "depreciation": 6.94,
@@ -67936,7 +70092,7 @@
  },
  "TATACAP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:42+00:00",
+  "fetched_at": "2026-09-18T20:05:13+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -67999,7 +70155,7 @@
  },
  "TATACHEM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:46+00:00",
+  "fetched_at": "2026-09-18T20:05:17+00:00",
   "quarters": [
    {
     "depreciation": 234.0,
@@ -68174,7 +70330,7 @@
  },
  "TATACOMM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:50+00:00",
+  "fetched_at": "2026-09-18T20:05:21+00:00",
   "quarters": [
    {
     "depreciation": 605.12,
@@ -68349,7 +70505,7 @@
  },
  "TATACONSUM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:58+00:00",
+  "fetched_at": "2026-09-18T20:05:29+00:00",
   "quarters": [
    {
     "depreciation": 93.93,
@@ -68524,7 +70680,7 @@
  },
  "TATAELXSI": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:56:02+00:00",
+  "fetched_at": "2026-09-18T20:05:33+00:00",
   "quarters": [
    {
     "depreciation": 25.01,
@@ -68699,7 +70855,7 @@
  },
  "TATAINVEST": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:06+00:00",
+  "fetched_at": "2026-09-18T20:05:37+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -68860,7 +71016,7 @@
  },
  "TATAPOWER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:18+00:00",
+  "fetched_at": "2026-09-18T20:05:49+00:00",
   "quarters": [
    {
     "depreciation": 925.89,
@@ -69035,7 +71191,7 @@
  },
  "TATASTEEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:22+00:00",
+  "fetched_at": "2026-09-18T20:05:53+00:00",
   "quarters": [
    {
     "depreciation": 2479.85,
@@ -69210,7 +71366,7 @@
  },
  "TATATECH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:26+00:00",
+  "fetched_at": "2026-09-18T20:05:57+00:00",
   "quarters": [
    {
     "depreciation": 27.17,
@@ -69371,7 +71527,7 @@
  },
  "TBOTEK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:34+00:00",
+  "fetched_at": "2026-09-18T20:05:05+00:00",
   "quarters": [
    {
     "depreciation": 15.01,
@@ -69518,7 +71674,7 @@
  },
  "TCS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:54+00:00",
+  "fetched_at": "2026-09-18T20:05:25+00:00",
   "quarters": [
    {
     "depreciation": 1263.0,
@@ -69693,7 +71849,7 @@
  },
  "TECHM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:34+00:00",
+  "fetched_at": "2026-09-18T20:06:05+00:00",
   "quarters": [
    {
     "depreciation": 465.7,
@@ -69868,7 +72024,7 @@
  },
  "TECHNOE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:38+00:00",
+  "fetched_at": "2026-09-18T20:06:09+00:00",
   "quarters": [
    {
     "depreciation": 1.87,
@@ -70043,7 +72199,7 @@
  },
  "TEGA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:42+00:00",
+  "fetched_at": "2026-09-18T20:06:13+00:00",
   "quarters": [
    {
     "depreciation": 13.53,
@@ -70218,7 +72374,7 @@
  },
  "TEJASNET": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:46+00:00",
+  "fetched_at": "2026-09-18T20:06:17+00:00",
   "quarters": [
    {
     "depreciation": 41.68,
@@ -70393,7 +72549,7 @@
  },
  "TENNIND": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:50+00:00",
+  "fetched_at": "2026-09-18T20:06:21+00:00",
   "quarters": [
    {
     "depreciation": 25.82,
@@ -70533,7 +72689,7 @@
  },
  "THERMAX": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:02+00:00",
+  "fetched_at": "2026-09-18T20:06:33+00:00",
   "quarters": [
    {
     "depreciation": 32.96,
@@ -70708,7 +72864,7 @@
  },
  "TIINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:46+00:00",
+  "fetched_at": "2026-09-18T20:07:17+00:00",
   "quarters": [
    {
     "depreciation": 118.15,
@@ -70883,7 +73039,7 @@
  },
  "TIMKEN": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:57:06+00:00",
+  "fetched_at": "2026-09-18T20:06:37+00:00",
   "quarters": [
    {
     "depreciation": 21.07,
@@ -71058,7 +73214,7 @@
  },
  "TITAGARH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:10+00:00",
+  "fetched_at": "2026-09-18T20:06:41+00:00",
   "quarters": [
    {
     "depreciation": 6.69,
@@ -71233,7 +73389,7 @@
  },
  "TITAN": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:14+00:00",
+  "fetched_at": "2026-09-18T20:06:45+00:00",
   "quarters": [
    {
     "depreciation": 144.0,
@@ -71408,7 +73564,7 @@
  },
  "TMCV": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:10+00:00",
+  "fetched_at": "2026-09-18T20:05:41+00:00",
   "quarters": [
    {
     "depreciation": 472.0,
@@ -71471,7 +73627,7 @@
  },
  "TMPV": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:56:14+00:00",
+  "fetched_at": "2026-09-18T20:05:45+00:00",
   "quarters": [
    {
     "depreciation": 6636.42,
@@ -71646,7 +73802,7 @@
  },
  "TORNTPHARM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:18+00:00",
+  "fetched_at": "2026-09-18T20:06:49+00:00",
   "quarters": [
    {
     "depreciation": 201.0,
@@ -71821,7 +73977,7 @@
  },
  "TORNTPOWER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:22+00:00",
+  "fetched_at": "2026-09-18T20:06:53+00:00",
   "quarters": [
    {
     "depreciation": 341.74,
@@ -71996,7 +74152,7 @@
  },
  "TRAVELFOOD": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:30+00:00",
+  "fetched_at": "2026-09-18T20:07:01+00:00",
   "quarters": [
    {
     "depreciation": 33.52,
@@ -72073,7 +74229,7 @@
  },
  "TRENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:34+00:00",
+  "fetched_at": "2026-09-18T20:07:05+00:00",
   "quarters": [
    {
     "depreciation": 141.42,
@@ -72248,7 +74404,7 @@
  },
  "TRIDENT": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:38+00:00",
+  "fetched_at": "2026-09-18T20:07:09+00:00",
   "quarters": [
    {
     "depreciation": 89.39,
@@ -72423,7 +74579,7 @@
  },
  "TRITURBINE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:42+00:00",
+  "fetched_at": "2026-09-18T20:07:13+00:00",
   "quarters": [
    {
     "depreciation": 5.11,
@@ -72598,7 +74754,7 @@
  },
  "TTML": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:56:30+00:00",
+  "fetched_at": "2026-09-18T20:06:01+00:00",
   "quarters": [
    {
     "depreciation": 36.31,
@@ -72773,7 +74929,7 @@
  },
  "TVSMOTOR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:55:38+00:00",
+  "fetched_at": "2026-09-18T20:05:09+00:00",
   "quarters": [
    {
     "depreciation": 237.13,
@@ -72948,7 +75104,7 @@
  },
  "UBL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:14+00:00",
+  "fetched_at": "2026-09-18T20:07:45+00:00",
   "quarters": [
    {
     "depreciation": 50.92,
@@ -73123,7 +75279,7 @@
  },
  "UCOBANK": {
   "basis": "standalone",
-  "fetched_at": "2026-09-17T19:57:50+00:00",
+  "fetched_at": "2026-09-18T20:07:21+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -73298,7 +75454,7 @@
  },
  "ULTRACEMCO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:06+00:00",
+  "fetched_at": "2026-09-18T20:07:37+00:00",
   "quarters": [
    {
     "depreciation": 797.83,
@@ -73473,7 +75629,7 @@
  },
  "UNIONBANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:10+00:00",
+  "fetched_at": "2026-09-18T20:07:41+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -73634,7 +75790,7 @@
  },
  "UNITDSPR": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:18+00:00",
+  "fetched_at": "2026-09-18T20:07:49+00:00",
   "quarters": [
    {
     "depreciation": 65.3,
@@ -73809,7 +75965,7 @@
  },
  "UNOMINDA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:54+00:00",
+  "fetched_at": "2026-09-18T20:07:25+00:00",
   "quarters": [
    {
     "depreciation": 119.01,
@@ -73984,7 +76140,7 @@
  },
  "UPL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:57:58+00:00",
+  "fetched_at": "2026-09-18T20:07:29+00:00",
   "quarters": [
    {
     "depreciation": 636.0,
@@ -74159,7 +76315,7 @@
  },
  "URBANCO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:22+00:00",
+  "fetched_at": "2026-09-18T20:07:53+00:00",
   "quarters": [
    {
     "depreciation": 10.41,
@@ -74222,7 +76378,7 @@
  },
  "USHAMART": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:26+00:00",
+  "fetched_at": "2026-09-18T20:07:57+00:00",
   "quarters": [
    {
     "depreciation": 17.99,
@@ -74397,7 +76553,7 @@
  },
  "UTIAMC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:02+00:00",
+  "fetched_at": "2026-09-18T20:07:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -74572,7 +76728,7 @@
  },
  "VBL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:34+00:00",
+  "fetched_at": "2026-09-18T20:08:05+00:00",
   "quarters": [
    {
     "depreciation": 170.81,
@@ -74747,7 +76903,7 @@
  },
  "VEDL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:38+00:00",
+  "fetched_at": "2026-09-18T20:08:09+00:00",
   "quarters": [
    {
     "depreciation": 2642.0,
@@ -74922,7 +77078,7 @@
  },
  "VIJAYA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:42+00:00",
+  "fetched_at": "2026-09-18T20:08:13+00:00",
   "quarters": [
    {
     "depreciation": 13.69,
@@ -75097,7 +77253,7 @@
  },
  "VMM": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:46+00:00",
+  "fetched_at": "2026-09-18T20:08:17+00:00",
   "quarters": [
    {
     "depreciation": 140.66,
@@ -75202,7 +77358,7 @@
  },
  "VOLTAS": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:54+00:00",
+  "fetched_at": "2026-09-18T20:08:25+00:00",
   "quarters": [
    {
     "depreciation": 11.68,
@@ -75377,7 +77533,7 @@
  },
  "VTL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:30+00:00",
+  "fetched_at": "2026-09-18T20:08:01+00:00",
   "quarters": [
    {
     "depreciation": 103.71,
@@ -75552,7 +77708,7 @@
  },
  "WAAREEENER": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:58:58+00:00",
+  "fetched_at": "2026-09-18T20:08:29+00:00",
   "quarters": [
    {
     "depreciation": 84.27,
@@ -75657,7 +77813,7 @@
  },
  "WELCORP": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:02+00:00",
+  "fetched_at": "2026-09-18T20:08:33+00:00",
   "quarters": [
    {
     "depreciation": 85.68,
@@ -75818,7 +77974,7 @@
  },
  "WELSPUNLIV": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:06+00:00",
+  "fetched_at": "2026-09-18T20:08:37+00:00",
   "quarters": [
    {
     "depreciation": 98.5,
@@ -75993,7 +78149,7 @@
  },
  "WHIRLPOOL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:10+00:00",
+  "fetched_at": "2026-09-18T20:08:41+00:00",
   "quarters": [
    {
     "depreciation": 49.16,
@@ -76168,7 +78324,7 @@
  },
  "WIPRO": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:14+00:00",
+  "fetched_at": "2026-09-18T20:08:45+00:00",
   "quarters": [
    {
     "depreciation": 897.0,
@@ -76343,7 +78499,7 @@
  },
  "WOCKPHARMA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:18+00:00",
+  "fetched_at": "2026-09-18T20:08:49+00:00",
   "quarters": [
    {
     "depreciation": 55.0,
@@ -76518,7 +78674,7 @@
  },
  "YESBANK": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:22+00:00",
+  "fetched_at": "2026-09-18T20:08:53+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -76693,7 +78849,7 @@
  },
  "ZEEL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:30+00:00",
+  "fetched_at": "2026-09-18T20:09:01+00:00",
   "quarters": [
    {
     "depreciation": 77.23,
@@ -76840,7 +78996,7 @@
  },
  "ZENSARTECH": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:38+00:00",
+  "fetched_at": "2026-09-18T20:09:09+00:00",
   "quarters": [
    {
     "depreciation": 36.6,
@@ -77015,7 +79171,7 @@
  },
  "ZENTEC": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:34+00:00",
+  "fetched_at": "2026-09-18T20:09:05+00:00",
   "quarters": [
    {
     "depreciation": 2.2,
@@ -77190,7 +79346,7 @@
  },
  "ZFCVINDIA": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:26+00:00",
+  "fetched_at": "2026-09-18T20:08:57+00:00",
   "quarters": [
    {
     "depreciation": 27.07,
@@ -77365,7 +79521,7 @@
  },
  "ZYDUSLIFE": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:42+00:00",
+  "fetched_at": "2026-09-18T20:09:13+00:00",
   "quarters": [
    {
     "depreciation": 184.2,
@@ -77540,7 +79696,7 @@
  },
  "ZYDUSWELL": {
   "basis": "consolidated",
-  "fetched_at": "2026-09-17T19:59:46+00:00",
+  "fetched_at": "2026-09-18T20:09:17+00:00",
   "quarters": [
    {
     "depreciation": 5.8,
