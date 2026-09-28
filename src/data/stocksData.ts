@@ -104,7 +104,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 37635,
     "low_52w": 28835,
     "face_value": 10,
-    "volume": 1498,
+    "volume": 1497,
     "pe_ratio": 65.01,
     "industry_pe": 43.2,
     "pb_ratio": 21.29,
@@ -272,7 +272,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1913.7,
     "low_52w": 1213.5,
     "face_value": 10,
-    "volume": 151647,
+    "volume": 151619,
     "pe_ratio": 11.96,
     "industry_pe": 28.93,
     "pb_ratio": 1.11,
@@ -339,7 +339,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE012A01025",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 114547
+    "avg_volume_30d": 114546
   },
   {
     "symbol": "ACMESOLAR",
@@ -356,7 +356,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 458.65,
     "low_52w": 198.96,
     "face_value": 10,
-    "volume": 1868257,
+    "volume": 1868249,
     "pe_ratio": 42.64,
     "industry_pe": 26.78,
     "pb_ratio": 5.24,
@@ -440,7 +440,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5081.4,
     "low_52w": 3053.3,
     "face_value": 10,
-    "volume": 31145,
+    "volume": 31144,
     "pe_ratio": 28.28,
     "industry_pe": 43.2,
     "pb_ratio": 4.47,
@@ -692,7 +692,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 277.6,
     "low_52w": 172.3,
     "face_value": 10,
-    "volume": 684855,
+    "volume": 684854,
     "pe_ratio": 19.92,
     "industry_pe": 43.8,
     "pb_ratio": 2.24,
@@ -776,7 +776,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 556.5,
     "low_52w": 436.95,
     "face_value": 10,
-    "volume": 161872,
+    "volume": 161832,
     "pe_ratio": 16.96,
     "industry_pe": 20.24,
     "pb_ratio": 2.52,
@@ -843,7 +843,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE883F01010",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 358292
+    "avg_volume_30d": 358291
   },
   {
     "symbol": "AARTIIND",
@@ -860,7 +860,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 543.15,
     "low_52w": 340,
     "face_value": 10,
-    "volume": 270601,
+    "volume": 270580,
     "pe_ratio": 31.6,
     "industry_pe": 28.93,
     "pb_ratio": 2.89,
@@ -927,7 +927,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE769A01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 677948
+    "avg_volume_30d": 677947
   },
   {
     "symbol": "AAVAS",
@@ -944,7 +944,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1736.4,
     "low_52w": 1073.9,
     "face_value": 10,
-    "volume": 88609,
+    "volume": 88608,
     "pe_ratio": 14.88,
     "industry_pe": 20.24,
     "pb_ratio": 2.01,
@@ -1110,7 +1110,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1253.9,
     "low_52w": 748.95,
     "face_value": 10,
-    "volume": 230417,
+    "volume": 230412,
     "pe_ratio": 32.46,
     "industry_pe": 43.2,
     "pb_ratio": 7.18,
@@ -1194,7 +1194,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3694.8,
     "low_52w": 1317.8,
     "face_value": 10,
-    "volume": 202319,
+    "volume": 202318,
     "pe_ratio": 68.2,
     "industry_pe": 28.93,
     "pb_ratio": 15.92,
@@ -1866,7 +1866,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 87.99,
     "low_52w": 47.59,
     "face_value": 10,
-    "volume": 3612163,
+    "volume": 3612160,
     "pe_ratio": null,
     "industry_pe": 40.38,
     "pb_ratio": 0.99,
@@ -1950,7 +1950,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 147.9,
     "low_52w": 77.17,
     "face_value": 10,
-    "volume": 397149,
+    "volume": 397148,
     "pe_ratio": 53.97,
     "industry_pe": 40.38,
     "pb_ratio": 6.67,
@@ -2034,7 +2034,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1890.4,
     "low_52w": 1094.9,
     "face_value": 10,
-    "volume": 335649,
+    "volume": 335640,
     "pe_ratio": null,
     "industry_pe": 33.89,
     "pb_ratio": 3.56,
@@ -2101,7 +2101,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE055A01016",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 197403
+    "avg_volume_30d": 197402
   },
   {
     "symbol": "ABSLAMC",
@@ -2118,7 +2118,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1199,
     "low_52w": 716.95,
     "face_value": 10,
-    "volume": 141768,
+    "volume": 141766,
     "pe_ratio": 29.2,
     "industry_pe": 20.24,
     "pb_ratio": 7.06,
@@ -2202,7 +2202,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3899.1,
     "low_52w": 1276.1,
     "face_value": 10,
-    "volume": 164866,
+    "volume": 164855,
     "pe_ratio": 92.48,
     "industry_pe": 43.2,
     "pb_ratio": 23.37,
@@ -2269,7 +2269,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE819V01029",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 267182
+    "avg_volume_30d": 267181
   },
   {
     "symbol": "AEGISLOG",
@@ -2286,7 +2286,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1486,
     "low_52w": 587.95,
     "face_value": 10,
-    "volume": 373917,
+    "volume": 373914,
     "pe_ratio": 35.14,
     "industry_pe": 10.33,
     "pb_ratio": 7.58,
@@ -2370,7 +2370,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 318.3,
     "low_52w": 161.65,
     "face_value": 10,
-    "volume": 2120135,
+    "volume": 2120065,
     "pe_ratio": 107.78,
     "industry_pe": 10.33,
     "pb_ratio": 7.71,
@@ -2437,7 +2437,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0INX01018",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1513116
+    "avg_volume_30d": 1513113
   },
   {
     "symbol": "AFCONS",
@@ -2454,7 +2454,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 465.7,
     "low_52w": 251.65,
     "face_value": 10,
-    "volume": 782588,
+    "volume": 782558,
     "pe_ratio": 65.36,
     "industry_pe": 43.2,
     "pb_ratio": 1.7,
@@ -2521,7 +2521,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE101I01011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2214111
+    "avg_volume_30d": 2214110
   },
   {
     "symbol": "AFFLE",
@@ -2538,7 +2538,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1967.4,
     "low_52w": 1268.7,
     "face_value": 10,
-    "volume": 100502,
+    "volume": 100501,
     "pe_ratio": 44.09,
     "industry_pe": 39.56,
     "pb_ratio": 5.95,
@@ -2622,7 +2622,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3718.2,
     "low_52w": 2388.4,
     "face_value": 10,
-    "volume": 97334,
+    "volume": 97333,
     "pe_ratio": 38.19,
     "industry_pe": 45.71,
     "pb_ratio": 9.73,
@@ -2790,7 +2790,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 723.45,
     "low_52w": 384.15,
     "face_value": 10,
-    "volume": 1807707,
+    "volume": 1807607,
     "pe_ratio": 91.58,
     "industry_pe": 43.8,
     "pb_ratio": 12.17,
@@ -2857,7 +2857,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE552Z01027",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 824812
+    "avg_volume_30d": 824809
   },
   {
     "symbol": "ARE&M",
@@ -2874,7 +2874,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1016.45,
     "low_52w": 672.45,
     "face_value": 10,
-    "volume": 361657,
+    "volume": 361455,
     "pe_ratio": 15.38,
     "industry_pe": 43.2,
     "pb_ratio": 1.75,
@@ -2941,7 +2941,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE885A01032",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 397588
+    "avg_volume_30d": 397581
   },
   {
     "symbol": "AMBER",
@@ -3126,7 +3126,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2229.5,
     "low_52w": 1405.9,
     "face_value": 10,
-    "volume": 394041,
+    "volume": 394039,
     "pe_ratio": 77.01,
     "industry_pe": 20.24,
     "pb_ratio": 35.7,
@@ -3210,7 +3210,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 735.6,
     "low_52w": 405.7,
     "face_value": 10,
-    "volume": 1048002,
+    "volume": 1047891,
     "pe_ratio": 36.73,
     "industry_pe": 33.89,
     "pb_ratio": 3.78,
@@ -3277,7 +3277,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE242C01024",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2489742
+    "avg_volume_30d": 2489738
   },
   {
     "symbol": "ANGELONE",
@@ -3462,7 +3462,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1376,
     "low_52w": 1064.7,
     "face_value": 10,
-    "volume": 194982,
+    "volume": 194980,
     "pe_ratio": 75.61,
     "industry_pe": 28.93,
     "pb_ratio": 4.05,
@@ -3546,7 +3546,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 18945,
     "low_52w": 6966,
     "face_value": 10,
-    "volume": 128695,
+    "volume": 128694,
     "pe_ratio": 58.68,
     "industry_pe": 43.2,
     "pb_ratio": 12.86,
@@ -3714,7 +3714,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 536.9,
     "low_52w": 371.8,
     "face_value": 10,
-    "volume": 453792,
+    "volume": 453747,
     "pe_ratio": 14.55,
     "industry_pe": 40.38,
     "pb_ratio": 1.47,
@@ -3781,7 +3781,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE438A01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 854898
+    "avg_volume_30d": 854897
   },
   {
     "symbol": "APTUS",
@@ -3798,7 +3798,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 326.15,
     "low_52w": 194.57,
     "face_value": 10,
-    "volume": 710188,
+    "volume": 710146,
     "pe_ratio": 12.08,
     "industry_pe": 20.24,
     "pb_ratio": 2.35,
@@ -3865,7 +3865,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE852O01025",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1503138
+    "avg_volume_30d": 1503136
   },
   {
     "symbol": "ASAHIINDIA",
@@ -3882,7 +3882,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1066.4,
     "low_52w": 784.4,
     "face_value": 10,
-    "volume": 114544,
+    "volume": 114529,
     "pe_ratio": 53.65,
     "industry_pe": 40.38,
     "pb_ratio": 6.05,
@@ -3949,7 +3949,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE439A01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 157207
+    "avg_volume_30d": 157206
   },
   {
     "symbol": "ASHOKLEY",
@@ -4134,7 +4134,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 869.7,
     "low_52w": 537.95,
     "face_value": 10,
-    "volume": 538796,
+    "volume": 538791,
     "pe_ratio": 121.32,
     "industry_pe": 45.71,
     "pb_ratio": 8.42,
@@ -4386,7 +4386,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 7108,
     "low_52w": 5664.5,
     "face_value": 10,
-    "volume": 22707,
+    "volume": 22706,
     "pe_ratio": 22.2,
     "industry_pe": 28.93,
     "pb_ratio": 2.83,
@@ -4554,7 +4554,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 667.9,
     "low_52w": 405.3,
     "face_value": 10,
-    "volume": 112111,
+    "volume": 112054,
     "pe_ratio": 27.02,
     "industry_pe": 20.24,
     "pb_ratio": 3.16,
@@ -4621,7 +4621,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE206F01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 537977
+    "avg_volume_30d": 537975
   },
   {
     "symbol": "DMART",
@@ -4806,7 +4806,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2235.5,
     "low_52w": 1369.4,
     "face_value": 10,
-    "volume": 214115,
+    "volume": 214114,
     "pe_ratio": 87.35,
     "industry_pe": 43.2,
     "pb_ratio": 5.66,
@@ -4890,7 +4890,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 351.4,
     "low_52w": 221.22,
     "face_value": 10,
-    "volume": 486210,
+    "volume": 486181,
     "pe_ratio": 12.95,
     "industry_pe": 43.2,
     "pb_ratio": 3.7,
@@ -4957,7 +4957,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE153T01027",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2146492
+    "avg_volume_30d": 2146491
   },
   {
     "symbol": "BSE",
@@ -5394,7 +5394,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 111.77,
     "low_52w": 73.09,
     "face_value": 10,
-    "volume": 2875456,
+    "volume": 2875406,
     "pe_ratio": 24.63,
     "industry_pe": 20.24,
     "pb_ratio": 3.05,
@@ -5461,7 +5461,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE377Y01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 2796897
+    "avg_volume_30d": 2796895
   },
   {
     "symbol": "BALKRISIND",
@@ -5478,7 +5478,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2716.3,
     "low_52w": 1974,
     "face_value": 10,
-    "volume": 74344,
+    "volume": 74316,
     "pe_ratio": 28.38,
     "industry_pe": 40.38,
     "pb_ratio": 3.8,
@@ -5545,7 +5545,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE787D01026",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 565306
+    "avg_volume_30d": 565305
   },
   {
     "symbol": "BALRAMCHIN",
@@ -5562,7 +5562,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 767.1,
     "low_52w": 397.8,
     "face_value": 10,
-    "volume": 1951275,
+    "volume": 1951118,
     "pe_ratio": 37.44,
     "industry_pe": 43.8,
     "pb_ratio": 3.32,
@@ -5629,7 +5629,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE119A01028",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 5613446
+    "avg_volume_30d": 5613441
   },
   {
     "symbol": "BANDHANBNK",
@@ -5982,7 +5982,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1220.3,
     "low_52w": 607.5,
     "face_value": 10,
-    "volume": 118578,
+    "volume": 118577,
     "pe_ratio": 54.65,
     "industry_pe": 40.38,
     "pb_ratio": 5.03,
@@ -6066,7 +6066,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5113.2,
     "low_52w": 3671.8,
     "face_value": 10,
-    "volume": 55293,
+    "volume": 55292,
     "pe_ratio": 22.54,
     "industry_pe": 28.93,
     "pb_ratio": 5.56,
@@ -6148,7 +6148,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 261.35,
     "low_52w": 145.11,
     "face_value": 10,
-    "volume": 4150563,
+    "volume": 4150313,
     "pe_ratio": 41.71,
     "industry_pe": 40.38,
     "pb_ratio": 4.23,
@@ -6215,7 +6215,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE894V01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 3241168
+    "avg_volume_30d": 3241159
   },
   {
     "symbol": "BERGEPAINT",
@@ -6232,7 +6232,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 590.1,
     "low_52w": 404.5,
     "face_value": 10,
-    "volume": 354793,
+    "volume": 354792,
     "pe_ratio": 42.36,
     "industry_pe": 28.93,
     "pb_ratio": 7.64,
@@ -6820,7 +6820,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1914.3,
     "low_52w": 1426.5,
     "face_value": 10,
-    "volume": 85888,
+    "volume": 85873,
     "pe_ratio": 37.65,
     "industry_pe": 39.56,
     "pb_ratio": 9.95,
@@ -6904,7 +6904,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 759.45,
     "low_52w": 540.95,
     "face_value": 10,
-    "volume": 56337,
+    "volume": 56335,
     "pe_ratio": 54.01,
     "industry_pe": 43.8,
     "pb_ratio": 8.7,
@@ -6988,7 +6988,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 221.56,
     "low_52w": 131.33,
     "face_value": 10,
-    "volume": 16292053,
+    "volume": 16292045,
     "pe_ratio": 46.66,
     "industry_pe": 20.24,
     "pb_ratio": 11.75,
@@ -7055,7 +7055,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0HOQ01053",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 44379148
+    "avg_volume_30d": 44379147
   },
   {
     "symbol": "BIOCON",
@@ -7156,7 +7156,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 465.5,
     "low_52w": 271.25,
     "face_value": 10,
-    "volume": 1022682,
+    "volume": 1022681,
     "pe_ratio": 13.43,
     "industry_pe": 26.69,
     "pb_ratio": 1.84,
@@ -7240,7 +7240,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 6694,
     "low_52w": 4647.4,
     "face_value": 10,
-    "volume": 6178,
+    "volume": 6176,
     "pe_ratio": 39.33,
     "industry_pe": 43.2,
     "pb_ratio": 6.34,
@@ -7324,7 +7324,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 682.35,
     "low_52w": 327.25,
     "face_value": 10,
-    "volume": 194429,
+    "volume": 194372,
     "pe_ratio": 40.71,
     "industry_pe": 45.71,
     "pb_ratio": 7.11,
@@ -7391,7 +7391,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0KBH01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 466805
+    "avg_volume_30d": 466803
   },
   {
     "symbol": "BLUESTARCO",
@@ -7492,7 +7492,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2103.1,
     "low_52w": 1322,
     "face_value": 10,
-    "volume": 30379,
+    "volume": 30360,
     "pe_ratio": 7.66,
     "industry_pe": 43.8,
     "pb_ratio": 1.4,
@@ -7559,7 +7559,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE050A01025",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 627966
+    "avg_volume_30d": 627965
   },
   {
     "symbol": "BOSCHLTD",
@@ -7660,7 +7660,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 377.9,
     "low_52w": 168.83,
     "face_value": 10,
-    "volume": 38455824,
+    "volume": 38455774,
     "pe_ratio": null,
     "industry_pe": 40.38,
     "pb_ratio": 1.84,
@@ -7727,7 +7727,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE02RE01045",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 6516431
+    "avg_volume_30d": 6516429
   },
   {
     "symbol": "BRIGADE",
@@ -7744,7 +7744,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 781.05,
     "low_52w": 476.02,
     "face_value": 10,
-    "volume": 174681,
+    "volume": 174680,
     "pe_ratio": 29.53,
     "industry_pe": 33.89,
     "pb_ratio": 27.92,
@@ -7912,7 +7912,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1949.2,
     "low_52w": 801.1,
     "face_value": 10,
-    "volume": 86634,
+    "volume": 86622,
     "pe_ratio": 34.52,
     "industry_pe": 26.69,
     "pb_ratio": 5.24,
@@ -7979,7 +7979,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0BV301023",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 215490
+    "avg_volume_30d": 215489
   },
   {
     "symbol": "CCL",
@@ -7996,7 +7996,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1229.7,
     "low_52w": 829.25,
     "face_value": 10,
-    "volume": 79846,
+    "volume": 79843,
     "pe_ratio": 31.74,
     "industry_pe": 43.8,
     "pb_ratio": 5.86,
@@ -8080,7 +8080,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 198.72,
     "low_52w": 136.18,
     "face_value": 10,
-    "volume": 1338404,
+    "volume": 1338304,
     "pe_ratio": 11.61,
     "industry_pe": 26.78,
     "pb_ratio": 1.44,
@@ -8147,7 +8147,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE486A01021",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1771004
+    "avg_volume_30d": 1771001
   },
   {
     "symbol": "CGPOWER",
@@ -8248,7 +8248,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 497.25,
     "low_52w": 375,
     "face_value": 10,
-    "volume": 172432,
+    "volume": 172405,
     "pe_ratio": 16.15,
     "industry_pe": 40.38,
     "pb_ratio": 1.88,
@@ -8315,7 +8315,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE536H01010",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 251525
+    "avg_volume_30d": 251524
   },
   {
     "symbol": "CRISIL",
@@ -8332,7 +8332,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5031.3,
     "low_52w": 3705.9,
     "face_value": 10,
-    "volume": 135500,
+    "volume": 135463,
     "pe_ratio": 38.48,
     "industry_pe": 20.24,
     "pb_ratio": 10.4,
@@ -8399,7 +8399,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE007A01025",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 54909
+    "avg_volume_30d": 54907
   },
   {
     "symbol": "CANFINHOME",
@@ -8416,7 +8416,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 950.2,
     "low_52w": 737.6,
     "face_value": 10,
-    "volume": 105192,
+    "volume": 105181,
     "pe_ratio": 8.69,
     "industry_pe": 20.24,
     "pb_ratio": 1.64,
@@ -8483,7 +8483,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE477A01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 250462
+    "avg_volume_30d": 250461
   },
   {
     "symbol": "CANBK",
@@ -8584,7 +8584,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 157.23,
     "low_52w": 108.62,
     "face_value": 10,
-    "volume": 621523,
+    "volume": 621483,
     "pe_ratio": 107.87,
     "industry_pe": 20.24,
     "pb_ratio": 8.59,
@@ -8649,7 +8649,7 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Financial Services",
     "isin": "INE01TY01017",
-    "avg_volume_30d": 1086931
+    "avg_volume_30d": 1086930
   },
   {
     "symbol": "CAPLIPOINT",
@@ -8666,7 +8666,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2867.4,
     "low_52w": 1504.8,
     "face_value": 10,
-    "volume": 121341,
+    "volume": 121333,
     "pe_ratio": 32.65,
     "industry_pe": 45.71,
     "pb_ratio": 6.18,
@@ -8750,7 +8750,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 279.9,
     "low_52w": 151.97,
     "face_value": 10,
-    "volume": 2049292,
+    "volume": 2049288,
     "pe_ratio": 20.57,
     "industry_pe": 20.24,
     "pb_ratio": 3.33,
@@ -8834,7 +8834,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1296.5,
     "low_52w": 748.35,
     "face_value": 10,
-    "volume": 234631,
+    "volume": 234612,
     "pe_ratio": 112.92,
     "industry_pe": 43.2,
     "pb_ratio": 6.1,
@@ -8901,7 +8901,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE120A01034",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 488691
+    "avg_volume_30d": 488690
   },
   {
     "symbol": "CARTRADE",
@@ -8918,7 +8918,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3268,
     "low_52w": 1623.4,
     "face_value": 10,
-    "volume": 332503,
+    "volume": 332502,
     "pe_ratio": 62.04,
     "industry_pe": 40.38,
     "pb_ratio": 5.55,
@@ -9002,7 +9002,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 203.9,
     "low_52w": 173.52,
     "face_value": 10,
-    "volume": 4883748,
+    "volume": 4883744,
     "pe_ratio": 18.21,
     "industry_pe": 10.33,
     "pb_ratio": 10.43,
@@ -9069,7 +9069,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE172A01027",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 2797195
+    "avg_volume_30d": 2797194
   },
   {
     "symbol": "CEATLTD",
@@ -9086,7 +9086,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 4302.7,
     "low_52w": 3106.1,
     "face_value": 10,
-    "volume": 60829,
+    "volume": 60828,
     "pe_ratio": 22.42,
     "industry_pe": 40.38,
     "pb_ratio": 2.25,
@@ -9170,7 +9170,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1639.6,
     "low_52w": 509.7,
     "face_value": 10,
-    "volume": 132372,
+    "volume": 132371,
     "pe_ratio": 34.97,
     "industry_pe": 43.2,
     "pb_ratio": 8.77,
@@ -9254,7 +9254,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 40.44,
     "low_52w": 29.62,
     "face_value": 10,
-    "volume": 4227460,
+    "volume": 4227440,
     "pe_ratio": 5.82,
     "industry_pe": 20.24,
     "pb_ratio": 0.68,
@@ -9422,7 +9422,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 976,
     "low_52w": 702.3,
     "face_value": 10,
-    "volume": 69482,
+    "volume": 69472,
     "pe_ratio": 36.07,
     "industry_pe": 40.38,
     "pb_ratio": 5.14,
@@ -9506,7 +9506,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 519.7,
     "low_52w": 409.1,
     "face_value": 10,
-    "volume": 399683,
+    "volume": 399648,
     "pe_ratio": 8.67,
     "industry_pe": 28.93,
     "pb_ratio": 1.61,
@@ -9573,7 +9573,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE085A01013",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 552917
+    "avg_volume_30d": 552916
   },
   {
     "symbol": "CHENNPETRO",
@@ -9590,7 +9590,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1626.4,
     "low_52w": 723.6,
     "face_value": 10,
-    "volume": 2808816,
+    "volume": 2808776,
     "pe_ratio": 5.02,
     "industry_pe": 10.33,
     "pb_ratio": 1.89,
@@ -9657,7 +9657,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE178A01016",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1860953
+    "avg_volume_30d": 1860951
   },
   {
     "symbol": "CHOICEIN",
@@ -9674,7 +9674,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 850.3,
     "low_52w": 583.95,
     "face_value": 10,
-    "volume": 399582,
+    "volume": 399482,
     "pe_ratio": 71.2,
     "industry_pe": 20.24,
     "pb_ratio": 8.95,
@@ -9741,7 +9741,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE102B01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 376884
+    "avg_volume_30d": 376881
   },
   {
     "symbol": "CHOLAHLDNG",
@@ -9758,7 +9758,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2014.8,
     "low_52w": 1350.9,
     "face_value": 10,
-    "volume": 182376,
+    "volume": 182371,
     "pe_ratio": 9.78,
     "industry_pe": 20.24,
     "pb_ratio": 1.69,
@@ -10010,7 +10010,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 238.48,
     "low_52w": 157.61,
     "face_value": 10,
-    "volume": 4824535,
+    "volume": 4824463,
     "pe_ratio": 15.26,
     "industry_pe": 20.24,
     "pb_ratio": 2.03,
@@ -10077,7 +10077,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE491A01021",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 2400411
+    "avg_volume_30d": 2400408
   },
   {
     "symbol": "CLEAN",
@@ -10094,7 +10094,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1105,
     "low_52w": 656.4,
     "face_value": 10,
-    "volume": 195320,
+    "volume": 195319,
     "pe_ratio": 34.62,
     "industry_pe": 28.93,
     "pb_ratio": 5.25,
@@ -10430,7 +10430,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 904.75,
     "low_52w": 279.9,
     "face_value": 10,
-    "volume": 568888,
+    "volume": 568862,
     "pe_ratio": 164.24,
     "industry_pe": 45.71,
     "pb_ratio": 4.44,
@@ -10682,7 +10682,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1647.7,
     "low_52w": 1014.8,
     "face_value": 10,
-    "volume": 109931,
+    "volume": 109930,
     "pe_ratio": 47.89,
     "industry_pe": 45.71,
     "pb_ratio": 7.22,
@@ -10749,7 +10749,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE338H01029",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 160967
+    "avg_volume_30d": 160966
   },
   {
     "symbol": "CONCOR",
@@ -10850,7 +10850,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2408.2,
     "low_52w": 1745.6,
     "face_value": 10,
-    "volume": 58462,
+    "volume": 58461,
     "pe_ratio": 30.56,
     "industry_pe": 28.93,
     "pb_ratio": 4.45,
@@ -10934,7 +10934,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 11851,
     "low_52w": 6424,
     "face_value": 10,
-    "volume": 49461,
+    "volume": 49460,
     "pe_ratio": 54.36,
     "industry_pe": 40.38,
     "pb_ratio": 7.7,
@@ -11018,7 +11018,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1614,
     "low_52w": 1134.9,
     "face_value": 10,
-    "volume": 184321,
+    "volume": 184316,
     "pe_ratio": 16.66,
     "industry_pe": 20.24,
     "pb_ratio": 2.56,
@@ -11270,7 +11270,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1211.7,
     "low_52w": 752.85,
     "face_value": 10,
-    "volume": 246665,
+    "volume": 246654,
     "pe_ratio": 31.79,
     "industry_pe": 43.2,
     "pb_ratio": 2.1,
@@ -11354,7 +11354,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1330.2,
     "low_52w": 944.6,
     "face_value": 10,
-    "volume": 52556,
+    "volume": 52544,
     "pe_ratio": 10.28,
     "industry_pe": 43.2,
     "pb_ratio": 1.96,
@@ -11522,7 +11522,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2673.9,
     "low_52w": 2046.5,
     "face_value": 10,
-    "volume": 31071,
+    "volume": 31057,
     "pe_ratio": 57.42,
     "industry_pe": 43.2,
     "pb_ratio": 10.18,
@@ -11690,7 +11690,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2253.7,
     "low_52w": 1610.2,
     "face_value": 10,
-    "volume": 91044,
+    "volume": 91039,
     "pe_ratio": 33.07,
     "industry_pe": 28.93,
     "pb_ratio": 1.72,
@@ -11774,7 +11774,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 4932.3,
     "low_52w": 2182.5,
     "face_value": 10,
-    "volume": 310251,
+    "volume": 310239,
     "pe_ratio": 87.75,
     "industry_pe": 43.2,
     "pb_ratio": 13.79,
@@ -11858,7 +11858,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1664.3,
     "low_52w": 872.1,
     "face_value": 10,
-    "volume": 106939,
+    "volume": 106932,
     "pe_ratio": 17.31,
     "industry_pe": 28.93,
     "pb_ratio": 2.49,
@@ -11942,7 +11942,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1875.9,
     "low_52w": 1286.8,
     "face_value": 10,
-    "volume": 100448,
+    "volume": 100447,
     "pe_ratio": 27.31,
     "industry_pe": 28.93,
     "pb_ratio": 3.62,
@@ -12110,7 +12110,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 171.74,
     "low_52w": 94.59,
     "face_value": 10,
-    "volume": 3776034,
+    "volume": 3775787,
     "pe_ratio": null,
     "industry_pe": 40.38,
     "pb_ratio": 10.48,
@@ -12177,7 +12177,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE872J01023",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2482157
+    "avg_volume_30d": 2482148
   },
   {
     "symbol": "DIVISLAB",
@@ -12362,7 +12362,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1968.4,
     "low_52w": 1307.6,
     "face_value": 10,
-    "volume": 137298,
+    "volume": 137296,
     "pe_ratio": 59.87,
     "industry_pe": 45.71,
     "pb_ratio": 12.93,
@@ -12530,7 +12530,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1089.8,
     "low_52w": 689.55,
     "face_value": 10,
-    "volume": 343279,
+    "volume": 343277,
     "pe_ratio": 27.17,
     "industry_pe": 28.93,
     "pb_ratio": 1.43,
@@ -12614,7 +12614,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 399.1,
     "low_52w": 273.55,
     "face_value": 10,
-    "volume": 150657,
+    "volume": 150656,
     "pe_ratio": 24.49,
     "industry_pe": 40.38,
     "pb_ratio": 3.51,
@@ -12681,7 +12681,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE230A01023",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 263385
+    "avg_volume_30d": 263384
   },
   {
     "symbol": "EICHERMOT",
@@ -12782,7 +12782,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 619.65,
     "low_52w": 354.75,
     "face_value": 10,
-    "volume": 6723264,
+    "volume": 6723064,
     "pe_ratio": 45.66,
     "industry_pe": 43.2,
     "pb_ratio": 4.68,
@@ -12849,7 +12849,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE205B01031",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1826202
+    "avg_volume_30d": 1826195
   },
   {
     "symbol": "ELGIEQUIP",
@@ -12866,7 +12866,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 642.4,
     "low_52w": 415.55,
     "face_value": 10,
-    "volume": 142510,
+    "volume": 142509,
     "pe_ratio": 42.23,
     "industry_pe": 43.2,
     "pb_ratio": 8.46,
@@ -12950,7 +12950,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 557.95,
     "low_52w": 363.65,
     "face_value": 10,
-    "volume": 2032584,
+    "volume": 2032513,
     "pe_ratio": 23.14,
     "industry_pe": 43.8,
     "pb_ratio": 5.8,
@@ -13017,7 +13017,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE548C01032",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2068767
+    "avg_volume_30d": 2068764
   },
   {
     "symbol": "EMCURE",
@@ -13034,7 +13034,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2009.6,
     "low_52w": 1271.8,
     "face_value": 10,
-    "volume": 39044,
+    "volume": 39043,
     "pe_ratio": 34.48,
     "industry_pe": 45.71,
     "pb_ratio": 7.38,
@@ -13118,7 +13118,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 365.35,
     "low_52w": 172.93,
     "face_value": 10,
-    "volume": 1008750,
+    "volume": 1008747,
     "pe_ratio": 17.03,
     "industry_pe": 26.69,
     "pb_ratio": 5.91,
@@ -13202,7 +13202,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3029.5,
     "low_52w": 2201.2,
     "face_value": 10,
-    "volume": 83167,
+    "volume": 83166,
     "pe_ratio": 38.61,
     "industry_pe": 40.38,
     "pb_ratio": 5.55,
@@ -13286,7 +13286,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 315.65,
     "low_52w": 164.56,
     "face_value": 10,
-    "volume": 9835161,
+    "volume": 9834861,
     "pe_ratio": 22.28,
     "industry_pe": 43.2,
     "pb_ratio": 5.62,
@@ -13353,7 +13353,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE510A01028",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 6788964
+    "avg_volume_30d": 6788954
   },
   {
     "symbol": "ERIS",
@@ -13370,7 +13370,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1701.3,
     "low_52w": 1236.3,
     "face_value": 10,
-    "volume": 31387,
+    "volume": 31386,
     "pe_ratio": 26.35,
     "industry_pe": 45.71,
     "pb_ratio": 4.33,
@@ -13454,7 +13454,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3962.1,
     "low_52w": 2724.7,
     "face_value": 10,
-    "volume": 98472,
+    "volume": 98468,
     "pe_ratio": 22.06,
     "industry_pe": 43.2,
     "pb_ratio": 2.48,
@@ -13622,7 +13622,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 490.65,
     "low_52w": 287.9,
     "face_value": 10,
-    "volume": 945757,
+    "volume": 945756,
     "pe_ratio": 36.06,
     "industry_pe": 40.38,
     "pb_ratio": 2.52,
@@ -13874,7 +13874,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 997.8,
     "low_52w": 662.1,
     "face_value": 10,
-    "volume": 65029,
+    "volume": 64977,
     "pe_ratio": null,
     "industry_pe": 28.93,
     "pb_ratio": 35.91,
@@ -13941,7 +13941,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE188A01015",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1372097
+    "avg_volume_30d": 1372096
   },
   {
     "symbol": "FINCABLES",
@@ -13958,7 +13958,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1480,
     "low_52w": 710.8,
     "face_value": 10,
-    "volume": 431896,
+    "volume": 431881,
     "pe_ratio": 26.61,
     "industry_pe": 43.2,
     "pb_ratio": 3.54,
@@ -14042,7 +14042,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 367.2,
     "low_52w": 204.39,
     "face_value": 10,
-    "volume": 400651,
+    "volume": 400551,
     "pe_ratio": 26.89,
     "industry_pe": 26.69,
     "pb_ratio": 4.03,
@@ -14109,7 +14109,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE684F01012",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1979953
+    "avg_volume_30d": 1979949
   },
   {
     "symbol": "FIVESTAR",
@@ -14126,7 +14126,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 660,
     "low_52w": 347.3,
     "face_value": 10,
-    "volume": 381806,
+    "volume": 381791,
     "pe_ratio": 13.85,
     "industry_pe": 20.24,
     "pb_ratio": 2.07,
@@ -14193,7 +14193,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE128S01021",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 627757
+    "avg_volume_30d": 627756
   },
   {
     "symbol": "FORCEMOT",
@@ -14630,7 +14630,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1587.7,
     "low_52w": 823.1,
     "face_value": 10,
-    "volume": 129652,
+    "volume": 129648,
     "pe_ratio": 76.14,
     "industry_pe": 40.38,
     "pb_ratio": 14.18,
@@ -14714,7 +14714,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 927.1,
     "low_52w": 516.6,
     "face_value": 10,
-    "volume": 33041,
+    "volume": 33004,
     "pe_ratio": 26.75,
     "industry_pe": 28.93,
     "pb_ratio": 3.9,
@@ -14781,7 +14781,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE297H01019",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 75694
+    "avg_volume_30d": 75692
   },
   {
     "symbol": "GRSE",
@@ -14798,7 +14798,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3093.8,
     "low_52w": 1972.8,
     "face_value": 10,
-    "volume": 389322,
+    "volume": 389297,
     "pe_ratio": 32.1,
     "industry_pe": 43.2,
     "pb_ratio": 9.79,
@@ -14865,7 +14865,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE382Z01011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 367912
+    "avg_volume_30d": 367911
   },
   {
     "symbol": "GICRE",
@@ -14882,7 +14882,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 409.35,
     "low_52w": 329.3,
     "face_value": 10,
-    "volume": 453653,
+    "volume": 453650,
     "pe_ratio": 6.3,
     "industry_pe": 20.24,
     "pb_ratio": 0.58,
@@ -14964,7 +14964,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 9598,
     "low_52w": 6925.5,
     "face_value": 10,
-    "volume": 10567,
+    "volume": 10566,
     "pe_ratio": 34.85,
     "industry_pe": 43.8,
     "pb_ratio": 23.84,
@@ -15048,7 +15048,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3026.2,
     "low_52w": 1596.8,
     "face_value": 10,
-    "volume": 223664,
+    "volume": 223663,
     "pe_ratio": 41.61,
     "industry_pe": 45.71,
     "pb_ratio": 4.61,
@@ -15132,7 +15132,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3106.4,
     "low_52w": 2103.2,
     "face_value": 10,
-    "volume": 459919,
+    "volume": 459918,
     "pe_ratio": 45.97,
     "industry_pe": 45.71,
     "pb_ratio": 21.64,
@@ -15300,7 +15300,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1508.9,
     "low_52w": 961.1,
     "face_value": 10,
-    "volume": 116649,
+    "volume": 116645,
     "pe_ratio": 69.28,
     "industry_pe": 45.71,
     "pb_ratio": 9.72,
@@ -15384,7 +15384,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 365.6,
     "low_52w": 239,
     "face_value": 10,
-    "volume": 4342846,
+    "volume": 4342694,
     "pe_ratio": 49.39,
     "industry_pe": 20.24,
     "pb_ratio": 5.19,
@@ -15449,7 +15449,7 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Financial Services",
     "isin": "INE03JT01014",
-    "avg_volume_30d": 636472
+    "avg_volume_30d": 636467
   },
   {
     "symbol": "GPIL",
@@ -15466,7 +15466,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 305.85,
     "low_52w": 225.46,
     "face_value": 10,
-    "volume": 1263167,
+    "volume": 1263120,
     "pe_ratio": 17.95,
     "industry_pe": 28.93,
     "pb_ratio": 2.38,
@@ -15533,7 +15533,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE177H01039",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1404001
+    "avg_volume_30d": 1404000
   },
   {
     "symbol": "GODFRYPHLP",
@@ -15718,7 +15718,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1417.7,
     "low_52w": 749,
     "face_value": 10,
-    "volume": 124816,
+    "volume": 124815,
     "pe_ratio": 31.35,
     "industry_pe": 43.2,
     "pb_ratio": 3.24,
@@ -15886,7 +15886,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 909.3,
     "low_52w": 514.6,
     "face_value": 10,
-    "volume": 457654,
+    "volume": 457581,
     "pe_ratio": 31.57,
     "industry_pe": 45.71,
     "pb_ratio": 4.15,
@@ -15953,7 +15953,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE101D01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1143602
+    "avg_volume_30d": 1143599
   },
   {
     "symbol": "GRAPHITE",
@@ -15970,7 +15970,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 844.65,
     "low_52w": 526.15,
     "face_value": 10,
-    "volume": 1013536,
+    "volume": 1013436,
     "pe_ratio": 71.79,
     "industry_pe": 43.2,
     "pb_ratio": 2.66,
@@ -16037,7 +16037,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE371A01025",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2929450
+    "avg_volume_30d": 2929447
   },
   {
     "symbol": "GRASIM",
@@ -16138,7 +16138,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1875.4,
     "low_52w": 1295.1,
     "face_value": 10,
-    "volume": 166668,
+    "volume": 166667,
     "pe_ratio": 27.63,
     "industry_pe": 43.2,
     "pb_ratio": 4.38,
@@ -16222,7 +16222,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1719.6,
     "low_52w": 976,
     "face_value": 10,
-    "volume": 3277820,
+    "volume": 3277770,
     "pe_ratio": 5.85,
     "industry_pe": 43.2,
     "pb_ratio": 1.29,
@@ -16289,7 +16289,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE017A01032",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 955447
+    "avg_volume_30d": 955445
   },
   {
     "symbol": "FLUOROCHEM",
@@ -16306,7 +16306,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 4786.3,
     "low_52w": 2980.4,
     "face_value": 10,
-    "volume": 33894,
+    "volume": 33891,
     "pe_ratio": 79.41,
     "industry_pe": 28.93,
     "pb_ratio": 6.38,
@@ -16390,7 +16390,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 746.75,
     "low_52w": 469.6,
     "face_value": 10,
-    "volume": 726728,
+    "volume": 726723,
     "pe_ratio": 17.13,
     "industry_pe": 10.33,
     "pb_ratio": 2.35,
@@ -16474,7 +16474,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1098.8,
     "low_52w": 614.8,
     "face_value": 10,
-    "volume": 4227780,
+    "volume": 4227778,
     "pe_ratio": 27.86,
     "industry_pe": 43.2,
     "pb_ratio": 9.75,
@@ -16643,7 +16643,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 772.85,
     "low_52w": 559.95,
     "face_value": 10,
-    "volume": 284016,
+    "volume": 284015,
     "pe_ratio": 18.59,
     "industry_pe": 20.24,
     "pb_ratio": 2.56,
@@ -17061,7 +17061,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 251.47,
     "low_52w": 60.95,
     "face_value": 10,
-    "volume": 5595472,
+    "volume": 5593472,
     "pe_ratio": 52.13,
     "industry_pe": 26.69,
     "pb_ratio": 6.21,
@@ -17128,7 +17128,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE548A01028",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 10683945
+    "avg_volume_30d": 10683879
   },
   {
     "symbol": "HAVELLS",
@@ -17313,7 +17313,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 792.55,
     "low_52w": 407,
     "face_value": 10,
-    "volume": 168849,
+    "volume": 168825,
     "pe_ratio": 22.53,
     "industry_pe": 26.69,
     "pb_ratio": 4.45,
@@ -17380,7 +17380,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE093A01041",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 346608
+    "avg_volume_30d": 346607
   },
   {
     "symbol": "HSCL",
@@ -17397,7 +17397,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 800.9,
     "low_52w": 422,
     "face_value": 10,
-    "volume": 1391800,
+    "volume": 1391727,
     "pe_ratio": 40.65,
     "industry_pe": 28.93,
     "pb_ratio": 7.18,
@@ -17464,7 +17464,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE019C01026",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 5864804
+    "avg_volume_30d": 5864802
   },
   {
     "symbol": "HINDALCO",
@@ -17649,7 +17649,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 760.05,
     "low_52w": 313.3,
     "face_value": 10,
-    "volume": 6073959,
+    "volume": 6073953,
     "pe_ratio": 40.85,
     "industry_pe": 28.93,
     "pb_ratio": 13.89,
@@ -18153,7 +18153,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 502.8,
     "low_52w": 256.3,
     "face_value": 10,
-    "volume": 1531678,
+    "volume": 1531653,
     "pe_ratio": 61,
     "industry_pe": 43.8,
     "pb_ratio": 10.72,
@@ -18220,7 +18220,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0J5401028",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 890596
+    "avg_volume_30d": 890595
   },
   {
     "symbol": "HONAUT",
@@ -18237,7 +18237,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 40105,
     "low_52w": 26325,
     "face_value": 10,
-    "volume": 2224,
+    "volume": 2223,
     "pe_ratio": 54.25,
     "industry_pe": 43.2,
     "pb_ratio": 6.71,
@@ -18321,7 +18321,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 243.93,
     "low_52w": 159.58,
     "face_value": 10,
-    "volume": 1537537,
+    "volume": 1537535,
     "pe_ratio": 7.69,
     "industry_pe": 20.24,
     "pb_ratio": 1.54,
@@ -18655,7 +18655,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3538.5,
     "low_52w": 2585.9,
     "face_value": 10,
-    "volume": 166072,
+    "volume": 166071,
     "pe_ratio": 44.16,
     "industry_pe": 20.24,
     "pb_ratio": 38.09,
@@ -18819,7 +18819,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 116.01,
     "low_52w": 61.5,
     "face_value": 10,
-    "volume": 14693684,
+    "volume": 14693209,
     "pe_ratio": 9.73,
     "industry_pe": 20.24,
     "pb_ratio": 1.28,
@@ -18886,7 +18886,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE008A01015",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 16973977
+    "avg_volume_30d": 16973962
   },
   {
     "symbol": "IDFCFIRSTB",
@@ -18987,7 +18987,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 102.51,
     "low_52w": 46.81,
     "face_value": 10,
-    "volume": 34159273,
+    "volume": 34159271,
     "pe_ratio": 106.89,
     "industry_pe": 20.24,
     "pb_ratio": 2.13,
@@ -19071,7 +19071,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 696.4,
     "low_52w": 419.35,
     "face_value": 10,
-    "volume": 1208019,
+    "volume": 1208016,
     "pe_ratio": 12.11,
     "industry_pe": 20.24,
     "pb_ratio": 1.83,
@@ -19155,7 +19155,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 22.84,
     "low_52w": 17.14,
     "face_value": 10,
-    "volume": 13402269,
+    "volume": 13402219,
     "pe_ratio": 21.97,
     "industry_pe": 43.2,
     "pb_ratio": 0.97,
@@ -19222,7 +19222,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE821I01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 15284051
+    "avg_volume_30d": 15284049
   },
   {
     "symbol": "IRCON",
@@ -19239,7 +19239,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 182.6,
     "low_52w": 103.25,
     "face_value": 10,
-    "volume": 1969364,
+    "volume": 1969283,
     "pe_ratio": 15.43,
     "industry_pe": 43.2,
     "pb_ratio": 1.46,
@@ -19306,7 +19306,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE962Y01021",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1525402
+    "avg_volume_30d": 1525399
   },
   {
     "symbol": "ITCHOTELS",
@@ -19323,7 +19323,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 230.7,
     "low_52w": 137.87,
     "face_value": 10,
-    "volume": 1335576,
+    "volume": 1335408,
     "pe_ratio": 37.14,
     "industry_pe": 40.38,
     "pb_ratio": 2.83,
@@ -19390,7 +19390,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE379A01028",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1434126
+    "avg_volume_30d": 1434121
   },
   {
     "symbol": "ITC",
@@ -19491,7 +19491,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 356.65,
     "low_52w": 239.05,
     "face_value": 10,
-    "volume": 155760,
+    "volume": 155728,
     "pe_ratio": 73.15,
     "industry_pe": 26.69,
     "pb_ratio": 12.41,
@@ -19558,7 +19558,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE248A01017",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 191404
+    "avg_volume_30d": 191403
   },
   {
     "symbol": "INDGN",
@@ -19575,7 +19575,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 613.3,
     "low_52w": 423.5,
     "face_value": 10,
-    "volume": 744647,
+    "volume": 744629,
     "pe_ratio": 36.9,
     "industry_pe": 45.71,
     "pb_ratio": 4.71,
@@ -19642,7 +19642,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE065X01017",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 624482
+    "avg_volume_30d": 624481
   },
   {
     "symbol": "INDIACEM",
@@ -19659,7 +19659,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 478.55,
     "low_52w": 312.4,
     "face_value": 10,
-    "volume": 151873,
+    "volume": 151872,
     "pe_ratio": 104.13,
     "industry_pe": 28.93,
     "pb_ratio": 0.96,
@@ -19743,7 +19743,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2504.5,
     "low_52w": 1631.4,
     "face_value": 10,
-    "volume": 30057,
+    "volume": 30046,
     "pe_ratio": 20.01,
     "industry_pe": 40.38,
     "pb_ratio": 4.43,
@@ -20163,7 +20163,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 40.67,
     "low_52w": 31.38,
     "face_value": 10,
-    "volume": 3113969,
+    "volume": 3113281,
     "pe_ratio": 10.65,
     "industry_pe": 20.24,
     "pb_ratio": 1.57,
@@ -20230,7 +20230,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE565A01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1909852
+    "avg_volume_30d": 1909829
   },
   {
     "symbol": "IRCTC",
@@ -20247,7 +20247,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 730.65,
     "low_52w": 452.95,
     "face_value": 10,
-    "volume": 368317,
+    "volume": 368315,
     "pe_ratio": 26.06,
     "industry_pe": 40.38,
     "pb_ratio": 8.42,
@@ -20499,7 +20499,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 220.12,
     "low_52w": 143.44,
     "face_value": 10,
-    "volume": 1200643,
+    "volume": 1200642,
     "pe_ratio": 15.73,
     "industry_pe": 26.78,
     "pb_ratio": 1.74,
@@ -21004,7 +21004,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1198,
     "low_52w": 598.55,
     "face_value": 10,
-    "volume": 209534,
+    "volume": 209489,
     "pe_ratio": 25.38,
     "industry_pe": 26.69,
     "pb_ratio": 2.76,
@@ -21071,7 +21071,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE306R01017",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 300468
+    "avg_volume_30d": 300466
   },
   {
     "symbol": "INDIGO",
@@ -21172,7 +21172,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 381.25,
     "low_52w": 291,
     "face_value": 10,
-    "volume": 352458,
+    "volume": 352453,
     "pe_ratio": 27.29,
     "industry_pe": 28.93,
     "pb_ratio": 9.39,
@@ -21256,7 +21256,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1937.8,
     "low_52w": 1274.9,
     "face_value": 10,
-    "volume": 137140,
+    "volume": 137087,
     "pe_ratio": 38.36,
     "industry_pe": 45.71,
     "pb_ratio": 10.57,
@@ -21323,7 +21323,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE115Q01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 191354
+    "avg_volume_30d": 191352
   },
   {
     "symbol": "IPCALAB",
@@ -21340,7 +21340,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2009.6,
     "low_52w": 1268.7,
     "face_value": 10,
-    "volume": 170098,
+    "volume": 170097,
     "pe_ratio": 37.16,
     "industry_pe": 45.71,
     "pb_ratio": 6.04,
@@ -21424,7 +21424,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 6725,
     "low_52w": 4701,
     "face_value": 10,
-    "volume": 13801,
+    "volume": 13797,
     "pe_ratio": 40.57,
     "industry_pe": 28.93,
     "pb_ratio": 5.48,
@@ -21491,7 +21491,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE823G01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 35104
+    "avg_volume_30d": 35103
   },
   {
     "symbol": "JBMA",
@@ -21508,7 +21508,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 728.1,
     "low_52w": 486.2,
     "face_value": 10,
-    "volume": 131322,
+    "volume": 131319,
     "pe_ratio": 60.3,
     "industry_pe": 40.38,
     "pb_ratio": 11.83,
@@ -21592,7 +21592,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 604.9,
     "low_52w": 337.8,
     "face_value": 10,
-    "volume": 385040,
+    "volume": 385038,
     "pe_ratio": 14.65,
     "industry_pe": 40.38,
     "pb_ratio": 1.61,
@@ -21676,7 +21676,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 177.95,
     "low_52w": 113.61,
     "face_value": 10,
-    "volume": 2218955,
+    "volume": 2218875,
     "pe_ratio": 11.54,
     "industry_pe": 20.24,
     "pb_ratio": 1.12,
@@ -21743,7 +21743,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE780C01023",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2489686
+    "avg_volume_30d": 2489683
   },
   {
     "symbol": "JSWCEMENT",
@@ -21760,7 +21760,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 142.29,
     "low_52w": 108.02,
     "face_value": 10,
-    "volume": 1801650,
+    "volume": 1801510,
     "pe_ratio": 19.84,
     "industry_pe": 28.93,
     "pb_ratio": 2.3,
@@ -21827,7 +21827,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE718I01012",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1330287
+    "avg_volume_30d": 1330283
   },
   {
     "symbol": "JSWDULUX",
@@ -21844,7 +21844,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3633.9,
     "low_52w": 2714.5,
     "face_value": 10,
-    "volume": 22998,
+    "volume": 22929,
     "pe_ratio": 7.36,
     "industry_pe": 28.93,
     "pb_ratio": 5.89,
@@ -21911,7 +21911,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE133A01011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 22755
+    "avg_volume_30d": 22753
   },
   {
     "symbol": "JSWENERGY",
@@ -22012,7 +22012,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 367.6,
     "low_52w": 234.31,
     "face_value": 10,
-    "volume": 2907639,
+    "volume": 2907359,
     "pe_ratio": 46.13,
     "industry_pe": 43.2,
     "pb_ratio": 6.68,
@@ -22079,7 +22079,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE880J01026",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 3699308
+    "avg_volume_30d": 3699298
   },
   {
     "symbol": "JSWSTEEL",
@@ -22180,7 +22180,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 571.5,
     "low_52w": 272.75,
     "face_value": 10,
-    "volume": 413189,
+    "volume": 413188,
     "pe_ratio": 26.43,
     "industry_pe": 28.93,
     "pb_ratio": 6.37,
@@ -22264,7 +22264,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 22.87,
     "low_52w": 13.37,
     "face_value": 10,
-    "volume": 31872054,
+    "volume": 31872044,
     "pe_ratio": 21.86,
     "industry_pe": 26.78,
     "pb_ratio": 1.19,
@@ -22348,7 +22348,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 192.65,
     "low_52w": 98.09,
     "face_value": 10,
-    "volume": 1443014,
+    "volume": 1442874,
     "pe_ratio": 6.8,
     "industry_pe": 20.24,
     "pb_ratio": 0.95,
@@ -22415,7 +22415,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE168A01041",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1807571
+    "avg_volume_30d": 1807566
   },
   {
     "symbol": "JINDALSAW",
@@ -22432,7 +22432,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 317.5,
     "low_52w": 154.64,
     "face_value": 10,
-    "volume": 1098447,
+    "volume": 1098372,
     "pe_ratio": 27.18,
     "industry_pe": 28.93,
     "pb_ratio": 1.4,
@@ -22499,7 +22499,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE324A01032",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2741337
+    "avg_volume_30d": 2741334
   },
   {
     "symbol": "JSL",
@@ -22516,7 +22516,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 865.65,
     "low_52w": 661.9,
     "face_value": 10,
-    "volume": 1278709,
+    "volume": 1278683,
     "pe_ratio": 18.29,
     "industry_pe": 28.93,
     "pb_ratio": 13.65,
@@ -22583,7 +22583,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE220G01021",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 988111
+    "avg_volume_30d": 988110
   },
   {
     "symbol": "JINDALSTEL",
@@ -22852,7 +22852,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 763.8,
     "low_52w": 541.3,
     "face_value": 10,
-    "volume": 658778,
+    "volume": 658767,
     "pe_ratio": 33.7,
     "industry_pe": 28.93,
     "pb_ratio": 3.31,
@@ -22919,7 +22919,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0BY001018",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 297989
+    "avg_volume_30d": 297988
   },
   {
     "symbol": "JUBLPHARMA",
@@ -22936,7 +22936,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1181.2,
     "low_52w": 807.65,
     "face_value": 10,
-    "volume": 95428,
+    "volume": 95392,
     "pe_ratio": 45.45,
     "industry_pe": 45.71,
     "pb_ratio": 2.37,
@@ -23003,7 +23003,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE700A01033",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 316188
+    "avg_volume_30d": 316187
   },
   {
     "symbol": "JWL",
@@ -23020,7 +23020,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 347.55,
     "low_52w": 222.23,
     "face_value": 10,
-    "volume": 627417,
+    "volume": 627404,
     "pe_ratio": 56.84,
     "industry_pe": 43.2,
     "pb_ratio": 3.21,
@@ -23104,7 +23104,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1113.85,
     "low_52w": 585.5,
     "face_value": 10,
-    "volume": 1202572,
+    "volume": 1202565,
     "pe_ratio": 69.19,
     "industry_pe": 43.2,
     "pb_ratio": 11.89,
@@ -23188,7 +23188,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1218.45,
     "low_52w": 810.9,
     "face_value": 10,
-    "volume": 85213,
+    "volume": 85203,
     "pe_ratio": 41.2,
     "industry_pe": 40.38,
     "pb_ratio": 6.61,
@@ -23440,7 +23440,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1261.6,
     "low_52w": 883.65,
     "face_value": 10,
-    "volume": 113285,
+    "volume": 113284,
     "pe_ratio": 34.65,
     "industry_pe": 43.2,
     "pb_ratio": 6.18,
@@ -23524,7 +23524,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1445.5,
     "low_52w": 1018.1,
     "face_value": 10,
-    "volume": 184927,
+    "volume": 184923,
     "pe_ratio": 20.65,
     "industry_pe": 43.2,
     "pb_ratio": 3.02,
@@ -23591,7 +23591,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE220B01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 149828
+    "avg_volume_30d": 149827
   },
   {
     "symbol": "KALYANKJIL",
@@ -23692,7 +23692,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 354.35,
     "low_52w": 209.18,
     "face_value": 10,
-    "volume": 850010,
+    "volume": 850009,
     "pe_ratio": 11.3,
     "industry_pe": 20.24,
     "pb_ratio": 2.2,
@@ -23860,7 +23860,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 872.95,
     "low_52w": 390.55,
     "face_value": 10,
-    "volume": 320307,
+    "volume": 320295,
     "pe_ratio": 18.69,
     "industry_pe": 43.2,
     "pb_ratio": 1.69,
@@ -23927,7 +23927,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE389H01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1060572
+    "avg_volume_30d": 1060571
   },
   {
     "symbol": "KFINTECH",
@@ -24364,7 +24364,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 4696.2,
     "low_52w": 3047.7,
     "face_value": 10,
-    "volume": 35795,
+    "volume": 35793,
     "pe_ratio": 26.43,
     "industry_pe": 26.69,
     "pb_ratio": 5.26,
@@ -24448,7 +24448,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1730.7,
     "low_52w": 1318.8,
     "face_value": 10,
-    "volume": 596991,
+    "volume": 596941,
     "pe_ratio": 62.57,
     "industry_pe": 26.69,
     "pb_ratio": 15.33,
@@ -24515,7 +24515,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE324D01010",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 575961
+    "avg_volume_30d": 575959
   },
   {
     "symbol": "LICHSGFIN",
@@ -24616,7 +24616,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 459,
     "low_52w": 337.25,
     "face_value": 10,
-    "volume": 438194,
+    "volume": 438193,
     "pe_ratio": 22.09,
     "industry_pe": 43.8,
     "pb_ratio": 7.96,
@@ -24868,7 +24868,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 502.1,
     "low_52w": 241.6,
     "face_value": 10,
-    "volume": 174848,
+    "volume": 174798,
     "pe_ratio": 25.62,
     "industry_pe": 43.2,
     "pb_ratio": 2.85,
@@ -24935,7 +24935,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0I7C01011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 539321
+    "avg_volume_30d": 539319
   },
   {
     "symbol": "LAURUSLABS",
@@ -25036,7 +25036,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 575.35,
     "low_52w": 389.65,
     "face_value": 10,
-    "volume": 378383,
+    "volume": 378363,
     "pe_ratio": 40.38,
     "industry_pe": 40.38,
     "pb_ratio": 2.84,
@@ -25103,7 +25103,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0AQ201015",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 494740
+    "avg_volume_30d": 494739
   },
   {
     "symbol": "LEMONTREE",
@@ -25120,7 +25120,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 173.24,
     "low_52w": 100.42,
     "face_value": 10,
-    "volume": 2501000,
+    "volume": 2500999,
     "pe_ratio": 34.26,
     "industry_pe": 40.38,
     "pb_ratio": 5.91,
@@ -25204,7 +25204,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 707.2,
     "low_52w": 400.15,
     "face_value": 10,
-    "volume": 4303835,
+    "volume": 4302835,
     "pe_ratio": 165.45,
     "industry_pe": 45.71,
     "pb_ratio": 13.02,
@@ -25271,7 +25271,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE956O01016",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 11926582
+    "avg_volume_30d": 11926549
   },
   {
     "symbol": "LICI",
@@ -25370,7 +25370,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 7847.5,
     "low_52w": 5695.5,
     "face_value": 10,
-    "volume": 33655,
+    "volume": 33652,
     "pe_ratio": 96.75,
     "industry_pe": 28.93,
     "pb_ratio": 12.38,
@@ -25454,7 +25454,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2101.2,
     "low_52w": 1098.2,
     "face_value": 10,
-    "volume": 289190,
+    "volume": 289029,
     "pe_ratio": 21.44,
     "industry_pe": 28.93,
     "pb_ratio": 7.45,
@@ -25521,7 +25521,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE281B01032",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 327394
+    "avg_volume_30d": 327388
   },
   {
     "symbol": "LODHA",
@@ -25706,7 +25706,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 76.03,
     "low_52w": 52.1,
     "face_value": 10,
-    "volume": 917288,
+    "volume": 917286,
     "pe_ratio": 18.99,
     "industry_pe": 43.2,
     "pb_ratio": 3.99,
@@ -25874,7 +25874,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1313.6,
     "low_52w": 908.4,
     "face_value": 10,
-    "volume": 135658,
+    "volume": 135646,
     "pe_ratio": 14.34,
     "industry_pe": 26.78,
     "pb_ratio": 1.61,
@@ -25958,7 +25958,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 412.3,
     "low_52w": 272.95,
     "face_value": 10,
-    "volume": 763339,
+    "volume": 763309,
     "pe_ratio": 14.14,
     "industry_pe": 20.24,
     "pb_ratio": 1.73,
@@ -26025,7 +26025,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE774D01024",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1698243
+    "avg_volume_30d": 1698242
   },
   {
     "symbol": "M&M",
@@ -26210,7 +26210,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 206.77,
     "low_52w": 132.79,
     "face_value": 10,
-    "volume": 21758371,
+    "volume": 21757446,
     "pe_ratio": 9.39,
     "industry_pe": 10.33,
     "pb_ratio": 2.09,
@@ -26277,7 +26277,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE103A01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 10925056
+    "avg_volume_30d": 10925025
   },
   {
     "symbol": "MANKIND",
@@ -26798,7 +26798,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 240.19,
     "low_52w": 134.77,
     "face_value": 10,
-    "volume": 15870448,
+    "volume": 15870428,
     "pe_ratio": null,
     "industry_pe": 40.38,
     "pb_ratio": 22.85,
@@ -26880,7 +26880,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 745.25,
     "low_52w": 480.85,
     "face_value": 10,
-    "volume": 126788,
+    "volume": 126782,
     "pe_ratio": 32.08,
     "industry_pe": 40.38,
     "pb_ratio": 6,
@@ -26964,7 +26964,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 52.05,
     "low_52w": 34.29,
     "face_value": 10,
-    "volume": 14877720,
+    "volume": 14877538,
     "pe_ratio": 37.42,
     "industry_pe": 40.38,
     "pb_ratio": 10.67,
@@ -27031,7 +27031,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0FS801015",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 10803532
+    "avg_volume_30d": 10803526
   },
   {
     "symbol": "MOTILALOFS",
@@ -27382,7 +27382,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1206,
     "low_52w": 792.95,
     "face_value": 10,
-    "volume": 501344,
+    "volume": 501343,
     "pe_ratio": 12.98,
     "industry_pe": 45.71,
     "pb_ratio": 1.61,
@@ -27550,7 +27550,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 214.02,
     "low_52w": 130.29,
     "face_value": 10,
-    "volume": 1574911,
+    "volume": 1574910,
     "pe_ratio": 11.69,
     "industry_pe": 43.2,
     "pb_ratio": 1.04,
@@ -27718,7 +27718,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 370.9,
     "low_52w": 236.24,
     "face_value": 10,
-    "volume": 672938,
+    "volume": 672933,
     "pe_ratio": 10.54,
     "industry_pe": 26.78,
     "pb_ratio": 1.65,
@@ -27785,7 +27785,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE589A01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1378470
+    "avg_volume_30d": 1378469
   },
   {
     "symbol": "NMDC",
@@ -27886,7 +27886,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 52.55,
     "low_52w": 33.2,
     "face_value": 10,
-    "volume": 7330662,
+    "volume": 7330617,
     "pe_ratio": 149.21,
     "industry_pe": 28.93,
     "pb_ratio": 0.93,
@@ -27953,7 +27953,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0NNS01018",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 9552153
+    "avg_volume_30d": 9552152
   },
   {
     "symbol": "NTPCGREEN",
@@ -27970,7 +27970,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 118.86,
     "low_52w": 85.18,
     "face_value": 10,
-    "volume": 1621716,
+    "volume": 1621449,
     "pe_ratio": 146.37,
     "industry_pe": 26.78,
     "pb_ratio": 4.16,
@@ -28037,7 +28037,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0ONG01011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2378805
+    "avg_volume_30d": 2378796
   },
   {
     "symbol": "NTPC",
@@ -28138,7 +28138,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2080.3,
     "low_52w": 1605.3,
     "face_value": 10,
-    "volume": 142537,
+    "volume": 142536,
     "pe_ratio": 45.1,
     "industry_pe": 45.71,
     "pb_ratio": 8.15,
@@ -28306,7 +28306,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 730.4,
     "low_52w": 506,
     "face_value": 10,
-    "volume": 267743,
+    "volume": 267740,
     "pe_ratio": 19.85,
     "industry_pe": 43.2,
     "pb_ratio": 1.77,
@@ -28390,7 +28390,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 8775.5,
     "low_52w": 4552.2,
     "face_value": 10,
-    "volume": 44165,
+    "volume": 44155,
     "pe_ratio": 52.22,
     "industry_pe": 28.93,
     "pb_ratio": 10.87,
@@ -28558,7 +28558,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5601,
     "low_52w": 3024.1,
     "face_value": 10,
-    "volume": 657565,
+    "volume": 657554,
     "pe_ratio": 99.9,
     "industry_pe": 26.69,
     "pb_ratio": 35.86,
@@ -28642,7 +28642,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 23995,
     "low_52w": 11555,
     "face_value": 10,
-    "volume": 18958,
+    "volume": 18957,
     "pe_ratio": 55.22,
     "industry_pe": 45.71,
     "pb_ratio": 14.67,
@@ -28726,7 +28726,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 996.55,
     "low_52w": 402.3,
     "face_value": 10,
-    "volume": 347435,
+    "volume": 347415,
     "pe_ratio": 21.35,
     "industry_pe": 26.69,
     "pb_ratio": 3.77,
@@ -28793,7 +28793,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE619B01017",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1037994
+    "avg_volume_30d": 1037993
   },
   {
     "symbol": "NAM-INDIA",
@@ -28894,7 +28894,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 88.36,
     "low_52w": 68.4,
     "face_value": 10,
-    "volume": 863719,
+    "volume": 863602,
     "pe_ratio": 71.44,
     "industry_pe": 20.24,
     "pb_ratio": 3.65,
@@ -28959,7 +28959,7 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Financial Services",
     "isin": "INE995S01015",
-    "avg_volume_30d": 720043
+    "avg_volume_30d": 720039
   },
   {
     "symbol": "NUVAMA",
@@ -28976,7 +28976,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1980.1,
     "low_52w": 1110.6,
     "face_value": 10,
-    "volume": 516480,
+    "volume": 516479,
     "pe_ratio": 28.16,
     "industry_pe": 20.24,
     "pb_ratio": 7.24,
@@ -29060,7 +29060,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 432.85,
     "low_52w": 281.1,
     "face_value": 10,
-    "volume": 219425,
+    "volume": 219422,
     "pe_ratio": 30.14,
     "industry_pe": 28.93,
     "pb_ratio": 1.14,
@@ -29396,7 +29396,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 57.08,
     "low_52w": 22.8,
     "face_value": 10,
-    "volume": 83916151,
+    "volume": 83916093,
     "pe_ratio": null,
     "industry_pe": 40.38,
     "pb_ratio": 5,
@@ -29463,7 +29463,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0LXG01040",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 79471523
+    "avg_volume_30d": 79471521
   },
   {
     "symbol": "OLECTRA",
@@ -29480,7 +29480,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1570.6,
     "low_52w": 880.45,
     "face_value": 10,
-    "volume": 334357,
+    "volume": 334356,
     "pe_ratio": 54.37,
     "industry_pe": 43.2,
     "pb_ratio": 7.85,
@@ -29648,7 +29648,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1889.8,
     "low_52w": 1114,
     "face_value": 10,
-    "volume": 262270,
+    "volume": 262261,
     "pe_ratio": null,
     "industry_pe": 45.71,
     "pb_ratio": 3.09,
@@ -29900,7 +29900,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 388.15,
     "low_52w": 232.15,
     "face_value": 10,
-    "volume": 905233,
+    "volume": 905115,
     "pe_ratio": 49.41,
     "industry_pe": 28.93,
     "pb_ratio": 3.27,
@@ -29967,7 +29967,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE602A01031",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1577134
+    "avg_volume_30d": 1577130
   },
   {
     "symbol": "PGEL",
@@ -30236,7 +30236,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 23830,
     "low_52w": 14726,
     "face_value": 10,
-    "volume": 8447,
+    "volume": 8445,
     "pe_ratio": 256.99,
     "industry_pe": 43.2,
     "pb_ratio": 21.57,
@@ -30320,7 +30320,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1349.3,
     "low_52w": 918.6,
     "face_value": 10,
-    "volume": 396504,
+    "volume": 396418,
     "pe_ratio": 41.47,
     "industry_pe": 39.56,
     "pb_ratio": 1.63,
@@ -30387,7 +30387,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE191H01014",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 660468
+    "avg_volume_30d": 660465
   },
   {
     "symbol": "PAGEIND",
@@ -30488,7 +30488,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 196.26,
     "low_52w": 103.19,
     "face_value": 10,
-    "volume": 1861176,
+    "volume": 1861150,
     "pe_ratio": 15.09,
     "industry_pe": 28.93,
     "pb_ratio": 2.38,
@@ -30555,7 +30555,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE088F01024",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 4816336
+    "avg_volume_30d": 4816335
   },
   {
     "symbol": "PATANJALI",
@@ -30824,7 +30824,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5529.5,
     "low_52w": 3968,
     "face_value": 10,
-    "volume": 21091,
+    "volume": 21087,
     "pe_ratio": 24.66,
     "industry_pe": 45.71,
     "pb_ratio": 4.32,
@@ -30891,7 +30891,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE182A01018",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 58838
+    "avg_volume_30d": 58837
   },
   {
     "symbol": "PHOENIXLTD",
@@ -30992,7 +30992,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 155.24,
     "low_52w": 79.56,
     "face_value": 10,
-    "volume": 7121203,
+    "volume": 7121197,
     "pe_ratio": 1829.57,
     "industry_pe": 43.8,
     "pb_ratio": 8.16,
@@ -31059,7 +31059,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0LP301011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 13676011
+    "avg_volume_30d": 13676010
   },
   {
     "symbol": "PIDILITIND",
@@ -31160,7 +31160,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 250.89,
     "low_52w": 137.94,
     "face_value": 10,
-    "volume": 23274260,
+    "volume": 23274017,
     "pe_ratio": 150.45,
     "industry_pe": 26.69,
     "pb_ratio": 3.35,
@@ -31227,7 +31227,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE15B701018",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 38346965
+    "avg_volume_30d": 38346957
   },
   {
     "symbol": "PIRAMALFIN",
@@ -31244,7 +31244,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2310.5,
     "low_52w": 1323,
     "face_value": 10,
-    "volume": 328974,
+    "volume": 328961,
     "pe_ratio": 28.22,
     "industry_pe": 20.24,
     "pb_ratio": 1.69,
@@ -31326,7 +31326,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 226.62,
     "low_52w": 133.27,
     "face_value": 10,
-    "volume": 2663751,
+    "volume": 2663741,
     "pe_ratio": null,
     "industry_pe": 45.71,
     "pb_ratio": 3.36,
@@ -31410,7 +31410,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2063.4,
     "low_52w": 1191.1,
     "face_value": 10,
-    "volume": 216345,
+    "volume": 216341,
     "pe_ratio": 52.39,
     "industry_pe": 45.71,
     "pb_ratio": 5.34,
@@ -31578,7 +31578,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 542.5,
     "low_52w": 368.4,
     "face_value": 10,
-    "volume": 1095513,
+    "volume": 1095511,
     "pe_ratio": 42.03,
     "industry_pe": 20.24,
     "pb_ratio": 3.48,
@@ -31998,7 +31998,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 357.45,
     "low_52w": 162.71,
     "face_value": 10,
-    "volume": 3938697,
+    "volume": 3938576,
     "pe_ratio": 228.41,
     "industry_pe": 39.56,
     "pb_ratio": 11.73,
@@ -32065,7 +32065,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE367G01038",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2224618
+    "avg_volume_30d": 2224614
   },
   {
     "symbol": "PNB",
@@ -32166,7 +32166,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2928.4,
     "low_52w": 1232.5,
     "face_value": 10,
-    "volume": 140678,
+    "volume": 140677,
     "pe_ratio": 44.61,
     "industry_pe": 43.2,
     "pb_ratio": 10.81,
@@ -32418,7 +32418,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 492.05,
     "low_52w": 334.1,
     "face_value": 10,
-    "volume": 431800,
+    "volume": 431600,
     "pe_ratio": null,
     "industry_pe": 43.2,
     "pb_ratio": 2.24,
@@ -32485,7 +32485,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE743M01012",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 765454
+    "avg_volume_30d": 765448
   },
   {
     "symbol": "RITES",
@@ -32502,7 +32502,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 256.62,
     "low_52w": 175.63,
     "face_value": 10,
-    "volume": 285940,
+    "volume": 285860,
     "pe_ratio": 22.7,
     "industry_pe": 43.2,
     "pb_ratio": 3.52,
@@ -32569,7 +32569,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE320J01015",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 310190
+    "avg_volume_30d": 310187
   },
   {
     "symbol": "RADICO",
@@ -32754,7 +32754,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 397.65,
     "low_52w": 246.1,
     "face_value": 10,
-    "volume": 453420,
+    "volume": 453351,
     "pe_ratio": 23.24,
     "industry_pe": 39.56,
     "pb_ratio": 3.63,
@@ -32821,7 +32821,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE0DD101019",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 952026
+    "avg_volume_30d": 952024
   },
   {
     "symbol": "RAINBOW",
@@ -32838,7 +32838,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1598.6,
     "low_52w": 1103.8,
     "face_value": 10,
-    "volume": 145802,
+    "volume": 145801,
     "pe_ratio": 48.88,
     "industry_pe": 45.71,
     "pb_ratio": 8.45,
@@ -32922,7 +32922,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 755,
     "low_52w": 462.7,
     "face_value": 10,
-    "volume": 773105,
+    "volume": 773078,
     "pe_ratio": 116.99,
     "industry_pe": 43.2,
     "pb_ratio": 3.87,
@@ -33006,7 +33006,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 410.35,
     "low_52w": 199.95,
     "face_value": 10,
-    "volume": 4235976,
+    "volume": 4235906,
     "pe_ratio": 18.61,
     "industry_pe": 26.69,
     "pb_ratio": 3.11,
@@ -33073,7 +33073,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE891D01026",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 6154936
+    "avg_volume_30d": 6154934
   },
   {
     "symbol": "RELIANCE",
@@ -33174,7 +33174,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 48.58,
     "low_52w": 19.96,
     "face_value": 10,
-    "volume": 15300868,
+    "volume": 15300768,
     "pe_ratio": null,
     "industry_pe": 26.78,
     "pb_ratio": 0.51,
@@ -33241,7 +33241,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE614G01033",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 18612639
+    "avg_volume_30d": 18612635
   },
   {
     "symbol": "SBFC",
@@ -33258,7 +33258,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 118.5,
     "low_52w": 80.95,
     "face_value": 10,
-    "volume": 944833,
+    "volume": 944832,
     "pe_ratio": 19.91,
     "industry_pe": 20.24,
     "pb_ratio": 2.58,
@@ -33508,7 +33508,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 91.47,
     "low_52w": 61.06,
     "face_value": 10,
-    "volume": 1990721,
+    "volume": 1990720,
     "pe_ratio": 34.69,
     "industry_pe": 26.78,
     "pb_ratio": 1.69,
@@ -33760,7 +33760,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1675.4,
     "low_52w": 795,
     "face_value": 10,
-    "volume": 273945,
+    "volume": 273943,
     "pe_ratio": 93.27,
     "industry_pe": 45.71,
     "pb_ratio": 13.47,
@@ -33844,7 +33844,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 189.93,
     "low_52w": 130,
     "face_value": 10,
-    "volume": 2899692,
+    "volume": 2899192,
     "pe_ratio": null,
     "industry_pe": 20.24,
     "pb_ratio": 0.6,
@@ -33911,7 +33911,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE148I01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 6107059
+    "avg_volume_30d": 6107042
   },
   {
     "symbol": "MOTHERSON",
@@ -34012,7 +34012,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 301.4,
     "low_52w": 150.42,
     "face_value": 10,
-    "volume": 399684,
+    "volume": 398448,
     "pe_ratio": null,
     "industry_pe": 40.38,
     "pb_ratio": 5.01,
@@ -34079,7 +34079,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE806T01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 937523
+    "avg_volume_30d": 937482
   },
   {
     "symbol": "SARDAEN",
@@ -34096,7 +34096,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 612.7,
     "low_52w": 462.4,
     "face_value": 10,
-    "volume": 558228,
+    "volume": 558175,
     "pe_ratio": 15.65,
     "industry_pe": 28.93,
     "pb_ratio": 2.4,
@@ -34163,7 +34163,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE385C01021",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 513600
+    "avg_volume_30d": 513599
   },
   {
     "symbol": "SAREGAMA",
@@ -34180,7 +34180,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 557.25,
     "low_52w": 311.1,
     "face_value": 10,
-    "volume": 136750,
+    "volume": 136749,
     "pe_ratio": 42.57,
     "industry_pe": 39.56,
     "pb_ratio": 5.65,
@@ -34264,7 +34264,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 4357.2,
     "low_52w": 3563.3,
     "face_value": 10,
-    "volume": 22261,
+    "volume": 22236,
     "pe_ratio": 46.66,
     "industry_pe": 40.38,
     "pb_ratio": 10.08,
@@ -34331,7 +34331,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE513A01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 51476
+    "avg_volume_30d": 51475
   },
   {
     "symbol": "SCHNEIDER",
@@ -34348,7 +34348,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1501,
     "low_52w": 579.2,
     "face_value": 10,
-    "volume": 136103,
+    "volume": 136099,
     "pe_ratio": 152.92,
     "industry_pe": 43.2,
     "pb_ratio": 36.64,
@@ -34432,7 +34432,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 344.7,
     "low_52w": 201.74,
     "face_value": 10,
-    "volume": 1401088,
+    "volume": 1401038,
     "pe_ratio": 7.63,
     "industry_pe": 43.2,
     "pb_ratio": 1.39,
@@ -34499,7 +34499,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE109A01011",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1790344
+    "avg_volume_30d": 1790343
   },
   {
     "symbol": "SHREECEM",
@@ -34684,7 +34684,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1105.8,
     "low_52w": 761.45,
     "face_value": 10,
-    "volume": 424838,
+    "volume": 424826,
     "pe_ratio": 26.39,
     "industry_pe": 28.93,
     "pb_ratio": 2.64,
@@ -34768,7 +34768,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3872.1,
     "low_52w": 2125.4,
     "face_value": 10,
-    "volume": 306773,
+    "volume": 306772,
     "pe_ratio": 73.72,
     "industry_pe": 26.78,
     "pb_ratio": 23.6,
@@ -34936,7 +34936,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1146.5,
     "low_52w": 714.2,
     "face_value": 10,
-    "volume": 1645085,
+    "volume": 1645065,
     "pe_ratio": 10.52,
     "industry_pe": 33.89,
     "pb_ratio": 5.93,
@@ -35020,7 +35020,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1701.2,
     "low_52w": 1156.8,
     "face_value": 10,
-    "volume": 51567,
+    "volume": 51564,
     "pe_ratio": 56.6,
     "industry_pe": 33.89,
     "pb_ratio": 2.76,
@@ -35272,7 +35272,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 392.8,
     "low_52w": 209.6,
     "face_value": 10,
-    "volume": 261311,
+    "volume": 261310,
     "pe_ratio": 16.86,
     "industry_pe": 26.69,
     "pb_ratio": 3.98,
@@ -35606,7 +35606,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 564.95,
     "low_52w": 364.45,
     "face_value": 10,
-    "volume": 221551,
+    "volume": 221442,
     "pe_ratio": 37.36,
     "industry_pe": 28.93,
     "pb_ratio": 6.39,
@@ -35673,7 +35673,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE258G01013",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 235389
+    "avg_volume_30d": 235385
   },
   {
     "symbol": "SUNPHARMA",
@@ -35774,7 +35774,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 652.45,
     "low_52w": 449.3,
     "face_value": 10,
-    "volume": 1271166,
+    "volume": 1271129,
     "pe_ratio": 13.88,
     "industry_pe": 39.56,
     "pb_ratio": 1.62,
@@ -35841,7 +35841,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE424H01027",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 756720
+    "avg_volume_30d": 756719
   },
   {
     "symbol": "SUNDARMFIN",
@@ -35858,7 +35858,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5581.5,
     "low_52w": 4069.1,
     "face_value": 10,
-    "volume": 30548,
+    "volume": 30546,
     "pe_ratio": 22.11,
     "industry_pe": 20.24,
     "pb_ratio": 3.32,
@@ -36026,7 +36026,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 882.2,
     "low_52w": 501.45,
     "face_value": 10,
-    "volume": 90647,
+    "volume": 90638,
     "pe_ratio": 33.52,
     "industry_pe": 28.93,
     "pb_ratio": 6.84,
@@ -36194,7 +36194,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 480.3,
     "low_52w": 276.8,
     "face_value": 10,
-    "volume": 537870,
+    "volume": 537865,
     "pe_ratio": 40.4,
     "industry_pe": 43.2,
     "pb_ratio": 1.2,
@@ -36261,7 +36261,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE665A01038",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2794838
+    "avg_volume_30d": 2794837
   },
   {
     "symbol": "SWIGGY",
@@ -36362,7 +36362,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 663.85,
     "low_52w": 369.05,
     "face_value": 10,
-    "volume": 271474,
+    "volume": 271472,
     "pe_ratio": 68.36,
     "industry_pe": 45.71,
     "pb_ratio": 3.12,
@@ -36446,7 +36446,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1746.4,
     "low_52w": 640.15,
     "face_value": 10,
-    "volume": 1836364,
+    "volume": 1836361,
     "pe_ratio": 90.21,
     "industry_pe": 26.69,
     "pb_ratio": 11.67,
@@ -36530,7 +36530,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1745.1,
     "low_52w": 1018,
     "face_value": 10,
-    "volume": 50614,
+    "volume": 50613,
     "pe_ratio": 66.94,
     "industry_pe": 40.38,
     "pb_ratio": 11.41,
@@ -36698,7 +36698,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 382.7,
     "low_52w": 297.8,
     "face_value": 10,
-    "volume": 1993534,
+    "volume": 1993532,
     "pe_ratio": 25.03,
     "industry_pe": 20.24,
     "pb_ratio": 3.02,
@@ -36782,7 +36782,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 926.75,
     "low_52w": 583.25,
     "face_value": 10,
-    "volume": 2286773,
+    "volume": 2286723,
     "pe_ratio": null,
     "industry_pe": 28.93,
     "pb_ratio": 0.77,
@@ -36849,7 +36849,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE092A01019",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2536851
+    "avg_volume_30d": 2536849
   },
   {
     "symbol": "TATACOMM",
@@ -36866,7 +36866,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2061.7,
     "low_52w": 1347.9,
     "face_value": 10,
-    "volume": 145817,
+    "volume": 145808,
     "pe_ratio": 50.27,
     "industry_pe": 39.56,
     "pb_ratio": 13.69,
@@ -36933,7 +36933,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE151A01013",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 246270
+    "avg_volume_30d": 246269
   },
   {
     "symbol": "TCS",
@@ -37202,7 +37202,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1058,
     "low_52w": 541.15,
     "face_value": 10,
-    "volume": 499383,
+    "volume": 499381,
     "pe_ratio": 75.82,
     "industry_pe": 20.24,
     "pb_ratio": 1.12,
@@ -37286,7 +37286,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 505.3,
     "low_52w": 317.6,
     "face_value": 10,
-    "volume": 4526417,
+    "volume": 4526117,
     "pe_ratio": 37.45,
     "industry_pe": 40.38,
     "pb_ratio": 12.52,
@@ -37353,7 +37353,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE1TAE01010",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 6754242
+    "avg_volume_30d": 6754232
   },
   {
     "symbol": "TMPV",
@@ -37622,7 +37622,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 879.15,
     "low_52w": 509.2,
     "face_value": 10,
-    "volume": 880524,
+    "volume": 880494,
     "pe_ratio": 54.06,
     "industry_pe": 26.69,
     "pb_ratio": 7.32,
@@ -37689,7 +37689,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE142M01025",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1002540
+    "avg_volume_30d": 1002539
   },
   {
     "symbol": "TTML",
@@ -37706,7 +37706,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 58.68,
     "low_52w": 31.36,
     "face_value": 10,
-    "volume": 79426434,
+    "volume": 79426433,
     "pe_ratio": 190.47,
     "industry_pe": 39.56,
     "pb_ratio": null,
@@ -37874,7 +37874,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1373,
     "low_52w": 893.4,
     "face_value": 10,
-    "volume": 104346,
+    "volume": 104249,
     "pe_ratio": 25.34,
     "industry_pe": 43.2,
     "pb_ratio": 2.75,
@@ -37941,7 +37941,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE285K01026",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 151490
+    "avg_volume_30d": 151487
   },
   {
     "symbol": "TEGA",
@@ -37958,7 +37958,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2129,
     "low_52w": 1477.4,
     "face_value": 10,
-    "volume": 267819,
+    "volume": 267818,
     "pe_ratio": 545.12,
     "industry_pe": 43.2,
     "pb_ratio": 4.44,
@@ -38042,7 +38042,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 632.35,
     "low_52w": 296.15,
     "face_value": 10,
-    "volume": 1029023,
+    "volume": 1028978,
     "pe_ratio": null,
     "industry_pe": 26.69,
     "pb_ratio": 2.98,
@@ -38109,7 +38109,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE010J01012",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 4124381
+    "avg_volume_30d": 4124380
   },
   {
     "symbol": "TENNIND",
@@ -38126,7 +38126,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 651.35,
     "low_52w": 443.95,
     "face_value": 10,
-    "volume": 301417,
+    "volume": 301350,
     "pe_ratio": 33.43,
     "industry_pe": 40.38,
     "pb_ratio": 16.91,
@@ -38193,7 +38193,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE19RI01016",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 923717
+    "avg_volume_30d": 923714
   },
   {
     "symbol": "NIACL",
@@ -38210,7 +38210,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 231.2,
     "low_52w": 117.82,
     "face_value": 10,
-    "volume": 1806138,
+    "volume": 1806092,
     "pe_ratio": 38.17,
     "industry_pe": 20.24,
     "pb_ratio": 0.73,
@@ -38275,7 +38275,7 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Financial Services",
     "isin": "INE470Y01017",
-    "avg_volume_30d": 9838729
+    "avg_volume_30d": 9838727
   },
   {
     "symbol": "RAMCOCEM",
@@ -38292,7 +38292,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1204.9,
     "low_52w": 848.65,
     "face_value": 10,
-    "volume": 76189,
+    "volume": 76181,
     "pe_ratio": 31.07,
     "industry_pe": 28.93,
     "pb_ratio": 2.48,
@@ -38376,7 +38376,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 5159.5,
     "low_52w": 2773.8,
     "face_value": 10,
-    "volume": 88985,
+    "volume": 88773,
     "pe_ratio": 64.53,
     "industry_pe": 43.2,
     "pb_ratio": 6.87,
@@ -38443,7 +38443,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE152A01029",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 119865
+    "avg_volume_30d": 119858
   },
   {
     "symbol": "TIMKEN",
@@ -38460,7 +38460,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 3767.1,
     "low_52w": 2909.4,
     "face_value": 10,
-    "volume": 19210,
+    "volume": 19209,
     "pe_ratio": 57.19,
     "industry_pe": 43.2,
     "pb_ratio": 8.21,
@@ -38544,7 +38544,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 932.6,
     "low_52w": 574.85,
     "face_value": 10,
-    "volume": 541939,
+    "volume": 541937,
     "pe_ratio": 55.54,
     "industry_pe": 43.2,
     "pb_ratio": 4.53,
@@ -38796,7 +38796,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1772.5,
     "low_52w": 1200,
     "face_value": 10,
-    "volume": 87996,
+    "volume": 87994,
     "pe_ratio": 26.85,
     "industry_pe": 26.78,
     "pb_ratio": 3.27,
@@ -38880,7 +38880,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 497.05,
     "low_52w": 229.58,
     "face_value": 10,
-    "volume": 669161,
+    "volume": 669160,
     "pe_ratio": 30.42,
     "industry_pe": 43.2,
     "pb_ratio": 5.24,
@@ -38947,7 +38947,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE763I01026",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1482131
+    "avg_volume_30d": 1482130
   },
   {
     "symbol": "TRAVELFOOD",
@@ -38964,7 +38964,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1428.6,
     "low_52w": 1043.7,
     "face_value": 10,
-    "volume": 22312,
+    "volume": 22309,
     "pe_ratio": 33.37,
     "industry_pe": 40.38,
     "pb_ratio": 10.98,
@@ -39132,7 +39132,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 29.27,
     "low_52w": 22.06,
     "face_value": 10,
-    "volume": 2151566,
+    "volume": 2151545,
     "pe_ratio": 29.4,
     "industry_pe": 40.38,
     "pb_ratio": 2.45,
@@ -39199,7 +39199,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE064C01022",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2502102
+    "avg_volume_30d": 2502101
   },
   {
     "symbol": "TRITURBINE",
@@ -39216,7 +39216,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 741.5,
     "low_52w": 435.25,
     "face_value": 10,
-    "volume": 312565,
+    "volume": 312558,
     "pe_ratio": 52.24,
     "industry_pe": 43.2,
     "pb_ratio": 12.11,
@@ -39384,7 +39384,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 33.58,
     "low_52w": 22.45,
     "face_value": 10,
-    "volume": 3547022,
+    "volume": 3546772,
     "pe_ratio": 10.37,
     "industry_pe": 20.24,
     "pb_ratio": 0.87,
@@ -39451,7 +39451,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE691A01018",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "standalone",
-    "avg_volume_30d": 3592322
+    "avg_volume_30d": 3592314
   },
   {
     "symbol": "UNOMINDA",
@@ -39636,7 +39636,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1401.8,
     "low_52w": 870.55,
     "face_value": 10,
-    "volume": 61337,
+    "volume": 61336,
     "pe_ratio": 24.94,
     "industry_pe": 20.24,
     "pb_ratio": 2.55,
@@ -39888,7 +39888,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1840.3,
     "low_52w": 1215.2,
     "face_value": 10,
-    "volume": 42923,
+    "volume": 42919,
     "pe_ratio": 79.1,
     "industry_pe": 43.8,
     "pb_ratio": 7.12,
@@ -40056,7 +40056,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 181.09,
     "low_52w": 103.03,
     "face_value": 10,
-    "volume": 5013098,
+    "volume": 5013097,
     "pe_ratio": null,
     "industry_pe": 26.69,
     "pb_ratio": 11.6,
@@ -40140,7 +40140,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 535.05,
     "low_52w": 387.35,
     "face_value": 10,
-    "volume": 418343,
+    "volume": 418148,
     "pe_ratio": 28.46,
     "industry_pe": 28.93,
     "pb_ratio": 4.69,
@@ -40207,7 +40207,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE228A01035",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 989060
+    "avg_volume_30d": 989054
   },
   {
     "symbol": "VTL",
@@ -40224,7 +40224,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 666.25,
     "low_52w": 394.65,
     "face_value": 10,
-    "volume": 268518,
+    "volume": 268457,
     "pe_ratio": 18.17,
     "industry_pe": 40.38,
     "pb_ratio": 1.46,
@@ -40291,7 +40291,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE825A01020",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 1182420
+    "avg_volume_30d": 1182418
   },
   {
     "symbol": "VBL",
@@ -40476,7 +40476,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1570.7,
     "low_52w": 861.4,
     "face_value": 10,
-    "volume": 104607,
+    "volume": 104593,
     "pe_ratio": 82.4,
     "industry_pe": 45.71,
     "pb_ratio": 16.13,
@@ -40896,7 +40896,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2832.4,
     "low_52w": 721.85,
     "face_value": 10,
-    "volume": 1348644,
+    "volume": 1348639,
     "pe_ratio": 28.93,
     "industry_pe": 28.93,
     "pb_ratio": 7.89,
@@ -40980,7 +40980,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 227.95,
     "low_52w": 108.32,
     "face_value": 10,
-    "volume": 4158831,
+    "volume": 4158821,
     "pe_ratio": 77.53,
     "industry_pe": 40.38,
     "pb_ratio": 4.45,
@@ -41064,7 +41064,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1420.9,
     "low_52w": 717.7,
     "face_value": 10,
-    "volume": 4140076,
+    "volume": 4139990,
     "pe_ratio": 46.46,
     "industry_pe": 40.38,
     "pb_ratio": 2.8,
@@ -41131,7 +41131,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE716A01013",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 2108767
+    "avg_volume_30d": 2108764
   },
   {
     "symbol": "WIPRO",
@@ -41232,7 +41232,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2329.7,
     "low_52w": 1100.3,
     "face_value": 10,
-    "volume": 649949,
+    "volume": 649943,
     "pe_ratio": 85.96,
     "industry_pe": 45.71,
     "pb_ratio": 7.19,
@@ -41400,7 +41400,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2686,
     "low_52w": 2070.67,
     "face_value": 10,
-    "volume": 92145,
+    "volume": 92144,
     "pe_ratio": 51.34,
     "industry_pe": 40.38,
     "pb_ratio": 7.19,
@@ -41484,7 +41484,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 115.75,
     "low_52w": 68.39,
     "face_value": 10,
-    "volume": 11130347,
+    "volume": 11130107,
     "pe_ratio": 36.26,
     "industry_pe": 39.56,
     "pb_ratio": 0.62,
@@ -41551,7 +41551,7 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE256A01028",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 22603370
+    "avg_volume_30d": 22603362
   },
   {
     "symbol": "ZENTEC",
@@ -41568,7 +41568,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 1997,
     "low_52w": 1228.1,
     "face_value": 10,
-    "volume": 181252,
+    "volume": 181249,
     "pe_ratio": 81.81,
     "industry_pe": 43.2,
     "pb_ratio": 8.22,
@@ -41652,7 +41652,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 807.95,
     "low_52w": 422.55,
     "face_value": 10,
-    "volume": 2452156,
+    "volume": 2452137,
     "pe_ratio": 12.94,
     "industry_pe": 26.69,
     "pb_ratio": 2.1,
@@ -41820,7 +41820,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 602.5,
     "low_52w": 373.5,
     "face_value": 10,
-    "volume": 159658,
+    "volume": 159657,
     "pe_ratio": 92.98,
     "industry_pe": 43.8,
     "pb_ratio": 2.86,
@@ -41904,7 +41904,7 @@ export const STOCKS_DATA: Stock[] = [
     "high_52w": 2473.5,
     "low_52w": 1324.9,
     "face_value": 10,
-    "volume": 298494,
+    "volume": 298473,
     "pe_ratio": 23.58,
     "industry_pe": 26.69,
     "pb_ratio": 6.56,
@@ -41971,6 +41971,6 @@ export const STOCKS_DATA: Stock[] = [
     "isin": "INE738I01010",
     "quarterly_source": "NSE XBRL",
     "quarterly_basis": "consolidated",
-    "avg_volume_30d": 200865
+    "avg_volume_30d": 200864
   }
 ];
