@@ -19,9 +19,9 @@
       "symbol": "^BSESN",
       "name": "SENSEX",
       "exchange": "BSE",
-      "price": 72451.07,
-      "change": -1444.63,
-      "changePct": -1.95,
+      "price": 72529.07,
+      "change": -1366.63,
+      "changePct": -1.85,
       "previousClose": 73895.7,
       "dayHigh": 72684.9,
       "dayLow": 72064.0,
@@ -85,6 +85,6 @@
       "low52w": 10092.6
     }
   ],
-  "lastUpdated": "2026-09-29T10:03:53.328356Z",
+  "lastUpdated": "2026-09-29T16:31:40.515774Z",
   "source": "Yahoo Finance (yfinance)"
 }
