@@ -568,7 +568,7 @@
    "sector": "Healthcare"
   }
  },
- "generated_at": "2026-10-02T20:17:47+00:00",
+ "generated_at": "2026-10-03T19:53:44+00:00",
  "investors": [
   {
    "alias": "DMart founder",
@@ -772,19 +772,19 @@
      "companyName": "Canara Bank",
      "delta": {
       "change": "decreased",
-      "delta_pct": -0.12,
-      "previous_quarter_holding": 1.54
+      "delta_pct": -0.04,
+      "previous_quarter_holding": 1.42
      },
      "filed_names": [
       "REKHA JHUNJHUNWALA"
      ],
-     "holding_pct": 1.42,
-     "holding_value_cr": 1529.13,
+     "holding_pct": 1.38,
+     "holding_value_cr": 1484.45,
      "in_universe": true,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Financial Services",
-     "shares_count": 129193000,
+     "shares_count": 125418000,
      "symbol": "CANBK"
     },
     {
@@ -987,7 +987,7 @@
     "Healthcare"
    ],
    "type": "Individual HNI",
-   "value_cr": 39611.34
+   "value_cr": 39566.66
   },
   {
    "alias": null,
