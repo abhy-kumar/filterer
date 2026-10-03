@@ -171,6 +171,31 @@ describe('dataset invariants', () => {
     expect(cheaper.length).toBeGreaterThan(0);
   });
 
+  it('labels every figure that was not read straight from a filing', () => {
+    for (const stock of STOCKS_DATA) {
+      const detail = loadDetail(stock.symbol);
+      if (!detail) continue;
+      for (const q of detail.quarterly_results || []) {
+        // A worked-out quarter says how, and claims nothing it could not work out.
+        if (q.derived) {
+          expect(typeof q.derived).toBe('string');
+          expect(q.eps, `${stock.symbol} ${q.period}`).toBeNull();
+        }
+      }
+      const years = (detail.annual_pnl || []).filter((p: { year: string }) => p.year !== 'TTM');
+      expect(new Set(years.map((p: { year: string }) => p.year)).size).toBe(years.length);
+      for (const year of years) {
+        if (year.source === 'Yahoo') {
+          // A Yahoo year beside filed ones carries only the lines both layouts share.
+          expect([year.expenses, year.operating_profit, year.depreciation, year.profit_before_tax], `${stock.symbol} ${year.year}`).toEqual([null, null, null, null]);
+        }
+      }
+      if (years.some((p: { source?: string }) => p.source)) {
+        expect(years.every((p: { source?: string }) => p.source === 'NSE' || p.source === 'Yahoo'), stock.symbol).toBe(true);
+      }
+    }
+  });
+
   it('flags quarterly gaps rather than presenting the series as contiguous', () => {
     const gapped = STOCKS_DATA.filter((s) => missingQuarters(loadDetail(s.symbol)?.quarterly_results || []).length > 0);
     // The holes are real; the test records that they are detectable, which is

@@ -9,6 +9,7 @@ export const QuarterlyResultsTable: React.FC<{ stock: Stock }> = ({ stock }) => 
   if (!quarters.length) return null;
 
   const gaps = missingQuarters(quarters);
+  const derived = quarters.filter((q) => q.derived);
   const filed = stock.quarterly_source === 'NSE XBRL';
   // Banks file interest earned and expended rather than revenue and finance
   // costs, and no separate depreciation line. Filed bank rows carry none.
@@ -68,14 +69,21 @@ export const QuarterlyResultsTable: React.FC<{ stock: Stock }> = ({ stock }) => 
       columnLabel={(q) => q.period}
       rows={rows}
       footnote={
-        gaps.length ? (
-          <span className="text-apple-amber">
-            {gaps.join(', ')} {gaps.length === 1 ? 'is' : 'are'} missing from the source, so a comparison across{' '}
-            {gaps.length === 1 ? 'it skips a quarter' : 'them skips quarters'}.
-          </span>
-        ) : filed ? (
-          "Net profit is the share attributable to the company's own shareholders. Figures follow the XBRL filed with the exchange."
-        ) : undefined
+        <>
+          {filed && "Net profit is the share attributable to the company's own shareholders. Figures follow the XBRL filed with the exchange."}
+          {derived.map((q) => (
+            <span key={q.period} className="block mt-1">
+              {q.period} has no quarterly figures in any filing NSE indexes, so it is worked out as {q.derived}
+              {q.expenses === null ? '; only sales and net profit can be' : ''}.
+            </span>
+          ))}
+          {gaps.length > 0 && (
+            <span className="block mt-1 text-apple-amber">
+              {gaps.join(', ')}: no filing for {gaps.length === 1 ? 'this quarter' : 'these quarters'} could be read
+              {filed ? ' from NSE' : ''}, so a comparison across {gaps.length === 1 ? 'it skips a quarter' : 'them skips quarters'}.
+            </span>
+          )}
+        </>
       }
     />
   );

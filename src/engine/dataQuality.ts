@@ -53,7 +53,10 @@ function relativeGap(a: number, b: number): number {
  * income is never sourced, so those are not part of the identity.
  */
 export function pnlRowsThatDoNotReconcile(pnl: AnnualPnL[]): string[] {
+  // Only Yahoo's layout has this identity. Filed rows are the company's own
+  // figures and differ from it by other income and exceptional items.
   return pnl
+    .filter((row) => !row.source)
     .filter((row) => relativeGap(row.operating_profit - row.interest, row.profit_before_tax) > 0.02)
     .map((row) => row.year);
 }
@@ -174,7 +177,27 @@ export function assessStock(stock: Stock): QualityFinding[] {
       id: 'quarterly-gap',
       severity: 'warning',
       title: 'Missing quarterly results',
-      detail: `${gaps.join(', ')} was not reported in the exchange feed. Comparisons across this gap skip non-consecutive quarters.`,
+      detail: `No filing for ${gaps.join(', ')} could be read. Comparisons across the gap skip a quarter.`,
+    });
+  }
+
+  const derivedQuarters = (stock.quarterly_results || []).filter((q) => q.derived);
+  if (derivedQuarters.length) {
+    findings.push({
+      id: 'quarter-derived',
+      severity: 'note',
+      title: 'Quarter worked out from the year',
+      detail: `${derivedQuarters.map((q) => q.period).join(', ')} is not in any filing NSE indexes, so it is calculated as the full year less the three quarters before it.`,
+    });
+  }
+
+  const yahooYears = annual.filter((p) => p.source === 'Yahoo').map((p) => p.year);
+  if (yahooYears.length) {
+    findings.push({
+      id: 'year-from-yahoo',
+      severity: 'note',
+      title: 'A year from Yahoo Finance',
+      detail: `NSE has no machine-readable filing for ${yahooYears.join(' and ')}, so sales and net profit for it come from Yahoo Finance, which matches the filings in the years both cover.`,
     });
   }
 

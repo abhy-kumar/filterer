@@ -11,6 +11,8 @@ export interface QuarterlyResult {
   tax_pct: number;
   net_profit: number;
   eps: number;
+  /** Set when the quarter was worked out from a longer period, saying how. */
+  derived?: string;
 }
 
 export interface AnnualPnL {
@@ -27,6 +29,8 @@ export interface AnnualPnL {
   net_profit: number;
   eps: number;
   dividend_payout_pct: number;
+  /** 'NSE' for a filed year; 'Yahoo' for one the filings lack. Unset in Yahoo-only data. */
+  source?: 'NSE' | 'Yahoo';
 }
 
 export interface BalanceSheet {
@@ -122,6 +126,8 @@ export interface Stock {
   statements_unavailable_reason?: string;
   /** Where quarterly_results came from: "NSE XBRL" for filed results, absent for the Yahoo fallback. */
   quarterly_source?: string;
+  /** 'NSE XBRL' when the annual P&L comes from filings. */
+  annual_source?: string;
   /** Consolidated or standalone. Filed series never mix the two. */
   quarterly_basis?: 'consolidated' | 'standalone';
   nse_symbol: string;

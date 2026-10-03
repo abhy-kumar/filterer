@@ -13,6 +13,16 @@ filings from the Dec 2024 quarter:
 
     integrated-filing-results      Dec 2024 onward
     corporates-financial-results   everything up to Dec 2024
+                                   (period=Quarterly and period=Annual)
+
+Many companies moved over a quarter or two later than that, and NSE indexed
+their Mar 2025 results in neither listing. Those quarters cannot be fetched
+here; scripts/repair_dataset.mjs fills them, where it safely can, from the
+full-year figures.
+
+Annual results come from the same filings: the Annual listing carries
+machine-readable XBRL from FY2018, and every March filing since carries the
+full year alongside the quarter.
 
 Shareholding patterns come from corporate-share-holdings-master. Each filing
 names every holder of 1% or more and carries the category totals, which is
@@ -64,8 +74,15 @@ REFERER = NSE + "/get-quotes/equity?symbol={symbol}"
 _http.HOST_RATE_LIMITS.setdefault("nsearchives.nseindia.com", 4.0)
 _http.HOST_RATE_LIMITS.setdefault("www.nseindia.com", 2.0)
 
+RESULTS_LEGACY_ANNUAL = NSE + "/api/corporates-financial-results?index=equities&symbol={symbol}&period=Annual"
+
 CRORE = 1e7
 DEFAULT_QUARTERS = 12
+DEFAULT_YEARS = 10
+
+# Context lengths, in days, for a quarter and a financial year.
+QUARTER_DAYS = (80, 100)
+YEAR_DAYS = (350, 380)
 
 _client: Optional[HttpClient] = None
 
@@ -172,12 +189,40 @@ def _round(value: Optional[float], places: int = 2) -> Optional[float]:
     return None if value is None else round(value, places)
 
 
-def parse_results_xbrl(text: str, period_end: date) -> Optional[dict]:
-    """
-    One quarter's results, in the shape the app's quarterly table uses.
+ADDITIVE = (
+    "sales",
+    "expenses",
+    "operating_profit",
+    "other_income",
+    "interest",
+    "depreciation",
+    "profit_before_tax",
+    "tax",
+    "net_profit",
+)
 
-    Values in the filing are whole rupees; the app works in crore. The layout
-    follows the convention a Screener.in reader expects:
+
+# The pre-2025 results format lays the filing out as the printed results
+# table, one context per column, and dates every column with the quarter
+# whatever it holds. The column is in the context id: One is the quarter just
+# ended, Four the year to date, which in a March filing is the full year.
+LEGACY_QUARTER_ID = "OneD"
+LEGACY_YEAR_TO_DATE_ID = "FourD"
+
+
+def extract_figures(
+    text: str,
+    start: Optional[date],
+    end: date,
+    ids: Optional[list[str]] = None,
+    id_days: tuple[tuple[int, int], ...] = (QUARTER_DAYS,),
+) -> Optional[dict]:
+    """
+    Raw figures, in rupees, for the undimensioned context running from
+    `start` to `end`. With `start` None, any context of a quarter's length
+    ending on `end` is taken. With `ids`, exactly those contexts are.
+
+    The layout follows the convention a Screener.in reader expects:
 
         expenses          total expenses less finance costs and depreciation
         operating profit  sales less those expenses
@@ -189,27 +234,58 @@ def parse_results_xbrl(text: str, period_end: date) -> Optional[dict]:
     depreciation line.
     """
     contexts = xbrl_contexts(text)
-    quarter = [
-        cid
-        for cid, c in contexts.items()
-        if not c.dimensional and c.start and c.end == period_end and 80 <= (c.end - c.start).days <= 100
-    ]
-    if not quarter:
+    if ids is not None:
+        # Filings from 2018 to 2022 often cite OneD and FourD without defining
+        # them. The column convention still says what they hold, and the
+        # listing says which period the filing is for, so an undefined id is
+        # taken at its word.
+        def fits(c: Context) -> bool:
+            if c.end != end or not c.start:
+                return False
+            days = (c.end - c.start).days
+            return any(lo <= days <= hi for lo, hi in id_days)
+
+        chosen = [cid for cid in ids if cid not in contexts or fits(contexts[cid])]
+    elif start is None:
+        lo, hi = QUARTER_DAYS
+        chosen = [
+            cid
+            for cid, c in contexts.items()
+            if not c.dimensional and c.start and c.end == end and lo <= (c.end - c.start).days <= hi
+        ]
+        # In the column layout the year-to-date column carries quarter dates
+        # too, and must not stand in for the quarter.
+        if LEGACY_QUARTER_ID in chosen:
+            chosen = [LEGACY_QUARTER_ID]
+    else:
+        chosen = [cid for cid, c in contexts.items() if not c.dimensional and c.start == start and c.end == end]
+    if not chosen:
         return None
     facts = xbrl_facts(text)
 
-    def val(*tags: str) -> Optional[float]:
+    def val(*tags: str, nonzero: bool = False) -> Optional[float]:
+        """
+        The first tag that carries a figure. With nonzero, a filed 0 is
+        passed over for the next tag: DIVISLAB's FY2018 and FY2019 filings
+        put 0 under the owners-of-parent profit and the real figure under
+        profit for the period.
+        """
+        zero_seen = False
         for tag in tags:
             by_context = facts.get(tag) or {}
-            for cid in quarter:
+            for cid in chosen:
                 raw = by_context.get(cid)
                 if raw in (None, ""):
                     continue
                 try:
-                    return float(raw)
+                    value = float(raw)
                 except ValueError:
                     continue
-        return None
+                if nonzero and value == 0:
+                    zero_seen = True
+                    continue
+                return value
+        return 0.0 if zero_seen else None
 
     is_bank = val("InterestEarned") is not None
 
@@ -228,6 +304,7 @@ def parse_results_xbrl(text: str, period_end: date) -> Optional[dict]:
             "ProfitOrLossAttributableToOwnersOfParent",
             "ProfitLossForThePeriod",
             "ProfitLossForPeriod",
+            nonzero=True,
         )
         eps = val("BasicEarningsPerShareBeforeExtraordinaryItems", "BasicEarningsPerShareAfterExtraordinaryItems")
     else:
@@ -248,6 +325,7 @@ def parse_results_xbrl(text: str, period_end: date) -> Optional[dict]:
             "ProfitLossAttributableToOwnersOfParent",
             "ProfitLossForPeriod",
             "ProfitLossForThePeriod",
+            nonzero=True,
         )
         eps = val(
             "BasicEarningsLossPerShareFromContinuingAndDiscontinuedOperations",
@@ -258,24 +336,154 @@ def parse_results_xbrl(text: str, period_end: date) -> Optional[dict]:
     if sales is None and net_profit is None:
         return None
 
-    tax = val("TaxExpense", "CurrentTax")
-    opm = operating_profit / sales * 100 if operating_profit is not None and sales else None
-    tax_pct = tax / pbt * 100 if tax is not None and pbt and pbt > 0 else None
-
     return {
-        "period": period_label(period_end),
+        "sales": sales,
+        "expenses": expenses,
+        "operating_profit": operating_profit,
+        "other_income": other_income,
+        "interest": interest,
+        "depreciation": depreciation,
+        "profit_before_tax": pbt,
+        "tax": val("TaxExpense", "CurrentTax"),
+        "net_profit": net_profit,
+        "eps": eps,
+    }
+
+
+def to_row(label_key: str, label: str, f: dict) -> dict:
+    """Figures in rupees to a row in crore, in the app's layout."""
+    sales, op, pbt, tax = f.get("sales"), f.get("operating_profit"), f.get("profit_before_tax"), f.get("tax")
+    opm = op / sales * 100 if op is not None and sales else None
+    tax_pct = tax / pbt * 100 if tax is not None and pbt and pbt > 0 else None
+    return {
+        label_key: label,
         "sales": _crore(sales),
-        "expenses": _crore(expenses),
-        "operating_profit": _crore(operating_profit),
+        "expenses": _crore(f.get("expenses")),
+        "operating_profit": _crore(op),
         "opm_pct": _round(opm),
-        "other_income": _crore(other_income),
-        "interest": _crore(interest),
-        "depreciation": _crore(depreciation),
+        "other_income": _crore(f.get("other_income")),
+        "interest": _crore(f.get("interest")),
+        "depreciation": _crore(f.get("depreciation")),
         "profit_before_tax": _crore(pbt),
         "tax_pct": _round(tax_pct),
-        "net_profit": _crore(net_profit),
-        "eps": _round(eps),
+        "net_profit": _crore(f.get("net_profit")),
+        "eps": _round(f.get("eps")),
     }
+
+
+def quarter_figures(text: str, period_end: date) -> Optional[dict]:
+    figures = extract_figures(text, None, period_end)
+    if figures is None and f'contextRef="{LEGACY_QUARTER_ID}"' in text:
+        figures = extract_figures(text, None, period_end, ids=[LEGACY_QUARTER_ID])
+    return figures
+
+
+def parse_results_xbrl(text: str, period_end: date) -> Optional[dict]:
+    """One quarter's results, in the shape the app's quarterly table uses."""
+    figures = quarter_figures(text, period_end)
+    return to_row("period", period_label(period_end), figures) if figures else None
+
+
+def fiscal_year_start(end: date) -> date:
+    """
+    The first day of the twelve months ending `end`. Most companies close
+    their year in March, but not all: ABB and Schaeffler close in December,
+    Siemens in September, P&G Hygiene in June.
+    """
+    month = end.month % 12 + 1
+    return date(end.year - (month != 1), month, 1)
+
+
+def stated_financial_year(text: str) -> tuple[Optional[date], Optional[date]]:
+    """The financial year the filing says it belongs to, from its own facts."""
+    facts = xbrl_facts(text)
+
+    def first(tag: str) -> Optional[date]:
+        values = list((facts.get(tag) or {}).values())
+        return parse_date(values[0]) if values else None
+
+    return first("DateOfStartOfFinancialYear"), first("DateOfEndOfFinancialYear")
+
+
+def parse_annual_xbrl(text: str, year_end: date) -> Optional[dict]:
+    """The full financial year ending `year_end`, from an annual or year-end filing."""
+    figures = extract_figures(text, fiscal_year_start(year_end), year_end)
+    if figures is None and f'contextRef="{LEGACY_YEAR_TO_DATE_ID}"' in text:
+        # In the old layout the year-to-date column carries the quarter's
+        # dates, so its length has to come from the financial year the filing
+        # states. That keeps out a December filing's nine months, and the
+        # fifteen-month year Ambuja filed when it moved its year end from
+        # December to March.
+        start, end = stated_financial_year(text)
+        if start and end == year_end and YEAR_DAYS[0] <= (end - start).days <= YEAR_DAYS[1]:
+            figures = extract_figures(
+                text, None, year_end, ids=[LEGACY_YEAR_TO_DATE_ID], id_days=(YEAR_DAYS, QUARTER_DAYS)
+            )
+    return to_row("year", period_label(year_end), figures) if figures else None
+
+
+def cumulative_spans(text: str, end: date) -> list[tuple[date, dict]]:
+    """
+    Every longer-than-a-quarter span ending on `end` that the filing reports,
+    longest first, with its figures. A March filing carries the full year; a
+    September or December one often carries the half or nine months.
+    """
+    out = []
+    for c in sorted(
+        {(c.start, c.end) for c in xbrl_contexts(text).values() if not c.dimensional and c.start and c.end == end},
+        key=lambda span: span[0],
+    ):
+        start = c[0]
+        if (end - start).days <= QUARTER_DAYS[1]:
+            continue
+        figures = extract_figures(text, start, end)
+        if figures:
+            out.append((start, figures))
+    return out
+
+
+def previous_quarter_end(d: date) -> date:
+    month, year = d.month - 3, d.year
+    if month <= 0:
+        month, year = month + 12, year - 1
+    return date(year, month, 31 if month in (3, 12) else 30)
+
+
+def quarters_in_span(start: date, end: date) -> list[date]:
+    """Quarter ends on or after `start` and before `end`, oldest first."""
+    ends = []
+    q = previous_quarter_end(end)
+    while q >= start:
+        ends.append(q)
+        q = previous_quarter_end(q)
+    return ends[::-1]
+
+
+def derive_quarter(text: str, end: date, known: dict[date, dict]) -> Optional[dict]:
+    """
+    A quarter worked out from a longer span in its own filing, less the
+    quarters before it that are already known: the full year less nine
+    months, or the half year less the previous quarter.
+
+    Used when no filing for the quarter carries a three-month column. Only
+    the additive lines are derived; EPS is not, because the share count moves
+    between quarters.
+    """
+    for start, cumulative in cumulative_spans(text, end):
+        before = quarters_in_span(start, end)
+        if not before or any(q not in known for q in before):
+            continue
+        figures: dict = {"eps": None}
+        for key in ADDITIVE:
+            total = cumulative.get(key)
+            parts = [known[q].get(key) for q in before]
+            figures[key] = None if total is None or any(v is None for v in parts) else total - sum(parts)
+        if figures.get("sales") is None and figures.get("net_profit") is None:
+            continue
+        row = to_row("period", period_label(end), figures)
+        row["derived"] = f"the {period_label(start)} to {period_label(end)} total less the quarters before it"
+        return row
+    return None
 
 
 # ── Results listings ───────────────────────────────────────────
@@ -286,7 +494,35 @@ class ResultFiling:
     period_end: date
     basis: str  # "consolidated" | "standalone"
     xbrl: str
-    broadcast: datetime
+    broadcast: Optional[datetime]
+    # NSE's own sequence number, which rises with each filing.
+    seq: int = 0
+    revision: bool = False
+    # 3 for a quarterly filing, 12 for an annual one.
+    months: int = 3
+
+    def recency(self) -> tuple:
+        """
+        Newest first sorts on this. A revision outranks the filing it
+        corrects even when NSE leaves its broadcast date blank, which it often
+        does: DIVISLAB's corrected Mar 2026 filing and AXISBANK's corrected
+        Sep 2025 one both arrived with no date, and the originals they fixed
+        carry no quarter column at all.
+        """
+        return (self.revision, self.broadcast or datetime.min, self.seq)
+
+
+def _seq(raw: Any) -> int:
+    try:
+        return int(str(raw).strip())
+    except (TypeError, ValueError):
+        return 0
+
+
+def _timestamp(*raws: Any) -> Optional[datetime]:
+    stamps = [parse_timestamp(r) for r in raws]
+    stamps = [t for t in stamps if t != datetime.min]
+    return max(stamps) if stamps else None
 
 
 def is_xbrl_url(url: str) -> bool:
@@ -310,23 +546,51 @@ def parse_integrated_listing(payload: Any) -> list[ResultFiling]:
             continue
         if basis not in ("consolidated", "standalone") or not end or not is_quarter_end(end):
             continue
-        out.append(ResultFiling(end, basis, xbrl, parse_timestamp(row.get("broadcast_Date"))))
+        out.append(
+            ResultFiling(
+                end,
+                basis,
+                xbrl,
+                _timestamp(row.get("broadcast_Date"), row.get("creation_Date"), row.get("revised_Date")),
+                seq=_seq(row.get("seq_Id")),
+                revision="revis" in str(row.get("type_Sub") or "").lower(),
+            )
+        )
     return out
 
 
-def parse_legacy_listing(payload: Any) -> list[ResultFiling]:
+def parse_legacy_listing(payload: Any, months: int = 3) -> list[ResultFiling]:
+    """
+    Rows of the older listing. With months=3 only quarters are kept, since a
+    cumulative (year-to-date) filing is not a quarter; with months=12 only
+    full financial years are.
+    """
+    lo, hi = QUARTER_DAYS if months == 3 else YEAR_DAYS
     out: list[ResultFiling] = []
     for row in payload if isinstance(payload, list) else []:
         xbrl = row.get("xbrl") or ""
         end, start = parse_date(row.get("toDate")), parse_date(row.get("fromDate"))
         if not is_xbrl_url(xbrl) or not end or not start or not is_quarter_end(end):
             continue
-        # A cumulative (year-to-date) filing is not a quarter.
-        if (end - start).days > 100:
+        if not lo <= (end - start).days <= hi:
             continue
         basis = "consolidated" if (row.get("consolidated") or "").strip().lower() == "consolidated" else "standalone"
-        out.append(ResultFiling(end, basis, xbrl, parse_timestamp(row.get("broadCastDate"))))
+        out.append(
+            ResultFiling(
+                end,
+                basis,
+                xbrl,
+                _timestamp(row.get("broadCastDate"), row.get("filingDate")),
+                seq=_seq(row.get("seqNumber")),
+                revision=str(row.get("reInd") or "").strip().upper() == "R",
+                months=months,
+            )
+        )
     return out
+
+
+def parse_legacy_annual_listing(payload: Any) -> list[ResultFiling]:
+    return parse_legacy_listing(payload, months=12)
 
 
 def choose_basis(filings: Iterable[ResultFiling], window: int = DEFAULT_QUARTERS) -> str:
@@ -351,37 +615,104 @@ def choose_basis(filings: Iterable[ResultFiling], window: int = DEFAULT_QUARTERS
     return "standalone" if standalone else "consolidated"
 
 
-def fetch_quarters(symbol: str, max_quarters: int = DEFAULT_QUARTERS) -> Optional[dict]:
+def _download(symbol: str, filing: ResultFiling, label: str) -> Optional[str]:
+    try:
+        return client().get(filing.xbrl, timeout=60).decode("utf-8", errors="replace")
+    except Exception as exc:
+        logger.warning("  %s %s: XBRL unavailable (%s)", symbol, label, str(exc)[:80])
+        return None
+
+
+def _newest_first(filings: Iterable[ResultFiling]) -> dict[date, list[ResultFiling]]:
+    by_period: dict[date, list[ResultFiling]] = {}
+    for f in filings:
+        by_period.setdefault(f.period_end, []).append(f)
+    for group in by_period.values():
+        group.sort(key=ResultFiling.recency, reverse=True)
+    return by_period
+
+
+def fetch_quarters(
+    symbol: str, max_quarters: int = DEFAULT_QUARTERS, max_years: int = DEFAULT_YEARS
+) -> Optional[dict]:
+    listings = (
+        (RESULTS_INTEGRATED, parse_integrated_listing),
+        (RESULTS_LEGACY, parse_legacy_listing),
+        (RESULTS_LEGACY_ANNUAL, parse_legacy_annual_listing),
+    )
     filings: list[ResultFiling] = []
-    for url, parse in ((RESULTS_INTEGRATED, parse_integrated_listing), (RESULTS_LEGACY, parse_legacy_listing)):
+    for url, parse in listings:
         try:
             filings.extend(parse(_listing(url, symbol)))
         except Exception as exc:
             logger.debug("%s: listing %s failed: %s", symbol, url.split("/api/")[1][:30], exc)
-    if not filings:
+    quarterly = [f for f in filings if f.months == 3]
+    if not quarterly:
         return None
 
-    basis = choose_basis(filings)
-    latest_by_period: dict[date, ResultFiling] = {}
-    for f in filings:
-        if f.basis != basis:
-            continue
-        current = latest_by_period.get(f.period_end)
-        # A revised filing supersedes the original for the same quarter.
-        if current is None or f.broadcast > current.broadcast:
-            latest_by_period[f.period_end] = f
+    basis = choose_basis(quarterly)
+    chosen = [f for f in filings if f.basis == basis]
+    by_period = _newest_first(f for f in chosen if f.months == 3)
+    texts: dict[str, Optional[str]] = {}
 
-    rows = []
-    for end in sorted(latest_by_period)[-max_quarters:]:
-        filing = latest_by_period[end]
-        try:
-            text = client().get(filing.xbrl, timeout=60).decode("utf-8", errors="replace")
-        except Exception as exc:
-            logger.warning("  %s %s: XBRL unavailable (%s)", symbol, period_label(end), str(exc)[:80])
-            continue
-        row = parse_results_xbrl(text, end)
-        if row:
-            rows.append(row)
+    def text_of(filing: ResultFiling, label: str) -> Optional[str]:
+        if filing.xbrl not in texts:
+            texts[filing.xbrl] = _download(symbol, filing, label)
+        return texts[filing.xbrl]
+
+    # Quarters: newest filing first, falling back to older ones for the same
+    # period. Any that still fail are derived afterwards, once the quarters
+    # they depend on are known.
+    rows: dict[date, dict] = {}
+    raw: dict[date, dict] = {}
+    unparsed: list[date] = []
+    for end in sorted(by_period)[-max_quarters:]:
+        for filing in by_period[end]:
+            text = text_of(filing, period_label(end))
+            figures = quarter_figures(text, end) if text else None
+            if figures:
+                raw[end] = figures
+                rows[end] = to_row("period", period_label(end), figures)
+                break
+        else:
+            unparsed.append(end)
+
+    for end in unparsed:
+        for filing in by_period[end]:
+            text = text_of(filing, period_label(end))
+            row = derive_quarter(text, end, raw) if text else None
+            if row:
+                rows[end] = row
+                logger.info("  %s %s: derived (%s)", symbol, period_label(end), row["derived"])
+                break
+        else:
+            logger.warning("  %s %s: no filing for this quarter could be read", symbol, period_label(end))
+
+    # Years: the Annual listing up to FY2024, and the full-year column of each
+    # year-end filing after that. The year end is the company's own, read from
+    # its Annual listing. The quarterly filings were downloaded above, so most
+    # of these cost nothing.
+    # The latest year end, not the commonest: Ambuja closed in December until
+    # 2022 and in March since.
+    annual_filings = sorted((f for f in chosen if f.months == 12), key=lambda f: f.period_end)
+    fy_month = annual_filings[-1].period_end.month if annual_filings else 3
+    year_filings = _newest_first(
+        [f for f in chosen if f.months == 12]
+        + [f for f in chosen if f.months == 3 and f.period_end.month == fy_month]
+    )
+    annual: dict[date, dict] = {}
+    for end in sorted(year_filings)[-max_years:]:
+        for filing in year_filings[end]:
+            text = text_of(filing, f"FY{end.year}")
+            row = parse_annual_xbrl(text, end) if text else None
+            if row:
+                annual[end] = row
+                break
+
+    # Years are kept as filed, not checked against the sum of their quarters.
+    # The two legitimately differ: COALINDIA's FY2024 profit was restated at
+    # year end, and its revenue moved to a gross figure from Mar 2026, so
+    # neither the year nor the quarters can be corrected from the other.
 
     if not rows:
         return None
@@ -389,7 +720,8 @@ def fetch_quarters(symbol: str, max_quarters: int = DEFAULT_QUARTERS) -> Optiona
         "basis": basis,
         "source": "NSE XBRL",
         "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "quarters": rows,
+        "quarters": [rows[k] for k in sorted(rows)],
+        "annual": [annual[k] for k in sorted(annual)],
     }
 
 
@@ -580,6 +912,32 @@ def write_json(path: Path, data: dict) -> None:
     os.replace(tmp, path)
 
 
+def keep_known_periods(old: Optional[dict], new: dict) -> dict:
+    """
+    Carry forward any quarter or year the previous run had and this one could
+    not read. A download that fails tonight, as nsearchives does with a 502
+    under load, is not evidence that a filed quarter went away. Only rows on
+    the same basis carry over, and a row read this run always wins.
+    """
+    if not old or old.get("basis") != new.get("basis"):
+        return new
+    merged = dict(new)
+    # Quarters only. Years are re-read in full every run, so a year that
+    # stops parsing has stopped for a reason, as Ambuja's nine-month and
+    # fifteen-month columns did once they were recognised for what they are.
+    for key, label in (("quarters", "period"),):
+        rows = {r[label]: r for r in old.get(key) or []}
+        rows.update({r[label]: r for r in new.get(key) or []})
+        order = (lambda r: (int(r[label].split()[1]), _MONTHS.index(r[label].split()[0])))
+        merged[key] = sorted(rows.values(), key=order)
+    if len(merged["quarters"]) > len(new.get("quarters") or []):
+        merged["quarters"] = merged["quarters"][-max(len(new.get("quarters") or []), DEFAULT_QUARTERS):]
+    return merged
+
+
+_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
 def run(kind: str, symbols: list[str], limit: int = 0, max_quarters: int = DEFAULT_QUARTERS) -> int:
     path = QUARTERS_FILE if kind == "quarters" else SHAREHOLDING_FILE
     store = load_json(path)
@@ -595,7 +953,7 @@ def run(kind: str, symbols: list[str], limit: int = 0, max_quarters: int = DEFAU
             record = None
 
         if record:
-            store[symbol] = record
+            store[symbol] = keep_known_periods(store.get(symbol), record) if kind == "quarters" else record
             ok += 1
         else:
             failed += 1

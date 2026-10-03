@@ -28,6 +28,9 @@ const DETAIL_FIELDS = [
   'website',
   'quarterly_results',
   'annual_pnl',
+  // Yahoo's own annual figures, kept so the filed years can be re-checked
+  // against them; nothing renders this.
+  'yahoo_annual',
   'balance_sheet',
   'cash_flow',
   'shareholding_history',

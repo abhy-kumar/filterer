@@ -102,6 +102,12 @@ function quantile(sorted: number[], q: number): number {
 
 // ── Results ──────────────────────────────────────────────────
 
+/** Names any quarter in the comparison that was worked out rather than filed. */
+function derivedNote(rows: QuarterlyResult[]): string {
+  const periods = rows.filter((q) => q.derived).map((q) => q.period);
+  return periods.length ? `; ${periods.join(', ')} worked out as the full year less the other three quarters` : '';
+}
+
 function latestQuarter(stock: Stock): DerivedInsight | null {
   const quarters = sortedQuarters(stock);
   const last = quarters[quarters.length - 1];
@@ -153,7 +159,7 @@ function latestQuarter(stock: Stock): DerivedInsight | null {
     headline: `In the ${last.period} quarter, ${clauses.join(' and ')} from a year earlier.`,
     tone,
     figures,
-    basis: `${quarterlySource(stock)}, ${last.period} against ${yearAgo.period}`,
+    basis: `${quarterlySource(stock)}, ${last.period} against ${yearAgo.period}${derivedNote([last, yearAgo])}`,
   };
 }
 
@@ -204,7 +210,7 @@ function trailingYear(stock: Stock): DerivedInsight | null {
         ? [{ label: 'Trailing net profit', value: `${crore(profitNow)} (${signedPct(profitGrowth)})`, tone: toneOf(profitGrowth) }]
         : []),
     ],
-    basis: `${quarterlySource(stock)}, ${current[3].period} to ${last.period} against ${prior[3].period} to ${prior[0].period}`,
+    basis: `${quarterlySource(stock)}, ${current[3].period} to ${last.period} against ${prior[3].period} to ${prior[0].period}${derivedNote([...current, ...prior])}`,
   };
 }
 

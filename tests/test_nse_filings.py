@@ -10,11 +10,16 @@ from datetime import date
 from data_pipeline.nse_filings import (
     ResultFiling,
     choose_basis,
+    derive_quarter,
+    extract_figures,
     holder_role,
+    parse_annual_xbrl,
     parse_integrated_listing,
+    parse_legacy_annual_listing,
     parse_legacy_listing,
     parse_results_xbrl,
     parse_shareholding_xbrl,
+    quarters_in_span,
 )
 
 CONTEXTS = """
@@ -143,6 +148,117 @@ def test_basis_ignores_standalone_history_older_than_the_window():
     assert choose_basis(filings) == "consolidated"
 
 
+def ctx(cid, start, end):
+    return (
+        f'<xbrli:context id="{cid}"><xbrli:entity/><xbrli:period>'
+        f"<xbrli:startDate>{start}</xbrli:startDate><xbrli:endDate>{end}</xbrli:endDate>"
+        "</xbrli:period></xbrli:context>"
+    )
+
+
+def test_a_revision_outranks_the_original_even_without_a_date():
+    # DIVISLAB's corrected Mar 2026 filing arrives with no broadcast date; the
+    # original it corrects has only a half-year column.
+    payload = {
+        "data": [
+            {"qe_Date": "31-MAR-2026", "consolidated": "Consolidated", "xbrl": "https://x/revised.xml",
+             "broadcast_Date": None, "type_Sub": "Revision", "seq_Id": "1674093"},
+            {"qe_Date": "31-MAR-2026", "consolidated": "Consolidated", "xbrl": "https://x/original.xml",
+             "broadcast_Date": "23-May-2026 18:14:10", "type_Sub": "Original", "seq_Id": "1672045"},
+        ]
+    }
+    filings = sorted(parse_integrated_listing(payload), key=ResultFiling.recency, reverse=True)
+    assert filings[0].xbrl.endswith("revised.xml")
+
+
+def test_old_layout_reads_columns_by_id_not_by_date():
+    # Pre-2025 filings date every column with the quarter; FourD holds the year.
+    xbrl = "<xbrli:xbrl>" + stated_year("2022-04-01", "2023-03-31") + ctx("OneD", "2023-01-01", "2023-03-31") + ctx("FourD", "2023-01-01", "2023-03-31") + "".join(
+        [
+            fact("RevenueFromOperations", "FourD", "77675100000"),
+            fact("RevenueFromOperations", "OneD", "19507700000"),
+            fact("ProfitLossForPeriod", "OneD", "3209700000"),
+            fact("ProfitLossForPeriod", "FourD", "18233800000"),
+        ]
+    ) + "</xbrli:xbrl>"
+    assert parse_results_xbrl(xbrl, date(2023, 3, 31))["sales"] == 1950.77
+    assert parse_annual_xbrl(xbrl, date(2023, 3, 31))["sales"] == 7767.51
+
+
+def stated_year(start, end):
+    return (
+        f'<in-bse-fin:DateOfStartOfFinancialYear contextRef="OneD">{start}</in-bse-fin:DateOfStartOfFinancialYear>'
+        f'<in-bse-fin:DateOfEndOfFinancialYear contextRef="OneD">{end}</in-bse-fin:DateOfEndOfFinancialYear>'
+    )
+
+
+def test_undefined_column_contexts_are_taken_at_their_word():
+    # 2018 to 2022 filings cite OneD and FourD without defining them.
+    xbrl = "<xbrli:xbrl>" + stated_year("2021-04-01", "2022-03-31") + fact("RevenueFromOperations", "OneD", "25184400000") + fact(
+        "RevenueFromOperations", "FourD", "89598300000"
+    ) + "</xbrli:xbrl>"
+    assert parse_results_xbrl(xbrl, date(2022, 3, 31))["sales"] == 2518.44
+    assert parse_annual_xbrl(xbrl, date(2022, 3, 31))["sales"] == 8959.83
+
+
+def test_a_half_year_is_never_read_as_the_year():
+    xbrl = "<xbrli:xbrl>" + ctx("FourD", "2025-10-01", "2026-03-31") + fact(
+        "RevenueFromOperations", "FourD", "100000000"
+    ) + "</xbrli:xbrl>"
+    assert parse_annual_xbrl(xbrl, date(2026, 3, 31)) is None
+
+
+def test_a_filed_zero_profit_gives_way_to_the_next_tag():
+    xbrl = "<xbrli:xbrl>" + CONTEXTS + "".join(
+        [
+            fact("RevenueFromOperations", "OneD", "100000000000"),
+            fact("ProfitOrLossAttributableToOwnersOfParent", "OneD", "0.00"),
+            fact("ProfitLossForPeriod", "OneD", "13527400000"),
+        ]
+    ) + "</xbrli:xbrl>"
+    assert parse_results_xbrl(xbrl, date(2025, 9, 30))["net_profit"] == 1352.74
+
+
+def test_legacy_annual_listing_keeps_only_full_years():
+    payload = [
+        {"fromDate": "01-Apr-2022", "toDate": "31-Mar-2023", "consolidated": "Consolidated", "xbrl": "https://x/y.xml"},
+        {"fromDate": "01-Jan-2023", "toDate": "31-Mar-2023", "consolidated": "Consolidated", "xbrl": "https://x/q.xml"},
+    ]
+    filings = parse_legacy_annual_listing(payload)
+    assert [(f.xbrl, f.months) for f in filings] == [("https://x/y.xml", 12)]
+
+
+def test_quarters_in_span():
+    assert quarters_in_span(date(2025, 4, 1), date(2026, 3, 31)) == [
+        date(2025, 6, 30),
+        date(2025, 9, 30),
+        date(2025, 12, 31),
+    ]
+    assert quarters_in_span(date(2025, 10, 1), date(2026, 3, 31)) == [date(2025, 12, 31)]
+
+
+def test_a_quarter_with_no_column_of_its_own_is_derived_from_the_year():
+    xbrl = "<xbrli:xbrl>" + ctx("Y", "2025-04-01", "2026-03-31") + "".join(
+        [
+            fact("RevenueFromOperations", "Y", "1000000000000"),
+            fact("ProfitLossForPeriod", "Y", "100000000000"),
+        ]
+    ) + "</xbrli:xbrl>"
+    known = {
+        q: {"sales": 2000000000.0 * 100, "net_profit": 2000000000.0 * 10, "eps": 1.0}
+        for q in (date(2025, 6, 30), date(2025, 9, 30), date(2025, 12, 31))
+    }
+    row = derive_quarter(xbrl, date(2026, 3, 31), known)
+    assert row["sales"] == 40000.0  # a lakh crore less three quarters of 20,000
+    assert row["net_profit"] == 4000.0
+    assert row["eps"] is None
+    assert row["derived"]
+
+    # Without all three earlier quarters, nothing is derived.
+    del known[date(2025, 9, 30)]
+    assert derive_quarter(xbrl, date(2026, 3, 31), known) is None
+
+
 SHP = """<xbrli:xbrl>
 <in-bse-shp:ShareholdingAsAPercentageOfTotalNumberOfShares contextRef="ShareholdingOfPromoterAndPromoterGroup_ContextI" decimals="4">0.5048</in-bse-shp:ShareholdingAsAPercentageOfTotalNumberOfShares>
 <in-bse-shp:ShareholdingAsAPercentageOfTotalNumberOfShares contextRef="PublicShareholding_ContextI" decimals="4">0.4952</in-bse-shp:ShareholdingAsAPercentageOfTotalNumberOfShares>
@@ -182,3 +298,41 @@ def test_named_holders_link_name_to_figures_and_drop_sub_one_percent():
 def test_insiders_are_not_public_investors():
     assert holder_role("DetailsOfSharesHeldByKeyManagerialPersonnel") == "insider"
     assert holder_role("DetailsOfSharesHeldByBodiesCorporate") == "public"
+
+
+def test_a_quarter_that_failed_to_download_is_kept_from_the_last_run():
+    from data_pipeline.nse_filings import keep_known_periods
+
+    old = {"basis": "consolidated", "quarters": [{"period": "Dec 2024", "sales": 1}, {"period": "Mar 2025", "sales": 2}], "annual": []}
+    new = {"basis": "consolidated", "quarters": [{"period": "Mar 2025", "sales": 3}, {"period": "Jun 2025", "sales": 4}], "annual": []}
+    merged = keep_known_periods(old, new)
+    assert [(q["period"], q["sales"]) for q in merged["quarters"]] == [("Dec 2024", 1), ("Mar 2025", 3), ("Jun 2025", 4)]
+
+    # Years are never carried forward.
+    assert keep_known_periods({**old, "annual": [{"year": "Dec 2024"}]}, new)["annual"] == []
+
+    # A change of basis starts afresh rather than mixing the two.
+    assert keep_known_periods({**old, "basis": "standalone"}, new) == new
+
+
+def test_a_financial_year_need_not_end_in_march():
+    from data_pipeline.nse_filings import fiscal_year_start
+
+    assert fiscal_year_start(date(2026, 3, 31)) == date(2025, 4, 1)
+    assert fiscal_year_start(date(2025, 12, 31)) == date(2025, 1, 1)  # ABB
+    assert fiscal_year_start(date(2025, 9, 30)) == date(2024, 10, 1)  # Siemens
+    assert fiscal_year_start(date(2025, 6, 30)) == date(2024, 7, 1)  # P&G Hygiene
+
+
+def test_year_to_date_is_a_year_only_when_the_filing_says_its_year_is_twelve_months():
+    columns = ctx("OneD", "2024-10-01", "2024-12-31") + ctx("FourD", "2024-10-01", "2024-12-31") + fact(
+        "RevenueFromOperations", "FourD", "251561500000"
+    )
+    # A December filing in a March year: FourD is nine months.
+    nine_months = "<xbrli:xbrl>" + stated_year("2024-04-01", "2025-03-31") + columns + "</xbrli:xbrl>"
+    assert parse_annual_xbrl(nine_months, date(2024, 12, 31)) is None
+    # Ambuja's change of year end: fifteen months, January 2022 to March 2023.
+    fifteen = "<xbrli:xbrl>" + stated_year("2022-01-01", "2023-03-31") + columns.replace("2024-10-01", "2023-01-01").replace(
+        "2024-12-31", "2023-03-31"
+    ) + "</xbrli:xbrl>"
+    assert parse_annual_xbrl(fifteen, date(2023, 3, 31)) is None

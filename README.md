@@ -66,12 +66,21 @@ Everything is free to fetch and needs no API key.
 |---|---|---|
 | Live prices and index levels | Yahoo Finance spark API, with BSE's quote API as fallback (`api/quotes.ts`, `api/market_indices.ts`) | On request, cached 20 seconds while the market is open |
 | Quarterly results | NSE XBRL filings, integrated and legacy listings, about 12 quarters (`data_pipeline/nse_filings.py`) | Every evening |
+| Annual P&L | NSE XBRL: the Annual listing from FY2018, then the full-year column of each March filing | Every evening |
 | Shareholding, including the FII / DII split, and every holder of 1% or more | NSE shareholding pattern XBRL | Every evening |
 | Super-investor portfolios | The shareholding filings above, matched to the names in `data/super_investors/registry.json` (`data_pipeline/super_investors.py`) | Every evening |
 | Closing prices for companies outside the Nifty 500 | NSE bhavcopy | Every evening |
-| Annual statements, balance sheets, cash flow, price history | Yahoo Finance via yfinance | Weekly |
+| Balance sheets, cash flow, dividend payout, price history | Yahoo Finance via yfinance | Weekly |
 
-Filed data takes precedence: where NSE's XBRL is available, quarterly results come from it rather than from Yahoo, and the quarterly table says which source and which basis (consolidated or standalone) it is showing.
+Filed data takes precedence: where NSE's XBRL is available, quarterly results and the annual P&L come from it rather than from Yahoo, and each table says which source and which basis (consolidated or standalone) it is showing.
+
+How the filings are read, and where they fall short:
+
+- **Revisions win.** A company that corrects a filing files a revision, and NSE often lists it with no date. The pipeline ranks revisions above originals regardless, and falls back to an older filing for the same period if the newest cannot be read.
+- **Two XBRL layouts.** Filings before 2025 are laid out as the printed results table: every column carries the quarter's dates, and the column (quarter, or year to date) is in the context id. Many from 2018 to 2022 cite those ids without defining them. Both are handled.
+- **Worked-out quarters.** When no filing for a quarter has a three-month column, the quarter is calculated from a longer period in the same filing less the quarters before it, and marked as such.
+- **The Mar 2025 hole.** Companies that moved to integrated filing a quarter or two late had their Mar 2025 results indexed in neither NSE listing. For those, the quarter is worked out as the year less its first three quarters, and the year itself comes from Yahoo, but only where Yahoo matches the filed figures in every year both cover, and only for sales and net profit. Banks never pass that check, so theirs stay blank.
+- **Years are not reconciled to quarters.** A year's own filing is kept as filed even when it differs from the sum of its quarters, because restatements and changes of presentation make both legitimate.
 
 ## What's in it
 

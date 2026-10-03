@@ -63,13 +63,152 @@ const FILED_QUARTERS = readFiling('quarterly_results.json');
 const FILED_SHAREHOLDING = readFiling('shareholding.json');
 /** Fewer than this and the Yahoo series, gaps and all, still says more. */
 const MIN_FILED_QUARTERS = 4;
+const MIN_FILED_YEARS = 3;
+/**
+ * How close Yahoo's annual revenue and profit must come to the filed figures,
+ * in every year both cover, before Yahoo may fill a year the filings lack.
+ * Banks fail this by design: Yahoo's revenue for a bank is not interest earned.
+ */
+const YAHOO_AGREEMENT = 0.03;
+/**
+ * Working a quarter out from the year multiplies the year's error by about
+ * four, since the quarter is a quarter of the size. Ambuja's FY2025 from
+ * Yahoo is within 4% of the filing, and the quarter it implied was 15% short.
+ * A quarter is derived from a Yahoo year only when Yahoo matched the filings
+ * this closely in every year both cover.
+ */
+const YAHOO_AGREEMENT_FOR_QUARTERS = 0.01;
+
+/**
+ * Yahoo's own annual rows, kept aside so that a re-run can still check them
+ * against the filings after the filed rows have replaced them. A fresh ingest
+ * writes rows with no `source`; those always win.
+ */
+function yahooAnnual(stock) {
+  const fresh = (stock.annual_pnl || []).filter((p) => !p.source && p.year !== 'TTM');
+  const rows = fresh.length ? fresh : stock.yahoo_annual || [];
+  return rows.map((p) => ({
+    year: p.year,
+    sales: num(p.sales),
+    net_profit: num(p.net_profit),
+    dividend_payout_pct: num(p.dividend_payout_pct),
+  }));
+}
+
+function gap(a, b) {
+  return typeof a === 'number' && typeof b === 'number' ? Math.abs(a - b) / Math.max(Math.abs(b), 1) : Infinity;
+}
+
+/**
+ * Annual P&L from the filings, with Yahoo filling a year only where the two
+ * sources demonstrably measure the same thing. A filled year carries revenue
+ * and net profit alone: Yahoo puts depreciation inside expenses and leaves
+ * other income out, so its other lines do not mean what the filed ones do.
+ */
+function mergeAnnual(stock, filedYears) {
+  const yahoo = yahooAnnual(stock);
+  const byYear = new Map(filedYears.map((y) => [y.year, { ...y, source: 'NSE' }]));
+
+  const overlap = yahoo.filter((y) => byYear.has(y.year));
+  const worst = overlap.length
+    ? Math.max(...overlap.flatMap((y) => [gap(y.sales, byYear.get(y.year).sales), gap(y.net_profit, byYear.get(y.year).net_profit)]))
+    : Infinity;
+  const trustworthy = worst <= YAHOO_AGREEMENT;
+
+  for (const y of yahoo) {
+    const filed = byYear.get(y.year);
+    if (filed) {
+      // The filing has no payout ratio; Yahoo's is the only one there is.
+      filed.dividend_payout_pct = y.dividend_payout_pct;
+    } else if (trustworthy && yearKey(y.year) > yearKey(filedYears[0].year)) {
+      byYear.set(y.year, {
+        year: y.year,
+        sales: y.sales,
+        expenses: null,
+        operating_profit: null,
+        opm_pct: null,
+        other_income: null,
+        interest: null,
+        depreciation: null,
+        profit_before_tax: null,
+        tax_pct: null,
+        net_profit: y.net_profit,
+        eps: null,
+        dividend_payout_pct: y.dividend_payout_pct,
+        source: 'Yahoo',
+        // How far Yahoo strayed from the filings in the years both cover.
+        agreement: round(worst, 4),
+      });
+      count('annual year filled from Yahoo where NSE has no filing');
+    }
+  }
+
+  return {
+    annual: [...byYear.values()].sort((a, b) => yearKey(a.year) - yearKey(b.year)),
+    yahoo,
+  };
+}
+
+/**
+ * A March quarter NSE never indexed, worked out as the year less its first
+ * three quarters. Only revenue and net profit, the two lines a Yahoo-filled
+ * year carries; a year filed with NSE would have come with its own quarter.
+ */
+function deriveMissingMarchQuarters(quarters, annual) {
+  const have = new Map(quarters.map((q) => [q.period, q]));
+  const out = [...quarters];
+  for (const year of annual) {
+    if (year.source === 'Yahoo' && !(year.agreement <= YAHOO_AGREEMENT_FOR_QUARTERS)) continue;
+    const [month, fy] = String(year.year).split(' ');
+    // The Mar 2025 hole is a March-year problem; other year ends are not filled.
+    if (month !== 'Mar') continue;
+    const march = `Mar ${fy}`;
+    if (have.has(march)) continue;
+    const before = [`Jun ${fy - 1}`, `Sep ${fy - 1}`, `Dec ${fy - 1}`].map((p) => have.get(p));
+    if (before.some((q) => !q)) continue;
+    const less = (key) =>
+      typeof year[key] === 'number' && before.every((q) => typeof q[key] === 'number')
+        ? round(year[key] - before.reduce((sum, q) => sum + q[key], 0))
+        : null;
+    const sales = less('sales');
+    const netProfit = less('net_profit');
+    if (sales === null && netProfit === null) continue;
+    out.push({
+      period: march,
+      sales,
+      expenses: null,
+      operating_profit: null,
+      opm_pct: null,
+      other_income: null,
+      interest: null,
+      depreciation: null,
+      profit_before_tax: null,
+      tax_pct: null,
+      net_profit: netProfit,
+      eps: null,
+      derived: `the FY${fy} total${year.source === 'NSE' ? '' : ' from Yahoo Finance'} less the three quarters before it`,
+    });
+    count('missing March quarter derived from the year');
+  }
+  return out.sort((a, b) => periodKey(a.period) - periodKey(b.period));
+}
 
 function applyFilings(stock) {
   const next = { ...stock };
 
   const filed = FILED_QUARTERS[stock.symbol];
+  if (filed?.annual?.length >= MIN_FILED_YEARS) {
+    const { annual, yahoo } = mergeAnnual(stock, filed.annual);
+    next.annual_pnl = annual;
+    next.yahoo_annual = yahoo;
+    next.annual_source = 'NSE XBRL';
+    count('annual P&L taken from NSE filings');
+  }
   if (filed?.quarters?.length >= MIN_FILED_QUARTERS) {
-    next.quarterly_results = filed.quarters.map((q) => ({ ...q }));
+    next.quarterly_results = deriveMissingMarchQuarters(
+      filed.quarters.map((q) => ({ ...q })),
+      (next.annual_pnl || []).filter((p) => p.source)
+    );
     next.quarterly_source = filed.source;
     next.quarterly_basis = filed.basis;
     count('quarterly results taken from NSE filings');
@@ -262,7 +401,11 @@ function altman(stock, pnl, balance) {
 
   const ta = num(bsNow.total_assets);
   const tl = num(bsNow.total_liabilities);
-  const ebit = num(pnlNow.operating_profit);
+  // Filed rows keep depreciation out of operating profit; Yahoo's put it in.
+  const ebit =
+    pnlNow.source === 'NSE' && num(pnlNow.operating_profit) !== null
+      ? num(pnlNow.operating_profit) - (num(pnlNow.depreciation) ?? 0)
+      : num(pnlNow.operating_profit);
   const sales = num(pnlNow.sales);
   const mcap = num(stock.market_cap);
   if (!(ta > 0) || !(tl > 0) || ebit === null || sales === null || !(mcap > 0)) return null;
