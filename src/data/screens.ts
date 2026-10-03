@@ -8,134 +8,110 @@ import { ScreenFilter } from '../types/stock';
  * are unavailable and the screens use three-year and trailing-twelve-month
  * figures instead. Ownership deltas are excluded because the underlying series
  * is placeholder data (see src/engine/dataQuality.ts).
+ *
+ * The card shows the criteria, generated from the query, so a description
+ * only says what the criteria cannot: where an idea comes from, or a caveat
+ * about the data. Most screens need neither and have none.
  */
+export const SCREEN_CATEGORIES = ['Quality', 'Value', 'Growth', 'Income', 'Technical'] as const;
+
 export const CURATED_SCREENS: ScreenFilter[] = [
   {
     id: 'debt-free-compounders',
-    title: 'Debt-Free Compounders',
-    description:
-      'Almost no borrowings, a high return on the capital they do employ, and three-year profit growth to show it compounds.',
+    title: 'Debt-free compounders',
+    description: '',
     query:
       'Debt to equity < 0.1 AND Return on capital employed > 20 AND Profit growth 3Years > 12 AND Market Capitalization > 500',
-    category: 'Popular',
-    iconName: 'ShieldCheck',
-    author: 'Filterer',
+    category: 'Quality',
   },
   {
     id: 'magic-formula',
-    title: 'Magic Formula',
+    title: 'Magic formula',
     description:
-      'Greenblatt in two lines: a high return on capital bought at an undemanding multiple. Size floor keeps out the illiquid.',
+      'Greenblatt ranks every company on return on capital and earnings yield and buys the top of the combined list. This is a cruder version with fixed cut-offs.',
     query:
       'Price to Earning < 25 AND Return on capital employed > 22 AND Return on equity > 18 AND Market Capitalization > 1000',
-    category: 'Valuation',
-    iconName: 'Sparkles',
-    author: 'Joel Greenblatt',
+    category: 'Value',
+    basedOn: 'Joel Greenblatt',
   },
   {
     id: 'growth-champions',
-    title: 'Consistent Growth',
-    description:
-      'Both the top and bottom line compounding above 15% over three years, and still growing in the trailing twelve months.',
+    title: 'Consistent growth',
+    description: '',
     query:
       'Sales growth 3Years > 12 AND Profit growth 3Years > 15 AND Sales growth TTM > 5 AND Profit growth TTM > 5',
     category: 'Growth',
-    iconName: 'TrendingUp',
-    author: 'Filterer',
   },
   {
     id: 'undervalued-bargains',
-    title: 'Graham Bargains',
-    description:
-      'Trading under the Graham number, with a balance sheet that is not carrying the business and a real return on equity.',
+    title: 'Below the Graham number',
+    description: 'The Graham number is √(22.5 × EPS × book value per share).',
     query:
       'Current price < Graham Number AND Debt to equity < 0.5 AND Return on equity > 12 AND Market Capitalization > 300',
-    category: 'Valuation',
-    iconName: 'Gem',
-    author: 'Benjamin Graham',
+    category: 'Value',
+    basedOn: 'Benjamin Graham',
   },
   {
     id: 'golden-crossover',
-    title: 'Golden Cross, Not Overbought',
-    description:
-      'The 50-day average above the 200-day, price above both, and RSI in the band that has not yet run away.',
+    title: 'Golden cross, not overbought',
+    description: '',
     query: 'DMA 50 > DMA 200 AND Current price > DMA 50 AND RSI > 50 AND RSI < 70',
-    category: 'Technicals',
-    iconName: 'Zap',
-    author: 'Filterer',
+    category: 'Technical',
   },
   {
     id: 'quality-at-a-discount',
-    title: 'Quality Below Its Sector',
-    description:
-      'Companies earning above 18% on capital while trading at a discount to their own industry multiple.',
+    title: 'Cheaper than its sector',
+    description: 'Sector P/E is the median of the other companies in the same sector here, not an index figure.',
     query:
       'Return on capital employed > 18 AND Price to Earning < Industry PE AND Debt to equity < 0.6 AND Market Capitalization > 1000',
-    category: 'Valuation',
-    iconName: 'Landmark',
-    author: 'Filterer',
+    category: 'Value',
   },
   {
     id: 'piotroski-high-score',
-    title: 'High Piotroski F-Score',
+    title: 'Piotroski 7 or better',
     description:
-      'Seven or more Piotroski tests passed, paired with an Altman Z-score out of the distress zone. Eight of the nine tests are scored from the filed statements; banks carry no Z-score, so this screen is non-financials.',
+      'Eight of the nine tests can be scored from the filings here. Banks have no Z-score, so none of them pass.',
     query: 'Piotroski score >= 7 AND Altman Z-Score > 2.9 AND Return on equity > 14',
-    category: 'Safety',
-    iconName: 'Award',
-    author: 'Joseph Piotroski',
+    category: 'Quality',
+    basedOn: 'Joseph Piotroski',
   },
   {
     id: 'cash-flow-kings',
-    title: 'Cash Flow Kings',
-    description:
-      'Free cash flow that is material against the market capitalisation, backed by three years of positive operating cash.',
+    title: 'High free cash flow yield',
+    description: 'Operating cash flow here is the sum of the last three years, in ₹ crore.',
     query: 'Free cash flow yield > 4 AND Operating cash flow 3Years > 200 AND Debt to equity < 0.8',
-    category: 'Growth',
-    iconName: 'Coins',
-    author: 'Filterer',
+    category: 'Value',
   },
   {
     id: 'high-dividend-yield',
-    title: 'Dividend Payers That Can Afford It',
-    description:
-      'Yield above 2.5%, leverage kept in check, and a return on capital high enough that the payout is not being borrowed.',
+    title: 'Dividends with cover',
+    description: '',
     query:
       'Dividend yield > 2.5 AND Debt to equity < 0.8 AND Return on capital employed > 15 AND Market Capitalization > 1000',
-    category: 'Dividends',
-    iconName: 'PiggyBank',
-    author: 'Filterer',
+    category: 'Income',
   },
   {
     id: 'near-52w-high-breakout',
-    title: 'Near Highs, Still Reasonable',
-    description:
-      'Within 10% of the 52-week high but not yet priced past 30x earnings, with a return on equity to justify it.',
+    title: 'Near the 52-week high',
+    description: '',
     query: 'Distance from 52w High > -10 AND Price to Earning < 30 AND Return on equity > 15',
-    category: 'Technicals',
-    iconName: 'Flame',
-    author: 'Filterer',
+    category: 'Technical',
   },
   {
     id: 'low-peg-growth',
-    title: 'Growth at a Reasonable Price',
-    description:
-      'Lynch in one line: earnings growth the market has not fully paid for, filtered to businesses that earn their capital back.',
+    title: 'Growth at a reasonable price',
+    description: "Lynch's rule of thumb was a PEG under 1. This allows a little more room.",
     query:
       'PEG Ratio < 1.2 AND PEG Ratio > 0 AND Profit growth 3Years > 18 AND Return on capital employed > 18',
-    category: 'Valuation',
-    iconName: 'Activity',
-    author: 'Peter Lynch',
+    category: 'Growth',
+    basedOn: 'Peter Lynch',
   },
   {
     id: 'oversold-quality',
-    title: 'Oversold, Not Broken',
-    description:
-      'Well off the highs with RSI under 40, but still earning above 15% on capital and carrying little debt.',
+    title: 'Oversold, still profitable',
+    description: '',
     query:
       'RSI < 40 AND Distance from 52w High < -20 AND Return on capital employed > 15 AND Debt to equity < 0.5',
-    category: 'Popular',
-    iconName: 'CheckCircle',
-    author: 'Filterer',
+    category: 'Technical',
   },
 ];

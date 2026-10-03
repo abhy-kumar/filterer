@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink, Search } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 
 /**
@@ -34,24 +33,24 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
       ? [
           {
             title: 'Annual reports',
-            source: `BSE Annual Reports Archive (${bseCode})`,
+            source: `BSE, scrip ${bseCode}`,
             url: `https://www.bseindia.com/corporates/AnnualReport_New.aspx?expandable=0&scrip_cd=${bseCode}`,
           },
           {
             title: 'Corporate announcements',
-            source: 'BSE Regulatory Announcements',
+            source: 'BSE',
             url: `https://www.bseindia.com/corporates/ann.html?scrip=${bseCode}`,
           },
           {
             title: 'Results and board outcomes',
-            source: 'BSE Financial Results & Board Outcomes',
+            source: 'BSE',
             url: `https://www.bseindia.com/corporates/Comp_Resultsnew.aspx?scripcode=${bseCode}`,
           },
         ]
       : []),
     {
       title: 'Quote and filings',
-      source: 'NSE Corporate Filings',
+      source: 'NSE',
       url: `https://www.nseindia.com/get-quotes/equity?symbol=${encodeURIComponent(symbol)}`,
     },
   ];
@@ -59,7 +58,7 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
   const research: DocLink[] = [
     {
       title: 'Screener.in profile',
-      source: 'Corporate Financial Archive',
+      source: 'screener.in',
       url: `https://www.screener.in/company/${encodeURIComponent(symbol)}/consolidated/`,
     },
     ...(website
@@ -117,13 +116,8 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start gap-2.5 px-2 py-1.5 rounded-lg hover:bg-apple-surface-hover transition-colors group"
+              className="flex items-start gap-2.5 px-2 py-1.5 rounded-md hover:bg-apple-surface-hover transition-colors group"
             >
-              {link.isSearch ? (
-                <Search className="w-3.5 h-3.5 shrink-0 mt-0.5 text-apple-faint" />
-              ) : (
-                <ExternalLink className="w-3.5 h-3.5 shrink-0 mt-0.5 text-apple-faint group-hover:text-apple-blue transition-colors" />
-              )}
               <span className="min-w-0">
                 <span className="block text-caption1 text-apple-primary group-hover:text-apple-blue transition-colors">
                   {link.title}
@@ -140,18 +134,15 @@ export const StockDocuments: React.FC<{ stock: Stock }> = ({ stock }) => {
   return (
     <div className="space-y-3">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        {group('Exchange filings', 'Primary sources, straight from the exchange.', exchange)}
-        {group('Elsewhere', 'Other places this company is covered in depth.', research)}
+        {group('Exchange filings', 'The filings themselves, on BSE and NSE.', exchange)}
+        {group('Elsewhere', 'Other sites.', research)}
         {group(
           'Documents',
-          'Filterer does not host PDFs. These open a web search for the document.',
+          'Each opens a web search; nothing here is hosted by Filterer.',
           searches
         )}
       </div>
 
-      <p className="text-caption2 text-apple-muted leading-relaxed">
-        Exchange pages link to official filing archives on BSE and NSE, where full annual reports and announcements can be viewed.
-      </p>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Bookmark, Plus, Check, Trash2, X } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { useWatchlists } from '../context/WatchlistContext';
 
 interface WatchlistModalProps {
@@ -36,20 +36,17 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 animate-fade-in"
       onClick={onClose}
     >
       <div
-        className="apple-card max-w-sm w-full p-5 shadow-2xl space-y-4 border border-apple-border"
+        className="apple-card max-w-sm w-full p-5 shadow-lg space-y-4 border border-apple-border"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Bookmark className="w-4 h-4 text-apple-blue" />
-            <h2 className="text-subheadline font-semibold text-apple-primary font-display">
-              Add {symbol} to Watchlist
-            </h2>
-          </div>
+          <h2 className="text-subheadline font-semibold text-apple-primary font-display">
+            Add {symbol} to a watchlist
+          </h2>
           <button
             onClick={onClose}
             className="apple-btn apple-btn-quiet p-1 -mr-1 text-apple-muted hover:text-apple-primary"
@@ -73,16 +70,16 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
                 key={wl.id}
                 type="button"
                 onClick={() => toggleStockInWatchlist(wl.id, symbol)}
-                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-left text-caption1 transition-colors border ${
+                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-md text-left text-caption1 transition-colors border ${
                   inList
-                    ? 'bg-apple-blue/10 text-apple-blue border-apple-blue/20 font-medium'
-                    : 'bg-apple-surface/40 hover:bg-apple-surface text-apple-secondary border-apple-border/50'
+                    ? 'bg-apple-blue-subtle text-apple-primary border-apple-border'
+                    : 'hover:bg-apple-surface-hover text-apple-secondary border-apple-border-subtle'
                 }`}
               >
                 <div className="min-w-0 pr-2">
                   <div className="font-medium truncate">{wl.name}</div>
                   <div className="text-caption2 text-apple-muted mt-0.5">
-                    {wl.symbols.length} {wl.symbols.length === 1 ? 'stock' : 'stocks'}
+                    {wl.symbols.length} {wl.symbols.length === 1 ? 'company' : 'companies'}
                   </div>
                 </div>
                 <div
@@ -105,7 +102,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
               type="text"
               value={newWatchlistName}
               onChange={(e) => setNewWatchlistName(e.target.value)}
-              placeholder="e.g. Smallcap Gems"
+              placeholder="Name"
               autoFocus
               className="apple-input text-caption1 flex-1 h-8 px-2.5"
             />
@@ -133,8 +130,7 @@ export const WatchlistModal: React.FC<WatchlistModalProps> = ({ symbol, stockNam
             onClick={() => setShowCreateInput(true)}
             className="w-full flex items-center justify-center gap-1.5 py-2 text-caption1 font-medium text-apple-blue hover:underline"
           >
-            <Plus className="w-3.5 h-3.5" />
-            Create new watchlist
+            New watchlist
           </button>
         )}
       </div>

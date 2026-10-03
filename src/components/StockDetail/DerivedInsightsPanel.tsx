@@ -32,10 +32,9 @@ export const DerivedInsightsPanel: React.FC<{ insights: DerivedInsight[] }> = ({
     <div className="apple-card overflow-hidden">
       <div className="px-4 sm:px-6 py-4 border-b border-apple-border flex flex-col sm:flex-row sm:items-end justify-between gap-2">
         <div>
-          <h2 className="text-title3 text-apple-primary font-display">Insights</h2>
+          <h2 className="text-title3 text-apple-primary font-display">Reading the numbers</h2>
           <p className="text-caption1 text-apple-muted mt-0.5 max-w-2xl">
-            Worked out from this company's own results, statements and shareholding filings. Every figure can be
-            checked against the tables further down the page.
+            Calculated from the results, statements and shareholding below.
           </p>
         </div>
         <button
@@ -44,7 +43,7 @@ export const DerivedInsightsPanel: React.FC<{ insights: DerivedInsight[] }> = ({
           aria-pressed={showSources}
           className="apple-btn apple-btn-quiet apple-btn-sm self-start sm:self-auto"
         >
-          {showSources ? 'Hide sources' : 'Show sources'}
+          {showSources ? 'Hide workings' : 'Show workings'}
         </button>
       </div>
 

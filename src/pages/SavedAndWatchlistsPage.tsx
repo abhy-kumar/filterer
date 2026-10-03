@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Bookmark, Plus, Trash2, Edit2, Check, ArrowRight, Search, ListFilter, SlidersHorizontal, Sparkles } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { PageHeader } from '../components/PageHeader';
 import { useWatchlists } from '../context/WatchlistContext';
 import { ScreenResultsTable } from '../components/ScreenResultsTable';
 import { STOCKS_DATA } from '../data/stocksData';
@@ -119,32 +120,19 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
 
   return (
     <>
-      <main className="flex-1 w-full apple-canvas animate-fade-in">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
-          {/* Header with Title and Mode Tabs */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
-            <div>
-              <div className="flex items-center gap-2.5">
-                <Bookmark className="w-5 h-5 text-apple-blue shrink-0" />
-                <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
-                  Watchlists
-                </h1>
-              </div>
-              <p className="text-caption1 text-apple-muted mt-1 leading-normal">
-                Track custom stock portfolios, monitor valuation ratios, and manage saved screener queries.
-              </p>
-            </div>
-
-            {/* Tab switch */}
-            <div className="flex items-center apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar max-w-full">
+      <main className="flex-1 w-full animate-fade-in">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+          <PageHeader
+            title="Watchlists"
+            aside={
+            <div className="flex items-center apple-segmented overflow-x-auto no-scrollbar max-w-full">
               <button
                 onClick={() => setActiveTab('watchlists')}
                 className={`apple-segmented-item flex items-center gap-1.5 ${
                   activeTab === 'watchlists' ? 'active' : ''
                 }`}
               >
-                <ListFilter className="w-3.5 h-3.5" />
-                Custom Watchlists
+                Watchlists
                 <span className="text-caption2 num text-apple-muted ml-0.5">
                   {watchlists.length}
                 </span>
@@ -155,8 +143,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                   activeTab === 'screens' ? 'active' : ''
                 }`}
               >
-                <SlidersHorizontal className="w-3.5 h-3.5" />
-                Saved Screens
+                Saved queries
                 {savedScreens.length > 0 && (
                   <span className="text-caption2 num text-apple-muted ml-0.5">
                     {savedScreens.length}
@@ -164,13 +151,15 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                 )}
               </button>
             </div>
-          </div>
+            }
+          >
+            Companies you're following, and queries you've saved. Both are kept in this browser.
+          </PageHeader>
 
           {/* WATCHLISTS VIEW */}
           {activeTab === 'watchlists' && (
             <div className="space-y-6">
-              {/* Watchlists Pill Bar */}
-              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+              <div className="flex items-center gap-1 overflow-x-auto no-scrollbar border-b border-apple-border">
                 {watchlists.map((wl) => {
                   const isActive = wl.id === activeWatchlist?.id;
                   return (
@@ -180,22 +169,10 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                         setActiveWatchlistId(wl.id);
                         setIsEditingWl(false);
                       }}
-                      className={`px-3.5 py-1.5 rounded-full text-caption1 font-medium whitespace-nowrap transition-all flex items-center gap-2 border ${
-                        isActive
-                          ? 'bg-apple-primary text-apple-bg border-apple-primary shadow-sm font-semibold'
-                          : 'bg-apple-card hover:bg-apple-surface text-apple-secondary border-apple-border'
-                      }`}
+                      className={`filter-tab flex items-baseline gap-1.5 ${isActive ? 'is-active' : ''}`}
                     >
                       <span>{wl.name}</span>
-                      <span
-                        className={`text-caption2 num px-1.5 py-0.5 rounded-full ${
-                          isActive
-                            ? 'bg-apple-bg/20 text-apple-bg'
-                            : 'bg-apple-bg-subtle text-apple-muted'
-                        }`}
-                      >
-                        {wl.symbols.length}
-                      </span>
+                      <span className="text-caption1 num text-apple-faint">{wl.symbols.length}</span>
                     </button>
                   );
                 })}
@@ -206,7 +183,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                       type="text"
                       value={newWlName}
                       onChange={(e) => setNewWlName(e.target.value)}
-                      placeholder="Watchlist Name"
+                      placeholder="Name"
                       autoFocus
                       className="apple-input text-caption1 h-8 px-2.5 w-36"
                     />
@@ -220,18 +197,17 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                     <button
                       type="button"
                       onClick={() => setIsCreatingWl(false)}
-                      className="apple-btn apple-btn-secondary text-caption1 h-8 px-2"
+                      className="apple-btn apple-btn-quiet text-caption1 h-8 px-2"
                     >
-                      ✕
+                      Cancel
                     </button>
                   </form>
                 ) : (
                   <button
                     onClick={() => setIsCreatingWl(true)}
-                    className="apple-btn apple-btn-secondary text-caption1 h-8 px-3 rounded-full shrink-0 flex items-center gap-1"
+                    className="filter-tab text-apple-blue hover:text-apple-blue shrink-0"
                   >
-                    <Plus className="w-3.5 h-3.5" />
-                    New Watchlist
+                    New list
                   </button>
                 )}
               </div>
@@ -254,13 +230,13 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                             onClick={handleSaveRename}
                             className="apple-btn apple-btn-primary text-caption1 px-2.5 h-8"
                           >
-                            <Check className="w-3.5 h-3.5" />
+                            Save
                           </button>
                           <button
                             onClick={() => setIsEditingWl(false)}
-                            className="apple-btn apple-btn-secondary text-caption1 px-2 h-8"
+                            className="apple-btn apple-btn-quiet text-caption1 px-2 h-8"
                           >
-                            ✕
+                            Cancel
                           </button>
                         </div>
                       ) : (
@@ -273,17 +249,16 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                               setEditingName(activeWatchlist.name);
                               setIsEditingWl(true);
                             }}
-                            className="apple-btn apple-btn-quiet p-1 text-apple-muted hover:text-apple-primary"
-                            title="Rename watchlist"
+                            className="apple-btn apple-btn-quiet apple-btn-sm text-apple-muted"
                           >
-                            <Edit2 className="w-3.5 h-3.5" />
+                            Rename
                           </button>
                         </div>
                       )}
 
                       {activeWatchlist.description && (
                         <span className="text-caption1 text-apple-muted hidden md:inline">
-                          • {activeWatchlist.description}
+                          {activeWatchlist.description}
                         </span>
                       )}
                     </div>
@@ -299,7 +274,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                             setIsSearchingStock(true);
                           }}
                           onFocus={() => setIsSearchingStock(true)}
-                          placeholder="+ Add stock by symbol or name..."
+                          placeholder="Add a company"
                           className="apple-input text-caption1 pl-8 pr-3 h-8 w-full sm:w-60"
                         />
                         <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-apple-faint pointer-events-none" />
@@ -333,10 +308,9 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                               deleteWatchlist(activeWatchlist.id);
                             }
                           }}
-                          className="apple-btn apple-btn-quiet text-rose-500 hover:bg-rose-500/10 p-1.5 shrink-0"
-                          title="Delete watchlist"
+                          className="apple-btn apple-btn-quiet apple-btn-sm num-neg shrink-0"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          Delete list
                         </button>
                       )}
                     </div>
@@ -346,36 +320,34 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                   {kpis && (
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 pt-3 border-t border-apple-border/60">
                       <div>
-                        <div className="text-caption2 text-apple-muted">Tracked Stocks</div>
+                        <div className="text-caption1 text-apple-muted">Companies</div>
                         <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           {kpis.count}
                         </div>
                       </div>
                       <div>
-                        <div className="text-caption2 text-apple-muted">Total Market Cap</div>
+                        <div className="text-caption1 text-apple-muted">Combined market cap</div>
                         <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           ₹{Math.round(kpis.totalMcap).toLocaleString('en-IN')} Cr
                         </div>
                       </div>
                       <div>
-                        <div className="text-caption2 text-apple-muted">Average P/E</div>
+                        <div className="text-caption1 text-apple-muted">Average P/E</div>
                         <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           {kpis.avgPe !== null ? kpis.avgPe.toFixed(1) : '-'}
                         </div>
                       </div>
                       <div>
-                        <div className="text-caption2 text-apple-muted">Average ROCE</div>
+                        <div className="text-caption1 text-apple-muted">Average ROCE</div>
                         <div className="text-headline font-display tabular-nums text-apple-primary mt-0.5">
                           {kpis.avgRoce !== null ? `${kpis.avgRoce.toFixed(1)}%` : '-'}
                         </div>
                       </div>
                       <div>
-                        <div className="text-caption2 text-apple-muted">Avg Day Change</div>
+                        <div className="text-caption1 text-apple-muted">Average move today</div>
                         <div
                           className={`text-headline font-display tabular-nums mt-0.5 ${
-                            kpis.avgDayChange >= 0
-                              ? 'text-emerald-600 dark:text-emerald-400'
-                              : 'text-rose-600 dark:text-rose-400'
+                            kpis.avgDayChange >= 0 ? 'num-pos' : 'num-neg'
                           }`}
                         >
                           {kpis.avgDayChange >= 0 ? '+' : ''}
@@ -390,10 +362,9 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
               {/* Table of stocks in watchlist */}
               {watchlistStocks.length === 0 ? (
                 <div className="apple-card py-16 px-6 text-center">
-                  <Bookmark className="w-8 h-8 text-apple-faint mx-auto mb-3" />
-                  <h3 className="text-subheadline font-semibold text-apple-primary">Watchlist is empty</h3>
+                  <h3 className="text-subheadline font-semibold text-apple-primary">Nothing in {activeWatchlist?.name} yet</h3>
                   <p className="text-caption1 text-apple-muted max-w-sm mx-auto mt-1.5">
-                    Use the search bar above or click "Add to Watchlist" on any stock page to add companies to {activeWatchlist?.name}.
+                    Add a company with the box above, or from the Watchlist button on its page.
                   </p>
                 </div>
               ) : (
@@ -409,26 +380,23 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-title3 text-apple-primary font-display">Saved Screens</h2>
-                  <p className="text-caption1 text-apple-muted mt-0.5">
-                    Queries saved in your browser localStorage.
+                  <p className="text-subheadline text-apple-secondary">
+                    Queries you've saved. They live in this browser only.
                   </p>
                 </div>
                 <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary">
-                  <Plus className="w-3.5 h-3.5" />
-                  New Screen
+                  New query
                 </button>
               </div>
 
               {savedScreens.length === 0 ? (
                 <div className="apple-card py-16 px-6 text-center">
-                  <Bookmark className="w-7 h-7 text-apple-faint mx-auto mb-3" />
-                  <h3 className="text-subheadline font-semibold text-apple-primary">No saved screens</h3>
+                  <h3 className="text-subheadline font-semibold text-apple-primary">No saved queries</h3>
                   <p className="text-caption1 text-apple-muted max-w-sm mx-auto mt-1.5 leading-relaxed">
-                    Build and save queries from the query editor to find them here.
+                    Write one on the Query page and press Save.
                   </p>
                   <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-primary mt-5">
-                    Open Query Editor
+                    Write a query
                   </button>
                 </div>
               ) : (
@@ -445,11 +413,10 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                         </h3>
                         <button
                           onClick={(e) => onDeleteScreen(screen.id, e)}
-                          className="apple-btn apple-btn-quiet p-1 -mr-1 -mt-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
-                          title={`Delete ${screen.title}`}
+                          className="apple-btn apple-btn-quiet apple-btn-sm -mr-1 -mt-1 text-apple-muted opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
                           aria-label={`Delete ${screen.title}`}
                         >
-                          <Trash2 className="w-3.5 h-3.5" />
+                          Delete
                         </button>
                       </div>
 
@@ -473,7 +440,7 @@ export const SavedAndWatchlistsPage: React.FC<SavedAndWatchlistsPageProps> = ({
                               })
                             : ''}
                         </span>
-                        <span className="text-apple-blue font-semibold">Run →</span>
+                        <span className="text-apple-blue font-semibold">Run</span>
                       </div>
                     </Link>
                   ))}

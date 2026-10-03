@@ -87,7 +87,7 @@ export function StatementTable<T>({
               className="apple-btn apple-btn-secondary px-2 py-0.5 text-caption2 text-apple-blue font-semibold"
               title="Jump to latest numbers"
             >
-              Latest →
+              Latest
             </button>
           </div>
           {aside}

@@ -41,7 +41,7 @@ export const BalanceSheetTable: React.FC<{ stock: Stock }> = ({ stock }) => {
             The rows for {failing.join(', ')} do not add up to total assets, so those years are incompletely sourced. Return on equity is derived from EPS and book value per share.
           </span>
         ) : (
-          'Reserves are shareholders’ funds less share capital, derived from the filed totals. Both sides foot to total assets.'
+          "Reserves are shareholders' funds less share capital, derived from the filed totals. Both sides foot to total assets."
         )
       }
     />

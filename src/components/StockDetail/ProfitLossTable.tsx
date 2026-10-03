@@ -64,7 +64,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
         <div className="apple-well p-4">
-          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption1 font-medium text-apple-muted mb-2">
             Compounded sales growth
           </h3>
           <div className="space-y-1.5">
@@ -76,7 +76,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
         </div>
 
         <div className="apple-well p-4">
-          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption1 font-medium text-apple-muted mb-2">
             Compounded profit growth
           </h3>
           <div className="space-y-1.5">
@@ -88,7 +88,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
         </div>
 
         <div className="apple-well p-4">
-          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption1 font-medium text-apple-muted mb-2">
             Share price CAGR
           </h3>
           <div className="space-y-1.5">
@@ -100,7 +100,7 @@ export const ProfitLossTable: React.FC<Props> = ({ stock }) => {
         </div>
 
         <div className="apple-well p-4">
-          <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-2.5">
+          <h3 className="text-caption1 font-medium text-apple-muted mb-2">
             Return on equity
           </h3>
           <div className="space-y-1.5">

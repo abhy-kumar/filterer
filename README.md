@@ -6,11 +6,9 @@
 [![Vite](https://img.shields.io/badge/Vite-6.0-646cff?logo=vite)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com/)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776ab?logo=python)](https://python.org/)
-[![Test Suite](https://img.shields.io/badge/Tests-95%20Passed-emerald)](tests/)
+[![Test Suite](https://img.shields.io/badge/Tests-85%20Passed-emerald)](tests/)
 
-Filterer is an open-source, institutional-grade equity research terminal and screener for Indian equities (NSE and BSE). It provides sub-millisecond client-side formula evaluation, complete financial statements, company operational KPIs, marquee investor holdings, global input commodity cycles, and interactive TradingView technical charting across the NSE Nifty 500 constituent universe.
-
-Designed as a high-performance alternative to traditional equity portals, Filterer combines deterministic recursive-descent query parsing directly in the browser runtime with automated Python data ingestion pipelines and SQLite persistence.
+Filterer is an open-source stock screener for the Nifty 500. You write queries in the same syntax as Screener.in, and they run in the browser against data built from NSE and BSE filings. Each company has a page with its statements, quarterly results, shareholding, peers and price history.
 
 ---
 
@@ -24,7 +22,7 @@ Filterer is architected around five operational invariants:
    - **Detail Tier** (`public/data/stocks/*.json`, ~22 MB across 500 files): Asynchronously hydrated comprehensive filings, multi-year balance sheets, quarterly statements, cash flow statements, historical shareholding patterns, and daily closing price histories.
 3. **Filing Integrity and Disclosure Transparency**: Synthetic fillers and mathematical extrapolations are strictly prohibited. In periods where upstream regulatory feeds exhibit reporting gaps (e.g. statutory XBRL omissions), the interface surfaces official disclosure notices rather than fabricating interpolated figures.
 4. **Interactive TradingView Canvas Engine**: Price action, moving averages (SMA 50, SMA 200, EMA 20), volume histograms, and historical median P/E valuation envelopes are rendered via TradingView Lightweight Charts with crosshair precision.
-5. **Harmonized Terminal Design System**: Distraction-free, responsive layout grid adhering to institutional financial ergonomics, including real-time market trading session clocks, live index tickers (Nifty 50, Sensex, Bank Nifty, IT, Pharma, Auto), and uniform typography across all workspaces.
+5. **Interface**: IBM Plex Sans and Plex Mono, bundled with the app. Light and dark themes, an index strip along the top (Nifty 50, Sensex, Bank Nifty, IT, Pharma, Auto), and tables before cards.
 
 ---
 
@@ -75,53 +73,38 @@ Everything is free to fetch and needs no API key.
 
 Filed data takes precedence: where NSE's XBRL is available, quarterly results come from it rather than from Yahoo, and the quarterly table says which source and which basis (consolidated or standalone) it is showing.
 
-## Workspace Modules
+## What's in it
 
-### 1. Screens
-- Access curated investment screens categorized by **Popular**, **Valuation**, **Growth**, **Technicals**, **Safety**, and **Dividends**.
-- Real-time match counters indicating live universe hit counts for each strategy.
-- Instant single-click execution displaying filter results with responsive pagination, multi-column sorting, and custom column configuration.
+### Screens
+- Twelve starting screens, grouped as Quality, Value, Growth, Income and Technical. Each shows its criteria, read from the query itself, and how many companies pass right now.
+- Opening one runs it, with the results in a sortable table you can filter by sector and industry.
 
-### 2. Query Builder
-- Natural language query editor compatible with Screener.in syntax supporting arithmetic expressions, relational operators, nested boolean logic (`AND`, `OR`, `NOT`), and parentheses.
-- **Formula Editor Terminal**: Built-in syntax highlighting, real-time error detection, and field coverage validation alerting users if a metric has low or zero disclosures.
-- **Ratio Catalog**: Built-in searchable dictionary of 74 standardized fundamental, valuation, profitability, debt, and cash flow metrics with shorthand aliases.
-- Pre-built quick condition chips and query formatting tools.
+### Query
+- An editor for Screener.in-style queries: comparisons, arithmetic, `AND`, `OR`, `NOT` and brackets.
+- Errors are reported as you type, and you are warned when a ratio is reported for only some companies.
+- A searchable list of the 74 ratios, with their aliases.
 
-### 3. Watchlists & Portfolio Analytics
-- Create, modify, and delete custom stock baskets (e.g. *Compounders*, *High Dividend*, *Turnaround Plays*).
-- Aggregated real-time basket metrics: Aggregate Market Capitalization, Weighted Average P/E, Average ROCE, and Day Change.
-- Instant stock addition via detail view modal or command palette.
-- Local persistence across browser sessions with zero login friction.
+### Watchlists
+- Lists of companies, kept in the browser, with combined market cap, average P/E, average ROCE and today's average move.
+- Saved queries live here too.
 
-### 4. Super-Investors
+### Super-investors
 - Portfolios read from the shareholding patterns companies file with NSE, not typed in: stake, share count, filing quarter and the change since the previous filing all come from the filing.
-- Curated investors are matched by the names they file under, listed in `data/super_investors/registry.json`; the registry says who an investor is, never what they hold. Individuals with 1% or more of several companies are also discovered from the filings.
+- Curated investors are matched by the names they file under, listed in `data/super_investors/registry.json`; the registry says who an investor is, never what they hold. Individuals with 1% or more of several companies are also found from the filings.
 - Covers the Nifty 500 plus the smaller companies tracked investors hold, valued at NSE's closing price.
 - Stakes that disappear between filings are listed as no longer disclosed.
-- Limits, stated on the page: filings only name holders of 1% or more, and stakes held through entities not in the registry are missed, so a portfolio is a floor.
+- Filings only name holders of 1% or more, and stakes held through entities not in the registry are missed, so a portfolio is a floor.
 
-### 5. Input Commodities Tracker
-- Real-time tracking of **27 global and domestic benchmark commodities** across **Energy**, **Chemicals**, **Metals**, **Agriculture**, and **Polymers**.
-- Metric benchmarks including Brent Crude, Natural Gas, Thermal Coal, HRC Steel, LME Copper, Gold, Silver, Iron Ore, Caustic Soda, Soda Ash, PTA, MEG, and HDPE.
-- Interactive historical multi-year price cycle charts (1M, 6M, 1Y, 3Y, 5Y, Max).
-- **Equities Impact Matrix**: Direct mapping showing Indian listed producers (beneficiaries) and listed consumer sectors (margin sensitivity) for every commodity.
+### Company pages
+- **Statements**: annual P&L, balance sheet and cash flow.
+- **Quarterly results**: about twelve quarters from NSE's XBRL filings, on one basis per company, with banks in their own layout (interest earned, financing profit).
+- **Readings**: worked out from the company's own filings: the latest quarter against a year earlier, the trailing four quarters, sales record, margins, where return on equity comes from, cash conversion, debt, ownership changes, and valuation against its own five-year history. Each one names the periods and source it used.
+- **Live prices**: quotes update every 20 seconds while the market is open, with a label saying how current each price is.
+- **Pros and cons**: rule-based checks on debt, interest cover, growth, returns, valuation and cash flow.
+- **Peers**: the other Nifty 500 companies in the same industry.
+- **Filings**: links to the company's pages on BSE and NSE, and searches for documents Filterer does not host.
 
-### 6. Company Analysis & Operational KPIs
-- **Financial Statements**: Multi-year Annual P&L, Balance Sheet (Schedule III compliant), and Cash Flow Statements (Operating, Investing, Financing, Free Cash Flow).
-- **Quarterly Results**: About twelve quarters from NSE's XBRL filings, on one basis per company, with banks shown in their own layout (interest earned, financing profit).
-- **Insights**: For every company, computed from its own filings: the latest quarter against the same quarter a year earlier, the trailing four quarters, sales record, margin trajectory, where return on equity comes from, cash conversion, debt, ownership changes and valuation against its own five-year history. Each insight names the periods and source it was drawn from.
-- **Live prices**: Quotes update every 20 seconds while the market is open, with a label saying how current each price is.
-- **Operating KPIs**: Hand-compiled operating metrics for about two dozen companies, labelled as compiled by hand and not traced to a filing:
-  - *Reliance*: Retail Store Footprint, Jio Subscriber Base, Jio Data Consumption, KG D6 Gas Output, Refinery Throughput, Jio ARPU, Retail Footfall, Jio-bp Network.
-  - *HDFC Bank*: CASA Ratio, Net Interest Margin (NIM), GNPA%, Branch Network, Credit-to-Deposit Ratio, Capital Adequacy (CRAR).
-  - *Tata Motors*: JLR Wholesales, India Commercial Vehicle Volume, Passenger EV Share, JLR Order Book, EBITDA Margin.
-  - *TCS*: Active Headcount, Trailing LTM Attrition, IT Services Utilization, Total Contract Value (TCV).
-  - *IndiGo*: Fleet Count, Available Seat Kilometers (ASK), Passenger Load Factor (PLF), Revenue per ASK (RASK), Yield per RPK.
-  - *Zomato*: GOV Food Delivery, Blinkit Dark Stores, Blinkit GOV, Average Order Value (AOV).
-- **Algorithmic Pros & Cons**: Heuristic evaluation analyzing debt reduction, interest coverage, 5-year profit growth, working capital cycle, and dividend payout history.
-- **Peer Comparison**: Direct benchmarking against sector rivals by P/E, Market Cap, ROCE, and Operating Margin.
-- **Corporate Filings**: Verified links to exchange disclosures, annual reports, credit rating upgrades, and investor conference call transcripts.
+Earlier versions had a commodities page, hand-entered operating KPIs, segment tables and earnings-call summaries. They were removed because none of them could be traced to a source, and the commodity prices had stopped updating.
 
 ---
 

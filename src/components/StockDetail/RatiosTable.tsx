@@ -1,5 +1,4 @@
 import React from 'react';
-import { Info } from 'lucide-react';
 import type { Stock, RatioHistory } from '../../types/stock';
 import { StatementTable, StatementRow } from './StatementTable';
 import { days, isReported, pct } from '../../lib/format';
@@ -36,11 +35,10 @@ export const RatiosTable: React.FC<{ stock: Stock }> = ({ stock }) => {
     return (
       <div className="apple-card p-5">
         <h2 className="text-subheadline font-semibold text-apple-primary font-display">Ratio history</h2>
-        <div className="flex items-start gap-2.5 mt-3">
-          <Info className="w-4 h-4 shrink-0 mt-0.5 text-apple-muted" />
+        <div className="mt-3">
           <div>
             <p className="text-caption1 text-apple-secondary leading-relaxed">
-              No usable history. The feed repeats today&rsquo;s return on capital across every year rather than
+              No usable history. The feed repeats today's return on capital across every year rather than
               reporting it per year, and the working-capital cycle was never sourced at all, so there is a
               single data point here and nothing to trend.
             </p>
@@ -50,7 +48,7 @@ export const RatiosTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                 <span className="num font-semibold text-apple-primary">{pct(latest.roce)}</span>
                 {isReported(stock.roe) && (
                   <>
-                    {' · '}ROE{' '}
+                    {', '}ROE{' '}
                     <span className="num font-semibold text-apple-primary">{pct(stock.roe)}</span>
                   </>
                 )}

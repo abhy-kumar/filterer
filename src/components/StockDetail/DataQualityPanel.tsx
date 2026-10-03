@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { AlertTriangle, Info, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 import { assessStock } from '../../engine/dataQuality';
 
@@ -17,11 +17,10 @@ export const DataQualityPanel: React.FC<{ stock: Stock }> = ({ stock }) => {
   if (!findings.length) return null;
 
   const warnings = findings.filter((f) => f.severity === 'warning');
-  const Icon = warnings.length ? AlertTriangle : Info;
 
   const summary = warnings.length
-    ? `${warnings.length} reporting note${warnings.length === 1 ? '' : 's'}`
-    : `${findings.length} note${findings.length === 1 ? '' : 's'} on filed figures`;
+    ? `${warnings.length} thing${warnings.length === 1 ? '' : 's'} to check in this company's figures`
+    : `${findings.length} note${findings.length === 1 ? '' : 's'} on this company's figures`;
 
   return (
     <div
@@ -33,11 +32,7 @@ export const DataQualityPanel: React.FC<{ stock: Stock }> = ({ stock }) => {
         className="w-full px-4 py-2.5 flex items-center gap-2.5 text-left hover:bg-apple-surface-hover transition-colors"
         aria-expanded={expanded}
       >
-        <Icon className={`w-4 h-4 shrink-0 ${warnings.length ? 'text-apple-amber' : 'text-apple-muted'}`} />
         <span className="text-caption1 font-semibold text-apple-primary">{summary}</span>
-        <span className="text-caption2 text-apple-muted hidden sm:inline">
-          {expanded ? '' : 'Click to view reporting notes for this stock.'}
-        </span>
         <ChevronDown
           className={`w-4 h-4 ml-auto shrink-0 text-apple-faint transition-transform ${expanded ? 'rotate-180' : ''}`}
         />

@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowDown, ArrowUp, ArrowUpRight, Bookmark, Search, Users } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { PageHeader } from '../components/PageHeader';
 import {
   SUPER_INVESTORS_DATA,
   SUPER_INVESTORS_META,
@@ -34,18 +35,17 @@ const DeltaCell: React.FC<{ holding: InvestorHolding }> = ({ holding }) => {
   const { delta } = holding;
   if (delta.change === 'new') return <span className="apple-tag num-pos">New</span>;
   if (delta.change === 'increased' || delta.change === 'decreased') {
-    const Icon = delta.change === 'increased' ? ArrowUp : ArrowDown;
     return (
       <span
-        className={`inline-flex items-center gap-0.5 num text-caption2 font-semibold ${delta.change === 'increased' ? 'num-pos' : 'num-neg'}`}
+        className={`num text-caption1 ${delta.change === 'increased' ? 'num-pos' : 'num-neg'}`}
         title={`From ${delta.previous_quarter_holding?.toFixed(2)}% the quarter before`}
       >
-        <Icon className="w-3 h-3" aria-hidden="true" />
+        {delta.change === 'increased' ? '+' : '-'}
         {Math.abs(delta.delta_pct ?? 0).toFixed(2)} pts
       </span>
     );
   }
-  return <span className="text-caption2 text-apple-faint">Unchanged</span>;
+  return <span className="text-caption1 text-apple-faint">Same</span>;
 };
 
 export const SuperInvestorsPage: React.FC = () => {
@@ -144,21 +144,12 @@ export const SuperInvestorsPage: React.FC = () => {
 
   return (
     <>
-      <main className="flex-1 w-full apple-canvas animate-fade-in">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-apple-border pb-5">
-            <div>
-              <div className="flex items-center gap-2.5">
-                <Users className="w-5 h-5 text-apple-blue shrink-0" aria-hidden="true" />
-                <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">Super-Investors</h1>
-              </div>
-              <p className="text-caption1 text-apple-muted mt-1 leading-normal max-w-2xl">
-                Stakes of 1% or more, read from the shareholding patterns companies file with NSE
-                {SUPER_INVESTORS_META.latestPeriod ? `. Most recent filings: ${SUPER_INVESTORS_META.latestPeriod}.` : '.'}
-              </p>
-            </div>
-
-            <div className="apple-segmented self-start sm:self-auto overflow-x-auto no-scrollbar max-w-full">
+      <main className="flex-1 w-full animate-fade-in">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+          <PageHeader
+            title="Super-investors"
+            aside={
+            <div className="apple-segmented overflow-x-auto no-scrollbar max-w-full">
               {FILTERS.map((f) => (
                 <button
                   key={f.key}
@@ -170,7 +161,11 @@ export const SuperInvestorsPage: React.FC = () => {
                 </button>
               ))}
             </div>
-          </div>
+            }
+          >
+            Stakes of 1% or more, as named in the shareholding patterns companies file with NSE
+            {SUPER_INVESTORS_META.latestPeriod ? `. Latest filings are for ${SUPER_INVESTORS_META.latestPeriod}.` : '.'}
+          </PageHeader>
 
           <dl className="flex items-center gap-4 sm:gap-6 text-caption1 text-apple-muted flex-wrap">
             <div className="flex items-baseline gap-1.5">
@@ -249,7 +244,7 @@ export const SuperInvestorsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <ul
-              className={`lg:col-span-4 space-y-2 lg:max-h-[860px] lg:overflow-y-auto no-scrollbar pr-1 ${mobileTab === 'list' ? 'block' : 'hidden lg:block'}`}
+              className={`lg:col-span-4 space-y-0.5 lg:max-h-[860px] lg:overflow-y-auto no-scrollbar pr-1 ${mobileTab === 'list' ? 'block' : 'hidden lg:block'}`}
               aria-label="Investors"
             >
               {filteredInvestors.length === 0 && (
@@ -266,16 +261,10 @@ export const SuperInvestorsPage: React.FC = () => {
                         setMobileTab('portfolio');
                       }}
                       aria-current={isSelected}
-                      className={`apple-card w-full text-left p-3.5 transition-colors ${isSelected ? 'border-apple-blue ring-1 ring-apple-blue/25' : 'hover:border-apple-border-strong'}`}
+                      className={`w-full text-left px-3 py-2.5 border-l-2 transition-colors ${isSelected ? 'border-apple-primary bg-apple-surface-hover' : 'border-transparent hover:bg-apple-surface-hover'}`}
                     >
                       <div className="flex items-center justify-between gap-3">
                         <div className="flex items-center gap-3 min-w-0">
-                          <span
-                            className={`w-9 h-9 rounded-full flex items-center justify-center font-semibold text-caption1 shrink-0 ${isSelected ? 'bg-apple-blue text-white' : 'bg-apple-surface-active text-apple-primary'}`}
-                            aria-hidden="true"
-                          >
-                            {inv.avatar_initials}
-                          </span>
                           <div className="min-w-0">
                             <div className="text-footnote font-semibold text-apple-primary truncate">{inv.name}</div>
                             <div className="text-caption2 text-apple-muted truncate">
@@ -324,7 +313,7 @@ export const SuperInvestorsPage: React.FC = () => {
                   </header>
 
                   <div className="flex items-center gap-2 flex-wrap text-caption2">
-                    <span className="text-apple-muted font-semibold">Since the previous filing:</span>
+                    <span className="text-apple-muted">Since the previous filing</span>
                     {deltaSummary.new > 0 && <span className="apple-tag num-pos">{deltaSummary.new} new</span>}
                     {deltaSummary.increased > 0 && <span className="apple-tag num-pos">{deltaSummary.increased} raised</span>}
                     {deltaSummary.decreased > 0 && <span className="apple-tag num-neg">{deltaSummary.decreased} trimmed</span>}
@@ -361,7 +350,6 @@ export const SuperInvestorsPage: React.FC = () => {
                                     className="font-mono text-caption1 font-semibold text-apple-blue hover:underline inline-flex items-center gap-0.5"
                                   >
                                     {h.symbol}
-                                    <ArrowUpRight className="w-3 h-3 text-apple-faint" aria-hidden="true" />
                                   </Link>
                                 ) : (
                                   <span className="font-mono text-caption1 font-semibold text-apple-secondary" title="Outside the Nifty 500, so there is no company page">
@@ -397,7 +385,7 @@ export const SuperInvestorsPage: React.FC = () => {
                                   className="apple-btn apple-btn-quiet apple-btn-sm"
                                   aria-label={`Add ${h.symbol} to a watchlist`}
                                 >
-                                  <Bookmark className="w-3.5 h-3.5" />
+                                  Watch
                                 </button>
                               )}
                             </td>
@@ -429,7 +417,7 @@ export const SuperInvestorsPage: React.FC = () => {
                   <p className="text-caption2 text-apple-faint border-t border-apple-border-subtle pt-3 leading-relaxed">
                     Companies only have to name holders of 1% or more, and stakes are matched to{' '}
                     {selectedInvestor.origin === 'discovered' ? 'this exact filed name' : 'the names this investor is known to file under'}, so
-                    holdings through other entities are not counted. Treat the value as a floor, not a total. Source:{' '}
+                    holdings through other entities are not counted. The value shown is the least they hold. Source:{' '}
                     {SUPER_INVESTORS_META.source}.
                   </p>
                 </article>

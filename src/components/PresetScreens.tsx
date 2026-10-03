@@ -1,120 +1,92 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ShieldCheck, TrendingUp, Gem, Zap, Landmark, Award, Coins, PiggyBank,
-  Flame, Activity, CheckCircle, Sparkles, Copy, Check,
-} from 'lucide-react';
-import { CURATED_SCREENS } from '../data/screens';
+import { CURATED_SCREENS, SCREEN_CATEGORIES } from '../data/screens';
 import { executeScreenerQuery } from '../engine/screenerParser';
 import type { Stock } from '../types/stock';
 import { screenPath } from '../lib/routes';
+import { summariseQuery } from '../lib/criteria';
 
 interface PresetScreensProps {
   onRunScreen?: (query: string) => void;
   universe: Stock[];
 }
 
-const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  ShieldCheck, Sparkles, TrendingUp, Gem, Zap, Landmark, Award, Coins, PiggyBank, Flame, Activity, CheckCircle,
-};
-
-const CATEGORIES = ['All', 'Popular', 'Valuation', 'Growth', 'Technicals', 'Safety', 'Dividends'];
+const FILTERS = ['All', ...SCREEN_CATEGORIES];
 
 export const PresetScreens: React.FC<PresetScreensProps> = ({ onRunScreen, universe }) => {
   const [category, setCategory] = useState('All');
-  const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  // Showing the hit count on the card is the difference between a list of
-  // slogans and a list of screens someone can choose between.
+  // Showing the hit count is the difference between a list of slogans and a
+  // list of screens someone can choose between.
   const screens = useMemo(
     () =>
       CURATED_SCREENS.map((screen) => ({
         ...screen,
         matches: executeScreenerQuery(screen.query, universe).matches.length,
+        criteria: summariseQuery(screen.query),
       })),
     [universe]
   );
 
   const filtered = category === 'All' ? screens : screens.filter((s) => s.category === category);
 
-  const copy = (id: string, query: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    navigator.clipboard?.writeText(query);
-    setCopiedId(id);
-    setTimeout(() => setCopiedId(null), 1800);
-  };
-
   return (
-    <section className="space-y-4">
-      <div className="flex items-center justify-between gap-3 flex-wrap">
-        <div className="text-caption1 font-semibold text-apple-muted">
-          {filtered.length} Curated Screens
-        </div>
-
-        <div className="apple-segmented overflow-x-auto no-scrollbar max-w-full">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setCategory(cat)}
-              className={`apple-segmented-item text-caption1 whitespace-nowrap ${category === cat ? 'active' : ''}`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+    <section aria-label="Screens">
+      <div className="flex items-center gap-1 overflow-x-auto no-scrollbar -mx-1 px-1 mb-1" role="tablist">
+        {FILTERS.map((cat) => (
+          <button
+            key={cat}
+            role="tab"
+            aria-selected={category === cat}
+            onClick={() => setCategory(cat)}
+            className={`filter-tab ${category === cat ? 'is-active' : ''}`}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-        {filtered.map((screen) => {
-          const Icon = ICONS[screen.iconName] ?? Sparkles;
-          return (
+      <ol className="border-t border-apple-border">
+        {filtered.map((screen) => (
+          <li key={screen.id} className="border-b border-apple-border">
             <Link
-              key={screen.id}
               to={screenPath(screen.query)}
               onClick={() => onRunScreen?.(screen.query)}
-              className="apple-card apple-card-interactive p-4 flex flex-col group"
+              className="group grid grid-cols-[1fr_auto] gap-x-6 gap-y-1 py-3.5 sm:py-4 px-1 -mx-1 hover:bg-apple-surface-hover transition-colors"
             >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  <Icon className="w-4 h-4 text-apple-blue shrink-0" />
-                  <h3 className="text-subheadline font-semibold text-apple-primary group-hover:text-apple-blue transition-colors truncate">
-                    {screen.title}
-                  </h3>
-                </div>
-                <span
-                  className={`text-caption1 num shrink-0 ${
-                    screen.matches === 0 ? 'text-apple-faint' : 'text-apple-primary'
-                  }`}
-                  title={`${screen.matches} of ${universe.length} companies match`}
-                >
+              <h3 className="text-callout font-semibold text-apple-primary group-hover:text-apple-blue">
+                {screen.title}
+              </h3>
+
+              <p className="row-span-2 self-center text-right num whitespace-nowrap">
+                <span className={`text-headline ${screen.matches === 0 ? 'text-apple-faint' : 'text-apple-primary'}`}>
                   {screen.matches}
                 </span>
-              </div>
-
-              <p className="text-caption1 text-apple-secondary mt-2 leading-relaxed line-clamp-3">
-                {screen.description}
+                <span className="block text-caption1 text-apple-muted">
+                  {screen.matches === 1 ? 'match' : 'matches'}
+                </span>
               </p>
 
-              <div className="mt-auto pt-3.5 flex items-center justify-between gap-2">
-                <span className="text-caption2 text-apple-faint truncate">{screen.author}</span>
-                <button
-                  onClick={(e) => copy(screen.id, screen.query, e)}
-                  className="apple-btn apple-btn-quiet p-1 text-apple-faint hover:text-apple-primary"
-                  title="Copy the formula"
-                  aria-label={`Copy the formula for ${screen.title}`}
-                >
-                  {copiedId === screen.id ? (
-                    <Check className="w-3.5 h-3.5 num-pos" />
-                  ) : (
-                    <Copy className="w-3.5 h-3.5" />
-                  )}
-                </button>
-              </div>
+              <p className="text-footnote text-apple-secondary">
+                {screen.criteria ? (
+                  screen.criteria.map((c, i) => (
+                    <React.Fragment key={c}>
+                      <span className="whitespace-nowrap">{c}</span>
+                      {i < screen.criteria!.length - 1 && <span className="text-apple-faint">, </span>}
+                    </React.Fragment>
+                  ))
+                ) : (
+                  <code className="font-mono text-caption1">{screen.query}</code>
+                )}
+              </p>
+
+              {screen.description && (
+                <p className="col-span-2 sm:col-span-1 text-caption1 text-apple-muted mt-0.5 max-w-2xl">{screen.description}</p>
+              )}
             </Link>
-          );
-        })}
-      </div>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 };

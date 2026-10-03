@@ -5,26 +5,10 @@ const WATCHLISTS_STORAGE_KEY = 'filterer_custom_watchlists';
 
 const DEFAULT_WATCHLISTS: Watchlist[] = [
   {
-    id: 'wl-compounders',
-    name: 'Compounders',
-    description: 'High ROCE, low debt consistent wealth creators',
-    symbols: ['TITAN', 'TCS', 'ASIANPAINT', 'HDFCBANK', 'PIDILITIND'],
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  },
-  {
-    id: 'wl-dividend',
-    name: 'High Dividend',
-    description: 'Generous cash returns and dividend yields > 4%',
-    symbols: ['COALINDIA', 'VEDL', 'IOC', 'PFC', 'RECLTD'],
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  },
-  {
-    id: 'wl-turnaround',
-    name: 'Turnarounds',
-    description: 'Operational inflections and balance sheet cleanups',
-    symbols: ['TATAMOTORS', 'SUZLON', 'ZOMATO', 'BHEL'],
+    id: 'wl-default',
+    name: 'Watchlist',
+    description: '',
+    symbols: [],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },

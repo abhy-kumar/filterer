@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Building2 } from 'lucide-react';
 import type { Stock, PeerInfo } from '../../types/stock';
 import { STOCKS_DATA } from '../../data/stocksData';
 import { stockPath } from '../../lib/routes';
@@ -73,7 +72,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
     // 1. If stock explicitly has populated peers from detail tier, prefer them
     if (stock.peers && stock.peers.length > 0) {
       peerCandidates = stock.peers;
-      context = stock.industry ? `${stock.industry} · ${stock.sector}` : stock.sector || 'Peers';
+      context = stock.industry ? `${stock.industry}, ${stock.sector}` : stock.sector || 'Peers';
     } else {
       // 2. Dynamically find peers from STOCKS_DATA
       const targetIndustry = stock.industry?.trim().toLowerCase();
@@ -88,7 +87,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
       );
 
       if (industryMatches.length >= 2) {
-        context = `${stock.industry} · ${stock.sector}`;
+        context = `${stock.industry}, ${stock.sector}`;
         peerCandidates = industryMatches.map((p) => ({
           symbol: p.symbol,
           name: p.name,
@@ -147,7 +146,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
     return {
       rows: allRows,
       peerCount: peerCandidates.length,
-      filterContext: context || `${stock.industry} · ${stock.sector}`,
+      filterContext: context || `${stock.industry}, ${stock.sector}`,
     };
   }, [stock, self]);
 
@@ -168,14 +167,11 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
     <div className="apple-card overflow-hidden">
       <div className="px-4 sm:px-5 py-3 border-b border-apple-border flex items-center justify-between gap-3 flex-wrap">
         <div>
-          <div className="flex items-center gap-2">
-            <Building2 className="w-4 h-4 text-apple-blue" />
-            <h2 className="text-subheadline font-semibold text-apple-primary font-display">Peer Comparison</h2>
-          </div>
+          <h2 className="text-subheadline font-semibold text-apple-primary font-display">Peers</h2>
           <p className="text-caption1 text-apple-muted mt-0.5">{filterContext}</p>
         </div>
         <div className="text-caption1 text-apple-muted">
-          {peerCount > 0 ? `${peerCount} peers in universe` : 'Sole constituent in universe'}
+          {peerCount > 0 ? `${peerCount} in the Nifty 500` : 'No other Nifty 500 company in this industry'}
         </div>
       </div>
 
@@ -219,9 +215,7 @@ export const PeersTable: React.FC<{ stock: Stock }> = ({ stock }) => {
                         {peer.name}
                       </span>
                       {isSelf && (
-                        <span className="text-caption2 sm:text-caption2 font-semibold text-apple-blue bg-apple-blue/10 px-1 sm:px-1.5 py-0.5 rounded-full w-fit">
-                          Current
-                        </span>
+                        <span className="text-caption1 text-apple-muted">this page</span>
                       )}
                     </div>
                   </td>

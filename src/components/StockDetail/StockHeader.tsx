@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { AlertTriangle, Globe, ShieldCheck, Bookmark } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 import { crore, isReported, multiple, pct, price, signClass } from '../../lib/format';
 import { useWatchlists } from '../../context/WatchlistContext';
@@ -42,7 +41,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
     {
       label: 'P/E',
       value: multiple(stock.pe_ratio),
-      hint: isReported(stock.industry_pe) ? `sector median ${stock.industry_pe.toFixed(1)}` : undefined,
+      hint: isReported(stock.industry_pe) ? `sector ${stock.industry_pe.toFixed(1)}` : undefined,
       tone:
         isReported(stock.pe_ratio) && isReported(stock.industry_pe)
           ? stock.pe_ratio < stock.industry_pe
@@ -93,44 +92,33 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
               isReported(stock.debt_to_equity) &&
               stock.debt_to_equity <= 0.05 &&
               (stock.debt === 0 || stock.debt < 100 || (stock.market_cap > 0 && stock.debt / stock.market_cap < 0.02)) && (
-                <span className="apple-tag" style={{ color: 'var(--apple-green)' }}>
-                  <ShieldCheck className="w-3 h-3" />
-                  Virtually debt free
-                </span>
+                <span className="apple-tag num-pos">Almost no debt</span>
               )}
             {stock.book_value !== null && stock.book_value <= 0 && (
-              <span className="apple-tag" style={{ color: 'var(--apple-red)' }}>
-                <AlertTriangle className="w-3 h-3" />
-                Negative Net Worth
-              </span>
+              <span className="apple-tag num-neg">Negative net worth</span>
             )}
             <button
               onClick={() => setIsWatchlistModalOpen(true)}
-              className={`apple-btn text-caption1 px-2.5 py-0.5 flex items-center gap-1.5 transition-all ${
-                inWatchlist
-                  ? 'bg-apple-blue/10 text-apple-blue border border-apple-blue/30 font-medium'
-                  : 'apple-btn-secondary'
-              }`}
-              title="Add or remove from watchlists"
+              className="apple-btn apple-btn-secondary apple-btn-sm"
             >
-              <Bookmark className={`w-3 h-3 ${inWatchlist ? 'fill-apple-blue text-apple-blue' : ''}`} />
-              <span>{inWatchlist ? `In ${stockWatchlists.length} ${stockWatchlists.length === 1 ? 'Watchlist' : 'Watchlists'}` : '+ Watchlist'}</span>
+              {inWatchlist
+                ? `In ${stockWatchlists.length === 1 ? stockWatchlists[0].name : `${stockWatchlists.length} watchlists`}`
+                : 'Watchlist'}
             </button>
           </div>
 
           <p className="flex items-center gap-3 mt-2 text-caption1 text-apple-muted flex-wrap">
             <span>
-              {stock.sector} · {stock.industry}
+              {stock.industry}, {stock.sector}
             </span>
             {stock.website && (
               <a
                 href={stock.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-apple-blue hover:underline"
+                className="text-apple-blue hover:underline underline-offset-4"
               >
-                <Globe className="w-3 h-3" />
-                Website
+                {stock.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
               </a>
             )}
           </p>
@@ -164,17 +152,13 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
               aria-label={`Trading at ${position.toFixed(0)}% of its 52-week range`}
             >
               <span
-                className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-2.5 h-2.5 sm:w-2 sm:h-2 rounded-full ring-2"
-                style={{
-                  left: `${position}%`,
-                  background: 'var(--apple-blue)',
-                  boxShadow: '0 0 0 3px var(--apple-card-bg)',
-                }}
+                className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-0.5 h-3 bg-apple-primary"
+                style={{ left: `${position}%` }}
               />
             </div>
             <div className="flex justify-between text-caption2 num text-apple-faint mt-1.5">
               <span>{price(stock.low_52w)}</span>
-              <span className="text-apple-muted">52-week range</span>
+              <span className="text-apple-muted">52 weeks</span>
               <span>{price(stock.high_52w)}</span>
             </div>
           </div>
@@ -185,7 +169,7 @@ export const StockHeader: React.FC<{ stock: Stock }> = ({ stock }) => {
       <dl className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 sm:gap-x-6 gap-y-3.5 sm:gap-y-4 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-apple-border-subtle">
         {figures.map((figure) => (
           <div key={figure.label}>
-            <dt className="text-caption2 sm:text-caption2 text-apple-muted truncate">{figure.label}</dt>
+            <dt className="text-caption1 text-apple-muted truncate">{figure.label}</dt>
             <dd
               className={`text-caption1 sm:text-subheadline font-semibold num mt-0.5 ${
                 figure.tone === 'good' ? 'num-pos' : figure.tone === 'bad' ? 'num-neg' : 'text-apple-primary'

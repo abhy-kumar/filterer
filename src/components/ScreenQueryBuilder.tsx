@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
-import { Play, Eraser, WrapText, Bookmark, Check, AlertTriangle, BookOpen, Copy, Info, Code2 } from 'lucide-react';
+import { Check, AlertTriangle } from 'lucide-react';
+import { modKey } from '../lib/platform';
 import { METRICS_DICTIONARY, getMetric } from '../engine/metricsDictionary';
 import { formatScreenerQuery, validateQuery } from '../engine/screenerParser';
 import { fieldCoverage } from '../engine/dataQuality';
@@ -131,48 +132,35 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
 
   return (
     <div className="apple-card overflow-hidden">
-      <div className="px-3 sm:px-5 py-2.5 border-b border-apple-border flex items-center justify-between gap-2 overflow-x-auto no-scrollbar bg-apple-surface-hover/30">
-        <div className="flex items-center gap-2 shrink-0">
-          <Code2 className="w-3.5 h-3.5 text-apple-blue" />
-          <span className="text-caption1 font-semibold text-apple-primary">Formula Editor</span>
-        </div>
-
-        <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
-          <button onClick={() => setShowCatalog(true)} className="apple-btn apple-btn-secondary h-8 px-2.5 sm:px-3">
-            <BookOpen className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Ratios</span>
-            <span className="text-apple-faint num text-caption2 sm:text-caption1">{METRICS_DICTIONARY.length}</span>
-          </button>
-          <button
-            onClick={() => onChangeQuery(formatScreenerQuery(query))}
-            disabled={!query.trim() || !validation.ok}
-            className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3"
-            title="Format query with canonical names and line breaks"
-          >
-            <WrapText className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Format</span>
-          </button>
-          <button
-            onClick={() => {
-              navigator.clipboard?.writeText(query);
-              setCopied(true);
-            }}
-            disabled={!query.trim()}
-            className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3"
-          >
-            {copied ? <Check className="w-3.5 h-3.5 num-pos" /> : <Copy className="w-3.5 h-3.5" />}
-            <span className="hidden sm:inline">{copied ? 'Copied' : 'Copy'}</span>
-          </button>
-          <button
-            onClick={() => onChangeQuery('')}
-            disabled={!query.trim()}
-            className="apple-btn apple-btn-quiet px-2 h-8"
-            aria-label="Clear query"
-            title="Clear"
-          >
-            <Eraser className="w-3.5 h-3.5" />
-          </button>
-        </div>
+      <div className="px-3 sm:px-5 py-2 border-b border-apple-border-subtle flex items-center gap-1 overflow-x-auto no-scrollbar text-caption1">
+        <button onClick={() => setShowCatalog(true)} className="apple-btn apple-btn-quiet apple-btn-sm">
+          All {METRICS_DICTIONARY.length} ratios
+        </button>
+        <button
+          onClick={() => onChangeQuery(formatScreenerQuery(query))}
+          disabled={!query.trim() || !validation.ok}
+          className="apple-btn apple-btn-quiet apple-btn-sm"
+          title="Spell out ratio names in full and put each condition on its own line"
+        >
+          Tidy
+        </button>
+        <button
+          onClick={() => {
+            navigator.clipboard?.writeText(query);
+            setCopied(true);
+          }}
+          disabled={!query.trim()}
+          className="apple-btn apple-btn-quiet apple-btn-sm"
+        >
+          {copied ? 'Copied' : 'Copy'}
+        </button>
+        <button
+          onClick={() => onChangeQuery('')}
+          disabled={!query.trim()}
+          className="apple-btn apple-btn-quiet apple-btn-sm ml-auto"
+        >
+          Clear
+        </button>
       </div>
 
       <div className="p-3.5 sm:p-5">
@@ -208,30 +196,24 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                 </span>
               </p>
             ) : thinMetrics.length ? (
-              <p className="flex items-start gap-1.5 text-apple-muted">
-                <Info className="w-3.5 h-3.5 shrink-0 mt-px" />
-                <span>
-                  {thinMetrics
-                    .map((m) => `${m.metric?.name ?? m.key} covers ${m.coverage.reported}/${m.coverage.total}`)
-                    .join(', ')}
-                  . Companies with undisclosed values are excluded from results.
-                </span>
+              <p className="text-apple-muted">
+                {thinMetrics
+                  .map((m) => `${m.metric?.name ?? m.key} is only reported for ${m.coverage.reported} of ${m.coverage.total}`)
+                  .join('; ')}
+                . Companies without it are left out.
               </p>
             ) : query.trim() ? (
-              <p className="flex items-center gap-1.5 num-pos">
-                <Check className="w-3.5 h-3.5 shrink-0" />
-                <span>
-                  Active criteria: {validation.metrics.length} {validation.metrics.length === 1 ? 'metric' : 'metrics'}
-                </span>
+              <p className="text-apple-muted">
+                Reads {validation.metrics.length} {validation.metrics.length === 1 ? 'ratio' : 'ratios'}.
               </p>
             ) : (
-              <p className="text-apple-muted">Enter screening criteria above, or run an empty query to view all companies.</p>
+              <p className="text-apple-muted">An empty query lists every company.</p>
             )}
           </div>
 
           {executionTimeMs !== undefined && !errorMessage && (
             <p className="text-apple-faint num shrink-0">
-              {totalMatches} matched · {executionTimeMs} ms
+              {totalMatches} {totalMatches === 1 ? 'match' : 'matches'} in {executionTimeMs} ms
             </p>
           )}
         </div>
@@ -243,7 +225,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
               <button
                 key={op}
                 onClick={() => insertText(op)}
-                className="px-2.5 py-1 text-caption1 font-mono rounded-md bg-apple-surface hover:bg-apple-blue-subtle text-apple-blue border border-apple-border/50 transition-colors shrink-0 active:scale-95"
+                className="px-2 py-0.5 text-caption1 font-mono rounded-sm text-apple-secondary hover:text-apple-primary hover:bg-apple-surface-hover border border-apple-border-subtle transition-colors shrink-0"
               >
                 {op}
               </button>
@@ -254,7 +236,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
               <button
                 key={chip.label}
                 onClick={() => insertText(chip.snippet)}
-                className="apple-tag hover:text-apple-primary transition-colors shrink-0 active:scale-95 text-caption2 py-1 px-2"
+                className="apple-tag hover:text-apple-primary hover:border-apple-border transition-colors shrink-0 text-caption1 py-0.5 px-2"
               >
                 {chip.label}
               </button>
@@ -264,17 +246,14 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
 
         <div className="mt-4 pt-3.5 border-t border-apple-border-subtle flex items-center justify-between gap-3">
           <p className="text-caption1 text-apple-faint hidden sm:block">
-            <kbd className="font-mono">⌘</kbd>
-            <kbd className="font-mono">↵</kbd> to run · screening {universe.length} companies
+            <kbd className="font-mono">{modKey} Enter</kbd> runs it
           </p>
           <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
             <button onClick={onSaveScreen} disabled={!query.trim()} className="apple-btn apple-btn-secondary flex-1 sm:flex-initial">
-              <Bookmark className="w-3.5 h-3.5" />
               Save
             </button>
             <button onClick={onRunQuery} disabled={!validation.ok} className="apple-btn apple-btn-primary flex-1 sm:flex-initial px-6">
-              <Play className="w-3.5 h-3.5 fill-current" />
-              {isDirty ? 'Run' : 'Re-run'}
+              {isDirty ? 'Run' : 'Run again'}
             </button>
           </div>
         </div>
@@ -284,19 +263,19 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
       {showCatalog &&
         createPortal(
           <div
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-0 sm:p-4 pt-0 sm:pt-[8vh]"
+            className="fixed inset-0 z-50 bg-black/40 flex items-start justify-center p-0 sm:p-4 pt-0 sm:pt-[8vh]"
             onClick={() => setShowCatalog(false)}
           >
             <div
-              className="apple-card w-full max-w-2xl flex flex-col h-full sm:h-auto sm:max-h-[80vh] shadow-lg rounded-none sm:rounded-2xl"
+              className="apple-card w-full max-w-2xl flex flex-col h-full sm:h-auto sm:max-h-[80vh] shadow-lg rounded-none sm:rounded-lg"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-4 border-b border-apple-border pt-safe sm:pt-4">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <div>
-                    <h3 className="text-subheadline font-semibold text-apple-primary font-display">Ratio catalog</h3>
+                    <h3 className="text-subheadline font-semibold text-apple-primary font-display">Ratios</h3>
                     <p className="text-caption1 text-apple-muted mt-0.5">
-                      Click a ratio to insert it. Coverage is over the {universe.length} companies loaded.
+                      Click one to add it at the cursor. A count means not every company reports it.
                     </p>
                   </div>
                   <button onClick={() => setShowCatalog(false)} className="apple-btn apple-btn-quiet">
@@ -320,7 +299,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                       onClick={() => setCategory(cat)}
                       className={`px-2.5 py-1 rounded-lg text-caption1 whitespace-nowrap transition-colors ${
                         category === cat
-                          ? 'bg-apple-blue text-white font-semibold'
+                          ? 'bg-apple-surface-active text-apple-primary font-medium'
                           : 'text-apple-muted hover:text-apple-primary hover:bg-apple-surface-hover'
                       }`}
                     >
@@ -332,7 +311,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
 
               <div className="overflow-y-auto p-2 flex-1">
                 {catalog.length === 0 && (
-                  <p className="text-caption1 text-apple-muted text-center py-10">No ratio matches that.</p>
+                  <p className="text-caption1 text-apple-muted text-center py-10">No ratio by that name.</p>
                 )}
                 {catalog.map((item) => {
                   const coverage = fieldCoverage(universe, item.id);
@@ -344,7 +323,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                         insertText(item.name);
                         setShowCatalog(false);
                       }}
-                      className="w-full text-left p-3 rounded-xl hover:bg-apple-surface-hover transition-colors group"
+                      className="w-full text-left p-3 rounded-md hover:bg-apple-surface-hover transition-colors group"
                     >
                       <div className="flex items-baseline justify-between gap-3">
                         <span className="text-caption1 font-semibold text-apple-primary group-hover:text-apple-blue">
@@ -355,7 +334,7 @@ export const ScreenQueryBuilder: React.FC<ScreenQueryBuilderProps> = ({
                             coverage.reported === 0 ? 'num-neg' : full ? 'text-apple-faint' : 'text-apple-amber'
                           }`}
                         >
-                          {full ? item.unit : `${coverage.reported}/${coverage.total} reported`}
+                          {full ? item.unit : `${coverage.reported} of ${coverage.total}`}
                         </span>
                       </div>
                       <p className="text-caption1 text-apple-muted mt-1 leading-relaxed">{item.description}</p>

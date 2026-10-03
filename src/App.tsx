@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback, Suspense, lazy } from 'react';
 import { Routes, Route, useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { Bookmark, Trash2, ArrowRight, Plus, SlidersHorizontal, Code2 } from 'lucide-react';
 import { Header } from './components/Header';
 import { ScreenQueryBuilder } from './components/ScreenQueryBuilder';
 import { ScreenResultsTable } from './components/ScreenResultsTable';
@@ -9,14 +8,12 @@ import { CommandPalette } from './components/CommandPalette';
 import { SaveScreenModal } from './components/SaveScreenModal';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { PageHeader } from './components/PageHeader';
 const StockDetailPage = lazy(() =>
   import('./pages/StockDetailPage').then((m) => ({ default: m.StockDetailPage }))
 );
 const SuperInvestorsPage = lazy(() =>
   import('./pages/SuperInvestorsPage').then((m) => ({ default: m.SuperInvestorsPage }))
-);
-const CommoditiesPage = lazy(() =>
-  import('./pages/CommoditiesPage').then((m) => ({ default: m.CommoditiesPage }))
 );
 const SavedAndWatchlistsPage = lazy(() =>
   import('./pages/SavedAndWatchlistsPage').then((m) => ({ default: m.SavedAndWatchlistsPage }))
@@ -155,6 +152,15 @@ export const App: React.FC = () => {
     />
   );
 
+  const fallback = (
+    <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
+      <div className="skeleton h-44" />
+      <div className="skeleton h-72" />
+    </main>
+  );
+
+  const isDefault = !searchParams.get('q');
+
   return (
     <div className="min-h-screen flex flex-col bg-apple-bg text-apple-primary pb-16 md:pb-0">
       <Header onOpenSearch={() => setPaletteOpen(true)} savedScreensCount={savedScreens.length} />
@@ -164,47 +170,37 @@ export const App: React.FC = () => {
           path="/"
           element={
             <>
-              <main className="flex-1 w-full apple-canvas animate-fade-in">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
-                  {/* Harmonized Top Header Bar */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
-                    <div>
-                      <div className="flex items-center gap-2.5">
-                        <SlidersHorizontal className="w-5 h-5 text-apple-blue shrink-0" />
-                        <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
-                          Screens
-                        </h1>
-                      </div>
-                      <p className="text-caption1 text-apple-muted mt-1 leading-normal">
-                        Pre-built investment formulas across value, growth, quality, and technical indicators for 500 Indian equities.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 flex-wrap shrink-0">
-                      <button onClick={() => navigate('/screen')} className="apple-btn apple-btn-secondary text-caption1">
-                        <Code2 className="w-3.5 h-3.5 text-apple-blue" />
-                        Query Editor
-                      </button>
-                    </div>
-                  </div>
+              <main className="flex-1 w-full animate-fade-in">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+                  <PageHeader
+                    title="Screens"
+                    aside={
+                      <Link to="/screen" className="text-subheadline font-medium text-apple-blue hover:underline underline-offset-4">
+                        Write your own query
+                      </Link>
+                    }
+                  >
+                    Starting points for the {STOCKS_DATA.length} companies in the Nifty 500. Each one is an ordinary
+                    query: open it, and change the numbers if they don't suit you.
+                  </PageHeader>
 
-                  <div>
-                    <PresetScreens onRunScreen={runScreen} universe={STOCKS_DATA} />
-                  </div>
+                  <PresetScreens onRunScreen={runScreen} universe={STOCKS_DATA} />
 
-                  {committedQuery && (
-                    <div className="pt-2">
-                      <div className="flex items-end justify-between gap-4 mb-4 flex-wrap">
-                        <div className="min-w-0">
-                          <h2 className="text-headline text-apple-primary font-display">Results for query</h2>
-                          <p className="text-caption1 text-apple-muted mt-0.5 font-mono truncate max-w-2xl">{committedQuery}</p>
-                        </div>
-                        <Link to={screenPath(committedQuery)} className="text-caption1 font-semibold text-apple-blue hover:underline shrink-0">
-                          Edit query →
-                        </Link>
-                      </div>
-                      {resultsTable}
+                  <section>
+                    <div className="flex items-baseline justify-between gap-4 mb-3 flex-wrap">
+                      <h2 className="text-headline text-apple-primary font-display">
+                        {result.matches.length} {result.matches.length === 1 ? 'company' : 'companies'}
+                        <span className="text-apple-muted font-normal">
+                          {isDefault ? ' match the default query' : ' match this query'}
+                        </span>
+                      </h2>
+                      <Link to={screenPath(committedQuery)} className="text-caption1 font-medium text-apple-blue hover:underline underline-offset-4 shrink-0">
+                        Edit query
+                      </Link>
                     </div>
-                  )}
+                    <p className="font-mono text-caption1 text-apple-secondary mb-4 break-words">{committedQuery}</p>
+                    {resultsTable}
+                  </section>
                 </div>
               </main>
               <Footer />
@@ -216,28 +212,19 @@ export const App: React.FC = () => {
           path="/screen"
           element={
             <>
-              <main className="flex-1 w-full apple-canvas animate-fade-in">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-6">
-                  {/* Harmonized Top Header Bar */}
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-apple-border pb-5">
-                    <div>
-                      <div className="flex items-center gap-2.5">
-                        <Code2 className="w-5 h-5 text-apple-blue shrink-0" />
-                        <h1 className="text-title2 sm:text-title1 text-apple-primary font-display">
-                          Query Builder
-                        </h1>
-                      </div>
-                      <p className="text-caption1 text-apple-muted mt-1 leading-normal">
-                        Screen 500 Indian companies using Screener.in syntax. Combine conditions with AND, OR, NOT and custom formulas.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 flex-wrap shrink-0">
-                      <Link to="/" className="apple-btn apple-btn-secondary text-caption1">
-                        <SlidersHorizontal className="w-3.5 h-3.5 text-apple-blue" />
-                        Browse Screens
+              <main className="flex-1 w-full animate-fade-in">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+                  <PageHeader
+                    title="Query"
+                    aside={
+                      <Link to="/" className="text-subheadline font-medium text-apple-blue hover:underline underline-offset-4">
+                        Back to screens
                       </Link>
-                    </div>
-                  </div>
+                    }
+                  >
+                    The same syntax as Screener.in. Join conditions with AND, OR and NOT, and use arithmetic where you
+                    need it, as in <code className="font-mono text-footnote">Debt / Market Capitalization &lt; 0.1</code>.
+                  </PageHeader>
 
                   <ScreenQueryBuilder
                     query={draftQuery}
@@ -258,105 +245,38 @@ export const App: React.FC = () => {
           }
         />
 
-        <Route
-          path="/saved"
-          element={
-            <Suspense
-              fallback={
-                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
-                  <div className="skeleton h-44" />
-                  <div className="skeleton h-72" />
-                </main>
-              }
-            >
-              <SavedAndWatchlistsPage
-                savedScreens={savedScreens}
-                onDeleteScreen={handleDeleteScreen}
-                defaultTab="watchlists"
-              />
-            </Suspense>
-          }
-        />
+        {['/saved', '/watchlists'].map((path) => (
+          <Route
+            key={path}
+            path={path}
+            element={
+              <Suspense fallback={fallback}>
+                <SavedAndWatchlistsPage
+                  savedScreens={savedScreens}
+                  onDeleteScreen={handleDeleteScreen}
+                  defaultTab="watchlists"
+                />
+              </Suspense>
+            }
+          />
+        ))}
 
-        <Route
-          path="/watchlists"
-          element={
-            <Suspense
-              fallback={
-                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
-                  <div className="skeleton h-44" />
-                  <div className="skeleton h-72" />
-                </main>
-              }
-            >
-              <SavedAndWatchlistsPage
-                savedScreens={savedScreens}
-                onDeleteScreen={handleDeleteScreen}
-                defaultTab="watchlists"
-              />
-            </Suspense>
-          }
-        />
-
-        <Route
-          path="/people"
-          element={
-            <Suspense
-              fallback={
-                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
-                  <div className="skeleton h-44" />
-                  <div className="skeleton h-72" />
-                </main>
-              }
-            >
-              <SuperInvestorsPage />
-            </Suspense>
-          }
-        />
-
-        <Route
-          path="/investors"
-          element={
-            <Suspense
-              fallback={
-                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
-                  <div className="skeleton h-44" />
-                  <div className="skeleton h-72" />
-                </main>
-              }
-            >
-              <SuperInvestorsPage />
-            </Suspense>
-          }
-        />
-
-        <Route
-          path="/commodities"
-          element={
-            <Suspense
-              fallback={
-                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-5">
-                  <div className="skeleton h-44" />
-                  <div className="skeleton h-72" />
-                </main>
-              }
-            >
-              <CommoditiesPage />
-            </Suspense>
-          }
-        />
+        {['/people', '/investors'].map((path) => (
+          <Route
+            key={path}
+            path={path}
+            element={
+              <Suspense fallback={fallback}>
+                <SuperInvestorsPage />
+              </Suspense>
+            }
+          />
+        ))}
 
         <Route
           path="/stock/:symbol"
           element={
-            <Suspense
-              fallback={
-                <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-5">
-                  <div className="skeleton h-56" />
-                  <div className="skeleton h-40" />
-                </main>
-              }
-            >
+            <Suspense fallback={fallback}>
               <StockDetailPage />
             </Suspense>
           }
@@ -368,10 +288,14 @@ export const App: React.FC = () => {
             <>
               <main className="flex-1 flex items-center justify-center p-8">
                 <div className="text-center">
-                  <h1 className="text-title3 text-apple-primary font-display">Page not found</h1>
-                  <p className="text-caption1 text-apple-muted mt-1.5">That address does not match anything here.</p>
+                  <h1 className="text-title3 text-apple-primary font-display">Nothing at this address</h1>
+                  <p className="text-subheadline text-apple-muted mt-1.5">
+                    {window.location.pathname.startsWith('/commodities')
+                      ? 'The commodities page has been taken down until it has a live price feed.'
+                      : 'The link may be mistyped, or the page may have moved.'}
+                  </p>
                   <Link to="/" className="apple-btn apple-btn-primary mt-5">
-                    Back to the screener
+                    Go to screens
                   </Link>
                 </div>
               </main>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
-import { Search, Building2, Hash, Compass, CornerDownLeft } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { STOCKS_DATA } from '../data/stocksData';
 import { CURATED_SCREENS } from '../data/screens';
 import { METRICS_DICTIONARY } from '../engine/metricsDictionary';
@@ -20,10 +20,10 @@ type Item =
   | { kind: 'screen'; id: string; title: string; description: string; query: string }
   | { kind: 'metric'; id: string; name: string; description: string; unit: string };
 
-const SECTION_LABEL: Record<Item['kind'], { label: string; Icon: React.ComponentType<{ className?: string }> }> = {
-  stock: { label: 'Companies', Icon: Building2 },
-  screen: { label: 'Screens', Icon: Compass },
-  metric: { label: 'Ratios', Icon: Hash },
+const SECTION_LABEL: Record<Item['kind'], string> = {
+  stock: 'Companies',
+  screen: 'Screens',
+  metric: 'Ratios, added to your query',
 };
 
 export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose, onInsertMetric }) => {
@@ -165,14 +165,14 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-0 sm:p-4 pt-0 sm:pt-[10vh] animate-fade-in"
+      className="fixed inset-0 z-50 bg-black/40 flex items-start justify-center p-0 sm:p-4 pt-0 sm:pt-[10vh] animate-fade-in"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-label="Search"
     >
       <div
-        className="apple-card w-full sm:max-w-xl overflow-hidden flex flex-col h-full sm:h-auto sm:max-h-[70vh] shadow-lg rounded-none sm:rounded-2xl border-0 sm:border"
+        className="apple-card w-full sm:max-w-xl overflow-hidden flex flex-col h-full sm:h-auto sm:max-h-[70vh] shadow-lg rounded-none sm:rounded-lg border-0 sm:border"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-2.5 px-3.5 h-14 sm:h-12 border-b border-apple-border pt-safe sm:pt-0">
@@ -181,7 +181,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
             ref={inputRef}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder={`Search ${STOCKS_DATA.length} companies, screens, ratios`}
+            placeholder="Company, screen or ratio"
             className="w-full bg-transparent text-subheadline text-apple-primary placeholder-apple-faint focus:outline-none"
             aria-label="Search"
           />
@@ -191,7 +191,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
               className="text-apple-faint hover:text-apple-primary p-1 text-caption1"
               aria-label="Clear search"
             >
-              ✕
+              Clear
             </button>
           )}
           <button
@@ -206,17 +206,14 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
         <div ref={listRef} className="overflow-y-auto p-1.5 flex-1">
           {items.length === 0 ? (
             <p className="py-12 text-center text-caption1 text-apple-muted">
-              Nothing matches “{searchTerm}”. Try a ticker, a screen name, or a ratio.
+              Nothing called {searchTerm}. Try a ticker, a screen or a ratio.
             </p>
           ) : (
             sections.map((section) => {
-              const { label, Icon } = SECTION_LABEL[section.kind];
+              const label = SECTION_LABEL[section.kind];
               return (
                 <div key={section.kind} className="mb-1.5 last:mb-0">
-                  <div className="flex items-center gap-1.5 px-2.5 py-1.5 text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint">
-                    <Icon className="w-3 h-3" />
-                    {label}
-                  </div>
+                  <div className="px-2.5 py-1.5 text-caption1 text-apple-muted">{label}</div>
 
                   {section.items.map((item) => {
                     cursor += 1;
@@ -229,7 +226,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
                         data-active={active}
                         onMouseEnter={() => setActiveIndex(index)}
                         onClick={() => runItem(item)}
-                        className={`w-full text-left px-2.5 py-2 rounded-lg flex items-center justify-between gap-3 transition-colors ${
+                        className={`w-full text-left px-2.5 py-2 rounded-md flex items-center justify-between gap-3 transition-colors ${
                           active ? 'bg-apple-blue-subtle' : ''
                         }`}
                       >
@@ -275,16 +272,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose,
         </div>
 
         <div className="px-3.5 py-2 border-t border-apple-border hidden sm:flex items-center gap-4 text-caption2 text-apple-faint">
-          <span className="flex items-center gap-1">
-            <kbd className="font-mono">↑</kbd>
-            <kbd className="font-mono">↓</kbd> navigate
-          </span>
-          <span className="flex items-center gap-1">
-            <CornerDownLeft className="w-3 h-3" /> open
-          </span>
-          <span className="flex items-center gap-1">
-            <kbd className="font-mono">esc</kbd> dismiss
-          </span>
+          <span>Arrow keys to move, Enter to open, Esc to close</span>
         </div>
 
       </div>

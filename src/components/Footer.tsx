@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GithubLogo } from '@phosphor-icons/react';
 import { CURATED_SCREENS } from '../data/screens';
 import { STOCKS_DATA } from '../data/stocksData';
 import { screenPath } from '../lib/routes';
@@ -22,15 +21,14 @@ export const Footer: React.FC = () => {
           <div className="col-span-2">
             <span className="text-subheadline font-bold tracking-[-0.03em] text-apple-primary font-display">Filterer</span>
             <p className="text-caption1 text-apple-secondary mt-2 max-w-sm leading-relaxed">
-              Open source stock screener for Indian equities. All queries execute locally in your browser with complete privacy.
-            </p>
-            <p className="text-caption1 text-apple-muted mt-4 leading-relaxed max-w-sm">
-              Covers {STOCKS_DATA.length} companies across the Nifty 500 with annual and quarterly statements, balance sheets, cash flows, and shareholding data.
+              A stock screener for the {STOCKS_DATA.length} companies in the Nifty 500. Queries run in your browser
+              against data shipped with the page. Results, shareholding and prices come from NSE and BSE filings and
+              quotes.
             </p>
           </div>
 
           <div>
-            <h2 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-3">Screens</h2>
+            <h2 className="text-caption1 font-medium text-apple-muted mb-3">Screens</h2>
             <ul className="space-y-2 text-caption1">
               {FEATURED.map((id) => {
                 const screen = CURATED_SCREENS.find((s) => s.id === id);
@@ -47,7 +45,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h2 className="text-caption2 font-semibold uppercase tracking-[0.06em] text-apple-faint mb-3">Project</h2>
+            <h2 className="text-caption1 font-medium text-apple-muted mb-3">Project</h2>
             <ul className="space-y-2 text-caption1">
               <li>
                 <a
@@ -56,8 +54,7 @@ export const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-apple-secondary hover:text-apple-blue transition-colors"
                 >
-                  <GithubLogo className="w-3.5 h-3.5" />
-                  Source
+                  Source on GitHub
                 </a>
               </li>
               <li>
@@ -79,18 +76,16 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-apple-border-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-caption2 text-apple-muted leading-relaxed">
+        <div className="mt-10 pt-6 border-t border-apple-border-subtle space-y-2 text-caption1 text-apple-muted leading-relaxed max-w-3xl">
           <p>
-            Developed by Abhishek K (FT-25-202) for the Mergers & Acquisitions course at Faculty of Management Studies (FMS), University of Delhi.
+            Made by Abhishek K (FT-25-202) for the Mergers and Acquisitions course at the Faculty of Management
+            Studies, University of Delhi.
           </p>
-          <span className="shrink-0 text-apple-secondary font-medium">
-            FMS Delhi
-          </span>
+          <p>
+            Not investment advice. Not affiliated with Screener.in or Mittal Analytics. Check any figure against the
+            company's own filing before you rely on it.
+          </p>
         </div>
-
-        <p className="mt-3 text-caption2 text-apple-muted/80 leading-relaxed">
-          For research and educational purposes only. Not investment advice, and not affiliated with Screener.in or Mittal Analytics. Figures come from public exchange filings and should be verified before making investment decisions.
-        </p>
       </div>
     </footer>
   );

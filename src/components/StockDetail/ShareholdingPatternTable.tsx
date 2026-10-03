@@ -1,5 +1,4 @@
 import React from 'react';
-import { AlertTriangle, FileCheck } from 'lucide-react';
 import type { Stock, ShareholdingPeriod } from '../../types/stock';
 import { StatementTable, StatementRow } from './StatementTable';
 import { isReported, pct } from '../../lib/format';
@@ -51,21 +50,15 @@ export const ShareholdingPatternTable: React.FC<{ stock: Stock }> = ({ stock }) 
       rows={rows}
       aside={
         filed ? (
-          <span className="apple-tag" style={{ color: 'var(--apple-green)' }}>
-            <FileCheck className="w-3 h-3" />
-            {stock.shareholding_source}
-          </span>
+          <span className="apple-tag">{stock.shareholding_source}</span>
         ) : synthetic ? (
-          <span className="apple-tag" style={{ color: 'var(--apple-amber)' }}>
-            <AlertTriangle className="w-3 h-3" />
-            Placeholder series
-          </span>
+          <span className="apple-tag text-apple-amber">Placeholder figures</span>
         ) : undefined
       }
       footnote={
         filed ? (
           <>
-            Taken from the company&rsquo;s quarterly shareholding pattern filed with NSE. That filing reports
+            Taken from the company's quarterly shareholding pattern filed with NSE. That filing reports
             the public holding as one figure, so the split between foreign and domestic institutions, and the
             promoter pledge, are not shown rather than estimated.
           </>

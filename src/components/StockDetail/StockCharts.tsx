@@ -20,16 +20,7 @@ import {
   CartesianGrid,
   ReferenceLine,
 } from 'recharts';
-import {
-  TrendingUp,
-  Activity,
-  Maximize2,
-  Minimize2,
-  BarChart3,
-  ExternalLink,
-  Layers,
-  Check,
-} from 'lucide-react';
+import { Maximize2, Minimize2 } from 'lucide-react';
 import type { Stock, PricePoint } from '../../types/stock';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -127,10 +118,10 @@ const TradingViewLightweightChart: React.FC<{
 
     container.innerHTML = '';
 
-    const bg = isDark ? '#141416' : '#ffffff';
-    const text = isDark ? '#a1a1a6' : '#6e6e73';
-    const grid = isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.04)';
-    const border = isDark ? '#2c2c2e' : '#e5e5ea';
+    const bg = isDark ? '#181816' : '#fbfaf7';
+    const text = isDark ? '#8a877c' : '#767267';
+    const grid = isDark ? 'rgba(255, 250, 225, 0.04)' : 'rgba(40, 34, 12, 0.05)';
+    const border = isDark ? '#2c2b26' : '#e2e0d7';
 
     const chart = createChart(container, {
       layout: {
@@ -163,9 +154,9 @@ const TradingViewLightweightChart: React.FC<{
 
     // 1. Price Area Series
     const areaSeries = chart.addSeries(AreaSeries, {
-      topColor: isDark ? 'rgba(61, 155, 255, 0.35)' : 'rgba(0, 98, 204, 0.25)',
-      bottomColor: isDark ? 'rgba(61, 155, 255, 0.01)' : 'rgba(0, 98, 204, 0.01)',
-      lineColor: isDark ? '#3d9bff' : '#0062cc',
+      topColor: isDark ? 'rgba(147, 173, 242, 0.1)' : 'rgba(30, 76, 168, 0.07)',
+      bottomColor: isDark ? 'rgba(147, 173, 242, 0.1)' : 'rgba(30, 76, 168, 0.07)',
+      lineColor: isDark ? '#93adf2' : '#1e4ca8',
       lineWidth: 2,
       priceFormat: { type: 'price', precision: 2, minMove: 0.05 },
     });
@@ -190,8 +181,8 @@ const TradingViewLightweightChart: React.FC<{
             time: p.date,
             value: p.volume || 0,
             color: isUp
-              ? isDark ? 'rgba(58, 212, 106, 0.35)' : 'rgba(23, 122, 61, 0.3)'
-              : isDark ? 'rgba(255, 69, 58, 0.35)' : 'rgba(215, 0, 21, 0.3)',
+              ? isDark ? 'rgba(98, 197, 140, 0.35)' : 'rgba(27, 116, 66, 0.28)'
+              : isDark ? 'rgba(239, 122, 112, 0.35)' : 'rgba(176, 34, 43, 0.28)',
           };
         })
       );
@@ -201,7 +192,7 @@ const TradingViewLightweightChart: React.FC<{
     let sma50Series: ISeriesApi<'Line'> | null = null;
     if (showSma50) {
       sma50Series = chart.addSeries(LineSeries, {
-        color: isDark ? '#3ad46a' : '#177a3d',
+        color: isDark ? '#62c58c' : '#1b7442',
         lineWidth: 1,
         title: 'SMA 50',
       });
@@ -216,7 +207,7 @@ const TradingViewLightweightChart: React.FC<{
     let sma200Series: ISeriesApi<'Line'> | null = null;
     if (showSma200) {
       sma200Series = chart.addSeries(LineSeries, {
-        color: isDark ? '#ff9f0a' : '#d97706',
+        color: isDark ? '#ddaa52' : '#865600',
         lineWidth: 1,
         title: 'SMA 200',
       });
@@ -231,7 +222,7 @@ const TradingViewLightweightChart: React.FC<{
     let ema20Series: ISeriesApi<'Line'> | null = null;
     if (showEma20) {
       ema20Series = chart.addSeries(LineSeries, {
-        color: isDark ? '#bf5af2' : '#8944ab',
+        color: isDark ? '#a3a0f2' : '#4a43b8',
         lineWidth: 1,
         title: 'EMA 20',
       });
@@ -337,57 +328,25 @@ const TradingViewLightweightChart: React.FC<{
   return (
     <div className="flex flex-col h-full w-full">
       {/* Interactive Controls & Legend Sub-Header */}
-      <div className="px-3 sm:px-5 py-2 sm:py-2.5 bg-apple-surface/50 border-b border-apple-border flex items-center justify-between gap-2 sm:gap-3 text-caption1 overflow-x-auto no-scrollbar">
-        {/* Indicators Toggle Buttons */}
-        <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
-          <span className="text-apple-muted text-caption2 sm:text-caption2 font-medium flex items-center gap-1 mr-0.5 sm:mr-1">
-            <Layers className="w-3 h-3" />
-            <span className="hidden sm:inline">Indicators:</span>
-          </span>
-          <button
-            onClick={() => setShowSma50(!showSma50)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
-              showSma50
-                ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30'
-                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
-            }`}
-          >
-            {showSma50 && <Check className="w-2.5 h-2.5" />}
-            SMA 50
-          </button>
-          <button
-            onClick={() => setShowSma200(!showSma200)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
-              showSma200
-                ? 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30'
-                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
-            }`}
-          >
-            {showSma200 && <Check className="w-2.5 h-2.5" />}
-            SMA 200
-          </button>
-          <button
-            onClick={() => setShowEma20(!showEma20)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
-              showEma20
-                ? 'bg-purple-500/15 text-purple-600 dark:text-purple-400 border border-purple-500/30'
-                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
-            }`}
-          >
-            {showEma20 && <Check className="w-2.5 h-2.5" />}
-            EMA 20
-          </button>
-          <button
-            onClick={() => setShowVolume(!showVolume)}
-            className={`px-1.5 sm:px-2 py-0.5 rounded text-caption2 sm:text-caption2 font-medium transition-all flex items-center gap-1 ${
-              showVolume
-                ? 'bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30'
-                : 'bg-apple-surface text-apple-muted border border-apple-border hover:text-apple-secondary'
-            }`}
-          >
-            {showVolume && <Check className="w-2.5 h-2.5" />}
-            Vol
-          </button>
+      <div className="px-3 sm:px-5 py-2 sm:py-2.5 border-b border-apple-border-subtle flex items-center justify-between gap-2 sm:gap-3 text-caption1 overflow-x-auto no-scrollbar">
+        {/* Overlays, shown as a legend you can click: the swatch is the line's own colour. */}
+        <div className="flex items-center gap-3 shrink-0">
+          {[
+            { label: '50-day', on: showSma50, toggle: () => setShowSma50(!showSma50), swatch: 'bg-apple-green' },
+            { label: '200-day', on: showSma200, toggle: () => setShowSma200(!showSma200), swatch: 'bg-apple-amber' },
+            { label: '20-day EMA', on: showEma20, toggle: () => setShowEma20(!showEma20), swatch: 'bg-apple-indigo' },
+            { label: 'Volume', on: showVolume, toggle: () => setShowVolume(!showVolume), swatch: 'bg-apple-faint' },
+          ].map((o) => (
+            <button
+              key={o.label}
+              onClick={o.toggle}
+              aria-pressed={o.on}
+              className={`flex items-center gap-1.5 text-caption1 transition-opacity ${o.on ? 'text-apple-secondary' : 'text-apple-faint opacity-60'}`}
+            >
+              <span className={`w-3 h-0.5 ${o.swatch}`} aria-hidden="true" />
+              {o.label}
+            </button>
+          ))}
         </div>
 
         {/* Timeframe Range Selector */}
@@ -396,7 +355,7 @@ const TradingViewLightweightChart: React.FC<{
             <button
               key={r}
               onClick={() => handleRangeChange(r)}
-              className={`apple-segmented-item px-2 sm:px-2.5 py-0.5 text-caption2 sm:text-caption2 uppercase ${
+              className={`apple-segmented-item px-2 sm:px-2.5 py-0.5 text-caption1 ${
                 selectedRange === r ? 'active' : ''
               }`}
             >
@@ -408,26 +367,26 @@ const TradingViewLightweightChart: React.FC<{
 
       {/* Floating Dynamic Metric Readout */}
       {info && (
-        <div className="px-3 sm:px-5 py-1.5 bg-apple-card-bg border-b border-apple-border-subtle flex items-center gap-2.5 sm:gap-4 text-caption2 sm:text-caption2 text-apple-muted num overflow-x-auto no-scrollbar whitespace-nowrap">
-          <span>Date: <strong className="text-apple-primary">{info.date}</strong></span>
-          <span>Price: <strong className="text-apple-primary">₹{info.price.toLocaleString('en-IN')}</strong></span>
+        <div className="px-3 sm:px-5 py-1.5 bg-apple-card-bg border-b border-apple-border-subtle flex items-center gap-2.5 sm:gap-4 text-caption1 text-apple-muted num overflow-x-auto no-scrollbar whitespace-nowrap">
+          <span><strong className="text-apple-primary">{info.date}</strong></span>
+          <span>Close <strong className="text-apple-primary">₹{info.price.toLocaleString('en-IN')}</strong></span>
           {showSma50 && info.dma50 && (
-            <span className="text-emerald-600 dark:text-emerald-400">
-              SMA 50: <strong>₹{info.dma50.toFixed(2)}</strong>
+            <span className="text-apple-green">
+              50-day <strong>₹{info.dma50.toFixed(2)}</strong>
             </span>
           )}
           {showSma200 && info.dma200 && (
-            <span className="text-amber-600 dark:text-amber-400">
-              SMA 200: <strong>₹{info.dma200.toFixed(2)}</strong>
+            <span className="text-apple-amber">
+              200-day <strong>₹{info.dma200.toFixed(2)}</strong>
             </span>
           )}
           {showEma20 && info.ema20 && (
-            <span className="text-purple-600 dark:text-purple-400">
-              EMA 20: <strong>₹{info.ema20.toFixed(2)}</strong>
+            <span className="text-apple-indigo">
+              20-day EMA <strong>₹{info.ema20.toFixed(2)}</strong>
             </span>
           )}
           {showVolume && info.volume && (
-            <span>Vol: <strong className="text-apple-secondary">{(info.volume / 1e5).toFixed(1)}L</strong></span>
+            <span>Volume <strong className="text-apple-secondary">{(info.volume / 1e5).toFixed(1)}L</strong></span>
           )}
         </div>
       )}
@@ -483,11 +442,11 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
     [stock]
   );
 
-  const axis = isDark ? '#74747e' : '#86868b';
-  const grid = isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)';
-  const blue = isDark ? '#3d9bff' : '#0062cc';
-  const green = isDark ? '#3ad46a' : '#177a3d';
-  const indigo = isDark ? '#7d7bf0' : '#4f46c9';
+  const axis = isDark ? '#8a877c' : '#767267';
+  const grid = isDark ? 'rgba(255,250,225,0.05)' : 'rgba(40,34,12,0.06)';
+  const blue = isDark ? '#93adf2' : '#1e4ca8';
+  const green = isDark ? '#62c58c' : '#1b7442';
+  const indigo = isDark ? '#a3a0f2' : '#4a43b8';
 
   const tooltipStyle: React.CSSProperties = {
     background: 'var(--apple-card-bg)',
@@ -503,17 +462,17 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
     return Number.isNaN(d.getTime()) ? value : d.toLocaleDateString('en-IN', { month: 'short', year: '2-digit' });
   };
 
-  const TABS: Array<{ id: Tab; label: string; icon: React.ReactNode; available: boolean }> = [
-    { id: 'tradingview', label: 'TradingView Chart', icon: <TrendingUp className="w-3.5 h-3.5" />, available: true },
-    { id: 'pe', label: 'P/E Multiple', icon: <Activity className="w-3.5 h-3.5" />, available: peSeries.length > 0 },
-    { id: 'sales', label: 'Financial Growth', icon: <BarChart3 className="w-3.5 h-3.5" />, available: salesSeries.length > 0 },
+  const TABS: Array<{ id: Tab; label: string; available: boolean }> = [
+    { id: 'tradingview', label: 'Price', available: true },
+    { id: 'pe', label: 'P/E', available: peSeries.length > 0 },
+    { id: 'sales', label: 'Sales and profit', available: salesSeries.length > 0 },
   ];
 
   const activeTab = TABS.find((t) => t.id === tab)?.available ? tab : 'tradingview';
   const tvWebUrl = `https://www.tradingview.com/chart/?symbol=NSE:${encodeURIComponent(toTradingViewSymbol(stock.symbol))}`;
 
   return (
-    <div className={`apple-card overflow-hidden transition-all duration-300 ${isExpanded ? 'shadow-2xl ring-1 ring-apple-primary/20' : ''}`}>
+    <div className="apple-card overflow-hidden">
       {/* Primary Toolbar */}
       <div className="px-3 sm:px-5 py-2.5 sm:py-3 border-b border-apple-border flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
@@ -524,8 +483,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
                 onClick={() => setTab(t.id)}
                 className={`apple-segmented-item flex items-center gap-1 text-caption1 py-1 px-2 sm:px-2.5 ${activeTab === t.id ? 'active' : ''}`}
               >
-                {t.icon}
-                <span>{t.label}</span>
+                {t.label}
               </button>
             ))}
           </div>
@@ -535,11 +493,9 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
             href={tvWebUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-caption2 font-medium text-apple-secondary hover:text-apple-primary hover:bg-apple-surface border border-apple-border transition-colors"
-            title="Open real-time interactive workspace on TradingView.com"
+            className="hidden sm:inline text-caption1 text-apple-blue hover:underline underline-offset-4 ml-2"
           >
-            <span>TradingView Web</span>
-            <ExternalLink className="w-3 h-3 opacity-70" />
+            Open on TradingView
           </a>
         </div>
 
@@ -551,7 +507,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
                 <button
                   key={r}
                   onClick={() => setRange(r)}
-                  className={`apple-segmented-item px-2 sm:px-2.5 py-1 text-caption2 uppercase ${range === r ? 'active' : ''}`}
+                  className={`apple-segmented-item px-2 sm:px-2.5 py-1 text-caption1 ${range === r ? 'active' : ''}`}
                 >
                   {r}
                 </button>
@@ -562,7 +518,7 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
           {/* Fullscreen / Height Toggle */}
           <button
             onClick={() => setIsExpanded((prev) => !prev)}
-            className="p-1.5 rounded-lg border border-apple-border bg-apple-surface hover:bg-apple-surface-active text-apple-secondary hover:text-apple-primary transition-colors"
+            className="apple-btn apple-btn-quiet apple-btn-sm"
             title={isExpanded ? 'Collapse chart' : 'Expand chart'}
             aria-label={isExpanded ? 'Collapse chart' : 'Expand chart'}
           >
@@ -623,8 +579,8 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
                   }
                 />
                 <Legend wrapperStyle={{ fontSize: 11, paddingTop: 8 }} />
-                <Bar yAxisId="left" dataKey="sales" name="Sales" fill={blue} radius={[4, 4, 0, 0]} maxBarSize={44} />
-                <Bar yAxisId="left" dataKey="net_profit" name="Net profit" fill={indigo} radius={[4, 4, 0, 0]} maxBarSize={44} />
+                <Bar yAxisId="left" dataKey="sales" name="Sales" fill={blue} maxBarSize={44} />
+                <Bar yAxisId="left" dataKey="net_profit" name="Net profit" fill={indigo} maxBarSize={44} />
                 <Line yAxisId="right" type="monotone" dataKey="opm" name="OPM" stroke={green} strokeWidth={2} dot={{ r: 3 }} />
               </ComposedChart>
             </ResponsiveContainer>
@@ -633,16 +589,13 @@ export const StockCharts: React.FC<{ stock: Stock }> = ({ stock }) => {
       </div>
 
       {/* Footer Info */}
-      <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-caption2 text-apple-muted flex items-center justify-between gap-3 flex-wrap">
+      <div className="px-4 sm:px-5 py-2.5 border-t border-apple-border-subtle text-caption1 text-apple-muted flex items-center justify-between gap-3 flex-wrap">
         <span>
           {activeTab === 'tradingview'
-            ? 'Daily price history with 50-day SMA, 200-day SMA, 20-day EMA, and volume.'
+            ? 'Daily closes. Averages are simple unless marked EMA.'
             : activeTab === 'pe'
-              ? 'Historical price to earnings (P/E) compared with the median.'
-              : 'Annual sales and net profit in ₹ crore with operating margin (OPM%).'}
-        </span>
-        <span className="text-caption2 opacity-75">
-          Filterer
+              ? 'Price over the latest full-year EPS known at each date. The dashed line is the median for the period shown.'
+              : 'Annual sales and net profit in ₹ crore, with operating margin on the right-hand scale.'}
         </span>
       </div>
     </div>

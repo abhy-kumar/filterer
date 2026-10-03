@@ -5,12 +5,8 @@
  * src/index.css as custom properties and surfaced here so that a
  * component can reach them through a utility class as well.
  *
- * Font stacks are the platform's own UI face on every platform: SF on
- * Apple, Segoe UI Variable on Windows 11, Roboto on Android. Nothing is
- * downloaded. The previous stack pulled Plus Jakarta Sans and JetBrains
- * Mono from Google Fonts on every visit — two render-blocking requests
- * for faces that an Apple device never reaches, because -apple-system
- * wins ahead of them in the same list.
+ * Type is IBM Plex Sans and Plex Mono, bundled with the app through
+ * Fontsource rather than fetched from Google at load time.
  */
 export default {
   content: [
@@ -95,38 +91,9 @@ export default {
         lg: 'var(--apple-shadow-lg)',
       },
       fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"SF Pro Text"',
-          '"Segoe UI Variable Text"',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          'sans-serif',
-        ],
-        display: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"SF Pro Display"',
-          '"Segoe UI Variable Display"',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          'sans-serif',
-        ],
-        mono: [
-          'ui-monospace',
-          '"SF Mono"',
-          'SFMono-Regular',
-          'Menlo',
-          '"Cascadia Mono"',
-          'Consolas',
-          '"Liberation Mono"',
-          'monospace',
-        ],
+        sans: ['"IBM Plex Sans Variable"', '"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        display: ['"IBM Plex Sans Variable"', '"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'Consolas', 'monospace'],
       },
     },
   },

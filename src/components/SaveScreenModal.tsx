@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Bookmark, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { ScreenFilter } from '../types/stock';
 
 interface SaveScreenModalProps {
@@ -18,7 +18,6 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
 }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [category, setCategory] = useState<'Popular' | 'Growth' | 'Valuation' | 'Technicals' | 'Safety' | 'Dividends'>('Popular');
 
   useEffect(() => {
     if (!isOpen) return;
@@ -40,9 +39,7 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
       title: title.trim(),
       description: description.trim(),
       query: query.trim(),
-      category,
-      iconName: 'Zap',
-      author: 'Saved by you',
+      category: 'Saved',
       createdAt: new Date().toISOString(),
     };
 
@@ -53,15 +50,14 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
   };
 
   return createPortal(
-    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+    <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4 animate-fade-in"
       onClick={onClose}
       role="dialog"
       aria-modal="true">
       <div className="apple-card w-full max-w-lg p-5 shadow-lg" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4 pb-3 border-b border-apple-border-subtle">
           <h3 className="text-subheadline font-semibold text-apple-primary flex items-center gap-2 font-display">
-            <Bookmark className="w-4 h-4 text-apple-blue" />
-            Save this screen
+            Save this query
           </h3>
           <button
             onClick={onClose}
@@ -82,19 +78,19 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
               required
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="High ROCE midcaps with low leverage"
+              placeholder="Midcaps, ROCE over 20"
               className="apple-input w-full text-caption1 px-3 py-2"
             />
           </div>
 
           <div>
             <label className="block text-caption1 font-semibold text-apple-primary mb-1">
-              Description
+              Note <span className="font-normal text-apple-muted">(optional)</span>
             </label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="What this screen is looking for, and why"
+              placeholder=""
               rows={2}
               className="apple-input w-full text-caption1 px-3 py-2 resize-none"
             />
@@ -102,25 +98,7 @@ export const SaveScreenModal: React.FC<SaveScreenModalProps> = ({
 
           <div>
             <label className="block text-caption1 font-semibold text-apple-primary mb-1">
-              Category
-            </label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value as any)}
-              className="apple-input w-full text-caption1 px-3 py-2 text-apple-secondary"
-            >
-              <option value="Popular">Popular</option>
-              <option value="Growth">Growth</option>
-              <option value="Valuation">Valuation</option>
-              <option value="Technicals">Technicals</option>
-              <option value="Safety">Safety</option>
-              <option value="Dividends">Dividends</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-caption1 font-semibold text-apple-primary mb-1">
-              Formula
+              Query
             </label>
             <div className="apple-well p-2.5 font-mono text-caption2 text-apple-secondary max-h-24 overflow-y-auto leading-relaxed">
               {query}

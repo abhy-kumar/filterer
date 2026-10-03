@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
-import { ArrowUp, ArrowDown, Download, Columns3, Search, ChevronLeft, ChevronRight, Check, X, LayoutGrid, TableProperties } from 'lucide-react';
+import { ArrowUp, ArrowDown, Search, ChevronLeft, ChevronRight, Check, X } from 'lucide-react';
 import { Stock } from '../types/stock';
 import { stockPath } from '../lib/routes';
 import { getMetric } from '../engine/metricsDictionary';
@@ -270,7 +270,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             type="text"
             value={searchFilter}
             onChange={(e) => setSearchFilter(e.target.value)}
-            placeholder="Filter results"
+            placeholder="Name or symbol"
             className="apple-input w-full text-caption1 pl-8 pr-7 h-8"
           />
           {searchFilter && (
@@ -295,16 +295,16 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
           className="apple-input text-caption1 px-2 h-8 text-apple-secondary sm:hidden"
           title="Sort results"
         >
-          <option value="market_cap-desc">Mkt Cap: High → Low</option>
-          <option value="market_cap-asc">Mkt Cap: Low → High</option>
-          <option value="current_price-desc">Price: High → Low</option>
-          <option value="current_price-asc">Price: Low → High</option>
+          <option value="market_cap-desc">Largest first</option>
+          <option value="market_cap-asc">Smallest first</option>
+          <option value="current_price-desc">Highest price</option>
+          <option value="current_price-asc">Lowest price</option>
           <option value="change_pct-desc">Day Gainers</option>
           <option value="change_pct-asc">Day Losers</option>
-          <option value="pe_ratio-asc">P/E: Low → High</option>
-          <option value="pe_ratio-desc">P/E: High → Low</option>
-          <option value="roce-desc">ROCE: High → Low</option>
-          <option value="roe-desc">ROE: High → Low</option>
+          <option value="pe_ratio-asc">Lowest P/E</option>
+          <option value="pe_ratio-desc">Highest P/E</option>
+          <option value="roce-desc">Highest ROCE</option>
+          <option value="roe-desc">Highest ROE</option>
         </select>
 
         <select
@@ -347,8 +347,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
               title="Cards view"
               aria-label="Cards view"
             >
-              <LayoutGrid className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Cards</span>
+              Cards
             </button>
             <button
               onClick={() => setViewMode('table')}
@@ -358,20 +357,17 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
               title="Table view"
               aria-label="Table view"
             >
-              <TableProperties className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Table</span>
+              Table
             </button>
           </div>
 
           <button onClick={() => setShowColumnPicker(true)} className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3">
-            <Columns3 className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Columns</span>
-            <span className="text-apple-faint num text-caption2 sm:text-caption1">{visibleColumns.length}</span>
+            Columns
+            <span className="text-apple-faint num">{visibleColumns.length}</span>
           </button>
           {onExportCSV && (
             <button onClick={onExportCSV} className="apple-btn apple-btn-secondary h-8 px-2 sm:px-3" disabled={!sortedStocks.length}>
-              <Download className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">CSV</span>
+              CSV
             </button>
           )}
         </div>
@@ -384,8 +380,8 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
             <div className="py-14 text-center">
               <p className="text-subheadline text-apple-secondary">
                 {stocks.length === 0
-                  ? 'No companies match your query conditions.'
-                  : 'No companies match the current search, sector, or industry filter.'}
+                  ? 'Nothing passes this query.'
+                  : 'Nothing left after the name, sector and industry filters.'}
               </p>
               {stocks.length > 0 && (
                 <button
@@ -408,7 +404,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                   <div
                     key={stock.symbol}
                     onClick={() => navigate(stockPath(stock.symbol))}
-                    className="apple-card p-3.5 sm:p-4 hover:border-apple-border-strong hover:bg-apple-surface transition-all cursor-pointer flex flex-col justify-between group active:scale-[0.99]"
+                    className="apple-card p-3.5 sm:p-4 hover:border-apple-border-strong transition-colors cursor-pointer flex flex-col justify-between group"
                   >
                     <div>
                       <div className="flex items-start justify-between gap-2">
@@ -422,7 +418,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                             </span>
                           </div>
                           <div className="text-caption2 text-apple-faint truncate mt-0.5">
-                            {stock.sector} {stock.industry ? `· ${stock.industry}` : ''}
+                            {stock.industry || stock.sector}
                           </div>
                         </div>
 
@@ -523,8 +519,8 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                   <td colSpan={visibleColumns.length + 1} className="py-14 text-center">
                     <p className="text-subheadline text-apple-secondary">
                       {stocks.length === 0
-                        ? 'No companies match your query conditions.'
-                        : 'No companies match the current search, sector, or industry filter.'}
+                        ? 'Nothing passes this query.'
+                        : 'Nothing left after the name, sector and industry filters.'}
                     </p>
                     {stocks.length > 0 && (
                       <button
@@ -578,7 +574,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
       <div className="px-4 py-2.5 border-t border-apple-border flex flex-wrap items-center justify-between gap-3 text-caption1 text-apple-muted">
         <span>
           {sortedStocks.length === 0
-            ? 'No rows'
+            ? 'None'
             : `${(page - 1) * pageSize + 1} to ${Math.min(page * pageSize, sortedStocks.length)} of ${sortedStocks.length}`}
         </span>
 
@@ -625,7 +621,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
       {showColumnPicker &&
         createPortal(
           <div
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4"
             onClick={() => setShowColumnPicker(false)}
           >
             <div
@@ -641,7 +637,7 @@ export const ScreenResultsTable: React.FC<ScreenResultsTableProps> = ({ stocks, 
                   Reset
                 </button>
               </div>
-              <p className="text-caption1 text-apple-muted mb-4">Your selection is remembered on this device.</p>
+              <p className="text-caption1 text-apple-muted mb-4">Kept in this browser.</p>
 
               <div className="grid grid-cols-2 gap-1 max-h-72 overflow-y-auto -mr-2 pr-2">
                 {COLUMNS.map((col) => {

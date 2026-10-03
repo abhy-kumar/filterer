@@ -9,7 +9,7 @@ export const METRICS_DICTIONARY: MetricDefinition[] = [
     aliases: ['market cap', 'market capitalization', 'mcap', 'mar cap', 'market_cap', 'marketcap'],
     category: 'Valuation',
     unit: 'Cr',
-    description: 'Total market value of a company’s outstanding shares in Crores (₹ Cr).',
+    description: "Total market value of a company's outstanding shares in Crores (₹ Cr).",
   },
   {
     id: 'current_price',
@@ -301,7 +301,7 @@ export const METRICS_DICTIONARY: MetricDefinition[] = [
     category: 'Financial Health',
     unit: 'Score',
     description:
-      'Altman Z-score for bankruptcy risk (>2.99 safe, <1.81 distressed). Not reported for banks and NBFCs: the coefficients are calibrated on manufacturers, and a lender’s balance sheet reads as distress under them.',
+      "Altman Z-score for bankruptcy risk (>2.99 safe, <1.81 distressed). Not reported for banks and NBFCs: the coefficients are calibrated on manufacturers, and a lender's balance sheet reads as distress under them.",
   },
 
   // Cash Flow & Working Capital

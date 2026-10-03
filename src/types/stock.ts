@@ -268,9 +268,10 @@ export interface ScreenFilter {
   title: string;
   description: string;
   query: string;
-  category: 'Popular' | 'Growth' | 'Valuation' | 'Technicals' | 'Safety' | 'Dividends';
-  iconName: string;
-  author?: string;
+  /** Older saved screens carry the previous category names; they are shown as-is. */
+  category: string;
+  /** Whose idea the screen is based on, where it is someone's. */
+  basedOn?: string;
   createdAt?: string;
 }
 

@@ -74,7 +74,7 @@ export const QuarterlyResultsTable: React.FC<{ stock: Stock }> = ({ stock }) => 
             {gaps.length === 1 ? 'it skips a quarter' : 'them skips quarters'}.
           </span>
         ) : filed ? (
-          'Net profit is the share attributable to the company’s own shareholders. Figures follow the XBRL filed with the exchange.'
+          "Net profit is the share attributable to the company's own shareholders. Figures follow the XBRL filed with the exchange."
         ) : undefined
       }
     />

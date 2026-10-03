@@ -14,14 +14,8 @@ import { CashFlowTable } from '../components/StockDetail/CashFlowTable';
 import { RatiosTable } from '../components/StockDetail/RatiosTable';
 import { ShareholdingPatternTable } from '../components/StockDetail/ShareholdingPatternTable';
 import { StockDocuments } from '../components/StockDetail/StockDocuments';
-import { SegmentResultsTable } from '../components/StockDetail/SegmentResultsTable';
-import { AIInsightsSummary } from '../components/StockDetail/AIInsightsSummary';
-import { CompanyInsightsTable } from '../components/StockDetail/CompanyInsightsTable';
 import { DataQualityPanel } from '../components/StockDetail/DataQualityPanel';
 import { Footer } from '../components/Footer';
-import { hasStockCompanyInsights } from '../engine/companyInsightsGenerator';
-import { hasStockConcallInsights } from '../engine/concallInsightsGenerator';
-import { hasCompanySegments } from '../data/segmentData';
 import { DerivedInsightsPanel } from '../components/StockDetail/DerivedInsightsPanel';
 import { deriveInsights } from '../engine/derivedInsights';
 import { getInvestorsHolding } from '../data/superInvestorsData';
@@ -86,10 +80,6 @@ export const StockDetailPage: React.FC = () => {
     };
   }, [bundledStock, remoteData]);
 
-  const hasInsights = useMemo(() => hasStockCompanyInsights(stock), [stock]);
-  const hasConcall = useMemo(() => hasStockConcallInsights(stock), [stock]);
-  const hasSegments = useMemo(() => hasCompanySegments(stock), [stock]);
-
   const liveQuote = useLiveQuote(bundledStock?.symbol);
   const liveStock = useMemo(() => (stock ? applyLiveQuote(stock, liveQuote) : null), [stock, liveQuote]);
   const investorsHere = useMemo(
@@ -103,25 +93,14 @@ export const StockDetailPage: React.FC = () => {
   );
 
   const sections = useMemo(() => {
-    const list = [{ id: 'sec-analysis', label: 'Analysis' }];
+    const list = [{ id: 'sec-analysis', label: 'Pros and cons' }];
     if (derivedInsights.length) {
-      list.push({ id: 'sec-insights-derived', label: 'Insights' });
-    }
-    if (hasInsights) {
-      list.push({ id: 'sec-insights-kpi', label: 'Operating KPIs' });
-    }
-    if (hasConcall) {
-      list.push({ id: 'sec-insights', label: 'Concall Notes' });
+      list.push({ id: 'sec-insights-derived', label: 'Readings' });
     }
     list.push(
       { id: 'sec-charts', label: 'Charts' },
       { id: 'sec-peers', label: 'Peers' },
-      { id: 'sec-quarters', label: 'Quarters' }
-    );
-    if (hasSegments) {
-      list.push({ id: 'sec-segments', label: 'Segments' });
-    }
-    list.push(
+      { id: 'sec-quarters', label: 'Quarters' },
       { id: 'sec-pnl', label: 'P&L' },
       { id: 'sec-balancesheet', label: 'Balance sheet' },
       { id: 'sec-cashflows', label: 'Cash flow' },
@@ -130,7 +109,7 @@ export const StockDetailPage: React.FC = () => {
       { id: 'sec-documents', label: 'Filings' }
     );
     return list;
-  }, [derivedInsights.length, hasInsights, hasConcall, hasSegments]);
+  }, [derivedInsights.length]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -177,14 +156,13 @@ export const StockDetailPage: React.FC = () => {
         <main className="flex-1 flex items-center justify-center p-8">
           <div className="apple-card p-8 max-w-md w-full text-center">
             <h1 className="text-headline text-apple-primary mb-1.5 font-display">
-              Stock not found
+              No company called {symbol}
             </h1>
             <p className="text-caption1 text-apple-muted mb-6 leading-relaxed">
-              No company found for symbol <code className="font-mono text-apple-secondary">{symbol}</code>.
-              Filterer currently covers the Nifty 500 universe.
+              Only Nifty 500 companies are covered, listed by their NSE symbol.
             </p>
             <button onClick={() => navigate('/')} className="apple-btn apple-btn-primary">
-              Back to Screener
+              Back to screens
             </button>
           </div>
         </main>
@@ -197,12 +175,12 @@ export const StockDetailPage: React.FC = () => {
     <>
       <div className="flex-1 w-full">
         {/* Breadcrumb and section nav */}
-        <div className="sticky top-[88px] z-30 apple-glass border-b border-apple-border">
+        <div className="sticky top-[81px] z-30 bg-apple-bg border-b border-apple-border">
           <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-11 flex items-center gap-4">
             <div className="flex items-center gap-1.5 text-caption1 shrink-0">
               <Link to="/" className="flex items-center gap-1 text-apple-muted hover:text-apple-primary transition-colors">
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Screener</span>
+                <span className="hidden sm:inline">Screens</span>
               </Link>
               <ChevronRight className="w-3 h-3 text-apple-faint" />
               <span className="font-mono font-semibold text-apple-primary">{stock.symbol}</span>
@@ -214,9 +192,9 @@ export const StockDetailPage: React.FC = () => {
                   key={section.id}
                   data-section={section.id}
                   onClick={() => scrollTo(section.id)}
-                  className={`px-2.5 py-1 rounded-md text-caption2 whitespace-nowrap transition-colors ${
+                  className={`px-2 py-1 text-caption1 whitespace-nowrap transition-colors ${
                     activeSection === section.id
-                      ? 'text-apple-primary font-semibold bg-apple-surface-active'
+                      ? 'text-apple-primary font-medium underline underline-offset-[6px] decoration-2'
                       : 'text-apple-muted hover:text-apple-primary'
                   }`}
                 >
@@ -244,16 +222,6 @@ export const StockDetailPage: React.FC = () => {
               <DerivedInsightsPanel insights={derivedInsights} />
             </section>
           )}
-          {hasInsights && (
-            <section id="sec-insights-kpi" className="scroll-mt-32">
-              <CompanyInsightsTable stock={stock} />
-            </section>
-          )}
-          {hasConcall && (
-            <section id="sec-insights" className="scroll-mt-32">
-              <AIInsightsSummary stock={stock} />
-            </section>
-          )}
           {detailStatus === 'loading' && (
             <div className="space-y-5" aria-busy="true" aria-label="Loading statements">
               {[320, 220, 380, 300].map((height, i) => (
@@ -265,13 +233,13 @@ export const StockDetailPage: React.FC = () => {
           {detailStatus === 'failed' && (
             <div className="apple-card p-6 text-center">
               <h2 className="text-subheadline font-semibold text-apple-primary font-display">
-                Could not load financial statements
+                The statements didn't load
               </h2>
               <p className="text-caption1 text-apple-muted mt-1.5 max-w-md mx-auto leading-relaxed">
-                Unable to load financial statements for this company. Please check your connection and refresh the page.
+                The figures above come with the page; the statements are a separate download, and that request failed.
               </p>
               <button onClick={() => navigate(0)} className="apple-btn apple-btn-secondary mt-4">
-                Refresh
+                Try again
               </button>
             </div>
           )}
@@ -285,11 +253,6 @@ export const StockDetailPage: React.FC = () => {
           <section id="sec-quarters" className="scroll-mt-32">
             <QuarterlyResultsTable stock={stock} />
           </section>
-          {hasSegments && (
-            <section id="sec-segments" className="scroll-mt-32">
-              <SegmentResultsTable stock={stock} />
-            </section>
-          )}
           <section id="sec-pnl" className="scroll-mt-32">
             <ProfitLossTable stock={stock} />
           </section>

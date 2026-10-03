@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import { Plus, Minus } from 'lucide-react';
 import type { Stock } from '../../types/stock';
 import { generateProsAndCons } from '../../engine/prosAndConsGenerator';
 
@@ -15,21 +14,16 @@ export const StockProsCons: React.FC<{ stock: Stock }> = ({ stock }) => {
     empty: string
   ) => (
     <div className="apple-card p-5">
-      <h3 className="text-caption2 font-semibold uppercase tracking-[0.06em] mb-3.5" style={{ color: tone === 'good' ? 'var(--apple-green)' : 'var(--apple-red)' }}>
+      <h3 className={`text-subheadline font-semibold mb-3 ${tone === 'good' ? 'num-pos' : 'num-neg'}`}>
         {heading}
       </h3>
       {items.length === 0 ? (
-        <p className="text-caption1 text-apple-muted leading-relaxed">{empty}</p>
+        <p className="text-footnote text-apple-muted leading-relaxed">{empty}</p>
       ) : (
-        <ul className="space-y-2.5">
+        <ul className="space-y-2 list-disc pl-4 marker:text-apple-faint">
           {items.map((item) => (
-            <li key={item} className="flex items-start gap-2.5 text-caption1 text-apple-secondary leading-relaxed">
-              {tone === 'good' ? (
-                <Plus className="w-3 h-3 shrink-0 mt-1 num-pos" strokeWidth={3} />
-              ) : (
-                <Minus className="w-3 h-3 shrink-0 mt-1 num-neg" strokeWidth={3} />
-              )}
-              <span>{item}</span>
+            <li key={item} className="text-footnote text-apple-secondary leading-relaxed">
+              {item}
             </li>
           ))}
         </ul>
@@ -39,18 +33,8 @@ export const StockProsCons: React.FC<{ stock: Stock }> = ({ stock }) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {column(
-        'Strengths',
-        pros,
-        'good',
-        'No major fundamental strengths triggered for this stock.'
-      )}
-      {column(
-        'Limitations',
-        cons,
-        'bad',
-        'No major operational or financial risk factors triggered for this stock.'
-      )}
+      {column('Pros', pros, 'good', 'None of the checks came out in its favour.')}
+      {column('Cons', cons, 'bad', 'None of the checks came out against it.')}
     </div>
   );
 };
