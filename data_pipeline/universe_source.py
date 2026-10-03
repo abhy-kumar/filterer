@@ -60,7 +60,9 @@ def _parse_csv(body: bytes) -> list[Constituent]:
         # NSE has shipped this file with stray spaces in the headers before.
         clean = { (k or "").strip(): (v or "").strip() for k, v in row.items() }
         symbol = clean.get("Symbol")
-        if not symbol:
+        # NSE parks a placeholder in the list during a demerger (DUMMYHEG
+        # while HEG split in September 2026). It is not a company.
+        if not symbol or symbol.upper().startswith("DUMMY"):
             continue
         out.append(
             Constituent(

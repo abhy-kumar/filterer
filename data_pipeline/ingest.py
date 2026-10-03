@@ -43,6 +43,14 @@ LEDGER_DB = ROOT / "data" / "ingest.db"
 STATUS_PENDING = "pending"
 STATUS_OK = "ok"
 STATUS_FAILED = "failed"
+# Left the index. Kept, so a company that rejoins does not start from nothing,
+# but neither fetched nor exported.
+STATUS_INACTIVE = "inactive"
+
+# A weekly run re-fetches anything older than this. Without it the cached
+# ledger said every company was done after the first full run, and each
+# weekly run since fetched nothing and re-exported week-old payloads.
+DEFAULT_MAX_AGE_DAYS = 6
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS companies (
@@ -97,15 +105,43 @@ class Ledger:
             )
             added += 1 if cur.rowcount and cur.lastrowid else 0
 
-        # Companies that left the index stay in the ledger but are not fetched.
-        dropped = self.conn.execute(
-            "SELECT COUNT(*) FROM companies WHERE symbol NOT IN (%s)"
-            % ",".join("?" * len(seen)),
-            tuple(seen),
-        ).fetchone()[0] if seen else 0
+        # Companies that left the index stay in the ledger but are neither
+        # fetched nor exported. The September 2026 rebalance swapped 28
+        # companies; exporting the leavers as well is what made the weekly
+        # run ship 528 companies and fail its own checks.
+        dropped = 0
+        if seen:
+            marks = ",".join("?" * len(seen))
+            dropped = self.conn.execute(
+                f"UPDATE companies SET status=? WHERE symbol NOT IN ({marks}) AND status != ?",
+                (STATUS_INACTIVE, *seen, STATUS_INACTIVE),
+            ).rowcount
+            # A company that rejoins is fetched afresh.
+            self.conn.execute(
+                f"UPDATE companies SET status=? WHERE symbol IN ({marks}) AND status = ?",
+                (STATUS_PENDING, *seen, STATUS_INACTIVE),
+            )
 
         self.conn.commit()
         return len(seen), dropped
+
+    def mark_stale(self, max_age_days: float) -> int:
+        """Queue every active company whose last good fetch is older than this."""
+        cutoff = datetime.now(timezone.utc).timestamp() - max_age_days * 86400
+        stale = [
+            r["symbol"]
+            for r in self.conn.execute(
+                "SELECT c.symbol, p.fetched_at FROM companies c LEFT JOIN payloads p ON p.symbol = c.symbol"
+                " WHERE c.status = ?",
+                (STATUS_OK,),
+            )
+            if not r["fetched_at"] or datetime.fromisoformat(r["fetched_at"]).timestamp() < cutoff
+        ]
+        self.conn.executemany(
+            "UPDATE companies SET status=?, attempts=0 WHERE symbol=?", [(STATUS_PENDING, s) for s in stale]
+        )
+        self.conn.commit()
+        return len(stale)
 
     def pending(self, statuses: tuple[str, ...], limit: int = 0) -> list[sqlite3.Row]:
         sql = (
@@ -140,9 +176,14 @@ class Ledger:
         return {r["status"]: r["c"] for r in rows}
 
     def payloads(self) -> list[dict]:
+        """
+        The last good payload of every company in the index. A company whose
+        refresh failed this week keeps last week's figures rather than
+        dropping out of the screener.
+        """
         rows = self.conn.execute(
-            "SELECT p.payload FROM payloads p JOIN companies c ON c.symbol = p.symbol WHERE c.status = ?",
-            (STATUS_OK,),
+            "SELECT p.payload FROM payloads p JOIN companies c ON c.symbol = p.symbol WHERE c.status != ?",
+            (STATUS_INACTIVE,),
         )
         return [json.loads(r["payload"]) for r in rows]
 
@@ -203,6 +244,7 @@ def run(
     symbols: Optional[list[str]] = None,
     index: str = "nifty500",
     rate_limit: float = 1.2,
+    max_age_days: float = DEFAULT_MAX_AGE_DAYS,
 ) -> int:
     from data_pipeline.data_fetcher import StockDataFetcher
     from data_pipeline.shareholding import attach_shareholding
@@ -213,6 +255,11 @@ def run(
     constituents = fetch_index_constituents(index)
     total, dropped = ledger.sync_universe(constituents)
     logger.info("Universe: %d constituents (%d in the ledger no longer in the index)", total, dropped)
+
+    if not symbols and not retry_failed:
+        queued = ledger.mark_stale(max_age_days)
+        if queued:
+            logger.info("Queued %d companies last fetched more than %g days ago", queued, max_age_days)
 
     if symbols:
         wanted = {s.upper() for s in symbols}
@@ -341,6 +388,19 @@ def export() -> int:
         return 1
 
     logger.info("Exporting %d companies", len(stocks))
+
+    # A company new to the index has no BSE scrip code until it is mapped.
+    # The mapper only ran inside heal_and_enrich, which the weekly job does
+    # not call, so the 28 companies added in the September 2026 rebalance
+    # would have shipped without one.
+    from data_pipeline.bse_mapper import BSEMapper
+
+    mapper = BSEMapper()
+    codes = mapper.map_universe(stocks)
+    for stock in stocks:
+        if not stock.get("bse_code"):
+            stock["bse_code"] = codes.get(stock["symbol"]) or mapper.get_code(stock["symbol"]) or ""
+
     compute_peers(stocks)
     generate_stocks_data_ts(stocks)
     generate_stock_detail_jsons(stocks)
@@ -355,7 +415,7 @@ def status() -> int:
     counts = ledger.counts()
     total = sum(counts.values())
     print(f"Universe in ledger: {total}")
-    for key in (STATUS_OK, STATUS_PENDING, STATUS_FAILED):
+    for key in (STATUS_OK, STATUS_PENDING, STATUS_FAILED, STATUS_INACTIVE):
         print(f"  {key:8} {counts.get(key, 0)}")
 
     failures = ledger.failures()
@@ -375,6 +435,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--symbols", nargs="+", help="Fetch these symbols regardless of status")
     parser.add_argument("--retry-failed", action="store_true", help="Re-run only the companies that failed")
     parser.add_argument("--rate-limit", type=float, default=1.2, help="Seconds between calls")
+    parser.add_argument("--max-age-days", type=float, default=DEFAULT_MAX_AGE_DAYS,
+                        help="Re-fetch companies last fetched longer ago than this")
     parser.add_argument("--status", action="store_true", help="Show ledger progress and exit")
     parser.add_argument("--export", action="store_true", help="Write the app's data files and exit")
     parser.add_argument("--backfill-shareholding", action="store_true",
@@ -393,6 +455,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         symbols=args.symbols,
         index=args.index,
         rate_limit=args.rate_limit,
+        max_age_days=args.max_age_days,
     )
 
 
