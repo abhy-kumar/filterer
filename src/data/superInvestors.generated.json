@@ -59,8 +59,8 @@
   "ATULAUTO": {
    "in_universe": false,
    "name": "Atul Auto Limited",
-   "price": 424.8,
-   "price_date": "2026-10-01",
+   "price": 424.5,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "BERGEPAINT": {
@@ -150,8 +150,8 @@
   "FCL": {
    "in_universe": false,
    "name": "Fineotex Chemical Limited",
-   "price": 55.72,
-   "price_date": "2026-10-01",
+   "price": 54.03,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "FEDERALBNK": {
@@ -255,8 +255,8 @@
   "KCP": {
    "in_universe": false,
    "name": "KCP Limited",
-   "price": 154.17,
-   "price_date": "2026-10-01",
+   "price": 155.61,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "LAURUSLABS": {
@@ -339,8 +339,8 @@
   "ORIENTBELL": {
    "in_universe": false,
    "name": "Orient Bell Limited",
-   "price": 398.55,
-   "price_date": "2026-10-01",
+   "price": 417.1,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "PAGEIND": {
@@ -353,8 +353,8 @@
   "PANAMAPET": {
    "in_universe": false,
    "name": "Panama Petrochem Limited",
-   "price": 487.1,
-   "price_date": "2026-10-01",
+   "price": 482.2,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "PATANJALI": {
@@ -395,22 +395,22 @@
   "RSYSTEMS": {
    "in_universe": false,
    "name": "R Systems International Limited",
-   "price": 263.6,
-   "price_date": "2026-10-01",
+   "price": 249.9,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "SAFARI": {
    "in_universe": false,
    "name": "Safari Industries (India) Limited",
-   "price": 1378.8,
-   "price_date": "2026-10-01",
+   "price": 1308.6,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "SANGAMIND": {
    "in_universe": false,
    "name": "Sangam (India) Limited",
-   "price": 634.55,
-   "price_date": "2026-10-01",
+   "price": 631.75,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "SARDAEN": {
@@ -444,8 +444,8 @@
   "SHAILY": {
    "in_universe": false,
    "name": "Shaily Engineering Plastics Limited",
-   "price": 3009.1,
-   "price_date": "2026-10-01",
+   "price": 3012.8,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "SIGNATURE": {
@@ -535,22 +535,22 @@
   "UTTAMSUGAR": {
    "in_universe": false,
    "name": "Uttam Sugar Mills Limited",
-   "price": 276.1,
-   "price_date": "2026-10-01",
+   "price": 294.7,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "VAIBHAVGBL": {
    "in_universe": false,
    "name": "Vaibhav Global Limited",
-   "price": 203.53,
-   "price_date": "2026-10-01",
+   "price": 199.43,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "VSTIND": {
    "in_universe": false,
    "name": "VST Industries Limited",
-   "price": 201.14,
-   "price_date": "2026-10-01",
+   "price": 200.92,
+   "price_date": "2026-10-05",
    "sector": "Unclassified"
   },
   "WELSPUNLIV": {
@@ -568,7 +568,7 @@
    "sector": "Healthcare"
   }
  },
- "generated_at": "2026-10-03T19:53:44+00:00",
+ "generated_at": "2026-10-05T22:42:23+00:00",
  "investors": [
   {
    "alias": "DMart founder",
@@ -629,7 +629,7 @@
       "Radhakishan Shivkishan Damani"
      ],
      "holding_pct": 29.1,
-     "holding_value_cr": 994.24,
+     "holding_value_cr": 993.15,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -665,7 +665,7 @@
     "Financial Services"
    ],
    "type": "Individual HNI",
-   "value_cr": 131403.14
+   "value_cr": 131402.05
   },
   {
    "alias": null,
@@ -1291,7 +1291,7 @@
       "NALANDA INDIA FUND LIMITED"
      ],
      "holding_pct": 6.6,
-     "holding_value_cr": 224.67,
+     "holding_value_cr": 220.15,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -1309,7 +1309,7 @@
     "Communication Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 22688.77
+   "value_cr": 22684.25
   },
   {
    "alias": null,
@@ -1593,7 +1593,7 @@
       "Malabar India Fund Limited"
      ],
      "holding_pct": 4.76,
-     "holding_value_cr": 321.33,
+     "holding_value_cr": 304.97,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -1631,7 +1631,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 5.41,
-     "holding_value_cr": 184.4,
+     "holding_value_cr": 180.69,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -1668,7 +1668,7 @@
     "Financial Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 3381.52
+   "value_cr": 3361.45
   },
   {
    "alias": null,
@@ -2080,7 +2080,7 @@
       "MADHURI MADHUSUDAN KELA"
      ],
      "holding_pct": 4.86,
-     "holding_value_cr": 154.87,
+     "holding_value_cr": 154.19,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2096,7 +2096,7 @@
     "Financial Services"
    ],
    "type": "Individual HNI",
-   "value_cr": 1309.85
+   "value_cr": 1309.17
   },
   {
    "alias": null,
@@ -2154,79 +2154,6 @@
   },
   {
    "alias": null,
-   "avatar_initials": "AK",
-   "description": "Individual investor.",
-   "exits": [],
-   "holdings": [
-    {
-     "companyName": "Shaily Engineering Plastics Limited",
-     "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
-      "previous_quarter_holding": 3.22
-     },
-     "filed_names": [
-      "ASHISH KACHOLIA"
-     ],
-     "holding_pct": 3.22,
-     "holding_value_cr": 445.04,
-     "in_universe": false,
-     "quarter": "Jun 2026",
-     "role": "public",
-     "sector": "Unclassified",
-     "shares_count": 1478980,
-     "symbol": "SHAILY"
-    },
-    {
-     "companyName": "Fineotex Chemical Limited",
-     "delta": {
-      "change": "decreased",
-      "delta_pct": -0.52,
-      "previous_quarter_holding": 2.58
-     },
-     "filed_names": [
-      "ASHISH KACHOLIA"
-     ],
-     "holding_pct": 2.06,
-     "holding_value_cr": 133.67,
-     "in_universe": false,
-     "quarter": "Jun 2026",
-     "role": "public",
-     "sector": "Unclassified",
-     "shares_count": 23989323,
-     "symbol": "FCL"
-    },
-    {
-     "companyName": "Safari Industries (India) Limited",
-     "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
-      "previous_quarter_holding": 1.84
-     },
-     "filed_names": [
-      "Ashish Kacholia"
-     ],
-     "holding_pct": 1.84,
-     "holding_value_cr": 124.09,
-     "in_universe": false,
-     "quarter": "Jun 2026",
-     "role": "public",
-     "sector": "Unclassified",
-     "shares_count": 900000,
-     "symbol": "SAFARI"
-    }
-   ],
-   "id": "ashish-kacholia",
-   "name": "Ashish Kacholia",
-   "origin": "curated",
-   "top_sectors": [
-    "Unclassified"
-   ],
-   "type": "Individual HNI",
-   "value_cr": 702.8
-  },
-  {
-   "alias": null,
    "avatar_initials": "VK",
    "description": "Founder of Kedia Securities.",
    "exits": [],
@@ -2262,7 +2189,7 @@
       "VIJAY KEDIA"
      ],
      "holding_pct": 20.91,
-     "holding_value_cr": 246.47,
+     "holding_value_cr": 246.3,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2300,7 +2227,7 @@
       "VIJAY KEDIA"
      ],
      "holding_pct": 2.05,
-     "holding_value_cr": 69.71,
+     "holding_value_cr": 68.3,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2317,7 +2244,80 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 694.74
+   "value_cr": 693.16
+  },
+  {
+   "alias": null,
+   "avatar_initials": "AK",
+   "description": "Individual investor.",
+   "exits": [],
+   "holdings": [
+    {
+     "companyName": "Shaily Engineering Plastics Limited",
+     "delta": {
+      "change": "unchanged",
+      "delta_pct": 0.0,
+      "previous_quarter_holding": 3.22
+     },
+     "filed_names": [
+      "ASHISH KACHOLIA"
+     ],
+     "holding_pct": 3.22,
+     "holding_value_cr": 445.59,
+     "in_universe": false,
+     "quarter": "Jun 2026",
+     "role": "public",
+     "sector": "Unclassified",
+     "shares_count": 1478980,
+     "symbol": "SHAILY"
+    },
+    {
+     "companyName": "Fineotex Chemical Limited",
+     "delta": {
+      "change": "decreased",
+      "delta_pct": -0.52,
+      "previous_quarter_holding": 2.58
+     },
+     "filed_names": [
+      "ASHISH KACHOLIA"
+     ],
+     "holding_pct": 2.06,
+     "holding_value_cr": 129.61,
+     "in_universe": false,
+     "quarter": "Jun 2026",
+     "role": "public",
+     "sector": "Unclassified",
+     "shares_count": 23989323,
+     "symbol": "FCL"
+    },
+    {
+     "companyName": "Safari Industries (India) Limited",
+     "delta": {
+      "change": "unchanged",
+      "delta_pct": 0.0,
+      "previous_quarter_holding": 1.84
+     },
+     "filed_names": [
+      "Ashish Kacholia"
+     ],
+     "holding_pct": 1.84,
+     "holding_value_cr": 117.77,
+     "in_universe": false,
+     "quarter": "Jun 2026",
+     "role": "public",
+     "sector": "Unclassified",
+     "shares_count": 900000,
+     "symbol": "SAFARI"
+    }
+   ],
+   "id": "ashish-kacholia",
+   "name": "Ashish Kacholia",
+   "origin": "curated",
+   "top_sectors": [
+    "Unclassified"
+   ],
+   "type": "Individual HNI",
+   "value_cr": 692.97
   },
   {
    "alias": null,
@@ -2336,7 +2336,7 @@
       "Bhavook Tripathi"
      ],
      "holding_pct": 20.47,
-     "holding_value_cr": 639.37,
+     "holding_value_cr": 606.14,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2352,7 +2352,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 639.37
+   "value_cr": 606.14
   },
   {
    "alias": null,
@@ -2364,19 +2364,19 @@
      "companyName": "Chennai Petroleum Corporation Ltd.",
      "delta": {
       "change": "decreased",
-      "delta_pct": -0.02,
-      "previous_quarter_holding": 1.3
+      "delta_pct": -0.26,
+      "previous_quarter_holding": 1.28
      },
      "filed_names": [
       "DOLLY KHANNA"
      ],
-     "holding_pct": 1.28,
-     "holding_value_cr": 255.64,
+     "holding_pct": 1.02,
+     "holding_value_cr": 203.8,
      "in_universe": true,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Energy",
-     "shares_count": 1898724,
+     "shares_count": 1513689,
      "symbol": "CHENNPETRO"
     }
    ],
@@ -2387,7 +2387,7 @@
     "Energy"
    ],
    "type": "Individual HNI",
-   "value_cr": 255.64
+   "value_cr": 203.8
   },
   {
    "alias": "Old Bridge Capital",
@@ -2487,7 +2487,7 @@
       "Anil Kumar Goel"
      ],
      "holding_pct": 3.67,
-     "holding_value_cr": 38.65,
+     "holding_value_cr": 41.26,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2506,7 +2506,7 @@
       "ANIL KUMAR GOEL"
      ],
      "holding_pct": 1.07,
-     "holding_value_cr": 31.66,
+     "holding_value_cr": 31.34,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2522,7 +2522,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 70.31
+   "value_cr": 72.6
   },
   {
    "alias": null,
@@ -2541,7 +2541,7 @@
       "RAMESH DAMANI"
      ],
      "holding_pct": 1.16,
-     "holding_value_cr": 34.14,
+     "holding_value_cr": 33.8,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2557,7 +2557,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 34.14
+   "value_cr": 33.8
   },
   {
    "alias": "Equity Intelligence India",
@@ -2576,7 +2576,7 @@
       "EQUITY INTELLIGENCE INDIA PRIVATE LIMITED"
      ],
      "holding_pct": 4.67,
-     "holding_value_cr": 27.39,
+     "holding_value_cr": 28.66,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2592,7 +2592,7 @@
     "Unclassified"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 27.39
+   "value_cr": 28.66
   },
   {
    "alias": null,
@@ -2703,7 +2703,7 @@
       "GOVINDLAL M PARIKH"
      ],
      "holding_pct": 1.49,
-     "holding_value_cr": 29.64,
+     "holding_value_cr": 29.92,
      "in_universe": false,
      "quarter": "Jun 2026",
      "role": "public",
@@ -2719,7 +2719,7 @@
     "Basic Materials"
    ],
    "type": "Individual HNI",
-   "value_cr": 630.74
+   "value_cr": 631.02
   },
   {
    "alias": null,
@@ -2888,6 +2888,6 @@
   }
  ],
  "latest_period": "Jun 2026",
- "price_date": "2026-10-01",
+ "price_date": "2026-10-05",
  "source": "NSE shareholding pattern filings (XBRL)"
 }
