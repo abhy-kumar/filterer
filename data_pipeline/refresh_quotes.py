@@ -112,13 +112,28 @@ def refresh(chunk_size: int = 40, period: str = "1y") -> int:
     by_symbol = {s["symbol"]: s for s in stocks}
     logger.info("Refreshing quotes for %d companies", len(symbols))
 
+    def batches(names: list[str], ticker_for) -> list[tuple[list[str], list[str]]]:
+        return [
+            (names[i : i + chunk_size], [ticker_for(s) for s in names[i : i + chunk_size]])
+            for i in range(0, len(names), chunk_size)
+        ]
+
+    # Honour the alias table: some NSE symbols do not map to <SYMBOL>.NS
+    # on Yahoo, and TATAMOTORS in particular is delisted post-demerger.
+    queue = batches(symbols, lambda s: YAHOO_TICKER_ALIASES.get(s, f"{s}.NS"))
+    # Yahoo is slow to pick up some new NSE listings while it already carries
+    # the BSE one. Those are retried on .BO rather than left on a stale price.
+    no_nse_quote: list[str] = []
+    retried_on_bse = False
+
     updated = 0
-    for start in range(0, len(symbols), chunk_size):
-        chunk = symbols[start : start + chunk_size]
-        # Honour the alias table: some NSE symbols do not map to <SYMBOL>.NS
-        # on Yahoo, and TATAMOTORS in particular is delisted post-demerger.
-        tickers = [YAHOO_TICKER_ALIASES.get(s, f"{s}.NS") for s in chunk]
-        logger.info("  batch %d-%d", start + 1, min(start + chunk_size, len(symbols)))
+    while queue or (no_nse_quote and not retried_on_bse):
+        if not queue:
+            retried_on_bse = True
+            logger.info("  %d had no NSE quote; trying their BSE listings", len(no_nse_quote))
+            queue = batches(no_nse_quote, lambda s: f"{s}.BO")
+        chunk, tickers = queue.pop(0)
+        logger.info("  batch of %d (%s … %s)", len(chunk), chunk[0], chunk[-1])
         try:
             data = yf.download(
                 tickers, period=period, interval="1d", group_by="ticker",
@@ -132,9 +147,11 @@ def refresh(chunk_size: int = 40, period: str = "1y") -> int:
             try:
                 frame = data[ticker] if isinstance(data.columns, pd.MultiIndex) else data
                 closes = [float(v) for v in frame["Close"].dropna().tolist()]
-                if len(closes) < 2:
-                    continue
             except Exception:
+                closes = []
+            if len(closes) < 2:
+                if ticker.endswith(".NS"):
+                    no_nse_quote.append(symbol)
                 continue
 
             stock = by_symbol[symbol]

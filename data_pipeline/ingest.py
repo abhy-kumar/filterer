@@ -393,12 +393,15 @@ def export() -> int:
     # The mapper only ran inside heal_and_enrich, which the weekly job does
     # not call, so the 28 companies added in the September 2026 rebalance
     # would have shipped without one.
-    from data_pipeline.bse_mapper import BSEMapper
+    from data_pipeline.bse_mapper import NSE_ONLY_SYMBOLS, BSEMapper
 
     mapper = BSEMapper()
     codes = mapper.map_universe(stocks)
     for stock in stocks:
-        if not stock.get("bse_code"):
+        # A payload can carry a code from before the mapper knew better.
+        if stock["symbol"] in NSE_ONLY_SYMBOLS:
+            stock["bse_code"] = ""
+        elif not stock.get("bse_code"):
             stock["bse_code"] = codes.get(stock["symbol"]) or mapper.get_code(stock["symbol"]) or ""
 
     compute_peers(stocks)

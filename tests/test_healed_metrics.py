@@ -22,6 +22,31 @@ from data_pipeline.derived_metrics import compute_piotroski_score, compute_altma
 # the company page then linked to the wrong company's filings.
 NSE_ONLY = {"BSE"}
 
+# A company Yahoo has no data for at all, under either listing, is left out
+# rather than invented. A handful is tolerable; more means the run broke.
+MAX_MISSING_FROM_INDEX = 5
+
+
+def assert_covers_the_index(symbols: list[str]) -> None:
+    """
+    The export is the index: no company that left it, and no more than a few
+    missing. Checked against the constituent snapshot the run itself fetched,
+    so a rebalance or a change in the index's size needs no edit here.
+    """
+    from data_pipeline.universe_source import _parse_csv, _snapshot_path
+
+    index = {c.symbol for c in _parse_csv(_snapshot_path("nifty500").read_bytes())}
+    exported = set(symbols)
+    assert len(exported) == len(symbols), "A company was exported twice"
+
+    leavers = sorted(exported - index)
+    assert not leavers, f"{len(leavers)} exported companies are not in the index: {leavers[:10]}"
+
+    missing = sorted(index - exported)
+    assert len(missing) <= MAX_MISSING_FROM_INDEX, (
+        f"{len(missing)} of {len(index)} index companies were not exported: {missing[:10]}"
+    )
+
 
 def test_bse_code_coverage():
     """Every company that has a BSE listing carries its authentic scrip code."""
@@ -29,7 +54,7 @@ def test_bse_code_coverage():
         text = f.read()
     eq = text.find("= [")
     stocks = json.loads(text[eq + 2 : text.rfind("]") + 1])
-    assert len(stocks) == 500
+    assert_covers_the_index([s["symbol"] for s in stocks])
 
     missing = [
         s["symbol"]
@@ -137,15 +162,16 @@ def test_zero_balance_sheet_footing_errors():
     liabilities.
     """
     files = glob.glob("public/data/stocks/*.json")
-    assert len(files) == 500
 
     liability_errors = []
     asset_errors = []
     checked = 0
+    symbols = []
 
     for f in files:
         with open(f, encoding="utf-8") as fp:
             d = json.load(fp)
+        symbols.append(d["symbol"])
         for sheet in d.get("balance_sheet", []):
             total_assets = sheet.get("total_assets") or 0
             if not total_assets:
@@ -171,7 +197,9 @@ def test_zero_balance_sheet_footing_errors():
             if abs(assets - total_assets) / abs(total_assets) > 0.01:
                 asset_errors.append(where)
 
-    assert checked > 1500, f"Only {checked} balance sheets carried a total"
+    assert_covers_the_index(symbols)
+    # Three or more years for most companies; new listings have fewer.
+    assert checked > len(files) * 3, f"Only {checked} balance sheets carried a total"
     assert not liability_errors, (
         f"{len(liability_errors)} sheets where equity + liabilities does not "
         f"foot to total assets: {liability_errors[:5]}"
@@ -224,7 +252,7 @@ def test_piotroski_is_not_fabricated():
     stocks = json.loads(text[eq + 2 : text.rfind("]") + 1])
 
     scores = [s["piotroski_score"] for s in stocks if s.get("piotroski_score") is not None]
-    assert len(scores) > 450, "Piotroski score is missing for too much of the universe"
+    assert len(scores) > len(stocks) * 0.9, "Piotroski score is missing for too much of the universe"
 
     # A real F-score distribution has a weak tail. A fabricated floor does not.
     assert min(scores) <= 2, (
@@ -265,4 +293,4 @@ def test_altman_not_scored_for_financials():
     assert not scored_banks, f"Financial companies carry a Z-score: {scored_banks[:5]}"
 
     scored = [s for s in stocks if s.get("altman_z_score") is not None]
-    assert len(scored) > 300, "Z-score is missing for too much of the universe"
+    assert len(scored) > len(stocks) * 0.6, "Z-score is missing for too much of the universe"

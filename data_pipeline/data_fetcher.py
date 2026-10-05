@@ -164,6 +164,20 @@ class StockDataFetcher:
                 if cmp <= 0:
                     logger.warning(f"No price data for {clean_sym}, trying regularMarketPreviousClose")
                     cmp = _safe_float(info.get("regularMarketPreviousClose"))
+                if cmp <= 0 and ticker.ticker.endswith(".NS"):
+                    # Yahoo is slow to pick up some new NSE listings, REITs in
+                    # particular, while it already carries the BSE listing:
+                    # Bagmane Prime Office REIT joined the Nifty 500 in
+                    # September 2026 with nothing under BAGMANE.NS. Dropping
+                    # the company left the export one short of the index.
+                    logger.warning(f"No NSE quote for {clean_sym}, trying the BSE listing")
+                    ticker = yf.Ticker(f"{clean_sym}.BO")
+                    info = ticker.info or {}
+                    cmp = _safe_float(
+                        info.get("currentPrice")
+                        or info.get("regularMarketPrice")
+                        or info.get("regularMarketPreviousClose")
+                    )
                 if cmp <= 0:
                     logger.warning(f"Skipping {clean_sym}: no price data available")
                     return None
