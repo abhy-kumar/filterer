@@ -1,6 +1,6 @@
 {
  "360ONE": {
-  "fetched_at": "2026-10-06T19:40:10+00:00",
+  "fetched_at": "2026-10-07T20:04:12+00:00",
   "filings": [
    {
     "dii": 18.71,
@@ -408,7 +408,7 @@
   "source": "NSE XBRL"
  },
  "AADHARHFC": {
-  "fetched_at": "2026-10-06T19:40:12+00:00",
+  "fetched_at": "2026-10-07T20:04:14+00:00",
   "filings": [
    {
     "dii": 9.93,
@@ -516,7 +516,7 @@
   "source": "NSE XBRL"
  },
  "AARTIIND": {
-  "fetched_at": "2026-10-06T19:40:14+00:00",
+  "fetched_at": "2026-10-07T20:04:16+00:00",
   "filings": [
    {
     "dii": 21.11,
@@ -832,7 +832,7 @@
   "source": "NSE XBRL"
  },
  "AAVAS": {
-  "fetched_at": "2026-10-06T19:40:16+00:00",
+  "fetched_at": "2026-10-07T20:04:18+00:00",
   "filings": [
    {
     "dii": 22.15,
@@ -1028,7 +1028,7 @@
   "source": "NSE XBRL"
  },
  "ABB": {
-  "fetched_at": "2026-10-06T19:40:18+00:00",
+  "fetched_at": "2026-10-07T20:04:20+00:00",
   "filings": [
    {
     "dii": 9.9,
@@ -1104,7 +1104,7 @@
   "source": "NSE XBRL"
  },
  "ABCAPITAL": {
-  "fetched_at": "2026-10-06T19:40:22+00:00",
+  "fetched_at": "2026-10-07T20:04:24+00:00",
   "filings": [
    {
     "dii": 13.48,
@@ -1292,7 +1292,7 @@
   "source": "NSE XBRL"
  },
  "ABDL": {
-  "fetched_at": "2026-10-06T19:40:24+00:00",
+  "fetched_at": "2026-10-07T20:04:26+00:00",
   "filings": [
    {
     "dii": 5.07,
@@ -1880,7 +1880,7 @@
   "source": "NSE XBRL"
  },
  "ABREL": {
-  "fetched_at": "2026-10-06T19:40:26+00:00",
+  "fetched_at": "2026-10-07T20:04:28+00:00",
   "filings": [
    {
     "dii": 16.63,
@@ -2100,7 +2100,7 @@
   "source": "NSE XBRL"
  },
  "ABSLAMC": {
-  "fetched_at": "2026-10-06T19:40:28+00:00",
+  "fetched_at": "2026-10-07T20:04:30+00:00",
   "filings": [
    {
     "dii": 14.26,
@@ -2224,7 +2224,7 @@
   "source": "NSE XBRL"
  },
  "ACC": {
-  "fetched_at": "2026-10-06T19:40:30+00:00",
+  "fetched_at": "2026-10-07T20:04:32+00:00",
   "filings": [
    {
     "dii": 21.13,
@@ -2364,7 +2364,7 @@
   "source": "NSE XBRL"
  },
  "ACE": {
-  "fetched_at": "2026-10-06T19:40:32+00:00",
+  "fetched_at": "2026-10-07T20:04:34+00:00",
   "filings": [
    {
     "dii": 2.59,
@@ -2496,7 +2496,7 @@
   "source": "NSE XBRL"
  },
  "ACMESOLAR": {
-  "fetched_at": "2026-10-06T19:40:34+00:00",
+  "fetched_at": "2026-10-07T20:04:36+00:00",
   "filings": [
    {
     "dii": 19.1,
@@ -2612,7 +2612,7 @@
   "source": "NSE XBRL"
  },
  "ACUTAAS": {
-  "fetched_at": "2026-10-06T19:40:36+00:00",
+  "fetched_at": "2026-10-07T20:04:38+00:00",
   "filings": [
    {
     "dii": 19.56,
@@ -2776,7 +2776,7 @@
   "source": "NSE XBRL"
  },
  "ADANIENSOL": {
-  "fetched_at": "2026-10-06T19:40:38+00:00",
+  "fetched_at": "2026-10-07T20:04:40+00:00",
   "filings": [
    {
     "dii": 11.76,
@@ -3004,7 +3004,7 @@
   "source": "NSE XBRL"
  },
  "ADANIENT": {
-  "fetched_at": "2026-10-06T19:40:40+00:00",
+  "fetched_at": "2026-10-07T20:04:42+00:00",
   "filings": [
    {
     "dii": 9.33,
@@ -3240,7 +3240,7 @@
   "source": "NSE XBRL"
  },
  "ADANIGREEN": {
-  "fetched_at": "2026-10-06T19:40:42+00:00",
+  "fetched_at": "2026-10-07T20:04:44+00:00",
   "filings": [
    {
     "dii": 5.29,
@@ -3476,7 +3476,7 @@
   "source": "NSE XBRL"
  },
  "ADANIPORTS": {
-  "fetched_at": "2026-10-06T19:40:44+00:00",
+  "fetched_at": "2026-10-07T20:04:46+00:00",
   "filings": [
    {
     "dii": 13.6,
@@ -3696,7 +3696,7 @@
   "source": "NSE XBRL"
  },
  "ADANIPOWER": {
-  "fetched_at": "2026-10-06T19:40:46+00:00",
+  "fetched_at": "2026-10-07T20:04:48+00:00",
   "filings": [
    {
     "dii": 4.08,
@@ -3916,7 +3916,7 @@
   "source": "NSE XBRL"
  },
  "AEGISLOG": {
-  "fetched_at": "2026-10-06T19:40:48+00:00",
+  "fetched_at": "2026-10-07T20:04:50+00:00",
   "filings": [
    {
     "dii": 3.6,
@@ -4104,7 +4104,7 @@
   "source": "NSE XBRL"
  },
  "AEGISVOPAK": {
-  "fetched_at": "2026-10-06T19:40:50+00:00",
+  "fetched_at": "2026-10-07T20:04:52+00:00",
   "filings": [
    {
     "dii": 5.3,
@@ -4196,7 +4196,7 @@
   "source": "NSE XBRL"
  },
  "AETHER": {
-  "fetched_at": "2026-10-06T19:55:56+00:00",
+  "fetched_at": "2026-10-07T20:19:58+00:00",
   "filings": [
    {
     "dii": 10.49,
@@ -4384,7 +4384,7 @@
   "source": "NSE XBRL"
  },
  "AFCONS": {
-  "fetched_at": "2026-10-06T19:40:52+00:00",
+  "fetched_at": "2026-10-07T20:04:54+00:00",
   "filings": [
    {
     "dii": 20.07,
@@ -4652,7 +4652,7 @@
   "source": "NSE XBRL"
  },
  "AFFLE": {
-  "fetched_at": "2026-10-06T19:40:54+00:00",
+  "fetched_at": "2026-10-07T20:04:56+00:00",
   "filings": [
    {
     "dii": 19.16,
@@ -4888,7 +4888,7 @@
   "source": "NSE XBRL"
  },
  "AIAENG": {
-  "fetched_at": "2026-10-06T19:40:56+00:00",
+  "fetched_at": "2026-10-07T20:04:58+00:00",
   "filings": [
    {
     "dii": 22.1,
@@ -5028,7 +5028,7 @@
   "source": "NSE XBRL"
  },
  "AIIL": {
-  "fetched_at": "2026-10-06T19:40:58+00:00",
+  "fetched_at": "2026-10-07T20:05:00+00:00",
   "filings": [
    {
     "dii": 0.2,
@@ -5184,7 +5184,7 @@
   "source": "NSE XBRL"
  },
  "AJANTPHARM": {
-  "fetched_at": "2026-10-06T19:41:00+00:00",
+  "fetched_at": "2026-10-07T20:05:02+00:00",
   "filings": [
    {
     "dii": 21.8,
@@ -5412,7 +5412,7 @@
   "source": "NSE XBRL"
  },
  "ALKEM": {
-  "fetched_at": "2026-10-06T19:41:02+00:00",
+  "fetched_at": "2026-10-07T20:05:04+00:00",
   "filings": [
    {
     "dii": 22.63,
@@ -5848,7 +5848,7 @@
   "source": "NSE XBRL"
  },
  "AMBER": {
-  "fetched_at": "2026-10-06T19:41:04+00:00",
+  "fetched_at": "2026-10-07T20:05:06+00:00",
   "filings": [
    {
     "dii": 30.55,
@@ -6116,7 +6116,7 @@
   "source": "NSE XBRL"
  },
  "AMBUJACEM": {
-  "fetched_at": "2026-10-06T19:41:06+00:00",
+  "fetched_at": "2026-10-07T20:05:08+00:00",
   "filings": [
    {
     "dii": 19.65,
@@ -6248,7 +6248,7 @@
   "source": "NSE XBRL"
  },
  "ANANDRATHI": {
-  "fetched_at": "2026-10-06T19:41:08+00:00",
+  "fetched_at": "2026-10-07T20:05:10+00:00",
   "filings": [
    {
     "dii": 10.39,
@@ -6484,7 +6484,7 @@
   "source": "NSE XBRL"
  },
  "ANANTRAJ": {
-  "fetched_at": "2026-10-06T19:41:10+00:00",
+  "fetched_at": "2026-10-07T20:05:12+00:00",
   "filings": [
    {
     "dii": 4.61,
@@ -6688,7 +6688,7 @@
   "source": "NSE XBRL"
  },
  "ANGELONE": {
-  "fetched_at": "2026-10-06T19:41:12+00:00",
+  "fetched_at": "2026-10-07T20:05:14+00:00",
   "filings": [
    {
     "dii": 20.35,
@@ -7012,7 +7012,7 @@
   "source": "NSE XBRL"
  },
  "ANTHEM": {
-  "fetched_at": "2026-10-06T19:41:14+00:00",
+  "fetched_at": "2026-10-07T20:05:16+00:00",
   "filings": [
    {
     "dii": 13.48,
@@ -7280,7 +7280,7 @@
   "source": "NSE XBRL"
  },
  "ANURAS": {
-  "fetched_at": "2026-10-06T19:41:16+00:00",
+  "fetched_at": "2026-10-07T20:05:18+00:00",
   "filings": [
    {
     "dii": 0.38,
@@ -7500,7 +7500,7 @@
   "source": "NSE XBRL"
  },
  "APARINDS": {
-  "fetched_at": "2026-10-06T19:41:18+00:00",
+  "fetched_at": "2026-10-07T20:05:20+00:00",
   "filings": [
    {
     "dii": 23.02,
@@ -7704,7 +7704,7 @@
   "source": "NSE XBRL"
  },
  "APLAPOLLO": {
-  "fetched_at": "2026-10-06T19:41:20+00:00",
+  "fetched_at": "2026-10-07T20:05:22+00:00",
   "filings": [
    {
     "dii": 18.59,
@@ -7964,8 +7964,155 @@
   "source": "NSE XBRL"
  },
  "APOLLOHOSP": {
-  "fetched_at": "2026-10-06T19:41:22+00:00",
+  "fetched_at": "2026-10-07T20:05:25+00:00",
   "filings": [
+   {
+    "dii": 22.07,
+    "fii": 43.18,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "M/s. PCR Investments Ltd",
+      "pct": 18.93,
+      "role": "promoter",
+      "shares": 27223124
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "SBI NIFTY 50 ETF",
+      "pct": 2.34,
+      "role": "public",
+      "shares": 3369595
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Ms. Suneeta Reddy",
+      "pct": 2.04,
+      "role": "promoter",
+      "shares": 2937066
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "AXIS MUTUAL FUND TRUSTEE LIMITED",
+      "pct": 1.77,
+      "role": "public",
+      "shares": 2546249
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Ms. Sangita Reddy",
+      "pct": 1.69,
+      "role": "promoter",
+      "shares": 2432508
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "ICICI PRUDENTIAL BALANCED ADVANTAGE FUND",
+      "pct": 1.58,
+      "role": "public",
+      "shares": 2267097
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Ms. Shobana Kamineni",
+      "pct": 1.56,
+      "role": "promoter",
+      "shares": 2239952
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "GOVERNMENT PENSION FUND GLOBAL",
+      "pct": 1.54,
+      "role": "public",
+      "shares": 2215542
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "HDFC TRUSTEE COMPANY LIMITED",
+      "pct": 1.48,
+      "role": "public",
+      "shares": 2125662
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "EMPLOYEES PROVIDENT FUND BOARD - INTERNALMANAGED 1",
+      "pct": 1.35,
+      "role": "public",
+      "shares": 1942570
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "MIRAE ASSET ELSS TAX SAVER FUND",
+      "pct": 1.16,
+      "role": "public",
+      "shares": 1665473
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "NIPPON LIFE INDIA TRUSTEE LTD",
+      "pct": 1.13,
+      "role": "public",
+      "shares": 1628527
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "KOTAK ARBITRAGE FUND",
+      "pct": 1.12,
+      "role": "public",
+      "shares": 1604542
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Mr. K Vishweshwar Reddy",
+      "pct": 1.1,
+      "role": "promoter",
+      "shares": 1577350
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "ADITYA BIRLA SUN LIFE MUTUAL FUND",
+      "pct": 1.07,
+      "role": "public",
+      "shares": 1536898
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "VANGUARD TOTAL INTERNATIONAL STOCK INDEX FUND",
+      "pct": 1.06,
+      "role": "public",
+      "shares": 1524605
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "VANGUARD EMERGING MARKETS STOCK INDEX FUND, A SERIES OF VANGUARD INTER",
+      "pct": 1.02,
+      "role": "public",
+      "shares": 1461556
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 28.02,
+    "public": 71.98,
+    "total_shares": 143784657,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733654_07102026112959_WEB.xml"
+   },
    {
     "dii": 23.72,
     "fii": 41.5,
@@ -8112,151 +8259,12 @@
     "public": 71.98,
     "total_shares": 143784657,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1687831_03072026043226_WEB.xml"
-   },
-   {
-    "dii": 22.76,
-    "fii": 42.62,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "M/s. PCR Investments Ltd",
-      "pct": 18.93,
-      "role": "promoter",
-      "shares": 27223124
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "GOVERNMENT OF SINGAPORE",
-      "pct": 2.1,
-      "role": "public",
-      "shares": 3021381
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Ms. Suneeta Reddy",
-      "pct": 2.04,
-      "role": "promoter",
-      "shares": 2937066
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "AXIS MUTUAL FUND TRUSTEE LIMITED",
-      "pct": 1.86,
-      "role": "public",
-      "shares": 2676498
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "SBI NIFTY 50 ETF",
-      "pct": 1.86,
-      "role": "public",
-      "shares": 2675459
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "MIRAE ASSET ELSS TAX SAVER FUND",
-      "pct": 1.81,
-      "role": "public",
-      "shares": 2599713
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Ms. Sangita Reddy",
-      "pct": 1.69,
-      "role": "promoter",
-      "shares": 2432508
-     },
-     {
-      "category": "InsuranceCompanies",
-      "kind": "institution",
-      "name": "LIFE INSURANCE CORPORATION OF INDIA",
-      "pct": 1.66,
-      "role": "public",
-      "shares": 2387573
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "GOVERNMENT PENSION FUND GLOBAL",
-      "pct": 1.65,
-      "role": "public",
-      "shares": 2375753
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Ms. Shobana Kamineni",
-      "pct": 1.56,
-      "role": "promoter",
-      "shares": 2239952
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "ADITYA BIRLA SUN LIFE TRUSTEE PRIVATE LIMITED",
-      "pct": 1.48,
-      "role": "public",
-      "shares": 2133972
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "ICICI PRUDENTIAL BALANCED ADVANTAGE FUND",
-      "pct": 1.32,
-      "role": "public",
-      "shares": 1892213
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "NIPPON LIFE INDIA TRUSTEE LTD",
-      "pct": 1.28,
-      "role": "public",
-      "shares": 1840396
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "HDFC TRUSTEE COMPANY LIMITED",
-      "pct": 1.18,
-      "role": "public",
-      "shares": 1691042
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Mr. K Vishweshwar Reddy",
-      "pct": 1.1,
-      "role": "promoter",
-      "shares": 1577350
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "VANGUARD TOTAL INTERNATIONAL STOCK INDEX FUND",
-      "pct": 1.02,
-      "role": "public",
-      "shares": 1460503
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 28.02,
-    "public": 71.98,
-    "total_shares": 143784657,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1648111_09042026045634_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "APOLLOTYRE": {
-  "fetched_at": "2026-10-06T19:41:24+00:00",
+  "fetched_at": "2026-10-07T20:05:26+00:00",
   "filings": [
    {
     "dii": 29.04,
@@ -8476,7 +8484,7 @@
   "source": "NSE XBRL"
  },
  "APTUS": {
-  "fetched_at": "2026-10-06T19:41:26+00:00",
+  "fetched_at": "2026-10-07T20:05:28+00:00",
   "filings": [
    {
     "dii": 29.91,
@@ -8832,7 +8840,7 @@
   "source": "NSE XBRL"
  },
  "ARE&M": {
-  "fetched_at": "2026-10-06T19:41:28+00:00",
+  "fetched_at": "2026-10-07T20:05:30+00:00",
   "filings": [
    {
     "dii": 15.3,
@@ -8948,7 +8956,7 @@
   "source": "NSE XBRL"
  },
  "ASAHIINDIA": {
-  "fetched_at": "2026-10-06T19:41:30+00:00",
+  "fetched_at": "2026-10-07T20:05:32+00:00",
   "filings": [
    {
     "dii": 5.26,
@@ -9232,7 +9240,7 @@
   "source": "NSE XBRL"
  },
  "ASHOKLEY": {
-  "fetched_at": "2026-10-06T19:41:32+00:00",
+  "fetched_at": "2026-10-07T20:05:34+00:00",
   "filings": [
    {
     "dii": 15.76,
@@ -9412,7 +9420,7 @@
   "source": "NSE XBRL"
  },
  "ASIANPAINT": {
-  "fetched_at": "2026-10-06T19:41:34+00:00",
+  "fetched_at": "2026-10-07T20:05:37+00:00",
   "filings": [
    {
     "dii": 20.77,
@@ -9784,7 +9792,7 @@
   "source": "NSE XBRL"
  },
  "ASTERDM": {
-  "fetched_at": "2026-10-06T19:41:36+00:00",
+  "fetched_at": "2026-10-07T20:05:39+00:00",
   "filings": [
    {
     "dii": 27.65,
@@ -10028,7 +10036,7 @@
   "source": "NSE XBRL"
  },
  "ASTRAL": {
-  "fetched_at": "2026-10-06T19:41:38+00:00",
+  "fetched_at": "2026-10-07T20:05:40+00:00",
   "filings": [
    {
     "dii": 21.31,
@@ -10240,7 +10248,7 @@
   "source": "NSE XBRL"
  },
  "ATGL": {
-  "fetched_at": "2026-10-06T19:41:40+00:00",
+  "fetched_at": "2026-10-07T20:05:42+00:00",
   "filings": [
    {
     "dii": 6.35,
@@ -10332,7 +10340,7 @@
   "source": "NSE XBRL"
  },
  "ATHERENERG": {
-  "fetched_at": "2026-10-06T19:41:42+00:00",
+  "fetched_at": "2026-10-07T20:05:44+00:00",
   "filings": [
    {
     "dii": 29.29,
@@ -10560,7 +10568,7 @@
   "source": "NSE XBRL"
  },
  "ATUL": {
-  "fetched_at": "2026-10-06T19:41:44+00:00",
+  "fetched_at": "2026-10-07T20:05:46+00:00",
   "filings": [
    {
     "dii": 25.93,
@@ -10780,7 +10788,7 @@
   "source": "NSE XBRL"
  },
  "ATULAUTO": {
-  "fetched_at": "2026-10-06T19:56:50+00:00",
+  "fetched_at": "2026-10-07T20:20:52+00:00",
   "filings": [
    {
     "dii": 0.07,
@@ -10992,7 +11000,7 @@
   "source": "NSE XBRL"
  },
  "AUBANK": {
-  "fetched_at": "2026-10-06T19:41:46+00:00",
+  "fetched_at": "2026-10-07T20:05:48+00:00",
   "filings": [
    {
     "dii": 32.81,
@@ -11364,7 +11372,7 @@
   "source": "NSE XBRL"
  },
  "AUROPHARMA": {
-  "fetched_at": "2026-10-06T19:41:48+00:00",
+  "fetched_at": "2026-10-07T20:05:50+00:00",
   "filings": [
    {
     "dii": 25.1,
@@ -11592,7 +11600,7 @@
   "source": "NSE XBRL"
  },
  "AVANTIFEED": {
-  "fetched_at": "2026-10-06T19:55:59+00:00",
+  "fetched_at": "2026-10-07T20:20:00+00:00",
   "filings": [
    {
     "dii": 7.36,
@@ -11732,7 +11740,7 @@
   "source": "NSE XBRL"
  },
  "AWL": {
-  "fetched_at": "2026-10-06T19:41:50+00:00",
+  "fetched_at": "2026-10-07T20:05:52+00:00",
   "filings": [
    {
     "dii": 8.46,
@@ -11872,7 +11880,7 @@
   "source": "NSE XBRL"
  },
  "AXISBANK": {
-  "fetched_at": "2026-10-06T19:41:52+00:00",
+  "fetched_at": "2026-10-07T20:05:54+00:00",
   "filings": [
    {
     "dii": 42.69,
@@ -12204,7 +12212,7 @@
   "source": "NSE XBRL"
  },
  "AZAD": {
-  "fetched_at": "2026-10-06T19:56:01+00:00",
+  "fetched_at": "2026-10-07T20:20:02+00:00",
   "filings": [
    {
     "dii": 10.32,
@@ -12352,7 +12360,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJ-AUTO": {
-  "fetched_at": "2026-10-06T19:41:54+00:00",
+  "fetched_at": "2026-10-07T20:05:56+00:00",
   "filings": [
    {
     "dii": 13.54,
@@ -12556,7 +12564,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJFINSV": {
-  "fetched_at": "2026-10-06T19:41:56+00:00",
+  "fetched_at": "2026-10-07T20:05:58+00:00",
   "filings": [
    {
     "dii": 12.1,
@@ -12744,7 +12752,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJHFL": {
-  "fetched_at": "2026-10-06T19:41:58+00:00",
+  "fetched_at": "2026-10-07T20:06:00+00:00",
   "filings": [
    {
     "dii": 1.01,
@@ -12788,7 +12796,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJHLDNG": {
-  "fetched_at": "2026-10-06T19:42:00+00:00",
+  "fetched_at": "2026-10-07T20:06:02+00:00",
   "filings": [
    {
     "dii": 8.27,
@@ -13040,7 +13048,7 @@
   "source": "NSE XBRL"
  },
  "BAJFINANCE": {
-  "fetched_at": "2026-10-06T19:42:02+00:00",
+  "fetched_at": "2026-10-07T20:06:04+00:00",
   "filings": [
    {
     "dii": 16.4,
@@ -13188,7 +13196,7 @@
   "source": "NSE XBRL"
  },
  "BALKRISIND": {
-  "fetched_at": "2026-10-06T19:42:04+00:00",
+  "fetched_at": "2026-10-07T20:06:06+00:00",
   "filings": [
    {
     "dii": 24.61,
@@ -13376,7 +13384,7 @@
   "source": "NSE XBRL"
  },
  "BALRAMCHIN": {
-  "fetched_at": "2026-10-06T19:42:06+00:00",
+  "fetched_at": "2026-10-07T20:06:09+00:00",
   "filings": [
    {
     "dii": 29.09,
@@ -13668,7 +13676,7 @@
   "source": "NSE XBRL"
  },
  "BANDHANBNK": {
-  "fetched_at": "2026-10-06T19:42:08+00:00",
+  "fetched_at": "2026-10-07T20:06:10+00:00",
   "filings": [
    {
     "dii": 27.48,
@@ -13888,7 +13896,7 @@
   "source": "NSE XBRL"
  },
  "BANKBARODA": {
-  "fetched_at": "2026-10-06T19:42:10+00:00",
+  "fetched_at": "2026-10-07T20:06:12+00:00",
   "filings": [
    {
     "dii": 18.42,
@@ -14012,7 +14020,7 @@
   "source": "NSE XBRL"
  },
  "BANKINDIA": {
-  "fetched_at": "2026-10-06T19:42:12+00:00",
+  "fetched_at": "2026-10-07T20:06:14+00:00",
   "filings": [
    {
     "dii": 13.96,
@@ -14072,7 +14080,7 @@
   "source": "NSE XBRL"
  },
  "BATAINDIA": {
-  "fetched_at": "2026-10-06T19:42:14+00:00",
+  "fetched_at": "2026-10-07T20:06:16+00:00",
   "filings": [
    {
     "dii": 27.23,
@@ -14196,7 +14204,7 @@
   "source": "NSE XBRL"
  },
  "BBOX": {
-  "fetched_at": "2026-10-06T19:56:02+00:00",
+  "fetched_at": "2026-10-07T20:20:04+00:00",
   "filings": [
    {
     "dii": 3.41,
@@ -14484,7 +14492,7 @@
   "source": "NSE XBRL"
  },
  "BDL": {
-  "fetched_at": "2026-10-06T19:42:16+00:00",
+  "fetched_at": "2026-10-07T20:06:18+00:00",
   "filings": [
    {
     "dii": 11.53,
@@ -14592,7 +14600,7 @@
   "source": "NSE XBRL"
  },
  "BEL": {
-  "fetched_at": "2026-10-06T19:42:18+00:00",
+  "fetched_at": "2026-10-07T20:06:20+00:00",
   "filings": [
    {
     "dii": 21.02,
@@ -14772,7 +14780,7 @@
   "source": "NSE XBRL"
  },
  "BELRISE": {
-  "fetched_at": "2026-10-06T19:42:20+00:00",
+  "fetched_at": "2026-10-07T20:06:22+00:00",
   "filings": [
    {
     "dii": 10.01,
@@ -14920,7 +14928,7 @@
   "source": "NSE XBRL"
  },
  "BEML": {
-  "fetched_at": "2026-10-06T19:42:22+00:00",
+  "fetched_at": "2026-10-07T20:06:24+00:00",
   "filings": [
    {
     "dii": 19.39,
@@ -15028,7 +15036,7 @@
   "source": "NSE XBRL"
  },
  "BERGEPAINT": {
-  "fetched_at": "2026-10-06T19:42:24+00:00",
+  "fetched_at": "2026-10-07T20:06:26+00:00",
   "filings": [
    {
     "dii": 11.79,
@@ -15152,7 +15160,7 @@
   "source": "NSE XBRL"
  },
  "BHARATCOAL": {
-  "fetched_at": "2026-10-06T19:56:05+00:00",
+  "fetched_at": "2026-10-07T20:20:06+00:00",
   "filings": [
    {
     "dii": 1.05,
@@ -15196,7 +15204,7 @@
   "source": "NSE XBRL"
  },
  "BHARATFORG": {
-  "fetched_at": "2026-10-06T19:42:26+00:00",
+  "fetched_at": "2026-10-07T20:06:29+00:00",
   "filings": [
    {
     "dii": 32.34,
@@ -15480,7 +15488,7 @@
   "source": "NSE XBRL"
  },
  "BHARTIARTL": {
-  "fetched_at": "2026-10-06T19:42:28+00:00",
+  "fetched_at": "2026-10-07T20:06:30+00:00",
   "filings": [
    {
     "dii": 20.76,
@@ -15684,7 +15692,7 @@
   "source": "NSE XBRL"
  },
  "BHARTIHEXA": {
-  "fetched_at": "2026-10-06T19:42:30+00:00",
+  "fetched_at": "2026-10-07T20:06:32+00:00",
   "filings": [
    {
     "dii": 10.64,
@@ -15784,7 +15792,7 @@
   "source": "NSE XBRL"
  },
  "BHEL": {
-  "fetched_at": "2026-10-06T19:42:32+00:00",
+  "fetched_at": "2026-10-07T20:06:34+00:00",
   "filings": [
    {
     "dii": 22.44,
@@ -16128,7 +16136,7 @@
   "source": "NSE XBRL"
  },
  "BIOCON": {
-  "fetched_at": "2026-10-06T19:42:34+00:00",
+  "fetched_at": "2026-10-07T20:06:36+00:00",
   "filings": [
    {
     "dii": 23.38,
@@ -16324,7 +16332,7 @@
   "source": "NSE XBRL"
  },
  "BLS": {
-  "fetched_at": "2026-10-06T19:42:36+00:00",
+  "fetched_at": "2026-10-07T20:06:38+00:00",
   "filings": [
    {
     "dii": 3.1,
@@ -16848,7 +16856,7 @@
   "source": "NSE XBRL"
  },
  "BLUESTARCO": {
-  "fetched_at": "2026-10-06T19:42:38+00:00",
+  "fetched_at": "2026-10-07T20:06:40+00:00",
   "filings": [
    {
     "dii": 28.25,
@@ -17172,7 +17180,7 @@
   "source": "NSE XBRL"
  },
  "BOSCHLTD": {
-  "fetched_at": "2026-10-06T19:42:40+00:00",
+  "fetched_at": "2026-10-07T20:06:42+00:00",
   "filings": [
    {
     "dii": 15.16,
@@ -17296,7 +17304,7 @@
   "source": "NSE XBRL"
  },
  "BPCL": {
-  "fetched_at": "2026-10-06T19:42:42+00:00",
+  "fetched_at": "2026-10-07T20:06:44+00:00",
   "filings": [
    {
     "dii": 21.07,
@@ -17452,7 +17460,7 @@
   "source": "NSE XBRL"
  },
  "BRIGADE": {
-  "fetched_at": "2026-10-06T19:42:44+00:00",
+  "fetched_at": "2026-10-07T20:06:46+00:00",
   "filings": [
    {
     "dii": 25.47,
@@ -17776,7 +17784,7 @@
   "source": "NSE XBRL"
  },
  "BRITANNIA": {
-  "fetched_at": "2026-10-06T19:42:46+00:00",
+  "fetched_at": "2026-10-07T20:06:48+00:00",
   "filings": [
    {
     "dii": 20.93,
@@ -17980,7 +17988,7 @@
   "source": "NSE XBRL"
  },
  "BSE": {
-  "fetched_at": "2026-10-06T19:42:48+00:00",
+  "fetched_at": "2026-10-07T20:06:50+00:00",
   "filings": [
    {
     "dii": 24.15,
@@ -18176,7 +18184,7 @@
   "source": "NSE XBRL"
  },
  "BSOFT": {
-  "fetched_at": "2026-10-06T19:42:50+00:00",
+  "fetched_at": "2026-10-07T20:06:52+00:00",
   "filings": [
    {
     "dii": 21.99,
@@ -18380,7 +18388,7 @@
   "source": "NSE XBRL"
  },
  "CAMS": {
-  "fetched_at": "2026-10-06T19:42:52+00:00",
+  "fetched_at": "2026-10-07T20:06:54+00:00",
   "filings": [
    {
     "dii": 23.54,
@@ -18744,7 +18752,7 @@
   "source": "NSE XBRL"
  },
  "CANBK": {
-  "fetched_at": "2026-10-06T19:42:54+00:00",
+  "fetched_at": "2026-10-07T20:06:56+00:00",
   "filings": [
    {
     "dii": 12.38,
@@ -18820,7 +18828,7 @@
   "source": "NSE XBRL"
  },
  "CANFINHOME": {
-  "fetched_at": "2026-10-06T19:42:56+00:00",
+  "fetched_at": "2026-10-07T20:06:58+00:00",
   "filings": [
    {
     "dii": 24.53,
@@ -19064,7 +19072,7 @@
   "source": "NSE XBRL"
  },
  "CANHLIFE": {
-  "fetched_at": "2026-10-06T19:42:58+00:00",
+  "fetched_at": "2026-10-07T20:07:00+00:00",
   "filings": [
    {
     "dii": 29.67,
@@ -19220,7 +19228,7 @@
   "source": "NSE XBRL"
  },
  "CAPLIPOINT": {
-  "fetched_at": "2026-10-06T19:43:00+00:00",
+  "fetched_at": "2026-10-07T20:07:02+00:00",
   "filings": [
    {
     "dii": 2.49,
@@ -19376,7 +19384,7 @@
   "source": "NSE XBRL"
  },
  "CARBORUNIV": {
-  "fetched_at": "2026-10-06T19:43:02+00:00",
+  "fetched_at": "2026-10-07T20:07:04+00:00",
   "filings": [
    {
     "dii": 29.06,
@@ -19596,7 +19604,7 @@
   "source": "NSE XBRL"
  },
  "CARTRADE": {
-  "fetched_at": "2026-10-06T19:43:04+00:00",
+  "fetched_at": "2026-10-07T20:07:06+00:00",
   "filings": [
    {
     "dii": 15.64,
@@ -19968,7 +19976,7 @@
   "source": "NSE XBRL"
  },
  "CASTROLIND": {
-  "fetched_at": "2026-10-06T19:43:06+00:00",
+  "fetched_at": "2026-10-07T20:07:08+00:00",
   "filings": [
    {
     "dii": 14.41,
@@ -20044,7 +20052,7 @@
   "source": "NSE XBRL"
  },
  "CCL": {
-  "fetched_at": "2026-10-06T19:43:08+00:00",
+  "fetched_at": "2026-10-07T20:07:10+00:00",
   "filings": [
    {
     "dii": 21.11,
@@ -20248,7 +20256,7 @@
   "source": "NSE XBRL"
  },
  "CDSL": {
-  "fetched_at": "2026-10-06T19:43:10+00:00",
+  "fetched_at": "2026-10-07T20:07:12+00:00",
   "filings": [
    {
     "dii": 15.19,
@@ -20356,7 +20364,7 @@
   "source": "NSE XBRL"
  },
  "CEATLTD": {
-  "fetched_at": "2026-10-06T19:43:12+00:00",
+  "fetched_at": "2026-10-07T20:07:14+00:00",
   "filings": [
    {
     "dii": 22.2,
@@ -20552,7 +20560,7 @@
   "source": "NSE XBRL"
  },
  "CEMPRO": {
-  "fetched_at": "2026-10-06T19:43:14+00:00",
+  "fetched_at": "2026-10-07T20:07:16+00:00",
   "filings": [
    {
     "dii": 2.87,
@@ -20660,7 +20668,7 @@
   "source": "NSE XBRL"
  },
  "CENTRALBK": {
-  "fetched_at": "2026-10-06T19:43:16+00:00",
+  "fetched_at": "2026-10-07T20:07:18+00:00",
   "filings": [
    {
     "dii": 10.94,
@@ -20728,7 +20736,7 @@
   "source": "NSE XBRL"
  },
  "CESC": {
-  "fetched_at": "2026-10-06T19:43:18+00:00",
+  "fetched_at": "2026-10-07T20:07:20+00:00",
   "filings": [
    {
     "dii": 26.14,
@@ -20948,7 +20956,7 @@
   "source": "NSE XBRL"
  },
  "CGCL": {
-  "fetched_at": "2026-10-06T19:43:20+00:00",
+  "fetched_at": "2026-10-07T20:07:22+00:00",
   "filings": [
    {
     "dii": 17.04,
@@ -21088,7 +21096,7 @@
   "source": "NSE XBRL"
  },
  "CGPOWER": {
-  "fetched_at": "2026-10-06T19:43:22+00:00",
+  "fetched_at": "2026-10-07T20:07:24+00:00",
   "filings": [
    {
     "dii": 18.3,
@@ -21584,7 +21592,7 @@
   "source": "NSE XBRL"
  },
  "CHAMBLFERT": {
-  "fetched_at": "2026-10-06T19:43:24+00:00",
+  "fetched_at": "2026-10-07T20:07:26+00:00",
   "filings": [
    {
     "dii": 5.34,
@@ -21836,7 +21844,7 @@
   "source": "NSE XBRL"
  },
  "CHENNPETRO": {
-  "fetched_at": "2026-10-06T19:43:26+00:00",
+  "fetched_at": "2026-10-07T20:07:28+00:00",
   "filings": [
    {
     "dii": 1.18,
@@ -21912,7 +21920,7 @@
   "source": "NSE XBRL"
  },
  "CHOICEIN": {
-  "fetched_at": "2026-10-06T19:43:28+00:00",
+  "fetched_at": "2026-10-07T20:07:30+00:00",
   "filings": [
    {
     "dii": 0.28,
@@ -22196,7 +22204,7 @@
   "source": "NSE XBRL"
  },
  "CHOLAFIN": {
-  "fetched_at": "2026-10-06T19:43:30+00:00",
+  "fetched_at": "2026-10-07T20:07:32+00:00",
   "filings": [
    {
     "dii": 20.62,
@@ -22392,7 +22400,7 @@
   "source": "NSE XBRL"
  },
  "CHOLAHLDNG": {
-  "fetched_at": "2026-10-06T19:43:32+00:00",
+  "fetched_at": "2026-10-07T20:07:34+00:00",
   "filings": [
    {
     "dii": 26.89,
@@ -22564,7 +22572,7 @@
   "source": "NSE XBRL"
  },
  "CIEINDIA": {
-  "fetched_at": "2026-10-06T19:43:34+00:00",
+  "fetched_at": "2026-10-07T20:07:36+00:00",
   "filings": [
    {
     "dii": 20.65,
@@ -22656,7 +22664,7 @@
   "source": "NSE XBRL"
  },
  "CIPLA": {
-  "fetched_at": "2026-10-06T19:43:36+00:00",
+  "fetched_at": "2026-10-07T20:07:38+00:00",
   "filings": [
    {
     "dii": 34.63,
@@ -22908,7 +22916,7 @@
   "source": "NSE XBRL"
  },
  "CLEAN": {
-  "fetched_at": "2026-10-06T19:43:38+00:00",
+  "fetched_at": "2026-10-07T20:07:40+00:00",
   "filings": [
    {
     "dii": 16.23,
@@ -23224,7 +23232,7 @@
   "source": "NSE XBRL"
  },
  "CLEANMAX": {
-  "fetched_at": "2026-10-06T19:56:08+00:00",
+  "fetched_at": "2026-10-07T20:20:10+00:00",
   "filings": [
    {
     "dii": 14.67,
@@ -23476,7 +23484,7 @@
   "source": "NSE XBRL"
  },
  "CMPDI": {
-  "fetched_at": "2026-10-06T19:56:11+00:00",
+  "fetched_at": "2026-10-07T20:20:12+00:00",
   "filings": [
    {
     "dii": 7.85,
@@ -23560,7 +23568,7 @@
   "source": "NSE XBRL"
  },
  "CMSINFO": {
-  "fetched_at": "2026-10-06T19:56:52+00:00",
+  "fetched_at": "2026-10-07T20:20:54+00:00",
   "filings": [
    {
     "dii": 36.0,
@@ -23820,7 +23828,7 @@
   "source": "NSE XBRL"
  },
  "COALINDIA": {
-  "fetched_at": "2026-10-06T19:43:40+00:00",
+  "fetched_at": "2026-10-07T20:07:42+00:00",
   "filings": [
    {
     "dii": 22.21,
@@ -23928,7 +23936,7 @@
   "source": "NSE XBRL"
  },
  "COCHINSHIP": {
-  "fetched_at": "2026-10-06T19:43:42+00:00",
+  "fetched_at": "2026-10-07T20:07:44+00:00",
   "filings": [
    {
     "dii": 6.96,
@@ -23988,7 +23996,7 @@
   "source": "NSE XBRL"
  },
  "COFORGE": {
-  "fetched_at": "2026-10-06T19:43:44+00:00",
+  "fetched_at": "2026-10-07T20:07:46+00:00",
   "filings": [
    {
     "dii": 42.62,
@@ -24328,7 +24336,7 @@
   "source": "NSE XBRL"
  },
  "COHANCE": {
-  "fetched_at": "2026-10-06T19:43:46+00:00",
+  "fetched_at": "2026-10-07T20:07:48+00:00",
   "filings": [
    {
     "dii": 20.09,
@@ -24508,7 +24516,7 @@
   "source": "NSE XBRL"
  },
  "COLPAL": {
-  "fetched_at": "2026-10-06T19:43:48+00:00",
+  "fetched_at": "2026-10-07T20:07:50+00:00",
   "filings": [
    {
     "dii": 15.82,
@@ -24616,7 +24624,7 @@
   "source": "NSE XBRL"
  },
  "CONCOR": {
-  "fetched_at": "2026-10-06T19:43:50+00:00",
+  "fetched_at": "2026-10-07T20:07:52+00:00",
   "filings": [
    {
     "dii": 29.86,
@@ -24756,7 +24764,7 @@
   "source": "NSE XBRL"
  },
  "CONCORDBIO": {
-  "fetched_at": "2026-10-06T19:43:52+00:00",
+  "fetched_at": "2026-10-07T20:07:54+00:00",
   "filings": [
    {
     "dii": 9.36,
@@ -25008,7 +25016,7 @@
   "source": "NSE XBRL"
  },
  "COROMANDEL": {
-  "fetched_at": "2026-10-06T19:43:54+00:00",
+  "fetched_at": "2026-10-07T20:07:56+00:00",
   "filings": [
    {
     "dii": 19.92,
@@ -25180,7 +25188,7 @@
   "source": "NSE XBRL"
  },
  "CPPLUS": {
-  "fetched_at": "2026-10-06T19:43:56+00:00",
+  "fetched_at": "2026-10-07T20:07:58+00:00",
   "filings": [
    {
     "dii": 13.61,
@@ -25432,7 +25440,7 @@
   "source": "NSE XBRL"
  },
  "CRAFTSMAN": {
-  "fetched_at": "2026-10-06T19:43:58+00:00",
+  "fetched_at": "2026-10-07T20:08:00+00:00",
   "filings": [
    {
     "dii": 32.9,
@@ -25692,7 +25700,7 @@
   "source": "NSE XBRL"
  },
  "CREDITACC": {
-  "fetched_at": "2026-10-06T19:44:00+00:00",
+  "fetched_at": "2026-10-07T20:08:02+00:00",
   "filings": [
    {
     "dii": 12.67,
@@ -25832,7 +25840,7 @@
   "source": "NSE XBRL"
  },
  "CRISIL": {
-  "fetched_at": "2026-10-06T19:44:02+00:00",
+  "fetched_at": "2026-10-07T20:08:04+00:00",
   "filings": [
    {
     "dii": 12.95,
@@ -25988,7 +25996,7 @@
   "source": "NSE XBRL"
  },
  "CROMPTON": {
-  "fetched_at": "2026-10-06T19:44:04+00:00",
+  "fetched_at": "2026-10-07T20:08:06+00:00",
   "filings": [
    {
     "dii": 66.46,
@@ -26368,7 +26376,7 @@
   "source": "NSE XBRL"
  },
  "CUB": {
-  "fetched_at": "2026-10-06T19:44:06+00:00",
+  "fetched_at": "2026-10-07T20:08:08+00:00",
   "filings": [
    {
     "dii": 44.85,
@@ -26676,7 +26684,7 @@
   "source": "NSE XBRL"
  },
  "CUMMINSIND": {
-  "fetched_at": "2026-10-06T19:44:08+00:00",
+  "fetched_at": "2026-10-07T20:08:10+00:00",
   "filings": [
    {
     "dii": 19.16,
@@ -26808,7 +26816,7 @@
   "source": "NSE XBRL"
  },
  "CUPID": {
-  "fetched_at": "2026-10-06T19:56:13+00:00",
+  "fetched_at": "2026-10-07T20:20:14+00:00",
   "filings": [
    {
     "dii": 0.34,
@@ -27036,7 +27044,7 @@
   "source": "NSE XBRL"
  },
  "CYIENT": {
-  "fetched_at": "2026-10-06T19:44:10+00:00",
+  "fetched_at": "2026-10-07T20:08:12+00:00",
   "filings": [
    {
     "dii": 39.0,
@@ -27344,7 +27352,7 @@
   "source": "NSE XBRL"
  },
  "DABUR": {
-  "fetched_at": "2026-10-06T19:44:12+00:00",
+  "fetched_at": "2026-10-07T20:08:14+00:00",
   "filings": [
    {
     "dii": 18.72,
@@ -27580,7 +27588,7 @@
   "source": "NSE XBRL"
  },
  "DALBHARAT": {
-  "fetched_at": "2026-10-06T19:44:14+00:00",
+  "fetched_at": "2026-10-07T20:08:16+00:00",
   "filings": [
    {
     "dii": 19.94,
@@ -27864,7 +27872,7 @@
   "source": "NSE XBRL"
  },
  "DATAPATTNS": {
-  "fetched_at": "2026-10-06T19:44:16+00:00",
+  "fetched_at": "2026-10-07T20:08:18+00:00",
   "filings": [
    {
     "dii": 11.98,
@@ -28264,7 +28272,7 @@
   "source": "NSE XBRL"
  },
  "DEEPAKFERT": {
-  "fetched_at": "2026-10-06T19:44:18+00:00",
+  "fetched_at": "2026-10-07T20:08:20+00:00",
   "filings": [
    {
     "dii": 14.69,
@@ -28436,7 +28444,7 @@
   "source": "NSE XBRL"
  },
  "DEEPAKNTR": {
-  "fetched_at": "2026-10-06T19:44:20+00:00",
+  "fetched_at": "2026-10-07T20:08:22+00:00",
   "filings": [
    {
     "dii": 23.76,
@@ -28688,7 +28696,7 @@
   "source": "NSE XBRL"
  },
  "DELHIVERY": {
-  "fetched_at": "2026-10-06T19:44:22+00:00",
+  "fetched_at": "2026-10-07T20:08:24+00:00",
   "filings": [
    {
     "dii": 43.08,
@@ -29060,7 +29068,7 @@
   "source": "NSE XBRL"
  },
  "DEVYANI": {
-  "fetched_at": "2026-10-06T19:44:24+00:00",
+  "fetched_at": "2026-10-07T20:08:26+00:00",
   "filings": [
    {
     "dii": 18.85,
@@ -29224,7 +29232,7 @@
   "source": "NSE XBRL"
  },
  "DHAMPURSUG": {
-  "fetched_at": "2026-10-06T19:56:54+00:00",
+  "fetched_at": "2026-10-07T20:20:56+00:00",
   "filings": [
    {
     "dii": 1.14,
@@ -29340,7 +29348,7 @@
   "source": "NSE XBRL"
  },
  "DIVISLAB": {
-  "fetched_at": "2026-10-06T19:44:26+00:00",
+  "fetched_at": "2026-10-07T20:08:28+00:00",
   "filings": [
    {
     "dii": 19.17,
@@ -29560,7 +29568,7 @@
   "source": "NSE XBRL"
  },
  "DIXON": {
-  "fetched_at": "2026-10-06T19:44:28+00:00",
+  "fetched_at": "2026-10-07T20:08:30+00:00",
   "filings": [
    {
     "dii": 28.39,
@@ -29836,7 +29844,7 @@
   "source": "NSE XBRL"
  },
  "DLF": {
-  "fetched_at": "2026-10-06T19:44:30+00:00",
+  "fetched_at": "2026-10-07T20:08:32+00:00",
   "filings": [
    {
     "dii": 9.08,
@@ -30000,7 +30008,7 @@
   "source": "NSE XBRL"
  },
  "DMART": {
-  "fetched_at": "2026-10-06T19:44:32+00:00",
+  "fetched_at": "2026-10-07T20:08:34+00:00",
   "filings": [
    {
     "dii": 8.74,
@@ -30292,7 +30300,7 @@
   "source": "NSE XBRL"
  },
  "DOMS": {
-  "fetched_at": "2026-10-06T19:44:34+00:00",
+  "fetched_at": "2026-10-07T20:08:36+00:00",
   "filings": [
    {
     "dii": 25.91,
@@ -30552,7 +30560,7 @@
   "source": "NSE XBRL"
  },
  "DRREDDY": {
-  "fetched_at": "2026-10-06T19:44:36+00:00",
+  "fetched_at": "2026-10-07T20:08:38+00:00",
   "filings": [
    {
     "dii": 31.74,
@@ -30788,7 +30796,7 @@
   "source": "NSE XBRL"
  },
  "DWARKESH": {
-  "fetched_at": "2026-10-06T19:56:56+00:00",
+  "fetched_at": "2026-10-07T20:20:58+00:00",
   "filings": [
    {
     "dii": 0.75,
@@ -30864,7 +30872,7 @@
   "source": "NSE XBRL"
  },
  "ECLERX": {
-  "fetched_at": "2026-10-06T19:44:38+00:00",
+  "fetched_at": "2026-10-07T20:08:40+00:00",
   "filings": [
    {
     "dii": 23.84,
@@ -31012,7 +31020,7 @@
   "source": "NSE XBRL"
  },
  "EICHERMOT": {
-  "fetched_at": "2026-10-06T19:44:40+00:00",
+  "fetched_at": "2026-10-07T20:08:42+00:00",
   "filings": [
    {
     "dii": 16.06,
@@ -31224,7 +31232,7 @@
   "source": "NSE XBRL"
  },
  "EIDPARRY": {
-  "fetched_at": "2026-10-06T19:44:42+00:00",
+  "fetched_at": "2026-10-07T20:08:44+00:00",
   "filings": [
    {
     "dii": 16.67,
@@ -31364,7 +31372,7 @@
   "source": "NSE XBRL"
  },
  "EIHOTEL": {
-  "fetched_at": "2026-10-06T19:44:44+00:00",
+  "fetched_at": "2026-10-07T20:08:46+00:00",
   "filings": [
    {
     "dii": 13.78,
@@ -31584,7 +31592,7 @@
   "source": "NSE XBRL"
  },
  "ELECON": {
-  "fetched_at": "2026-10-06T19:44:46+00:00",
+  "fetched_at": "2026-10-07T20:08:48+00:00",
   "filings": [
    {
     "dii": 7.18,
@@ -31772,7 +31780,7 @@
   "source": "NSE XBRL"
  },
  "ELGIEQUIP": {
-  "fetched_at": "2026-10-06T19:44:48+00:00",
+  "fetched_at": "2026-10-07T20:08:50+00:00",
   "filings": [
    {
     "dii": 10.13,
@@ -31944,7 +31952,7 @@
   "source": "NSE XBRL"
  },
  "EMAMILTD": {
-  "fetched_at": "2026-10-06T19:44:50+00:00",
+  "fetched_at": "2026-10-07T20:08:52+00:00",
   "filings": [
    {
     "dii": 27.01,
@@ -32180,7 +32188,7 @@
   "source": "NSE XBRL"
  },
  "EMCURE": {
-  "fetched_at": "2026-10-06T19:44:52+00:00",
+  "fetched_at": "2026-10-07T20:08:54+00:00",
   "filings": [
    {
     "dii": 8.46,
@@ -32416,7 +32424,7 @@
   "source": "NSE XBRL"
  },
  "EMMVEE": {
-  "fetched_at": "2026-10-06T19:44:54+00:00",
+  "fetched_at": "2026-10-07T20:08:56+00:00",
   "filings": [
    {
     "dii": 9.8,
@@ -32556,7 +32564,7 @@
   "source": "NSE XBRL"
  },
  "ENDURANCE": {
-  "fetched_at": "2026-10-06T19:44:56+00:00",
+  "fetched_at": "2026-10-07T20:08:58+00:00",
   "filings": [
    {
     "dii": 10.06,
@@ -32720,7 +32728,7 @@
   "source": "NSE XBRL"
  },
  "ENGINERSIN": {
-  "fetched_at": "2026-10-06T19:44:58+00:00",
+  "fetched_at": "2026-10-07T20:09:00+00:00",
   "filings": [
    {
     "dii": 14.22,
@@ -32812,7 +32820,7 @@
   "source": "NSE XBRL"
  },
  "ENRIN": {
-  "fetched_at": "2026-10-06T19:45:00+00:00",
+  "fetched_at": "2026-10-07T20:09:02+00:00",
   "filings": [
    {
     "dii": 6.45,
@@ -33148,7 +33156,7 @@
   "source": "NSE XBRL"
  },
  "ESCORTS": {
-  "fetched_at": "2026-10-06T19:45:02+00:00",
+  "fetched_at": "2026-10-07T20:09:04+00:00",
   "filings": [
    {
     "dii": 10.65,
@@ -33312,7 +33320,7 @@
   "source": "NSE XBRL"
  },
  "ETERNAL": {
-  "fetched_at": "2026-10-06T19:45:04+00:00",
+  "fetched_at": "2026-10-07T20:09:06+00:00",
   "filings": [
    {
     "dii": 39.32,
@@ -33628,7 +33636,7 @@
   "source": "NSE XBRL"
  },
  "EXIDEIND": {
-  "fetched_at": "2026-10-06T19:45:06+00:00",
+  "fetched_at": "2026-10-07T20:09:08+00:00",
   "filings": [
    {
     "dii": 19.3,
@@ -33768,7 +33776,7 @@
   "source": "NSE XBRL"
  },
  "FACT": {
-  "fetched_at": "2026-10-06T19:45:08+00:00",
+  "fetched_at": "2026-10-07T20:09:10+00:00",
   "filings": [
    {
     "dii": 0.07,
@@ -33828,7 +33836,7 @@
   "source": "NSE XBRL"
  },
  "FCL": {
-  "fetched_at": "2026-10-06T19:56:58+00:00",
+  "fetched_at": "2026-10-07T20:21:00+00:00",
   "filings": [
    {
     "dii": 1.36,
@@ -33976,7 +33984,7 @@
   "source": "NSE XBRL"
  },
  "FEDERALBNK": {
-  "fetched_at": "2026-10-06T19:45:10+00:00",
+  "fetched_at": "2026-10-07T20:09:12+00:00",
   "filings": [
    {
     "dii": 49.28,
@@ -34388,7 +34396,7 @@
   "source": "NSE XBRL"
  },
  "FINCABLES": {
-  "fetched_at": "2026-10-06T19:45:12+00:00",
+  "fetched_at": "2026-10-07T20:09:14+00:00",
   "filings": [
    {
     "dii": 16.7,
@@ -34624,7 +34632,7 @@
   "source": "NSE XBRL"
  },
  "FIRSTCRY": {
-  "fetched_at": "2026-10-06T19:45:14+00:00",
+  "fetched_at": "2026-10-07T20:09:16+00:00",
   "filings": [
    {
     "dii": 22.71,
@@ -34908,7 +34916,7 @@
   "source": "NSE XBRL"
  },
  "FIVESTAR": {
-  "fetched_at": "2026-10-06T19:45:16+00:00",
+  "fetched_at": "2026-10-07T20:09:19+00:00",
   "filings": [
    {
     "dii": 22.35,
@@ -35069,7 +35077,7 @@
   "source": "NSE XBRL"
  },
  "FLUOROCHEM": {
-  "fetched_at": "2026-10-06T19:45:18+00:00",
+  "fetched_at": "2026-10-07T20:09:20+00:00",
   "filings": [
    {
     "dii": 13.33,
@@ -35233,7 +35241,7 @@
   "source": "NSE XBRL"
  },
  "FORCEMOT": {
-  "fetched_at": "2026-10-06T19:45:20+00:00",
+  "fetched_at": "2026-10-07T20:09:22+00:00",
   "filings": [
    {
     "dii": 1.46,
@@ -35325,7 +35333,7 @@
   "source": "NSE XBRL"
  },
  "FORTIS": {
-  "fetched_at": "2026-10-06T19:45:22+00:00",
+  "fetched_at": "2026-10-07T20:09:24+00:00",
   "filings": [
    {
     "dii": 32.23,
@@ -35601,7 +35609,7 @@
   "source": "NSE XBRL"
  },
  "FRACTAL": {
-  "fetched_at": "2026-10-06T19:56:15+00:00",
+  "fetched_at": "2026-10-07T20:20:16+00:00",
   "filings": [
    {
     "dii": 12.26,
@@ -35789,7 +35797,7 @@
   "source": "NSE XBRL"
  },
  "FSL": {
-  "fetched_at": "2026-10-06T19:45:24+00:00",
+  "fetched_at": "2026-10-07T20:09:26+00:00",
   "filings": [
    {
     "dii": 25.41,
@@ -35945,7 +35953,7 @@
   "source": "NSE XBRL"
  },
  "GABRIEL": {
-  "fetched_at": "2026-10-06T19:45:26+00:00",
+  "fetched_at": "2026-10-07T20:09:28+00:00",
   "filings": [
    {
     "dii": 12.92,
@@ -36061,7 +36069,7 @@
   "source": "NSE XBRL"
  },
  "GAIL": {
-  "fetched_at": "2026-10-06T19:45:28+00:00",
+  "fetched_at": "2026-10-07T20:09:30+00:00",
   "filings": [
    {
     "dii": 19.2,
@@ -36209,7 +36217,7 @@
   "source": "NSE XBRL"
  },
  "GALLANTT": {
-  "fetched_at": "2026-10-06T19:45:30+00:00",
+  "fetched_at": "2026-10-07T20:09:32+00:00",
   "filings": [
    {
     "dii": 0.08,
@@ -36349,7 +36357,7 @@
   "source": "NSE XBRL"
  },
  "GESHIP": {
-  "fetched_at": "2026-10-06T19:45:32+00:00",
+  "fetched_at": "2026-10-07T20:09:34+00:00",
   "filings": [
    {
     "dii": 12.81,
@@ -36561,7 +36569,7 @@
   "source": "NSE XBRL"
  },
  "GICRE": {
-  "fetched_at": "2026-10-06T19:45:34+00:00",
+  "fetched_at": "2026-10-07T20:09:36+00:00",
   "filings": [
    {
     "dii": 17.73,
@@ -36629,7 +36637,7 @@
   "source": "NSE XBRL"
  },
  "GILLETTE": {
-  "fetched_at": "2026-10-06T19:45:36+00:00",
+  "fetched_at": "2026-10-07T20:09:38+00:00",
   "filings": [
    {
     "dii": 8.76,
@@ -36769,7 +36777,7 @@
   "source": "NSE XBRL"
  },
  "GLAND": {
-  "fetched_at": "2026-10-06T19:45:38+00:00",
+  "fetched_at": "2026-10-07T20:09:40+00:00",
   "filings": [
    {
     "dii": 30.44,
@@ -36941,7 +36949,7 @@
   "source": "NSE XBRL"
  },
  "GLAXO": {
-  "fetched_at": "2026-10-06T19:45:40+00:00",
+  "fetched_at": "2026-10-07T20:09:42+00:00",
   "filings": [
    {
     "dii": 7.8,
@@ -37049,7 +37057,7 @@
   "source": "NSE XBRL"
  },
  "GLENMARK": {
-  "fetched_at": "2026-10-06T19:45:42+00:00",
+  "fetched_at": "2026-10-07T20:09:44+00:00",
   "filings": [
    {
     "dii": 18.6,
@@ -37189,7 +37197,7 @@
   "source": "NSE XBRL"
  },
  "GMDCLTD": {
-  "fetched_at": "2026-10-06T19:45:44+00:00",
+  "fetched_at": "2026-10-07T20:09:46+00:00",
   "filings": [
    {
     "dii": 0.82,
@@ -37233,7 +37241,7 @@
   "source": "NSE XBRL"
  },
  "GMRAIRPORT": {
-  "fetched_at": "2026-10-06T19:45:46+00:00",
+  "fetched_at": "2026-10-07T20:09:48+00:00",
   "filings": [
    {
     "dii": 5.13,
@@ -37421,7 +37429,7 @@
   "source": "NSE XBRL"
  },
  "GODFRYPHLP": {
-  "fetched_at": "2026-10-06T19:45:48+00:00",
+  "fetched_at": "2026-10-07T20:09:50+00:00",
   "filings": [
    {
     "dii": 3.66,
@@ -37701,7 +37709,7 @@
   "source": "NSE XBRL"
  },
  "GODREJCP": {
-  "fetched_at": "2026-10-06T19:45:50+00:00",
+  "fetched_at": "2026-10-07T20:09:52+00:00",
   "filings": [
    {
     "dii": 19.59,
@@ -37873,7 +37881,7 @@
   "source": "NSE XBRL"
  },
  "GODREJIND": {
-  "fetched_at": "2026-10-06T19:45:52+00:00",
+  "fetched_at": "2026-10-07T20:09:54+00:00",
   "filings": [
    {
     "dii": 3.47,
@@ -38221,7 +38229,7 @@
   "source": "NSE XBRL"
  },
  "GODREJPROP": {
-  "fetched_at": "2026-10-06T19:45:54+00:00",
+  "fetched_at": "2026-10-07T20:09:56+00:00",
   "filings": [
    {
     "dii": 9.02,
@@ -38393,7 +38401,7 @@
   "source": "NSE XBRL"
  },
  "GPIL": {
-  "fetched_at": "2026-10-06T19:45:56+00:00",
+  "fetched_at": "2026-10-07T20:09:58+00:00",
   "filings": [
    {
     "dii": 3.1,
@@ -38749,7 +38757,7 @@
   "source": "NSE XBRL"
  },
  "GRANULES": {
-  "fetched_at": "2026-10-06T19:45:58+00:00",
+  "fetched_at": "2026-10-07T20:10:00+00:00",
   "filings": [
    {
     "dii": 16.11,
@@ -38937,7 +38945,7 @@
   "source": "NSE XBRL"
  },
  "GRAPHITE": {
-  "fetched_at": "2026-10-06T19:46:00+00:00",
+  "fetched_at": "2026-10-07T20:10:02+00:00",
   "filings": [
    {
     "dii": 10.24,
@@ -39029,7 +39037,7 @@
   "source": "NSE XBRL"
  },
  "GRASIM": {
-  "fetched_at": "2026-10-06T19:46:02+00:00",
+  "fetched_at": "2026-10-07T20:10:04+00:00",
   "filings": [
    {
     "dii": 16.13,
@@ -39265,7 +39273,7 @@
   "source": "NSE XBRL"
  },
  "GRAVITA": {
-  "fetched_at": "2026-10-06T19:46:04+00:00",
+  "fetched_at": "2026-10-07T20:10:06+00:00",
   "filings": [
    {
     "dii": 5.51,
@@ -39405,8 +39413,147 @@
   "source": "NSE XBRL"
  },
  "GROWW": {
-  "fetched_at": "2026-10-06T19:46:06+00:00",
+  "fetched_at": "2026-10-07T20:10:09+00:00",
   "filings": [
+   {
+    "dii": 12.73,
+    "fii": 10.9,
+    "holders": [
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "Peak XV Partners Investments VI-1",
+      "pct": 14.22,
+      "role": "public",
+      "shares": 892271077
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Lalit Keshre",
+      "pct": 8.58,
+      "role": "promoter",
+      "shares": 538064671
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "YC Holdings II, LLC",
+      "pct": 7.44,
+      "role": "public",
+      "shares": 466652946
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Harsh Jain",
+      "pct": 6.23,
+      "role": "promoter",
+      "shares": 390779773
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Neeraj Singh",
+      "pct": 5.78,
+      "role": "promoter",
+      "shares": 362599310
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "Ribbit Capital V L.P.",
+      "pct": 4.63,
+      "role": "public",
+      "shares": 290640854
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Ishan Bansal",
+      "pct": 4.1,
+      "role": "promoter",
+      "shares": 257215210
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "Ribbit Cayman GW Holdings V, Ltd.",
+      "pct": 3.66,
+      "role": "public",
+      "shares": 229782558
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "Internet Fund VI Pte. Ltd.",
+      "pct": 3.27,
+      "role": "public",
+      "shares": 204907428
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Motilal Oswal Midcap Fund",
+      "pct": 1.99,
+      "role": "public",
+      "shares": 124589467
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Kotak Midcap Fund",
+      "pct": 1.89,
+      "role": "public",
+      "shares": 118883663
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "Sequoia Capital Global Growth Fund III - U.S./India Annex Fund, L.P.",
+      "pct": 1.32,
+      "role": "public",
+      "shares": 82999358
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "ISP VII-B Blocker GW, Ltd.",
+      "pct": 1.27,
+      "role": "public",
+      "shares": 79939615
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "YCCG21 L.P.",
+      "pct": 1.17,
+      "role": "public",
+      "shares": 73508408
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "Viggo Investment Pte. Ltd.",
+      "pct": 1.07,
+      "role": "public",
+      "shares": 67376200
+     },
+     {
+      "category": "EmployeeBenefitsTrusts",
+      "kind": "institution",
+      "name": "Groww Employee Welfare Trust",
+      "pct": 1.0,
+      "role": "other",
+      "shares": 62634104
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 27.13,
+    "public": 71.87,
+    "total_shares": 6273596631,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733744_07102026023207_WEB.xml"
+   },
    {
     "dii": 10.08,
     "fii": 6.89,
@@ -39545,167 +39692,12 @@
     "public": 71.75,
     "total_shares": 6273596631,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1701670_26072026014738_WEB.xml"
-   },
-   {
-    "dii": 5.92,
-    "fii": 2.51,
-    "holders": [
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Peak Xv Partners Investments VI-1",
-      "pct": 16.88,
-      "role": "public",
-      "shares": 1059268445
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "YC Holdings II, LLC",
-      "pct": 10.08,
-      "role": "public",
-      "shares": 632406975
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Lalit Keshre",
-      "pct": 8.59,
-      "role": "promoter",
-      "shares": 539064671
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Ribbit Capital V L.P.",
-      "pct": 6.9,
-      "role": "public",
-      "shares": 433187161
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Harsh Jain",
-      "pct": 6.24,
-      "role": "promoter",
-      "shares": 391579773
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Neeraj Singh",
-      "pct": 5.79,
-      "role": "promoter",
-      "shares": 363199310
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Ribbit Cayman GW Holdings V, Ltd",
-      "pct": 5.46,
-      "role": "public",
-      "shares": 342480601
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Internet Fund VI Pte. Ltd.",
-      "pct": 5.08,
-      "role": "public",
-      "shares": 318462979
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Ishan Bansal",
-      "pct": 4.11,
-      "role": "promoter",
-      "shares": 257715210
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Motilal Oswal Midcap Fund",
-      "pct": 2.31,
-      "role": "public",
-      "shares": 145087566
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Viggo Investment Pte. Ltd.",
-      "pct": 2.15,
-      "role": "public",
-      "shares": 134752401
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "ICONIQ Strategic Partners VI-B, L.P",
-      "pct": 1.65,
-      "role": "public",
-      "shares": 103562830
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Sequoia Capital Global Growth Fund III - U.S./India Annex Fund, L.P.",
-      "pct": 1.57,
-      "role": "public",
-      "shares": 98533510
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "ISP VII-B Blocker GW, Ltd.",
-      "pct": 1.53,
-      "role": "public",
-      "shares": 96140541
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "Propel Venture Partners Global US LP",
-      "pct": 1.47,
-      "role": "public",
-      "shares": 92176021
-     },
-     {
-      "category": "EmployeeBenefitsTrusts",
-      "kind": "institution",
-      "name": "Groww Employee Welfare Trust",
-      "pct": 1.31,
-      "role": "other",
-      "shares": 82019709
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "YCCG21 L.P.",
-      "pct": 1.17,
-      "role": "public",
-      "shares": 73508408
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "ICONIQ Strategic Partners VI, L.P.",
-      "pct": 1.12,
-      "role": "public",
-      "shares": 70281338
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 27.38,
-    "public": 71.31,
-    "total_shares": 6273596631,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1701671_26072026020613_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "GRSE": {
-  "fetched_at": "2026-10-06T19:46:08+00:00",
+  "fetched_at": "2026-10-07T20:10:10+00:00",
   "filings": [
    {
     "dii": 2.0,
@@ -39749,7 +39741,7 @@
   "source": "NSE XBRL"
  },
  "GVT&D": {
-  "fetched_at": "2026-10-06T19:46:10+00:00",
+  "fetched_at": "2026-10-07T20:10:12+00:00",
   "filings": [
    {
     "dii": 18.47,
@@ -39873,7 +39865,7 @@
   "source": "NSE XBRL"
  },
  "HAL": {
-  "fetched_at": "2026-10-06T19:46:12+00:00",
+  "fetched_at": "2026-10-07T20:10:14+00:00",
   "filings": [
    {
     "dii": 11.98,
@@ -39949,7 +39941,7 @@
   "source": "NSE XBRL"
  },
  "HAVELLS": {
-  "fetched_at": "2026-10-06T19:46:14+00:00",
+  "fetched_at": "2026-10-07T20:10:16+00:00",
   "filings": [
    {
     "dii": 18.26,
@@ -40105,7 +40097,7 @@
   "source": "NSE XBRL"
  },
  "HBLENGINE": {
-  "fetched_at": "2026-10-06T19:46:16+00:00",
+  "fetched_at": "2026-10-07T20:10:19+00:00",
   "filings": [
    {
     "dii": 0.98,
@@ -40181,7 +40173,7 @@
   "source": "NSE XBRL"
  },
  "HCLTECH": {
-  "fetched_at": "2026-10-06T19:46:18+00:00",
+  "fetched_at": "2026-10-07T20:10:20+00:00",
   "filings": [
    {
     "dii": 18.78,
@@ -40353,7 +40345,7 @@
   "source": "NSE XBRL"
  },
  "HDBFS": {
-  "fetched_at": "2026-10-06T19:46:20+00:00",
+  "fetched_at": "2026-10-07T20:10:22+00:00",
   "filings": [
    {
     "dii": 12.1,
@@ -40469,7 +40461,7 @@
   "source": "NSE XBRL"
  },
  "HDFCAMC": {
-  "fetched_at": "2026-10-06T19:46:22+00:00",
+  "fetched_at": "2026-10-07T20:10:24+00:00",
   "filings": [
    {
     "dii": 14.76,
@@ -40617,7 +40609,7 @@
   "source": "NSE XBRL"
  },
  "HDFCBANK": {
-  "fetched_at": "2026-10-06T19:46:24+00:00",
+  "fetched_at": "2026-10-07T20:10:26+00:00",
   "filings": [
    {
     "dii": 43.63,
@@ -40869,7 +40861,7 @@
   "source": "NSE XBRL"
  },
  "HDFCLIFE": {
-  "fetched_at": "2026-10-06T19:46:26+00:00",
+  "fetched_at": "2026-10-07T20:10:28+00:00",
   "filings": [
    {
     "dii": 20.19,
@@ -41173,7 +41165,7 @@
   "source": "NSE XBRL"
  },
  "HEGAM": {
-  "fetched_at": "2026-10-06T19:56:16+00:00",
+  "fetched_at": "2026-10-07T20:20:18+00:00",
   "filings": [
    {
     "dii": 9.26,
@@ -41313,7 +41305,7 @@
   "source": "NSE XBRL"
  },
  "HEROMOTOCO": {
-  "fetched_at": "2026-10-06T19:46:28+00:00",
+  "fetched_at": "2026-10-07T20:10:30+00:00",
   "filings": [
    {
     "dii": 24.36,
@@ -41509,7 +41501,7 @@
   "source": "NSE XBRL"
  },
  "HEXT": {
-  "fetched_at": "2026-10-06T19:46:30+00:00",
+  "fetched_at": "2026-10-07T20:10:32+00:00",
   "filings": [
    {
     "dii": 16.06,
@@ -41641,7 +41633,7 @@
   "source": "NSE XBRL"
  },
  "HFCL": {
-  "fetched_at": "2026-10-06T19:46:32+00:00",
+  "fetched_at": "2026-10-07T20:10:34+00:00",
   "filings": [
    {
     "dii": 10.92,
@@ -41797,7 +41789,7 @@
   "source": "NSE XBRL"
  },
  "HIMATSEIDE": {
-  "fetched_at": "2026-10-06T19:57:00+00:00",
+  "fetched_at": "2026-10-07T20:21:02+00:00",
   "filings": [
    {
     "dii": 0.08,
@@ -42041,7 +42033,7 @@
   "source": "NSE XBRL"
  },
  "HINDALCO": {
-  "fetched_at": "2026-10-06T19:46:34+00:00",
+  "fetched_at": "2026-10-07T20:10:36+00:00",
   "filings": [
    {
     "dii": 19.95,
@@ -42237,7 +42229,7 @@
   "source": "NSE XBRL"
  },
  "HINDCOPPER": {
-  "fetched_at": "2026-10-06T19:46:36+00:00",
+  "fetched_at": "2026-10-07T20:10:38+00:00",
   "filings": [
    {
     "dii": 4.84,
@@ -42297,7 +42289,7 @@
   "source": "NSE XBRL"
  },
  "HINDPETRO": {
-  "fetched_at": "2026-10-06T19:46:38+00:00",
+  "fetched_at": "2026-10-07T20:10:40+00:00",
   "filings": [
    {
     "dii": 22.85,
@@ -42397,7 +42389,7 @@
   "source": "NSE XBRL"
  },
  "HINDUNILVR": {
-  "fetched_at": "2026-10-06T19:46:40+00:00",
+  "fetched_at": "2026-10-07T20:10:42+00:00",
   "filings": [
    {
     "dii": 16.99,
@@ -42569,7 +42561,7 @@
   "source": "NSE XBRL"
  },
  "HINDZINC": {
-  "fetched_at": "2026-10-06T19:46:42+00:00",
+  "fetched_at": "2026-10-07T20:10:44+00:00",
   "filings": [
    {
     "dii": 4.95,
@@ -42645,7 +42637,7 @@
   "source": "NSE XBRL"
  },
  "HOMEFIRST": {
-  "fetched_at": "2026-10-06T19:46:44+00:00",
+  "fetched_at": "2026-10-07T20:10:46+00:00",
   "filings": [
    {
     "dii": 29.83,
@@ -43025,7 +43017,7 @@
   "source": "NSE XBRL"
  },
  "HONASA": {
-  "fetched_at": "2026-10-06T19:46:47+00:00",
+  "fetched_at": "2026-10-07T20:10:48+00:00",
   "filings": [
    {
     "dii": 21.58,
@@ -43261,7 +43253,7 @@
   "source": "NSE XBRL"
  },
  "HONAUT": {
-  "fetched_at": "2026-10-06T19:46:48+00:00",
+  "fetched_at": "2026-10-07T20:10:50+00:00",
   "filings": [
    {
     "dii": 11.31,
@@ -43353,7 +43345,7 @@
   "source": "NSE XBRL"
  },
  "HSCL": {
-  "fetched_at": "2026-10-06T19:46:50+00:00",
+  "fetched_at": "2026-10-07T20:10:52+00:00",
   "filings": [
    {
     "dii": 3.33,
@@ -43525,7 +43517,7 @@
   "source": "NSE XBRL"
  },
  "HUDCO": {
-  "fetched_at": "2026-10-06T19:46:52+00:00",
+  "fetched_at": "2026-10-07T20:10:54+00:00",
   "filings": [
    {
     "dii": 10.1,
@@ -43601,7 +43593,7 @@
   "source": "NSE XBRL"
  },
  "HYUNDAI": {
-  "fetched_at": "2026-10-06T19:46:54+00:00",
+  "fetched_at": "2026-10-07T20:10:56+00:00",
   "filings": [
    {
     "dii": 11.69,
@@ -43693,7 +43685,7 @@
   "source": "NSE XBRL"
  },
  "ICICIAMC": {
-  "fetched_at": "2026-10-06T19:46:56+00:00",
+  "fetched_at": "2026-10-07T20:10:58+00:00",
   "filings": [
    {
     "dii": 6.81,
@@ -43753,7 +43745,7 @@
   "source": "NSE XBRL"
  },
  "ICICIBANK": {
-  "fetched_at": "2026-10-06T19:46:58+00:00",
+  "fetched_at": "2026-10-07T20:11:00+00:00",
   "filings": [
    {
     "dii": 42.31,
@@ -44045,7 +44037,7 @@
   "source": "NSE XBRL"
  },
  "ICICIGI": {
-  "fetched_at": "2026-10-06T19:47:00+00:00",
+  "fetched_at": "2026-10-07T20:11:02+00:00",
   "filings": [
    {
     "dii": 20.75,
@@ -44233,7 +44225,7 @@
   "source": "NSE XBRL"
  },
  "ICICIPRULI": {
-  "fetched_at": "2026-10-06T19:47:02+00:00",
+  "fetched_at": "2026-10-07T20:11:04+00:00",
   "filings": [
    {
     "dii": 11.82,
@@ -44389,7 +44381,7 @@
   "source": "NSE XBRL"
  },
  "IDBI": {
-  "fetched_at": "2026-10-06T19:47:04+00:00",
+  "fetched_at": "2026-10-07T20:11:07+00:00",
   "filings": [
    {
     "dii": 0.11,
@@ -44449,7 +44441,7 @@
   "source": "NSE XBRL"
  },
  "IDEA": {
-  "fetched_at": "2026-10-06T19:47:06+00:00",
+  "fetched_at": "2026-10-07T20:11:09+00:00",
   "filings": [
    {
     "dii": 6.07,
@@ -44637,7 +44629,7 @@
   "source": "NSE XBRL"
  },
  "IDFCFIRSTB": {
-  "fetched_at": "2026-10-06T19:47:08+00:00",
+  "fetched_at": "2026-10-07T20:11:11+00:00",
   "filings": [
    {
     "dii": 24.37,
@@ -44817,7 +44809,7 @@
   "source": "NSE XBRL"
  },
  "IEX": {
-  "fetched_at": "2026-10-06T19:47:10+00:00",
+  "fetched_at": "2026-10-07T20:11:12+00:00",
   "filings": [
    {
     "dii": 31.46,
@@ -44997,7 +44989,7 @@
   "source": "NSE XBRL"
  },
  "IFCI": {
-  "fetched_at": "2026-10-06T19:47:12+00:00",
+  "fetched_at": "2026-10-07T20:11:15+00:00",
   "filings": [
    {
     "dii": 1.66,
@@ -45057,8 +45049,59 @@
   "source": "NSE XBRL"
  },
  "IGIL": {
-  "fetched_at": "2026-10-06T19:47:14+00:00",
+  "fetched_at": "2026-10-07T20:11:16+00:00",
   "filings": [
+   {
+    "dii": 5.47,
+    "fii": 8.8,
+    "holders": [
+     {
+      "category": "ForeignInstitutions",
+      "kind": "institution",
+      "name": "BCP ASIA II TOPCO PTE LTD",
+      "pct": 76.55,
+      "role": "other",
+      "shares": 330835803
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "ICICI PRUDENTIAL BHARAT CONSUMPTION FUND",
+      "pct": 1.67,
+      "role": "public",
+      "shares": 7227493
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "GOVERNMENT OF SINGAPORE",
+      "pct": 1.32,
+      "role": "public",
+      "shares": 5718825
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "ABU DHABI INVESTMENT AUTHORITY - MONSOON",
+      "pct": 1.11,
+      "role": "public",
+      "shares": 4778789
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+      "pct": 1.03,
+      "role": "public",
+      "shares": 4457800
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 76.55,
+    "public": 23.45,
+    "total_shares": 432159696,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733703_07102026010357_WEB.xml"
+   },
    {
     "dii": 5.51,
     "fii": 9.49,
@@ -45101,55 +45144,12 @@
     "public": 23.45,
     "total_shares": 432159696,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1691247_13072026011228_WEB.xml"
-   },
-   {
-    "dii": 6.38,
-    "fii": 8.6,
-    "holders": [
-     {
-      "category": "ForeignInstitutions",
-      "kind": "institution",
-      "name": "BCP ASIA II TOPCO PTE LTD",
-      "pct": 76.55,
-      "role": "other",
-      "shares": 330835803
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "ICICI PRUDENTIAL FLEXICAP FUND",
-      "pct": 2.89,
-      "role": "public",
-      "shares": 12473533
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "ABU DHABI INVESTMENT AUTHORITY - MONSOON",
-      "pct": 1.34,
-      "role": "public",
-      "shares": 5811853
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "GOVERNMENT OF SINGAPORE",
-      "pct": 1.32,
-      "role": "public",
-      "shares": 5718825
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 76.55,
-    "public": 23.45,
-    "total_shares": 432159696,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1647518_08042026060456_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "IGL": {
-  "fetched_at": "2026-10-06T19:47:16+00:00",
+  "fetched_at": "2026-10-07T20:11:18+00:00",
   "filings": [
    {
     "dii": 30.03,
@@ -45329,7 +45329,7 @@
   "source": "NSE XBRL"
  },
  "IIFL": {
-  "fetched_at": "2026-10-06T19:47:18+00:00",
+  "fetched_at": "2026-10-07T20:11:20+00:00",
   "filings": [
    {
     "dii": 7.5,
@@ -45549,7 +45549,7 @@
   "source": "NSE XBRL"
  },
  "IKS": {
-  "fetched_at": "2026-10-06T19:47:20+00:00",
+  "fetched_at": "2026-10-07T20:11:22+00:00",
   "filings": [
    {
     "dii": 7.5,
@@ -46037,7 +46037,7 @@
   "source": "NSE XBRL"
  },
  "INDHOTEL": {
-  "fetched_at": "2026-10-06T19:47:22+00:00",
+  "fetched_at": "2026-10-07T20:11:24+00:00",
   "filings": [
    {
     "dii": 24.59,
@@ -46225,7 +46225,7 @@
   "source": "NSE XBRL"
  },
  "INDIACEM": {
-  "fetched_at": "2026-10-06T19:47:24+00:00",
+  "fetched_at": "2026-10-07T20:11:26+00:00",
   "filings": [
    {
     "dii": 12.6,
@@ -46317,7 +46317,7 @@
   "source": "NSE XBRL"
  },
  "INDIAMART": {
-  "fetched_at": "2026-10-06T19:47:26+00:00",
+  "fetched_at": "2026-10-07T20:11:28+00:00",
   "filings": [
    {
     "dii": 12.11,
@@ -46441,7 +46441,7 @@
   "source": "NSE XBRL"
  },
  "INDIANB": {
-  "fetched_at": "2026-10-06T19:47:28+00:00",
+  "fetched_at": "2026-10-07T20:11:30+00:00",
   "filings": [
    {
     "dii": 17.03,
@@ -46549,7 +46549,7 @@
   "source": "NSE XBRL"
  },
  "INDIGO": {
-  "fetched_at": "2026-10-06T19:47:30+00:00",
+  "fetched_at": "2026-10-07T20:11:32+00:00",
   "filings": [
    {
     "dii": 31.89,
@@ -46817,7 +46817,7 @@
   "source": "NSE XBRL"
  },
  "INDUSINDBK": {
-  "fetched_at": "2026-10-06T19:47:32+00:00",
+  "fetched_at": "2026-10-07T20:11:34+00:00",
   "filings": [
    {
     "dii": 42.25,
@@ -47093,7 +47093,7 @@
   "source": "NSE XBRL"
  },
  "INDUSTOWER": {
-  "fetched_at": "2026-10-06T19:47:34+00:00",
+  "fetched_at": "2026-10-07T20:11:36+00:00",
   "filings": [
    {
     "dii": 21.45,
@@ -47241,7 +47241,7 @@
   "source": "NSE XBRL"
  },
  "INFY": {
-  "fetched_at": "2026-10-06T19:47:36+00:00",
+  "fetched_at": "2026-10-07T20:11:38+00:00",
   "filings": [
    {
     "dii": 42.96,
@@ -47525,7 +47525,7 @@
   "source": "NSE XBRL"
  },
  "INOXINDIA": {
-  "fetched_at": "2026-10-06T19:56:19+00:00",
+  "fetched_at": "2026-10-07T20:20:21+00:00",
   "filings": [
    {
     "dii": 7.67,
@@ -47657,7 +47657,7 @@
   "source": "NSE XBRL"
  },
  "INOXWIND": {
-  "fetched_at": "2026-10-06T19:47:38+00:00",
+  "fetched_at": "2026-10-07T20:11:40+00:00",
   "filings": [
    {
     "dii": 10.03,
@@ -47853,7 +47853,7 @@
   "source": "NSE XBRL"
  },
  "INTELLECT": {
-  "fetched_at": "2026-10-06T19:47:40+00:00",
+  "fetched_at": "2026-10-07T20:11:42+00:00",
   "filings": [
    {
     "dii": 7.33,
@@ -48041,7 +48041,7 @@
   "source": "NSE XBRL"
  },
  "IOB": {
-  "fetched_at": "2026-10-06T19:47:42+00:00",
+  "fetched_at": "2026-10-07T20:11:44+00:00",
   "filings": [
    {
     "dii": 4.29,
@@ -48101,7 +48101,7 @@
   "source": "NSE XBRL"
  },
  "IOC": {
-  "fetched_at": "2026-10-06T19:47:44+00:00",
+  "fetched_at": "2026-10-07T20:11:46+00:00",
   "filings": [
    {
     "dii": 9.62,
@@ -48209,7 +48209,7 @@
   "source": "NSE XBRL"
  },
  "IPCALAB": {
-  "fetched_at": "2026-10-06T19:47:46+00:00",
+  "fetched_at": "2026-10-07T20:11:48+00:00",
   "filings": [
    {
     "dii": 37.37,
@@ -48485,7 +48485,7 @@
   "source": "NSE XBRL"
  },
  "IRB": {
-  "fetched_at": "2026-10-06T19:47:48+00:00",
+  "fetched_at": "2026-10-07T20:11:50+00:00",
   "filings": [
    {
     "dii": 10.15,
@@ -48609,8 +48609,27 @@
   "source": "NSE XBRL"
  },
  "IRCON": {
-  "fetched_at": "2026-10-06T19:47:50+00:00",
+  "fetched_at": "2026-10-07T20:11:52+00:00",
   "filings": [
+   {
+    "dii": 1.81,
+    "fii": 4.62,
+    "holders": [
+     {
+      "category": "CentralGovernmentOrStateGovernments",
+      "kind": "institution",
+      "name": "THE PRESIDENT OF INDIA(THROUGH CHAIRMAN RAILWAY BOARD)",
+      "pct": 65.17,
+      "role": "promoter",
+      "shares": 612928392
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 65.17,
+    "public": 34.83,
+    "total_shares": 940515740,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733881_07102026052257_WEB.xml"
+   },
    {
     "dii": 1.79,
     "fii": 4.6,
@@ -48629,31 +48648,12 @@
     "public": 34.83,
     "total_shares": 940515740,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1689236_08072026032530_WEB.xml"
-   },
-   {
-    "dii": 1.79,
-    "fii": 4.78,
-    "holders": [
-     {
-      "category": "CentralGovernmentOrStateGovernments",
-      "kind": "institution",
-      "name": "THE PRESIDENT OF INDIA(THROUGH CHAIRMAN RAILWAY BOARD)",
-      "pct": 65.17,
-      "role": "promoter",
-      "shares": 612928392
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 65.17,
-    "public": 34.83,
-    "total_shares": 940515740,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1650021_13042026053913_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "IRCTC": {
-  "fetched_at": "2026-10-06T19:47:52+00:00",
+  "fetched_at": "2026-10-07T20:11:54+00:00",
   "filings": [
    {
     "dii": 14.86,
@@ -48729,7 +48729,7 @@
   "source": "NSE XBRL"
  },
  "IREDA": {
-  "fetched_at": "2026-10-06T19:47:54+00:00",
+  "fetched_at": "2026-10-07T20:11:56+00:00",
   "filings": [
    {
     "dii": 2.4,
@@ -48789,7 +48789,7 @@
   "source": "NSE XBRL"
  },
  "IRFC": {
-  "fetched_at": "2026-10-06T19:47:56+00:00",
+  "fetched_at": "2026-10-07T20:11:58+00:00",
   "filings": [
    {
     "dii": 3.97,
@@ -48849,7 +48849,7 @@
   "source": "NSE XBRL"
  },
  "ITC": {
-  "fetched_at": "2026-10-06T19:47:58+00:00",
+  "fetched_at": "2026-10-07T20:12:00+00:00",
   "filings": [
    {
     "dii": 49.13,
@@ -49133,7 +49133,7 @@
   "source": "NSE XBRL"
  },
  "ITCHOTELS": {
-  "fetched_at": "2026-10-06T19:48:00+00:00",
+  "fetched_at": "2026-10-07T20:12:02+00:00",
   "filings": [
    {
     "dii": 23.99,
@@ -49273,7 +49273,7 @@
   "source": "NSE XBRL"
  },
  "ITI": {
-  "fetched_at": "2026-10-06T19:48:02+00:00",
+  "fetched_at": "2026-10-07T20:12:04+00:00",
   "filings": [
    {
     "dii": 0.07,
@@ -49333,7 +49333,7 @@
   "source": "NSE XBRL"
  },
  "J&KBANK": {
-  "fetched_at": "2026-10-06T19:48:04+00:00",
+  "fetched_at": "2026-10-07T20:12:06+00:00",
   "filings": [
    {
     "dii": 7.84,
@@ -49481,7 +49481,7 @@
   "source": "NSE XBRL"
  },
  "JAINREC": {
-  "fetched_at": "2026-10-06T19:48:06+00:00",
+  "fetched_at": "2026-10-07T20:12:08+00:00",
   "filings": [
    {
     "dii": 9.73,
@@ -49629,7 +49629,7 @@
   "source": "NSE XBRL"
  },
  "JBMA": {
-  "fetched_at": "2026-10-06T19:48:08+00:00",
+  "fetched_at": "2026-10-07T20:12:10+00:00",
   "filings": [
    {
     "dii": 0.15,
@@ -49833,7 +49833,7 @@
   "source": "NSE XBRL"
  },
  "JINDALSAW": {
-  "fetched_at": "2026-10-06T19:48:10+00:00",
+  "fetched_at": "2026-10-07T20:12:12+00:00",
   "filings": [
    {
     "dii": 8.37,
@@ -50061,7 +50061,7 @@
   "source": "NSE XBRL"
  },
  "JINDALSTEL": {
-  "fetched_at": "2026-10-06T19:48:12+00:00",
+  "fetched_at": "2026-10-07T20:12:14+00:00",
   "filings": [
    {
     "dii": 19.52,
@@ -50305,7 +50305,7 @@
   "source": "NSE XBRL"
  },
  "JIOFIN": {
-  "fetched_at": "2026-10-06T19:48:14+00:00",
+  "fetched_at": "2026-10-07T20:12:16+00:00",
   "filings": [
    {
     "dii": 13.36,
@@ -50493,7 +50493,7 @@
   "source": "NSE XBRL"
  },
  "JKCEMENT": {
-  "fetched_at": "2026-10-06T19:48:16+00:00",
+  "fetched_at": "2026-10-07T20:12:18+00:00",
   "filings": [
    {
     "dii": 23.73,
@@ -50809,7 +50809,7 @@
   "source": "NSE XBRL"
  },
  "JKTYRE": {
-  "fetched_at": "2026-10-06T19:48:18+00:00",
+  "fetched_at": "2026-10-07T20:12:20+00:00",
   "filings": [
    {
     "dii": 7.26,
@@ -50981,7 +50981,7 @@
   "source": "NSE XBRL"
  },
  "JMFINANCIL": {
-  "fetched_at": "2026-10-06T19:48:20+00:00",
+  "fetched_at": "2026-10-07T20:12:22+00:00",
   "filings": [
    {
     "dii": 5.49,
@@ -51233,7 +51233,7 @@
   "source": "NSE XBRL"
  },
  "JPPOWER": {
-  "fetched_at": "2026-10-06T19:48:22+00:00",
+  "fetched_at": "2026-10-07T20:12:24+00:00",
   "filings": [
    {
     "dii": 11.16,
@@ -51341,7 +51341,7 @@
   "source": "NSE XBRL"
  },
  "JSL": {
-  "fetched_at": "2026-10-06T19:48:24+00:00",
+  "fetched_at": "2026-10-07T20:12:26+00:00",
   "filings": [
    {
     "dii": 7.35,
@@ -51625,7 +51625,7 @@
   "source": "NSE XBRL"
  },
  "JSWCEMENT": {
-  "fetched_at": "2026-10-06T19:48:26+00:00",
+  "fetched_at": "2026-10-07T20:12:28+00:00",
   "filings": [
    {
     "dii": 11.49,
@@ -51961,7 +51961,7 @@
   "source": "NSE XBRL"
  },
  "JSWENERGY": {
-  "fetched_at": "2026-10-06T19:48:28+00:00",
+  "fetched_at": "2026-10-07T20:12:30+00:00",
   "filings": [
    {
     "dii": 16.2,
@@ -52173,7 +52173,7 @@
   "source": "NSE XBRL"
  },
  "JSWINFRA": {
-  "fetched_at": "2026-10-06T19:48:30+00:00",
+  "fetched_at": "2026-10-07T20:12:32+00:00",
   "filings": [
    {
     "dii": 9.19,
@@ -52297,7 +52297,7 @@
   "source": "NSE XBRL"
  },
  "JSWSTEEL": {
-  "fetched_at": "2026-10-06T19:48:32+00:00",
+  "fetched_at": "2026-10-07T20:12:34+00:00",
   "filings": [
    {
     "dii": 11.49,
@@ -52597,7 +52597,7 @@
   "source": "NSE XBRL"
  },
  "JUBLFOOD": {
-  "fetched_at": "2026-10-06T19:48:34+00:00",
+  "fetched_at": "2026-10-07T20:12:36+00:00",
   "filings": [
    {
     "dii": 39.59,
@@ -52809,7 +52809,7 @@
   "source": "NSE XBRL"
  },
  "JUBLINGREA": {
-  "fetched_at": "2026-10-06T19:48:36+00:00",
+  "fetched_at": "2026-10-07T20:12:38+00:00",
   "filings": [
    {
     "dii": 24.98,
@@ -53061,7 +53061,7 @@
   "source": "NSE XBRL"
  },
  "JUBLPHARMA": {
-  "fetched_at": "2026-10-06T19:57:36+00:00",
+  "fetched_at": "2026-10-07T20:21:38+00:00",
   "filings": [
    {
     "dii": 12.4,
@@ -53329,8 +53329,131 @@
   "source": "NSE XBRL"
  },
  "JWL": {
-  "fetched_at": "2026-10-06T19:48:38+00:00",
+  "fetched_at": "2026-10-07T20:12:40+00:00",
   "filings": [
+   {
+    "dii": 0.8,
+    "fii": 3.02,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "KARISMA GOODS PRIVATE LIMITED",
+      "pct": 20.96,
+      "role": "promoter",
+      "shares": 89581249
+     },
+     {
+      "category": "OtherForeignShareholders",
+      "kind": "corporate",
+      "name": "TATRAVAGONKA A.S.",
+      "pct": 19.24,
+      "role": "promoter",
+      "shares": 82218069
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "JUPITER METAL SPRING PRIVATE LIMITED",
+      "pct": 10.15,
+      "role": "promoter",
+      "shares": 43396760
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "ANISH CONSULTANTS & CREDITS PVT LTD",
+      "pct": 3.59,
+      "role": "promoter",
+      "shares": 15361880
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "MURARI LAL LOHIA",
+      "pct": 3.57,
+      "role": "promoter",
+      "shares": 15243185
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "JUPITER FORGINGS AND STEEL PVT LTD",
+      "pct": 3.5,
+      "role": "promoter",
+      "shares": 14953129
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "GOTHIC CORPORATION",
+      "pct": 3.06,
+      "role": "public",
+      "shares": 13079168
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "VIKASH LOHIA",
+      "pct": 2.67,
+      "role": "promoter",
+      "shares": 11426473
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "ATYANT CAPITAL INDIA FUND - I",
+      "pct": 2.11,
+      "role": "public",
+      "shares": 9033306
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "VIVEK LOHIA",
+      "pct": 1.82,
+      "role": "promoter",
+      "shares": 7796540
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "MURARI LAL LOHIA HUF",
+      "pct": 1.71,
+      "role": "promoter",
+      "shares": 7305814
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "VANDERBILT UNIVERSITY",
+      "pct": 1.19,
+      "role": "public",
+      "shares": 5098604
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "THE DUKE ENDOWMENT",
+      "pct": 1.17,
+      "role": "public",
+      "shares": 5012771
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "GOTHIC HSP CORPORATION",
+      "pct": 1.17,
+      "role": "public",
+      "shares": 4987008
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 68.31,
+    "public": 31.69,
+    "total_shares": 427370389,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733873_07102026051055_WEB.xml"
+   },
    {
     "dii": 0.8,
     "fii": 3.47,
@@ -53453,135 +53576,12 @@
     "public": 31.69,
     "total_shares": 427370389,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1690667_10072026061724_WEB.xml"
-   },
-   {
-    "dii": 0.78,
-    "fii": 4.19,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "KARISMA GOODS PRIVATE LIMITED",
-      "pct": 20.96,
-      "role": "promoter",
-      "shares": 89581249
-     },
-     {
-      "category": "OtherForeignShareholders",
-      "kind": "corporate",
-      "name": "TATRAVAGONKA A.S.",
-      "pct": 19.24,
-      "role": "promoter",
-      "shares": 82218069
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "JUPITER METAL SPRING PRIVATE LIMITED",
-      "pct": 10.15,
-      "role": "promoter",
-      "shares": 43396760
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "ANISH CONSULTANTS & CREDITS PVT LTD",
-      "pct": 3.59,
-      "role": "promoter",
-      "shares": 15361880
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "MURARI LAL LOHIA",
-      "pct": 3.57,
-      "role": "promoter",
-      "shares": 15243185
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "JUPITER FORGINGS & STEEL PVT. LTD.",
-      "pct": 3.5,
-      "role": "promoter",
-      "shares": 14953129
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "GOTHIC CORPORATION",
-      "pct": 3.06,
-      "role": "public",
-      "shares": 13079168
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "VIKASH LOHIA",
-      "pct": 2.67,
-      "role": "promoter",
-      "shares": 11426473
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "ATYANT CAPITAL INDIA FUND - I",
-      "pct": 2.35,
-      "role": "public",
-      "shares": 10033306
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "VIVEK LOHIA",
-      "pct": 1.82,
-      "role": "promoter",
-      "shares": 7796540
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "MURARI LAL LOHIA HUF",
-      "pct": 1.71,
-      "role": "promoter",
-      "shares": 7305814
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "VANDERBILT UNIVERSITY",
-      "pct": 1.19,
-      "role": "public",
-      "shares": 5098604
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "THE DUKE ENDOWMENT",
-      "pct": 1.17,
-      "role": "public",
-      "shares": 5012771
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "GOTHIC HSP CORPORATION",
-      "pct": 1.17,
-      "role": "public",
-      "shares": 4987008
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 68.31,
-    "public": 31.69,
-    "total_shares": 427370389,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1650400_14042026123826_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "JYOTICNC": {
-  "fetched_at": "2026-10-06T19:48:40+00:00",
+  "fetched_at": "2026-10-07T20:12:42+00:00",
   "filings": [
    {
     "dii": 12.58,
@@ -53801,7 +53801,7 @@
   "source": "NSE XBRL"
  },
  "KAJARIACER": {
-  "fetched_at": "2026-10-06T19:48:42+00:00",
+  "fetched_at": "2026-10-07T20:12:44+00:00",
   "filings": [
    {
     "dii": 26.25,
@@ -54053,7 +54053,7 @@
   "source": "NSE XBRL"
  },
  "KALYANKJIL": {
-  "fetched_at": "2026-10-06T19:48:44+00:00",
+  "fetched_at": "2026-10-07T20:12:46+00:00",
   "filings": [
    {
     "dii": 15.83,
@@ -54217,7 +54217,7 @@
   "source": "NSE XBRL"
  },
  "KARURVYSYA": {
-  "fetched_at": "2026-10-06T19:48:46+00:00",
+  "fetched_at": "2026-10-07T20:12:48+00:00",
   "filings": [
    {
     "dii": 41.22,
@@ -54445,7 +54445,7 @@
   "source": "NSE XBRL"
  },
  "KAYNES": {
-  "fetched_at": "2026-10-06T19:48:48+00:00",
+  "fetched_at": "2026-10-07T20:12:50+00:00",
   "filings": [
    {
     "dii": 11.78,
@@ -54561,8 +54561,91 @@
   "source": "NSE XBRL"
  },
  "KCP": {
-  "fetched_at": "2026-10-06T19:57:02+00:00",
+  "fetched_at": "2026-10-07T20:21:04+00:00",
   "filings": [
+   {
+    "dii": 0.56,
+    "fii": 2.23,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "V RAMAKRISHNA SONS P LTD",
+      "pct": 30.22,
+      "role": "promoter",
+      "shares": 38956326
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "V L INDIRA DUTT",
+      "pct": 7.95,
+      "role": "promoter",
+      "shares": 10253031
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "VRK GRANDSONS INVESTMENTS PRIVATE LIMITED",
+      "pct": 3.43,
+      "role": "promoter",
+      "shares": 4427009
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "SANDHYA G PARIKH",
+      "pct": 3.02,
+      "role": "public",
+      "shares": 3897573
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "CHINMAY G PARIKH",
+      "pct": 2.54,
+      "role": "public",
+      "shares": 3275483
+     },
+     {
+      "category": "DetailsOfSharesHeldByInvestorEducationAndProtectionFund",
+      "kind": "institution",
+      "name": "INVESTOR EDUCATION AND PROTECTION FUND AUTHORITY MINISTRY OF CORPORATE AFFAIRS",
+      "pct": 1.78,
+      "role": "public",
+      "shares": 2299418
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "GOVINDLAL M PARIKH",
+      "pct": 1.56,
+      "role": "public",
+      "shares": 2006284
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "VELAGAPUDI KAVITHA DUTT",
+      "pct": 1.05,
+      "role": "promoter",
+      "shares": 1360000
+     },
+     {
+      "category": "NonResidentIndividualsOrForeignIndividuals",
+      "kind": "individual",
+      "name": "SHIVANI DUTT CHITTURI",
+      "pct": 1.05,
+      "role": "other",
+      "shares": 1350000
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 44.39,
+    "public": 55.61,
+    "total_shares": 128921160,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733778_07102026032359_WEB.xml"
+   },
    {
     "dii": 0.56,
     "fii": 2.31,
@@ -54653,103 +54736,12 @@
     "public": 55.61,
     "total_shares": 128921160,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1692748_15072026093025_WEB.xml"
-   },
-   {
-    "dii": 0.56,
-    "fii": 2.64,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "V RAMAKRISHNA SONS P LTD",
-      "pct": 30.22,
-      "role": "promoter",
-      "shares": 38956326
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "V L INDIRA DUTT",
-      "pct": 7.93,
-      "role": "promoter",
-      "shares": 10222173
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "VRK GRANDSONS INVESTMENTS PRIVATE LIMITED",
-      "pct": 3.3,
-      "role": "promoter",
-      "shares": 4249193
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "SANDHYA G PARIKH",
-      "pct": 3.02,
-      "role": "public",
-      "shares": 3890686
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "CHINMAY G PARIKH",
-      "pct": 2.54,
-      "role": "public",
-      "shares": 3275483
-     },
-     {
-      "category": "DetailsOfSharesHeldByInvestorEducationAndProtectionFund",
-      "kind": "institution",
-      "name": "INVESTOR EDUCATION AND PROTECTION FUND AUTHORITY MINISTRY OF CORPORATE AFFAIRS",
-      "pct": 1.8,
-      "role": "public",
-      "shares": 2326708
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "GOVINDLAL M PARIKH",
-      "pct": 1.31,
-      "role": "public",
-      "shares": 1686474
-     },
-     {
-      "category": "DetailsOfSharesHeldByBodiesCorporate",
-      "kind": "corporate",
-      "name": "INTEGRATED INVESTMENT MANAGEMENT SERVICES PRIVATE LIMITED",
-      "pct": 1.1,
-      "role": "public",
-      "shares": 1415000
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "VELAGAPUDI KAVITHA DUTT",
-      "pct": 1.05,
-      "role": "promoter",
-      "shares": 1360000
-     },
-     {
-      "category": "NonResidentIndividualsOrForeignIndividuals",
-      "kind": "individual",
-      "name": "SHIVANI DUTT CHITTURI",
-      "pct": 1.05,
-      "role": "other",
-      "shares": 1350000
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 44.25,
-    "public": 55.75,
-    "total_shares": 128921160,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1646105_06042026122606_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "KEC": {
-  "fetched_at": "2026-10-06T19:48:50+00:00",
+  "fetched_at": "2026-10-07T20:12:52+00:00",
   "filings": [
    {
     "dii": 23.34,
@@ -55009,7 +55001,7 @@
   "source": "NSE XBRL"
  },
  "KEI": {
-  "fetched_at": "2026-10-06T19:48:52+00:00",
+  "fetched_at": "2026-10-07T20:12:54+00:00",
   "filings": [
    {
     "dii": 25.9,
@@ -55317,7 +55309,7 @@
   "source": "NSE XBRL"
  },
  "KFINTECH": {
-  "fetched_at": "2026-10-06T19:48:54+00:00",
+  "fetched_at": "2026-10-07T20:12:56+00:00",
   "filings": [
    {
     "dii": 27.31,
@@ -55569,7 +55561,7 @@
   "source": "NSE XBRL"
  },
  "KIMS": {
-  "fetched_at": "2026-10-06T19:48:56+00:00",
+  "fetched_at": "2026-10-07T20:12:58+00:00",
   "filings": [
    {
     "dii": 34.43,
@@ -55877,7 +55869,7 @@
   "source": "NSE XBRL"
  },
  "KIRLOSBROS": {
-  "fetched_at": "2026-10-06T19:56:21+00:00",
+  "fetched_at": "2026-10-07T20:20:22+00:00",
   "filings": [
    {
     "dii": 10.22,
@@ -56033,7 +56025,7 @@
   "source": "NSE XBRL"
  },
  "KIRLOSENG": {
-  "fetched_at": "2026-10-06T19:48:58+00:00",
+  "fetched_at": "2026-10-07T20:13:00+00:00",
   "filings": [
    {
     "dii": 26.0,
@@ -56309,7 +56301,7 @@
   "source": "NSE XBRL"
  },
  "KOTAKBANK": {
-  "fetched_at": "2026-10-06T19:49:00+00:00",
+  "fetched_at": "2026-10-07T20:13:02+00:00",
   "filings": [
    {
     "dii": 37.71,
@@ -56513,7 +56505,7 @@
   "source": "NSE XBRL"
  },
  "KPIL": {
-  "fetched_at": "2026-10-06T19:49:02+00:00",
+  "fetched_at": "2026-10-07T20:13:04+00:00",
   "filings": [
    {
     "dii": 44.83,
@@ -56765,7 +56757,7 @@
   "source": "NSE XBRL"
  },
  "KPITTECH": {
-  "fetched_at": "2026-10-06T19:49:04+00:00",
+  "fetched_at": "2026-10-07T20:13:06+00:00",
   "filings": [
    {
     "dii": 23.61,
@@ -56977,7 +56969,7 @@
   "source": "NSE XBRL"
  },
  "KPRMILL": {
-  "fetched_at": "2026-10-06T19:49:06+00:00",
+  "fetched_at": "2026-10-07T20:13:08+00:00",
   "filings": [
    {
     "dii": 19.25,
@@ -57117,7 +57109,7 @@
   "source": "NSE XBRL"
  },
  "KSB": {
-  "fetched_at": "2026-10-06T19:56:23+00:00",
+  "fetched_at": "2026-10-07T20:20:24+00:00",
   "filings": [
    {
     "dii": 11.77,
@@ -57273,7 +57265,7 @@
   "source": "NSE XBRL"
  },
  "LALPATHLAB": {
-  "fetched_at": "2026-10-06T19:49:08+00:00",
+  "fetched_at": "2026-10-07T20:13:10+00:00",
   "filings": [
    {
     "dii": 21.59,
@@ -57625,7 +57617,7 @@
   "source": "NSE XBRL"
  },
  "LAURUSLABS": {
-  "fetched_at": "2026-10-06T19:49:10+00:00",
+  "fetched_at": "2026-10-07T20:13:12+00:00",
   "filings": [
    {
     "dii": 13.74,
@@ -57813,7 +57805,7 @@
   "source": "NSE XBRL"
  },
  "LEMONTREE": {
-  "fetched_at": "2026-10-06T19:49:12+00:00",
+  "fetched_at": "2026-10-07T20:13:14+00:00",
   "filings": [
    {
     "dii": 14.35,
@@ -57985,7 +57977,7 @@
   "source": "NSE XBRL"
  },
  "LENSKART": {
-  "fetched_at": "2026-10-06T19:49:14+00:00",
+  "fetched_at": "2026-10-07T20:13:16+00:00",
   "filings": [
    {
     "dii": 23.57,
@@ -58285,7 +58277,7 @@
   "source": "NSE XBRL"
  },
  "LGEINDIA": {
-  "fetched_at": "2026-10-06T19:49:16+00:00",
+  "fetched_at": "2026-10-07T20:13:18+00:00",
   "filings": [
    {
     "dii": 7.84,
@@ -58337,7 +58329,7 @@
   "source": "NSE XBRL"
  },
  "LICHSGFIN": {
-  "fetched_at": "2026-10-06T19:49:18+00:00",
+  "fetched_at": "2026-10-07T20:13:20+00:00",
   "filings": [
    {
     "dii": 21.02,
@@ -58493,7 +58485,7 @@
   "source": "NSE XBRL"
  },
  "LICI": {
-  "fetched_at": "2026-10-06T19:49:20+00:00",
+  "fetched_at": "2026-10-07T20:13:22+00:00",
   "filings": [
    {
     "dii": 0.99,
@@ -58537,7 +58529,7 @@
   "source": "NSE XBRL"
  },
  "LINDEINDIA": {
-  "fetched_at": "2026-10-06T19:49:22+00:00",
+  "fetched_at": "2026-10-07T20:13:24+00:00",
   "filings": [
    {
     "dii": 6.79,
@@ -58645,7 +58637,7 @@
   "source": "NSE XBRL"
  },
  "LLOYDSME": {
-  "fetched_at": "2026-10-06T19:49:24+00:00",
+  "fetched_at": "2026-10-07T20:13:26+00:00",
   "filings": [
    {
     "dii": 2.19,
@@ -58849,7 +58841,7 @@
   "source": "NSE XBRL"
  },
  "LODHA": {
-  "fetched_at": "2026-10-06T19:49:26+00:00",
+  "fetched_at": "2026-10-07T20:13:28+00:00",
   "filings": [
    {
     "dii": 3.57,
@@ -58989,7 +58981,7 @@
   "source": "NSE XBRL"
  },
  "LT": {
-  "fetched_at": "2026-10-06T19:49:28+00:00",
+  "fetched_at": "2026-10-07T20:13:30+00:00",
   "filings": [
    {
     "dii": 43.02,
@@ -59209,7 +59201,7 @@
   "source": "NSE XBRL"
  },
  "LTF": {
-  "fetched_at": "2026-10-06T19:49:30+00:00",
+  "fetched_at": "2026-10-07T20:13:32+00:00",
   "filings": [
    {
     "dii": 14.9,
@@ -59325,7 +59317,7 @@
   "source": "NSE XBRL"
  },
  "LTFOODS": {
-  "fetched_at": "2026-10-06T19:49:32+00:00",
+  "fetched_at": "2026-10-07T20:13:34+00:00",
   "filings": [
    {
     "dii": 10.84,
@@ -59577,7 +59569,7 @@
   "source": "NSE XBRL"
  },
  "LTM": {
-  "fetched_at": "2026-10-06T19:49:34+00:00",
+  "fetched_at": "2026-10-07T20:13:36+00:00",
   "filings": [
    {
     "dii": 16.83,
@@ -59653,7 +59645,7 @@
   "source": "NSE XBRL"
  },
  "LTTS": {
-  "fetched_at": "2026-10-06T19:49:36+00:00",
+  "fetched_at": "2026-10-07T20:13:38+00:00",
   "filings": [
    {
     "dii": 14.05,
@@ -59745,7 +59737,7 @@
   "source": "NSE XBRL"
  },
  "LUPIN": {
-  "fetched_at": "2026-10-06T19:49:38+00:00",
+  "fetched_at": "2026-10-07T20:13:40+00:00",
   "filings": [
    {
     "dii": 24.65,
@@ -59909,7 +59901,7 @@
   "source": "NSE XBRL"
  },
  "M&M": {
-  "fetched_at": "2026-10-06T19:49:40+00:00",
+  "fetched_at": "2026-10-07T20:13:42+00:00",
   "filings": [
    {
     "dii": 32.65,
@@ -60185,7 +60177,7 @@
   "source": "NSE XBRL"
  },
  "M&MFIN": {
-  "fetched_at": "2026-10-06T19:49:42+00:00",
+  "fetched_at": "2026-10-07T20:13:44+00:00",
   "filings": [
    {
     "dii": 31.49,
@@ -60349,7 +60341,7 @@
   "source": "NSE XBRL"
  },
  "MAHABANK": {
-  "fetched_at": "2026-10-06T19:49:44+00:00",
+  "fetched_at": "2026-10-07T20:13:46+00:00",
   "filings": [
    {
     "dii": 14.27,
@@ -60441,7 +60433,7 @@
   "source": "NSE XBRL"
  },
  "MANAPPURAM": {
-  "fetched_at": "2026-10-06T19:49:46+00:00",
+  "fetched_at": "2026-10-07T20:13:48+00:00",
   "filings": [
    {
     "dii": 14.85,
@@ -60589,7 +60581,7 @@
   "source": "NSE XBRL"
  },
  "MANKIND": {
-  "fetched_at": "2026-10-06T19:49:48+00:00",
+  "fetched_at": "2026-10-07T20:13:50+00:00",
   "filings": [
    {
     "dii": 15.39,
@@ -60981,7 +60973,7 @@
   "source": "NSE XBRL"
  },
  "MARICO": {
-  "fetched_at": "2026-10-06T19:49:50+00:00",
+  "fetched_at": "2026-10-07T20:13:52+00:00",
   "filings": [
    {
     "dii": 13.02,
@@ -61249,7 +61241,7 @@
   "source": "NSE XBRL"
  },
  "MARUTI": {
-  "fetched_at": "2026-10-06T19:49:52+00:00",
+  "fetched_at": "2026-10-07T20:13:54+00:00",
   "filings": [
    {
     "dii": 25.18,
@@ -61437,7 +61429,7 @@
   "source": "NSE XBRL"
  },
  "MAXHEALTH": {
-  "fetched_at": "2026-10-06T19:49:54+00:00",
+  "fetched_at": "2026-10-07T20:13:56+00:00",
   "filings": [
    {
     "dii": 29.96,
@@ -61761,7 +61753,7 @@
   "source": "NSE XBRL"
  },
  "MAZDOCK": {
-  "fetched_at": "2026-10-06T19:49:56+00:00",
+  "fetched_at": "2026-10-07T20:13:58+00:00",
   "filings": [
    {
     "dii": 5.01,
@@ -61821,7 +61813,7 @@
   "source": "NSE XBRL"
  },
  "MEDANTA": {
-  "fetched_at": "2026-10-06T19:50:00+00:00",
+  "fetched_at": "2026-10-07T20:14:02+00:00",
   "filings": [
    {
     "dii": 16.89,
@@ -62025,7 +62017,7 @@
   "source": "NSE XBRL"
  },
  "MEESHO": {
-  "fetched_at": "2026-10-06T19:50:02+00:00",
+  "fetched_at": "2026-10-07T20:14:04+00:00",
   "filings": [
    {
     "dii": 13.66,
@@ -62293,7 +62285,7 @@
   "source": "NSE XBRL"
  },
  "MFSL": {
-  "fetched_at": "2026-10-06T19:50:04+00:00",
+  "fetched_at": "2026-10-07T20:14:06+00:00",
   "filings": [
    {
     "dii": 44.34,
@@ -62633,7 +62625,7 @@
   "source": "NSE XBRL"
  },
  "MGL": {
-  "fetched_at": "2026-10-06T19:50:06+00:00",
+  "fetched_at": "2026-10-07T20:14:08+00:00",
   "filings": [
    {
     "dii": 22.53,
@@ -62853,7 +62845,7 @@
   "source": "NSE XBRL"
  },
  "MINDACORP": {
-  "fetched_at": "2026-10-06T19:50:08+00:00",
+  "fetched_at": "2026-10-07T20:14:10+00:00",
   "filings": [
    {
     "dii": 17.87,
@@ -62945,7 +62937,7 @@
   "source": "NSE XBRL"
  },
  "MMTC": {
-  "fetched_at": "2026-10-06T19:50:10+00:00",
+  "fetched_at": "2026-10-07T20:14:12+00:00",
   "filings": [
    {
     "dii": 1.78,
@@ -63005,7 +62997,7 @@
   "source": "NSE XBRL"
  },
  "MOTHERSON": {
-  "fetched_at": "2026-10-06T19:50:12+00:00",
+  "fetched_at": "2026-10-07T20:14:14+00:00",
   "filings": [
    {
     "dii": 20.65,
@@ -63233,7 +63225,7 @@
   "source": "NSE XBRL"
  },
  "MOTILALOFS": {
-  "fetched_at": "2026-10-06T19:50:14+00:00",
+  "fetched_at": "2026-10-07T20:14:16+00:00",
   "filings": [
    {
     "dii": 6.78,
@@ -63493,7 +63485,7 @@
   "source": "NSE XBRL"
  },
  "MPHASIS": {
-  "fetched_at": "2026-10-06T19:50:16+00:00",
+  "fetched_at": "2026-10-07T20:14:18+00:00",
   "filings": [
    {
     "dii": 45.31,
@@ -63761,7 +63753,7 @@
   "source": "NSE XBRL"
  },
  "MRF": {
-  "fetched_at": "2026-10-06T19:50:18+00:00",
+  "fetched_at": "2026-10-07T20:14:20+00:00",
   "filings": [
    {
     "dii": 12.1,
@@ -63965,8 +63957,43 @@
   "source": "NSE XBRL"
  },
  "MRPL": {
-  "fetched_at": "2026-10-06T19:50:20+00:00",
+  "fetched_at": "2026-10-07T20:14:22+00:00",
   "filings": [
+   {
+    "dii": 0.54,
+    "fii": 2.45,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "Oil And Natural Gas Corporation Ltd",
+      "pct": 71.63,
+      "role": "promoter",
+      "shares": 1255354097
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "Hindustan Petroleum Corporation Limited",
+      "pct": 16.96,
+      "role": "promoter",
+      "shares": 297153518
+     },
+     {
+      "category": "DetailsOfSharesHeldByInvestorEducationAndProtectionFund",
+      "kind": "institution",
+      "name": "Investor Education And Protection Fund Authority Ministry Of Corporate Affairs",
+      "pct": 1.38,
+      "role": "public",
+      "shares": 24215968
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 88.58,
+    "public": 11.42,
+    "total_shares": 1752598777,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733841_07102026043054_WEB.xml"
+   },
    {
     "dii": 0.39,
     "fii": 2.17,
@@ -64001,47 +64028,12 @@
     "public": 11.42,
     "total_shares": 1752598777,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1688822_07072026035515_WEB.xml"
-   },
-   {
-    "dii": 0.34,
-    "fii": 3.41,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "Oil And Natural Gas Corporation Ltd",
-      "pct": 71.63,
-      "role": "promoter",
-      "shares": 1255354097
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "Hindustan Petroleum Corporation Limited",
-      "pct": 16.96,
-      "role": "promoter",
-      "shares": 297153518
-     },
-     {
-      "category": "DetailsOfSharesHeldByInvestorEducationAndProtectionFund",
-      "kind": "institution",
-      "name": "Investor Education And Protection Fund Authority Ministry Of Corporate Affairs",
-      "pct": 1.39,
-      "role": "public",
-      "shares": 24310610
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 88.58,
-    "public": 11.42,
-    "total_shares": 1752598777,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1646546_07042026121603_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "MSUMI": {
-  "fetched_at": "2026-10-06T19:50:22+00:00",
+  "fetched_at": "2026-10-07T20:14:24+00:00",
   "filings": [
    {
     "dii": 17.85,
@@ -64205,7 +64197,7 @@
   "source": "NSE XBRL"
  },
  "MTARTECH": {
-  "fetched_at": "2026-10-06T19:56:24+00:00",
+  "fetched_at": "2026-10-07T20:20:26+00:00",
   "filings": [
    {
     "dii": 22.35,
@@ -64505,7 +64497,7 @@
   "source": "NSE XBRL"
  },
  "MUTHOOTFIN": {
-  "fetched_at": "2026-10-06T19:50:24+00:00",
+  "fetched_at": "2026-10-07T20:14:26+00:00",
   "filings": [
    {
     "dii": 10.76,
@@ -64749,7 +64741,7 @@
   "source": "NSE XBRL"
  },
  "NAM-INDIA": {
-  "fetched_at": "2026-10-06T19:50:26+00:00",
+  "fetched_at": "2026-10-07T20:14:28+00:00",
   "filings": [
    {
     "dii": 15.49,
@@ -64865,7 +64857,7 @@
   "source": "NSE XBRL"
  },
  "NATCOPHARM": {
-  "fetched_at": "2026-10-06T19:50:28+00:00",
+  "fetched_at": "2026-10-07T20:14:30+00:00",
   "filings": [
    {
     "dii": 5.62,
@@ -65037,7 +65029,7 @@
   "source": "NSE XBRL"
  },
  "NATIONALUM": {
-  "fetched_at": "2026-10-06T19:50:30+00:00",
+  "fetched_at": "2026-10-07T20:14:32+00:00",
   "filings": [
    {
     "dii": 11.22,
@@ -65113,7 +65105,7 @@
   "source": "NSE XBRL"
  },
  "NAUKRI": {
-  "fetched_at": "2026-10-06T19:50:32+00:00",
+  "fetched_at": "2026-10-07T20:14:34+00:00",
   "filings": [
    {
     "dii": 27.82,
@@ -65397,7 +65389,7 @@
   "source": "NSE XBRL"
  },
  "NAVA": {
-  "fetched_at": "2026-10-06T19:50:34+00:00",
+  "fetched_at": "2026-10-07T20:14:36+00:00",
   "filings": [
    {
     "dii": 0.56,
@@ -65649,7 +65641,7 @@
   "source": "NSE XBRL"
  },
  "NAVINFLUOR": {
-  "fetched_at": "2026-10-06T19:50:36+00:00",
+  "fetched_at": "2026-10-07T20:14:38+00:00",
   "filings": [
    {
     "dii": 28.46,
@@ -65901,7 +65893,7 @@
   "source": "NSE XBRL"
  },
  "NBCC": {
-  "fetched_at": "2026-10-06T19:50:38+00:00",
+  "fetched_at": "2026-10-07T20:14:40+00:00",
   "filings": [
    {
     "dii": 11.27,
@@ -65993,8 +65985,99 @@
   "source": "NSE XBRL"
  },
  "NCC": {
-  "fetched_at": "2026-10-06T19:50:40+00:00",
+  "fetched_at": "2026-10-07T20:14:42+00:00",
   "filings": [
+   {
+    "dii": 18.16,
+    "fii": 10.45,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "A V S R HOLDINGS PRIVATE LIMITED",
+      "pct": 11.06,
+      "role": "promoter",
+      "shares": 69437916
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "REKHA JHUNJHUNWALA",
+      "pct": 10.63,
+      "role": "public",
+      "shares": 66733266
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "ICICI PRUDENTIAL SMALLCAP FUND",
+      "pct": 5.8,
+      "role": "public",
+      "shares": 36441380
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "QUANT MUTUAL FUND - QUANT MULTI CAP FUND",
+      "pct": 4.99,
+      "role": "public",
+      "shares": 31338509
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "SIRISHA PROJECTS PRIVATE LIMITED",
+      "pct": 4.03,
+      "role": "promoter",
+      "shares": 25305494
+     },
+     {
+      "category": "InsuranceCompanies",
+      "kind": "institution",
+      "name": "TATA AIA LIFE INSURANCE CO LTD-PENSION EQUITY FUND",
+      "pct": 2.3,
+      "role": "public",
+      "shares": 14462734
+     },
+     {
+      "category": "OtherNonInstitutions",
+      "kind": "institution",
+      "name": "REKHA JHUNJHUNWALA",
+      "pct": 1.85,
+      "role": "public",
+      "shares": 11600000
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "BANDHAN INFRASTRUCTURE FUND",
+      "pct": 1.13,
+      "role": "public",
+      "shares": 7113785
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "U SUNIL",
+      "pct": 1.12,
+      "role": "promoter",
+      "shares": 7055000
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "ISHARES CORE MSCI EMERGING MARKETS ETF",
+      "pct": 1.01,
+      "role": "public",
+      "shares": 6339128
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 23.19,
+    "public": 76.81,
+    "total_shares": 627846588,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733674_07102026121837_WEB.xml"
+   },
    {
     "dii": 17.89,
     "fii": 11.29,
@@ -66077,87 +66160,12 @@
     "public": 76.92,
     "total_shares": 627846588,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1691163_13072026115115_WEB.xml"
-   },
-   {
-    "dii": 16.4,
-    "fii": 12.11,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "A V S R HOLDINGS PRIVATE LIMITED",
-      "pct": 11.06,
-      "role": "promoter",
-      "shares": 69437916
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "REKHA JHUNJHUNWALA",
-      "pct": 10.63,
-      "role": "public",
-      "shares": 66733266
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "ICICI PRUDENTIAL LARGE & MID CAP FUND",
-      "pct": 6.77,
-      "role": "public",
-      "shares": 42485411
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "QUANT MUTUAL FUND - QUANT VALUE FUND",
-      "pct": 4.99,
-      "role": "public",
-      "shares": 31338509
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "SIRISHA PROJECTS PRIVATE LIMITED",
-      "pct": 3.66,
-      "role": "promoter",
-      "shares": 22950445
-     },
-     {
-      "category": "OtherNonInstitutions",
-      "kind": "institution",
-      "name": "REKHA JHUNJHUNWALA",
-      "pct": 1.85,
-      "role": "public",
-      "shares": 11600000
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "U SUNIL",
-      "pct": 1.12,
-      "role": "promoter",
-      "shares": 7055000
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "GOVERNMENT PENSION FUND GLOBAL",
-      "pct": 1.02,
-      "role": "public",
-      "shares": 6408562
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 22.81,
-    "public": 77.19,
-    "total_shares": 627846588,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1650418_14042026125258_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "NESTLEIND": {
-  "fetched_at": "2026-10-06T19:50:42+00:00",
+  "fetched_at": "2026-10-07T20:14:44+00:00",
   "filings": [
    {
     "dii": 11.9,
@@ -66241,7 +66249,7 @@
   "source": "NSE XBRL"
  },
  "NETWEB": {
-  "fetched_at": "2026-10-06T19:50:44+00:00",
+  "fetched_at": "2026-10-07T20:14:46+00:00",
   "filings": [
    {
     "dii": 5.91,
@@ -66381,7 +66389,7 @@
   "source": "NSE XBRL"
  },
  "NEULANDLAB": {
-  "fetched_at": "2026-10-06T19:50:46+00:00",
+  "fetched_at": "2026-10-07T20:14:48+00:00",
   "filings": [
    {
     "dii": 16.51,
@@ -66749,7 +66757,7 @@
   "source": "NSE XBRL"
  },
  "NH": {
-  "fetched_at": "2026-10-06T19:50:48+00:00",
+  "fetched_at": "2026-10-07T20:14:50+00:00",
   "filings": [
    {
     "dii": 9.06,
@@ -66945,7 +66953,7 @@
   "source": "NSE XBRL"
  },
  "NHPC": {
-  "fetched_at": "2026-10-06T19:50:50+00:00",
+  "fetched_at": "2026-10-07T20:14:52+00:00",
   "filings": [
    {
     "dii": 14.55,
@@ -67053,7 +67061,7 @@
   "source": "NSE XBRL"
  },
  "NIACL": {
-  "fetched_at": "2026-10-06T19:50:52+00:00",
+  "fetched_at": "2026-10-07T20:14:54+00:00",
   "filings": [
    {
     "dii": 11.18,
@@ -67129,7 +67137,7 @@
   "source": "NSE XBRL"
  },
  "NITINSPIN": {
-  "fetched_at": "2026-10-06T19:57:06+00:00",
+  "fetched_at": "2026-10-07T20:21:08+00:00",
   "filings": [
    {
     "dii": 14.68,
@@ -67521,7 +67529,7 @@
   "source": "NSE XBRL"
  },
  "NLCINDIA": {
-  "fetched_at": "2026-10-06T19:50:54+00:00",
+  "fetched_at": "2026-10-07T20:14:56+00:00",
   "filings": [
    {
     "dii": 12.94,
@@ -67661,7 +67669,7 @@
   "source": "NSE XBRL"
  },
  "NMDC": {
-  "fetched_at": "2026-10-06T19:50:56+00:00",
+  "fetched_at": "2026-10-07T20:14:58+00:00",
   "filings": [
    {
     "dii": 13.81,
@@ -67745,7 +67753,7 @@
   "source": "NSE XBRL"
  },
  "NOCIL": {
-  "fetched_at": "2026-10-06T19:57:08+00:00",
+  "fetched_at": "2026-10-07T20:21:10+00:00",
   "filings": [
    {
     "dii": 7.47,
@@ -67917,7 +67925,7 @@
   "source": "NSE XBRL"
  },
  "NSLNISP": {
-  "fetched_at": "2026-10-06T19:50:58+00:00",
+  "fetched_at": "2026-10-07T20:15:00+00:00",
   "filings": [
    {
     "dii": 15.78,
@@ -67977,7 +67985,7 @@
   "source": "NSE XBRL"
  },
  "NTPC": {
-  "fetched_at": "2026-10-06T19:51:00+00:00",
+  "fetched_at": "2026-10-07T20:15:02+00:00",
   "filings": [
    {
     "dii": 29.44,
@@ -68149,7 +68157,7 @@
   "source": "NSE XBRL"
  },
  "NTPCGREEN": {
-  "fetched_at": "2026-10-06T19:51:02+00:00",
+  "fetched_at": "2026-10-07T20:15:04+00:00",
   "filings": [
    {
     "dii": 5.21,
@@ -68225,7 +68233,7 @@
   "source": "NSE XBRL"
  },
  "NUVAMA": {
-  "fetched_at": "2026-10-06T19:51:04+00:00",
+  "fetched_at": "2026-10-07T20:15:06+00:00",
   "filings": [
    {
     "dii": 8.49,
@@ -68357,7 +68365,7 @@
   "source": "NSE XBRL"
  },
  "NUVOCO": {
-  "fetched_at": "2026-10-06T19:51:06+00:00",
+  "fetched_at": "2026-10-07T20:15:08+00:00",
   "filings": [
    {
     "dii": 17.99,
@@ -68489,7 +68497,7 @@
   "source": "NSE XBRL"
  },
  "NYKAA": {
-  "fetched_at": "2026-10-06T19:51:08+00:00",
+  "fetched_at": "2026-10-07T20:15:10+00:00",
   "filings": [
    {
     "dii": 24.08,
@@ -68789,7 +68797,7 @@
   "source": "NSE XBRL"
  },
  "OBEROIRLTY": {
-  "fetched_at": "2026-10-06T19:51:10+00:00",
+  "fetched_at": "2026-10-07T20:15:12+00:00",
   "filings": [
    {
     "dii": 14.83,
@@ -68905,7 +68913,7 @@
   "source": "NSE XBRL"
  },
  "OFSS": {
-  "fetched_at": "2026-10-06T19:51:12+00:00",
+  "fetched_at": "2026-10-07T20:15:14+00:00",
   "filings": [
    {
     "dii": 8.79,
@@ -68981,7 +68989,7 @@
   "source": "NSE XBRL"
  },
  "OIL": {
-  "fetched_at": "2026-10-06T19:51:14+00:00",
+  "fetched_at": "2026-10-07T20:15:16+00:00",
   "filings": [
    {
     "dii": 20.14,
@@ -69145,7 +69153,7 @@
   "source": "NSE XBRL"
  },
  "OLAELEC": {
-  "fetched_at": "2026-10-06T19:51:16+00:00",
+  "fetched_at": "2026-10-07T20:15:18+00:00",
   "filings": [
    {
     "dii": 12.16,
@@ -69285,7 +69293,7 @@
   "source": "NSE XBRL"
  },
  "OLECTRA": {
-  "fetched_at": "2026-10-06T19:51:18+00:00",
+  "fetched_at": "2026-10-07T20:15:20+00:00",
   "filings": [
    {
     "dii": 0.57,
@@ -69329,7 +69337,7 @@
   "source": "NSE XBRL"
  },
  "ONESOURCE": {
-  "fetched_at": "2026-10-06T19:51:20+00:00",
+  "fetched_at": "2026-10-07T20:15:22+00:00",
   "filings": [
    {
     "dii": 23.38,
@@ -69605,7 +69613,7 @@
   "source": "NSE XBRL"
  },
  "ONGC": {
-  "fetched_at": "2026-10-06T19:51:22+00:00",
+  "fetched_at": "2026-10-07T20:15:24+00:00",
   "filings": [
    {
     "dii": 19.31,
@@ -69745,7 +69753,7 @@
   "source": "NSE XBRL"
  },
  "ORIENTBELL": {
-  "fetched_at": "2026-10-06T19:57:10+00:00",
+  "fetched_at": "2026-10-07T20:21:12+00:00",
   "filings": [
    {
     "dii": 0.02,
@@ -69917,7 +69925,7 @@
   "source": "NSE XBRL"
  },
  "PAGEIND": {
-  "fetched_at": "2026-10-06T19:51:24+00:00",
+  "fetched_at": "2026-10-07T20:15:26+00:00",
   "filings": [
    {
     "dii": 33.64,
@@ -70209,8 +70217,219 @@
   "source": "NSE XBRL"
  },
  "PANAMAPET": {
-  "fetched_at": "2026-10-06T19:57:12+00:00",
+  "fetched_at": "2026-10-07T20:21:14+00:00",
   "filings": [
+   {
+    "dii": 0.01,
+    "fii": 11.13,
+    "holders": [
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "AMIN AMIRALI RAYANI",
+      "pct": 8.04,
+      "role": "promoter",
+      "shares": 4863401
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "ITTEFAQ ICE AND COLD STORAGE COMPANY PRIVATE LIMITED",
+      "pct": 7.6,
+      "role": "promoter",
+      "shares": 4596293
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "ARIF AMIRALI RAYANI",
+      "pct": 6.07,
+      "role": "promoter",
+      "shares": 3670567
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "SHELINA ARIF RAYANI",
+      "pct": 5.27,
+      "role": "promoter",
+      "shares": 3190462
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "PANAMA BUILDERS DEVELOPERS PVT LTD",
+      "pct": 4.66,
+      "role": "promoter",
+      "shares": 2819865
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "BEGUMBANU AKBERALI RAYANI",
+      "pct": 4.14,
+      "role": "promoter",
+      "shares": 2504160
+     },
+     {
+      "category": "DetailsOfSharesHeldByForeignCompanies",
+      "kind": "institution",
+      "name": "CONNECOR INVESTMENT ENTERPRISE LTD",
+      "pct": 3.72,
+      "role": "public",
+      "shares": 2250000
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "SAMIR AKBARALI RAYANI",
+      "pct": 3.32,
+      "role": "promoter",
+      "shares": 2008703
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorTwo",
+      "kind": "institution",
+      "name": "ALLSTARS INVESTMENTS LIMITED",
+      "pct": 3.19,
+      "role": "public",
+      "shares": 1932541
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "CHEMNIE AMIN RAYANI",
+      "pct": 3.07,
+      "role": "promoter",
+      "shares": 1859449
+     },
+     {
+      "category": "NonResidentIndividualsOrForeignIndividuals",
+      "kind": "individual",
+      "name": "IQBAL VAZIRALI RAYANI",
+      "pct": 3.03,
+      "role": "other",
+      "shares": 1832977
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorTwo",
+      "kind": "institution",
+      "name": "LGOF GLOBAL OPPORTUNITIES LIMITED",
+      "pct": 2.87,
+      "role": "public",
+      "shares": 1735693
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "AKBARALI ESSABHI RAYANI",
+      "pct": 2.64,
+      "role": "promoter",
+      "shares": 1595346
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "SALIM ESSABHAI RAYANI",
+      "pct": 2.52,
+      "role": "promoter",
+      "shares": 1521587
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "SAPNA SAMIR RAYANI",
+      "pct": 2.52,
+      "role": "promoter",
+      "shares": 1522207
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "VAZIRALI ESSABHAI RAYANI",
+      "pct": 2.06,
+      "role": "promoter",
+      "shares": 1246965
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "HUSSEIN VAZIRALI RAYANI",
+      "pct": 1.98,
+      "role": "promoter",
+      "shares": 1196159
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "LEGENDS GLOBAL OPPORTUNITIES (SINGAPORE) PTE. LTD.",
+      "pct": 1.89,
+      "role": "public",
+      "shares": 1145000
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "MALIKA VAZIRALI RAYANI",
+      "pct": 1.67,
+      "role": "promoter",
+      "shares": 1011342
+     },
+     {
+      "category": "NonResidentIndividualsOrForeignIndividuals",
+      "kind": "individual",
+      "name": "AHYMAN ARIF RAYANI",
+      "pct": 1.67,
+      "role": "other",
+      "shares": 1012508
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorTwo",
+      "kind": "institution",
+      "name": "ABRIDGE INVESTMENTS LTD",
+      "pct": 1.53,
+      "role": "public",
+      "shares": 928051
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "MUNIRA HUSSEIN RAYANI",
+      "pct": 1.47,
+      "role": "promoter",
+      "shares": 888750
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "RAMESH DAMANI",
+      "pct": 1.22,
+      "role": "public",
+      "shares": 740957
+     },
+     {
+      "category": "NonResidentIndividualsOrForeignIndividuals",
+      "kind": "individual",
+      "name": "SERENA IQBAL RAYANI",
+      "pct": 1.19,
+      "role": "other",
+      "shares": 720000
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "ANIL KUMAR GOEL",
+      "pct": 1.07,
+      "role": "public",
+      "shares": 650000
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 63.16,
+    "public": 36.84,
+    "total_shares": 60493598,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733725_07102026014702_WEB.xml"
+   },
    {
     "dii": 0.67,
     "fii": 11.72,
@@ -70421,223 +70640,12 @@
     "public": 36.84,
     "total_shares": 60493598,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1690188_10072026115613_WEB.xml"
-   },
-   {
-    "dii": 0.67,
-    "fii": 11.29,
-    "holders": [
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "AMIN AMIRALI RAYANI",
-      "pct": 8.04,
-      "role": "promoter",
-      "shares": 4863401
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "ITTEFAQ ICE AND COLD STORAGE COMPANY PRIVATE LIMITED",
-      "pct": 7.6,
-      "role": "promoter",
-      "shares": 4596293
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "ARIF AMIRALI RAYANI",
-      "pct": 6.07,
-      "role": "promoter",
-      "shares": 3670567
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "SHELINA ARIF RAYANI",
-      "pct": 5.27,
-      "role": "promoter",
-      "shares": 3190462
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "PANAMA BUILDERS DEVELOPERS PVT LTD",
-      "pct": 4.66,
-      "role": "promoter",
-      "shares": 2819865
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "BEGUMBANU AKBERALI RAYANI",
-      "pct": 4.14,
-      "role": "promoter",
-      "shares": 2504160
-     },
-     {
-      "category": "DetailsOfSharesHeldByForeignCompanies",
-      "kind": "institution",
-      "name": "CONNECOR INVESTMENT ENTERPRISE LTD",
-      "pct": 3.72,
-      "role": "public",
-      "shares": 2250000
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorTwo",
-      "kind": "institution",
-      "name": "LGOF GLOBAL OPPORTUNITIES LIMITED",
-      "pct": 3.53,
-      "role": "public",
-      "shares": 2135693
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "SAMIR AKBARALI RAYANI",
-      "pct": 3.32,
-      "role": "promoter",
-      "shares": 2008703
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "CHEMNIE AMIN RAYANI",
-      "pct": 3.07,
-      "role": "promoter",
-      "shares": 1859449
-     },
-     {
-      "category": "NonResidentIndividualsOrForeignIndividuals",
-      "kind": "individual",
-      "name": "IQBAL VAZIRALI RAYANI",
-      "pct": 3.03,
-      "role": "other",
-      "shares": 1832977
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorTwo",
-      "kind": "institution",
-      "name": "ABRIDGE INVESTMENTS LTD",
-      "pct": 2.7,
-      "role": "public",
-      "shares": 1635069
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "AKBARALI ESSABHI RAYANI",
-      "pct": 2.64,
-      "role": "promoter",
-      "shares": 1595346
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "SALIM ESSABHAI RAYANI",
-      "pct": 2.52,
-      "role": "promoter",
-      "shares": 1521587
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "SAPNA SAMIR RAYANI",
-      "pct": 2.52,
-      "role": "promoter",
-      "shares": 1522207
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "VAZIRALI ESSABHAI RAYANI",
-      "pct": 2.06,
-      "role": "promoter",
-      "shares": 1246965
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "HUSSEIN VAZIRALI RAYANI",
-      "pct": 1.98,
-      "role": "promoter",
-      "shares": 1196159
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "LEGENDS GLOBAL OPPORTUNITIES (SINGAPORE) PTE. LTD.",
-      "pct": 1.89,
-      "role": "public",
-      "shares": 1145000
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "MALIKA VAZIRALI RAYANI",
-      "pct": 1.67,
-      "role": "promoter",
-      "shares": 1011342
-     },
-     {
-      "category": "NonResidentIndividualsOrForeignIndividuals",
-      "kind": "individual",
-      "name": "AHYMAN ARIF RAYANI",
-      "pct": 1.67,
-      "role": "other",
-      "shares": 1012508
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorTwo",
-      "kind": "institution",
-      "name": "ALLSTARS INVESTMENTS LIMITED",
-      "pct": 1.63,
-      "role": "public",
-      "shares": 987541
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "MUNIRA HUSSEIN RAYANI",
-      "pct": 1.47,
-      "role": "promoter",
-      "shares": 888750
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "ANIL KUMAR GOEL",
-      "pct": 1.21,
-      "role": "public",
-      "shares": 730000
-     },
-     {
-      "category": "NonResidentIndividualsOrForeignIndividuals",
-      "kind": "individual",
-      "name": "SERENA IQBAL RAYANI",
-      "pct": 1.19,
-      "role": "other",
-      "shares": 720000
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "RAMESH DAMANI",
-      "pct": 1.12,
-      "role": "public",
-      "shares": 678456
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 63.16,
-    "public": 36.84,
-    "total_shares": 60493598,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1649532_13042026114910_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "PARADEEP": {
-  "fetched_at": "2026-10-06T19:51:26+00:00",
+  "fetched_at": "2026-10-07T20:15:28+00:00",
   "filings": [
    {
     "dii": 18.08,
@@ -70809,7 +70817,7 @@
   "source": "NSE XBRL"
  },
  "PATANJALI": {
-  "fetched_at": "2026-10-06T19:51:28+00:00",
+  "fetched_at": "2026-10-07T20:15:30+00:00",
   "filings": [
    {
     "dii": 11.05,
@@ -70957,7 +70965,7 @@
   "source": "NSE XBRL"
  },
  "PAYTM": {
-  "fetched_at": "2026-10-06T19:51:30+00:00",
+  "fetched_at": "2026-10-07T20:15:33+00:00",
   "filings": [
    {
     "dii": 24.87,
@@ -71249,7 +71257,7 @@
   "source": "NSE XBRL"
  },
  "PCBL": {
-  "fetched_at": "2026-10-06T19:51:32+00:00",
+  "fetched_at": "2026-10-07T20:15:34+00:00",
   "filings": [
    {
     "dii": 11.27,
@@ -71437,7 +71445,7 @@
   "source": "NSE XBRL"
  },
  "PERSISTENT": {
-  "fetched_at": "2026-10-06T19:51:34+00:00",
+  "fetched_at": "2026-10-07T20:15:36+00:00",
   "filings": [
    {
     "dii": 30.24,
@@ -71673,7 +71681,7 @@
   "source": "NSE XBRL"
  },
  "PETRONET": {
-  "fetched_at": "2026-10-06T19:51:36+00:00",
+  "fetched_at": "2026-10-07T20:15:38+00:00",
   "filings": [
    {
     "dii": 13.68,
@@ -71845,7 +71853,7 @@
   "source": "NSE XBRL"
  },
  "PFC": {
-  "fetched_at": "2026-10-06T19:51:38+00:00",
+  "fetched_at": "2026-10-07T20:15:40+00:00",
   "filings": [
    {
     "dii": 14.51,
@@ -72205,7 +72213,7 @@
   "source": "NSE XBRL"
  },
  "PFOCUS": {
-  "fetched_at": "2026-10-06T19:51:40+00:00",
+  "fetched_at": "2026-10-07T20:15:42+00:00",
   "filings": [
    {
     "dii": 1.07,
@@ -72377,7 +72385,7 @@
   "source": "NSE XBRL"
  },
  "PGEL": {
-  "fetched_at": "2026-10-06T19:51:42+00:00",
+  "fetched_at": "2026-10-07T20:15:44+00:00",
   "filings": [
    {
     "dii": 23.89,
@@ -72581,7 +72589,7 @@
   "source": "NSE XBRL"
  },
  "PHOENIXLTD": {
-  "fetched_at": "2026-10-06T19:51:44+00:00",
+  "fetched_at": "2026-10-07T20:15:47+00:00",
   "filings": [
    {
     "dii": 17.39,
@@ -72793,7 +72801,7 @@
   "source": "NSE XBRL"
  },
  "PIDILITIND": {
-  "fetched_at": "2026-10-06T19:51:46+00:00",
+  "fetched_at": "2026-10-07T20:15:48+00:00",
   "filings": [
    {
     "dii": 9.88,
@@ -73133,7 +73141,7 @@
   "source": "NSE XBRL"
  },
  "PIIND": {
-  "fetched_at": "2026-10-06T19:51:48+00:00",
+  "fetched_at": "2026-10-07T20:15:50+00:00",
   "filings": [
    {
     "dii": 31.64,
@@ -73393,7 +73401,7 @@
   "source": "NSE XBRL"
  },
  "PINELABS": {
-  "fetched_at": "2026-10-06T19:51:50+00:00",
+  "fetched_at": "2026-10-07T20:15:52+00:00",
   "filings": [
    {
     "dii": 24.82,
@@ -73781,7 +73789,7 @@
   "source": "NSE XBRL"
  },
  "PIRAMALFIN": {
-  "fetched_at": "2026-10-06T19:51:52+00:00",
+  "fetched_at": "2026-10-07T20:15:54+00:00",
   "filings": [
    {
     "dii": 18.63,
@@ -74041,7 +74049,7 @@
   "source": "NSE XBRL"
  },
  "PNB": {
-  "fetched_at": "2026-10-06T19:51:54+00:00",
+  "fetched_at": "2026-10-07T20:15:56+00:00",
   "filings": [
    {
     "dii": 16.07,
@@ -74117,7 +74125,7 @@
   "source": "NSE XBRL"
  },
  "PNBHOUSING": {
-  "fetched_at": "2026-10-06T19:51:56+00:00",
+  "fetched_at": "2026-10-07T20:15:58+00:00",
   "filings": [
    {
     "dii": 45.71,
@@ -74433,7 +74441,7 @@
   "source": "NSE XBRL"
  },
  "POLICYBZR": {
-  "fetched_at": "2026-10-06T19:51:58+00:00",
+  "fetched_at": "2026-10-07T20:16:00+00:00",
   "filings": [
    {
     "dii": 40.42,
@@ -74813,7 +74821,7 @@
   "source": "NSE XBRL"
  },
  "POLYCAB": {
-  "fetched_at": "2026-10-06T19:52:00+00:00",
+  "fetched_at": "2026-10-07T20:16:02+00:00",
   "filings": [
    {
     "dii": 7.62,
@@ -75081,7 +75089,7 @@
   "source": "NSE XBRL"
  },
  "POLYMED": {
-  "fetched_at": "2026-10-06T19:52:02+00:00",
+  "fetched_at": "2026-10-07T20:16:04+00:00",
   "filings": [
    {
     "dii": 16.08,
@@ -75437,7 +75445,7 @@
   "source": "NSE XBRL"
  },
  "POONAWALLA": {
-  "fetched_at": "2026-10-06T19:52:04+00:00",
+  "fetched_at": "2026-10-07T20:16:06+00:00",
   "filings": [
    {
     "dii": 16.74,
@@ -75569,7 +75577,7 @@
   "source": "NSE XBRL"
  },
  "POWERGRID": {
-  "fetched_at": "2026-10-06T19:52:06+00:00",
+  "fetched_at": "2026-10-07T20:16:08+00:00",
   "filings": [
    {
     "dii": 20.7,
@@ -75773,7 +75781,7 @@
   "source": "NSE XBRL"
  },
  "POWERINDIA": {
-  "fetched_at": "2026-10-06T19:52:08+00:00",
+  "fetched_at": "2026-10-07T20:16:10+00:00",
   "filings": [
    {
     "dii": 6.33,
@@ -75817,7 +75825,7 @@
   "source": "NSE XBRL"
  },
  "PPLPHARMA": {
-  "fetched_at": "2026-10-06T19:52:10+00:00",
+  "fetched_at": "2026-10-07T20:16:12+00:00",
   "filings": [
    {
     "dii": 14.57,
@@ -75965,7 +75973,7 @@
   "source": "NSE XBRL"
  },
  "PREMIERENE": {
-  "fetched_at": "2026-10-06T19:52:12+00:00",
+  "fetched_at": "2026-10-07T20:16:14+00:00",
   "filings": [
    {
     "dii": 17.97,
@@ -76145,7 +76153,7 @@
   "source": "NSE XBRL"
  },
  "PRESTIGE": {
-  "fetched_at": "2026-10-06T19:52:14+00:00",
+  "fetched_at": "2026-10-07T20:16:16+00:00",
   "filings": [
    {
     "dii": 23.51,
@@ -76373,7 +76381,7 @@
   "source": "NSE XBRL"
  },
  "PRIVISCL": {
-  "fetched_at": "2026-10-06T19:56:27+00:00",
+  "fetched_at": "2026-10-07T20:20:28+00:00",
   "filings": [
    {
     "dii": 10.08,
@@ -76633,7 +76641,7 @@
   "source": "NSE XBRL"
  },
  "PTCIL": {
-  "fetched_at": "2026-10-06T19:52:16+00:00",
+  "fetched_at": "2026-10-07T20:16:18+00:00",
   "filings": [
    {
     "dii": 9.35,
@@ -76901,7 +76909,7 @@
   "source": "NSE XBRL"
  },
  "PVRINOX": {
-  "fetched_at": "2026-10-06T19:52:18+00:00",
+  "fetched_at": "2026-10-07T20:16:20+00:00",
   "filings": [
    {
     "dii": 35.72,
@@ -77145,7 +77153,7 @@
   "source": "NSE XBRL"
  },
  "PWL": {
-  "fetched_at": "2026-10-06T19:52:20+00:00",
+  "fetched_at": "2026-10-07T20:16:22+00:00",
   "filings": [
    {
     "dii": 13.11,
@@ -77293,7 +77301,7 @@
   "source": "NSE XBRL"
  },
  "RADICO": {
-  "fetched_at": "2026-10-06T19:52:22+00:00",
+  "fetched_at": "2026-10-07T20:16:24+00:00",
   "filings": [
    {
     "dii": 28.09,
@@ -77561,7 +77569,7 @@
   "source": "NSE XBRL"
  },
  "RAILTEL": {
-  "fetched_at": "2026-10-06T19:52:24+00:00",
+  "fetched_at": "2026-10-07T20:16:26+00:00",
   "filings": [
    {
     "dii": 0.98,
@@ -77605,7 +77613,7 @@
   "source": "NSE XBRL"
  },
  "RAINBOW": {
-  "fetched_at": "2026-10-06T19:52:26+00:00",
+  "fetched_at": "2026-10-07T20:16:29+00:00",
   "filings": [
    {
     "dii": 22.56,
@@ -77913,7 +77921,7 @@
   "source": "NSE XBRL"
  },
  "RAMCOCEM": {
-  "fetched_at": "2026-10-06T19:52:28+00:00",
+  "fetched_at": "2026-10-07T20:16:30+00:00",
   "filings": [
    {
     "dii": 29.5,
@@ -78221,7 +78229,7 @@
   "source": "NSE XBRL"
  },
  "RAYMOND": {
-  "fetched_at": "2026-10-06T19:57:14+00:00",
+  "fetched_at": "2026-10-07T20:21:16+00:00",
   "filings": [
    {
     "dii": 3.81,
@@ -78361,7 +78369,7 @@
   "source": "NSE XBRL"
  },
  "RBLBANK": {
-  "fetched_at": "2026-10-06T19:52:30+00:00",
+  "fetched_at": "2026-10-07T20:16:32+00:00",
   "filings": [
    {
     "dii": 17.05,
@@ -78613,7 +78621,7 @@
   "source": "NSE XBRL"
  },
  "RECLTD": {
-  "fetched_at": "2026-10-06T19:52:32+00:00",
+  "fetched_at": "2026-10-07T20:16:34+00:00",
   "filings": [
    {
     "dii": 16.98,
@@ -78729,7 +78737,7 @@
   "source": "NSE XBRL"
  },
  "REDINGTON": {
-  "fetched_at": "2026-10-06T19:52:34+00:00",
+  "fetched_at": "2026-10-07T20:16:36+00:00",
   "filings": [
    {
     "dii": 16.37,
@@ -78957,7 +78965,7 @@
   "source": "NSE XBRL"
  },
  "RELIANCE": {
-  "fetched_at": "2026-10-06T19:52:36+00:00",
+  "fetched_at": "2026-10-07T20:16:38+00:00",
   "filings": [
    {
     "dii": 21.19,
@@ -79177,7 +79185,7 @@
   "source": "NSE XBRL"
  },
  "RHIM": {
-  "fetched_at": "2026-10-06T19:52:38+00:00",
+  "fetched_at": "2026-10-07T20:16:40+00:00",
   "filings": [
    {
     "dii": 14.35,
@@ -79373,7 +79381,7 @@
   "source": "NSE XBRL"
  },
  "RITES": {
-  "fetched_at": "2026-10-06T19:52:40+00:00",
+  "fetched_at": "2026-10-07T20:16:42+00:00",
   "filings": [
    {
     "dii": 8.75,
@@ -79449,7 +79457,7 @@
   "source": "NSE XBRL"
  },
  "RKFORGE": {
-  "fetched_at": "2026-10-06T19:52:42+00:00",
+  "fetched_at": "2026-10-07T20:16:44+00:00",
   "filings": [
    {
     "dii": 5.09,
@@ -79757,7 +79765,7 @@
   "source": "NSE XBRL"
  },
  "RPOWER": {
-  "fetched_at": "2026-10-06T19:52:44+00:00",
+  "fetched_at": "2026-10-07T20:16:46+00:00",
   "filings": [
    {
     "dii": 2.79,
@@ -79865,7 +79873,7 @@
   "source": "NSE XBRL"
  },
  "RRKABEL": {
-  "fetched_at": "2026-10-06T19:52:46+00:00",
+  "fetched_at": "2026-10-07T20:16:48+00:00",
   "filings": [
    {
     "dii": 11.87,
@@ -80269,7 +80277,7 @@
   "source": "NSE XBRL"
  },
  "RSYSTEMS": {
-  "fetched_at": "2026-10-06T19:57:16+00:00",
+  "fetched_at": "2026-10-07T20:21:18+00:00",
   "filings": [
    {
     "dii": 6.53,
@@ -80401,7 +80409,7 @@
   "source": "NSE XBRL"
  },
  "RUBICON": {
-  "fetched_at": "2026-10-06T19:56:29+00:00",
+  "fetched_at": "2026-10-07T20:20:30+00:00",
   "filings": [
    {
     "dii": 9.43,
@@ -80637,7 +80645,7 @@
   "source": "NSE XBRL"
  },
  "RVNL": {
-  "fetched_at": "2026-10-06T19:52:48+00:00",
+  "fetched_at": "2026-10-07T20:16:50+00:00",
   "filings": [
    {
     "dii": 6.6,
@@ -80697,7 +80705,7 @@
   "source": "NSE XBRL"
  },
  "SAFARI": {
-  "fetched_at": "2026-10-06T19:57:18+00:00",
+  "fetched_at": "2026-10-07T20:21:20+00:00",
   "filings": [
    {
     "dii": 28.26,
@@ -81013,7 +81021,7 @@
   "source": "NSE XBRL"
  },
  "SAGILITY": {
-  "fetched_at": "2026-10-06T19:52:50+00:00",
+  "fetched_at": "2026-10-07T20:16:52+00:00",
   "filings": [
    {
     "dii": 21.42,
@@ -81169,7 +81177,7 @@
   "source": "NSE XBRL"
  },
  "SAIL": {
-  "fetched_at": "2026-10-06T19:52:52+00:00",
+  "fetched_at": "2026-10-07T20:16:54+00:00",
   "filings": [
    {
     "dii": 16.86,
@@ -81253,8 +81261,139 @@
   "source": "NSE XBRL"
  },
  "SAILIFE": {
-  "fetched_at": "2026-10-06T19:52:54+00:00",
+  "fetched_at": "2026-10-07T20:16:56+00:00",
   "filings": [
+   {
+    "dii": 32.32,
+    "fii": 19.91,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "MYTREYI KANUMURI Partner of Marigold Partners (Partnership Firm)",
+      "pct": 10.44,
+      "role": "promoter",
+      "shares": 22185550
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "INVESCO INDIA FLEXI CAP FUND",
+      "pct": 7.43,
+      "role": "public",
+      "shares": 15773430
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "RANGA RAJU KANUMURI Partner of Sunflower Partners (Partnership Firm)",
+      "pct": 7.34,
+      "role": "promoter",
+      "shares": 15593570
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "NIPPON LIFE INDIA TRUSTEE LTD-A/C NIPPON INDIA MUL",
+      "pct": 6.79,
+      "role": "public",
+      "shares": 14413580
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "GOKARAJU SUBBA RAJU",
+      "pct": 4.54,
+      "role": "promoter",
+      "shares": 9634450
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "MYTREYI KANUMURI Partner of Tulip Partners (Partnership Firm)",
+      "pct": 4.37,
+      "role": "promoter",
+      "shares": 9282060
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "RANGA RAJU KANUMURI Partner of Lily Partners (Partnership Firm)",
+      "pct": 3.25,
+      "role": "promoter",
+      "shares": 6900740
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "AXIS MUTUAL FUND TRUSTEE LIMITED A/C AXIS MUTUAL F",
+      "pct": 3.19,
+      "role": "public",
+      "shares": 6769714
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "ADITYA BIRLA SUN LIFE MUTUAL FUND - ADITYA BIRLA S",
+      "pct": 2.81,
+      "role": "public",
+      "shares": 5969359
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "SMALLCAP WORLD FUND, INC",
+      "pct": 2.57,
+      "role": "public",
+      "shares": 5458706
+     },
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "SAI QUEST SYN PRIVATE LIMITED",
+      "pct": 2.16,
+      "role": "promoter",
+      "shares": 4591100
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "HSBC MUTUAL FUND - HSBC AGGRESSIVE HYBRID FUND",
+      "pct": 1.86,
+      "role": "public",
+      "shares": 3944596
+     },
+     {
+      "category": "InsuranceCompanies",
+      "kind": "institution",
+      "name": "AXIS MAX LIFE INSURANCE LIMITED A/C - ULIF00525/11",
+      "pct": 1.52,
+      "role": "public",
+      "shares": 3228566
+     },
+     {
+      "category": "NonResidentIndividualsOrForeignIndividuals",
+      "kind": "individual",
+      "name": "KRISHNAM RAJU KANUMURI",
+      "pct": 1.42,
+      "role": "other",
+      "shares": 3008400
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "GOLDMAN SACHS FUNDS - GOLDMAN SACHS INDIA EQUITY P",
+      "pct": 1.18,
+      "role": "public",
+      "shares": 2497558
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 34.5,
+    "public": 65.5,
+    "total_shares": 212418216,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733965_07102026063003_WEB.xml"
+   },
    {
     "dii": 32.71,
     "fii": 19.65,
@@ -81417,183 +81556,12 @@
     "public": 65.47,
     "total_shares": 212286016,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1697026_20072026050427_WEB.xml"
-   },
-   {
-    "dii": 31.54,
-    "fii": 21.17,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "MYTREYI KANUMURI Partner of Marigold Partners (Partnership Firm)",
-      "pct": 10.48,
-      "role": "promoter",
-      "shares": 22185550
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "RANGA RAJU KANUMURI Partner of Sunflower Partners (Partnership Firm)",
-      "pct": 7.36,
-      "role": "promoter",
-      "shares": 15593570
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "INVESCO INDIA BUSINESS CYCLE FUND",
-      "pct": 7.27,
-      "role": "public",
-      "shares": 15398592
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "NIPPON LIFE INDIA TRUSTEE LTD A/C NIPPON INDIA MNC",
-      "pct": 6.16,
-      "role": "public",
-      "shares": 13039733
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "GOKARAJU SUBBA RAJU",
-      "pct": 4.55,
-      "role": "promoter",
-      "shares": 9634450
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "MYTREYI KANUMURI Partner of Tulip Partners (Partnership Firm)",
-      "pct": 4.38,
-      "role": "promoter",
-      "shares": 9282060
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "RANGA RAJU KANUMURI Partner of Lily Partners (Partnership Firm)",
-      "pct": 3.26,
-      "role": "promoter",
-      "shares": 6900740
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "AXIS MUTUAL FUND TRUSTEE LIMITED A/C AXIS MUTUAL F",
-      "pct": 2.94,
-      "role": "public",
-      "shares": 6226121
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "SMALLCAP WORLD FUND, INC",
-      "pct": 2.58,
-      "role": "public",
-      "shares": 5458706
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "ADITYA BIRLA SUN LIFE TRUSTEE PRIVATE LIMITED A/C",
-      "pct": 2.25,
-      "role": "public",
-      "shares": 4755626
-     },
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "SAI QUEST SYN PRIVATE LIMITED",
-      "pct": 2.17,
-      "role": "promoter",
-      "shares": 4591100
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "HSBC MUTUAL FUND - HSBC AGGRESSIVE HYBRID FUND",
-      "pct": 1.86,
-      "role": "public",
-      "shares": 3947596
-     },
-     {
-      "category": "InsuranceCompanies",
-      "kind": "institution",
-      "name": "AXIS MAX LIFE INSURANCE LIMITED A/C - ULIF00225/06",
-      "pct": 1.63,
-      "role": "public",
-      "shares": 3451834
-     },
-     {
-      "category": "DetailsOfSharesHeldByNonResidentIndians",
-      "kind": "individual",
-      "name": "ANITHA RUDRARAJU NANDYALA",
-      "pct": 1.6,
-      "role": "public",
-      "shares": 3390000
-     },
-     {
-      "category": "NonResidentIndividualsOrForeignIndividuals",
-      "kind": "individual",
-      "name": "KRISHNAM RAJU KANUMURI .",
-      "pct": 1.42,
-      "role": "other",
-      "shares": 3008400
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "GOLDMAN SACHS FUNDS - GOLDMAN SACHS INDIA EQUITY P",
-      "pct": 1.41,
-      "role": "public",
-      "shares": 2985537
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "BLACKROCK STRATEGIC FUNDS - BLACKROCK EMERGING MAR",
-      "pct": 1.3,
-      "role": "public",
-      "shares": 2744366
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "MIRAE ASSET HEALTHCARE FUND",
-      "pct": 1.12,
-      "role": "public",
-      "shares": 2381130
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "HDFC MUTUAL FUND - HDFC MULTI CAP FUND",
-      "pct": 1.02,
-      "role": "public",
-      "shares": 2170445
-     },
-     {
-      "category": "DetailsOfSharesHeldByNonResidentIndians",
-      "kind": "individual",
-      "name": "PENMASTA ARUNA",
-      "pct": 1.0,
-      "role": "public",
-      "shares": 2121220
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 34.61,
-    "public": 65.39,
-    "total_shares": 211779234,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1650758_14042026052722_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "SAMMAANCAP": {
-  "fetched_at": "2026-10-06T19:52:56+00:00",
+  "fetched_at": "2026-10-07T20:16:58+00:00",
   "filings": [
    {
     "dii": 7.99,
@@ -81797,7 +81765,7 @@
   "source": "NSE XBRL"
  },
  "SANGAMIND": {
-  "fetched_at": "2026-10-06T19:57:20+00:00",
+  "fetched_at": "2026-10-07T20:21:22+00:00",
   "filings": [
    {
     "dii": 0.09,
@@ -82177,7 +82145,7 @@
   "source": "NSE XBRL"
  },
  "SANSERA": {
-  "fetched_at": "2026-10-06T19:56:31+00:00",
+  "fetched_at": "2026-10-07T20:20:32+00:00",
   "filings": [
    {
     "dii": 31.04,
@@ -82825,7 +82793,7 @@
   "source": "NSE XBRL"
  },
  "SARDAEN": {
-  "fetched_at": "2026-10-06T19:52:58+00:00",
+  "fetched_at": "2026-10-07T20:17:00+00:00",
   "filings": [
    {
     "dii": 3.47,
@@ -83069,7 +83037,7 @@
   "source": "NSE XBRL"
  },
  "SAREGAMA": {
-  "fetched_at": "2026-10-06T19:57:38+00:00",
+  "fetched_at": "2026-10-07T20:21:40+00:00",
   "filings": [
    {
     "dii": 8.6,
@@ -83193,7 +83161,7 @@
   "source": "NSE XBRL"
  },
  "SBFC": {
-  "fetched_at": "2026-10-06T19:57:40+00:00",
+  "fetched_at": "2026-10-07T20:21:42+00:00",
   "filings": [
    {
     "dii": 20.71,
@@ -83373,7 +83341,7 @@
   "source": "NSE XBRL"
  },
  "SBICARD": {
-  "fetched_at": "2026-10-06T19:53:00+00:00",
+  "fetched_at": "2026-10-07T20:17:02+00:00",
   "filings": [
    {
     "dii": 18.13,
@@ -83481,7 +83449,7 @@
   "source": "NSE XBRL"
  },
  "SBILIFE": {
-  "fetched_at": "2026-10-06T19:53:02+00:00",
+  "fetched_at": "2026-10-07T20:17:04+00:00",
   "filings": [
    {
     "dii": 19.66,
@@ -83645,7 +83613,7 @@
   "source": "NSE XBRL"
  },
  "SBIN": {
-  "fetched_at": "2026-10-06T19:53:04+00:00",
+  "fetched_at": "2026-10-07T20:17:06+00:00",
   "filings": [
    {
     "dii": 26.64,
@@ -83801,7 +83769,7 @@
   "source": "NSE XBRL"
  },
  "SCHAEFFLER": {
-  "fetched_at": "2026-10-06T19:53:06+00:00",
+  "fetched_at": "2026-10-07T20:17:08+00:00",
   "filings": [
    {
     "dii": 16.22,
@@ -83973,7 +83941,7 @@
   "source": "NSE XBRL"
  },
  "SCHNEIDER": {
-  "fetched_at": "2026-10-06T19:53:08+00:00",
+  "fetched_at": "2026-10-07T20:17:10+00:00",
   "filings": [
    {
     "dii": 4.67,
@@ -84065,7 +84033,7 @@
   "source": "NSE XBRL"
  },
  "SCI": {
-  "fetched_at": "2026-10-06T19:53:10+00:00",
+  "fetched_at": "2026-10-07T20:17:12+00:00",
   "filings": [
    {
     "dii": 2.08,
@@ -84117,7 +84085,7 @@
   "source": "NSE XBRL"
  },
  "SHAILY": {
-  "fetched_at": "2026-10-06T19:57:22+00:00",
+  "fetched_at": "2026-10-07T20:21:24+00:00",
   "filings": [
    {
     "dii": 14.84,
@@ -84361,7 +84329,7 @@
   "source": "NSE XBRL"
  },
  "SHREECEM": {
-  "fetched_at": "2026-10-06T19:53:12+00:00",
+  "fetched_at": "2026-10-07T20:17:14+00:00",
   "filings": [
    {
     "dii": 16.67,
@@ -84645,7 +84613,7 @@
   "source": "NSE XBRL"
  },
  "SHRIPISTON": {
-  "fetched_at": "2026-10-06T19:56:32+00:00",
+  "fetched_at": "2026-10-07T20:20:34+00:00",
   "filings": [
    {
     "dii": 12.17,
@@ -84849,7 +84817,7 @@
   "source": "NSE XBRL"
  },
  "SHRIRAMFIN": {
-  "fetched_at": "2026-10-06T19:53:14+00:00",
+  "fetched_at": "2026-10-07T20:17:16+00:00",
   "filings": [
    {
     "dii": 19.9,
@@ -85061,7 +85029,7 @@
   "source": "NSE XBRL"
  },
  "SHYAMMETL": {
-  "fetched_at": "2026-10-06T19:53:17+00:00",
+  "fetched_at": "2026-10-07T20:17:18+00:00",
   "filings": [
    {
     "dii": 11.15,
@@ -85273,7 +85241,7 @@
   "source": "NSE XBRL"
  },
  "SIEMENS": {
-  "fetched_at": "2026-10-06T19:53:18+00:00",
+  "fetched_at": "2026-10-07T20:17:20+00:00",
   "filings": [
    {
     "dii": 9.09,
@@ -85381,7 +85349,7 @@
   "source": "NSE XBRL"
  },
  "SIGNATURE": {
-  "fetched_at": "2026-10-06T19:53:20+00:00",
+  "fetched_at": "2026-10-07T20:17:22+00:00",
   "filings": [
    {
     "dii": 5.47,
@@ -85745,7 +85713,7 @@
   "source": "NSE XBRL"
  },
  "SJVN": {
-  "fetched_at": "2026-10-06T19:53:22+00:00",
+  "fetched_at": "2026-10-07T20:17:24+00:00",
   "filings": [
    {
     "dii": 3.74,
@@ -85821,7 +85789,7 @@
   "source": "NSE XBRL"
  },
  "SOBHA": {
-  "fetched_at": "2026-10-06T19:53:24+00:00",
+  "fetched_at": "2026-10-07T20:17:26+00:00",
   "filings": [
    {
     "dii": 25.99,
@@ -86033,7 +86001,7 @@
   "source": "NSE XBRL"
  },
  "SOLARA": {
-  "fetched_at": "2026-10-06T19:57:24+00:00",
+  "fetched_at": "2026-10-07T20:21:26+00:00",
   "filings": [
    {
     "dii": 3.74,
@@ -86381,7 +86349,7 @@
   "source": "NSE XBRL"
  },
  "SOLARINDS": {
-  "fetched_at": "2026-10-06T19:53:26+00:00",
+  "fetched_at": "2026-10-07T20:17:28+00:00",
   "filings": [
    {
     "dii": 13.36,
@@ -86521,7 +86489,7 @@
   "source": "NSE XBRL"
  },
  "SONACOMS": {
-  "fetched_at": "2026-10-06T19:53:28+00:00",
+  "fetched_at": "2026-10-07T20:17:30+00:00",
   "filings": [
    {
     "dii": 41.61,
@@ -87181,7 +87149,7 @@
   "source": "NSE XBRL"
  },
  "SRF": {
-  "fetched_at": "2026-10-06T19:53:30+00:00",
+  "fetched_at": "2026-10-07T20:17:32+00:00",
   "filings": [
    {
     "dii": 22.44,
@@ -87353,7 +87321,7 @@
   "source": "NSE XBRL"
  },
  "STARHEALTH": {
-  "fetched_at": "2026-10-06T19:53:32+00:00",
+  "fetched_at": "2026-10-07T20:17:34+00:00",
   "filings": [
    {
     "dii": 19.41,
@@ -87565,7 +87533,7 @@
   "source": "NSE XBRL"
  },
  "STLTECH": {
-  "fetched_at": "2026-10-06T19:56:34+00:00",
+  "fetched_at": "2026-10-07T20:20:36+00:00",
   "filings": [
    {
     "dii": 11.44,
@@ -87705,7 +87673,7 @@
   "source": "NSE XBRL"
  },
  "SUMICHEM": {
-  "fetched_at": "2026-10-06T19:53:34+00:00",
+  "fetched_at": "2026-10-07T20:17:36+00:00",
   "filings": [
    {
     "dii": 9.69,
@@ -87805,7 +87773,7 @@
   "source": "NSE XBRL"
  },
  "SUNDARMFIN": {
-  "fetched_at": "2026-10-06T19:53:36+00:00",
+  "fetched_at": "2026-10-07T20:17:38+00:00",
   "filings": [
    {
     "dii": 8.0,
@@ -88193,7 +88161,7 @@
   "source": "NSE XBRL"
  },
  "SUNPHARMA": {
-  "fetched_at": "2026-10-06T19:53:38+00:00",
+  "fetched_at": "2026-10-07T20:17:40+00:00",
   "filings": [
    {
     "dii": 22.18,
@@ -88389,7 +88357,7 @@
   "source": "NSE XBRL"
  },
  "SUNTV": {
-  "fetched_at": "2026-10-06T19:53:40+00:00",
+  "fetched_at": "2026-10-07T20:17:42+00:00",
   "filings": [
    {
     "dii": 11.3,
@@ -88489,7 +88457,7 @@
   "source": "NSE XBRL"
  },
  "SUPREMEIND": {
-  "fetched_at": "2026-10-06T19:53:42+00:00",
+  "fetched_at": "2026-10-07T20:17:44+00:00",
   "filings": [
    {
     "dii": 19.08,
@@ -88717,7 +88685,7 @@
   "source": "NSE XBRL"
  },
  "SUZLON": {
-  "fetched_at": "2026-10-06T19:53:44+00:00",
+  "fetched_at": "2026-10-07T20:17:46+00:00",
   "filings": [
    {
     "dii": 11.11,
@@ -88921,7 +88889,7 @@
   "source": "NSE XBRL"
  },
  "SWANCORP": {
-  "fetched_at": "2026-10-06T19:53:46+00:00",
+  "fetched_at": "2026-10-07T20:17:48+00:00",
   "filings": [
    {
     "dii": 12.9,
@@ -89229,7 +89197,7 @@
   "source": "NSE XBRL"
  },
  "SWIGGY": {
-  "fetched_at": "2026-10-06T19:53:48+00:00",
+  "fetched_at": "2026-10-07T20:17:50+00:00",
   "filings": [
    {
     "dii": 27.38,
@@ -89537,7 +89505,7 @@
   "source": "NSE XBRL"
  },
  "SYNGENE": {
-  "fetched_at": "2026-10-06T19:53:50+00:00",
+  "fetched_at": "2026-10-07T20:17:52+00:00",
   "filings": [
    {
     "dii": 28.02,
@@ -89709,7 +89677,7 @@
   "source": "NSE XBRL"
  },
  "SYRMA": {
-  "fetched_at": "2026-10-06T19:53:52+00:00",
+  "fetched_at": "2026-10-07T20:17:54+00:00",
   "filings": [
    {
     "dii": 15.9,
@@ -89905,7 +89873,7 @@
   "source": "NSE XBRL"
  },
  "TALBROAUTO": {
-  "fetched_at": "2026-10-06T19:57:26+00:00",
+  "fetched_at": "2026-10-07T20:21:28+00:00",
   "filings": [
    {
     "dii": 0.19,
@@ -90101,7 +90069,7 @@
   "source": "NSE XBRL"
  },
  "TARIL": {
-  "fetched_at": "2026-10-06T19:53:54+00:00",
+  "fetched_at": "2026-10-07T20:17:56+00:00",
   "filings": [
    {
     "dii": 1.53,
@@ -90249,7 +90217,7 @@
   "source": "NSE XBRL"
  },
  "TATACAP": {
-  "fetched_at": "2026-10-06T19:53:56+00:00",
+  "fetched_at": "2026-10-07T20:17:58+00:00",
   "filings": [
    {
     "dii": 3.56,
@@ -90325,7 +90293,7 @@
   "source": "NSE XBRL"
  },
  "TATACHEM": {
-  "fetched_at": "2026-10-06T19:53:58+00:00",
+  "fetched_at": "2026-10-07T20:18:00+00:00",
   "filings": [
    {
     "dii": 21.12,
@@ -90449,7 +90417,7 @@
   "source": "NSE XBRL"
  },
  "TATACOMM": {
-  "fetched_at": "2026-10-06T19:54:00+00:00",
+  "fetched_at": "2026-10-07T20:18:02+00:00",
   "filings": [
    {
     "dii": 19.86,
@@ -90605,7 +90573,7 @@
   "source": "NSE XBRL"
  },
  "TATACONSUM": {
-  "fetched_at": "2026-10-06T19:54:02+00:00",
+  "fetched_at": "2026-10-07T20:18:04+00:00",
   "filings": [
    {
     "dii": 25.01,
@@ -90745,7 +90713,7 @@
   "source": "NSE XBRL"
  },
  "TATAELXSI": {
-  "fetched_at": "2026-10-06T19:54:04+00:00",
+  "fetched_at": "2026-10-07T20:18:06+00:00",
   "filings": [
    {
     "dii": 11.04,
@@ -90837,7 +90805,7 @@
   "source": "NSE XBRL"
  },
  "TATAINVEST": {
-  "fetched_at": "2026-10-06T19:54:06+00:00",
+  "fetched_at": "2026-10-07T20:18:08+00:00",
   "filings": [
    {
     "dii": 0.57,
@@ -90913,7 +90881,7 @@
   "source": "NSE XBRL"
  },
  "TATAPOWER": {
-  "fetched_at": "2026-10-06T19:54:08+00:00",
+  "fetched_at": "2026-10-07T20:18:10+00:00",
   "filings": [
    {
     "dii": 18.43,
@@ -91029,7 +90997,7 @@
   "source": "NSE XBRL"
  },
  "TATASTEEL": {
-  "fetched_at": "2026-10-06T19:54:10+00:00",
+  "fetched_at": "2026-10-07T20:18:12+00:00",
   "filings": [
    {
     "dii": 26.62,
@@ -91177,7 +91145,7 @@
   "source": "NSE XBRL"
  },
  "TATATECH": {
-  "fetched_at": "2026-10-06T19:54:12+00:00",
+  "fetched_at": "2026-10-07T20:18:14+00:00",
   "filings": [
    {
     "dii": 4.48,
@@ -91293,7 +91261,7 @@
   "source": "NSE XBRL"
  },
  "TBOTEK": {
-  "fetched_at": "2026-10-06T19:54:14+00:00",
+  "fetched_at": "2026-10-07T20:18:16+00:00",
   "filings": [
    {
     "dii": 21.09,
@@ -91545,7 +91513,7 @@
   "source": "NSE XBRL"
  },
  "TCS": {
-  "fetched_at": "2026-10-06T19:54:16+00:00",
+  "fetched_at": "2026-10-07T20:18:18+00:00",
   "filings": [
    {
     "dii": 13.47,
@@ -91637,8 +91605,147 @@
   "source": "NSE XBRL"
  },
  "TDPOWERSYS": {
-  "fetched_at": "2026-10-06T19:56:36+00:00",
+  "fetched_at": "2026-10-07T20:20:39+00:00",
   "filings": [
+   {
+    "dii": 27.93,
+    "fii": 22.86,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "Saphire Finman Services Llp",
+      "pct": 13.17,
+      "role": "promoter",
+      "shares": 41316450
+     },
+     {
+      "category": "IndividualsOrHUF",
+      "kind": "individual",
+      "name": "Nikhil Kumar",
+      "pct": 8.47,
+      "role": "promoter",
+      "shares": 26555640
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Nippon Life India Trustee Ltd-A/C Nippon India Small Cap Fund",
+      "pct": 6.91,
+      "role": "public",
+      "shares": 21690095
+     },
+     {
+      "category": "NonResidentIndividualsOrForeignIndividuals",
+      "kind": "individual",
+      "name": "Hitoshi Matsuo",
+      "pct": 5.06,
+      "role": "other",
+      "shares": 15880972
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Axis Focused Fund Account",
+      "pct": 4.15,
+      "role": "public",
+      "shares": 13008058
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Hsbc Mutual Fund - Hsbc Midcap Fund",
+      "pct": 3.42,
+      "role": "public",
+      "shares": 10730505
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "Oxbow Master Fund Limited",
+      "pct": 2.94,
+      "role": "public",
+      "shares": 9215582
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Aditya Birla Sun Life Mutual Fund - Aditya Birla Sun Life Small Cap Fund",
+      "pct": 1.91,
+      "role": "public",
+      "shares": 5986277
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Sundaram Mutual Fund A/C Sundaram Large And Mid Cap Fund",
+      "pct": 1.68,
+      "role": "public",
+      "shares": 5269427
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Icici Prudential Energy Opportunities Fund",
+      "pct": 1.49,
+      "role": "public",
+      "shares": 4672961
+     },
+     {
+      "category": "OtherNonInstitutions",
+      "kind": "institution",
+      "name": "Catamaran Ventures Llp",
+      "pct": 1.46,
+      "role": "public",
+      "shares": 4569816
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "Goldman Sachs Funds - Goldman Sachs India Equity Portfolio",
+      "pct": 1.44,
+      "role": "public",
+      "shares": 4531403
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "The Master Trust Bank Of Japan, Ltd. As Trustee Of Hsbc India Infrastructure Equity Mother Fund",
+      "pct": 1.44,
+      "role": "public",
+      "shares": 4509634
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Mirae Asset Aggressive Hybrid Fund",
+      "pct": 1.12,
+      "role": "public",
+      "shares": 3527534
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "Vanguard Total International Stock Index Fund",
+      "pct": 1.07,
+      "role": "public",
+      "shares": 3355406
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "Vanguard Emerging Markets Stock Index Fund, A Series Of Vanguard International Equity Index Funds",
+      "pct": 1.02,
+      "role": "public",
+      "shares": 3202972
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 27.16,
+    "public": 72.84,
+    "total_shares": 313706860,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733612_07102026013225_WEB.xml"
+   },
    {
     "dii": 23.88,
     "fii": 26.18,
@@ -91777,135 +91884,12 @@
     "public": 73.13,
     "total_shares": 156228430,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1690183_10072026115416_WEB.xml"
-   },
-   {
-    "dii": 22.24,
-    "fii": 26.68,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "Saphire Finman Services Llp",
-      "pct": 13.22,
-      "role": "promoter",
-      "shares": 20658225
-     },
-     {
-      "category": "IndividualsOrHUF",
-      "kind": "individual",
-      "name": "Nikhil Kumar",
-      "pct": 8.3,
-      "role": "promoter",
-      "shares": 12965320
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Nippon Life India Trustee Ltd-A/C Nippon India Small Cap Fund",
-      "pct": 6.24,
-      "role": "public",
-      "shares": 9753276
-     },
-     {
-      "category": "NonResidentIndividualsOrForeignIndividuals",
-      "kind": "individual",
-      "name": "Hitoshi Matsuo",
-      "pct": 5.08,
-      "role": "other",
-      "shares": 7940486
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "Oxbow Master Fund Limited",
-      "pct": 4.24,
-      "role": "public",
-      "shares": 6629131
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Hsbc Mutual Fund - Hsbc Midcap Fund",
-      "pct": 3.98,
-      "role": "public",
-      "shares": 6219680
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "Goldman Sachs Funds - Goldman Sachs India Equity Portfolio",
-      "pct": 2.4,
-      "role": "public",
-      "shares": 3747633
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "The Master Trust Bank Of Japan, Ltd. As Trustee Of Hsbc India Infrastructure Equity Mother Fund",
-      "pct": 1.83,
-      "role": "public",
-      "shares": 2854770
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Aditya Birla Sun Life Trustee Private Limited A/C Aditya Birla Sun Life Small Cap Fund",
-      "pct": 1.78,
-      "role": "public",
-      "shares": 2786519
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Icici Prudential Energy Opportunities Fund",
-      "pct": 1.51,
-      "role": "public",
-      "shares": 2361509
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "Abu Dhabi Investment Authority - Way",
-      "pct": 1.11,
-      "role": "public",
-      "shares": 1730208
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "Vanguard Total International Stock Index Fund",
-      "pct": 1.06,
-      "role": "public",
-      "shares": 1658743
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Whiteoak Capital Flexi Cap Fund",
-      "pct": 1.02,
-      "role": "public",
-      "shares": 1589177
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "Vanguard Emerging Markets Stock Index Fund, A Series Of Vanguard International Equity Index Funds",
-      "pct": 1.0,
-      "role": "public",
-      "shares": 1568543
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 26.87,
-    "public": 73.13,
-    "total_shares": 156214830,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1649607_13042026124938_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "TECHM": {
-  "fetched_at": "2026-10-06T19:54:18+00:00",
+  "fetched_at": "2026-10-07T20:18:20+00:00",
   "filings": [
    {
     "dii": 36.92,
@@ -92109,7 +92093,7 @@
   "source": "NSE XBRL"
  },
  "TECHNOE": {
-  "fetched_at": "2026-10-06T19:54:20+00:00",
+  "fetched_at": "2026-10-07T20:18:22+00:00",
   "filings": [
    {
     "dii": 21.6,
@@ -92345,7 +92329,7 @@
   "source": "NSE XBRL"
  },
  "TEGA": {
-  "fetched_at": "2026-10-06T19:54:22+00:00",
+  "fetched_at": "2026-10-07T20:18:24+00:00",
   "filings": [
    {
     "dii": 18.68,
@@ -92485,7 +92469,7 @@
   "source": "NSE XBRL"
  },
  "TEJASNET": {
-  "fetched_at": "2026-10-06T19:54:24+00:00",
+  "fetched_at": "2026-10-07T20:18:26+00:00",
   "filings": [
    {
     "dii": 4.04,
@@ -92545,7 +92529,7 @@
   "source": "NSE XBRL"
  },
  "TENNIND": {
-  "fetched_at": "2026-10-06T19:54:26+00:00",
+  "fetched_at": "2026-10-07T20:18:28+00:00",
   "filings": [
    {
     "dii": 11.44,
@@ -92741,7 +92725,7 @@
   "source": "NSE XBRL"
  },
  "THANGAMAYL": {
-  "fetched_at": "2026-10-06T19:56:39+00:00",
+  "fetched_at": "2026-10-07T20:20:40+00:00",
   "filings": [
    {
     "dii": 16.43,
@@ -93133,7 +93117,7 @@
   "source": "NSE XBRL"
  },
  "THERMAX": {
-  "fetched_at": "2026-10-06T19:54:28+00:00",
+  "fetched_at": "2026-10-07T20:18:30+00:00",
   "filings": [
    {
     "dii": 15.22,
@@ -93281,7 +93265,7 @@
   "source": "NSE XBRL"
  },
  "TIINDIA": {
-  "fetched_at": "2026-10-06T19:54:30+00:00",
+  "fetched_at": "2026-10-07T20:18:33+00:00",
   "filings": [
    {
     "dii": 21.75,
@@ -93378,7 +93362,7 @@
   "source": "NSE XBRL"
  },
  "TIMKEN": {
-  "fetched_at": "2026-10-06T19:54:32+00:00",
+  "fetched_at": "2026-10-07T20:18:34+00:00",
   "filings": [
    {
     "dii": 30.28,
@@ -93558,7 +93542,7 @@
   "source": "NSE XBRL"
  },
  "TITAGARH": {
-  "fetched_at": "2026-10-06T19:54:34+00:00",
+  "fetched_at": "2026-10-07T20:18:36+00:00",
   "filings": [
    {
     "dii": 15.39,
@@ -93714,7 +93698,7 @@
   "source": "NSE XBRL"
  },
  "TITAN": {
-  "fetched_at": "2026-10-06T19:54:36+00:00",
+  "fetched_at": "2026-10-07T20:18:38+00:00",
   "filings": [
    {
     "dii": 15.34,
@@ -93918,7 +93902,7 @@
   "source": "NSE XBRL"
  },
  "TMCV": {
-  "fetched_at": "2026-10-06T19:54:38+00:00",
+  "fetched_at": "2026-10-07T20:18:40+00:00",
   "filings": [
    {
     "dii": 18.45,
@@ -94082,7 +94066,7 @@
   "source": "NSE XBRL"
  },
  "TMPV": {
-  "fetched_at": "2026-10-06T19:54:40+00:00",
+  "fetched_at": "2026-10-07T20:18:42+00:00",
   "filings": [
    {
     "dii": 17.23,
@@ -94206,7 +94190,7 @@
   "source": "NSE XBRL"
  },
  "TORNTPHARM": {
-  "fetched_at": "2026-10-06T19:54:42+00:00",
+  "fetched_at": "2026-10-07T20:18:44+00:00",
   "filings": [
    {
     "dii": 9.83,
@@ -94282,7 +94266,7 @@
   "source": "NSE XBRL"
  },
  "TORNTPOWER": {
-  "fetched_at": "2026-10-06T19:54:44+00:00",
+  "fetched_at": "2026-10-07T20:18:47+00:00",
   "filings": [
    {
     "dii": 22.68,
@@ -94514,7 +94498,7 @@
   "source": "NSE XBRL"
  },
  "TRENT": {
-  "fetched_at": "2026-10-06T19:54:46+00:00",
+  "fetched_at": "2026-10-07T20:18:49+00:00",
   "filings": [
    {
     "dii": 23.27,
@@ -94710,7 +94694,7 @@
   "source": "NSE XBRL"
  },
  "TRIDENT": {
-  "fetched_at": "2026-10-06T19:54:48+00:00",
+  "fetched_at": "2026-10-07T20:18:50+00:00",
   "filings": [
    {
     "dii": 0.25,
@@ -94786,7 +94770,7 @@
   "source": "NSE XBRL"
  },
  "TRITURBINE": {
-  "fetched_at": "2026-10-06T19:54:50+00:00",
+  "fetched_at": "2026-10-07T20:18:52+00:00",
   "filings": [
    {
     "dii": 15.98,
@@ -95014,7 +94998,7 @@
   "source": "NSE XBRL"
  },
  "TTML": {
-  "fetched_at": "2026-10-06T19:54:52+00:00",
+  "fetched_at": "2026-10-07T20:18:54+00:00",
   "filings": [
    {
     "dii": 0.18,
@@ -95090,7 +95074,7 @@
   "source": "NSE XBRL"
  },
  "TVSMOTOR": {
-  "fetched_at": "2026-10-06T19:54:54+00:00",
+  "fetched_at": "2026-10-07T20:18:56+00:00",
   "filings": [
    {
     "dii": 21.13,
@@ -95198,7 +95182,7 @@
   "source": "NSE XBRL"
  },
  "TVTODAY": {
-  "fetched_at": "2026-10-06T19:57:28+00:00",
+  "fetched_at": "2026-10-07T20:21:30+00:00",
   "filings": [
    {
     "dii": 0.09,
@@ -95290,7 +95274,7 @@
   "source": "NSE XBRL"
  },
  "UBL": {
-  "fetched_at": "2026-10-06T19:54:56+00:00",
+  "fetched_at": "2026-10-07T20:18:58+00:00",
   "filings": [
    {
     "dii": 17.78,
@@ -95494,7 +95478,7 @@
   "source": "NSE XBRL"
  },
  "UCOBANK": {
-  "fetched_at": "2026-10-06T19:54:58+00:00",
+  "fetched_at": "2026-10-07T20:19:00+00:00",
   "filings": [
    {
     "dii": 4.31,
@@ -95554,7 +95538,7 @@
   "source": "NSE XBRL"
  },
  "ULTRACEMCO": {
-  "fetched_at": "2026-10-06T19:55:00+00:00",
+  "fetched_at": "2026-10-07T20:19:02+00:00",
   "filings": [
    {
     "dii": 19.69,
@@ -95694,7 +95678,7 @@
   "source": "NSE XBRL"
  },
  "UNIONBANK": {
-  "fetched_at": "2026-10-06T19:55:02+00:00",
+  "fetched_at": "2026-10-07T20:19:04+00:00",
   "filings": [
    {
     "dii": 11.98,
@@ -95778,7 +95762,7 @@
   "source": "NSE XBRL"
  },
  "UNITDSPR": {
-  "fetched_at": "2026-10-06T19:55:04+00:00",
+  "fetched_at": "2026-10-07T20:19:06+00:00",
   "filings": [
    {
     "dii": 17.15,
@@ -95918,7 +95902,7 @@
   "source": "NSE XBRL"
  },
  "UNOMINDA": {
-  "fetched_at": "2026-10-06T19:55:06+00:00",
+  "fetched_at": "2026-10-07T20:19:08+00:00",
   "filings": [
    {
     "dii": 17.53,
@@ -96154,7 +96138,7 @@
   "source": "NSE XBRL"
  },
  "UPL": {
-  "fetched_at": "2026-10-06T19:55:08+00:00",
+  "fetched_at": "2026-10-07T20:19:10+00:00",
   "filings": [
    {
     "dii": 14.32,
@@ -96438,7 +96422,7 @@
   "source": "NSE XBRL"
  },
  "URBANCO": {
-  "fetched_at": "2026-10-06T19:55:10+00:00",
+  "fetched_at": "2026-10-07T20:19:12+00:00",
   "filings": [
    {
     "dii": 11.43,
@@ -96754,7 +96738,7 @@
   "source": "NSE XBRL"
  },
  "USHAMART": {
-  "fetched_at": "2026-10-06T19:55:12+00:00",
+  "fetched_at": "2026-10-07T20:19:14+00:00",
   "filings": [
    {
     "dii": 15.26,
@@ -97014,7 +96998,7 @@
   "source": "NSE XBRL"
  },
  "UTIAMC": {
-  "fetched_at": "2026-10-06T19:55:14+00:00",
+  "fetched_at": "2026-10-07T20:19:16+00:00",
   "filings": [
    {
     "dii": 59.61,
@@ -97178,7 +97162,7 @@
   "source": "NSE XBRL"
  },
  "UTTAMSUGAR": {
-  "fetched_at": "2026-10-06T19:57:30+00:00",
+  "fetched_at": "2026-10-07T20:21:32+00:00",
   "filings": [
    {
     "dii": null,
@@ -97350,7 +97334,7 @@
   "source": "NSE XBRL"
  },
  "VAIBHAVGBL": {
-  "fetched_at": "2026-10-06T19:57:32+00:00",
+  "fetched_at": "2026-10-07T20:21:34+00:00",
   "filings": [
    {
     "dii": 2.22,
@@ -97474,7 +97458,7 @@
   "source": "NSE XBRL"
  },
  "VAML": {
-  "fetched_at": "2026-10-06T19:56:40+00:00",
+  "fetched_at": "2026-10-07T20:20:42+00:00",
   "filings": [
    {
     "dii": 13.91,
@@ -97555,7 +97539,7 @@
   "source": "NSE XBRL"
  },
  "VBL": {
-  "fetched_at": "2026-10-06T19:55:16+00:00",
+  "fetched_at": "2026-10-07T20:19:18+00:00",
   "filings": [
    {
     "dii": 15.21,
@@ -97735,7 +97719,7 @@
   "source": "NSE XBRL"
  },
  "VEDL": {
-  "fetched_at": "2026-10-06T19:55:18+00:00",
+  "fetched_at": "2026-10-07T20:19:20+00:00",
   "filings": [
    {
     "dii": 10.83,
@@ -97867,7 +97851,7 @@
   "source": "NSE XBRL"
  },
  "VEDPOWER": {
-  "fetched_at": "2026-10-06T19:56:42+00:00",
+  "fetched_at": "2026-10-07T20:20:44+00:00",
   "filings": [
    {
     "dii": 13.0,
@@ -97932,7 +97916,7 @@
   "source": "NSE XBRL"
  },
  "VIJAYA": {
-  "fetched_at": "2026-10-06T19:55:20+00:00",
+  "fetched_at": "2026-10-07T20:19:22+00:00",
   "filings": [
    {
     "dii": 31.61,
@@ -98136,7 +98120,7 @@
   "source": "NSE XBRL"
  },
  "VISL": {
-  "fetched_at": "2026-10-06T19:56:44+00:00",
+  "fetched_at": "2026-10-07T20:20:46+00:00",
   "filings": [
    {
     "dii": 12.09,
@@ -98209,8 +98193,107 @@
   "source": "NSE XBRL"
  },
  "VMM": {
-  "fetched_at": "2026-10-06T19:55:22+00:00",
+  "fetched_at": "2026-10-07T20:19:24+00:00",
   "filings": [
+   {
+    "dii": 36.45,
+    "fii": 18.75,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "Samayat Services LLP",
+      "pct": 40.02,
+      "role": "promoter",
+      "shares": 1874977956
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "HDFC MUTUAL FUND-HDFC RETIREMENT FUND - HYBRID-DEB",
+      "pct": 9.49,
+      "role": "public",
+      "shares": 444681271
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "KOTAK MAHINDRA TRUSTEE CO LTD A/C KOTAK MSCI INDIA",
+      "pct": 5.42,
+      "role": "public",
+      "shares": 253771495
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "SBI ARBITRAGE FUND",
+      "pct": 4.12,
+      "role": "public",
+      "shares": 193096059
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "GOVERNMENT OF SINGAPORE",
+      "pct": 2.74,
+      "role": "public",
+      "shares": 128238502
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "NIPPON LIFE INDIA TRUSTEE LTD- A/C NIPPON INDIA AG",
+      "pct": 2.68,
+      "role": "public",
+      "shares": 125368535
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "AXIS MUTUAL FUND TRUSTEE LIMITED A/C AXIS MUTUAL F",
+      "pct": 1.97,
+      "role": "public",
+      "shares": 92376608
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "CANARA ROBECO MUTUAL FUND A/C CANARA ROBECO LARGE",
+      "pct": 1.95,
+      "role": "public",
+      "shares": 91575750
+     },
+     {
+      "category": "ProvidentFundsOrPensionFunds",
+      "kind": "institution",
+      "name": "NPS TRUST- A/C SBI PENSION FUND SCHEME E - TIER I",
+      "pct": 1.26,
+      "role": "public",
+      "shares": 59196431
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "MONETARY AUTHORITY OF SINGAPORE",
+      "pct": 1.23,
+      "role": "public",
+      "shares": 57464567
+     },
+     {
+      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
+      "kind": "institution",
+      "name": "EMPLOYEES PROVIDENT FUND BOARD - INTERNALMANAGED 1",
+      "pct": 1.17,
+      "role": "public",
+      "shares": 54950000
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 40.02,
+    "public": 59.98,
+    "total_shares": 4684808639,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733720_07102026012928_WEB.xml"
+   },
    {
     "dii": 34.8,
     "fii": 20.43,
@@ -98309,103 +98392,12 @@
     "public": 59.91,
     "total_shares": 4676375306,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1689817_09072026042243_WEB.xml"
-   },
-   {
-    "dii": 32.73,
-    "fii": 22.01,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "Samayat Services LLP",
-      "pct": 40.12,
-      "role": "promoter",
-      "shares": 1874977956
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "HDFC LARGE AND MID CAP FUND",
-      "pct": 9.25,
-      "role": "public",
-      "shares": 432257092
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "SBI EQUITY HYBRID FUND",
-      "pct": 4.14,
-      "role": "public",
-      "shares": 193648420
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "KOTAK MAHINDRA TRUSTEE CO LTD A/C KOTAK MSCI INDIA",
-      "pct": 3.35,
-      "role": "public",
-      "shares": 156503178
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "GOVERNMENT OF SINGAPORE",
-      "pct": 2.81,
-      "role": "public",
-      "shares": 131342659
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "NIPPON LIFE INDIA TRUSTEE LTD-A/C NIPPON INDIA ETF",
-      "pct": 2.57,
-      "role": "public",
-      "shares": 120320570
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "AXIS MUTUAL FUND TRUSTEE LIMITED A/C AXIS MUTUAL F",
-      "pct": 1.91,
-      "role": "public",
-      "shares": 89074332
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "CANARA ROBECO MUTUAL FUND A/C CANARA ROBECO MULTI",
-      "pct": 1.78,
-      "role": "public",
-      "shares": 83219748
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "MONETARY AUTHORITY OF SINGAPORE",
-      "pct": 1.59,
-      "role": "public",
-      "shares": 74276979
-     },
-     {
-      "category": "DetailsOfSharesHeldByInstitutionsForeignPortfolioInvestorOne",
-      "kind": "institution",
-      "name": "EMPLOYEES PROVIDENT FUND BOARD - INTERNALMANAGED 1",
-      "pct": 1.09,
-      "role": "public",
-      "shares": 50850000
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 40.12,
-    "public": 59.88,
-    "total_shares": 4673117806,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1648536_10042026124600_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "VOGL": {
-  "fetched_at": "2026-10-06T19:56:46+00:00",
+  "fetched_at": "2026-10-07T20:20:48+00:00",
   "filings": [
    {
     "dii": 8.63,
@@ -98462,7 +98454,7 @@
   "source": "NSE XBRL"
  },
  "VOLTAS": {
-  "fetched_at": "2026-10-06T19:55:24+00:00",
+  "fetched_at": "2026-10-07T20:19:26+00:00",
   "filings": [
    {
     "dii": 39.05,
@@ -98698,8 +98690,83 @@
   "source": "NSE XBRL"
  },
  "VSTIND": {
-  "fetched_at": "2026-10-06T19:57:34+00:00",
+  "fetched_at": "2026-10-07T20:21:37+00:00",
   "filings": [
+   {
+    "dii": 5.91,
+    "fii": 1.25,
+    "holders": [
+     {
+      "category": "DetailsOfSharesHeldByBodiesCorporate",
+      "kind": "corporate",
+      "name": "Bright Star Investments Pvt. Ltd.",
+      "pct": 25.95,
+      "role": "public",
+      "shares": 44078298
+     },
+     {
+      "category": "OtherForeignShareholders",
+      "kind": "corporate",
+      "name": "The Raleigh Investment Company Limited",
+      "pct": 23.45,
+      "role": "promoter",
+      "shares": 39824620
+     },
+     {
+      "category": "OtherForeignShareholders",
+      "kind": "corporate",
+      "name": "Tobacco Manufacturers (India) Limited",
+      "pct": 8.28,
+      "role": "promoter",
+      "shares": 14068362
+     },
+     {
+      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
+      "kind": "individual",
+      "name": "Radhakishan Shivkishan Damani",
+      "pct": 3.15,
+      "role": "public",
+      "shares": 5351850
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Parag Parikh ELSS Tax Saver Fund",
+      "pct": 1.89,
+      "role": "public",
+      "shares": 3206667
+     },
+     {
+      "category": "InsuranceCompanies",
+      "kind": "institution",
+      "name": "The New India Assurance Co. Ltd.",
+      "pct": 1.51,
+      "role": "public",
+      "shares": 2560833
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "SBI Conservative Hybrid Fund",
+      "pct": 1.31,
+      "role": "public",
+      "shares": 2230896
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "HDFC Mutual Fund-HDFC Childrens Fund",
+      "pct": 1.11,
+      "role": "public",
+      "shares": 1890942
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 32.16,
+    "public": 67.65,
+    "total_shares": 169861120,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733740_07102026022727_WEB.xml"
+   },
    {
     "dii": 6.03,
     "fii": 1.79,
@@ -98774,87 +98841,12 @@
     "public": 67.65,
     "total_shares": 169861120,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1689847_09072026044537_WEB.xml"
-   },
-   {
-    "dii": 6.63,
-    "fii": 1.34,
-    "holders": [
-     {
-      "category": "DetailsOfSharesHeldByBodiesCorporate",
-      "kind": "corporate",
-      "name": "Bright Star Investments Pvt. Ltd.",
-      "pct": 25.95,
-      "role": "public",
-      "shares": 44078298
-     },
-     {
-      "category": "OtherForeignShareholders",
-      "kind": "corporate",
-      "name": "The Raleigh Investment Company Limited",
-      "pct": 23.45,
-      "role": "promoter",
-      "shares": 39824620
-     },
-     {
-      "category": "OtherForeignShareholders",
-      "kind": "corporate",
-      "name": "Tobacco Manufacturers (India) Limited",
-      "pct": 8.28,
-      "role": "promoter",
-      "shares": 14068362
-     },
-     {
-      "category": "DetailsOfSharesHeldByResidentIndividualShareholdersHoldingNominalShareCapitalInExcessOfRsTwoLakh",
-      "kind": "individual",
-      "name": "Radhakishan Shivkishan Damani",
-      "pct": 3.15,
-      "role": "public",
-      "shares": 5351850
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "SBI Conservative Hybrid Fund",
-      "pct": 2.13,
-      "role": "public",
-      "shares": 3620000
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Parag Parikh ELSS Tax Saver Fund",
-      "pct": 1.89,
-      "role": "public",
-      "shares": 3206667
-     },
-     {
-      "category": "InsuranceCompanies",
-      "kind": "institution",
-      "name": "The New India Assurance Co. Ltd.",
-      "pct": 1.51,
-      "role": "public",
-      "shares": 2560833
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "HDFC Mutual Fund-HDFC Childrens Fund",
-      "pct": 1.02,
-      "role": "public",
-      "shares": 1732834
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 32.16,
-    "public": 67.65,
-    "total_shares": 169861120,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1647231_08042026022407_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "VTL": {
-  "fetched_at": "2026-10-06T19:55:26+00:00",
+  "fetched_at": "2026-10-07T20:19:28+00:00",
   "filings": [
    {
     "dii": 14.69,
@@ -99010,7 +99002,7 @@
   "source": "NSE XBRL"
  },
  "WAAREEENER": {
-  "fetched_at": "2026-10-06T19:55:28+00:00",
+  "fetched_at": "2026-10-07T20:19:30+00:00",
   "filings": [
    {
     "dii": 4.08,
@@ -99118,7 +99110,7 @@
   "source": "NSE XBRL"
  },
  "WELCORP": {
-  "fetched_at": "2026-10-06T19:55:30+00:00",
+  "fetched_at": "2026-10-07T20:19:32+00:00",
   "filings": [
    {
     "dii": 19.95,
@@ -99314,7 +99306,7 @@
   "source": "NSE XBRL"
  },
  "WELSPUNLIV": {
-  "fetched_at": "2026-10-06T19:55:32+00:00",
+  "fetched_at": "2026-10-07T20:19:34+00:00",
   "filings": [
    {
     "dii": 11.38,
@@ -99438,7 +99430,7 @@
   "source": "NSE XBRL"
  },
  "WHIRLPOOL": {
-  "fetched_at": "2026-10-06T19:55:34+00:00",
+  "fetched_at": "2026-10-07T20:19:36+00:00",
   "filings": [
    {
     "dii": 34.18,
@@ -99626,7 +99618,7 @@
   "source": "NSE XBRL"
  },
  "WIPRO": {
-  "fetched_at": "2026-10-06T19:55:36+00:00",
+  "fetched_at": "2026-10-07T20:19:38+00:00",
   "filings": [
    {
     "dii": 5.22,
@@ -99790,7 +99782,7 @@
   "source": "NSE XBRL"
  },
  "WOCKPHARMA": {
-  "fetched_at": "2026-10-06T19:55:38+00:00",
+  "fetched_at": "2026-10-07T20:19:40+00:00",
   "filings": [
    {
     "dii": 9.24,
@@ -99954,7 +99946,7 @@
   "source": "NSE XBRL"
  },
  "YESBANK": {
-  "fetched_at": "2026-10-06T19:55:40+00:00",
+  "fetched_at": "2026-10-07T20:19:42+00:00",
   "filings": [
    {
     "dii": 24.05,
@@ -100054,7 +100046,7 @@
   "source": "NSE XBRL"
  },
  "ZEEL": {
-  "fetched_at": "2026-10-06T19:55:42+00:00",
+  "fetched_at": "2026-10-07T20:19:44+00:00",
   "filings": [
    {
     "dii": 7.92,
@@ -100202,7 +100194,7 @@
   "source": "NSE XBRL"
  },
  "ZENSARTECH": {
-  "fetched_at": "2026-10-06T19:55:44+00:00",
+  "fetched_at": "2026-10-07T20:19:46+00:00",
   "filings": [
    {
     "dii": 21.99,
@@ -100382,7 +100374,7 @@
   "source": "NSE XBRL"
  },
  "ZENTEC": {
-  "fetched_at": "2026-10-06T19:55:46+00:00",
+  "fetched_at": "2026-10-07T20:19:48+00:00",
   "filings": [
    {
     "dii": 10.41,
@@ -100570,7 +100562,7 @@
   "source": "NSE XBRL"
  },
  "ZFCVINDIA": {
-  "fetched_at": "2026-10-06T19:55:48+00:00",
+  "fetched_at": "2026-10-07T20:19:50+00:00",
   "filings": [
    {
     "dii": 25.45,
@@ -100694,8 +100686,59 @@
   "source": "NSE XBRL"
  },
  "ZYDUSLIFE": {
-  "fetched_at": "2026-10-06T19:55:50+00:00",
+  "fetched_at": "2026-10-07T20:19:53+00:00",
   "filings": [
+   {
+    "dii": 11.28,
+    "fii": 7.05,
+    "holders": [
+     {
+      "category": "OthersIndianShareholders",
+      "kind": "corporate",
+      "name": "Zydus Family Trust (Pankaj R. Patel, Pritiben P. Patel and Sharvil P. Patel-Trustees)",
+      "pct": 74.98,
+      "role": "promoter",
+      "shares": 747963801
+     },
+     {
+      "category": "InsuranceCompanies",
+      "kind": "institution",
+      "name": "Life Insurance Corporation Of India",
+      "pct": 3.77,
+      "role": "public",
+      "shares": 37591984
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Parag Parikh Flexi Cap Fund",
+      "pct": 2.01,
+      "role": "public",
+      "shares": 20092313
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Quant Mutual Fund - Quant Multi Cap Fund",
+      "pct": 1.49,
+      "role": "public",
+      "shares": 14847839
+     },
+     {
+      "category": "MutualFundsOrUTI",
+      "kind": "institution",
+      "name": "Kotak Flexicap Fund",
+      "pct": 1.07,
+      "role": "public",
+      "shares": 10684809
+     }
+    ],
+    "period": "Sep 2026",
+    "promoter": 75.01,
+    "public": 24.99,
+    "total_shares": 997503832,
+    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1733872_07102026051035_WEB.xml"
+   },
    {
     "dii": 11.27,
     "fii": 6.88,
@@ -100738,55 +100781,12 @@
     "public": 24.99,
     "total_shares": 997503832,
     "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1690961_11072026025816_WEB.xml"
-   },
-   {
-    "dii": 11.2,
-    "fii": 6.95,
-    "holders": [
-     {
-      "category": "OthersIndianShareholders",
-      "kind": "corporate",
-      "name": "Zydus Family Trust (Pankaj R. Patel, Pritiben P. Patel and Sharvil P. Patel-Trustees)",
-      "pct": 74.96,
-      "role": "promoter",
-      "shares": 754313343
-     },
-     {
-      "category": "InsuranceCompanies",
-      "kind": "institution",
-      "name": "Life Insurance Corporation Of India",
-      "pct": 5.56,
-      "role": "public",
-      "shares": 55908491
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Parag Parikh Flexi Cap Fund",
-      "pct": 1.96,
-      "role": "public",
-      "shares": 19679029
-     },
-     {
-      "category": "MutualFundsOrUTI",
-      "kind": "institution",
-      "name": "Kotak Flexicap Fund",
-      "pct": 1.13,
-      "role": "public",
-      "shares": 11397485
-     }
-    ],
-    "period": "Mar 2026",
-    "promoter": 75.0,
-    "public": 25.0,
-    "total_shares": 1006233990,
-    "xbrl": "https://nsearchives.nseindia.com/corporate/xbrl/SHP_1647863_09042026020206_WEB.xml"
    }
   ],
   "source": "NSE XBRL"
  },
  "ZYDUSWELL": {
-  "fetched_at": "2026-10-06T19:55:52+00:00",
+  "fetched_at": "2026-10-07T20:19:54+00:00",
   "filings": [
    {
     "dii": 19.14,
