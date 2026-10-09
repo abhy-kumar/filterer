@@ -12,7 +12,7 @@
       "dayHigh": 22580.75,
       "dayLow": 22294.75,
       "high52w": 26373.2,
-      "low52w": 22182.55
+      "low52w": 22179.9
     },
     {
       "id": "SENSEX",
@@ -85,6 +85,6 @@
       "low52w": 10092.6
     }
   ],
-  "lastUpdated": "2026-10-09T10:50:02.828939Z",
+  "lastUpdated": "2026-10-09T17:00:42.103970Z",
   "source": "Yahoo Finance (yfinance)"
 }
