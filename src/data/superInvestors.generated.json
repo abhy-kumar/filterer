@@ -280,13 +280,6 @@
    "price_date": null,
    "sector": "Consumer Defensive"
   },
-  "M&MFIN": {
-   "in_universe": true,
-   "name": "Mahindra & Mahindra Financial Services Ltd.",
-   "price": 311.55,
-   "price_date": null,
-   "sector": "Financial Services"
-  },
   "MRF": {
    "in_universe": true,
    "name": "MRF Ltd.",
@@ -582,7 +575,7 @@
    "sector": "Healthcare"
   }
  },
- "generated_at": "2026-10-16T19:23:30+00:00",
+ "generated_at": "2026-10-17T18:33:10+00:00",
  "investors": [
   {
    "alias": "DMart founder",
@@ -749,17 +742,17 @@
     {
      "companyName": "Federal Bank Ltd.",
      "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
+      "change": "decreased",
+      "delta_pct": -0.01,
       "previous_quarter_holding": 2.42
      },
      "filed_names": [
       "REKHA JHUNJHUNWALA"
      ],
-     "holding_pct": 2.42,
+     "holding_pct": 2.41,
      "holding_value_cr": 1995.22,
      "in_universe": true,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Financial Services",
      "shares_count": 59030060,
@@ -1474,12 +1467,12 @@
       "previous_quarter_holding": 1.75
      },
      "filed_names": [
-      "Akash Bhanshali"
+      "AKASH BHANSHALI"
      ],
      "holding_pct": 1.75,
      "holding_value_cr": 204.84,
      "in_universe": true,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Industrials",
      "shares_count": 30288766,
@@ -2140,60 +2133,6 @@
   },
   {
    "alias": null,
-   "avatar_initials": "AD",
-   "description": "Co-founder of ChrysCapital.",
-   "exits": [],
-   "holdings": [
-    {
-     "companyName": "Mahindra & Mahindra Financial Services Ltd.",
-     "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
-      "previous_quarter_holding": 1.05
-     },
-     "filed_names": [
-      "Ashish Dhawan"
-     ],
-     "holding_pct": 1.05,
-     "holding_value_cr": 454.86,
-     "in_universe": true,
-     "quarter": "Jun 2026",
-     "role": "public",
-     "sector": "Financial Services",
-     "shares_count": 14600000,
-     "symbol": "M&MFIN"
-    },
-    {
-     "companyName": "IIFL Finance Ltd.",
-     "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
-      "previous_quarter_holding": 1.33
-     },
-     "filed_names": [
-      "Ashish Dhawan"
-     ],
-     "holding_pct": 1.33,
-     "holding_value_cr": 349.14,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Financial Services",
-     "shares_count": 5673406,
-     "symbol": "IIFL"
-    }
-   ],
-   "id": "ashish-dhawan",
-   "name": "Ashish Dhawan",
-   "origin": "curated",
-   "top_sectors": [
-    "Financial Services"
-   ],
-   "type": "Individual HNI",
-   "value_cr": 804.0
-  },
-  {
-   "alias": null,
    "avatar_initials": "VK",
    "description": "Founder of Kedia Securities.",
    "exits": [],
@@ -2430,7 +2369,7 @@
      "holding_pct": 3.22,
      "holding_value_cr": 459.92,
      "in_universe": false,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Unclassified",
      "shares_count": 1478980,
@@ -2517,6 +2456,48 @@
    ],
    "type": "Institutional / PMS",
    "value_cr": 505.84
+  },
+  {
+   "alias": null,
+   "avatar_initials": "AD",
+   "description": "Co-founder of ChrysCapital.",
+   "exits": [
+    {
+     "companyName": "Mahindra & Mahindra Financial Services Ltd.",
+     "previous_quarter_holding": 1.05,
+     "quarter": "Jun 2026",
+     "symbol": "M&MFIN"
+    }
+   ],
+   "holdings": [
+    {
+     "companyName": "IIFL Finance Ltd.",
+     "delta": {
+      "change": "unchanged",
+      "delta_pct": 0.0,
+      "previous_quarter_holding": 1.33
+     },
+     "filed_names": [
+      "Ashish Dhawan"
+     ],
+     "holding_pct": 1.33,
+     "holding_value_cr": 349.14,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Financial Services",
+     "shares_count": 5673406,
+     "symbol": "IIFL"
+    }
+   ],
+   "id": "ashish-dhawan",
+   "name": "Ashish Dhawan",
+   "origin": "curated",
+   "top_sectors": [
+    "Financial Services"
+   ],
+   "type": "Individual HNI",
+   "value_cr": 349.14
   },
   {
    "alias": null,
@@ -2788,7 +2769,7 @@
      "holding_pct": 1.21,
      "holding_value_cr": 124.07,
      "in_universe": true,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Real Estate",
      "shares_count": 1700000,
