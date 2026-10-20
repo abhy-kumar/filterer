@@ -6,9 +6,9 @@
       "name": "NIFTY 50",
       "exchange": "NSE",
       "price": 22888.95,
-      "change": -257.2,
+      "change": -257.25,
       "changePct": -1.11,
-      "previousClose": 23146.15,
+      "previousClose": 23146.2,
       "dayHigh": 23175.25,
       "dayLow": 22845.0,
       "high52w": 26373.2,
@@ -20,9 +20,9 @@
       "name": "SENSEX",
       "exchange": "BSE",
       "price": 73852.9,
-      "change": -876.37,
+      "change": -876.4,
       "changePct": -1.17,
-      "previousClose": 74729.27,
+      "previousClose": 74729.3,
       "dayHigh": 74849.75,
       "dayLow": 73708.54,
       "high52w": 86159.02,
@@ -62,9 +62,9 @@
       "name": "NIFTY PHARMA",
       "exchange": "NSE",
       "price": 25615.0,
-      "change": -166.65,
+      "change": -166.7,
       "changePct": -0.65,
-      "previousClose": 25781.65,
+      "previousClose": 25781.7,
       "dayHigh": 26020.45,
       "dayLow": 25565.4,
       "high52w": 27255.05,
@@ -85,6 +85,6 @@
       "low52w": 23560.1
     }
   ],
-  "lastUpdated": "2026-10-19T19:39:09.379059Z",
+  "lastUpdated": "2026-10-20T08:49:07.286314Z",
   "source": "Yahoo Finance (yfinance)"
 }
