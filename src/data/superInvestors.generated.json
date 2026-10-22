@@ -3,593 +3,593 @@
   "ABREL": {
    "in_universe": true,
    "name": "Aditya Birla Real Estate Ltd.",
-   "price": 1083.4,
+   "price": 1085.1,
    "price_date": null,
    "sector": "Real Estate"
   },
   "AETHER": {
    "in_universe": true,
    "name": "Aether Industries Ltd.",
-   "price": 1462.5,
+   "price": 1449.9,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "AFFLE": {
    "in_universe": true,
    "name": "Affle 3i Ltd.",
-   "price": 1395.3,
+   "price": 1362.8,
    "price_date": null,
    "sector": "Communication Services"
   },
   "AIAENG": {
    "in_universe": true,
    "name": "AIA Engineering Ltd.",
-   "price": 3586.8,
+   "price": 3633.9,
    "price_date": null,
    "sector": "Industrials"
   },
   "AMBER": {
    "in_universe": true,
    "name": "Amber Enterprises India Ltd.",
-   "price": 6340,
+   "price": 6180,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "APTUS": {
    "in_universe": true,
    "name": "Aptus Value Housing Finance India Ltd.",
-   "price": 207.5,
+   "price": 201.82,
    "price_date": null,
    "sector": "Financial Services"
   },
   "ARE&M": {
    "in_universe": true,
    "name": "Amara Raja Energy & Mobility Ltd.",
-   "price": 712.05,
+   "price": 701.2,
    "price_date": null,
    "sector": "Industrials"
   },
   "ASAHIINDIA": {
    "in_universe": true,
    "name": "Asahi India Glass Ltd.",
-   "price": 894.1,
+   "price": 913.55,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "ATULAUTO": {
    "in_universe": false,
    "name": "Atul Auto Limited",
-   "price": 402.85,
-   "price_date": "2026-10-21",
+   "price": 400.6,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "BEML": {
    "in_universe": true,
    "name": "BEML Ltd.",
-   "price": 1888.3,
+   "price": 1907.7,
    "price_date": null,
    "sector": "Industrials"
   },
   "BERGEPAINT": {
    "in_universe": true,
    "name": "Berger Paints India Ltd.",
-   "price": 475.2,
+   "price": 469.95,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "CANBK": {
    "in_universe": true,
    "name": "Canara Bank",
-   "price": 120.6,
+   "price": 120.94,
    "price_date": null,
    "sector": "Financial Services"
   },
   "CANFINHOME": {
    "in_universe": true,
    "name": "Can Fin Homes Ltd.",
-   "price": 718.05,
+   "price": 715.35,
    "price_date": null,
    "sector": "Financial Services"
   },
   "CHENNPETRO": {
    "in_universe": true,
    "name": "Chennai Petroleum Corporation Ltd.",
-   "price": 1438.4,
+   "price": 1453.7,
    "price_date": null,
    "sector": "Energy"
   },
   "CHOICEIN": {
    "in_universe": true,
    "name": "Choice International Ltd.",
-   "price": 713.9,
+   "price": 714,
    "price_date": null,
    "sector": "Financial Services"
   },
   "CRISIL": {
    "in_universe": true,
    "name": "CRISIL Ltd.",
-   "price": 4586.4,
+   "price": 4777.2,
    "price_date": null,
    "sector": "Financial Services"
   },
   "DEEPAKFERT": {
    "in_universe": true,
    "name": "Deepak Fertilisers & Petrochemicals Corp. Ltd.",
-   "price": 1195.8,
+   "price": 1178.8,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "DMART": {
    "in_universe": true,
    "name": "Avenue Supermarts Ltd.",
-   "price": 3250.9,
+   "price": 3166,
    "price_date": null,
    "sector": "Consumer Defensive"
   },
   "EIDPARRY": {
    "in_universe": true,
    "name": "E.I.D. Parry (India) Ltd.",
-   "price": 657.1,
+   "price": 647.4,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "ELECON": {
    "in_universe": true,
    "name": "Elecon Engineering Co. Ltd.",
-   "price": 433.25,
+   "price": 428.95,
    "price_date": null,
    "sector": "Industrials"
   },
   "ELGIEQUIP": {
    "in_universe": true,
    "name": "Elgi Equipments Ltd.",
-   "price": 526.1,
+   "price": 534,
    "price_date": null,
    "sector": "Industrials"
   },
   "ESCORTS": {
    "in_universe": true,
    "name": "Escorts Kubota Ltd.",
-   "price": 2720.4,
+   "price": 2636.9,
    "price_date": null,
    "sector": "Industrials"
   },
   "FEDERALBNK": {
    "in_universe": true,
    "name": "Federal Bank Ltd.",
-   "price": 344,
+   "price": 347.8,
    "price_date": null,
    "sector": "Financial Services"
   },
   "FLUOROCHEM": {
    "in_universe": true,
    "name": "Gujarat Fluorochemicals Ltd.",
-   "price": 4368.3,
+   "price": 4303.9,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "FORTIS": {
    "in_universe": true,
    "name": "Fortis Healthcare Ltd.",
-   "price": 729,
+   "price": 726.65,
    "price_date": null,
    "sector": "Healthcare"
   },
   "HAVELLS": {
    "in_universe": true,
    "name": "Havells India Ltd.",
-   "price": 1071.6,
+   "price": 1073,
    "price_date": null,
    "sector": "Industrials"
   },
   "HEGAM": {
    "in_universe": true,
    "name": "HEG Advanced Materials Ltd.",
-   "price": 210.15,
+   "price": 205.67,
    "price_date": null,
    "sector": "Industrials"
   },
   "IIFL": {
    "in_universe": true,
    "name": "IIFL Finance Ltd.",
-   "price": 584.7,
+   "price": 567.9,
    "price_date": null,
    "sector": "Financial Services"
   },
   "IKS": {
    "in_universe": true,
    "name": "Inventurus Knowledge Solutions Ltd.",
-   "price": 1631.7,
+   "price": 1648,
    "price_date": null,
    "sector": "Healthcare"
   },
   "INDHOTEL": {
    "in_universe": true,
    "name": "Indian Hotels Co. Ltd.",
-   "price": 753,
+   "price": 782.3,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "INDIAMART": {
    "in_universe": true,
    "name": "Indiamart Intermesh Ltd.",
-   "price": 1592.5,
+   "price": 1580.2,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "INOXINDIA": {
    "in_universe": true,
    "name": "INOX India Ltd.",
-   "price": 1930.1,
+   "price": 1919.7,
    "price_date": null,
    "sector": "Industrials"
   },
   "INOXWIND": {
    "in_universe": true,
    "name": "Inox Wind Ltd.",
-   "price": 62.62,
+   "price": 62.11,
    "price_date": null,
    "sector": "Industrials"
   },
   "INTELLECT": {
    "in_universe": true,
    "name": "Intellect Design Arena Ltd.",
-   "price": 624.75,
+   "price": 605.85,
    "price_date": null,
    "sector": "Technology"
   },
   "J&KBANK": {
    "in_universe": true,
    "name": "Jammu & Kashmir Bank Ltd.",
-   "price": 135.5,
+   "price": 135.08,
    "price_date": null,
    "sector": "Financial Services"
   },
   "JUBLINGREA": {
    "in_universe": true,
    "name": "Jubilant Ingrevia Ltd.",
-   "price": 596.95,
+   "price": 609.45,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "JUBLPHARMA": {
    "in_universe": false,
    "name": "Jubilant Pharmova Limited",
-   "price": 929.4,
-   "price_date": "2026-10-21",
+   "price": 932.2,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "KARURVYSYA": {
    "in_universe": true,
    "name": "Karur Vysya Bank Ltd.",
-   "price": 359.65,
+   "price": 356.05,
    "price_date": null,
    "sector": "Financial Services"
   },
   "KCP": {
    "in_universe": false,
    "name": "KCP Limited",
-   "price": 147.95,
-   "price_date": "2026-10-21",
+   "price": 145.95,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "LAURUSLABS": {
    "in_universe": true,
    "name": "Laurus Labs Ltd.",
-   "price": 2012.5,
+   "price": 2002.5,
    "price_date": null,
    "sector": "Healthcare"
   },
   "LTFOODS": {
    "in_universe": true,
    "name": "LT Foods Ltd.",
-   "price": 394.75,
+   "price": 385,
    "price_date": null,
    "sector": "Consumer Defensive"
   },
   "MRF": {
    "in_universe": true,
    "name": "MRF Ltd.",
-   "price": 120880,
+   "price": 118860,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "NATCOPHARM": {
    "in_universe": true,
    "name": "NATCO Pharma Ltd.",
-   "price": 784.45,
+   "price": 785.15,
    "price_date": null,
    "sector": "Healthcare"
   },
   "NAUKRI": {
    "in_universe": true,
    "name": "Info Edge (India) Ltd.",
-   "price": 1235.2,
+   "price": 1217.5,
    "price_date": null,
    "sector": "Communication Services"
   },
   "NAVINFLUOR": {
    "in_universe": true,
    "name": "Navin Fluorine International Ltd.",
-   "price": 8014.5,
+   "price": 7946.5,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "NCC": {
    "in_universe": true,
    "name": "NCC Ltd.",
-   "price": 123.2,
+   "price": 120.17,
    "price_date": null,
    "sector": "Industrials"
   },
   "NEULANDLAB": {
    "in_universe": true,
    "name": "Neuland Laboratories Ltd.",
-   "price": 18975,
+   "price": 18935,
    "price_date": null,
    "sector": "Healthcare"
   },
   "NUVAMA": {
    "in_universe": true,
    "name": "Nuvama Wealth Management Ltd.",
-   "price": 1695.8,
+   "price": 1669.5,
    "price_date": null,
    "sector": "Financial Services"
   },
   "ORIENTBELL": {
    "in_universe": false,
    "name": "Orient Bell Limited",
-   "price": 364.75,
-   "price_date": "2026-10-21",
+   "price": 367.15,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "PAGEIND": {
    "in_universe": true,
    "name": "Page Industries Ltd.",
-   "price": 34870,
+   "price": 34425,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "PANAMAPET": {
    "in_universe": false,
    "name": "Panama Petrochem Limited",
-   "price": 465.15,
-   "price_date": "2026-10-21",
+   "price": 461.1,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "PATANJALI": {
    "in_universe": true,
    "name": "Patanjali Foods Ltd.",
-   "price": 357,
+   "price": 354.95,
    "price_date": null,
    "sector": "Consumer Defensive"
   },
   "PAYTM": {
    "in_universe": true,
    "name": "One 97 Communications Ltd.",
-   "price": 1670,
+   "price": 1661.4,
    "price_date": null,
    "sector": "Technology"
   },
   "PTCIL": {
    "in_universe": true,
    "name": "PTC Industries Ltd.",
-   "price": 25115,
+   "price": 24745,
    "price_date": null,
    "sector": "Industrials"
   },
   "RAMCOCEM": {
    "in_universe": true,
    "name": "The Ramco Cements Ltd.",
-   "price": 775.45,
+   "price": 763.35,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "REDINGTON": {
    "in_universe": true,
    "name": "Redington Ltd.",
-   "price": 361.55,
+   "price": 367.1,
    "price_date": null,
    "sector": "Technology"
   },
   "RKFORGE": {
    "in_universe": true,
    "name": "Ramkrishna Forgings Ltd.",
-   "price": 635.75,
+   "price": 614.5,
    "price_date": null,
    "sector": "Industrials"
   },
   "RSYSTEMS": {
    "in_universe": false,
    "name": "R Systems International Limited",
-   "price": 260.4,
-   "price_date": "2026-10-21",
+   "price": 253.4,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "SAFARI": {
    "in_universe": false,
    "name": "Safari Industries (India) Limited",
-   "price": 1304.6,
-   "price_date": "2026-10-21",
+   "price": 1265.1,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "SANGAMIND": {
    "in_universe": false,
    "name": "Sangam (India) Limited",
-   "price": 598.05,
-   "price_date": "2026-10-21",
+   "price": 589.7,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "SARDAEN": {
    "in_universe": true,
    "name": "Sarda Energy and Minerals Ltd.",
-   "price": 464.15,
+   "price": 456.25,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "SAREGAMA": {
    "in_universe": false,
    "name": "Saregama India Limited",
-   "price": 510.4,
-   "price_date": "2026-10-21",
+   "price": 508.9,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "SBFC": {
    "in_universe": false,
    "name": "SBFC Finance Limited",
-   "price": 81.44,
-   "price_date": "2026-10-21",
+   "price": 80.22,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "SCHNEIDER": {
    "in_universe": true,
    "name": "Schneider Electric Infrastructure Ltd.",
-   "price": 1141.5,
+   "price": 1150.7,
    "price_date": null,
    "sector": "Industrials"
   },
   "SHAILY": {
    "in_universe": false,
    "name": "Shaily Engineering Plastics Limited",
-   "price": 3023.3,
-   "price_date": "2026-10-21",
+   "price": 2987.0,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "SIGNATURE": {
    "in_universe": true,
    "name": "Signatureglobal (India) Ltd.",
-   "price": 714.8,
+   "price": 713.25,
    "price_date": null,
    "sector": "Real Estate"
   },
   "STARHEALTH": {
    "in_universe": true,
    "name": "Star Health and Allied Insurance Company Ltd.",
-   "price": 541.95,
+   "price": 541.2,
    "price_date": null,
    "sector": "Financial Services"
   },
   "SUNDARMFIN": {
    "in_universe": true,
    "name": "Sundaram Finance Ltd.",
-   "price": 4123.6,
+   "price": 4064.6,
    "price_date": null,
    "sector": "Financial Services"
   },
   "SUPREMEIND": {
    "in_universe": true,
    "name": "Supreme Industries Ltd.",
-   "price": 3554.2,
+   "price": 3491.2,
    "price_date": null,
    "sector": "Industrials"
   },
   "TATACOMM": {
    "in_universe": true,
    "name": "Tata Communications Ltd.",
-   "price": 1691.7,
+   "price": 1682.4,
    "price_date": null,
    "sector": "Communication Services"
   },
   "TEGA": {
    "in_universe": true,
    "name": "Tega Industries Ltd.",
-   "price": 1792,
+   "price": 1770.7,
    "price_date": null,
    "sector": "Industrials"
   },
   "THERMAX": {
    "in_universe": true,
    "name": "Thermax Ltd.",
-   "price": 3145,
+   "price": 3161.3,
    "price_date": null,
    "sector": "Industrials"
   },
   "TITAN": {
    "in_universe": true,
    "name": "Titan Company Ltd.",
-   "price": 4380.9,
+   "price": 4350,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "TMCV": {
    "in_universe": true,
    "name": "Tata Motors Ltd.",
-   "price": 417.5,
+   "price": 414.25,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "TMPV": {
    "in_universe": true,
    "name": "Tata Motors Passenger Vehicles Ltd.",
-   "price": 275.7,
+   "price": 270,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "TRITURBINE": {
    "in_universe": true,
    "name": "Triveni Turbine Ltd.",
-   "price": 459.9,
+   "price": 453.05,
    "price_date": null,
    "sector": "Industrials"
   },
   "UBL": {
    "in_universe": true,
    "name": "United Breweries Ltd.",
-   "price": 1179.8,
+   "price": 1182.6,
    "price_date": null,
    "sector": "Consumer Defensive"
   },
   "USHAMART": {
    "in_universe": true,
    "name": "Usha Martin Ltd.",
-   "price": 476.5,
+   "price": 466.4,
    "price_date": null,
    "sector": "Basic Materials"
   },
   "UTTAMSUGAR": {
    "in_universe": false,
    "name": "Uttam Sugar Mills Limited",
-   "price": 388.85,
-   "price_date": "2026-10-21",
+   "price": 352.1,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "VAIBHAVGBL": {
    "in_universe": false,
    "name": "Vaibhav Global Limited",
-   "price": 199.32,
-   "price_date": "2026-10-21",
+   "price": 195.22,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "VSTIND": {
    "in_universe": false,
    "name": "VST Industries Limited",
-   "price": 200.28,
-   "price_date": "2026-10-21",
+   "price": 199.02,
+   "price_date": "2026-10-22",
    "sector": "Unclassified"
   },
   "WELSPUNLIV": {
    "in_universe": true,
    "name": "Welspun Living Ltd.",
-   "price": 212.04,
+   "price": 213.94,
    "price_date": null,
    "sector": "Consumer Cyclical"
   },
   "WOCKPHARMA": {
    "in_universe": true,
    "name": "Wockhardt Ltd.",
-   "price": 1877.2,
+   "price": 1855.5,
    "price_date": null,
    "sector": "Healthcare"
   },
   "ZFCVINDIA": {
    "in_universe": true,
    "name": "ZF Commercial Vehicle Control Systems India Ltd.",
-   "price": 2096.3,
+   "price": 2144,
    "price_date": null,
    "sector": "Consumer Cyclical"
   }
  },
- "generated_at": "2026-10-21T19:59:32+00:00",
+ "generated_at": "2026-10-22T19:49:30+00:00",
  "investors": [
   {
    "alias": "DMart founder",
@@ -613,7 +613,7 @@
       "Shrikantadevi Radhakishan Damani"
      ],
      "holding_pct": 51.83,
-     "holding_value_cr": 109868.95,
+     "holding_value_cr": 106999.63,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "promoter",
@@ -632,7 +632,7 @@
       "BRIGHT STAR INVESTMENTS PRIVATE LIMITED"
      ],
      "holding_pct": 2.37,
-     "holding_value_cr": 1084.69,
+     "holding_value_cr": 1069.17,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -652,7 +652,7 @@
       "Radhakishan Shivkishan Damani"
      ],
      "holding_pct": 29.1,
-     "holding_value_cr": 989.99,
+     "holding_value_cr": 983.76,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -671,7 +671,7 @@
       "DERIVE TRADING AND RESORTS PRIVATE LIMITED"
      ],
      "holding_pct": 1.23,
-     "holding_value_cr": 383.72,
+     "holding_value_cr": 384.63,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -688,7 +688,7 @@
     "Financial Services"
    ],
    "type": "Individual HNI",
-   "value_cr": 112327.35
+   "value_cr": 109437.19
   },
   {
    "alias": null,
@@ -707,7 +707,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 5.31,
-     "holding_value_cr": 20671.04,
+     "holding_value_cr": 20525.24,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -726,32 +726,13 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 4.02,
-     "holding_value_cr": 2212.53,
+     "holding_value_cr": 2205.39,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
      "sector": "Healthcare",
      "shares_count": 30350152,
      "symbol": "FORTIS"
-    },
-    {
-     "companyName": "Tata Motors Ltd.",
-     "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
-      "previous_quarter_holding": 1.32
-     },
-     "filed_names": [
-      "Rekha Jhunjhunwala"
-     ],
-     "holding_pct": 1.32,
-     "holding_value_cr": 2035.24,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Consumer Cyclical",
-     "shares_count": 48748260,
-     "symbol": "TMCV"
     },
     {
      "companyName": "Federal Bank Ltd.",
@@ -764,13 +745,32 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 2.41,
-     "holding_value_cr": 2030.63,
+     "holding_value_cr": 2053.07,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
      "sector": "Financial Services",
      "shares_count": 59030060,
      "symbol": "FEDERALBNK"
+    },
+    {
+     "companyName": "Tata Motors Ltd.",
+     "delta": {
+      "change": "unchanged",
+      "delta_pct": 0.0,
+      "previous_quarter_holding": 1.32
+     },
+     "filed_names": [
+      "Rekha Jhunjhunwala"
+     ],
+     "holding_pct": 1.32,
+     "holding_value_cr": 2019.4,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Consumer Cyclical",
+     "shares_count": 48748260,
+     "symbol": "TMCV"
     },
     {
      "companyName": "CRISIL Ltd.",
@@ -783,7 +783,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 5.19,
-     "holding_value_cr": 1742.37,
+     "holding_value_cr": 1814.86,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -802,7 +802,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 1.38,
-     "holding_value_cr": 1512.54,
+     "holding_value_cr": 1516.81,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -821,7 +821,7 @@
       "Rekha Jhunjhunwala"
      ],
      "holding_pct": 4.16,
-     "holding_value_cr": 1445.25,
+     "holding_value_cr": 1430.79,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -840,7 +840,7 @@
       "Rekha Jhunjhunwala"
      ],
      "holding_pct": 1.32,
-     "holding_value_cr": 1345.37,
+     "holding_value_cr": 1317.55,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -859,7 +859,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 1.0,
-     "holding_value_cr": 1075.87,
+     "holding_value_cr": 1117.73,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -878,32 +878,13 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 3.04,
-     "holding_value_cr": 968.52,
+     "holding_value_cr": 967.18,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "promoter",
      "sector": "Financial Services",
      "shares_count": 17870977,
      "symbol": "STARHEALTH"
-    },
-    {
-     "companyName": "NCC Ltd.",
-     "delta": {
-      "change": "unchanged",
-      "delta_pct": 0.0,
-      "previous_quarter_holding": 12.48
-     },
-     "filed_names": [
-      "REKHA JHUNJHUNWALA"
-     ],
-     "holding_pct": 12.48,
-     "holding_value_cr": 965.07,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Industrials",
-     "shares_count": 78333266,
-     "symbol": "NCC"
     },
     {
      "companyName": "Jubilant Pharmova Limited",
@@ -916,13 +897,32 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 6.43,
-     "holding_value_cr": 952.08,
+     "holding_value_cr": 954.95,
      "in_universe": false,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Unclassified",
      "shares_count": 10244000,
      "symbol": "JUBLPHARMA"
+    },
+    {
+     "companyName": "NCC Ltd.",
+     "delta": {
+      "change": "unchanged",
+      "delta_pct": 0.0,
+      "previous_quarter_holding": 12.48
+     },
+     "filed_names": [
+      "REKHA JHUNJHUNWALA"
+     ],
+     "holding_pct": 12.48,
+     "holding_value_cr": 941.33,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Industrials",
+     "shares_count": 78333266,
+     "symbol": "NCC"
     },
     {
      "companyName": "Tata Communications Ltd.",
@@ -935,7 +935,7 @@
       "Rekha Jhunjhunwala"
      ],
      "holding_pct": 1.58,
-     "holding_value_cr": 761.38,
+     "holding_value_cr": 757.2,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -954,7 +954,7 @@
       "Rekha Jhunjhunwala"
      ],
      "holding_pct": 1.75,
-     "holding_value_cr": 532.56,
+     "holding_value_cr": 526.41,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -973,7 +973,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 1.53,
-     "holding_value_cr": 464.75,
+     "holding_value_cr": 450.48,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -992,7 +992,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 2.97,
-     "holding_value_cr": 282.69,
+     "holding_value_cr": 288.61,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1010,7 +1010,7 @@
     "Healthcare"
    ],
    "type": "Individual HNI",
-   "value_cr": 38997.89
+   "value_cr": 38887.0
   },
   {
    "alias": null,
@@ -1031,7 +1031,7 @@
       "Gopikishan Shivkishan Damani"
      ],
      "holding_pct": 15.09,
-     "holding_value_cr": 31982.35,
+     "holding_value_cr": 31147.11,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "promoter",
@@ -1047,7 +1047,7 @@
     "Consumer Defensive"
    ],
    "type": "Individual HNI",
-   "value_cr": 31982.35
+   "value_cr": 31147.11
   },
   {
    "alias": "Nalanda Capital",
@@ -1066,7 +1066,7 @@
       "Nalanda India Equity Fund Limited"
      ],
      "holding_pct": 9.18,
-     "holding_value_cr": 3072.53,
+     "holding_value_cr": 3112.88,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1085,7 +1085,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 4.07,
-     "holding_value_cr": 2736.51,
+     "holding_value_cr": 2740.09,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1104,7 +1104,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 2.8,
-     "holding_value_cr": 2240.13,
+     "holding_value_cr": 2208.03,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1123,7 +1123,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 4.06,
-     "holding_value_cr": 2080.44,
+     "holding_value_cr": 2045.68,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1142,7 +1142,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 5.13,
-     "holding_value_cr": 1924.13,
+     "holding_value_cr": 1934.11,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1161,7 +1161,7 @@
       "Nalanda India Fund Limited"
      ],
      "holding_pct": 4.81,
-     "holding_value_cr": 1870.28,
+     "holding_value_cr": 1846.41,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1180,7 +1180,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 3.58,
-     "holding_value_cr": 1640.59,
+     "holding_value_cr": 1617.11,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1199,7 +1199,7 @@
       "Nalanda India Fund Limited"
      ],
      "holding_pct": 2.59,
-     "holding_value_cr": 1433.17,
+     "holding_value_cr": 1417.34,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1218,7 +1218,7 @@
       "NALANDA INDIA FUND LIMITED"
      ],
      "holding_pct": 2.97,
-     "holding_value_cr": 1340.69,
+     "holding_value_cr": 1316.93,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1237,7 +1237,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 8.67,
-     "holding_value_cr": 1130.3,
+     "holding_value_cr": 1113.08,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1257,7 +1257,7 @@
       "NALANDA INDIA FUND LIMITED"
      ],
      "holding_pct": 7.37,
-     "holding_value_cr": 1077.39,
+     "holding_value_cr": 1061.34,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1276,7 +1276,7 @@
       "NALANDA INDIA EQUITY FUND LIMITED"
      ],
      "holding_pct": 7.71,
-     "holding_value_cr": 738.38,
+     "holding_value_cr": 732.68,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1295,7 +1295,7 @@
       "Nalanda India Equity Fund Limited"
      ],
      "holding_pct": 2.64,
-     "holding_value_cr": 439.77,
+     "holding_value_cr": 446.37,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1314,7 +1314,7 @@
       "NALANDA INDIA FUND LIMITED"
      ],
      "holding_pct": 6.58,
-     "holding_value_cr": 220.03,
+     "holding_value_cr": 215.5,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1332,7 +1332,7 @@
     "Communication Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 21944.34
+   "value_cr": 21807.55
   },
   {
    "alias": null,
@@ -1351,7 +1351,7 @@
       "Akash Bhanshali"
      ],
      "holding_pct": 4.75,
-     "holding_value_cr": 2280.04,
+     "holding_value_cr": 2246.42,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1370,7 +1370,7 @@
       "AKASH BHANSHALI"
      ],
      "holding_pct": 1.32,
-     "holding_value_cr": 1439.28,
+     "holding_value_cr": 1432.13,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1389,7 +1389,7 @@
       "Akash Bhanshali"
      ],
      "holding_pct": 1.23,
-     "holding_value_cr": 1322.83,
+     "holding_value_cr": 1316.02,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1408,7 +1408,7 @@
       "Akash Bhanshali"
      ],
      "holding_pct": 1.35,
-     "holding_value_cr": 369.72,
+     "holding_value_cr": 372.7,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1427,32 +1427,13 @@
       "AKASH BHANSHALI"
      ],
      "holding_pct": 1.42,
-     "holding_value_cr": 284.88,
+     "holding_value_cr": 287.44,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
      "sector": "Consumer Cyclical",
      "shares_count": 13435382,
      "symbol": "WELSPUNLIV"
-    },
-    {
-     "companyName": "Ramkrishna Forgings Ltd.",
-     "delta": {
-      "change": "decreased",
-      "delta_pct": -0.04,
-      "previous_quarter_holding": 2.22
-     },
-     "filed_names": [
-      "AKASH BHANSHALI"
-     ],
-     "holding_pct": 2.18,
-     "holding_value_cr": 257.6,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Industrials",
-     "shares_count": 4051910,
-     "symbol": "RKFORGE"
     },
     {
      "companyName": "Amber Enterprises India Ltd.",
@@ -1465,13 +1446,32 @@
       "Akash Bhanshali"
      ],
      "holding_pct": 1.15,
-     "holding_value_cr": 256.33,
+     "holding_value_cr": 249.86,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
      "sector": "Consumer Cyclical",
      "shares_count": 404302,
      "symbol": "AMBER"
+    },
+    {
+     "companyName": "Ramkrishna Forgings Ltd.",
+     "delta": {
+      "change": "decreased",
+      "delta_pct": -0.04,
+      "previous_quarter_holding": 2.22
+     },
+     "filed_names": [
+      "AKASH BHANSHALI"
+     ],
+     "holding_pct": 2.18,
+     "holding_value_cr": 248.99,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Industrials",
+     "shares_count": 4051910,
+     "symbol": "RKFORGE"
     },
     {
      "companyName": "Inox Wind Ltd.",
@@ -1484,7 +1484,7 @@
       "AKASH BHANSHALI"
      ],
      "holding_pct": 1.75,
-     "holding_value_cr": 189.67,
+     "holding_value_cr": 188.12,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1503,7 +1503,7 @@
       "AKASH BHANSHALI"
      ],
      "holding_pct": 1.52,
-     "holding_value_cr": 157.95,
+     "holding_value_cr": 153.62,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1522,7 +1522,7 @@
       "AKASH BHANSHALI"
      ],
      "holding_pct": 1.01,
-     "holding_value_cr": 141.26,
+     "holding_value_cr": 141.39,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1540,7 +1540,7 @@
     "Technology"
    ],
    "type": "Individual HNI",
-   "value_cr": 6699.56
+   "value_cr": 6636.69
   },
   {
    "alias": "Malabar Investments",
@@ -1559,7 +1559,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 4.66,
-     "holding_value_cr": 1134.95,
+     "holding_value_cr": 1132.56,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1578,7 +1578,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 4.43,
-     "holding_value_cr": 460.58,
+     "holding_value_cr": 447.97,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1597,7 +1597,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 2.16,
-     "holding_value_cr": 424.05,
+     "holding_value_cr": 414.18,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1616,7 +1616,7 @@
       "Malabar India Fund Limited"
      ],
      "holding_pct": 5.16,
-     "holding_value_cr": 329.56,
+     "holding_value_cr": 319.59,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1635,7 +1635,7 @@
       "Malabar India Fund Limited"
      ],
      "holding_pct": 2.9,
-     "holding_value_cr": 285.54,
+     "holding_value_cr": 284.7,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1654,7 +1654,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 5.4,
-     "holding_value_cr": 180.59,
+     "holding_value_cr": 176.87,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1673,7 +1673,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 1.21,
-     "holding_value_cr": 109.72,
+     "holding_value_cr": 108.08,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1691,7 +1691,7 @@
     "Communication Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 2924.99
+   "value_cr": 2883.95
   },
   {
    "alias": null,
@@ -1710,7 +1710,7 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 3.12,
-     "holding_value_cr": 759.0,
+     "holding_value_cr": 757.4,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1729,7 +1729,7 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 1.35,
-     "holding_value_cr": 423.95,
+     "holding_value_cr": 417.38,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1748,7 +1748,7 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 1.07,
-     "holding_value_cr": 401.84,
+     "holding_value_cr": 395.92,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1767,7 +1767,7 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 1.5,
-     "holding_value_cr": 223.57,
+     "holding_value_cr": 222.88,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1786,13 +1786,30 @@
       "Mukul Mahavir Agrawal"
      ],
      "holding_pct": 1.14,
-     "holding_value_cr": 185.66,
+     "holding_value_cr": 182.5,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
      "sector": "Basic Materials",
      "shares_count": 4000000,
      "symbol": "SARDAEN"
+    },
+    {
+     "companyName": "Tega Industries Ltd.",
+     "delta": {
+      "change": "new"
+     },
+     "filed_names": [
+      "Mukul Mahavir Agrawal"
+     ],
+     "holding_pct": 1.33,
+     "holding_value_cr": 177.07,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Industrials",
+     "shares_count": 1000000,
+     "symbol": "TEGA"
     },
     {
      "companyName": "Deepak Fertilisers & Petrochemicals Corp. Ltd.",
@@ -1805,30 +1822,13 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 1.19,
-     "holding_value_cr": 179.37,
+     "holding_value_cr": 176.82,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
      "sector": "Basic Materials",
      "shares_count": 1500000,
      "symbol": "DEEPAKFERT"
-    },
-    {
-     "companyName": "Tega Industries Ltd.",
-     "delta": {
-      "change": "new"
-     },
-     "filed_names": [
-      "Mukul Mahavir Agrawal"
-     ],
-     "holding_pct": 1.33,
-     "holding_value_cr": 179.2,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Industrials",
-     "shares_count": 1000000,
-     "symbol": "TEGA"
     },
     {
      "companyName": "LT Foods Ltd.",
@@ -1841,7 +1841,7 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 1.12,
-     "holding_value_cr": 153.95,
+     "holding_value_cr": 150.15,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1860,7 +1860,7 @@
       "MUKUL MAHAVIR AGRAWAL"
      ],
      "holding_pct": 1.07,
-     "holding_value_cr": 93.71,
+     "holding_value_cr": 90.88,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1878,7 +1878,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 2600.25
+   "value_cr": 2571.0
   },
   {
    "alias": null,
@@ -1897,7 +1897,7 @@
       "Nemish S Shah"
      ],
      "holding_pct": 5.68,
-     "holding_value_cr": 1294.91,
+     "holding_value_cr": 1323.08,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1916,7 +1916,7 @@
       "Nemish S Shah"
      ],
      "holding_pct": 1.69,
-     "holding_value_cr": 281.99,
+     "holding_value_cr": 286.22,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1933,7 +1933,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 1576.9
+   "value_cr": 1609.3
   },
   {
    "alias": "Singularity Holdings",
@@ -1952,7 +1952,7 @@
       "MADHUSUDAN MURLIDHAR KELA"
      ],
      "holding_pct": 7.21,
-     "holding_value_cr": 1146.15,
+     "holding_value_cr": 1146.32,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1970,7 +1970,7 @@
       "SINGULARITY LARGE VALUE FUND III"
      ],
      "holding_pct": 2.91,
-     "holding_value_cr": 201.33,
+     "holding_value_cr": 197.04,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1989,7 +1989,7 @@
       "MADHURI MADHUSUDAN KELA"
      ],
      "holding_pct": 4.86,
-     "holding_value_cr": 145.97,
+     "holding_value_cr": 143.93,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2006,7 +2006,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 1493.45
+   "value_cr": 1487.29
   },
   {
    "alias": null,
@@ -2025,7 +2025,7 @@
       "PLUTUS WEALTH MANAGEMENT LLP"
      ],
      "holding_pct": 8.53,
-     "holding_value_cr": 1356.41,
+     "holding_value_cr": 1356.6,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2041,7 +2041,7 @@
     "Financial Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 1356.41
+   "value_cr": 1356.6
   },
   {
    "alias": "Abakkus Asset Manager",
@@ -2058,7 +2058,7 @@
       "ABAKKUS SMALL CAP FUND"
      ],
      "holding_pct": 1.05,
-     "holding_value_cr": 249.55,
+     "holding_value_cr": 255.22,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2075,7 +2075,7 @@
       "ABAKKUS FLEXI CAP FUND"
      ],
      "holding_pct": 1.33,
-     "holding_value_cr": 233.54,
+     "holding_value_cr": 232.28,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2092,7 +2092,7 @@
       "Abakkus Flexi Cap Fund"
      ],
      "holding_pct": 1.15,
-     "holding_value_cr": 224.18,
+     "holding_value_cr": 222.24,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2109,7 +2109,7 @@
       "ABAKKUS FLEXI CAP FUND"
      ],
      "holding_pct": 1.08,
-     "holding_value_cr": 170.56,
+     "holding_value_cr": 172.31,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2128,9 +2128,9 @@
       "ABAKKUS EMERGING OPPORTUNITIES FUND-1"
      ],
      "holding_pct": 1.15,
-     "holding_value_cr": 170.55,
+     "holding_value_cr": 171.06,
      "in_universe": false,
-     "quarter": "Jun 2026",
+     "quarter": "Sep 2026",
      "role": "public",
      "sector": "Unclassified",
      "shares_count": 1835028,
@@ -2146,7 +2146,7 @@
     "Basic Materials"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 1048.38
+   "value_cr": 1053.11
   },
   {
    "alias": "3P Investment Managers",
@@ -2173,7 +2173,7 @@
       "3P INDIA EQUITY FUND 1M"
      ],
      "holding_pct": 4.88,
-     "holding_value_cr": 467.06,
+     "holding_value_cr": 465.31,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2192,7 +2192,7 @@
       "3p India Equity Fund 1"
      ],
      "holding_pct": 1.25,
-     "holding_value_cr": 350.42,
+     "holding_value_cr": 353.92,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2211,7 +2211,7 @@
       "3P INDIA EQUITY FUND 1"
      ],
      "holding_pct": 1.17,
-     "holding_value_cr": 167.24,
+     "holding_value_cr": 163.7,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2229,7 +2229,7 @@
     "Basic Materials"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 984.72
+   "value_cr": 982.93
   },
   {
    "alias": null,
@@ -2248,7 +2248,7 @@
       "KEDIA SECURITIES PRIVATE LIMITED"
      ],
      "holding_pct": 1.01,
-     "holding_value_cr": 246.68,
+     "holding_value_cr": 246.16,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2268,7 +2268,7 @@
       "VIJAY KEDIA"
      ],
      "holding_pct": 20.91,
-     "holding_value_cr": 233.73,
+     "holding_value_cr": 232.43,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2287,7 +2287,7 @@
       "Vijay Kishanlal Kedia"
      ],
      "holding_pct": 1.0,
-     "holding_value_cr": 97.48,
+     "holding_value_cr": 96.51,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2306,7 +2306,7 @@
       "VIJAY KEDIA"
      ],
      "holding_pct": 2.04,
-     "holding_value_cr": 68.27,
+     "holding_value_cr": 66.86,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2323,7 +2323,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 646.16
+   "value_cr": 641.96
   },
   {
    "alias": null,
@@ -2342,7 +2342,7 @@
       "BHAVOOK TRIPATHI"
      ],
      "holding_pct": 20.47,
-     "holding_value_cr": 631.61,
+     "holding_value_cr": 614.63,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2358,7 +2358,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 631.61
+   "value_cr": 614.63
   },
   {
    "alias": null,
@@ -2384,7 +2384,7 @@
       "ASHISH KACHOLIA"
      ],
      "holding_pct": 3.22,
-     "holding_value_cr": 447.14,
+     "holding_value_cr": 441.77,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2403,7 +2403,7 @@
       "ASHISH KACHOLIA"
      ],
      "holding_pct": 1.61,
-     "holding_value_cr": 103.06,
+     "holding_value_cr": 99.94,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2419,7 +2419,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 550.2
+   "value_cr": 541.71
   },
   {
    "alias": "Old Bridge Capital",
@@ -2436,7 +2436,7 @@
       "OLD BRIDGE FOCUSED FUND"
      ],
      "holding_pct": 1.04,
-     "holding_value_cr": 293.78,
+     "holding_value_cr": 298.29,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2455,7 +2455,7 @@
       "OLD BRIDGE FOCUSED FUND"
      ],
      "holding_pct": 1.51,
-     "holding_value_cr": 178.58,
+     "holding_value_cr": 172.61,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2472,7 +2472,7 @@
     "Industrials"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 472.36
+   "value_cr": 470.9
   },
   {
    "alias": null,
@@ -2498,7 +2498,7 @@
       "Ashish Dhawan"
      ],
      "holding_pct": 1.33,
-     "holding_value_cr": 331.72,
+     "holding_value_cr": 322.19,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2514,7 +2514,7 @@
     "Financial Services"
    ],
    "type": "Individual HNI",
-   "value_cr": 331.72
+   "value_cr": 322.19
   },
   {
    "alias": null,
@@ -2533,7 +2533,7 @@
       "DOLLY KHANNA"
      ],
      "holding_pct": 1.02,
-     "holding_value_cr": 217.73,
+     "holding_value_cr": 220.04,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2549,7 +2549,7 @@
     "Energy"
    ],
    "type": "Individual HNI",
-   "value_cr": 217.73
+   "value_cr": 220.04
   },
   {
    "alias": null,
@@ -2568,7 +2568,7 @@
       "Anil Kumar Goel"
      ],
      "holding_pct": 3.67,
-     "holding_value_cr": 54.44,
+     "holding_value_cr": 49.29,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2587,7 +2587,7 @@
       "ANIL KUMAR GOEL"
      ],
      "holding_pct": 1.07,
-     "holding_value_cr": 30.23,
+     "holding_value_cr": 29.97,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2603,7 +2603,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 84.67
+   "value_cr": 79.26
   },
   {
    "alias": null,
@@ -2622,7 +2622,7 @@
       "RAMESH DAMANI"
      ],
      "holding_pct": 1.22,
-     "holding_value_cr": 34.47,
+     "holding_value_cr": 34.17,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2638,7 +2638,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 34.47
+   "value_cr": 34.17
   },
   {
    "alias": "Equity Intelligence India",
@@ -2657,7 +2657,7 @@
       "EQUITY INTELLIGENCE INDIA PRIVATE LIMITED"
      ],
      "holding_pct": 3.82,
-     "holding_value_cr": 20.57,
+     "holding_value_cr": 20.7,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2673,80 +2673,7 @@
     "Unclassified"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 20.57
-  },
-  {
-   "alias": null,
-   "avatar_initials": "GM",
-   "description": "Found in exchange filings: named as a public shareholder with 1% or more of 3 tracked companies. Not in the curated registry, so nothing is known beyond what the filings show.",
-   "exits": [],
-   "holdings": [
-    {
-     "companyName": "E.I.D. Parry (India) Ltd.",
-     "delta": {
-      "change": "increased",
-      "delta_pct": 0.03,
-      "previous_quarter_holding": 2.53
-     },
-     "filed_names": [
-      "GOVINDLAL M PARIKH"
-     ],
-     "holding_pct": 2.56,
-     "holding_value_cr": 299.6,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Basic Materials",
-     "shares_count": 4559457,
-     "symbol": "EIDPARRY"
-    },
-    {
-     "companyName": "The Ramco Cements Ltd.",
-     "delta": {
-      "change": "increased",
-      "delta_pct": 0.02,
-      "previous_quarter_holding": 1.51
-     },
-     "filed_names": [
-      "GOVINDLAL M PARIKH"
-     ],
-     "holding_pct": 1.53,
-     "holding_value_cr": 280.86,
-     "in_universe": true,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Basic Materials",
-     "shares_count": 3621897,
-     "symbol": "RAMCOCEM"
-    },
-    {
-     "companyName": "KCP Limited",
-     "delta": {
-      "change": "increased",
-      "delta_pct": 0.07,
-      "previous_quarter_holding": 1.49
-     },
-     "filed_names": [
-      "GOVINDLAL M PARIKH"
-     ],
-     "holding_pct": 1.56,
-     "holding_value_cr": 29.68,
-     "in_universe": false,
-     "quarter": "Sep 2026",
-     "role": "public",
-     "sector": "Unclassified",
-     "shares_count": 2006284,
-     "symbol": "KCP"
-    }
-   ],
-   "id": "discovered-govindlal-m-parikh",
-   "name": "Govindlal M Parikh",
-   "origin": "discovered",
-   "top_sectors": [
-    "Basic Materials"
-   ],
-   "type": "Individual HNI",
-   "value_cr": 610.14
+   "value_cr": 20.7
   },
   {
    "alias": null,
@@ -2765,7 +2692,7 @@
       "PRADEEP KUMAR AGARWAL"
      ],
      "holding_pct": 1.25,
-     "holding_value_cr": 485.52,
+     "holding_value_cr": 482.73,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2784,7 +2711,7 @@
       "Pradeep Kumar Agarwal"
      ],
      "holding_pct": 1.21,
-     "holding_value_cr": 121.52,
+     "holding_value_cr": 121.25,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2801,7 +2728,80 @@
     "Real Estate"
    ],
    "type": "Individual HNI",
-   "value_cr": 607.04
+   "value_cr": 603.98
+  },
+  {
+   "alias": null,
+   "avatar_initials": "GM",
+   "description": "Found in exchange filings: named as a public shareholder with 1% or more of 3 tracked companies. Not in the curated registry, so nothing is known beyond what the filings show.",
+   "exits": [],
+   "holdings": [
+    {
+     "companyName": "E.I.D. Parry (India) Ltd.",
+     "delta": {
+      "change": "increased",
+      "delta_pct": 0.03,
+      "previous_quarter_holding": 2.53
+     },
+     "filed_names": [
+      "GOVINDLAL M PARIKH"
+     ],
+     "holding_pct": 2.56,
+     "holding_value_cr": 295.18,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Basic Materials",
+     "shares_count": 4559457,
+     "symbol": "EIDPARRY"
+    },
+    {
+     "companyName": "The Ramco Cements Ltd.",
+     "delta": {
+      "change": "increased",
+      "delta_pct": 0.02,
+      "previous_quarter_holding": 1.51
+     },
+     "filed_names": [
+      "GOVINDLAL M PARIKH"
+     ],
+     "holding_pct": 1.53,
+     "holding_value_cr": 276.48,
+     "in_universe": true,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Basic Materials",
+     "shares_count": 3621897,
+     "symbol": "RAMCOCEM"
+    },
+    {
+     "companyName": "KCP Limited",
+     "delta": {
+      "change": "increased",
+      "delta_pct": 0.07,
+      "previous_quarter_holding": 1.49
+     },
+     "filed_names": [
+      "GOVINDLAL M PARIKH"
+     ],
+     "holding_pct": 1.56,
+     "holding_value_cr": 29.28,
+     "in_universe": false,
+     "quarter": "Sep 2026",
+     "role": "public",
+     "sector": "Unclassified",
+     "shares_count": 2006284,
+     "symbol": "KCP"
+    }
+   ],
+   "id": "discovered-govindlal-m-parikh",
+   "name": "Govindlal M Parikh",
+   "origin": "discovered",
+   "top_sectors": [
+    "Basic Materials"
+   ],
+   "type": "Individual HNI",
+   "value_cr": 600.94
   },
   {
    "alias": null,
@@ -2820,7 +2820,7 @@
       "AJAY UPADHYAYA"
      ],
      "holding_pct": 1.01,
-     "holding_value_cr": 414.75,
+     "holding_value_cr": 411.23,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2839,7 +2839,7 @@
       "Ajay Upadhyaya"
      ],
      "holding_pct": 1.76,
-     "holding_value_cr": 171.13,
+     "holding_value_cr": 169.44,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2856,7 +2856,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 585.88
+   "value_cr": 580.67
   },
   {
    "alias": null,
@@ -2875,7 +2875,7 @@
       "HITESH SATISHCHANDRA DOSHI"
      ],
      "holding_pct": 2.01,
-     "holding_value_cr": 234.55,
+     "holding_value_cr": 231.09,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2894,7 +2894,7 @@
       "Hitesh Satishchandra Doshi"
      ],
      "holding_pct": 1.48,
-     "holding_value_cr": 178.74,
+     "holding_value_cr": 179.02,
      "in_universe": true,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2911,10 +2911,10 @@
     "Real Estate"
    ],
    "type": "Individual HNI",
-   "value_cr": 413.29
+   "value_cr": 410.11
   }
  ],
  "latest_period": "Sep 2026",
- "price_date": "2026-10-21",
+ "price_date": "2026-10-22",
  "source": "NSE shareholding pattern filings (XBRL)"
 }
