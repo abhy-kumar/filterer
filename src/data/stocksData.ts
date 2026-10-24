@@ -20669,7 +20669,7 @@ export const STOCKS_DATA: Stock[] = [
     "debt_to_equity": 0.88,
     "interest_coverage": 4.45,
     "current_ratio": null,
-    "piotroski_score": 8,
+    "piotroski_score": 6,
     "altman_z_score": 3.55,
     "debtor_days": null,
     "inventory_days": null,

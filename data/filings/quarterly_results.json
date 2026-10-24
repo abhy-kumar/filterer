@@ -87,7 +87,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:52:55+00:00",
+  "fetched_at": "2026-10-24T17:49:51+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -595,7 +595,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:01+00:00",
+  "fetched_at": "2026-10-24T17:49:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -856,7 +856,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:07+00:00",
+  "fetched_at": "2026-10-24T17:50:03+00:00",
   "quarters": [
    {
     "depreciation": 93.05,
@@ -1131,7 +1131,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:53:13+00:00",
+  "fetched_at": "2026-10-24T17:50:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -1420,7 +1420,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:53:19+00:00",
+  "fetched_at": "2026-10-24T17:50:15+00:00",
   "quarters": [
    {
     "depreciation": 30.29,
@@ -1709,7 +1709,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:31+00:00",
+  "fetched_at": "2026-10-24T17:50:27+00:00",
   "quarters": [
    {
     "depreciation": 47.95,
@@ -1928,7 +1928,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:37+00:00",
+  "fetched_at": "2026-10-24T17:50:33+00:00",
   "quarters": [
    {
     "depreciation": 18.77,
@@ -2571,7 +2571,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:43+00:00",
+  "fetched_at": "2026-10-24T17:50:39+00:00",
   "quarters": [
    {
     "depreciation": 59.21,
@@ -2818,7 +2818,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:49+00:00",
+  "fetched_at": "2026-10-24T17:50:45+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -3079,7 +3079,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:53:55+00:00",
+  "fetched_at": "2026-10-24T17:50:51+00:00",
   "quarters": [
    {
     "depreciation": 212.8,
@@ -3382,7 +3382,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:01+00:00",
+  "fetched_at": "2026-10-24T17:50:57+00:00",
   "quarters": [
    {
     "depreciation": 5.43,
@@ -3587,7 +3587,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:07+00:00",
+  "fetched_at": "2026-10-24T17:51:03+00:00",
   "quarters": [
    {
     "depreciation": 59.87,
@@ -3778,7 +3778,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:13+00:00",
+  "fetched_at": "2026-10-24T17:51:09+00:00",
   "quarters": [
    {
     "depreciation": 3.69,
@@ -4053,7 +4053,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:19+00:00",
+  "fetched_at": "2026-10-24T17:51:15+00:00",
   "quarters": [
    {
     "depreciation": 457.64,
@@ -4356,7 +4356,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:25+00:00",
+  "fetched_at": "2026-10-24T17:51:21+00:00",
   "quarters": [
    {
     "depreciation": 756.96,
@@ -4631,7 +4631,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:31+00:00",
+  "fetched_at": "2026-10-24T17:51:27+00:00",
   "quarters": [
    {
     "depreciation": 451.0,
@@ -4920,7 +4920,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:37+00:00",
+  "fetched_at": "2026-10-24T17:51:33+00:00",
   "quarters": [
    {
     "depreciation": 949.58,
@@ -5209,7 +5209,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:43+00:00",
+  "fetched_at": "2026-10-24T17:51:39+00:00",
   "quarters": [
    {
     "depreciation": 1002.23,
@@ -5512,7 +5512,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:49+00:00",
+  "fetched_at": "2026-10-24T17:51:45+00:00",
   "quarters": [
    {
     "depreciation": 34.14,
@@ -5717,7 +5717,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:54:55+00:00",
+  "fetched_at": "2026-10-24T17:51:51+00:00",
   "quarters": [
    {
     "depreciation": 31.64,
@@ -5866,7 +5866,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:15+00:00",
+  "fetched_at": "2026-10-24T18:37:09+00:00",
   "quarters": [
    {
     "depreciation": 9.23,
@@ -6057,7 +6057,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:01+00:00",
+  "fetched_at": "2026-10-24T17:51:57+00:00",
   "quarters": [
    {
     "depreciation": 119.77,
@@ -6262,7 +6262,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:07+00:00",
+  "fetched_at": "2026-10-24T17:52:03+00:00",
   "quarters": [
    {
     "depreciation": 18.44,
@@ -6551,7 +6551,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:13+00:00",
+  "fetched_at": "2026-10-24T17:52:09+00:00",
   "quarters": [
    {
     "depreciation": 24.51,
@@ -6756,7 +6756,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:19+00:00",
+  "fetched_at": "2026-10-24T17:52:15+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -7003,7 +7003,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:25+00:00",
+  "fetched_at": "2026-10-24T17:52:21+00:00",
   "quarters": [
    {
     "depreciation": 33.71,
@@ -7292,7 +7292,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:31+00:00",
+  "fetched_at": "2026-10-24T17:52:27+00:00",
   "quarters": [
    {
     "depreciation": 73.9,
@@ -7595,7 +7595,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:37+00:00",
+  "fetched_at": "2026-10-24T17:52:33+00:00",
   "quarters": [
    {
     "depreciation": 45.22,
@@ -7870,7 +7870,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:43+00:00",
+  "fetched_at": "2026-10-24T17:52:39+00:00",
   "quarters": [
    {
     "depreciation": 371.72,
@@ -8103,7 +8103,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:50+00:00",
+  "fetched_at": "2026-10-24T17:52:45+00:00",
   "quarters": [
    {
     "depreciation": 5.02,
@@ -8392,7 +8392,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:55:55+00:00",
+  "fetched_at": "2026-10-24T17:52:51+00:00",
   "quarters": [
    {
     "depreciation": 4.23,
@@ -8639,7 +8639,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:01+00:00",
+  "fetched_at": "2026-10-24T17:52:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -8830,7 +8830,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:07+00:00",
+  "fetched_at": "2026-10-24T17:53:03+00:00",
   "quarters": [
    {
     "depreciation": 26.45,
@@ -8993,7 +8993,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:13+00:00",
+  "fetched_at": "2026-10-24T17:53:09+00:00",
   "quarters": [
    {
     "depreciation": 19.85,
@@ -9282,7 +9282,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:19+00:00",
+  "fetched_at": "2026-10-24T17:53:15+00:00",
   "quarters": [
    {
     "depreciation": 28.17,
@@ -9585,7 +9585,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:25+00:00",
+  "fetched_at": "2026-10-24T17:53:21+00:00",
   "quarters": [
    {
     "depreciation": 41.34,
@@ -9888,7 +9888,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:31+00:00",
+  "fetched_at": "2026-10-24T17:53:27+00:00",
   "quarters": [
    {
     "depreciation": 163.4,
@@ -10191,7 +10191,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:37+00:00",
+  "fetched_at": "2026-10-24T17:53:33+00:00",
   "quarters": [
    {
     "depreciation": 360.25,
@@ -10438,7 +10438,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:43+00:00",
+  "fetched_at": "2026-10-24T17:53:39+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -10699,7 +10699,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:49+00:00",
+  "fetched_at": "2026-10-24T17:53:45+00:00",
   "quarters": [
    {
     "depreciation": 115.7,
@@ -11002,7 +11002,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:56:55+00:00",
+  "fetched_at": "2026-10-24T17:53:51+00:00",
   "quarters": [
    {
     "depreciation": 42.95,
@@ -11277,7 +11277,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:01+00:00",
+  "fetched_at": "2026-10-24T17:53:57+00:00",
   "quarters": [
    {
     "depreciation": 226.61,
@@ -11566,7 +11566,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:07+00:00",
+  "fetched_at": "2026-10-24T17:54:03+00:00",
   "quarters": [
    {
     "depreciation": 208.72,
@@ -11869,7 +11869,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:13+00:00",
+  "fetched_at": "2026-10-24T17:54:09+00:00",
   "quarters": [
    {
     "depreciation": 227.16,
@@ -12172,7 +12172,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:19+00:00",
+  "fetched_at": "2026-10-24T17:54:15+00:00",
   "quarters": [
    {
     "depreciation": 48.7,
@@ -12461,7 +12461,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:25+00:00",
+  "fetched_at": "2026-10-24T17:54:21+00:00",
   "quarters": [
    {
     "depreciation": 38.6,
@@ -12666,7 +12666,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:57:31+00:00",
+  "fetched_at": "2026-10-24T17:54:27+00:00",
   "quarters": [
    {
     "depreciation": 45.2,
@@ -12857,7 +12857,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:37+00:00",
+  "fetched_at": "2026-10-24T17:54:33+00:00",
   "quarters": [
    {
     "depreciation": 53.99,
@@ -13146,22 +13146,8 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:57:43+00:00",
+  "fetched_at": "2026-10-24T17:54:39+00:00",
   "quarters": [
-   {
-    "depreciation": null,
-    "eps": 6.02,
-    "expenses": 1141.05,
-    "interest": 1282.09,
-    "net_profit": 401.83,
-    "operating_profit": 107.92,
-    "opm_pct": 4.26,
-    "other_income": 425.46,
-    "period": "Sep 2023",
-    "profit_before_tax": 533.38,
-    "sales": 2531.05,
-    "tax_pct": 24.66
-   },
    {
     "depreciation": null,
     "eps": 5.61,
@@ -13315,6 +13301,20 @@
     "profit_before_tax": 1063.99,
     "sales": 5302.74,
     "tax_pct": 25.19
+   },
+   {
+    "depreciation": null,
+    "eps": 11.44,
+    "expenses": 2435.95,
+    "interest": 2791.73,
+    "net_profit": 857.69,
+    "operating_profit": 384.12,
+    "opm_pct": 6.84,
+    "other_income": 770.18,
+    "period": "Sep 2026",
+    "profit_before_tax": 1154.3,
+    "sales": 5611.81,
+    "tax_pct": 25.7
    }
   ],
   "source": "NSE XBRL"
@@ -13435,7 +13435,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:49+00:00",
+  "fetched_at": "2026-10-24T17:54:45+00:00",
   "quarters": [
    {
     "depreciation": 417.5,
@@ -13724,7 +13724,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:21+00:00",
+  "fetched_at": "2026-10-24T18:37:16+00:00",
   "quarters": [
    {
     "depreciation": 14.3,
@@ -13957,7 +13957,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:57:55+00:00",
+  "fetched_at": "2026-10-24T17:54:51+00:00",
   "quarters": [
    {
     "depreciation": 93.51,
@@ -14232,7 +14232,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:02+00:00",
+  "fetched_at": "2026-10-24T17:54:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -14451,7 +14451,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:27+00:00",
+  "fetched_at": "2026-10-24T18:37:21+00:00",
   "quarters": [
    {
     "depreciation": 5.22,
@@ -14740,7 +14740,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:07+00:00",
+  "fetched_at": "2026-10-24T17:55:03+00:00",
   "quarters": [
    {
     "depreciation": 91.82,
@@ -15029,7 +15029,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:13+00:00",
+  "fetched_at": "2026-10-24T17:55:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -15234,7 +15234,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:58:19+00:00",
+  "fetched_at": "2026-10-24T17:55:15+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -15481,7 +15481,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:25+00:00",
+  "fetched_at": "2026-10-24T17:55:21+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -15770,7 +15770,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:31+00:00",
+  "fetched_at": "2026-10-24T17:55:27+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -16059,7 +16059,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:38+00:00",
+  "fetched_at": "2026-10-24T17:55:33+00:00",
   "quarters": [
    {
     "depreciation": 160.43,
@@ -16363,7 +16363,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:43+00:00",
+  "fetched_at": "2026-10-24T17:55:39+00:00",
   "quarters": [
    {
     "depreciation": 41.24,
@@ -16652,7 +16652,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:58:49+00:00",
+  "fetched_at": "2026-10-24T17:55:45+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -16927,7 +16927,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:58:56+00:00",
+  "fetched_at": "2026-10-24T17:55:51+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -17188,7 +17188,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:02+00:00",
+  "fetched_at": "2026-10-24T17:55:58+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -17477,7 +17477,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:07+00:00",
+  "fetched_at": "2026-10-24T17:56:03+00:00",
   "quarters": [
    {
     "depreciation": 81.71,
@@ -17780,7 +17780,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:34+00:00",
+  "fetched_at": "2026-10-24T18:37:27+00:00",
   "quarters": [
    {
     "depreciation": 28.85,
@@ -18386,7 +18386,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:59:13+00:00",
+  "fetched_at": "2026-10-24T17:56:09+00:00",
   "quarters": [
    {
     "depreciation": 17.43,
@@ -18689,7 +18689,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:19+00:00",
+  "fetched_at": "2026-10-24T17:56:15+00:00",
   "quarters": [
    {
     "depreciation": 108.26,
@@ -18894,7 +18894,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:25+00:00",
+  "fetched_at": "2026-10-24T17:56:21+00:00",
   "quarters": [
    {
     "depreciation": 82.81,
@@ -19099,7 +19099,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:31+00:00",
+  "fetched_at": "2026-10-24T17:56:27+00:00",
   "quarters": [
    {
     "depreciation": 15.75,
@@ -19402,7 +19402,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:37+00:00",
+  "fetched_at": "2026-10-24T17:56:33+00:00",
   "quarters": [
    {
     "depreciation": 82.87,
@@ -19593,7 +19593,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:40:39+00:00",
+  "fetched_at": "2026-10-24T18:37:33+00:00",
   "quarters": [
    {
     "depreciation": 126.9,
@@ -19756,7 +19756,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:44+00:00",
+  "fetched_at": "2026-10-24T17:56:39+00:00",
   "quarters": [
    {
     "depreciation": 211.33,
@@ -20045,7 +20045,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T18:59:49+00:00",
+  "fetched_at": "2026-10-24T17:56:45+00:00",
   "quarters": [
    {
     "depreciation": 9734.3,
@@ -20264,7 +20264,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T18:59:55+00:00",
+  "fetched_at": "2026-10-24T17:56:51+00:00",
   "quarters": [
    {
     "depreciation": 459.8,
@@ -20525,7 +20525,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:01+00:00",
+  "fetched_at": "2026-10-24T17:56:57+00:00",
   "quarters": [
    {
     "depreciation": 60.6,
@@ -21047,7 +21047,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:07+00:00",
+  "fetched_at": "2026-10-24T17:57:03+00:00",
   "quarters": [
    {
     "depreciation": 389.3,
@@ -21336,7 +21336,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:13+00:00",
+  "fetched_at": "2026-10-24T17:57:09+00:00",
   "quarters": [
    {
     "depreciation": 6.36,
@@ -22147,7 +22147,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:19+00:00",
+  "fetched_at": "2026-10-24T17:57:15+00:00",
   "quarters": [
    {
     "depreciation": 23.01,
@@ -22436,7 +22436,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:25+00:00",
+  "fetched_at": "2026-10-24T17:57:21+00:00",
   "quarters": [
    {
     "depreciation": 120.6,
@@ -22711,7 +22711,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:31+00:00",
+  "fetched_at": "2026-10-24T17:57:27+00:00",
   "quarters": [
    {
     "depreciation": 1830.14,
@@ -23014,7 +23014,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:37+00:00",
+  "fetched_at": "2026-10-24T17:57:33+00:00",
   "quarters": [
    {
     "depreciation": 75.73,
@@ -23303,7 +23303,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:43+00:00",
+  "fetched_at": "2026-10-24T17:57:39+00:00",
   "quarters": [
    {
     "depreciation": 71.68,
@@ -23606,7 +23606,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:49+00:00",
+  "fetched_at": "2026-10-24T17:57:45+00:00",
   "quarters": [
    {
     "depreciation": 22.67,
@@ -23909,7 +23909,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:00:55+00:00",
+  "fetched_at": "2026-10-24T17:57:51+00:00",
   "quarters": [
    {
     "depreciation": 21.5,
@@ -24156,7 +24156,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:01+00:00",
+  "fetched_at": "2026-10-24T17:57:57+00:00",
   "quarters": [
    {
     "depreciation": 17.42,
@@ -24417,7 +24417,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:08+00:00",
+  "fetched_at": "2026-10-24T17:58:03+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -24692,7 +24692,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:01:13+00:00",
+  "fetched_at": "2026-10-24T17:58:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -24981,7 +24981,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:25+00:00",
+  "fetched_at": "2026-10-24T17:58:21+00:00",
   "quarters": [
    {
     "depreciation": 11.77,
@@ -25284,7 +25284,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:31+00:00",
+  "fetched_at": "2026-10-24T17:58:27+00:00",
   "quarters": [
    {
     "depreciation": 45.86,
@@ -25531,7 +25531,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:37+00:00",
+  "fetched_at": "2026-10-24T17:58:33+00:00",
   "quarters": [
    {
     "depreciation": 9.77,
@@ -25820,22 +25820,8 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:01:43+00:00",
+  "fetched_at": "2026-10-24T17:58:39+00:00",
   "quarters": [
-   {
-    "depreciation": 22.87,
-    "eps": 1.97,
-    "expenses": 914.36,
-    "interest": 2.41,
-    "net_profit": 194.42,
-    "operating_profit": 268.56,
-    "opm_pct": 22.7,
-    "other_income": 20.23,
-    "period": "Sep 2023",
-    "profit_before_tax": 263.51,
-    "sales": 1182.92,
-    "tax_pct": 26.22
-   },
    {
     "depreciation": 25.01,
     "eps": 2.45,
@@ -25989,6 +25975,20 @@
     "profit_before_tax": 476.03,
     "sales": 1871.47,
     "tax_pct": 26.96
+   },
+   {
+    "depreciation": 30.34,
+    "eps": 1.78,
+    "expenses": 1472.68,
+    "interest": 1.72,
+    "net_profit": 176.37,
+    "operating_profit": 262.04,
+    "opm_pct": 15.11,
+    "other_income": 13.4,
+    "period": "Sep 2026",
+    "profit_before_tax": 243.38,
+    "sales": 1734.72,
+    "tax_pct": 27.53
    }
   ],
   "source": "NSE XBRL"
@@ -26109,7 +26109,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:50+00:00",
+  "fetched_at": "2026-10-24T17:58:45+00:00",
   "quarters": [
    {
     "depreciation": 22.17,
@@ -26398,7 +26398,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:01:55+00:00",
+  "fetched_at": "2026-10-24T17:58:51+00:00",
   "quarters": [
    {
     "depreciation": 6.49,
@@ -26687,7 +26687,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:01+00:00",
+  "fetched_at": "2026-10-24T17:58:57+00:00",
   "quarters": [
    {
     "depreciation": 127.34,
@@ -26962,7 +26962,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:07+00:00",
+  "fetched_at": "2026-10-24T17:59:03+00:00",
   "quarters": [
    {
     "depreciation": 52.75,
@@ -27223,7 +27223,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:14+00:00",
+  "fetched_at": "2026-10-24T17:59:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -27512,7 +27512,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:20+00:00",
+  "fetched_at": "2026-10-24T17:59:15+00:00",
   "quarters": [
    {
     "depreciation": 303.0,
@@ -27801,7 +27801,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:25+00:00",
+  "fetched_at": "2026-10-24T17:59:21+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -28090,7 +28090,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:31+00:00",
+  "fetched_at": "2026-10-24T17:59:27+00:00",
   "quarters": [
    {
     "depreciation": 22.86,
@@ -28682,7 +28682,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:37+00:00",
+  "fetched_at": "2026-10-24T17:59:33+00:00",
   "quarters": [
    {
     "depreciation": 78.44,
@@ -28971,7 +28971,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:43+00:00",
+  "fetched_at": "2026-10-24T17:59:39+00:00",
   "quarters": [
    {
     "depreciation": 156.55,
@@ -29204,7 +29204,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:49+00:00",
+  "fetched_at": "2026-10-24T17:59:45+00:00",
   "quarters": [
    {
     "depreciation": 1.48,
@@ -29507,7 +29507,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:02:55+00:00",
+  "fetched_at": "2026-10-24T17:59:51+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -29810,7 +29810,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:01+00:00",
+  "fetched_at": "2026-10-24T17:59:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -30099,7 +30099,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:07+00:00",
+  "fetched_at": "2026-10-24T18:00:03+00:00",
   "quarters": [
    {
     "depreciation": 78.09,
@@ -30402,7 +30402,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:13+00:00",
+  "fetched_at": "2026-10-24T18:00:09+00:00",
   "quarters": [
    {
     "depreciation": 290.04,
@@ -30649,7 +30649,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:19+00:00",
+  "fetched_at": "2026-10-24T18:00:15+00:00",
   "quarters": [
    {
     "depreciation": 11.13,
@@ -30840,7 +30840,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:51+00:00",
+  "fetched_at": "2026-10-24T18:37:45+00:00",
   "quarters": [
    {
     "depreciation": 110.97,
@@ -30905,7 +30905,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:40:57+00:00",
+  "fetched_at": "2026-10-24T18:37:51+00:00",
   "quarters": [
    {
     "depreciation": 9.49,
@@ -31068,7 +31068,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:25+00:00",
+  "fetched_at": "2026-10-24T18:00:21+00:00",
   "quarters": [
    {
     "depreciation": 1138.38,
@@ -31371,7 +31371,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:31+00:00",
+  "fetched_at": "2026-10-24T18:00:27+00:00",
   "quarters": [
    {
     "depreciation": 18.88,
@@ -31674,7 +31674,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:37+00:00",
+  "fetched_at": "2026-10-24T18:00:33+00:00",
   "quarters": [
    {
     "depreciation": 81.1,
@@ -31937,7 +31937,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:43+00:00",
+  "fetched_at": "2026-10-24T18:00:39+00:00",
   "quarters": [
    {
     "depreciation": 11.96,
@@ -32240,7 +32240,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:03:49+00:00",
+  "fetched_at": "2026-10-24T18:00:45+00:00",
   "quarters": [
    {
     "depreciation": 41.37,
@@ -32501,7 +32501,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:03:55+00:00",
+  "fetched_at": "2026-10-24T18:00:51+00:00",
   "quarters": [
    {
     "depreciation": 142.1,
@@ -32720,7 +32720,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:01+00:00",
+  "fetched_at": "2026-10-24T18:00:57+00:00",
   "quarters": [
    {
     "depreciation": 13.3,
@@ -32995,7 +32995,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:07+00:00",
+  "fetched_at": "2026-10-24T18:01:03+00:00",
   "quarters": [
    {
     "depreciation": 48.1,
@@ -33186,7 +33186,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:13+00:00",
+  "fetched_at": "2026-10-24T18:01:09+00:00",
   "quarters": [
    {
     "depreciation": 10.36,
@@ -33335,7 +33335,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:19+00:00",
+  "fetched_at": "2026-10-24T18:01:15+00:00",
   "quarters": [
    {
     "depreciation": 59.93,
@@ -33596,7 +33596,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:26+00:00",
+  "fetched_at": "2026-10-24T18:01:21+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -33885,7 +33885,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:32+00:00",
+  "fetched_at": "2026-10-24T18:01:27+00:00",
   "quarters": [
    {
     "depreciation": 25.21,
@@ -34160,7 +34160,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:38+00:00",
+  "fetched_at": "2026-10-24T18:01:33+00:00",
   "quarters": [
    {
     "depreciation": 32.48,
@@ -34435,7 +34435,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:04:45+00:00",
+  "fetched_at": "2026-10-24T18:01:39+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -34738,7 +34738,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:50+00:00",
+  "fetched_at": "2026-10-24T18:01:45+00:00",
   "quarters": [
    {
     "depreciation": 38.26,
@@ -35027,7 +35027,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:41:03+00:00",
+  "fetched_at": "2026-10-24T18:37:57+00:00",
   "quarters": [
    {
     "depreciation": 0.72,
@@ -35302,7 +35302,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:04:55+00:00",
+  "fetched_at": "2026-10-24T18:01:51+00:00",
   "quarters": [
    {
     "depreciation": 67.6,
@@ -35605,7 +35605,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:01+00:00",
+  "fetched_at": "2026-10-24T18:01:57+00:00",
   "quarters": [
    {
     "depreciation": 98.32,
@@ -35894,7 +35894,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:07+00:00",
+  "fetched_at": "2026-10-24T18:02:03+00:00",
   "quarters": [
    {
     "depreciation": 401.0,
@@ -36141,7 +36141,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:05:14+00:00",
+  "fetched_at": "2026-10-24T18:02:09+00:00",
   "quarters": [
    {
     "depreciation": 3.07,
@@ -36719,7 +36719,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:19+00:00",
+  "fetched_at": "2026-10-24T18:02:15+00:00",
   "quarters": [
    {
     "depreciation": 81.17,
@@ -37022,7 +37022,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:25+00:00",
+  "fetched_at": "2026-10-24T18:02:21+00:00",
   "quarters": [
    {
     "depreciation": 39.43,
@@ -37255,7 +37255,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:31+00:00",
+  "fetched_at": "2026-10-24T18:02:27+00:00",
   "quarters": [
    {
     "depreciation": 171.21,
@@ -37502,7 +37502,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:37+00:00",
+  "fetched_at": "2026-10-24T18:02:33+00:00",
   "quarters": [
    {
     "depreciation": 86.34,
@@ -37791,7 +37791,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:43+00:00",
+  "fetched_at": "2026-10-24T18:02:39+00:00",
   "quarters": [
    {
     "depreciation": 95.0,
@@ -38080,7 +38080,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:49+00:00",
+  "fetched_at": "2026-10-24T18:02:45+00:00",
   "quarters": [
    {
     "depreciation": 36.44,
@@ -38355,7 +38355,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:05:55+00:00",
+  "fetched_at": "2026-10-24T18:02:51+00:00",
   "quarters": [
    {
     "depreciation": 37.95,
@@ -38658,7 +38658,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:02+00:00",
+  "fetched_at": "2026-10-24T18:02:57+00:00",
   "quarters": [
    {
     "depreciation": 189.33,
@@ -38863,7 +38863,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:07+00:00",
+  "fetched_at": "2026-10-24T18:03:03+00:00",
   "quarters": [
    {
     "depreciation": 14.03,
@@ -39138,7 +39138,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:14+00:00",
+  "fetched_at": "2026-10-24T18:03:09+00:00",
   "quarters": [
    {
     "depreciation": 373.5,
@@ -39441,7 +39441,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:19+00:00",
+  "fetched_at": "2026-10-24T18:03:15+00:00",
   "quarters": [
    {
     "depreciation": 30.28,
@@ -39744,7 +39744,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:25+00:00",
+  "fetched_at": "2026-10-24T18:03:21+00:00",
   "quarters": [
    {
     "depreciation": 142.54,
@@ -40033,7 +40033,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:31+00:00",
+  "fetched_at": "2026-10-24T18:03:27+00:00",
   "quarters": [
    {
     "depreciation": 101.24,
@@ -40322,7 +40322,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:37+00:00",
+  "fetched_at": "2026-10-24T18:03:33+00:00",
   "quarters": [
    {
     "depreciation": 33.17,
@@ -40625,7 +40625,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:43+00:00",
+  "fetched_at": "2026-10-24T18:03:39+00:00",
   "quarters": [
    {
     "depreciation": 12.64,
@@ -40914,7 +40914,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:49+00:00",
+  "fetched_at": "2026-10-24T18:03:45+00:00",
   "quarters": [
    {
     "depreciation": 18.66,
@@ -41203,7 +41203,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:06:55+00:00",
+  "fetched_at": "2026-10-24T18:03:51+00:00",
   "quarters": [
    {
     "depreciation": 46.09,
@@ -41408,7 +41408,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:01+00:00",
+  "fetched_at": "2026-10-24T18:03:57+00:00",
   "quarters": [
    {
     "depreciation": 93.59,
@@ -41557,7 +41557,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:07+00:00",
+  "fetched_at": "2026-10-24T18:04:03+00:00",
   "quarters": [
    {
     "depreciation": 70.87,
@@ -41748,7 +41748,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:13+00:00",
+  "fetched_at": "2026-10-24T18:04:09+00:00",
   "quarters": [
    {
     "depreciation": 112.94,
@@ -42023,7 +42023,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:19+00:00",
+  "fetched_at": "2026-10-24T18:04:15+00:00",
   "quarters": [
    {
     "depreciation": 8.28,
@@ -42199,7 +42199,7 @@
  "ENRIN": {
   "annual": [],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:07:25+00:00",
+  "fetched_at": "2026-10-24T18:04:21+00:00",
   "quarters": [
    {
     "depreciation": 24.3,
@@ -42707,7 +42707,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:31+00:00",
+  "fetched_at": "2026-10-24T18:04:27+00:00",
   "quarters": [
    {
     "depreciation": 40.8,
@@ -42940,7 +42940,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:37+00:00",
+  "fetched_at": "2026-10-24T18:04:33+00:00",
   "quarters": [
    {
     "depreciation": 128.0,
@@ -43187,7 +43187,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:43+00:00",
+  "fetched_at": "2026-10-24T18:04:39+00:00",
   "quarters": [
    {
     "depreciation": 132.43,
@@ -43448,7 +43448,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:49+00:00",
+  "fetched_at": "2026-10-24T18:04:45+00:00",
   "quarters": [
    {
     "depreciation": 9.15,
@@ -43737,7 +43737,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:07:55+00:00",
+  "fetched_at": "2026-10-24T18:04:51+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -44012,7 +44012,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:01+00:00",
+  "fetched_at": "2026-10-24T18:04:57+00:00",
   "quarters": [
    {
     "depreciation": 10.5,
@@ -44217,7 +44217,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:07+00:00",
+  "fetched_at": "2026-10-24T18:05:03+00:00",
   "quarters": [
    {
     "depreciation": 95.49,
@@ -44408,7 +44408,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:08:13+00:00",
+  "fetched_at": "2026-10-24T18:05:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -44683,7 +44683,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:19+00:00",
+  "fetched_at": "2026-10-24T18:05:15+00:00",
   "quarters": [
    {
     "depreciation": 67.55,
@@ -44902,7 +44902,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:25+00:00",
+  "fetched_at": "2026-10-24T18:05:21+00:00",
   "quarters": [
    {
     "depreciation": 68.05,
@@ -45177,7 +45177,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:31+00:00",
+  "fetched_at": "2026-10-24T18:05:27+00:00",
   "quarters": [
    {
     "depreciation": 84.12,
@@ -45368,7 +45368,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:15+00:00",
+  "fetched_at": "2026-10-24T18:38:10+00:00",
   "quarters": [
    {
     "depreciation": 35.7,
@@ -45545,7 +45545,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:37+00:00",
+  "fetched_at": "2026-10-24T18:05:33+00:00",
   "quarters": [
    {
     "depreciation": 65.37,
@@ -45764,7 +45764,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:43+00:00",
+  "fetched_at": "2026-10-24T18:05:39+00:00",
   "quarters": [
    {
     "depreciation": 14.14,
@@ -46053,7 +46053,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:49+00:00",
+  "fetched_at": "2026-10-24T18:05:45+00:00",
   "quarters": [
    {
     "depreciation": 721.65,
@@ -46314,7 +46314,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:08:55+00:00",
+  "fetched_at": "2026-10-24T18:05:51+00:00",
   "quarters": [
    {
     "depreciation": 29.28,
@@ -46617,7 +46617,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:01+00:00",
+  "fetched_at": "2026-10-24T18:05:57+00:00",
   "quarters": [
    {
     "depreciation": 186.74,
@@ -46878,7 +46878,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:09:14+00:00",
+  "fetched_at": "2026-10-24T18:06:09+00:00",
   "quarters": [
    {
     "depreciation": 20.09,
@@ -47140,7 +47140,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:19+00:00",
+  "fetched_at": "2026-10-24T18:06:15+00:00",
   "quarters": [
    {
     "depreciation": 81.3,
@@ -47429,7 +47429,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:25+00:00",
+  "fetched_at": "2026-10-24T18:06:21+00:00",
   "quarters": [
    {
     "depreciation": 16.36,
@@ -47732,7 +47732,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:31+00:00",
+  "fetched_at": "2026-10-24T18:06:27+00:00",
   "quarters": [
    {
     "depreciation": 141.45,
@@ -48007,7 +48007,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:37+00:00",
+  "fetched_at": "2026-10-24T18:06:33+00:00",
   "quarters": [
    {
     "depreciation": 18.39,
@@ -48296,7 +48296,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:43+00:00",
+  "fetched_at": "2026-10-24T18:06:39+00:00",
   "quarters": [
    {
     "depreciation": 373.0,
@@ -48599,7 +48599,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:49+00:00",
+  "fetched_at": "2026-10-24T18:06:45+00:00",
   "quarters": [
    {
     "depreciation": 36.48,
@@ -48902,7 +48902,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:09:55+00:00",
+  "fetched_at": "2026-10-24T18:06:51+00:00",
   "quarters": [
    {
     "depreciation": 60.88,
@@ -49205,7 +49205,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:01+00:00",
+  "fetched_at": "2026-10-24T18:06:57+00:00",
   "quarters": [
    {
     "depreciation": 89.3,
@@ -49508,7 +49508,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:07+00:00",
+  "fetched_at": "2026-10-24T18:07:03+00:00",
   "quarters": [
    {
     "depreciation": 14.16,
@@ -49797,7 +49797,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:13+00:00",
+  "fetched_at": "2026-10-24T18:07:09+00:00",
   "quarters": [
    {
     "depreciation": 34.83,
@@ -50100,7 +50100,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:19+00:00",
+  "fetched_at": "2026-10-24T18:07:15+00:00",
   "quarters": [
    {
     "depreciation": 52.52,
@@ -50403,7 +50403,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:25+00:00",
+  "fetched_at": "2026-10-24T18:07:21+00:00",
   "quarters": [
    {
     "depreciation": 19.0,
@@ -50706,7 +50706,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:31+00:00",
+  "fetched_at": "2026-10-24T18:07:27+00:00",
   "quarters": [
    {
     "depreciation": 1245.15,
@@ -50995,7 +50995,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:37+00:00",
+  "fetched_at": "2026-10-24T18:07:33+00:00",
   "quarters": [
    {
     "depreciation": 8.57,
@@ -51186,7 +51186,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:10:43+00:00",
+  "fetched_at": "2026-10-24T18:07:39+00:00",
   "quarters": [
    {
     "depreciation": 6.8,
@@ -51377,7 +51377,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:10:49+00:00",
+  "fetched_at": "2026-10-24T18:07:45+00:00",
   "quarters": [
    {
     "depreciation": 10.35,
@@ -51680,7 +51680,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:10:55+00:00",
+  "fetched_at": "2026-10-24T18:07:51+00:00",
   "quarters": [
    {
     "depreciation": 12.61,
@@ -51969,7 +51969,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:01+00:00",
+  "fetched_at": "2026-10-24T18:07:57+00:00",
   "quarters": [
    {
     "depreciation": 349.65,
@@ -52258,7 +52258,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:07+00:00",
+  "fetched_at": "2026-10-24T18:08:03+00:00",
   "quarters": [
    {
     "depreciation": 87.66,
@@ -52533,7 +52533,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:13+00:00",
+  "fetched_at": "2026-10-24T18:08:09+00:00",
   "quarters": [
    {
     "depreciation": 10.01,
@@ -52809,7 +52809,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:20+00:00",
+  "fetched_at": "2026-10-24T18:08:16+00:00",
   "quarters": [
    {
     "depreciation": 1010.0,
@@ -53000,7 +53000,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:11:25+00:00",
+  "fetched_at": "2026-10-24T18:08:21+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -53135,7 +53135,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:31+00:00",
+  "fetched_at": "2026-10-24T18:08:27+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -53410,7 +53410,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:37+00:00",
+  "fetched_at": "2026-10-24T18:08:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -53874,7 +53874,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:10+00:00",
+  "fetched_at": "2026-10-24T18:37:04+00:00",
   "quarters": [
    {
     "depreciation": 38.48,
@@ -54177,7 +54177,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:49+00:00",
+  "fetched_at": "2026-10-24T18:08:45+00:00",
   "quarters": [
    {
     "depreciation": 187.09,
@@ -54382,7 +54382,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:11:55+00:00",
+  "fetched_at": "2026-10-24T18:08:51+00:00",
   "quarters": [
    {
     "depreciation": 76.3,
@@ -54615,7 +54615,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:01+00:00",
+  "fetched_at": "2026-10-24T18:08:57+00:00",
   "quarters": [
    {
     "depreciation": 19.27,
@@ -54918,7 +54918,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:07+00:00",
+  "fetched_at": "2026-10-24T18:09:03+00:00",
   "quarters": [
    {
     "depreciation": 1843.0,
@@ -55193,7 +55193,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:13+00:00",
+  "fetched_at": "2026-10-24T18:09:09+00:00",
   "quarters": [
    {
     "depreciation": 45.59,
@@ -55454,7 +55454,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:19+00:00",
+  "fetched_at": "2026-10-24T18:09:15+00:00",
   "quarters": [
    {
     "depreciation": 1247.31,
@@ -55757,7 +55757,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:25+00:00",
+  "fetched_at": "2026-10-24T18:09:21+00:00",
   "quarters": [
    {
     "depreciation": 297.0,
@@ -55990,7 +55990,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:31+00:00",
+  "fetched_at": "2026-10-24T18:09:27+00:00",
   "quarters": [
    {
     "depreciation": 905.0,
@@ -56251,7 +56251,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:12:37+00:00",
+  "fetched_at": "2026-10-24T18:09:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -56470,7 +56470,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:43+00:00",
+  "fetched_at": "2026-10-24T18:09:39+00:00",
   "quarters": [
    {
     "depreciation": 6.29,
@@ -56773,7 +56773,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:12:49+00:00",
+  "fetched_at": "2026-10-24T18:09:45+00:00",
   "quarters": [
    {
     "depreciation": 13.8,
@@ -57062,7 +57062,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:12:55+00:00",
+  "fetched_at": "2026-10-24T18:09:51+00:00",
   "quarters": [
    {
     "depreciation": 12.72,
@@ -57337,7 +57337,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:02+00:00",
+  "fetched_at": "2026-10-24T18:09:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -57542,7 +57542,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:07+00:00",
+  "fetched_at": "2026-10-24T18:10:03+00:00",
   "quarters": [
    {
     "depreciation": 518.55,
@@ -57677,7 +57677,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:13:13+00:00",
+  "fetched_at": "2026-10-24T18:10:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -57868,7 +57868,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:19+00:00",
+  "fetched_at": "2026-10-24T18:10:15+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -58143,7 +58143,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:37+00:00",
+  "fetched_at": "2026-10-24T18:10:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -58432,7 +58432,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:43+00:00",
+  "fetched_at": "2026-10-24T18:10:39+00:00",
   "quarters": [
    {
     "depreciation": 5667.3,
@@ -58693,20 +58693,6 @@
    },
    {
     "depreciation": null,
-    "eps": 2.04,
-    "expenses": 24406.33,
-    "interest": 17207.8,
-    "net_profit": 1490.35,
-    "operating_profit": -5112.49,
-    "opm_pct": -14.01,
-    "other_income": 6976.66,
-    "profit_before_tax": 1864.17,
-    "sales": 36501.64,
-    "tax_pct": 20.05,
-    "year": "Mar 2025"
-   },
-   {
-    "depreciation": null,
     "eps": 1.89,
     "expenses": 27282.34,
     "interest": 19333.05,
@@ -58721,22 +58707,8 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:49+00:00",
+  "fetched_at": "2026-10-24T18:10:46+00:00",
   "quarters": [
-   {
-    "depreciation": null,
-    "eps": 1.12,
-    "expenses": 4377.38,
-    "interest": 3405.61,
-    "net_profit": 746.85,
-    "operating_profit": -426.72,
-    "opm_pct": -5.8,
-    "other_income": 1409.54,
-    "period": "Sep 2023",
-    "profit_before_tax": 982.82,
-    "sales": 7356.27,
-    "tax_pct": 24.01
-   },
    {
     "depreciation": null,
     "eps": 1.04,
@@ -58890,6 +58862,20 @@
     "profit_before_tax": 1481.55,
     "sales": 11051.09,
     "tax_pct": 22.53
+   },
+   {
+    "depreciation": null,
+    "eps": 1.22,
+    "expenses": 7081.46,
+    "interest": 5734.51,
+    "net_profit": 1049.17,
+    "operating_profit": -892.68,
+    "opm_pct": -7.49,
+    "other_income": 2305.17,
+    "period": "Sep 2026",
+    "profit_before_tax": 1412.49,
+    "sales": 11923.29,
+    "tax_pct": 25.72
    }
   ],
   "source": "NSE XBRL"
@@ -58982,7 +58968,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:13:55+00:00",
+  "fetched_at": "2026-10-24T18:10:51+00:00",
   "quarters": [
    {
     "depreciation": 5.07,
@@ -59257,7 +59243,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:02+00:00",
+  "fetched_at": "2026-10-24T18:10:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -59462,7 +59448,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:07+00:00",
+  "fetched_at": "2026-10-24T18:11:03+00:00",
   "quarters": [
    {
     "depreciation": 10.3,
@@ -59695,7 +59681,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:13+00:00",
+  "fetched_at": "2026-10-24T18:11:09+00:00",
   "quarters": [
    {
     "depreciation": 102.23,
@@ -59984,7 +59970,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:19+00:00",
+  "fetched_at": "2026-10-24T18:11:15+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -60189,7 +60175,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:25+00:00",
+  "fetched_at": "2026-10-24T18:11:21+00:00",
   "quarters": [
    {
     "depreciation": 27.76,
@@ -60613,7 +60599,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:31+00:00",
+  "fetched_at": "2026-10-24T18:11:27+00:00",
   "quarters": [
    {
     "depreciation": 114.31,
@@ -60888,7 +60874,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:37+00:00",
+  "fetched_at": "2026-10-24T18:11:33+00:00",
   "quarters": [
    {
     "depreciation": 58.07,
@@ -61149,7 +61135,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:43+00:00",
+  "fetched_at": "2026-10-24T18:11:39+00:00",
   "quarters": [
    {
     "depreciation": 7.4,
@@ -61438,7 +61424,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:49+00:00",
+  "fetched_at": "2026-10-24T18:11:45+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -61741,7 +61727,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:14:55+00:00",
+  "fetched_at": "2026-10-24T18:11:51+00:00",
   "quarters": [
    {
     "depreciation": 1548.97,
@@ -62002,7 +61988,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:02+00:00",
+  "fetched_at": "2026-10-24T18:11:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -62291,7 +62277,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:07+00:00",
+  "fetched_at": "2026-10-24T18:12:03+00:00",
   "quarters": [
    {
     "depreciation": 1525.6,
@@ -62580,7 +62566,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:13+00:00",
+  "fetched_at": "2026-10-24T18:12:09+00:00",
   "quarters": [
    {
     "depreciation": 1176.0,
@@ -62785,7 +62771,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:21+00:00",
+  "fetched_at": "2026-10-24T18:38:15+00:00",
   "quarters": [
    {
     "depreciation": 5.24,
@@ -63060,7 +63046,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:19+00:00",
+  "fetched_at": "2026-10-24T18:12:15+00:00",
   "quarters": [
    {
     "depreciation": 26.25,
@@ -63363,7 +63349,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:25+00:00",
+  "fetched_at": "2026-10-24T18:12:21+00:00",
   "quarters": [
    {
     "depreciation": 33.73,
@@ -63596,7 +63582,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:31+00:00",
+  "fetched_at": "2026-10-24T18:12:27+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -63885,7 +63871,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:37+00:00",
+  "fetched_at": "2026-10-24T18:12:34+00:00",
   "quarters": [
    {
     "depreciation": 3609.62,
@@ -64188,7 +64174,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:43+00:00",
+  "fetched_at": "2026-10-24T18:12:39+00:00",
   "quarters": [
    {
     "depreciation": 90.34,
@@ -64477,7 +64463,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:49+00:00",
+  "fetched_at": "2026-10-24T18:12:45+00:00",
   "quarters": [
    {
     "depreciation": 232.69,
@@ -64752,7 +64738,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:15:55+00:00",
+  "fetched_at": "2026-10-24T18:12:51+00:00",
   "quarters": [
    {
     "depreciation": 27.08,
@@ -64971,7 +64957,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:01+00:00",
+  "fetched_at": "2026-10-24T18:12:57+00:00",
   "quarters": [
    {
     "depreciation": 15.62,
@@ -65148,7 +65134,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:16:07+00:00",
+  "fetched_at": "2026-10-24T18:13:03+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -65395,7 +65381,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:16:14+00:00",
+  "fetched_at": "2026-10-24T18:13:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -65698,7 +65684,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:19+00:00",
+  "fetched_at": "2026-10-24T18:13:15+00:00",
   "quarters": [
    {
     "depreciation": 453.04,
@@ -65903,7 +65889,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:25+00:00",
+  "fetched_at": "2026-10-24T18:13:21+00:00",
   "quarters": [
    {
     "depreciation": 99.8,
@@ -66094,7 +66080,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:31+00:00",
+  "fetched_at": "2026-10-24T18:13:27+00:00",
   "quarters": [
    {
     "depreciation": 13.42,
@@ -66355,7 +66341,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:38+00:00",
+  "fetched_at": "2026-10-24T18:13:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -66546,7 +66532,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:43+00:00",
+  "fetched_at": "2026-10-24T18:13:39+00:00",
   "quarters": [
    {
     "depreciation": 3.28,
@@ -66709,7 +66695,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:49+00:00",
+  "fetched_at": "2026-10-24T18:13:45+00:00",
   "quarters": [
    {
     "depreciation": 41.22,
@@ -66984,7 +66970,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:16:55+00:00",
+  "fetched_at": "2026-10-24T18:13:51+00:00",
   "quarters": [
    {
     "depreciation": 148.55,
@@ -67287,7 +67273,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:03+00:00",
+  "fetched_at": "2026-10-24T18:13:57+00:00",
   "quarters": [
    {
     "depreciation": 635.67,
@@ -67492,7 +67478,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:07+00:00",
+  "fetched_at": "2026-10-24T18:14:03+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -67752,20 +67738,6 @@
     "year": "Mar 2024"
    },
    {
-    "depreciation": 601.46,
-    "eps": 111.44,
-    "expenses": 9852.01,
-    "interest": 459.18,
-    "net_profit": 861.12,
-    "operating_profit": 2027.14,
-    "opm_pct": 17.06,
-    "other_income": 172.95,
-    "profit_before_tax": 1242.39,
-    "sales": 11879.15,
-    "tax_pct": 29.8,
-    "year": "Mar 2025"
-   },
-   {
     "depreciation": 652.98,
     "eps": 128.44,
     "expenses": 11348.05,
@@ -67781,22 +67753,8 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:13+00:00",
+  "fetched_at": "2026-10-24T18:14:09+00:00",
   "quarters": [
-   {
-    "depreciation": 137.06,
-    "eps": 23.05,
-    "expenses": 2285.82,
-    "interest": 115.01,
-    "net_profit": 178.11,
-    "operating_profit": 466.96,
-    "opm_pct": 16.96,
-    "other_income": 29.33,
-    "period": "Sep 2023",
-    "profit_before_tax": 244.21,
-    "sales": 2752.77,
-    "tax_pct": 26.92
-   },
    {
     "depreciation": 140.44,
     "eps": 36.73,
@@ -67950,6 +67908,20 @@
     "profit_before_tax": 406.15,
     "sales": 4031.72,
     "tax_pct": 32.38
+   },
+   {
+    "depreciation": 169.99,
+    "eps": 22.39,
+    "expenses": 3225.99,
+    "interest": 119.73,
+    "net_profit": 172.99,
+    "operating_profit": 507.43,
+    "opm_pct": 13.59,
+    "other_income": 37.87,
+    "period": "Sep 2026",
+    "profit_before_tax": 255.56,
+    "sales": 3733.42,
+    "tax_pct": 33.75
    }
   ],
   "source": "NSE XBRL"
@@ -68056,7 +68028,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:21+00:00",
+  "fetched_at": "2026-10-24T18:14:15+00:00",
   "quarters": [
    {
     "depreciation": 110.9,
@@ -68317,7 +68289,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:28+00:00",
+  "fetched_at": "2026-10-24T18:14:22+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -68620,7 +68592,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:32+00:00",
+  "fetched_at": "2026-10-24T18:14:27+00:00",
   "quarters": [
    {
     "depreciation": 117.23,
@@ -68895,7 +68867,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:41+00:00",
+  "fetched_at": "2026-10-24T18:14:33+00:00",
   "quarters": [
    {
     "depreciation": 235.53,
@@ -69086,7 +69058,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:45+00:00",
+  "fetched_at": "2026-10-24T18:14:39+00:00",
   "quarters": [
    {
     "depreciation": 77.93,
@@ -69594,7 +69566,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:51+00:00",
+  "fetched_at": "2026-10-24T18:14:45+00:00",
   "quarters": [
    {
     "depreciation": 408.68,
@@ -69813,7 +69785,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:17:57+00:00",
+  "fetched_at": "2026-10-24T18:14:51+00:00",
   "quarters": [
    {
     "depreciation": 100.51,
@@ -70102,7 +70074,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:04+00:00",
+  "fetched_at": "2026-10-24T18:14:57+00:00",
   "quarters": [
    {
     "depreciation": 2019.0,
@@ -70377,7 +70349,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:10+00:00",
+  "fetched_at": "2026-10-24T18:15:03+00:00",
   "quarters": [
    {
     "depreciation": 141.88,
@@ -70638,7 +70610,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:15+00:00",
+  "fetched_at": "2026-10-24T18:15:09+00:00",
   "quarters": [
    {
     "depreciation": 33.91,
@@ -71174,7 +71146,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:21+00:00",
+  "fetched_at": "2026-10-24T18:15:15+00:00",
   "quarters": [
    {
     "depreciation": 7.13,
@@ -71393,7 +71365,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:27+00:00",
+  "fetched_at": "2026-10-24T18:15:21+00:00",
   "quarters": [
    {
     "depreciation": 8.65,
@@ -71682,22 +71654,8 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:33+00:00",
+  "fetched_at": "2026-10-24T18:15:28+00:00",
   "quarters": [
-   {
-    "depreciation": 36.07,
-    "eps": 6.78,
-    "expenses": 941.91,
-    "interest": 4.26,
-    "net_profit": 107.96,
-    "operating_profit": 179.71,
-    "opm_pct": 16.02,
-    "other_income": 8.27,
-    "period": "Sep 2023",
-    "profit_before_tax": 147.65,
-    "sales": 1121.62,
-    "tax_pct": 24.8
-   },
    {
     "depreciation": 38.91,
     "eps": 6.54,
@@ -71851,6 +71809,20 @@
     "profit_before_tax": 230.28,
     "sales": 1328.08,
     "tax_pct": 26.19
+   },
+   {
+    "depreciation": 43.1,
+    "eps": 12.02,
+    "expenses": 1181.65,
+    "interest": 5.28,
+    "net_profit": 189.52,
+    "operating_profit": 286.61,
+    "opm_pct": 19.52,
+    "other_income": 15.76,
+    "period": "Sep 2026",
+    "profit_before_tax": 252.44,
+    "sales": 1468.26,
+    "tax_pct": 25.44
    }
   ],
   "source": "NSE XBRL"
@@ -71943,7 +71915,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:39+00:00",
+  "fetched_at": "2026-10-24T18:15:33+00:00",
   "quarters": [
    {
     "depreciation": 66.94,
@@ -72176,7 +72148,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:18:47+00:00",
+  "fetched_at": "2026-10-24T18:15:40+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -72395,7 +72367,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:51+00:00",
+  "fetched_at": "2026-10-24T18:15:45+00:00",
   "quarters": [
    {
     "depreciation": 5.26,
@@ -72698,7 +72670,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:18:57+00:00",
+  "fetched_at": "2026-10-24T18:15:51+00:00",
   "quarters": [
    {
     "depreciation": 46.52,
@@ -72987,7 +72959,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:03+00:00",
+  "fetched_at": "2026-10-24T18:15:57+00:00",
   "quarters": [
    {
     "depreciation": 15.37,
@@ -73220,7 +73192,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:09+00:00",
+  "fetched_at": "2026-10-24T18:16:03+00:00",
   "quarters": [
    {
     "depreciation": 12.57,
@@ -73467,7 +73439,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:15+00:00",
+  "fetched_at": "2026-10-24T18:16:09+00:00",
   "quarters": [
    {
     "depreciation": 32.27,
@@ -73756,7 +73728,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:27+00:00",
+  "fetched_at": "2026-10-24T18:38:21+00:00",
   "quarters": [
    {
     "depreciation": 18.9,
@@ -74045,7 +74017,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:22+00:00",
+  "fetched_at": "2026-10-24T18:16:15+00:00",
   "quarters": [
    {
     "depreciation": 29.89,
@@ -74306,20 +74278,6 @@
    },
    {
     "depreciation": null,
-    "eps": 111.29,
-    "expenses": 49615.92,
-    "interest": 28274.55,
-    "net_profit": 22125.99,
-    "operating_profit": -12221.64,
-    "opm_pct": -18.61,
-    "other_income": 37407.27,
-    "profit_before_tax": 28989.03,
-    "sales": 65668.83,
-    "tax_pct": 24.3,
-    "year": "Mar 2025"
-   },
-   {
-    "depreciation": null,
     "eps": 19.4,
     "expenses": 52318.79,
     "interest": 29619.98,
@@ -74334,22 +74292,8 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:27+00:00",
+  "fetched_at": "2026-10-24T18:16:21+00:00",
   "quarters": [
-   {
-    "depreciation": null,
-    "eps": 22.45,
-    "expenses": 10135.66,
-    "interest": 5535.52,
-    "net_profit": 4461.04,
-    "operating_profit": -1954.62,
-    "opm_pct": -14.25,
-    "other_income": 7842.96,
-    "period": "Sep 2023",
-    "profit_before_tax": 5888.34,
-    "sales": 13716.56,
-    "tax_pct": 24.89
-   },
    {
     "depreciation": null,
     "eps": 21.46,
@@ -74503,6 +74447,20 @@
     "profit_before_tax": 7508.86,
     "sales": 18354.57,
     "tax_pct": 26.93
+   },
+   {
+    "depreciation": null,
+    "eps": 5.68,
+    "expenses": 13215.98,
+    "interest": 8680.6,
+    "net_profit": 5645.38,
+    "operating_profit": -2040.71,
+    "opm_pct": -10.28,
+    "other_income": 9571.01,
+    "period": "Sep 2026",
+    "profit_before_tax": 7530.3,
+    "sales": 19855.87,
+    "tax_pct": 25.18
    }
   ],
   "source": "NSE XBRL"
@@ -74623,7 +74581,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:33+00:00",
+  "fetched_at": "2026-10-24T18:16:27+00:00",
   "quarters": [
    {
     "depreciation": 113.0,
@@ -74912,7 +74870,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:39+00:00",
+  "fetched_at": "2026-10-24T18:16:33+00:00",
   "quarters": [
    {
     "depreciation": 48.09,
@@ -75201,7 +75159,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:45+00:00",
+  "fetched_at": "2026-10-24T18:16:39+00:00",
   "quarters": [
    {
     "depreciation": 45.99,
@@ -75490,7 +75448,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:33+00:00",
+  "fetched_at": "2026-10-24T18:38:27+00:00",
   "quarters": [
    {
     "depreciation": 12.3,
@@ -75793,7 +75751,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:51+00:00",
+  "fetched_at": "2026-10-24T18:16:45+00:00",
   "quarters": [
    {
     "depreciation": 35.9,
@@ -76343,7 +76301,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:19:57+00:00",
+  "fetched_at": "2026-10-24T18:16:51+00:00",
   "quarters": [
    {
     "depreciation": 93.37,
@@ -76646,7 +76604,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:03+00:00",
+  "fetched_at": "2026-10-24T18:16:57+00:00",
   "quarters": [
    {
     "depreciation": 22.6,
@@ -76837,7 +76795,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:09+00:00",
+  "fetched_at": "2026-10-24T18:17:03+00:00",
   "quarters": [
    {
     "depreciation": 253.41,
@@ -76916,7 +76874,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:20:15+00:00",
+  "fetched_at": "2026-10-24T18:17:09+00:00",
   "quarters": [
    {
     "depreciation": 93.49,
@@ -77079,7 +77037,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:21+00:00",
+  "fetched_at": "2026-10-24T18:17:15+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -77340,7 +77298,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:33+00:00",
+  "fetched_at": "2026-10-24T18:17:27+00:00",
   "quarters": [
    {
     "depreciation": 49.75,
@@ -77545,7 +77503,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:39+00:00",
+  "fetched_at": "2026-10-24T18:17:33+00:00",
   "quarters": [
    {
     "depreciation": 7.57,
@@ -77806,7 +77764,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:45+00:00",
+  "fetched_at": "2026-10-24T18:17:39+00:00",
   "quarters": [
    {
     "depreciation": 29.3,
@@ -78095,7 +78053,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:51+00:00",
+  "fetched_at": "2026-10-24T18:17:45+00:00",
   "quarters": [
    {
     "depreciation": 830.47,
@@ -78356,7 +78314,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:20:57+00:00",
+  "fetched_at": "2026-10-24T18:17:51+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -78659,7 +78617,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:03+00:00",
+  "fetched_at": "2026-10-24T18:17:57+00:00",
   "quarters": [
    {
     "depreciation": 35.55,
@@ -78948,7 +78906,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:09+00:00",
+  "fetched_at": "2026-10-24T18:18:03+00:00",
   "quarters": [
    {
     "depreciation": 199.0,
@@ -79237,7 +79195,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:15+00:00",
+  "fetched_at": "2026-10-24T18:18:09+00:00",
   "quarters": [
    {
     "depreciation": 71.5,
@@ -79540,7 +79498,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:21+00:00",
+  "fetched_at": "2026-10-24T18:18:15+00:00",
   "quarters": [
    {
     "depreciation": 247.85,
@@ -79843,7 +79801,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:27+00:00",
+  "fetched_at": "2026-10-24T18:18:21+00:00",
   "quarters": [
    {
     "depreciation": 1138.64,
@@ -80118,7 +80076,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:33+00:00",
+  "fetched_at": "2026-10-24T18:18:27+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -80379,7 +80337,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:39+00:00",
+  "fetched_at": "2026-10-24T18:18:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -80654,7 +80612,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:45+00:00",
+  "fetched_at": "2026-10-24T18:18:39+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -80887,7 +80845,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:51+00:00",
+  "fetched_at": "2026-10-24T18:18:45+00:00",
   "quarters": [
    {
     "depreciation": 96.48,
@@ -81438,7 +81396,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:21:57+00:00",
+  "fetched_at": "2026-10-24T18:18:51+00:00",
   "quarters": [
    {
     "depreciation": 39.0,
@@ -81727,7 +81685,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:03+00:00",
+  "fetched_at": "2026-10-24T18:18:57+00:00",
   "quarters": [
    {
     "depreciation": 794.4,
@@ -81988,7 +81946,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:09+00:00",
+  "fetched_at": "2026-10-24T18:19:03+00:00",
   "quarters": [
    {
     "depreciation": 57.88,
@@ -82249,7 +82207,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:15+00:00",
+  "fetched_at": "2026-10-24T18:19:09+00:00",
   "quarters": [
    {
     "depreciation": 20.19,
@@ -82482,7 +82440,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:27+00:00",
+  "fetched_at": "2026-10-24T18:19:21+00:00",
   "quarters": [
    {
     "depreciation": 42.91,
@@ -82673,7 +82631,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:33+00:00",
+  "fetched_at": "2026-10-24T18:19:27+00:00",
   "quarters": [
    {
     "depreciation": 10.92,
@@ -82808,7 +82766,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:39+00:00",
+  "fetched_at": "2026-10-24T18:19:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -83027,7 +82985,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:45+00:00",
+  "fetched_at": "2026-10-24T18:19:39+00:00",
   "quarters": [
    {
     "depreciation": 68.29,
@@ -83288,7 +83246,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:51+00:00",
+  "fetched_at": "2026-10-24T18:19:45+00:00",
   "quarters": [
    {
     "depreciation": 41.41,
@@ -83535,7 +83493,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:22:57+00:00",
+  "fetched_at": "2026-10-24T18:19:51+00:00",
   "quarters": [
    {
     "depreciation": 1.4,
@@ -83838,7 +83796,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:03+00:00",
+  "fetched_at": "2026-10-24T18:19:57+00:00",
   "quarters": [
    {
     "depreciation": 867.39,
@@ -84113,7 +84071,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:11+00:00",
+  "fetched_at": "2026-10-24T18:20:03+00:00",
   "quarters": [
    {
     "depreciation": 17.35,
@@ -84416,7 +84374,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:15+00:00",
+  "fetched_at": "2026-10-24T18:20:09+00:00",
   "quarters": [
    {
     "depreciation": 88.97,
@@ -84705,7 +84663,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:21+00:00",
+  "fetched_at": "2026-10-24T18:20:15+00:00",
   "quarters": [
    {
     "depreciation": 351.48,
@@ -84966,7 +84924,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:27+00:00",
+  "fetched_at": "2026-10-24T18:20:21+00:00",
   "quarters": [
    {
     "depreciation": 295.97,
@@ -85213,7 +85171,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:23:33+00:00",
+  "fetched_at": "2026-10-24T18:20:27+00:00",
   "quarters": [
    {
     "depreciation": 36.35,
@@ -85474,7 +85432,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:39+00:00",
+  "fetched_at": "2026-10-24T18:38:33+00:00",
   "quarters": [
    {
     "depreciation": 5.79,
@@ -85777,7 +85735,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:39+00:00",
+  "fetched_at": "2026-10-24T18:20:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -86066,7 +86024,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:45+00:00",
+  "fetched_at": "2026-10-24T18:20:39+00:00",
   "quarters": [
    {
     "depreciation": 6.52,
@@ -86369,7 +86327,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:51+00:00",
+  "fetched_at": "2026-10-24T18:20:45+00:00",
   "quarters": [
    {
     "depreciation": 43.6,
@@ -86672,7 +86630,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:23:57+00:00",
+  "fetched_at": "2026-10-24T18:20:51+00:00",
   "quarters": [
    {
     "depreciation": 186.15,
@@ -86961,7 +86919,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:03+00:00",
+  "fetched_at": "2026-10-24T18:20:57+00:00",
   "quarters": [
    {
     "depreciation": 25.95,
@@ -87264,7 +87222,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:09+00:00",
+  "fetched_at": "2026-10-24T18:21:03+00:00",
   "quarters": [
    {
     "depreciation": 77.98,
@@ -87567,7 +87525,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:15+00:00",
+  "fetched_at": "2026-10-24T18:21:09+00:00",
   "quarters": [
    {
     "depreciation": 24.25,
@@ -87870,7 +87828,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:21+00:00",
+  "fetched_at": "2026-10-24T18:21:15+00:00",
   "quarters": [
    {
     "depreciation": 1.33,
@@ -88159,7 +88117,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:27+00:00",
+  "fetched_at": "2026-10-24T18:21:21+00:00",
   "quarters": [
    {
     "depreciation": 53.21,
@@ -88364,7 +88322,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:33+00:00",
+  "fetched_at": "2026-10-24T18:21:27+00:00",
   "quarters": [
    {
     "depreciation": 121.6,
@@ -88541,22 +88499,8 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:24:39+00:00",
+  "fetched_at": "2026-10-24T18:21:33+00:00",
   "quarters": [
-   {
-    "depreciation": 1.43,
-    "eps": 2.71,
-    "expenses": 125.75,
-    "interest": 0.62,
-    "net_profit": 15.14,
-    "operating_profit": 19.23,
-    "opm_pct": 13.27,
-    "other_income": 3.02,
-    "period": "Sep 2023",
-    "profit_before_tax": 20.2,
-    "sales": 144.98,
-    "tax_pct": 25.06
-   },
    {
     "depreciation": 1.81,
     "eps": 4.77,
@@ -88710,6 +88654,20 @@
     "profit_before_tax": 114.14,
     "sales": 819.69,
     "tax_pct": 25.25
+   },
+   {
+    "depreciation": 3.71,
+    "eps": 23.54,
+    "expenses": 1125.98,
+    "interest": 23.8,
+    "net_profit": 136.66,
+    "operating_profit": 197.3,
+    "opm_pct": 14.91,
+    "other_income": 12.86,
+    "period": "Sep 2026",
+    "profit_before_tax": 182.65,
+    "sales": 1323.28,
+    "tax_pct": 25.18
    }
   ],
   "source": "NSE XBRL"
@@ -88816,7 +88774,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:46+00:00",
+  "fetched_at": "2026-10-24T18:21:39+00:00",
   "quarters": [
    {
     "depreciation": 14.51,
@@ -89422,7 +89380,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:51+00:00",
+  "fetched_at": "2026-10-24T18:21:45+00:00",
   "quarters": [
    {
     "depreciation": 55.27,
@@ -89725,7 +89683,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:24:57+00:00",
+  "fetched_at": "2026-10-24T18:21:51+00:00",
   "quarters": [
    {
     "depreciation": 294.86,
@@ -90000,7 +89958,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:09+00:00",
+  "fetched_at": "2026-10-24T18:22:03+00:00",
   "quarters": [
    {
     "depreciation": 461.38,
@@ -90275,7 +90233,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:15+00:00",
+  "fetched_at": "2026-10-24T18:22:09+00:00",
   "quarters": [
    {
     "depreciation": 69.22,
@@ -90508,7 +90466,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:25:21+00:00",
+  "fetched_at": "2026-10-24T18:22:15+00:00",
   "quarters": [
    {
     "depreciation": 74.53,
@@ -90797,7 +90755,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:27+00:00",
+  "fetched_at": "2026-10-24T18:22:21+00:00",
   "quarters": [
    {
     "depreciation": 4037.68,
@@ -91002,7 +90960,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:33+00:00",
+  "fetched_at": "2026-10-24T18:22:27+00:00",
   "quarters": [
    {
     "depreciation": 194.56,
@@ -91151,7 +91109,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:39+00:00",
+  "fetched_at": "2026-10-24T18:22:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -91384,7 +91342,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:45+00:00",
+  "fetched_at": "2026-10-24T18:22:39+00:00",
   "quarters": [
    {
     "depreciation": 231.25,
@@ -91631,7 +91589,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:51+00:00",
+  "fetched_at": "2026-10-24T18:22:45+00:00",
   "quarters": [
    {
     "depreciation": 54.64,
@@ -91906,7 +91864,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:25:57+00:00",
+  "fetched_at": "2026-10-24T18:22:51+00:00",
   "quarters": [
    {
     "depreciation": 11.37,
@@ -92195,7 +92153,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:04+00:00",
+  "fetched_at": "2026-10-24T18:22:57+00:00",
   "quarters": [
    {
     "depreciation": 19.0,
@@ -92498,7 +92456,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:09+00:00",
+  "fetched_at": "2026-10-24T18:23:03+00:00",
   "quarters": [
    {
     "depreciation": 499.04,
@@ -92689,7 +92647,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:15+00:00",
+  "fetched_at": "2026-10-24T18:23:09+00:00",
   "quarters": [
    {
     "depreciation": 125.77,
@@ -92922,7 +92880,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:21+00:00",
+  "fetched_at": "2026-10-24T18:23:15+00:00",
   "quarters": [
    {
     "depreciation": 8.79,
@@ -93127,7 +93085,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:27+00:00",
+  "fetched_at": "2026-10-24T18:23:21+00:00",
   "quarters": [
    {
     "depreciation": 19.06,
@@ -93360,7 +93318,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:33+00:00",
+  "fetched_at": "2026-10-24T18:23:27+00:00",
   "quarters": [
    {
     "depreciation": 6698.06,
@@ -93663,7 +93621,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:26:39+00:00",
+  "fetched_at": "2026-10-24T18:23:33+00:00",
   "quarters": [
    {
     "depreciation": 24.65,
@@ -93910,7 +93868,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:45+00:00",
+  "fetched_at": "2026-10-24T18:23:39+00:00",
   "quarters": [
    {
     "depreciation": 50.68,
@@ -94115,7 +94073,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:52+00:00",
+  "fetched_at": "2026-10-24T18:23:45+00:00",
   "quarters": [
    {
     "depreciation": 56.96,
@@ -94320,7 +94278,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:26:57+00:00",
+  "fetched_at": "2026-10-24T18:23:51+00:00",
   "quarters": [
    {
     "depreciation": 18.01,
@@ -94609,7 +94567,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:04+00:00",
+  "fetched_at": "2026-10-24T18:23:57+00:00",
   "quarters": [
    {
     "depreciation": 48.24,
@@ -94884,7 +94842,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:10+00:00",
+  "fetched_at": "2026-10-24T18:24:03+00:00",
   "quarters": [
    {
     "depreciation": 78.73,
@@ -95187,7 +95145,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:15+00:00",
+  "fetched_at": "2026-10-24T18:24:09+00:00",
   "quarters": [
    {
     "depreciation": 194.81,
@@ -95448,7 +95406,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:22+00:00",
+  "fetched_at": "2026-10-24T18:24:15+00:00",
   "quarters": [
    {
     "depreciation": 12.06,
@@ -96055,7 +96013,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:27+00:00",
+  "fetched_at": "2026-10-24T18:24:21+00:00",
   "quarters": [
    {
     "depreciation": 128.3,
@@ -96316,7 +96274,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:33+00:00",
+  "fetched_at": "2026-10-24T18:24:27+00:00",
   "quarters": [
    {
     "depreciation": 11.05,
@@ -96619,7 +96577,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:39+00:00",
+  "fetched_at": "2026-10-24T18:24:33+00:00",
   "quarters": [
    {
     "depreciation": 65.91,
@@ -96922,7 +96880,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:45+00:00",
+  "fetched_at": "2026-10-24T18:24:39+00:00",
   "quarters": [
    {
     "depreciation": 75.21,
@@ -97211,7 +97169,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:52+00:00",
+  "fetched_at": "2026-10-24T18:24:45+00:00",
   "quarters": [
    {
     "depreciation": 80.3,
@@ -97402,7 +97360,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:27:57+00:00",
+  "fetched_at": "2026-10-24T18:24:51+00:00",
   "quarters": [
    {
     "depreciation": 65.87,
@@ -97481,7 +97439,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:03+00:00",
+  "fetched_at": "2026-10-24T18:24:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -97644,7 +97602,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:10+00:00",
+  "fetched_at": "2026-10-24T18:25:03+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -97919,7 +97877,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:15+00:00",
+  "fetched_at": "2026-10-24T18:25:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -98166,7 +98124,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:21+00:00",
+  "fetched_at": "2026-10-24T18:25:15+00:00",
   "quarters": [
    {
     "depreciation": 22.32,
@@ -98455,7 +98413,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:27+00:00",
+  "fetched_at": "2026-10-24T18:25:21+00:00",
   "quarters": [
    {
     "depreciation": 61.88,
@@ -98758,7 +98716,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:33+00:00",
+  "fetched_at": "2026-10-24T18:25:27+00:00",
   "quarters": [
    {
     "depreciation": 15.99,
@@ -99047,7 +99005,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:40+00:00",
+  "fetched_at": "2026-10-24T18:25:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -99350,7 +99308,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:46+00:00",
+  "fetched_at": "2026-10-24T18:25:39+00:00",
   "quarters": [
    {
     "depreciation": 3277.04,
@@ -99597,7 +99555,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:28:51+00:00",
+  "fetched_at": "2026-10-24T18:25:45+00:00",
   "quarters": [
    {
     "depreciation": 22.5,
@@ -99830,7 +99788,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:28:57+00:00",
+  "fetched_at": "2026-10-24T18:25:51+00:00",
   "quarters": [
    {
     "depreciation": 184.51,
@@ -100035,7 +99993,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:03+00:00",
+  "fetched_at": "2026-10-24T18:25:57+00:00",
   "quarters": [
    {
     "depreciation": 89.72,
@@ -100282,7 +100240,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:09+00:00",
+  "fetched_at": "2026-10-24T18:26:03+00:00",
   "quarters": [
    {
     "depreciation": 174.1,
@@ -100585,7 +100543,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:45+00:00",
+  "fetched_at": "2026-10-24T18:38:39+00:00",
   "quarters": [
    {
     "depreciation": 30.68,
@@ -100804,7 +100762,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:15+00:00",
+  "fetched_at": "2026-10-24T18:26:09+00:00",
   "quarters": [
    {
     "depreciation": 4.15,
@@ -101107,7 +101065,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:21+00:00",
+  "fetched_at": "2026-10-24T18:26:15+00:00",
   "quarters": [
    {
     "depreciation": 308.6,
@@ -101298,7 +101256,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:27+00:00",
+  "fetched_at": "2026-10-24T18:26:21+00:00",
   "quarters": [
    {
     "depreciation": 104.69,
@@ -101461,7 +101419,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:33+00:00",
+  "fetched_at": "2026-10-24T18:26:27+00:00",
   "quarters": [
    {
     "depreciation": 26.12,
@@ -101722,7 +101680,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:29:39+00:00",
+  "fetched_at": "2026-10-24T18:26:33+00:00",
   "quarters": [
    {
     "depreciation": 37.87,
@@ -101969,7 +101927,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:45+00:00",
+  "fetched_at": "2026-10-24T18:26:39+00:00",
   "quarters": [
    {
     "depreciation": 26.8,
@@ -102272,7 +102230,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:51+00:00",
+  "fetched_at": "2026-10-24T18:26:45+00:00",
   "quarters": [
    {
     "depreciation": 162.75,
@@ -102561,7 +102519,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:29:57+00:00",
+  "fetched_at": "2026-10-24T18:26:51+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -102836,7 +102794,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:03+00:00",
+  "fetched_at": "2026-10-24T18:26:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -103139,7 +103097,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:09+00:00",
+  "fetched_at": "2026-10-24T18:27:03+00:00",
   "quarters": [
    {
     "depreciation": 43.73,
@@ -103414,7 +103372,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:16+00:00",
+  "fetched_at": "2026-10-24T18:27:09+00:00",
   "quarters": [
    {
     "depreciation": 12585.0,
@@ -103675,7 +103633,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:21+00:00",
+  "fetched_at": "2026-10-24T18:27:15+00:00",
   "quarters": [
    {
     "depreciation": 45.88,
@@ -103978,7 +103936,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:27+00:00",
+  "fetched_at": "2026-10-24T18:27:21+00:00",
   "quarters": [
    {
     "depreciation": 14.06,
@@ -104253,7 +104211,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:33+00:00",
+  "fetched_at": "2026-10-24T18:27:27+00:00",
   "quarters": [
    {
     "depreciation": 57.15,
@@ -104542,7 +104500,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:39+00:00",
+  "fetched_at": "2026-10-24T18:27:33+00:00",
   "quarters": [
    {
     "depreciation": 262.8,
@@ -104761,7 +104719,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:45+00:00",
+  "fetched_at": "2026-10-24T18:27:39+00:00",
   "quarters": [
    {
     "depreciation": 16.6,
@@ -104952,7 +104910,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:51+00:00",
+  "fetched_at": "2026-10-24T18:38:45+00:00",
   "quarters": [
    {
     "depreciation": 11.87,
@@ -105115,7 +105073,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:51+00:00",
+  "fetched_at": "2026-10-24T18:27:45+00:00",
   "quarters": [
    {
     "depreciation": 6.22,
@@ -105320,7 +105278,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:30:57+00:00",
+  "fetched_at": "2026-10-24T18:27:51+00:00",
   "quarters": [
    {
     "depreciation": 126.36,
@@ -105567,7 +105525,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:03+00:00",
+  "fetched_at": "2026-10-24T18:27:57+00:00",
   "quarters": [
    {
     "depreciation": 1326.59,
@@ -105758,7 +105716,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:09+00:00",
+  "fetched_at": "2026-10-24T18:28:03+00:00",
   "quarters": [
    {
     "depreciation": 34.09,
@@ -105949,7 +105907,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:15+00:00",
+  "fetched_at": "2026-10-24T18:28:09+00:00",
   "quarters": [
    {
     "depreciation": 22.94,
@@ -106182,7 +106140,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:41:57+00:00",
+  "fetched_at": "2026-10-24T18:38:52+00:00",
   "quarters": [
    {
     "depreciation": 34.87,
@@ -106732,7 +106690,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:21+00:00",
+  "fetched_at": "2026-10-24T18:28:15+00:00",
   "quarters": [
    {
     "depreciation": 45.72,
@@ -107529,7 +107487,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:31:27+00:00",
+  "fetched_at": "2026-10-24T18:28:21+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -107818,7 +107776,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:39+00:00",
+  "fetched_at": "2026-10-24T18:28:33+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -108037,7 +107995,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:45+00:00",
+  "fetched_at": "2026-10-24T18:28:39+00:00",
   "quarters": [
    {
     "depreciation": 56.2,
@@ -108326,7 +108284,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:31:51+00:00",
+  "fetched_at": "2026-10-24T18:28:45+00:00",
   "quarters": [
    {
     "depreciation": 5.69,
@@ -108629,7 +108587,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:31:57+00:00",
+  "fetched_at": "2026-10-24T18:28:51+00:00",
   "quarters": [
    {
     "depreciation": 200.31,
@@ -108918,7 +108876,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:03+00:00",
+  "fetched_at": "2026-10-24T18:28:57+00:00",
   "quarters": [
    {
     "depreciation": 443.86,
@@ -109207,7 +109165,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:42:04+00:00",
+  "fetched_at": "2026-10-24T18:38:58+00:00",
   "quarters": [
    {
     "depreciation": 22.49,
@@ -109482,7 +109440,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:09+00:00",
+  "fetched_at": "2026-10-24T18:29:03+00:00",
   "quarters": [
    {
     "depreciation": 151.83,
@@ -109743,7 +109701,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:15+00:00",
+  "fetched_at": "2026-10-24T18:29:09+00:00",
   "quarters": [
    {
     "depreciation": 119.01,
@@ -110033,7 +109991,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:21+00:00",
+  "fetched_at": "2026-10-24T18:29:15+00:00",
   "quarters": [
    {
     "depreciation": 78.6,
@@ -110239,7 +110197,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:27+00:00",
+  "fetched_at": "2026-10-24T18:29:21+00:00",
   "quarters": [
    {
     "depreciation": 5.14,
@@ -110528,7 +110486,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:33+00:00",
+  "fetched_at": "2026-10-24T18:29:27+00:00",
   "quarters": [
    {
     "depreciation": 101.88,
@@ -110831,7 +110789,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:39+00:00",
+  "fetched_at": "2026-10-24T18:29:33+00:00",
   "quarters": [
    {
     "depreciation": 20.13,
@@ -111106,7 +111064,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:46+00:00",
+  "fetched_at": "2026-10-24T18:29:39+00:00",
   "quarters": [
    {
     "depreciation": 34.1,
@@ -111353,7 +111311,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:51+00:00",
+  "fetched_at": "2026-10-24T18:29:45+00:00",
   "quarters": [
    {
     "depreciation": 53.41,
@@ -112164,7 +112122,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:32:58+00:00",
+  "fetched_at": "2026-10-24T18:29:51+00:00",
   "quarters": [
    {
     "depreciation": 168.89,
@@ -112340,7 +112298,7 @@
  "STARHEALTH": {
   "annual": [],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:33:03+00:00",
+  "fetched_at": "2026-10-24T18:29:57+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -112461,7 +112419,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:42:10+00:00",
+  "fetched_at": "2026-10-24T18:39:03+00:00",
   "quarters": [
    {
     "depreciation": 85.0,
@@ -112722,7 +112680,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:09+00:00",
+  "fetched_at": "2026-10-24T18:30:03+00:00",
   "quarters": [
    {
     "depreciation": 15.77,
@@ -112997,7 +112955,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:15+00:00",
+  "fetched_at": "2026-10-24T18:30:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -113300,7 +113258,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:21+00:00",
+  "fetched_at": "2026-10-24T18:30:15+00:00",
   "quarters": [
    {
     "depreciation": 632.82,
@@ -113589,7 +113547,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:28+00:00",
+  "fetched_at": "2026-10-24T18:30:21+00:00",
   "quarters": [
    {
     "depreciation": 218.75,
@@ -113878,7 +113836,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:33+00:00",
+  "fetched_at": "2026-10-24T18:30:27+00:00",
   "quarters": [
    {
     "depreciation": 71.92,
@@ -114181,7 +114139,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:39+00:00",
+  "fetched_at": "2026-10-24T18:30:33+00:00",
   "quarters": [
    {
     "depreciation": 51.17,
@@ -114484,7 +114442,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:45+00:00",
+  "fetched_at": "2026-10-24T18:30:39+00:00",
   "quarters": [
    {
     "depreciation": 27.1,
@@ -114689,7 +114647,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:51+00:00",
+  "fetched_at": "2026-10-24T18:30:45+00:00",
   "quarters": [
    {
     "depreciation": 130.88,
@@ -114936,7 +114894,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:33:57+00:00",
+  "fetched_at": "2026-10-24T18:30:51+00:00",
   "quarters": [
    {
     "depreciation": 104.6,
@@ -115169,7 +115127,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:03+00:00",
+  "fetched_at": "2026-10-24T18:30:57+00:00",
   "quarters": [
    {
     "depreciation": 11.59,
@@ -115431,7 +115389,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:09+00:00",
+  "fetched_at": "2026-10-24T18:31:03+00:00",
   "quarters": [
    {
     "depreciation": 6.17,
@@ -115622,7 +115580,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:15+00:00",
+  "fetched_at": "2026-10-24T18:31:09+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -115813,7 +115771,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:21+00:00",
+  "fetched_at": "2026-10-24T18:31:15+00:00",
   "quarters": [
    {
     "depreciation": 234.0,
@@ -116102,7 +116060,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:27+00:00",
+  "fetched_at": "2026-10-24T18:31:21+00:00",
   "quarters": [
    {
     "depreciation": 618.97,
@@ -116405,7 +116363,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:33+00:00",
+  "fetched_at": "2026-10-24T18:31:27+00:00",
   "quarters": [
    {
     "depreciation": 93.93,
@@ -116680,7 +116638,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:34:39+00:00",
+  "fetched_at": "2026-10-24T18:31:33+00:00",
   "quarters": [
    {
     "depreciation": 25.45,
@@ -116969,7 +116927,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:45+00:00",
+  "fetched_at": "2026-10-24T18:31:39+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -117258,7 +117216,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:51+00:00",
+  "fetched_at": "2026-10-24T18:31:45+00:00",
   "quarters": [
    {
     "depreciation": 925.89,
@@ -117561,7 +117519,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:34:57+00:00",
+  "fetched_at": "2026-10-24T18:31:51+00:00",
   "quarters": [
    {
     "depreciation": 2479.85,
@@ -117780,7 +117738,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:03+00:00",
+  "fetched_at": "2026-10-24T18:31:57+00:00",
   "quarters": [
    {
     "depreciation": 27.17,
@@ -117999,7 +117957,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:09+00:00",
+  "fetched_at": "2026-10-24T18:32:03+00:00",
   "quarters": [
    {
     "depreciation": 15.01,
@@ -118260,7 +118218,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:15+00:00",
+  "fetched_at": "2026-10-24T18:32:09+00:00",
   "quarters": [
    {
     "depreciation": 1233.0,
@@ -118563,7 +118521,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:42:15+00:00",
+  "fetched_at": "2026-10-24T18:39:09+00:00",
   "quarters": [
    {
     "depreciation": 5.29,
@@ -118852,7 +118810,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:21+00:00",
+  "fetched_at": "2026-10-24T18:32:15+00:00",
   "quarters": [
    {
     "depreciation": 443.4,
@@ -119141,7 +119099,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:27+00:00",
+  "fetched_at": "2026-10-24T18:32:21+00:00",
   "quarters": [
    {
     "depreciation": 1.87,
@@ -119374,7 +119332,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:33+00:00",
+  "fetched_at": "2026-10-24T18:32:27+00:00",
   "quarters": [
    {
     "depreciation": 13.53,
@@ -119663,7 +119621,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:39+00:00",
+  "fetched_at": "2026-10-24T18:32:33+00:00",
   "quarters": [
    {
     "depreciation": 48.17,
@@ -119854,7 +119812,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:45+00:00",
+  "fetched_at": "2026-10-24T18:32:39+00:00",
   "quarters": [
    {
     "depreciation": 25.82,
@@ -120031,7 +119989,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:42:21+00:00",
+  "fetched_at": "2026-10-24T18:39:16+00:00",
   "quarters": [
    {
     "depreciation": 3.67,
@@ -120413,7 +120371,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:52+00:00",
+  "fetched_at": "2026-10-24T18:32:45+00:00",
   "quarters": [
    {
     "depreciation": 32.96,
@@ -120716,7 +120674,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:35:57+00:00",
+  "fetched_at": "2026-10-24T18:32:51+00:00",
   "quarters": [
    {
     "depreciation": 118.15,
@@ -121019,7 +120977,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:36:04+00:00",
+  "fetched_at": "2026-10-24T18:32:57+00:00",
   "quarters": [
    {
     "depreciation": 21.07,
@@ -121308,7 +121266,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:09+00:00",
+  "fetched_at": "2026-10-24T18:33:03+00:00",
   "quarters": [
    {
     "depreciation": 6.69,
@@ -121611,7 +121569,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:15+00:00",
+  "fetched_at": "2026-10-24T18:33:09+00:00",
   "quarters": [
    {
     "depreciation": 144.0,
@@ -121802,7 +121760,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:21+00:00",
+  "fetched_at": "2026-10-24T18:33:15+00:00",
   "quarters": [
    {
     "depreciation": 472.0,
@@ -122007,7 +121965,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:28+00:00",
+  "fetched_at": "2026-10-24T18:33:21+00:00",
   "quarters": [
    {
     "depreciation": 6636.42,
@@ -122296,7 +122254,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:33+00:00",
+  "fetched_at": "2026-10-24T18:33:27+00:00",
   "quarters": [
    {
     "depreciation": 213.0,
@@ -122599,7 +122557,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:39+00:00",
+  "fetched_at": "2026-10-24T18:33:33+00:00",
   "quarters": [
    {
     "depreciation": 341.74,
@@ -122981,7 +122939,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:45+00:00",
+  "fetched_at": "2026-10-24T18:33:39+00:00",
   "quarters": [
    {
     "depreciation": 141.42,
@@ -123284,7 +123242,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:51+00:00",
+  "fetched_at": "2026-10-24T18:33:45+00:00",
   "quarters": [
    {
     "depreciation": 89.39,
@@ -123587,7 +123545,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:36:57+00:00",
+  "fetched_at": "2026-10-24T18:33:51+00:00",
   "quarters": [
    {
     "depreciation": 5.11,
@@ -123890,7 +123848,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:37:03+00:00",
+  "fetched_at": "2026-10-24T18:33:57+00:00",
   "quarters": [
    {
     "depreciation": 38.28,
@@ -124193,7 +124151,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:09+00:00",
+  "fetched_at": "2026-10-24T18:34:03+00:00",
   "quarters": [
    {
     "depreciation": 237.13,
@@ -124454,7 +124412,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:15+00:00",
+  "fetched_at": "2026-10-24T18:34:09+00:00",
   "quarters": [
    {
     "depreciation": 51.38,
@@ -124687,7 +124645,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:37:22+00:00",
+  "fetched_at": "2026-10-24T18:34:16+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -124962,7 +124920,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:27+00:00",
+  "fetched_at": "2026-10-24T18:34:21+00:00",
   "quarters": [
    {
     "depreciation": 783.48,
@@ -125251,7 +125209,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:33+00:00",
+  "fetched_at": "2026-10-24T18:34:27+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -125540,7 +125498,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:39+00:00",
+  "fetched_at": "2026-10-24T18:34:33+00:00",
   "quarters": [
    {
     "depreciation": 65.3,
@@ -125829,7 +125787,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:45+00:00",
+  "fetched_at": "2026-10-24T18:34:39+00:00",
   "quarters": [
    {
     "depreciation": 119.01,
@@ -126104,7 +126062,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:51+00:00",
+  "fetched_at": "2026-10-24T18:34:45+00:00",
   "quarters": [
    {
     "depreciation": 636.0,
@@ -126295,7 +126253,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:37:57+00:00",
+  "fetched_at": "2026-10-24T18:34:51+00:00",
   "quarters": [
    {
     "depreciation": 10.41,
@@ -126500,7 +126458,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:03+00:00",
+  "fetched_at": "2026-10-24T18:34:57+00:00",
   "quarters": [
    {
     "depreciation": 17.99,
@@ -126761,7 +126719,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:09+00:00",
+  "fetched_at": "2026-10-24T18:35:03+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -126952,7 +126910,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:42:27+00:00",
+  "fetched_at": "2026-10-24T18:39:22+00:00",
   "quarters": [
    {
     "depreciation": 0.0,
@@ -127101,7 +127059,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:15+00:00",
+  "fetched_at": "2026-10-24T18:35:09+00:00",
   "quarters": [
    {
     "depreciation": 170.81,
@@ -127404,7 +127362,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:21+00:00",
+  "fetched_at": "2026-10-24T18:35:15+00:00",
   "quarters": [
    {
     "depreciation": 2642.0,
@@ -127595,7 +127553,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:42:33+00:00",
+  "fetched_at": "2026-10-24T18:39:27+00:00",
   "quarters": [
    {
     "depreciation": 0.0,
@@ -127688,7 +127646,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:27+00:00",
+  "fetched_at": "2026-10-24T18:35:21+00:00",
   "quarters": [
    {
     "depreciation": 13.69,
@@ -127879,7 +127837,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:42:39+00:00",
+  "fetched_at": "2026-10-24T18:39:33+00:00",
   "quarters": [
    {
     "depreciation": 0.0,
@@ -127944,7 +127902,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:34+00:00",
+  "fetched_at": "2026-10-24T18:35:27+00:00",
   "quarters": [
    {
     "depreciation": 140.66,
@@ -128079,7 +128037,7 @@
    }
   ],
   "basis": "standalone",
-  "fetched_at": "2026-10-23T19:42:45+00:00",
+  "fetched_at": "2026-10-24T18:39:39+00:00",
   "quarters": [
    {
     "depreciation": 7.43,
@@ -128242,7 +128200,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:39+00:00",
+  "fetched_at": "2026-10-24T18:35:33+00:00",
   "quarters": [
    {
     "depreciation": 11.68,
@@ -128545,7 +128503,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:45+00:00",
+  "fetched_at": "2026-10-24T18:35:39+00:00",
   "quarters": [
    {
     "depreciation": 103.71,
@@ -128736,7 +128694,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:51+00:00",
+  "fetched_at": "2026-10-24T18:35:45+00:00",
   "quarters": [
    {
     "depreciation": 84.27,
@@ -128969,7 +128927,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:38:57+00:00",
+  "fetched_at": "2026-10-24T18:35:51+00:00",
   "quarters": [
    {
     "depreciation": 85.68,
@@ -129273,7 +129231,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:03+00:00",
+  "fetched_at": "2026-10-24T18:35:57+00:00",
   "quarters": [
    {
     "depreciation": 98.5,
@@ -129562,7 +129520,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:09+00:00",
+  "fetched_at": "2026-10-24T18:36:03+00:00",
   "quarters": [
    {
     "depreciation": 49.16,
@@ -129851,7 +129809,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:15+00:00",
+  "fetched_at": "2026-10-24T18:36:09+00:00",
   "quarters": [
    {
     "depreciation": 931.6,
@@ -130154,7 +130112,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:21+00:00",
+  "fetched_at": "2026-10-24T18:36:15+00:00",
   "quarters": [
    {
     "depreciation": 55.0,
@@ -130443,7 +130401,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:27+00:00",
+  "fetched_at": "2026-10-24T18:36:22+00:00",
   "quarters": [
    {
     "depreciation": null,
@@ -130746,7 +130704,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:33+00:00",
+  "fetched_at": "2026-10-24T18:36:27+00:00",
   "quarters": [
    {
     "depreciation": 77.23,
@@ -131022,7 +130980,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:39+00:00",
+  "fetched_at": "2026-10-24T18:36:33+00:00",
   "quarters": [
    {
     "depreciation": 36.6,
@@ -131311,7 +131269,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:45+00:00",
+  "fetched_at": "2026-10-24T18:36:39+00:00",
   "quarters": [
    {
     "depreciation": 2.2,
@@ -131558,7 +131516,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:51+00:00",
+  "fetched_at": "2026-10-24T18:36:45+00:00",
   "quarters": [
    {
     "depreciation": 27.07,
@@ -131861,7 +131819,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:39:57+00:00",
+  "fetched_at": "2026-10-24T18:36:51+00:00",
   "quarters": [
    {
     "depreciation": 184.2,
@@ -132150,7 +132108,7 @@
    }
   ],
   "basis": "consolidated",
-  "fetched_at": "2026-10-23T19:40:03+00:00",
+  "fetched_at": "2026-10-24T18:36:57+00:00",
   "quarters": [
    {
     "depreciation": 5.8,
