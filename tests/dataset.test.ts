@@ -46,9 +46,13 @@ describe('dataset invariants', () => {
   });
 
   it('reports return on equity for every company, or null', () => {
-    for (const stock of STOCKS_DATA) {
-      expect(stock.roe === null || stock.roe > 0).toBe(true);
-    }
+    // Zero is Yahoo's placeholder for "no figure" and must have become null.
+    // A negative ROE is a real figure for a company making a loss, and one
+    // such company failed the whole weekly run in October 2026.
+    const placeholders = STOCKS_DATA.filter(
+      (s) => s.roe !== null && (!Number.isFinite(s.roe) || s.roe === 0)
+    );
+    expect(placeholders.map((s) => `${s.symbol} (roe=${s.roe})`)).toEqual([]);
   });
 
   it('leaves debt_to_equity null for financial services and negative net worth companies', () => {

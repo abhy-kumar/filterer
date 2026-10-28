@@ -15,9 +15,10 @@ filings from the Dec 2024 quarter:
     corporates-financial-results   everything up to Dec 2024
                                    (period=Quarterly and period=Annual)
 
-Many companies moved over a quarter or two later than that, and NSE indexed
-their Mar 2025 results in neither listing. Those quarters cannot be fetched
-here; scripts/repair_dataset.mjs fills them, where it safely can, from the
+The integrated listing is paged, 20 rows at a time unless asked for more, and
+every page is read. Reading only the first is what once made Mar 2025 look
+unfiled for a tenth of the universe. A March quarter that still cannot be read
+is filled by scripts/repair_dataset.mjs, where it safely can, from the
 full-year figures.
 
 Annual results come from the same filings: the Annual listing carries
@@ -104,6 +105,39 @@ def _listing(url: str, symbol: str) -> Any:
         headers={"Referer": REFERER.format(symbol=quoted)},
         allow_cache=False,
     )
+
+
+# Rows asked for per page of the integrated listing. NSE answers 20 when not
+# told otherwise, and honours larger sizes.
+INTEGRATED_PAGE_SIZE = 100
+INTEGRATED_MAX_PAGES = 20
+
+
+def _integrated_listing(symbol: str) -> dict:
+    """
+    Every row of the integrated listing, not just its first page.
+
+    NSE pages this listing at 20 rows and each quarter adds two to four
+    (standalone, consolidated, governance, any revision). By Oct 2026 HCLTECH
+    had 24 rows and its Mar 2025 results sat on page 2, so the quarter went
+    missing for 53 companies while looking like it had never been filed. The
+    pages are followed until the stated total is reached, which keeps working
+    whatever page size NSE settles on.
+    """
+    rows: list = []
+    total: Optional[int] = None
+    for page in range(1, INTEGRATED_MAX_PAGES + 1):
+        payload = _listing(RESULTS_INTEGRATED + f"&size={INTEGRATED_PAGE_SIZE}&page={page}", symbol)
+        batch = payload.get("data") if isinstance(payload, dict) else None
+        if not batch:
+            break
+        rows.extend(batch)
+        total = payload.get("totalCount") if isinstance(payload.get("totalCount"), int) else None
+        if total is None or len(rows) >= total:
+            break
+    if total is not None and len(rows) < total:
+        logger.warning("%s: integrated listing stopped at %d of %d rows", symbol, len(rows), total)
+    return {"data": rows, "totalCount": total if total is not None else len(rows)}
 
 
 # ── Dates ──────────────────────────────────────────────────────
@@ -643,7 +677,8 @@ def fetch_quarters(
     filings: list[ResultFiling] = []
     for url, parse in listings:
         try:
-            filings.extend(parse(_listing(url, symbol)))
+            payload = _integrated_listing(symbol) if url == RESULTS_INTEGRATED else _listing(url, symbol)
+            filings.extend(parse(payload))
         except Exception as exc:
             logger.debug("%s: listing %s failed: %s", symbol, url.split("/api/")[1][:30], exc)
     quarterly = [f for f in filings if f.months == 3]

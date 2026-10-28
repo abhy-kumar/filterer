@@ -32,16 +32,16 @@ jobs:
     timeout-minutes: 330
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: pip
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '24'
           cache: npm
 
       - name: Install dependencies
@@ -54,7 +54,7 @@ jobs:
       # walks the whole universe. Restoring it from cache lets a run that was
       # cut short resume instead of re-fetching what already succeeded.
       - name: Restore the ingest ledger
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: data/ingest.db
           key: ingest-ledger-${{ github.run_id }}
@@ -76,7 +76,7 @@ jobs:
         run: python -m data_pipeline.ingest --status
 
       - name: Save the ingest ledger
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         if: always()
         with:
           path: data/ingest.db

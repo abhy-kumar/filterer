@@ -118,6 +118,23 @@ def test_integrated_listing_skips_governance_and_non_quarter_rows():
     ]
 
 
+def test_integrated_listing_reads_every_page(monkeypatch):
+    from urllib.parse import parse_qs, urlparse
+
+    from data_pipeline import nse_filings
+
+    # 24 rows, served 20 to a page whatever size is asked for: the Mar 2025
+    # results land on page 2, as HCLTECH's did.
+    rows = [{"qe_Date": f"row-{i}"} for i in range(24)]
+
+    def fake_listing(url, symbol):
+        page = int(parse_qs(urlparse(url).query)["page"][0])
+        return {"data": rows[(page - 1) * 20 : page * 20], "totalCount": len(rows), "size": 20}
+
+    monkeypatch.setattr(nse_filings, "_listing", fake_listing)
+    assert nse_filings._integrated_listing("HCLTECH")["data"] == rows
+
+
 def test_legacy_listing_rejects_cumulative_filings():
     payload = [
         {"fromDate": "01-Oct-2024", "toDate": "31-Dec-2024", "consolidated": "Consolidated", "xbrl": "https://x/a.xml"},

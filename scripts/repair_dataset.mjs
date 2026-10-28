@@ -150,7 +150,7 @@ function mergeAnnual(stock, filedYears) {
 }
 
 /**
- * A March quarter NSE never indexed, worked out as the year less its first
+ * A March quarter with no readable filing, worked out as the year less its first
  * three quarters. Only revenue and net profit, the two lines a Yahoo-filled
  * year carries; a year filed with NSE would have come with its own quarter.
  */
@@ -160,7 +160,7 @@ function deriveMissingMarchQuarters(quarters, annual) {
   for (const year of annual) {
     if (year.source === 'Yahoo' && !(year.agreement <= YAHOO_AGREEMENT_FOR_QUARTERS)) continue;
     const [month, fy] = String(year.year).split(' ');
-    // The Mar 2025 hole is a March-year problem; other year ends are not filled.
+    // Only March year ends are filled; other year ends are left as filed.
     if (month !== 'Mar') continue;
     const march = `Mar ${fy}`;
     if (have.has(march)) continue;
@@ -851,7 +851,30 @@ const header = source.slice(0, source.indexOf('export const STOCKS_DATA'));
 const json = source.replace(/^[\s\S]*?export const STOCKS_DATA: Stock\[\] = /, '').replace(/;\s*$/, '');
 const universe = JSON.parse(json);
 
-const repaired = universe.map((stock) => repair(applyFilings(hydrate(stock))));
+// ── Sector ───────────────────────────────────────────────────
+// Yahoo leaves the sector blank for some new listings, and one blank sector
+// failed a whole weekly run. Every company carries NSE's own industry from the
+// index file, so a blank sector takes the Yahoo sector most companies in the
+// same NSE industry have. The mapping is read from this universe, not kept by
+// hand, so it follows Yahoo's taxonomy if that changes.
+const sectorByIndustry = (() => {
+  const votes = new Map();
+  for (const stock of universe) {
+    if (!stock.sector || !stock.nse_industry) continue;
+    const tally = votes.get(stock.nse_industry) || new Map();
+    tally.set(stock.sector, (tally.get(stock.sector) || 0) + 1);
+    votes.set(stock.nse_industry, tally);
+  }
+  return new Map([...votes].map(([industry, tally]) => [industry, [...tally].sort((a, b) => b[1] - a[1])[0][0]]));
+})();
+
+function withSector(stock) {
+  if (stock.sector) return stock;
+  count('blank sector taken from NSE industry peers');
+  return { ...stock, sector: sectorByIndustry.get(stock.nse_industry) || 'Diversified' };
+}
+
+const repaired = universe.map((stock) => repair(applyFilings(hydrate(withSector(stock)))));
 
 // ── Industry P/E ─────────────────────────────────────────────
 // The pipeline stores industry_pe as exactly pe_ratio * 0.9 for every single

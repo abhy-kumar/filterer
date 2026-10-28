@@ -1,127 +1,108 @@
 # Filterer
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.3-61dafb?logo=react)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-6.0-646cff?logo=vite)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com/)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776ab?logo=python)](https://python.org/)
-[![Test Suite](https://img.shields.io/badge/Tests-85%20Passed-emerald)](tests/)
+Filterer is a stock screener for the Nifty 500. You type a query in the same syntax Screener.in uses (`Return on capital employed > 20 AND Debt to equity < 0.5`) and it runs in your browser against data taken mostly from what companies file with NSE. Every company also gets a page with its statements, about twelve quarters of results, shareholding, peers and price history.
 
-Filterer is an open-source stock screener for the Nifty 500. You write queries in the same syntax as Screener.in, and they run in the browser against data built from NSE and BSE filings. Each company has a page with its statements, quarterly results, shareholding, peers and price history.
+The data keeps itself up to date. Three scheduled GitHub Actions jobs fetch new prices, filings and fundamentals, check the result, and commit it back to `master`, so the site stays current without anyone running anything by hand.
 
----
+## Running it locally
 
-## Architecture and Core Design
+You need Node 24 (the version CI uses) and, for the data pipeline, Python 3.11 or newer.
 
-Filterer is architected around five operational invariants:
-
-1. **Sub-Millisecond Client-Side Evaluation**: Screener queries are tokenized, transformed into an Abstract Syntax Tree (AST), and evaluated in the client runtime via a recursive-descent / Pratt parser. Screening across 500 equities completes in under 1.5 milliseconds with zero network roundtrips.
-2. **Two-Tier Data Topology**:
-   - **Screening Tier** (`src/data/stocksData.ts`, ~1.05 MB): Bundled scalar fundamental, valuation, financial, and technical metrics enabling instant offline filtering and sorting.
-   - **Detail Tier** (`public/data/stocks/*.json`, ~22 MB across 500 files): Asynchronously hydrated comprehensive filings, multi-year balance sheets, quarterly statements, cash flow statements, historical shareholding patterns, and daily closing price histories.
-3. **Filing Integrity and Disclosure Transparency**: Synthetic fillers and mathematical extrapolations are strictly prohibited. In periods where upstream regulatory feeds exhibit reporting gaps (e.g. statutory XBRL omissions), the interface surfaces official disclosure notices rather than fabricating interpolated figures.
-4. **Interactive TradingView Canvas Engine**: Price action, moving averages (SMA 50, SMA 200, EMA 20), volume histograms, and historical median P/E valuation envelopes are rendered via TradingView Lightweight Charts with crosshair precision.
-5. **Interface**: IBM Plex Sans and Plex Mono, bundled with the app. Light and dark themes, an index strip along the top (Nifty 50, Sensex, Bank Nifty, IT, Pharma, Auto), and tables before cards.
-
----
-
-## System Topology
-
-```
-                         [ NSE / BSE Regulatory Filings / Yahoo Finance ]
-                                               |
-                                               v
-                                ┌───────────────────────────────┐
-                                │     Python Data Pipeline      │
-                                │  (data_pipeline/data_fetcher) │
-                                └───────┬───────────────┬───────┘
-                                        |               |
-                 ┌──────────────────────┘               └──────────────────────┐
-                 v                                                             v
-    ┌─────────────────────────┐                                   ┌─────────────────────────┐
-    │   SQLite Master Store   │                                   │   Vercel / Static CDN   │
-    │    (data/screener.db)   │                                   │  (public/data/stocks/)  │
-    │  [Chunked via 40MB Git] │                                   │  [500 Detail Profiles]  │
-    └────────────┬────────────┘                                   └────────────┬────────────┘
-                 |                                                             |
-                 v                                                             v
-    ┌─────────────────────────┐                                   ┌─────────────────────────┐
-    │   Terminal CLI Scanner  │                                   │   React / Vite Web UI   │
-    │       (scanner.py)      │                                   │ (Client-Side AST Engine)│
-    └────────────┬────────────┘                                   └────────────┬────────────┘
-
-    Automated via GitHub Actions: bundled prices refreshed three times a trading day,
-    filed results and shareholding every evening, Yahoo fundamentals weekly.
-    Live quotes are served on request by /api/quotes, cached at the CDN.
+```bash
+git clone https://github.com/abhy-kumar/filterer.git
+cd filterer
+npm install
+npm run dev
 ```
 
----
+`npm test` runs the Vitest suite, which includes checks on the shipped dataset as well as the query engine. `npm run build` type-checks and produces the static build in `dist/`, which is what Vercel deploys.
 
-## Data Sources
+For the pipeline:
 
-Everything is free to fetch and needs no API key.
+```bash
+python -m venv .venv
+source .venv/bin/activate        # on Windows: .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python -m pytest tests/ -q
+```
+
+## How the data stays current
+
+| Job | When (IST) | What it does |
+|---|---|---|
+| `refresh-quotes.yml` | 09:00, 15:45 and 19:30 on weekdays | Updates the bundled prices and price-derived figures |
+| `refresh-filings.yml` | 20:00, Monday to Saturday | Reads new results and shareholding filings from NSE, rebuilds super-investor portfolios |
+| `refresh-fundamentals.yml` | 10:30 on Saturday | Refreshes the Nifty 500 list from NSE, then re-fetches every company's fundamentals from Yahoo |
+
+Each job rebuilds the two data tiers (`npm run data:rebuild`) and runs both test suites against the result before it commits anything. A run that fails its checks commits nothing, so the site keeps the previous day's data rather than shipping broken figures. The commit step rebases onto `master` first, so a code push made during an hour-long refresh doesn't get in its way.
+
+A lot of the pipeline exists so that one bad company or one flaky source doesn't sink a whole run:
+
+- XBRL files never change once filed, so they sit in the Actions cache and each evening's run has to fetch just the new ones.
+- If a filing can't be downloaded, that company's quarter is kept from the last run instead of disappearing.
+- The weekly ingest keeps a ledger of which companies it has done. A run that times out picks up where it stopped the following week.
+- Yahoo is slow to list some new NSE companies (REITs especially). When there's no NSE quote, the fetcher tries the BSE listing.
+- When Yahoo gives a company no sector, the repair step assigns the sector most companies in the same NSE industry have. A blank sector was one of the two things that failed the October 24 run.
+- The tests compare the export with the index list that run downloaded, not with a fixed count of 500, so index rebalances need no code change.
+
+GitHub turns off scheduled workflows in a public repository after 60 days without activity. The quote job commits every trading day, which counts, so in practice this shouldn't happen. If the jobs ever stop, the Actions tab has a button to turn them back on.
+
+The app reads two tiers. `src/data/stocksData.ts` (about 1.1 MB) is bundled and holds the figures you can screen on. `public/data/stocks/*.json` (about 23 MB over 500 files) holds the statements, quarterly results, shareholding history and prices, and a company's file is only fetched when you open its page.
+
+## Where the figures come from
+
+Nothing needs an API key.
 
 | Data | Source | Refreshed |
 |---|---|---|
-| Live prices and index levels | Yahoo Finance spark API, with BSE's quote API as fallback (`api/quotes.ts`, `api/market_indices.ts`) | On request, cached 20 seconds while the market is open |
-| Quarterly results | NSE XBRL filings, integrated and legacy listings, about 12 quarters (`data_pipeline/nse_filings.py`) | Every evening |
-| Annual P&L | NSE XBRL: the Annual listing from FY2018, then the full-year column of each March filing | Every evening |
-| Shareholding, including the FII / DII split, and every holder of 1% or more | NSE shareholding pattern XBRL | Every evening |
-| Super-investor portfolios | The shareholding filings above, matched to the names in `data/super_investors/registry.json` (`data_pipeline/super_investors.py`) | Every evening |
+| Live prices and index levels | Yahoo's spark API, with BSE's quote API as fallback (`api/quotes.ts`, `api/market_indices.ts`) | On request, cached for 20 seconds while the market is open |
+| Quarterly results, about 12 quarters | NSE XBRL filings (`data_pipeline/nse_filings.py`) | Every evening |
+| Annual P&L | NSE XBRL: the Annual listing back to FY2018, then the full-year column of each year-end filing | Every evening |
+| Shareholding, the FII and DII split, and every holder of 1% or more | NSE shareholding pattern XBRL | Every evening |
+| Super-investor portfolios | The same shareholding filings, matched against `data/super_investors/registry.json` | Every evening |
 | Closing prices for companies outside the Nifty 500 | NSE bhavcopy | Every evening |
-| Balance sheets, cash flow, dividend payout, price history | Yahoo Finance via yfinance | Weekly |
+| Balance sheet, cash flow, dividend payout, price history | Yahoo Finance through yfinance | Weekly |
 
-Filed data takes precedence: where NSE's XBRL is available, quarterly results and the annual P&L come from it rather than from Yahoo, and each table says which source and which basis (consolidated or standalone) it is showing.
+Where a filing exists, it wins over Yahoo. Each table on a company page says which source it shows and whether the figures are consolidated or standalone.
 
-How the filings are read, and where they fall short:
+Reading NSE's filings takes more care than it should, and some of the details matter if you're checking a number:
 
-- **Revisions win.** A company that corrects a filing files a revision, and NSE often lists it with no date. The pipeline ranks revisions above originals regardless, and falls back to an older filing for the same period if the newest cannot be read.
-- **Two XBRL layouts.** Filings before 2025 are laid out as the printed results table: every column carries the quarter's dates, and the column (quarter, or year to date) is in the context id. Many from 2018 to 2022 cite those ids without defining them. Both are handled.
-- **Worked-out quarters.** When no filing for a quarter has a three-month column, the quarter is calculated from a longer period in the same filing less the quarters before it, and marked as such.
-- **The Mar 2025 hole.** Companies that moved to integrated filing a quarter or two late had their Mar 2025 results indexed in neither NSE listing. For those, the quarter is worked out as the year less its first three quarters, and the year itself comes from Yahoo, but only where Yahoo matches the filed figures in every year both cover, and only for sales and net profit. Banks never pass that check, so theirs stay blank.
-- **Years are not reconciled to quarters.** A year's own filing is kept as filed even when it differs from the sum of its quarters, because restatements and changes of presentation make both legitimate.
+- NSE moved companies to "integrated" filings from the Dec 2024 quarter, so results live in two listings. The newer one is paged 20 rows at a time and the pipeline reads every page. Until October 2026 it read only the first, and because each quarter adds two to four rows, Mar 2025 had quietly fallen off page one for more than 50 companies, HCL Tech among them.
+- Corrected filings often reach the listing with no date. Revisions are ranked above originals anyway, and if the newest filing for a quarter can't be read, older ones for that quarter are tried.
+- Filings before 2025 lay the data out like the printed results table, and the only thing saying which column is the quarter is the context id. Plenty of filings from 2018 to 2022 use those ids without defining them. Both cases are handled.
+- If no filing for a quarter has a three-month column, the quarter is worked out from a longer period in the same filing minus the quarters before it, and the table marks it as derived.
+- If a March quarter still can't be read, it's derived from the full year less the first three quarters. Yahoo's figure for the year can be used to fill it, but not unless Yahoo matched the filings to within 1% in all the years both cover, and even then just sales and net profit are filled in. Banks never pass that test, so their gaps stay blank.
+- A year's own filing is kept as filed even when it doesn't equal the sum of its quarters. Restatements and changes in presentation make both legitimate.
 
-## What's in it
+Some companies have no Mar 2025 quarter and can't get one. Most listed after it (Groww, Lenskart, Meesho, Tata Capital, LG Electronics India and others). Abbott India has no results listing on NSE at all, the general insurers file in a format the parser doesn't read yet, and the REITs file elsewhere. These fall back to Yahoo's quarterly figures, but Yahoo goes back about five quarters, which no longer reaches Mar 2025.
+
+## What's in the app
 
 ### Screens
-- Twelve starting screens, grouped as Quality, Value, Growth, Income and Technical. Each shows its criteria, read from the query itself, and how many companies pass right now.
-- Opening one runs it, with the results in a sortable table you can filter by sector and industry.
 
-### Query
-- An editor for Screener.in-style queries: comparisons, arithmetic, `AND`, `OR`, `NOT` and brackets.
-- Errors are reported as you type, and you are warned when a ratio is reported for only some companies.
-- A searchable list of the 74 ratios, with their aliases.
+Twelve starting screens, grouped as Quality, Value, Growth, Income and Technical. Each lists its criteria, read from the query itself, along with how many companies pass right now. Opening one runs it and gives a sortable table you can narrow by sector and industry.
+
+### Query editor
+
+Comparisons, arithmetic, `AND`, `OR`, `NOT` and brackets. It flags errors while you type, suggests the metric you probably meant, and warns you when a metric is only reported for some companies. There's a searchable list of all 74 metrics and their aliases.
 
 ### Watchlists
-- Lists of companies, kept in the browser, with combined market cap, average P/E, average ROCE and today's average move.
-- Saved queries live here too.
+
+Lists kept in your browser, with combined market cap, average P/E, average ROCE and the average move today. Saved queries live here too.
 
 ### Super-investors
-- Portfolios read from the shareholding patterns companies file with NSE, not typed in: stake, share count, filing quarter and the change since the previous filing all come from the filing.
-- Curated investors are matched by the names they file under, listed in `data/super_investors/registry.json`; the registry says who an investor is, never what they hold. Individuals with 1% or more of several companies are also found from the filings.
-- Covers the Nifty 500 plus the smaller companies tracked investors hold, valued at NSE's closing price.
-- Stakes that disappear between filings are listed as no longer disclosed.
-- Filings only name holders of 1% or more, and stakes held through entities not in the registry are missed, so a portfolio is a floor.
+
+Portfolios built from the shareholding patterns companies file, not typed in by hand, so the stake, share count, quarter and change since the last filing all come from a filing. The registry says who an investor is and which names they file under, but never what they hold. Individuals holding 1% or more of several companies are picked up from the filings too. Filings name only holders of 1% or more, and stakes held through entities not in the registry are missed, so treat each portfolio as a lower bound.
 
 ### Company pages
-- **Statements**: annual P&L, balance sheet and cash flow.
-- **Quarterly results**: about twelve quarters from NSE's XBRL filings, on one basis per company, with banks in their own layout (interest earned, financing profit).
-- **Readings**: worked out from the company's own filings: the latest quarter against a year earlier, the trailing four quarters, sales record, margins, where return on equity comes from, cash conversion, debt, ownership changes, and valuation against its own five-year history. Each one names the periods and source it used.
-- **Live prices**: quotes update every 20 seconds while the market is open, with a label saying how current each price is.
-- **Pros and cons**: rule-based checks on debt, interest cover, growth, returns, valuation and cash flow.
-- **Peers**: the other Nifty 500 companies in the same industry.
-- **Filings**: links to the company's pages on BSE and NSE, and searches for documents Filterer does not host.
 
-Earlier versions had a commodities page, hand-entered operating KPIs, segment tables and earnings-call summaries. They were removed because none of them could be traced to a source, and the commodity prices had stopped updating.
+Each has the annual P&L, balance sheet and cash flow, plus quarterly results on one basis per company (banks get their own layout, with interest earned and financing profit). Below those are readings worked out from the filings: the latest quarter against a year earlier, the trailing four quarters, margins, where return on equity comes from, cash conversion, debt, and valuation against the company's own five-year range. Each reading names the periods it used. Prices update every 20 seconds in market hours, and the page also has rule-based pros and cons, peers from the same industry and links to the company's BSE and NSE pages. Charts are drawn with TradingView's Lightweight Charts.
 
----
+Earlier versions also had a commodities page, hand-entered operating KPIs, segment tables and earnings-call summaries. They were taken out because none of them could be traced to a source, and the commodity prices had stopped updating anyway.
 
-## Query Language Specification
+## Query language
 
-Filterer implements a deterministic Pratt / recursive-descent parser compatible with Screener.in syntax.
-
-### EBNF Grammar
+The parser is a recursive-descent parser written to accept Screener.in's syntax.
 
 ```ebnf
 Expression     ::= LogicalOr ;
@@ -134,162 +115,65 @@ Multiplicative ::= Primary ( ( "*" | "/" | "%" ) Primary )* ;
 Primary        ::= Identifier | Number | "(" Expression ")" ;
 ```
 
-### Operator Precedence
+From tightest to loosest: brackets, then `*` `/` `%`, then `+` `-`, then comparisons, then `NOT`, then `AND`, then `OR`. `NOT` applies to a whole comparison, so `NOT Debt to equity > 1` means `NOT (Debt to equity > 1)`.
 
-| Level | Operator | Operation | Associativity |
-|---|---|---|---|
-| 1 (Highest) | `( ... )` | Parenthetical Grouping | None |
-| 2 | `*`, `/`, `%` | Multiplication, Division, Modulo | Left-to-Right |
-| 3 | `+`, `-` | Addition, Subtraction | Left-to-Right |
-| 4 | `>`, `<`, `>=`, `<=`, `=`, `!=` | Relational Comparisons | None |
-| 5 | `AND` | Logical Conjunction | Left-to-Right |
-| 6 | `NOT` | Logical Negation | Right-to-Left |
-| 7 (Lowest) | `OR` | Logical Disjunction | Left-to-Right |
+A few to try:
 
-### Sample Formulas
-
-**Quality Compounders:**
-```sql
+```
 Market Capitalization > 1000 AND Return on capital employed > 20 AND Debt to equity < 0.2 AND Sales growth 3Years > 12
-```
-
-**Graham Value Strategy:**
-```sql
 Current price < Graham Number AND Price to book < 1.5 AND Debt to equity < 0.5
-```
-
-**Cash Flow Solvency:**
-```sql
 Free cash flow yield > 4 AND Piotroski score >= 7 AND Interest Coverage Ratio > 4
-```
-
-**Relative Sector Valuation:**
-```sql
 Price to Earning < Industry PE AND Operating profit margin > 18 AND Relative Strength Index > 40
 ```
 
----
+## Metrics
 
-## Supported Metric Catalog
-
-Filterer provides native screening and analysis support for the standardized financial metrics below:
-
-| Category | Standard Identifier | Shorthand Aliases | Unit |
-|---|---|---|---|
-| **Valuation** | Market Capitalization, Current Price, Price to Earning, Price to Book, PEG Ratio, Graham Number, EV / EBITDA, Price to Sales | `mcap`, `cmp`, `price`, `pe`, `pb`, `peg`, `graham number`, `ev/ebitda` | INR Cr / Multiple |
-| **Profitability** | Return on Capital Employed, Return on Equity, Operating Profit Margin, Net Profit Margin, Earnings Per Share | `roce`, `roe`, `opm`, `npm`, `eps` | % / INR |
-| **Growth Rates** | Sales Growth [3Y, 5Y, 10Y], Profit Growth [3Y, 5Y, 10Y], Price CAGR [1Y, 3Y, 5Y] | `sales 3y`, `profit 5y`, `cagr 3y` | % |
-| **Balance Sheet** | Debt to Equity, Total Debt, Interest Coverage Ratio, Current Ratio, Quick Ratio, Altman Z-Score | `d/e`, `debt`, `interest coverage`, `z-score` | Ratio / Multiple |
-| **Cash Generation** | Free Cash Flow Yield, Piotroski Score, Cash Conversion Cycle, Operating Cash Flow 3Y | `fcf yield`, `f-score`, `ccc`, `ocf 3y` | % / Score / Days |
-| **Shareholding** | Promoter Holding, FII Holding, DII Holding, Pledged Percentage | `promoter stake`, `fii`, `dii`, `pledge` | % |
-| **Technicals** | 50 Day Moving Average, 200 Day Moving Average, 20 Day EMA, Relative Strength Index, Distance from 52W High | `dma 50`, `dma 200`, `ema 20`, `rsi`, `down from 52w high` | INR / % / Points |
-
-
-### Metric coverage
-
-Not every metric in the catalog is populated for this universe, and the ones that
-are not report as "not reported" rather than as zero. Screening on them returns
-nothing rather than everything, and the formula editor flags a metric with low
-coverage as you type.
-
-| Metric | Coverage | Why |
+| Group | Metrics | Some aliases |
 |---|---|---|
-| Sales / profit growth 5Y and 10Y | none | The upstream feed carries four years of annual statements; a five-year CAGR needs six. |
-| Current ratio, quick ratio | 7% | The balance sheet has no current asset / current liability split. |
-| Debtor days, inventory days, days payable, working capital days, cash conversion cycle | none | Same missing split. |
-| FII / DII holding, pledged percentage | under 1% | Only promoter and public holdings come through the shareholding feed. |
-| Multi-year ROE (3Y, 5Y, 10Y) | 11% | Needs a per-year book value the statements do not carry. |
+| Valuation | Market cap, current price, P/E, P/B, PEG, Graham number, EV/EBITDA, price to sales | `mcap`, `cmp`, `pe`, `pb`, `peg` |
+| Profitability | ROCE, ROE, operating margin, net margin, EPS | `roce`, `roe`, `opm`, `npm`, `eps` |
+| Growth | Sales and profit growth over 3, 5 and 10 years, price CAGR over 1, 3 and 5 years | `sales 3y`, `profit 5y`, `cagr 3y` |
+| Balance sheet | Debt to equity, total debt, interest coverage, current ratio, quick ratio, Altman Z-score | `d/e`, `debt`, `z-score` |
+| Cash | Free cash flow yield, Piotroski score, cash conversion cycle, operating cash flow over 3 years | `fcf yield`, `f-score`, `ocf 3y` |
+| Shareholding | Promoter, FII and DII holding and their quarterly change, pledged shares | `promoter stake`, `fii`, `dii`, `pledge` |
+| Technicals | 50 and 200 day moving averages, 20 day EMA, RSI, distance from the 52-week high | `dma 50`, `dma 200`, `rsi` |
 
-The Piotroski F-score is scored on eight of its nine signals for the same reason:
-the liquidity test needs the current split. The Altman Z-score is not reported for
-banks and NBFCs, whose balance sheets the manufacturing coefficients misread.
+Not every metric is available for every company. A missing figure is stored as null, not zero, so screening on it leaves the company out rather than letting it pass. As of October 2026:
 
----
+| Metric | Companies with a figure | Why the rest are missing |
+|---|---|---|
+| Sales growth 5Y / profit growth 5Y | 73% / 63% | Needs six years of filed P&L, which recent listings and companies missing from NSE's older annual filings don't have |
+| Sales and profit growth 10Y | none | The filings used here reach back to FY2018 |
+| Current ratio | 11% | The balance sheet from Yahoo usually has no current assets and liabilities split |
+| Quick ratio, debtor days, inventory days, cash conversion cycle | none | Same missing split |
+| ROE over 3 and 5 years | 16% | Needs a book value for each year |
+| Pledged shares | 1% | Neither NSE's shareholding endpoint nor the filings parser supplies a pledge figure yet |
+| Altman Z-score | 80% | Left out for banks and NBFCs, whose balance sheets the formula misreads |
 
-## Local Development and Setup
+The Piotroski score uses eight of its nine tests, because the liquidity test needs the same current split.
 
-### Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **npm**: v9.0.0 or higher
-- **Python**: v3.10 or higher
-- **Git**
+## API
 
-### 1. Web Application
+The Vercel deployment also serves a small read-only API from `api/`:
 
-```bash
-# Clone repository
-git clone https://github.com/abhy-kumar/filterer.git
-cd filterer
+- `GET /api/screen?q=<query>&limit=<n>` runs a query
+- `GET /api/stock?symbol=<symbol>` returns one company's screening figures
+- `GET /api/stocks?search=<text>&sector=<sector>` lists companies
+- `GET /api/suggest?q=<partial query>` checks a query and suggests metrics
+- `GET /api/quotes?chunk=<n>` and `GET /api/market_indices` return live prices
 
-# Install dependencies
-npm install
+## Command-line scanner
 
-# Launch local development server (Vite HMR)
-npm run dev
-
-# Run unit tests and invariant verification suite
-npm test
-
-# Build production bundle
-npm run build
-```
-
-### 2. Python Data Pipelines and CLI Scanner
+`scanner.py` runs the same kind of query from a terminal against a SQLite copy of the data:
 
 ```bash
-# Initialize Python virtual environment
-python -m venv .venv
-
-# Activate virtual environment
-# Windows PowerShell:
-.\.venv\Scripts\Activate.ps1
-# macOS / Linux:
-source .venv/bin/activate
-
-# Install pipeline dependencies
-pip install -r requirements.txt
-
-# Join chunked database parts (required before running local backend tools)
-python db_split_join.py join
-
-# Execute terminal CLI scanner with formula
 python scanner.py "Return on capital employed > 22 AND Debt to equity < 0.2"
-
-# Execute data healing and statement reconciliation pipeline
-python data_pipeline/heal_and_enrich.py
-
-# Run Python test suite
-pytest tests/
 ```
 
----
+GitHub won't take a file over 50 MB, so the database is committed in 40 MB parts (`data/screener.db.part_*`). The scanner joins them the first time it runs, and you can use `python db_split_join.py join` (or `split`) to do it by hand. The scheduled jobs don't update this database, so its figures are older than the website's.
 
-## Database Partitioning Policy
+## Project
 
-To comply with GitHub's 50MB file size limit for tracked repositories:
-- The master SQLite database (`data/screener.db`) is **not tracked directly** in Git and remains in `.gitignore`.
-- The database is committed as 40MB chunk parts under `data/screener.db.part_*`.
+Built by Abhishek K (FT-25-202) for the Mergers and Acquisitions course at the Faculty of Management Studies, University of Delhi.
 
-**Instructions for Contributors:**
-- **Before running backend Python tools**:
-  ```bash
-  python db_split_join.py join
-  ```
-- **After modifying database tables or generating new datasets**:
-  ```bash
-  python db_split_join.py split
-  ```
-
----
-
-## Project Information
-
-Developed by Abhishek K (FT-25-202) for the Mergers & Acquisitions course at Faculty of Management Studies (FMS), University of Delhi.
-
----
-
-## License and Disclaimer
-
-Distributed under the MIT License. See LICENSE for more information.
-
-Disclaimer: Filterer is an independent open-source research and educational utility. It is not affiliated with, endorsed by, or associated with Mittal Analytics Private Ltd or Screener.in.
+MIT licensed (see `LICENSE`). Filterer is an independent project and has no connection with Mittal Analytics Private Ltd or Screener.in.
