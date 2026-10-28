@@ -112,6 +112,20 @@ export interface PeerInfo {
   debt_to_equity?: number | null;
 }
 
+export interface FigureCheck {
+  metric: string;
+  label: string;
+  kind: 'filled' | 'differs';
+  /** Our figure, when the check compared one. */
+  ours?: number;
+  theirs: number;
+  /** The second source's financial year, e.g. "FY2026". */
+  year: string;
+  source: string;
+  /** What `ours` came from, when it is not the screening figure (e.g. "NSE filing"). */
+  against?: string;
+}
+
 export interface Stock {
   id: string;
   symbol: string;
@@ -124,6 +138,12 @@ export interface Stock {
    * withheld rather than converted at an assumed rate.
    */
   statements_unavailable_reason?: string;
+  /**
+   * Figures checked against a second source (Tickertape's statements):
+   * 'filled' where nothing else supplied the figure, 'differs' where ours and
+   * theirs disagree. Written by scripts/repair_dataset.mjs.
+   */
+  figure_checks?: FigureCheck[];
   /** Where quarterly_results came from: "NSE XBRL" for filed results, absent for the Yahoo fallback. */
   quarterly_source?: string;
   /** 'NSE XBRL' when the annual P&L comes from filings. */

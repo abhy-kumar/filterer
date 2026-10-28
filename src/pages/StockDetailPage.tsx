@@ -73,6 +73,7 @@ export const StockDetailPage: React.FC = () => {
       balance_sheet: remoteData.balance_sheet || bundledStock.balance_sheet,
       cash_flow: remoteData.cash_flow || bundledStock.cash_flow,
       ratios_history: remoteData.ratios_history || bundledStock.ratios_history,
+      figure_checks: remoteData.figure_checks || bundledStock.figure_checks,
       shareholding_history: remoteData.shareholding_history || bundledStock.shareholding_history,
       shareholding_source: remoteData.shareholding_source ?? bundledStock.shareholding_source,
       historical_prices: remoteData.historical_prices || bundledStock.historical_prices,

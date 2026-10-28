@@ -62,8 +62,11 @@ Nothing needs an API key.
 | Super-investor portfolios | The same shareholding filings, matched against `data/super_investors/registry.json` | Every evening |
 | Closing prices for companies outside the Nifty 500 | NSE bhavcopy | Every evening |
 | Balance sheet, cash flow, dividend payout, price history | Yahoo Finance through yfinance | Weekly |
+| A second copy of each company's annual statements | Tickertape's statements API (`data_pipeline/second_source.py`) | Weekly |
 
 Where a filing exists, it wins over Yahoo. Each table on a company page says which source it shows and whether the figures are consolidated or standalone.
+
+Tickertape is there as a check, not a replacement. When neither the filings nor Yahoo give a ratio, the rebuild works it out from Tickertape's statements, using the filed profit where there is one: that is where return on capital for HCL Tech and Infosys comes from (Yahoo had no balance sheet for either), and the current ratio and working-capital days for most of the universe. When we do have a figure, it is compared with what Tickertape's statements imply, and a clear disagreement shows up in the company page's notes with both numbers. The rebuild never picks a winner between the two. Banks and NBFCs are left out of the capital and working-capital ratios, which don't describe them.
 
 Reading NSE's filings takes more care than it should, and some of the details matter if you're checking a number:
 
@@ -144,13 +147,14 @@ Not every metric is available for every company. A missing figure is stored as n
 |---|---|---|
 | Sales growth 5Y / profit growth 5Y | 73% / 63% | Needs six years of filed P&L, which recent listings and companies missing from NSE's older annual filings don't have |
 | Sales and profit growth 10Y | none | The filings used here reach back to FY2018 |
-| Current ratio | 11% | The balance sheet from Yahoo usually has no current assets and liabilities split |
-| Quick ratio, debtor days, inventory days, cash conversion cycle | none | Same missing split |
+| Current ratio, debtor days, working capital days | 76% to 81% | Worked out from Tickertape's statements, since Yahoo's balance sheet has no current split. Banks and NBFCs are left out |
+| Inventory days, days payable, cash conversion cycle | 52% to 53% | Only for companies whose raw materials are at least a fifth of sales. For a services company these ratios mean little |
+| Quick ratio | none | Neither source gives inventory and current liabilities in a form that adds up to it reliably |
 | ROE over 3 and 5 years | 16% | Needs a book value for each year |
 | Pledged shares | 1% | Neither NSE's shareholding endpoint nor the filings parser supplies a pledge figure yet |
 | Altman Z-score | 80% | Left out for banks and NBFCs, whose balance sheets the formula misreads |
 
-The Piotroski score uses eight of its nine tests, because the liquidity test needs the same current split.
+The Piotroski score still uses eight of its nine tests. Its liquidity test needs a current ratio for two years running, and only the latest is filled.
 
 ## API
 

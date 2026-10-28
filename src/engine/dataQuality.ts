@@ -1,4 +1,4 @@
-import type { Stock, AnnualPnL, QuarterlyResult } from '../types/stock';
+import type { Stock, AnnualPnL, QuarterlyResult, FigureCheck } from '../types/stock';
 
 /**
  * Per-company integrity checks, run at render time.
@@ -187,7 +187,7 @@ export function assessStock(stock: Stock): QualityFinding[] {
       id: 'quarter-derived',
       severity: 'note',
       title: 'Quarter worked out from the year',
-      detail: `${derivedQuarters.map((q) => q.period).join(', ')} is not in any filing NSE indexes, so it is calculated as the full year less the three quarters before it.`,
+      detail: `${derivedQuarters.map((q) => q.period).join(', ')} had no filing that could be read, so it is calculated as the full year less the three quarters before it.`,
     });
   }
 
@@ -255,6 +255,46 @@ export function assessStock(stock: Stock): QualityFinding[] {
     });
   }
 
+  findings.push(...secondSourceFindings(stock.figure_checks || []));
+
+  return findings;
+}
+
+const RATIO_UNITS: Record<string, (v: number) => string> = {
+  roce: (v) => `${v.toFixed(1)}%`,
+  roe: (v) => `${v.toFixed(1)}%`,
+  current_ratio: (v) => v.toFixed(2),
+  net_profit: (v) => `₹${Math.round(v).toLocaleString('en-IN')} Cr`,
+};
+const formatCheck = (metric: string, v: number) => (RATIO_UNITS[metric] || ((x: number) => `${x.toFixed(0)} days`))(v);
+
+/**
+ * What a second set of statements said about this company's figures: the ones
+ * it supplied because nothing else did, and the ones where the two disagree.
+ */
+export function secondSourceFindings(checks: FigureCheck[]): QualityFinding[] {
+  const findings: QualityFinding[] = [];
+  for (const check of checks.filter((c) => c.kind === 'differs')) {
+    const ours = check.against ? `the ${check.against}` : 'the figure shown here';
+    findings.push({
+      id: `differs-${check.metric}`,
+      severity: 'warning',
+      title: `${check.label} does not match a second source`,
+      detail: `${check.source}'s ${check.year} statements give ${formatCheck(check.metric, check.theirs)}, against ${formatCheck(check.metric, check.ours ?? 0)} from ${ours}. One of them may be on a different basis or restated, so check the annual report before relying on it.`,
+    });
+  }
+  const filled = checks.filter((c) => c.kind === 'filled');
+  if (filled.length) {
+    const { source, year } = filled[0];
+    const names = filled.map((c) => c.label.toLowerCase());
+    const list = names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+    findings.push({
+      id: 'filled-from-second-source',
+      severity: 'note',
+      title: `Some ratios come from ${source}`,
+      detail: `Our usual sources had no figure for ${list}, so ${filled.length === 1 ? 'it is' : 'they are'} worked out from ${source}'s ${year} statements, using the filed profit where there is one.`,
+    });
+  }
   return findings;
 }
 

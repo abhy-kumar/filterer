@@ -461,6 +461,138 @@ function count(key, n = 1) {
   stats[key] = (stats[key] || 0) + n;
 }
 
+// ── Second source ────────────────────────────────────────────
+// Tickertape's annual statements, from data_pipeline/second_source.py. Used to
+// fill ratios nothing else supplies and to check figures we already have. It
+// never replaces a figure from a filing or from Yahoo; where they disagree the
+// company page says so.
+const SECOND_SOURCE = readFiling('second_source.json');
+
+const CHECK_LABELS = {
+  roce: 'Return on capital employed',
+  roe: 'Return on equity',
+  current_ratio: 'Current ratio',
+  debtor_days: 'Debtor days',
+  inventory_days: 'Inventory days',
+  days_payable: 'Days payable',
+  cash_conversion_cycle: 'Cash conversion cycle',
+  working_capital_days: 'Working capital days',
+  net_profit: 'Net profit',
+};
+
+/** Raw materials below this share of revenue make inventory and payable days meaningless (IT services, for one). */
+const MATERIALS_SHARE_FOR_DAYS = 0.2;
+
+/**
+ * Two returns disagree when they are this many points and this share apart.
+ * Yahoo's returns are trailing twelve months and treat minority interest its
+ * own way, so a 35% gap flagged one company in ten; at 50% what is left is
+ * mostly Brigade's 103% ROE against 9%.
+ */
+const RETURN_GAP_POINTS = 5;
+const RETURN_GAP_SHARE = 0.5;
+/**
+ * Filed and second-source net profit for the same year disagree beyond this.
+ * Revenue is not compared: refiners report it gross of excise duty in one
+ * source and net in the other, and that alone flagged 37 companies.
+ */
+const STATEMENT_GAP_SHARE = 0.05;
+
+/**
+ * A filled ratio outside these bounds is a quirk of the statements, not a
+ * figure: a holding company with almost no sales came out at 165,856
+ * working-capital days.
+ */
+const FILL_BOUNDS = {
+  roce: [-100, 150],
+  roe: [-100, 150],
+  current_ratio: [0.1, 20],
+  debtor_days: [0, 730],
+  inventory_days: [0, 1000],
+  days_payable: [0, 730],
+  working_capital_days: [-730, 730],
+  cash_conversion_cycle: [-365, 1000],
+};
+
+function secondSourceChecks(next, annual) {
+  const entry = SECOND_SOURCE[next.symbol];
+  const years = entry?.years || [];
+  const t = years[years.length - 1];
+  if (!t) return [];
+
+  const checks = [];
+  const fy = `FY${t.year.split(' ')[1]}`;
+  const financial = next.sector === 'Financial Services';
+  const filed = annual.find((p) => p.year === t.year && p.source === 'NSE');
+  const ok = (v) => typeof v === 'number' && Number.isFinite(v);
+  const div = (a, b) => (ok(a) && ok(b) && b > 0 ? a / b : null);
+
+  // Filings first: EBIT from the filed P&L when it covers the same year.
+  const ebit = filed && ok(filed.profit_before_tax) && ok(filed.interest)
+    ? filed.profit_before_tax + filed.interest
+    : t.ebit;
+  const capitalEmployed = ok(t.total_assets) && ok(t.current_liabilities) ? t.total_assets - t.current_liabilities : null;
+  const sales = filed && ok(filed.sales) ? filed.sales : ok(t.revenue) ? t.revenue - (t.other_income || 0) : null;
+  const materialsHeavy = (div(t.raw_materials, sales) ?? 0) >= MATERIALS_SHARE_FOR_DAYS;
+
+  const derived = { roe: div(t.net_income, t.equity) !== null ? div(t.net_income, t.equity) * 100 : null };
+  if (!financial) {
+    const roce = div(ebit, capitalEmployed);
+    derived.roce = roce !== null ? roce * 100 : null;
+    derived.current_ratio = div(t.current_assets, t.current_liabilities);
+    const days = (part, whole) => (div(part, whole) !== null ? div(part, whole) * 365 : null);
+    derived.debtor_days = days(t.receivables, sales);
+    derived.working_capital_days = ok(t.current_assets) && ok(t.current_liabilities) ? days(t.current_assets - t.current_liabilities, sales) : null;
+    if (materialsHeavy) {
+      derived.inventory_days = days(t.inventory, t.raw_materials);
+      derived.days_payable = days(t.payables, t.raw_materials);
+      if ([derived.debtor_days, derived.inventory_days, derived.days_payable].every(ok)) {
+        derived.cash_conversion_cycle = derived.debtor_days + derived.inventory_days - derived.days_payable;
+      }
+    }
+  }
+
+  // Returns we already report, checked against the second source's statements.
+  for (const key of ['roce', 'roe']) {
+    const ours = next[key];
+    const theirs = derived[key];
+    if (!ok(ours) || !ok(theirs)) continue;
+    if (Math.abs(ours - theirs) > Math.max(RETURN_GAP_POINTS, RETURN_GAP_SHARE * Math.abs(theirs))) {
+      checks.push({ metric: key, label: CHECK_LABELS[key], kind: 'differs', ours: round(ours), theirs: round(theirs), year: fy, source: entry.source });
+      count('reported return disagrees with the second source');
+    }
+  }
+
+  // Gaps filled. Whole-number zeros are left out: the dataset reserves zero
+  // for nothing, and a ratio that rounds to it says little anyway.
+  for (const [key, value] of Object.entries(derived)) {
+    if (next[key] !== null && next[key] !== undefined) continue;
+    const places = key === 'current_ratio' ? 2 : 1;
+    const v = ok(value) ? round(value, places) : null;
+    const [lo, hi] = FILL_BOUNDS[key];
+    if (v === null || v === 0) continue;
+    if (v < lo || v > hi) { count(`${key} from the second source out of bounds, left unreported`); continue; }
+    next[key] = v;
+    checks.push({ metric: key, label: CHECK_LABELS[key], kind: 'filled', theirs: v, year: fy, source: entry.source });
+    count(`${key} filled from the second source`);
+  }
+
+  // The filed year itself, checked line by line. Only on a consolidated basis,
+  // which is what the second source reports; a standalone filing differs from
+  // it by the subsidiaries and would always be flagged.
+  if (filed && next.quarterly_basis !== 'standalone') {
+    for (const [key, ours, theirs] of [['net_profit', filed.net_profit, t.net_income]]) {
+      if (!ok(ours) || !ok(theirs) || Math.abs(theirs) < 1) continue;
+      if (Math.abs(ours - theirs) / Math.abs(theirs) > STATEMENT_GAP_SHARE) {
+        checks.push({ metric: key, label: CHECK_LABELS[key], kind: 'differs', ours: round(ours), theirs: round(theirs), year: fy, source: entry.source, against: 'NSE filing' });
+        count('filed figure disagrees with the second source');
+      }
+    }
+  }
+
+  return checks;
+}
+
 function repair(stock) {
   // ── Identifiers ────────────────────────────────────────────
   // The pipeline writes percent-encoded symbols: Mahindra arrives as "M%26M"
@@ -508,6 +640,12 @@ function repair(stock) {
   next.balance_sheet = balance;
   next.cash_flow = cash;
   next.ratios_history = ratios;
+
+  // Figures the second source filled last time are cleared and worked out
+  // again below, so a rebuild never mistakes them for reported ones.
+  for (const check of stock.figure_checks || []) {
+    if (check.kind === 'filled') next[check.metric] = null;
+  }
   next.shareholding_history = holding;
   next.historical_prices = prices;
 
@@ -692,6 +830,15 @@ function repair(stock) {
   }
 
   // ── Margins sanity check ───────────────────────────────────
+  // Margins Yahoo left at 0 (it withholds HCL Tech's and Infosys's figures,
+  // which it reports in dollars) come from the latest filed year instead.
+  const filedYear = [...annual].reverse().find((p) => p.source === 'NSE' && p.sales > 0);
+  for (const [key, line] of [['opm', 'operating_profit'], ['npm', 'net_profit']]) {
+    if (orNull(next[key])) continue;
+    const value = filedYear && Number.isFinite(filedYear[line]) ? round((filedYear[line] / filedYear.sales) * 100) : null;
+    next[key] = value;
+    count(value === null ? `${key} placeholder (0) marked unreported` : `${key} worked out from the filed P&L`);
+  }
   if (next.opm !== null && Math.abs(next.opm) > 100) {
     next.opm = null;
     count('abnormal OPM (>100%) dropped');
@@ -823,6 +970,8 @@ function repair(stock) {
     if (Math.abs(pct - next.change_pct) > 0.02) count('day change percentage recomputed');
     next.change_pct = pct;
   }
+
+  next.figure_checks = secondSourceChecks(next, annual);
 
   // ── Ratio history ──────────────────────────────────────────
   for (const row of ratios) {

@@ -36,6 +36,9 @@ const DETAIL_FIELDS = [
   'shareholding_history',
   'shareholding_source',
   'ratios_history',
+  // Which figures the second source filled or disagreed with; only the
+  // company page's data notes read it.
+  'figure_checks',
   'historical_prices',
   'peers',
 ];
