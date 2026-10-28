@@ -38,6 +38,9 @@ export function generateProsAndCons(stock: Stock): ProsAndCons {
   if (has(stock.interest_coverage)) {
     if (stock.interest_coverage < 2.5) {
       cons.push(`Low interest coverage ratio of ${stock.interest_coverage.toFixed(1)}x.`);
+    } else if (stock.interest_coverage >= 999) {
+      // 999 is the pipeline's cap for a company whose interest bill is close to nil.
+      pros.push('Pays next to no interest on its borrowings.');
     } else if (stock.interest_coverage > 12) {
       pros.push(`Strong interest coverage ratio of ${stock.interest_coverage.toFixed(0)}x.`);
     }

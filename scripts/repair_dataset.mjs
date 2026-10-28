@@ -650,6 +650,13 @@ function repair(stock) {
     if (!orNull(next[key])) { next[key] = null; count('working-capital figure left unreported'); }
   }
 
+  // Yahoo writes 0 for a ROCE it has no figure for. HCL Tech and Infosys
+  // showed a 0.0% return on capital, listed as a weakness, because of it.
+  if (!orNull(next.roce)) {
+    next.roce = null;
+    count('ROCE placeholder (0) marked unreported');
+  }
+
   // ── Interest coverage ──────────────────────────────────────
   if (!orNull(next.interest_coverage)) {
     const latest = annual[annual.length - 1];
