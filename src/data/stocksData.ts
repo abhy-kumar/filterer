@@ -25199,7 +25199,9 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Consumer Services",
     "isin": "INE0VDM01015",
-    "avg_volume_30d": 24075826
+    "avg_volume_30d": 24075826,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "MFSL",
