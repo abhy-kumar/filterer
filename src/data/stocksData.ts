@@ -9585,7 +9585,9 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Power",
     "isin": "INE647U01026",
-    "avg_volume_30d": 899497
+    "avg_volume_30d": 899497,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "CMPDI",
@@ -14331,7 +14333,9 @@ export const STOCKS_DATA: Stock[] = [
     "piotroski_assessed": 8,
     "nse_industry": "Information Technology",
     "isin": "INE212S01015",
-    "avg_volume_30d": 848521
+    "avg_volume_30d": 848521,
+    "quarterly_source": "NSE XBRL",
+    "quarterly_basis": "consolidated"
   },
   {
     "symbol": "FSL",
