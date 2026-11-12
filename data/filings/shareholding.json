@@ -1,6 +1,6 @@
 {
  "360ONE": {
-  "fetched_at": "2026-11-11T21:29:51+00:00",
+  "fetched_at": "2026-11-12T21:31:53+00:00",
   "filings": [
    {
     "dii": 23.67,
@@ -408,7 +408,7 @@
   "source": "NSE XBRL"
  },
  "AADHARHFC": {
-  "fetched_at": "2026-11-11T21:29:52+00:00",
+  "fetched_at": "2026-11-12T21:31:54+00:00",
   "filings": [
    {
     "dii": 11.5,
@@ -524,7 +524,7 @@
   "source": "NSE XBRL"
  },
  "AARTIIND": {
-  "fetched_at": "2026-11-11T21:29:54+00:00",
+  "fetched_at": "2026-11-12T21:31:56+00:00",
   "filings": [
    {
     "dii": 20.89,
@@ -840,7 +840,7 @@
   "source": "NSE XBRL"
  },
  "AAVAS": {
-  "fetched_at": "2026-11-11T21:29:56+00:00",
+  "fetched_at": "2026-11-12T21:31:58+00:00",
   "filings": [
    {
     "dii": 22.4,
@@ -1052,7 +1052,7 @@
   "source": "NSE XBRL"
  },
  "ABB": {
-  "fetched_at": "2026-11-11T21:29:58+00:00",
+  "fetched_at": "2026-11-12T21:32:01+00:00",
   "filings": [
    {
     "dii": 9.8,
@@ -1136,7 +1136,7 @@
   "source": "NSE XBRL"
  },
  "ABCAPITAL": {
-  "fetched_at": "2026-11-11T21:30:02+00:00",
+  "fetched_at": "2026-11-12T21:32:04+00:00",
   "filings": [
    {
     "dii": 13.38,
@@ -1324,7 +1324,7 @@
   "source": "NSE XBRL"
  },
  "ABDL": {
-  "fetched_at": "2026-11-11T21:30:04+00:00",
+  "fetched_at": "2026-11-12T21:32:06+00:00",
   "filings": [
    {
     "dii": 6.64,
@@ -1920,7 +1920,7 @@
   "source": "NSE XBRL"
  },
  "ABREL": {
-  "fetched_at": "2026-11-11T21:30:06+00:00",
+  "fetched_at": "2026-11-12T21:32:09+00:00",
   "filings": [
    {
     "dii": 16.85,
@@ -2132,7 +2132,7 @@
   "source": "NSE XBRL"
  },
  "ABSLAMC": {
-  "fetched_at": "2026-11-11T21:30:08+00:00",
+  "fetched_at": "2026-11-12T21:32:10+00:00",
   "filings": [
    {
     "dii": 15.07,
@@ -2256,7 +2256,7 @@
   "source": "NSE XBRL"
  },
  "ACC": {
-  "fetched_at": "2026-11-11T21:30:10+00:00",
+  "fetched_at": "2026-11-12T21:32:12+00:00",
   "filings": [
    {
     "dii": 20.97,
@@ -2396,7 +2396,7 @@
   "source": "NSE XBRL"
  },
  "ACE": {
-  "fetched_at": "2026-11-11T21:30:12+00:00",
+  "fetched_at": "2026-11-12T21:32:15+00:00",
   "filings": [
    {
     "dii": 3.05,
@@ -2520,7 +2520,7 @@
   "source": "NSE XBRL"
  },
  "ACMESOLAR": {
-  "fetched_at": "2026-11-11T21:30:14+00:00",
+  "fetched_at": "2026-11-12T21:32:17+00:00",
   "filings": [
    {
     "dii": 17.46,
@@ -2660,7 +2660,7 @@
   "source": "NSE XBRL"
  },
  "ACUTAAS": {
-  "fetched_at": "2026-11-11T21:30:16+00:00",
+  "fetched_at": "2026-11-12T21:32:19+00:00",
   "filings": [
    {
     "dii": 19.4,
@@ -2824,7 +2824,7 @@
   "source": "NSE XBRL"
  },
  "ADANIENSOL": {
-  "fetched_at": "2026-11-11T21:30:18+00:00",
+  "fetched_at": "2026-11-12T21:32:20+00:00",
   "filings": [
    {
     "dii": 13.61,
@@ -3036,7 +3036,7 @@
   "source": "NSE XBRL"
  },
  "ADANIENT": {
-  "fetched_at": "2026-11-11T21:30:21+00:00",
+  "fetched_at": "2026-11-12T21:32:22+00:00",
   "filings": [
    {
     "dii": 10.62,
@@ -3272,7 +3272,7 @@
   "source": "NSE XBRL"
  },
  "ADANIGREEN": {
-  "fetched_at": "2026-11-11T21:30:22+00:00",
+  "fetched_at": "2026-11-12T21:32:25+00:00",
   "filings": [
    {
     "dii": 5.29,
@@ -3508,7 +3508,7 @@
   "source": "NSE XBRL"
  },
  "ADANIPORTS": {
-  "fetched_at": "2026-11-11T21:30:24+00:00",
+  "fetched_at": "2026-11-12T21:32:26+00:00",
   "filings": [
    {
     "dii": 13.25,
@@ -3736,7 +3736,7 @@
   "source": "NSE XBRL"
  },
  "ADANIPOWER": {
-  "fetched_at": "2026-11-11T21:30:26+00:00",
+  "fetched_at": "2026-11-12T21:32:28+00:00",
   "filings": [
    {
     "dii": 4.47,
@@ -3956,7 +3956,7 @@
   "source": "NSE XBRL"
  },
  "AEGISLOG": {
-  "fetched_at": "2026-11-11T21:30:28+00:00",
+  "fetched_at": "2026-11-12T21:32:30+00:00",
   "filings": [
    {
     "dii": 4.01,
@@ -4136,7 +4136,7 @@
   "source": "NSE XBRL"
  },
  "AEGISVOPAK": {
-  "fetched_at": "2026-11-11T21:30:30+00:00",
+  "fetched_at": "2026-11-12T21:32:33+00:00",
   "filings": [
    {
     "dii": 5.27,
@@ -4228,7 +4228,7 @@
   "source": "NSE XBRL"
  },
  "AETHER": {
-  "fetched_at": "2026-11-11T21:30:32+00:00",
+  "fetched_at": "2026-11-12T21:32:34+00:00",
   "filings": [
    {
     "dii": 9.7,
@@ -4424,7 +4424,7 @@
   "source": "NSE XBRL"
  },
  "AFCONS": {
-  "fetched_at": "2026-11-11T21:30:34+00:00",
+  "fetched_at": "2026-11-12T21:32:37+00:00",
   "filings": [
    {
     "dii": 18.0,
@@ -4684,7 +4684,7 @@
   "source": "NSE XBRL"
  },
  "AFFLE": {
-  "fetched_at": "2026-11-11T21:30:36+00:00",
+  "fetched_at": "2026-11-12T21:32:38+00:00",
   "filings": [
    {
     "dii": 19.16,
@@ -4920,7 +4920,7 @@
   "source": "NSE XBRL"
  },
  "AIAENG": {
-  "fetched_at": "2026-11-11T21:30:38+00:00",
+  "fetched_at": "2026-11-12T21:32:41+00:00",
   "filings": [
    {
     "dii": 22.5,
@@ -5076,7 +5076,7 @@
   "source": "NSE XBRL"
  },
  "AIIL": {
-  "fetched_at": "2026-11-11T21:30:40+00:00",
+  "fetched_at": "2026-11-12T21:32:43+00:00",
   "filings": [
    {
     "dii": 0.21,
@@ -5232,7 +5232,7 @@
   "source": "NSE XBRL"
  },
  "AJANTPHARM": {
-  "fetched_at": "2026-11-11T21:30:42+00:00",
+  "fetched_at": "2026-11-12T21:32:45+00:00",
   "filings": [
    {
     "dii": 21.94,
@@ -5468,7 +5468,7 @@
   "source": "NSE XBRL"
  },
  "ALKEM": {
-  "fetched_at": "2026-11-11T21:30:44+00:00",
+  "fetched_at": "2026-11-12T21:32:47+00:00",
   "filings": [
    {
     "dii": 22.63,
@@ -5904,7 +5904,7 @@
   "source": "NSE XBRL"
  },
  "AMBER": {
-  "fetched_at": "2026-11-11T21:30:46+00:00",
+  "fetched_at": "2026-11-12T21:32:48+00:00",
   "filings": [
    {
     "dii": 29.77,
@@ -6172,7 +6172,7 @@
   "source": "NSE XBRL"
  },
  "AMBUJACEM": {
-  "fetched_at": "2026-11-11T21:30:48+00:00",
+  "fetched_at": "2026-11-12T21:32:50+00:00",
   "filings": [
    {
     "dii": 19.35,
@@ -6296,7 +6296,7 @@
   "source": "NSE XBRL"
  },
  "ANANDRATHI": {
-  "fetched_at": "2026-11-11T21:30:50+00:00",
+  "fetched_at": "2026-11-12T21:32:52+00:00",
   "filings": [
    {
     "dii": 10.25,
@@ -6508,7 +6508,7 @@
   "source": "NSE XBRL"
  },
  "ANANTRAJ": {
-  "fetched_at": "2026-11-11T21:30:52+00:00",
+  "fetched_at": "2026-11-12T21:32:54+00:00",
   "filings": [
    {
     "dii": 4.55,
@@ -6704,7 +6704,7 @@
   "source": "NSE XBRL"
  },
  "ANGELONE": {
-  "fetched_at": "2026-11-11T21:30:54+00:00",
+  "fetched_at": "2026-11-12T21:32:56+00:00",
   "filings": [
    {
     "dii": 19.58,
@@ -7028,7 +7028,7 @@
   "source": "NSE XBRL"
  },
  "ANTHEM": {
-  "fetched_at": "2026-11-11T21:30:56+00:00",
+  "fetched_at": "2026-11-12T21:32:59+00:00",
   "filings": [
    {
     "dii": 12.1,
@@ -7288,7 +7288,7 @@
   "source": "NSE XBRL"
  },
  "ANURAS": {
-  "fetched_at": "2026-11-11T21:30:58+00:00",
+  "fetched_at": "2026-11-12T21:33:01+00:00",
   "filings": [
    {
     "dii": 2.27,
@@ -7508,7 +7508,7 @@
   "source": "NSE XBRL"
  },
  "APARINDS": {
-  "fetched_at": "2026-11-11T21:31:00+00:00",
+  "fetched_at": "2026-11-12T21:33:03+00:00",
   "filings": [
    {
     "dii": 23.82,
@@ -7712,7 +7712,7 @@
   "source": "NSE XBRL"
  },
  "APLAPOLLO": {
-  "fetched_at": "2026-11-11T21:31:02+00:00",
+  "fetched_at": "2026-11-12T21:33:04+00:00",
   "filings": [
    {
     "dii": 20.82,
@@ -7980,7 +7980,7 @@
   "source": "NSE XBRL"
  },
  "APOLLOHOSP": {
-  "fetched_at": "2026-11-11T21:31:04+00:00",
+  "fetched_at": "2026-11-12T21:33:06+00:00",
   "filings": [
    {
     "dii": 22.07,
@@ -8280,7 +8280,7 @@
   "source": "NSE XBRL"
  },
  "APOLLOTYRE": {
-  "fetched_at": "2026-11-11T21:31:06+00:00",
+  "fetched_at": "2026-11-12T21:33:09+00:00",
   "filings": [
    {
     "dii": 33.34,
@@ -8508,7 +8508,7 @@
   "source": "NSE XBRL"
  },
  "APTUS": {
-  "fetched_at": "2026-11-11T21:31:08+00:00",
+  "fetched_at": "2026-11-12T21:33:10+00:00",
   "filings": [
    {
     "dii": 27.82,
@@ -8848,7 +8848,7 @@
   "source": "NSE XBRL"
  },
  "ARE&M": {
-  "fetched_at": "2026-11-11T21:31:10+00:00",
+  "fetched_at": "2026-11-12T21:33:12+00:00",
   "filings": [
    {
     "dii": 14.93,
@@ -8948,7 +8948,7 @@
   "source": "NSE XBRL"
  },
  "ASAHIINDIA": {
-  "fetched_at": "2026-11-11T21:31:12+00:00",
+  "fetched_at": "2026-11-12T21:33:15+00:00",
   "filings": [
    {
     "dii": 5.17,
@@ -9232,7 +9232,7 @@
   "source": "NSE XBRL"
  },
  "ASHOKLEY": {
-  "fetched_at": "2026-11-11T21:31:14+00:00",
+  "fetched_at": "2026-11-12T21:33:17+00:00",
   "filings": [
    {
     "dii": 16.64,
@@ -9412,7 +9412,7 @@
   "source": "NSE XBRL"
  },
  "ASIANPAINT": {
-  "fetched_at": "2026-11-11T21:31:16+00:00",
+  "fetched_at": "2026-11-12T21:33:19+00:00",
   "filings": [
    {
     "dii": 20.5,
@@ -9776,7 +9776,7 @@
   "source": "NSE XBRL"
  },
  "ASTERDM": {
-  "fetched_at": "2026-11-11T21:31:18+00:00",
+  "fetched_at": "2026-11-12T21:33:21+00:00",
   "filings": [
    {
     "dii": 21.67,
@@ -10012,7 +10012,7 @@
   "source": "NSE XBRL"
  },
  "ASTRAL": {
-  "fetched_at": "2026-11-11T21:31:20+00:00",
+  "fetched_at": "2026-11-12T21:33:23+00:00",
   "filings": [
    {
     "dii": 24.13,
@@ -10216,7 +10216,7 @@
   "source": "NSE XBRL"
  },
  "ATGL": {
-  "fetched_at": "2026-11-11T21:31:23+00:00",
+  "fetched_at": "2026-11-12T21:33:24+00:00",
   "filings": [
    {
     "dii": 6.38,
@@ -10308,7 +10308,7 @@
   "source": "NSE XBRL"
  },
  "ATHERENERG": {
-  "fetched_at": "2026-11-11T21:31:24+00:00",
+  "fetched_at": "2026-11-12T21:33:26+00:00",
   "filings": [
    {
     "dii": 27.02,
@@ -10544,7 +10544,7 @@
   "source": "NSE XBRL"
  },
  "ATUL": {
-  "fetched_at": "2026-11-11T21:31:26+00:00",
+  "fetched_at": "2026-11-12T21:33:28+00:00",
   "filings": [
    {
     "dii": 25.23,
@@ -10764,7 +10764,7 @@
   "source": "NSE XBRL"
  },
  "ATULAUTO": {
-  "fetched_at": "2026-11-11T21:46:36+00:00",
+  "fetched_at": "2026-11-12T21:48:33+00:00",
   "filings": [
    {
     "dii": 0.07,
@@ -10968,7 +10968,7 @@
   "source": "NSE XBRL"
  },
  "AUBANK": {
-  "fetched_at": "2026-11-11T21:31:28+00:00",
+  "fetched_at": "2026-11-12T21:33:30+00:00",
   "filings": [
    {
     "dii": 32.83,
@@ -11332,7 +11332,7 @@
   "source": "NSE XBRL"
  },
  "AUROPHARMA": {
-  "fetched_at": "2026-11-11T21:31:31+00:00",
+  "fetched_at": "2026-11-12T21:33:33+00:00",
   "filings": [
    {
     "dii": 24.42,
@@ -11552,7 +11552,7 @@
   "source": "NSE XBRL"
  },
  "AVANTIFEED": {
-  "fetched_at": "2026-11-11T21:31:32+00:00",
+  "fetched_at": "2026-11-12T21:33:34+00:00",
   "filings": [
    {
     "dii": 8.31,
@@ -11692,7 +11692,7 @@
   "source": "NSE XBRL"
  },
  "AWL": {
-  "fetched_at": "2026-11-11T21:31:34+00:00",
+  "fetched_at": "2026-11-12T21:33:36+00:00",
   "filings": [
    {
     "dii": 10.24,
@@ -11840,7 +11840,7 @@
   "source": "NSE XBRL"
  },
  "AXISBANK": {
-  "fetched_at": "2026-11-11T21:31:36+00:00",
+  "fetched_at": "2026-11-12T21:33:39+00:00",
   "filings": [
    {
     "dii": 44.54,
@@ -12172,7 +12172,7 @@
   "source": "NSE XBRL"
  },
  "AZAD": {
-  "fetched_at": "2026-11-11T21:31:38+00:00",
+  "fetched_at": "2026-11-12T21:33:40+00:00",
   "filings": [
    {
     "dii": 10.4,
@@ -12296,7 +12296,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJ-AUTO": {
-  "fetched_at": "2026-11-11T21:31:42+00:00",
+  "fetched_at": "2026-11-12T21:33:45+00:00",
   "filings": [
    {
     "dii": 13.31,
@@ -12492,7 +12492,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJFINSV": {
-  "fetched_at": "2026-11-11T21:31:44+00:00",
+  "fetched_at": "2026-11-12T21:33:47+00:00",
   "filings": [
    {
     "dii": 11.1,
@@ -12680,7 +12680,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJHFL": {
-  "fetched_at": "2026-11-11T21:31:46+00:00",
+  "fetched_at": "2026-11-12T21:33:49+00:00",
   "filings": [
    {
     "dii": 1.09,
@@ -12724,7 +12724,7 @@
   "source": "NSE XBRL"
  },
  "BAJAJHLDNG": {
-  "fetched_at": "2026-11-11T21:31:48+00:00",
+  "fetched_at": "2026-11-12T21:33:51+00:00",
   "filings": [
    {
     "dii": 8.43,
@@ -12976,7 +12976,7 @@
   "source": "NSE XBRL"
  },
  "BAJFINANCE": {
-  "fetched_at": "2026-11-11T21:31:50+00:00",
+  "fetched_at": "2026-11-12T21:33:53+00:00",
   "filings": [
    {
     "dii": 17.05,
@@ -13124,7 +13124,7 @@
   "source": "NSE XBRL"
  },
  "BALKRISIND": {
-  "fetched_at": "2026-11-11T21:31:52+00:00",
+  "fetched_at": "2026-11-12T21:33:54+00:00",
   "filings": [
    {
     "dii": 25.46,
@@ -13312,7 +13312,7 @@
   "source": "NSE XBRL"
  },
  "BALRAMCHIN": {
-  "fetched_at": "2026-11-11T21:31:54+00:00",
+  "fetched_at": "2026-11-12T21:33:56+00:00",
   "filings": [
    {
     "dii": 30.93,
@@ -13596,7 +13596,7 @@
   "source": "NSE XBRL"
  },
  "BANDHANBNK": {
-  "fetched_at": "2026-11-11T21:31:56+00:00",
+  "fetched_at": "2026-11-12T21:33:58+00:00",
   "filings": [
    {
     "dii": 29.27,
@@ -13792,7 +13792,7 @@
   "source": "NSE XBRL"
  },
  "BANKBARODA": {
-  "fetched_at": "2026-11-11T21:31:58+00:00",
+  "fetched_at": "2026-11-12T21:34:01+00:00",
   "filings": [
    {
     "dii": 17.92,
@@ -13916,7 +13916,7 @@
   "source": "NSE XBRL"
  },
  "BANKINDIA": {
-  "fetched_at": "2026-11-11T21:32:00+00:00",
+  "fetched_at": "2026-11-12T21:34:02+00:00",
   "filings": [
    {
     "dii": 13.39,
@@ -13976,7 +13976,7 @@
   "source": "NSE XBRL"
  },
  "BATAINDIA": {
-  "fetched_at": "2026-11-11T21:32:02+00:00",
+  "fetched_at": "2026-11-12T21:34:05+00:00",
   "filings": [
    {
     "dii": 26.17,
@@ -14092,7 +14092,7 @@
   "source": "NSE XBRL"
  },
  "BBOX": {
-  "fetched_at": "2026-11-11T21:32:04+00:00",
+  "fetched_at": "2026-11-12T21:34:07+00:00",
   "filings": [
    {
     "dii": 3.33,
@@ -14372,7 +14372,7 @@
   "source": "NSE XBRL"
  },
  "BDL": {
-  "fetched_at": "2026-11-11T21:32:06+00:00",
+  "fetched_at": "2026-11-12T21:34:08+00:00",
   "filings": [
    {
     "dii": 10.8,
@@ -14480,7 +14480,7 @@
   "source": "NSE XBRL"
  },
  "BEL": {
-  "fetched_at": "2026-11-11T21:32:08+00:00",
+  "fetched_at": "2026-11-12T21:34:11+00:00",
   "filings": [
    {
     "dii": 21.88,
@@ -14668,7 +14668,7 @@
   "source": "NSE XBRL"
  },
  "BELRISE": {
-  "fetched_at": "2026-11-11T21:32:10+00:00",
+  "fetched_at": "2026-11-12T21:34:13+00:00",
   "filings": [
    {
     "dii": 13.31,
@@ -14816,7 +14816,7 @@
   "source": "NSE XBRL"
  },
  "BEML": {
-  "fetched_at": "2026-11-11T21:32:12+00:00",
+  "fetched_at": "2026-11-12T21:34:15+00:00",
   "filings": [
    {
     "dii": 21.52,
@@ -14924,7 +14924,7 @@
   "source": "NSE XBRL"
  },
  "BERGEPAINT": {
-  "fetched_at": "2026-11-11T21:32:14+00:00",
+  "fetched_at": "2026-11-12T21:34:16+00:00",
   "filings": [
    {
     "dii": 11.69,
@@ -15048,7 +15048,7 @@
   "source": "NSE XBRL"
  },
  "BHARATCOAL": {
-  "fetched_at": "2026-11-11T21:32:16+00:00",
+  "fetched_at": "2026-11-12T21:34:18+00:00",
   "filings": [
    {
     "dii": 0.98,
@@ -15092,7 +15092,7 @@
   "source": "NSE XBRL"
  },
  "BHARATFORG": {
-  "fetched_at": "2026-11-11T21:32:18+00:00",
+  "fetched_at": "2026-11-12T21:34:21+00:00",
   "filings": [
    {
     "dii": 33.04,
@@ -15400,7 +15400,7 @@
   "source": "NSE XBRL"
  },
  "BHARTIARTL": {
-  "fetched_at": "2026-11-11T21:32:20+00:00",
+  "fetched_at": "2026-11-12T21:34:22+00:00",
   "filings": [
    {
     "dii": 21.74,
@@ -15604,7 +15604,7 @@
   "source": "NSE XBRL"
  },
  "BHARTIHEXA": {
-  "fetched_at": "2026-11-11T21:32:22+00:00",
+  "fetched_at": "2026-11-12T21:34:25+00:00",
   "filings": [
    {
     "dii": 11.03,
@@ -15704,7 +15704,7 @@
   "source": "NSE XBRL"
  },
  "BHEL": {
-  "fetched_at": "2026-11-11T21:32:24+00:00",
+  "fetched_at": "2026-11-12T21:34:26+00:00",
   "filings": [
    {
     "dii": 21.88,
@@ -16040,7 +16040,7 @@
   "source": "NSE XBRL"
  },
  "BIOCON": {
-  "fetched_at": "2026-11-11T21:32:26+00:00",
+  "fetched_at": "2026-11-12T21:34:28+00:00",
   "filings": [
    {
     "dii": 29.3,
@@ -16212,7 +16212,7 @@
   "source": "NSE XBRL"
  },
  "BLS": {
-  "fetched_at": "2026-11-11T21:32:30+00:00",
+  "fetched_at": "2026-11-12T21:34:32+00:00",
   "filings": [
    {
     "dii": 3.07,
@@ -16728,7 +16728,7 @@
   "source": "NSE XBRL"
  },
  "BLUESTARCO": {
-  "fetched_at": "2026-11-11T21:32:32+00:00",
+  "fetched_at": "2026-11-12T21:34:35+00:00",
   "filings": [
    {
     "dii": 29.11,
@@ -17060,7 +17060,7 @@
   "source": "NSE XBRL"
  },
  "BOSCHLTD": {
-  "fetched_at": "2026-11-11T21:32:34+00:00",
+  "fetched_at": "2026-11-12T21:34:36+00:00",
   "filings": [
    {
     "dii": 15.17,
@@ -17176,7 +17176,7 @@
   "source": "NSE XBRL"
  },
  "BPCL": {
-  "fetched_at": "2026-11-11T21:32:36+00:00",
+  "fetched_at": "2026-11-12T21:34:38+00:00",
   "filings": [
    {
     "dii": 21.58,
@@ -17324,7 +17324,7 @@
   "source": "NSE XBRL"
  },
  "BRIGADE": {
-  "fetched_at": "2026-11-11T21:32:38+00:00",
+  "fetched_at": "2026-11-12T21:34:41+00:00",
   "filings": [
    {
     "dii": 26.9,
@@ -17672,7 +17672,7 @@
   "source": "NSE XBRL"
  },
  "BRITANNIA": {
-  "fetched_at": "2026-11-11T21:32:40+00:00",
+  "fetched_at": "2026-11-12T21:34:42+00:00",
   "filings": [
    {
     "dii": 21.47,
@@ -17892,7 +17892,7 @@
   "source": "NSE XBRL"
  },
  "BSE": {
-  "fetched_at": "2026-11-11T21:32:42+00:00",
+  "fetched_at": "2026-11-12T21:34:45+00:00",
   "filings": [
    {
     "dii": 25.89,
@@ -18104,7 +18104,7 @@
   "source": "NSE XBRL"
  },
  "BSOFT": {
-  "fetched_at": "2026-11-11T21:32:44+00:00",
+  "fetched_at": "2026-11-12T21:34:46+00:00",
   "filings": [
    {
     "dii": 19.58,
@@ -18292,7 +18292,7 @@
   "source": "NSE XBRL"
  },
  "CAMS": {
-  "fetched_at": "2026-11-11T21:32:46+00:00",
+  "fetched_at": "2026-11-12T21:34:49+00:00",
   "filings": [
    {
     "dii": 21.79,
@@ -18656,7 +18656,7 @@
   "source": "NSE XBRL"
  },
  "CANBK": {
-  "fetched_at": "2026-11-11T21:32:48+00:00",
+  "fetched_at": "2026-11-12T21:34:51+00:00",
   "filings": [
    {
     "dii": 12.38,
@@ -18732,7 +18732,7 @@
   "source": "NSE XBRL"
  },
  "CANFINHOME": {
-  "fetched_at": "2026-11-11T21:32:50+00:00",
+  "fetched_at": "2026-11-12T21:34:53+00:00",
   "filings": [
    {
     "dii": 23.46,
@@ -18960,7 +18960,7 @@
   "source": "NSE XBRL"
  },
  "CANHLIFE": {
-  "fetched_at": "2026-11-11T21:32:52+00:00",
+  "fetched_at": "2026-11-12T21:34:55+00:00",
   "filings": [
    {
     "dii": 30.16,
@@ -19116,7 +19116,7 @@
   "source": "NSE XBRL"
  },
  "CAPLIPOINT": {
-  "fetched_at": "2026-11-11T21:32:54+00:00",
+  "fetched_at": "2026-11-12T21:34:57+00:00",
   "filings": [
    {
     "dii": 2.2,
@@ -19264,7 +19264,7 @@
   "source": "NSE XBRL"
  },
  "CARBORUNIV": {
-  "fetched_at": "2026-11-11T21:32:56+00:00",
+  "fetched_at": "2026-11-12T21:34:58+00:00",
   "filings": [
    {
     "dii": 28.76,
@@ -19476,7 +19476,7 @@
   "source": "NSE XBRL"
  },
  "CARTRADE": {
-  "fetched_at": "2026-11-11T21:32:58+00:00",
+  "fetched_at": "2026-11-12T21:35:00+00:00",
   "filings": [
    {
     "dii": 19.4,
@@ -19856,7 +19856,7 @@
   "source": "NSE XBRL"
  },
  "CASTROLIND": {
-  "fetched_at": "2026-11-11T21:33:00+00:00",
+  "fetched_at": "2026-11-12T21:35:03+00:00",
   "filings": [
    {
     "dii": 13.32,
@@ -19932,7 +19932,7 @@
   "source": "NSE XBRL"
  },
  "CCL": {
-  "fetched_at": "2026-11-11T21:33:02+00:00",
+  "fetched_at": "2026-11-12T21:35:05+00:00",
   "filings": [
    {
     "dii": 21.41,
@@ -20128,7 +20128,7 @@
   "source": "NSE XBRL"
  },
  "CDSL": {
-  "fetched_at": "2026-11-11T21:33:04+00:00",
+  "fetched_at": "2026-11-12T21:35:06+00:00",
   "filings": [
    {
     "dii": 17.77,
@@ -20236,7 +20236,7 @@
   "source": "NSE XBRL"
  },
  "CEATLTD": {
-  "fetched_at": "2026-11-11T21:33:06+00:00",
+  "fetched_at": "2026-11-12T21:35:09+00:00",
   "filings": [
    {
     "dii": 23.26,
@@ -20456,7 +20456,7 @@
   "source": "NSE XBRL"
  },
  "CEMPRO": {
-  "fetched_at": "2026-11-11T21:33:08+00:00",
+  "fetched_at": "2026-11-12T21:35:11+00:00",
   "filings": [
    {
     "dii": 4.79,
@@ -20564,7 +20564,7 @@
   "source": "NSE XBRL"
  },
  "CENTRALBK": {
-  "fetched_at": "2026-11-11T21:33:10+00:00",
+  "fetched_at": "2026-11-12T21:35:13+00:00",
   "filings": [
    {
     "dii": 10.62,
@@ -20640,7 +20640,7 @@
   "source": "NSE XBRL"
  },
  "CESC": {
-  "fetched_at": "2026-11-11T21:33:12+00:00",
+  "fetched_at": "2026-11-12T21:35:15+00:00",
   "filings": [
    {
     "dii": 24.94,
@@ -20860,7 +20860,7 @@
   "source": "NSE XBRL"
  },
  "CGCL": {
-  "fetched_at": "2026-11-11T21:33:15+00:00",
+  "fetched_at": "2026-11-12T21:35:17+00:00",
   "filings": [
    {
     "dii": 17.04,
@@ -21000,7 +21000,7 @@
   "source": "NSE XBRL"
  },
  "CGPOWER": {
-  "fetched_at": "2026-11-11T21:33:16+00:00",
+  "fetched_at": "2026-11-12T21:35:18+00:00",
   "filings": [
    {
     "dii": 19.02,
@@ -21504,7 +21504,7 @@
   "source": "NSE XBRL"
  },
  "CHAMBLFERT": {
-  "fetched_at": "2026-11-11T21:33:18+00:00",
+  "fetched_at": "2026-11-12T21:35:21+00:00",
   "filings": [
    {
     "dii": 6.31,
@@ -21756,7 +21756,7 @@
   "source": "NSE XBRL"
  },
  "CHENNPETRO": {
-  "fetched_at": "2026-11-11T21:33:20+00:00",
+  "fetched_at": "2026-11-12T21:35:22+00:00",
   "filings": [
    {
     "dii": 1.18,
@@ -21832,7 +21832,7 @@
   "source": "NSE XBRL"
  },
  "CHOICEIN": {
-  "fetched_at": "2026-11-11T21:33:22+00:00",
+  "fetched_at": "2026-11-12T21:35:24+00:00",
   "filings": [
    {
     "dii": 0.29,
@@ -22124,7 +22124,7 @@
   "source": "NSE XBRL"
  },
  "CHOLAFIN": {
-  "fetched_at": "2026-11-11T21:33:24+00:00",
+  "fetched_at": "2026-11-12T21:35:27+00:00",
   "filings": [
    {
     "dii": 20.38,
@@ -22320,7 +22320,7 @@
   "source": "NSE XBRL"
  },
  "CHOLAHLDNG": {
-  "fetched_at": "2026-11-11T21:33:26+00:00",
+  "fetched_at": "2026-11-12T21:35:29+00:00",
   "filings": [
    {
     "dii": 27.77,
@@ -22492,7 +22492,7 @@
   "source": "NSE XBRL"
  },
  "CIEINDIA": {
-  "fetched_at": "2026-11-11T21:33:28+00:00",
+  "fetched_at": "2026-11-12T21:35:31+00:00",
   "filings": [
    {
     "dii": 20.75,
@@ -22592,7 +22592,7 @@
   "source": "NSE XBRL"
  },
  "CIPLA": {
-  "fetched_at": "2026-11-11T21:33:30+00:00",
+  "fetched_at": "2026-11-12T21:35:33+00:00",
   "filings": [
    {
     "dii": 34.94,
@@ -22852,7 +22852,7 @@
   "source": "NSE XBRL"
  },
  "CLEAN": {
-  "fetched_at": "2026-11-11T21:33:32+00:00",
+  "fetched_at": "2026-11-12T21:35:35+00:00",
   "filings": [
    {
     "dii": 15.1,
@@ -23176,7 +23176,7 @@
   "source": "NSE XBRL"
  },
  "CLEANMAX": {
-  "fetched_at": "2026-11-11T21:33:34+00:00",
+  "fetched_at": "2026-11-12T21:35:37+00:00",
   "filings": [
    {
     "dii": 19.44,
@@ -23420,7 +23420,7 @@
   "source": "NSE XBRL"
  },
  "CMPDI": {
-  "fetched_at": "2026-11-11T21:33:36+00:00",
+  "fetched_at": "2026-11-12T21:35:39+00:00",
   "filings": [
    {
     "dii": 8.87,
@@ -23504,7 +23504,7 @@
   "source": "NSE XBRL"
  },
  "CMSINFO": {
-  "fetched_at": "2026-11-11T21:46:38+00:00",
+  "fetched_at": "2026-11-12T21:48:35+00:00",
   "filings": [
    {
     "dii": 35.26,
@@ -23748,7 +23748,7 @@
   "source": "NSE XBRL"
  },
  "COALINDIA": {
-  "fetched_at": "2026-11-11T21:33:38+00:00",
+  "fetched_at": "2026-11-12T21:35:41+00:00",
   "filings": [
    {
     "dii": 23.45,
@@ -23864,7 +23864,7 @@
   "source": "NSE XBRL"
  },
  "COCHINSHIP": {
-  "fetched_at": "2026-11-11T21:33:40+00:00",
+  "fetched_at": "2026-11-12T21:35:43+00:00",
   "filings": [
    {
     "dii": 11.25,
@@ -23940,7 +23940,7 @@
   "source": "NSE XBRL"
  },
  "COFORGE": {
-  "fetched_at": "2026-11-11T21:33:42+00:00",
+  "fetched_at": "2026-11-12T21:35:45+00:00",
   "filings": [
    {
     "dii": 43.79,
@@ -24288,7 +24288,7 @@
   "source": "NSE XBRL"
  },
  "COHANCE": {
-  "fetched_at": "2026-11-11T21:33:44+00:00",
+  "fetched_at": "2026-11-12T21:35:47+00:00",
   "filings": [
    {
     "dii": 18.86,
@@ -24484,7 +24484,7 @@
   "source": "NSE XBRL"
  },
  "COLPAL": {
-  "fetched_at": "2026-11-11T21:33:46+00:00",
+  "fetched_at": "2026-11-12T21:35:49+00:00",
   "filings": [
    {
     "dii": 15.46,
@@ -24592,7 +24592,7 @@
   "source": "NSE XBRL"
  },
  "CONCOR": {
-  "fetched_at": "2026-11-11T21:33:48+00:00",
+  "fetched_at": "2026-11-12T21:35:50+00:00",
   "filings": [
    {
     "dii": 30.01,
@@ -24740,7 +24740,7 @@
   "source": "NSE XBRL"
  },
  "CONCORDBIO": {
-  "fetched_at": "2026-11-11T21:33:50+00:00",
+  "fetched_at": "2026-11-12T21:35:52+00:00",
   "filings": [
    {
     "dii": 10.95,
@@ -24984,7 +24984,7 @@
   "source": "NSE XBRL"
  },
  "COROMANDEL": {
-  "fetched_at": "2026-11-11T21:33:52+00:00",
+  "fetched_at": "2026-11-12T21:35:55+00:00",
   "filings": [
    {
     "dii": 20.48,
@@ -25156,7 +25156,7 @@
   "source": "NSE XBRL"
  },
  "CPPLUS": {
-  "fetched_at": "2026-11-11T21:33:54+00:00",
+  "fetched_at": "2026-11-12T21:35:57+00:00",
   "filings": [
    {
     "dii": 16.12,
@@ -25384,7 +25384,7 @@
   "source": "NSE XBRL"
  },
  "CRAFTSMAN": {
-  "fetched_at": "2026-11-11T21:33:56+00:00",
+  "fetched_at": "2026-11-12T21:35:59+00:00",
   "filings": [
    {
     "dii": 33.63,
@@ -25644,7 +25644,7 @@
   "source": "NSE XBRL"
  },
  "CREDITACC": {
-  "fetched_at": "2026-11-11T21:33:58+00:00",
+  "fetched_at": "2026-11-12T21:36:01+00:00",
   "filings": [
    {
     "dii": 13.77,
@@ -25792,7 +25792,7 @@
   "source": "NSE XBRL"
  },
  "CRISIL": {
-  "fetched_at": "2026-11-11T21:34:00+00:00",
+  "fetched_at": "2026-11-12T21:36:02+00:00",
   "filings": [
    {
     "dii": 12.63,
@@ -25948,7 +25948,7 @@
   "source": "NSE XBRL"
  },
  "CROMPTON": {
-  "fetched_at": "2026-11-11T21:34:02+00:00",
+  "fetched_at": "2026-11-12T21:36:04+00:00",
   "filings": [
    {
     "dii": 65.8,
@@ -26320,7 +26320,7 @@
   "source": "NSE XBRL"
  },
  "CUB": {
-  "fetched_at": "2026-11-11T21:34:04+00:00",
+  "fetched_at": "2026-11-12T21:36:07+00:00",
   "filings": [
    {
     "dii": 47.99,
@@ -26652,7 +26652,7 @@
   "source": "NSE XBRL"
  },
  "CUMMINSIND": {
-  "fetched_at": "2026-11-11T21:34:06+00:00",
+  "fetched_at": "2026-11-12T21:36:08+00:00",
   "filings": [
    {
     "dii": 20.82,
@@ -26800,7 +26800,7 @@
   "source": "NSE XBRL"
  },
  "CUPID": {
-  "fetched_at": "2026-11-11T21:34:08+00:00",
+  "fetched_at": "2026-11-12T21:36:11+00:00",
   "filings": [
    {
     "dii": 1.2,
@@ -27028,7 +27028,7 @@
   "source": "NSE XBRL"
  },
  "CYIENT": {
-  "fetched_at": "2026-11-11T21:34:10+00:00",
+  "fetched_at": "2026-11-12T21:36:13+00:00",
   "filings": [
    {
     "dii": 38.96,
@@ -27328,7 +27328,7 @@
   "source": "NSE XBRL"
  },
  "DABUR": {
-  "fetched_at": "2026-11-11T21:34:12+00:00",
+  "fetched_at": "2026-11-12T21:36:15+00:00",
   "filings": [
    {
     "dii": 18.35,
@@ -27564,7 +27564,7 @@
   "source": "NSE XBRL"
  },
  "DALBHARAT": {
-  "fetched_at": "2026-11-11T21:34:14+00:00",
+  "fetched_at": "2026-11-12T21:36:16+00:00",
   "filings": [
    {
     "dii": 18.91,
@@ -27848,7 +27848,7 @@
   "source": "NSE XBRL"
  },
  "DATAPATTNS": {
-  "fetched_at": "2026-11-11T21:34:16+00:00",
+  "fetched_at": "2026-11-12T21:36:19+00:00",
   "filings": [
    {
     "dii": 13.01,
@@ -28256,7 +28256,7 @@
   "source": "NSE XBRL"
  },
  "DEEPAKFERT": {
-  "fetched_at": "2026-11-11T21:34:18+00:00",
+  "fetched_at": "2026-11-12T21:36:21+00:00",
   "filings": [
    {
     "dii": 14.47,
@@ -28428,7 +28428,7 @@
   "source": "NSE XBRL"
  },
  "DEEPAKNTR": {
-  "fetched_at": "2026-11-11T21:34:20+00:00",
+  "fetched_at": "2026-11-12T21:36:23+00:00",
   "filings": [
    {
     "dii": 22.5,
@@ -28688,7 +28688,7 @@
   "source": "NSE XBRL"
  },
  "DELHIVERY": {
-  "fetched_at": "2026-11-11T21:34:22+00:00",
+  "fetched_at": "2026-11-12T21:36:24+00:00",
   "filings": [
    {
     "dii": 45.95,
@@ -29052,7 +29052,7 @@
   "source": "NSE XBRL"
  },
  "DEVYANI": {
-  "fetched_at": "2026-11-11T21:34:25+00:00",
+  "fetched_at": "2026-11-12T21:36:26+00:00",
   "filings": [
    {
     "dii": 20.88,
@@ -29224,7 +29224,7 @@
   "source": "NSE XBRL"
  },
  "DHAMPURSUG": {
-  "fetched_at": "2026-11-11T21:46:40+00:00",
+  "fetched_at": "2026-11-12T21:48:37+00:00",
   "filings": [
    {
     "dii": 0.67,
@@ -29348,7 +29348,7 @@
   "source": "NSE XBRL"
  },
  "DIVISLAB": {
-  "fetched_at": "2026-11-11T21:34:26+00:00",
+  "fetched_at": "2026-11-12T21:36:29+00:00",
   "filings": [
    {
     "dii": 19.17,
@@ -29568,7 +29568,7 @@
   "source": "NSE XBRL"
  },
  "DIXON": {
-  "fetched_at": "2026-11-11T21:34:28+00:00",
+  "fetched_at": "2026-11-12T21:36:30+00:00",
   "filings": [
    {
     "dii": 28.71,
@@ -29852,7 +29852,7 @@
   "source": "NSE XBRL"
  },
  "DLF": {
-  "fetched_at": "2026-11-11T21:34:30+00:00",
+  "fetched_at": "2026-11-12T21:36:33+00:00",
   "filings": [
    {
     "dii": 9.08,
@@ -30016,7 +30016,7 @@
   "source": "NSE XBRL"
  },
  "DMART": {
-  "fetched_at": "2026-11-11T21:34:32+00:00",
+  "fetched_at": "2026-11-12T21:36:34+00:00",
   "filings": [
    {
     "dii": 9.43,
@@ -30316,7 +30316,7 @@
   "source": "NSE XBRL"
  },
  "DOMS": {
-  "fetched_at": "2026-11-11T21:34:34+00:00",
+  "fetched_at": "2026-11-12T21:36:37+00:00",
   "filings": [
    {
     "dii": 26.31,
@@ -30592,7 +30592,7 @@
   "source": "NSE XBRL"
  },
  "DRREDDY": {
-  "fetched_at": "2026-11-11T21:34:36+00:00",
+  "fetched_at": "2026-11-12T21:36:38+00:00",
   "filings": [
    {
     "dii": 31.88,
@@ -30820,7 +30820,7 @@
   "source": "NSE XBRL"
  },
  "DWARKESH": {
-  "fetched_at": "2026-11-11T21:46:42+00:00",
+  "fetched_at": "2026-11-12T21:48:39+00:00",
   "filings": [
    {
     "dii": 0.1,
@@ -30896,7 +30896,7 @@
   "source": "NSE XBRL"
  },
  "ECLERX": {
-  "fetched_at": "2026-11-11T21:34:38+00:00",
+  "fetched_at": "2026-11-12T21:36:41+00:00",
   "filings": [
    {
     "dii": 24.55,
@@ -31060,7 +31060,7 @@
   "source": "NSE XBRL"
  },
  "EICHERMOT": {
-  "fetched_at": "2026-11-11T21:34:40+00:00",
+  "fetched_at": "2026-11-12T21:36:42+00:00",
   "filings": [
    {
     "dii": 17.6,
@@ -31264,7 +31264,7 @@
   "source": "NSE XBRL"
  },
  "EIDPARRY": {
-  "fetched_at": "2026-11-11T21:34:42+00:00",
+  "fetched_at": "2026-11-12T21:36:45+00:00",
   "filings": [
    {
     "dii": 20.54,
@@ -31396,7 +31396,7 @@
   "source": "NSE XBRL"
  },
  "EIHOTEL": {
-  "fetched_at": "2026-11-11T21:34:44+00:00",
+  "fetched_at": "2026-11-12T21:36:46+00:00",
   "filings": [
    {
     "dii": 12.5,
@@ -31624,7 +31624,7 @@
   "source": "NSE XBRL"
  },
  "ELECON": {
-  "fetched_at": "2026-11-11T21:34:46+00:00",
+  "fetched_at": "2026-11-12T21:36:49+00:00",
   "filings": [
    {
     "dii": 7.08,
@@ -31812,7 +31812,7 @@
   "source": "NSE XBRL"
  },
  "ELGIEQUIP": {
-  "fetched_at": "2026-11-11T21:34:48+00:00",
+  "fetched_at": "2026-11-12T21:36:50+00:00",
   "filings": [
    {
     "dii": 11.47,
@@ -31984,7 +31984,7 @@
   "source": "NSE XBRL"
  },
  "EMAMILTD": {
-  "fetched_at": "2026-11-11T21:34:50+00:00",
+  "fetched_at": "2026-11-12T21:36:52+00:00",
   "filings": [
    {
     "dii": 23.58,
@@ -32212,7 +32212,7 @@
   "source": "NSE XBRL"
  },
  "EMCURE": {
-  "fetched_at": "2026-11-11T21:34:54+00:00",
+  "fetched_at": "2026-11-12T21:36:56+00:00",
   "filings": [
    {
     "dii": 8.49,
@@ -32456,7 +32456,7 @@
   "source": "NSE XBRL"
  },
  "EMMVEE": {
-  "fetched_at": "2026-11-11T21:34:56+00:00",
+  "fetched_at": "2026-11-12T21:36:58+00:00",
   "filings": [
    {
     "dii": 9.81,
@@ -32596,7 +32596,7 @@
   "source": "NSE XBRL"
  },
  "ENDURANCE": {
-  "fetched_at": "2026-11-11T21:34:58+00:00",
+  "fetched_at": "2026-11-12T21:37:00+00:00",
   "filings": [
    {
     "dii": 10.48,
@@ -32760,7 +32760,7 @@
   "source": "NSE XBRL"
  },
  "ENGINERSIN": {
-  "fetched_at": "2026-11-11T21:35:00+00:00",
+  "fetched_at": "2026-11-12T21:37:02+00:00",
   "filings": [
    {
     "dii": 16.61,
@@ -32860,7 +32860,7 @@
   "source": "NSE XBRL"
  },
  "ENRIN": {
-  "fetched_at": "2026-11-11T21:35:02+00:00",
+  "fetched_at": "2026-11-12T21:37:05+00:00",
   "filings": [
    {
     "dii": 6.43,
@@ -33196,7 +33196,7 @@
   "source": "NSE XBRL"
  },
  "ESCORTS": {
-  "fetched_at": "2026-11-11T21:35:04+00:00",
+  "fetched_at": "2026-11-12T21:37:06+00:00",
   "filings": [
    {
     "dii": 10.0,
@@ -33376,7 +33376,7 @@
   "source": "NSE XBRL"
  },
  "ETERNAL": {
-  "fetched_at": "2026-11-11T21:35:06+00:00",
+  "fetched_at": "2026-11-12T21:37:08+00:00",
   "filings": [
    {
     "dii": 36.22,
@@ -33700,7 +33700,7 @@
   "source": "NSE XBRL"
  },
  "EXIDEIND": {
-  "fetched_at": "2026-11-11T21:35:08+00:00",
+  "fetched_at": "2026-11-12T21:37:10+00:00",
   "filings": [
    {
     "dii": 17.57,
@@ -33840,7 +33840,7 @@
   "source": "NSE XBRL"
  },
  "FACT": {
-  "fetched_at": "2026-11-11T21:35:10+00:00",
+  "fetched_at": "2026-11-12T21:37:12+00:00",
   "filings": [
    {
     "dii": 0.06,
@@ -33900,7 +33900,7 @@
   "source": "NSE XBRL"
  },
  "FCL": {
-  "fetched_at": "2026-11-11T21:46:44+00:00",
+  "fetched_at": "2026-11-12T21:48:41+00:00",
   "filings": [
    {
     "dii": 1.64,
@@ -34024,7 +34024,7 @@
   "source": "NSE XBRL"
  },
  "FEDERALBNK": {
-  "fetched_at": "2026-11-11T21:35:12+00:00",
+  "fetched_at": "2026-11-12T21:37:15+00:00",
   "filings": [
    {
     "dii": 49.28,
@@ -34404,7 +34404,7 @@
   "source": "NSE XBRL"
  },
  "FINCABLES": {
-  "fetched_at": "2026-11-11T21:35:14+00:00",
+  "fetched_at": "2026-11-12T21:37:17+00:00",
   "filings": [
    {
     "dii": 16.93,
@@ -34640,7 +34640,7 @@
   "source": "NSE XBRL"
  },
  "FIRSTCRY": {
-  "fetched_at": "2026-11-11T21:35:16+00:00",
+  "fetched_at": "2026-11-12T21:37:18+00:00",
   "filings": [
    {
     "dii": 22.07,
@@ -34916,7 +34916,7 @@
   "source": "NSE XBRL"
  },
  "FIVESTAR": {
-  "fetched_at": "2026-11-11T21:35:18+00:00",
+  "fetched_at": "2026-11-12T21:37:21+00:00",
   "filings": [
    {
     "dii": 23.54,
@@ -35232,7 +35232,7 @@
   "source": "NSE XBRL"
  },
  "FLUOROCHEM": {
-  "fetched_at": "2026-11-11T21:35:20+00:00",
+  "fetched_at": "2026-11-12T21:37:22+00:00",
   "filings": [
    {
     "dii": 13.32,
@@ -35388,7 +35388,7 @@
   "source": "NSE XBRL"
  },
  "FORCEMOT": {
-  "fetched_at": "2026-11-11T21:35:22+00:00",
+  "fetched_at": "2026-11-12T21:37:24+00:00",
   "filings": [
    {
     "dii": 2.49,
@@ -35488,7 +35488,7 @@
   "source": "NSE XBRL"
  },
  "FORTIS": {
-  "fetched_at": "2026-11-11T21:35:24+00:00",
+  "fetched_at": "2026-11-12T21:37:26+00:00",
   "filings": [
    {
     "dii": 34.46,
@@ -35780,7 +35780,7 @@
   "source": "NSE XBRL"
  },
  "FRACTAL": {
-  "fetched_at": "2026-11-11T21:35:26+00:00",
+  "fetched_at": "2026-11-12T21:37:28+00:00",
   "filings": [
    {
     "dii": 13.29,
@@ -35968,7 +35968,7 @@
   "source": "NSE XBRL"
  },
  "FSL": {
-  "fetched_at": "2026-11-11T21:35:28+00:00",
+  "fetched_at": "2026-11-12T21:37:31+00:00",
   "filings": [
    {
     "dii": 26.84,
@@ -36124,7 +36124,7 @@
   "source": "NSE XBRL"
  },
  "GABRIEL": {
-  "fetched_at": "2026-11-11T21:35:30+00:00",
+  "fetched_at": "2026-11-12T21:37:32+00:00",
   "filings": [
    {
     "dii": 12.06,
@@ -36240,7 +36240,7 @@
   "source": "NSE XBRL"
  },
  "GAIL": {
-  "fetched_at": "2026-11-11T21:35:32+00:00",
+  "fetched_at": "2026-11-12T21:37:35+00:00",
   "filings": [
    {
     "dii": 17.98,
@@ -36380,7 +36380,7 @@
   "source": "NSE XBRL"
  },
  "GALLANTT": {
-  "fetched_at": "2026-11-11T21:35:34+00:00",
+  "fetched_at": "2026-11-12T21:37:37+00:00",
   "filings": [
    {
     "dii": 0.09,
@@ -36528,7 +36528,7 @@
   "source": "NSE XBRL"
  },
  "GESHIP": {
-  "fetched_at": "2026-11-11T21:35:36+00:00",
+  "fetched_at": "2026-11-12T21:37:39+00:00",
   "filings": [
    {
     "dii": 11.62,
@@ -36740,7 +36740,7 @@
   "source": "NSE XBRL"
  },
  "GICRE": {
-  "fetched_at": "2026-11-11T21:35:38+00:00",
+  "fetched_at": "2026-11-12T21:37:40+00:00",
   "filings": [
    {
     "dii": 17.71,
@@ -36824,7 +36824,7 @@
   "source": "NSE XBRL"
  },
  "GILLETTE": {
-  "fetched_at": "2026-11-11T21:35:40+00:00",
+  "fetched_at": "2026-11-12T21:37:43+00:00",
   "filings": [
    {
     "dii": 8.76,
@@ -36964,7 +36964,7 @@
   "source": "NSE XBRL"
  },
  "GLAND": {
-  "fetched_at": "2026-11-11T21:35:42+00:00",
+  "fetched_at": "2026-11-12T21:37:44+00:00",
   "filings": [
    {
     "dii": 33.21,
@@ -37168,7 +37168,7 @@
   "source": "NSE XBRL"
  },
  "GLAXO": {
-  "fetched_at": "2026-11-11T21:35:44+00:00",
+  "fetched_at": "2026-11-12T21:37:47+00:00",
   "filings": [
    {
     "dii": 8.48,
@@ -37284,7 +37284,7 @@
   "source": "NSE XBRL"
  },
  "GLENMARK": {
-  "fetched_at": "2026-11-11T21:35:46+00:00",
+  "fetched_at": "2026-11-12T21:37:49+00:00",
   "filings": [
    {
     "dii": 17.64,
@@ -37416,7 +37416,7 @@
   "source": "NSE XBRL"
  },
  "GMDCLTD": {
-  "fetched_at": "2026-11-11T21:35:48+00:00",
+  "fetched_at": "2026-11-12T21:37:50+00:00",
   "filings": [
    {
     "dii": 0.59,
@@ -37460,7 +37460,7 @@
   "source": "NSE XBRL"
  },
  "GMRAIRPORT": {
-  "fetched_at": "2026-11-11T21:35:50+00:00",
+  "fetched_at": "2026-11-12T21:37:53+00:00",
   "filings": [
    {
     "dii": 4.8,
@@ -37656,7 +37656,7 @@
   "source": "NSE XBRL"
  },
  "GODFRYPHLP": {
-  "fetched_at": "2026-11-11T21:35:52+00:00",
+  "fetched_at": "2026-11-12T21:37:54+00:00",
   "filings": [
    {
     "dii": 3.5,
@@ -37936,7 +37936,7 @@
   "source": "NSE XBRL"
  },
  "GODREJCP": {
-  "fetched_at": "2026-11-11T21:35:54+00:00",
+  "fetched_at": "2026-11-12T21:37:56+00:00",
   "filings": [
    {
     "dii": 20.72,
@@ -38108,7 +38108,7 @@
   "source": "NSE XBRL"
  },
  "GODREJIND": {
-  "fetched_at": "2026-11-11T21:35:56+00:00",
+  "fetched_at": "2026-11-12T21:37:58+00:00",
   "filings": [
    {
     "dii": 3.69,
@@ -38456,7 +38456,7 @@
   "source": "NSE XBRL"
  },
  "GODREJPROP": {
-  "fetched_at": "2026-11-11T21:35:58+00:00",
+  "fetched_at": "2026-11-12T21:38:01+00:00",
   "filings": [
    {
     "dii": 9.71,
@@ -38628,7 +38628,7 @@
   "source": "NSE XBRL"
  },
  "GPIL": {
-  "fetched_at": "2026-11-11T21:36:00+00:00",
+  "fetched_at": "2026-11-12T21:38:03+00:00",
   "filings": [
    {
     "dii": 4.36,
@@ -38984,7 +38984,7 @@
   "source": "NSE XBRL"
  },
  "GRANULES": {
-  "fetched_at": "2026-11-11T21:36:02+00:00",
+  "fetched_at": "2026-11-12T21:38:05+00:00",
   "filings": [
    {
     "dii": 15.33,
@@ -39172,7 +39172,7 @@
   "source": "NSE XBRL"
  },
  "GRAPHITE": {
-  "fetched_at": "2026-11-11T21:36:05+00:00",
+  "fetched_at": "2026-11-12T21:38:06+00:00",
   "filings": [
    {
     "dii": 9.67,
@@ -39264,7 +39264,7 @@
   "source": "NSE XBRL"
  },
  "GRASIM": {
-  "fetched_at": "2026-11-11T21:36:06+00:00",
+  "fetched_at": "2026-11-12T21:38:09+00:00",
   "filings": [
    {
     "dii": 15.25,
@@ -39492,7 +39492,7 @@
   "source": "NSE XBRL"
  },
  "GRAVITA": {
-  "fetched_at": "2026-11-11T21:36:08+00:00",
+  "fetched_at": "2026-11-12T21:38:11+00:00",
   "filings": [
    {
     "dii": 4.9,
@@ -39624,7 +39624,7 @@
   "source": "NSE XBRL"
  },
  "GROWW": {
-  "fetched_at": "2026-11-11T21:36:10+00:00",
+  "fetched_at": "2026-11-12T21:38:12+00:00",
   "filings": [
    {
     "dii": 12.73,
@@ -39908,7 +39908,7 @@
   "source": "NSE XBRL"
  },
  "GRSE": {
-  "fetched_at": "2026-11-11T21:36:12+00:00",
+  "fetched_at": "2026-11-12T21:38:14+00:00",
   "filings": [
    {
     "dii": 2.0,
@@ -39952,7 +39952,7 @@
   "source": "NSE XBRL"
  },
  "GVT&D": {
-  "fetched_at": "2026-11-11T21:36:14+00:00",
+  "fetched_at": "2026-11-12T21:38:17+00:00",
   "filings": [
    {
     "dii": 22.17,
@@ -40076,7 +40076,7 @@
   "source": "NSE XBRL"
  },
  "HAL": {
-  "fetched_at": "2026-11-11T21:36:16+00:00",
+  "fetched_at": "2026-11-12T21:38:18+00:00",
   "filings": [
    {
     "dii": 12.56,
@@ -40152,7 +40152,7 @@
   "source": "NSE XBRL"
  },
  "HAVELLS": {
-  "fetched_at": "2026-11-11T21:36:18+00:00",
+  "fetched_at": "2026-11-12T21:38:21+00:00",
   "filings": [
    {
     "dii": 19.86,
@@ -40308,7 +40308,7 @@
   "source": "NSE XBRL"
  },
  "HBLENGINE": {
-  "fetched_at": "2026-11-11T21:36:20+00:00",
+  "fetched_at": "2026-11-12T21:38:23+00:00",
   "filings": [
    {
     "dii": 1.64,
@@ -40384,7 +40384,7 @@
   "source": "NSE XBRL"
  },
  "HCLTECH": {
-  "fetched_at": "2026-11-11T21:36:22+00:00",
+  "fetched_at": "2026-11-12T21:38:25+00:00",
   "filings": [
    {
     "dii": 18.94,
@@ -40548,7 +40548,7 @@
   "source": "NSE XBRL"
  },
  "HDBFS": {
-  "fetched_at": "2026-11-11T21:36:24+00:00",
+  "fetched_at": "2026-11-12T21:38:26+00:00",
   "filings": [
    {
     "dii": 11.95,
@@ -40656,7 +40656,7 @@
   "source": "NSE XBRL"
  },
  "HDFCAMC": {
-  "fetched_at": "2026-11-11T21:36:26+00:00",
+  "fetched_at": "2026-11-12T21:38:28+00:00",
   "filings": [
    {
     "dii": 14.57,
@@ -40812,7 +40812,7 @@
   "source": "NSE XBRL"
  },
  "HDFCBANK": {
-  "fetched_at": "2026-11-11T21:36:28+00:00",
+  "fetched_at": "2026-11-12T21:38:31+00:00",
   "filings": [
    {
     "dii": 43.63,
@@ -41064,7 +41064,7 @@
   "source": "NSE XBRL"
  },
  "HDFCLIFE": {
-  "fetched_at": "2026-11-11T21:36:30+00:00",
+  "fetched_at": "2026-11-12T21:38:33+00:00",
   "filings": [
    {
     "dii": 20.54,
@@ -41376,7 +41376,7 @@
   "source": "NSE XBRL"
  },
  "HEGAM": {
-  "fetched_at": "2026-11-11T21:36:32+00:00",
+  "fetched_at": "2026-11-12T21:38:34+00:00",
   "filings": [
    {
     "dii": 12.96,
@@ -41564,7 +41564,7 @@
   "source": "NSE XBRL"
  },
  "HEROMOTOCO": {
-  "fetched_at": "2026-11-11T21:36:34+00:00",
+  "fetched_at": "2026-11-12T21:38:37+00:00",
   "filings": [
    {
     "dii": 23.94,
@@ -41744,7 +41744,7 @@
   "source": "NSE XBRL"
  },
  "HEXT": {
-  "fetched_at": "2026-11-11T21:36:36+00:00",
+  "fetched_at": "2026-11-12T21:38:38+00:00",
   "filings": [
    {
     "dii": 16.16,
@@ -41884,7 +41884,7 @@
   "source": "NSE XBRL"
  },
  "HFCL": {
-  "fetched_at": "2026-11-11T21:36:38+00:00",
+  "fetched_at": "2026-11-12T21:38:41+00:00",
   "filings": [
    {
     "dii": 10.38,
@@ -42040,7 +42040,7 @@
   "source": "NSE XBRL"
  },
  "HIMATSEIDE": {
-  "fetched_at": "2026-11-11T21:46:46+00:00",
+  "fetched_at": "2026-11-12T21:48:43+00:00",
   "filings": [
    {
     "dii": 0.06,
@@ -42260,7 +42260,7 @@
   "source": "NSE XBRL"
  },
  "HINDALCO": {
-  "fetched_at": "2026-11-11T21:36:40+00:00",
+  "fetched_at": "2026-11-12T21:38:43+00:00",
   "filings": [
    {
     "dii": 20.97,
@@ -42464,7 +42464,7 @@
   "source": "NSE XBRL"
  },
  "HINDCOPPER": {
-  "fetched_at": "2026-11-11T21:36:42+00:00",
+  "fetched_at": "2026-11-12T21:38:44+00:00",
   "filings": [
    {
     "dii": 5.01,
@@ -42524,7 +42524,7 @@
   "source": "NSE XBRL"
  },
  "HINDPETRO": {
-  "fetched_at": "2026-11-11T21:36:44+00:00",
+  "fetched_at": "2026-11-12T21:38:47+00:00",
   "filings": [
    {
     "dii": 22.11,
@@ -42640,7 +42640,7 @@
   "source": "NSE XBRL"
  },
  "HINDUNILVR": {
-  "fetched_at": "2026-11-11T21:36:46+00:00",
+  "fetched_at": "2026-11-12T21:38:48+00:00",
   "filings": [
    {
     "dii": 17.13,
@@ -42820,7 +42820,7 @@
   "source": "NSE XBRL"
  },
  "HINDZINC": {
-  "fetched_at": "2026-11-11T21:36:48+00:00",
+  "fetched_at": "2026-11-12T21:38:50+00:00",
   "filings": [
    {
     "dii": 4.85,
@@ -42896,7 +42896,7 @@
   "source": "NSE XBRL"
  },
  "HOMEFIRST": {
-  "fetched_at": "2026-11-11T21:36:50+00:00",
+  "fetched_at": "2026-11-12T21:38:52+00:00",
   "filings": [
    {
     "dii": 32.94,
@@ -43292,7 +43292,7 @@
   "source": "NSE XBRL"
  },
  "HONASA": {
-  "fetched_at": "2026-11-11T21:36:52+00:00",
+  "fetched_at": "2026-11-12T21:38:55+00:00",
   "filings": [
    {
     "dii": 23.37,
@@ -43536,7 +43536,7 @@
   "source": "NSE XBRL"
  },
  "HONAUT": {
-  "fetched_at": "2026-11-11T21:36:54+00:00",
+  "fetched_at": "2026-11-12T21:38:56+00:00",
   "filings": [
    {
     "dii": 11.49,
@@ -43620,7 +43620,7 @@
   "source": "NSE XBRL"
  },
  "HSCL": {
-  "fetched_at": "2026-11-11T21:36:56+00:00",
+  "fetched_at": "2026-11-12T21:38:58+00:00",
   "filings": [
    {
     "dii": 2.85,
@@ -43784,7 +43784,7 @@
   "source": "NSE XBRL"
  },
  "HUDCO": {
-  "fetched_at": "2026-11-11T21:36:58+00:00",
+  "fetched_at": "2026-11-12T21:39:00+00:00",
   "filings": [
    {
     "dii": 9.51,
@@ -43852,7 +43852,7 @@
   "source": "NSE XBRL"
  },
  "HYUNDAI": {
-  "fetched_at": "2026-11-11T21:37:00+00:00",
+  "fetched_at": "2026-11-12T21:39:02+00:00",
   "filings": [
    {
     "dii": 11.9,
@@ -43944,7 +43944,7 @@
   "source": "NSE XBRL"
  },
  "ICICIAMC": {
-  "fetched_at": "2026-11-11T21:37:02+00:00",
+  "fetched_at": "2026-11-12T21:39:05+00:00",
   "filings": [
    {
     "dii": 8.42,
@@ -44012,7 +44012,7 @@
   "source": "NSE XBRL"
  },
  "ICICIBANK": {
-  "fetched_at": "2026-11-11T21:37:04+00:00",
+  "fetched_at": "2026-11-12T21:39:07+00:00",
   "filings": [
    {
     "dii": 41.78,
@@ -44296,7 +44296,7 @@
   "source": "NSE XBRL"
  },
  "ICICIGI": {
-  "fetched_at": "2026-11-11T21:37:06+00:00",
+  "fetched_at": "2026-11-12T21:39:09+00:00",
   "filings": [
    {
     "dii": 23.93,
@@ -44484,7 +44484,7 @@
   "source": "NSE XBRL"
  },
  "ICICILIFE": {
-  "fetched_at": "2026-11-11T21:37:08+00:00",
+  "fetched_at": "2026-11-12T21:39:10+00:00",
   "filings": [
    {
     "dii": 10.76,
@@ -44796,7 +44796,7 @@
   "source": "NSE XBRL"
  },
  "IDBI": {
-  "fetched_at": "2026-11-11T21:37:10+00:00",
+  "fetched_at": "2026-11-12T21:39:12+00:00",
   "filings": [
    {
     "dii": 0.2,
@@ -44856,7 +44856,7 @@
   "source": "NSE XBRL"
  },
  "IDEA": {
-  "fetched_at": "2026-11-11T21:37:12+00:00",
+  "fetched_at": "2026-11-12T21:39:14+00:00",
   "filings": [
    {
     "dii": 6.65,
@@ -45044,7 +45044,7 @@
   "source": "NSE XBRL"
  },
  "IDFCFIRSTB": {
-  "fetched_at": "2026-11-11T21:37:14+00:00",
+  "fetched_at": "2026-11-12T21:39:16+00:00",
   "filings": [
    {
     "dii": 25.42,
@@ -45240,7 +45240,7 @@
   "source": "NSE XBRL"
  },
  "IEX": {
-  "fetched_at": "2026-11-11T21:37:16+00:00",
+  "fetched_at": "2026-11-12T21:39:18+00:00",
   "filings": [
    {
     "dii": 31.79,
@@ -45404,7 +45404,7 @@
   "source": "NSE XBRL"
  },
  "IFCI": {
-  "fetched_at": "2026-11-11T21:37:18+00:00",
+  "fetched_at": "2026-11-12T21:39:21+00:00",
   "filings": [
    {
     "dii": 1.66,
@@ -45464,7 +45464,7 @@
   "source": "NSE XBRL"
  },
  "IGIL": {
-  "fetched_at": "2026-11-11T21:37:20+00:00",
+  "fetched_at": "2026-11-12T21:39:23+00:00",
   "filings": [
    {
     "dii": 5.47,
@@ -45564,7 +45564,7 @@
   "source": "NSE XBRL"
  },
  "IGL": {
-  "fetched_at": "2026-11-11T21:37:22+00:00",
+  "fetched_at": "2026-11-12T21:39:25+00:00",
   "filings": [
    {
     "dii": 30.08,
@@ -45736,7 +45736,7 @@
   "source": "NSE XBRL"
  },
  "IIFL": {
-  "fetched_at": "2026-11-11T21:37:24+00:00",
+  "fetched_at": "2026-11-12T21:39:27+00:00",
   "filings": [
    {
     "dii": 7.85,
@@ -45964,7 +45964,7 @@
   "source": "NSE XBRL"
  },
  "IKS": {
-  "fetched_at": "2026-11-11T21:37:26+00:00",
+  "fetched_at": "2026-11-12T21:39:29+00:00",
   "filings": [
    {
     "dii": 7.56,
@@ -46460,7 +46460,7 @@
   "source": "NSE XBRL"
  },
  "INDHOTEL": {
-  "fetched_at": "2026-11-11T21:37:28+00:00",
+  "fetched_at": "2026-11-12T21:39:31+00:00",
   "filings": [
    {
     "dii": 24.45,
@@ -46648,7 +46648,7 @@
   "source": "NSE XBRL"
  },
  "INDIACEM": {
-  "fetched_at": "2026-11-11T21:37:30+00:00",
+  "fetched_at": "2026-11-12T21:39:32+00:00",
   "filings": [
    {
     "dii": 12.43,
@@ -46740,7 +46740,7 @@
   "source": "NSE XBRL"
  },
  "INDIAMART": {
-  "fetched_at": "2026-11-11T21:37:32+00:00",
+  "fetched_at": "2026-11-12T21:39:35+00:00",
   "filings": [
    {
     "dii": 9.62,
@@ -46864,7 +46864,7 @@
   "source": "NSE XBRL"
  },
  "INDIANB": {
-  "fetched_at": "2026-11-11T21:37:34+00:00",
+  "fetched_at": "2026-11-12T21:39:37+00:00",
   "filings": [
    {
     "dii": 16.77,
@@ -46972,7 +46972,7 @@
   "source": "NSE XBRL"
  },
  "INDIGO": {
-  "fetched_at": "2026-11-11T21:37:36+00:00",
+  "fetched_at": "2026-11-12T21:39:39+00:00",
   "filings": [
    {
     "dii": 33.31,
@@ -47240,7 +47240,7 @@
   "source": "NSE XBRL"
  },
  "INDUSINDBK": {
-  "fetched_at": "2026-11-11T21:37:38+00:00",
+  "fetched_at": "2026-11-12T21:39:41+00:00",
   "filings": [
    {
     "dii": 41.29,
@@ -47508,7 +47508,7 @@
   "source": "NSE XBRL"
  },
  "INDUSTOWER": {
-  "fetched_at": "2026-11-11T21:37:40+00:00",
+  "fetched_at": "2026-11-12T21:39:43+00:00",
   "filings": [
    {
     "dii": 22.97,
@@ -47672,7 +47672,7 @@
   "source": "NSE XBRL"
  },
  "INFY": {
-  "fetched_at": "2026-11-11T21:37:42+00:00",
+  "fetched_at": "2026-11-12T21:39:44+00:00",
   "filings": [
    {
     "dii": 42.85,
@@ -47956,7 +47956,7 @@
   "source": "NSE XBRL"
  },
  "INOXINDIA": {
-  "fetched_at": "2026-11-11T21:37:44+00:00",
+  "fetched_at": "2026-11-12T21:39:46+00:00",
   "filings": [
    {
     "dii": 7.44,
@@ -48088,7 +48088,7 @@
   "source": "NSE XBRL"
  },
  "INOXWIND": {
-  "fetched_at": "2026-11-11T21:37:46+00:00",
+  "fetched_at": "2026-11-12T21:39:49+00:00",
   "filings": [
    {
     "dii": 9.8,
@@ -48292,7 +48292,7 @@
   "source": "NSE XBRL"
  },
  "INTELLECT": {
-  "fetched_at": "2026-11-11T21:37:48+00:00",
+  "fetched_at": "2026-11-12T21:39:51+00:00",
   "filings": [
    {
     "dii": 7.54,
@@ -48472,7 +48472,7 @@
   "source": "NSE XBRL"
  },
  "IOB": {
-  "fetched_at": "2026-11-11T21:37:50+00:00",
+  "fetched_at": "2026-11-12T21:39:52+00:00",
   "filings": [
    {
     "dii": 4.29,
@@ -48532,7 +48532,7 @@
   "source": "NSE XBRL"
  },
  "IOC": {
-  "fetched_at": "2026-11-11T21:37:52+00:00",
+  "fetched_at": "2026-11-12T21:39:55+00:00",
   "filings": [
    {
     "dii": 10.05,
@@ -48648,7 +48648,7 @@
   "source": "NSE XBRL"
  },
  "IPCALAB": {
-  "fetched_at": "2026-11-11T21:37:54+00:00",
+  "fetched_at": "2026-11-12T21:39:57+00:00",
   "filings": [
    {
     "dii": 36.59,
@@ -48924,7 +48924,7 @@
   "source": "NSE XBRL"
  },
  "IRB": {
-  "fetched_at": "2026-11-11T21:37:56+00:00",
+  "fetched_at": "2026-11-12T21:39:59+00:00",
   "filings": [
    {
     "dii": 10.18,
@@ -49048,7 +49048,7 @@
   "source": "NSE XBRL"
  },
  "IRCON": {
-  "fetched_at": "2026-11-11T21:37:58+00:00",
+  "fetched_at": "2026-11-12T21:40:01+00:00",
   "filings": [
    {
     "dii": 1.81,
@@ -49092,7 +49092,7 @@
   "source": "NSE XBRL"
  },
  "IRCTC": {
-  "fetched_at": "2026-11-11T21:38:00+00:00",
+  "fetched_at": "2026-11-12T21:40:02+00:00",
   "filings": [
    {
     "dii": 14.56,
@@ -49168,7 +49168,7 @@
   "source": "NSE XBRL"
  },
  "IREDA": {
-  "fetched_at": "2026-11-11T21:38:02+00:00",
+  "fetched_at": "2026-11-12T21:40:04+00:00",
   "filings": [
    {
     "dii": 2.53,
@@ -49228,7 +49228,7 @@
   "source": "NSE XBRL"
  },
  "IRFC": {
-  "fetched_at": "2026-11-11T21:38:04+00:00",
+  "fetched_at": "2026-11-12T21:40:06+00:00",
   "filings": [
    {
     "dii": 3.97,
@@ -49288,7 +49288,7 @@
   "source": "NSE XBRL"
  },
  "ITC": {
-  "fetched_at": "2026-11-11T21:38:06+00:00",
+  "fetched_at": "2026-11-12T21:40:11+00:00",
   "filings": [
    {
     "dii": 49.82,
@@ -49564,7 +49564,7 @@
   "source": "NSE XBRL"
  },
  "ITCHOTELS": {
-  "fetched_at": "2026-11-11T21:38:08+00:00",
+  "fetched_at": "2026-11-12T21:40:11+00:00",
   "filings": [
    {
     "dii": 23.55,
@@ -49704,7 +49704,7 @@
   "source": "NSE XBRL"
  },
  "ITI": {
-  "fetched_at": "2026-11-11T21:38:10+00:00",
+  "fetched_at": "2026-11-12T21:40:13+00:00",
   "filings": [
    {
     "dii": 0.07,
@@ -49764,7 +49764,7 @@
   "source": "NSE XBRL"
  },
  "J&KBANK": {
-  "fetched_at": "2026-11-11T21:38:12+00:00",
+  "fetched_at": "2026-11-12T21:40:15+00:00",
   "filings": [
    {
     "dii": 7.42,
@@ -49912,7 +49912,7 @@
   "source": "NSE XBRL"
  },
  "JAINREC": {
-  "fetched_at": "2026-11-11T21:38:14+00:00",
+  "fetched_at": "2026-11-12T21:40:17+00:00",
   "filings": [
    {
     "dii": 9.6,
@@ -50036,7 +50036,7 @@
   "source": "NSE XBRL"
  },
  "JBMA": {
-  "fetched_at": "2026-11-11T21:38:16+00:00",
+  "fetched_at": "2026-11-12T21:40:19+00:00",
   "filings": [
    {
     "dii": 0.13,
@@ -50240,7 +50240,7 @@
   "source": "NSE XBRL"
  },
  "JINDALSAW": {
-  "fetched_at": "2026-11-11T21:38:18+00:00",
+  "fetched_at": "2026-11-12T21:40:21+00:00",
   "filings": [
    {
     "dii": 10.89,
@@ -50484,7 +50484,7 @@
   "source": "NSE XBRL"
  },
  "JINDALSTEL": {
-  "fetched_at": "2026-11-11T21:38:20+00:00",
+  "fetched_at": "2026-11-12T21:40:23+00:00",
   "filings": [
    {
     "dii": 19.7,
@@ -50728,7 +50728,7 @@
   "source": "NSE XBRL"
  },
  "JIOFIN": {
-  "fetched_at": "2026-11-11T21:38:22+00:00",
+  "fetched_at": "2026-11-12T21:40:25+00:00",
   "filings": [
    {
     "dii": 13.39,
@@ -50916,7 +50916,7 @@
   "source": "NSE XBRL"
  },
  "JKCEMENT": {
-  "fetched_at": "2026-11-11T21:38:24+00:00",
+  "fetched_at": "2026-11-12T21:40:27+00:00",
   "filings": [
    {
     "dii": 22.33,
@@ -51208,7 +51208,7 @@
   "source": "NSE XBRL"
  },
  "JKTYRE": {
-  "fetched_at": "2026-11-11T21:38:26+00:00",
+  "fetched_at": "2026-11-12T21:40:29+00:00",
   "filings": [
    {
     "dii": 8.32,
@@ -51380,7 +51380,7 @@
   "source": "NSE XBRL"
  },
  "JMFINANCIL": {
-  "fetched_at": "2026-11-11T21:38:28+00:00",
+  "fetched_at": "2026-11-12T21:40:31+00:00",
   "filings": [
    {
     "dii": 5.07,
@@ -51632,7 +51632,7 @@
   "source": "NSE XBRL"
  },
  "JPPOWER": {
-  "fetched_at": "2026-11-11T21:38:30+00:00",
+  "fetched_at": "2026-11-12T21:40:33+00:00",
   "filings": [
    {
     "dii": 10.49,
@@ -51748,7 +51748,7 @@
   "source": "NSE XBRL"
  },
  "JSL": {
-  "fetched_at": "2026-11-11T21:38:32+00:00",
+  "fetched_at": "2026-11-12T21:40:35+00:00",
   "filings": [
    {
     "dii": 7.74,
@@ -52032,7 +52032,7 @@
   "source": "NSE XBRL"
  },
  "JSWCEMENT": {
-  "fetched_at": "2026-11-11T21:38:34+00:00",
+  "fetched_at": "2026-11-12T21:40:37+00:00",
   "filings": [
    {
     "dii": 12.28,
@@ -52360,7 +52360,7 @@
   "source": "NSE XBRL"
  },
  "JSWENERGY": {
-  "fetched_at": "2026-11-11T21:38:36+00:00",
+  "fetched_at": "2026-11-12T21:40:39+00:00",
   "filings": [
    {
     "dii": 16.71,
@@ -52564,7 +52564,7 @@
   "source": "NSE XBRL"
  },
  "JSWINFRA": {
-  "fetched_at": "2026-11-11T21:38:38+00:00",
+  "fetched_at": "2026-11-12T21:40:41+00:00",
   "filings": [
    {
     "dii": 8.51,
@@ -52712,7 +52712,7 @@
   "source": "NSE XBRL"
  },
  "JSWSTEEL": {
-  "fetched_at": "2026-11-11T21:38:40+00:00",
+  "fetched_at": "2026-11-12T21:40:43+00:00",
   "filings": [
    {
     "dii": 11.34,
@@ -53004,7 +53004,7 @@
   "source": "NSE XBRL"
  },
  "JUBLFOOD": {
-  "fetched_at": "2026-11-11T21:38:42+00:00",
+  "fetched_at": "2026-11-12T21:40:45+00:00",
   "filings": [
    {
     "dii": 40.34,
@@ -53224,7 +53224,7 @@
   "source": "NSE XBRL"
  },
  "JUBLINGREA": {
-  "fetched_at": "2026-11-11T21:38:44+00:00",
+  "fetched_at": "2026-11-12T21:40:47+00:00",
   "filings": [
    {
     "dii": 25.17,
@@ -53476,7 +53476,7 @@
   "source": "NSE XBRL"
  },
  "JUBLPHARMA": {
-  "fetched_at": "2026-11-11T21:47:22+00:00",
+  "fetched_at": "2026-11-12T21:49:19+00:00",
   "filings": [
    {
     "dii": 13.02,
@@ -53744,7 +53744,7 @@
   "source": "NSE XBRL"
  },
  "JWL": {
-  "fetched_at": "2026-11-11T21:38:46+00:00",
+  "fetched_at": "2026-11-12T21:40:49+00:00",
   "filings": [
    {
     "dii": 0.8,
@@ -53996,7 +53996,7 @@
   "source": "NSE XBRL"
  },
  "JYOTICNC": {
-  "fetched_at": "2026-11-11T21:38:48+00:00",
+  "fetched_at": "2026-11-12T21:40:51+00:00",
   "filings": [
    {
     "dii": 12.86,
@@ -54200,7 +54200,7 @@
   "source": "NSE XBRL"
  },
  "KAJARIACER": {
-  "fetched_at": "2026-11-11T21:38:50+00:00",
+  "fetched_at": "2026-11-12T21:40:53+00:00",
   "filings": [
    {
     "dii": 26.09,
@@ -54460,7 +54460,7 @@
   "source": "NSE XBRL"
  },
  "KALYANKJIL": {
-  "fetched_at": "2026-11-11T21:38:52+00:00",
+  "fetched_at": "2026-11-12T21:40:55+00:00",
   "filings": [
    {
     "dii": 14.41,
@@ -54648,7 +54648,7 @@
   "source": "NSE XBRL"
  },
  "KARURVYSYA": {
-  "fetched_at": "2026-11-11T21:38:54+00:00",
+  "fetched_at": "2026-11-12T21:40:57+00:00",
   "filings": [
    {
     "dii": 42.1,
@@ -54884,7 +54884,7 @@
   "source": "NSE XBRL"
  },
  "KAYNES": {
-  "fetched_at": "2026-11-11T21:38:56+00:00",
+  "fetched_at": "2026-11-12T21:40:59+00:00",
   "filings": [
    {
     "dii": 12.48,
@@ -54992,7 +54992,7 @@
   "source": "NSE XBRL"
  },
  "KCP": {
-  "fetched_at": "2026-11-11T21:46:48+00:00",
+  "fetched_at": "2026-11-12T21:48:45+00:00",
   "filings": [
    {
     "dii": 0.56,
@@ -55172,7 +55172,7 @@
   "source": "NSE XBRL"
  },
  "KEC": {
-  "fetched_at": "2026-11-11T21:38:58+00:00",
+  "fetched_at": "2026-11-12T21:41:01+00:00",
   "filings": [
    {
     "dii": 20.76,
@@ -55408,7 +55408,7 @@
   "source": "NSE XBRL"
  },
  "KEI": {
-  "fetched_at": "2026-11-11T21:39:00+00:00",
+  "fetched_at": "2026-11-12T21:41:03+00:00",
   "filings": [
    {
     "dii": 26.26,
@@ -55700,7 +55700,7 @@
   "source": "NSE XBRL"
  },
  "KFINTECH": {
-  "fetched_at": "2026-11-11T21:39:02+00:00",
+  "fetched_at": "2026-11-12T21:41:05+00:00",
   "filings": [
    {
     "dii": 37.55,
@@ -55944,7 +55944,7 @@
   "source": "NSE XBRL"
  },
  "KIMS": {
-  "fetched_at": "2026-11-11T21:39:04+00:00",
+  "fetched_at": "2026-11-12T21:41:07+00:00",
   "filings": [
    {
     "dii": 33.22,
@@ -56252,7 +56252,7 @@
   "source": "NSE XBRL"
  },
  "KIRLOSBROS": {
-  "fetched_at": "2026-11-11T21:39:06+00:00",
+  "fetched_at": "2026-11-12T21:41:09+00:00",
   "filings": [
    {
     "dii": 10.85,
@@ -56416,7 +56416,7 @@
   "source": "NSE XBRL"
  },
  "KIRLOSENG": {
-  "fetched_at": "2026-11-11T21:39:08+00:00",
+  "fetched_at": "2026-11-12T21:41:11+00:00",
   "filings": [
    {
     "dii": 27.03,
@@ -56708,7 +56708,7 @@
   "source": "NSE XBRL"
  },
  "KOTAKBANK": {
-  "fetched_at": "2026-11-11T21:39:10+00:00",
+  "fetched_at": "2026-11-12T21:41:13+00:00",
   "filings": [
    {
     "dii": 38.54,
@@ -56912,7 +56912,7 @@
   "source": "NSE XBRL"
  },
  "KPIL": {
-  "fetched_at": "2026-11-11T21:39:12+00:00",
+  "fetched_at": "2026-11-12T21:41:15+00:00",
   "filings": [
    {
     "dii": 44.85,
@@ -57164,7 +57164,7 @@
   "source": "NSE XBRL"
  },
  "KPITTECH": {
-  "fetched_at": "2026-11-11T21:39:14+00:00",
+  "fetched_at": "2026-11-12T21:41:17+00:00",
   "filings": [
    {
     "dii": 23.48,
@@ -57336,7 +57336,7 @@
   "source": "NSE XBRL"
  },
  "KPRMILL": {
-  "fetched_at": "2026-11-11T21:39:16+00:00",
+  "fetched_at": "2026-11-12T21:41:19+00:00",
   "filings": [
    {
     "dii": 19.15,
@@ -57476,7 +57476,7 @@
   "source": "NSE XBRL"
  },
  "KSB": {
-  "fetched_at": "2026-11-11T21:39:18+00:00",
+  "fetched_at": "2026-11-12T21:41:21+00:00",
   "filings": [
    {
     "dii": 12.2,
@@ -57632,7 +57632,7 @@
   "source": "NSE XBRL"
  },
  "LALPATHLAB": {
-  "fetched_at": "2026-11-11T21:39:20+00:00",
+  "fetched_at": "2026-11-12T21:41:23+00:00",
   "filings": [
    {
     "dii": 21.58,
@@ -57976,7 +57976,7 @@
   "source": "NSE XBRL"
  },
  "LAURUSLABS": {
-  "fetched_at": "2026-11-11T21:39:22+00:00",
+  "fetched_at": "2026-11-12T21:41:25+00:00",
   "filings": [
    {
     "dii": 11.86,
@@ -58172,7 +58172,7 @@
   "source": "NSE XBRL"
  },
  "LEMONTREE": {
-  "fetched_at": "2026-11-11T21:39:24+00:00",
+  "fetched_at": "2026-11-12T21:41:27+00:00",
   "filings": [
    {
     "dii": 14.8,
@@ -58328,7 +58328,7 @@
   "source": "NSE XBRL"
  },
  "LENSKART": {
-  "fetched_at": "2026-11-11T21:39:26+00:00",
+  "fetched_at": "2026-11-12T21:41:29+00:00",
   "filings": [
    {
     "dii": 26.82,
@@ -58660,7 +58660,7 @@
   "source": "NSE XBRL"
  },
  "LGEINDIA": {
-  "fetched_at": "2026-11-11T21:39:28+00:00",
+  "fetched_at": "2026-11-12T21:41:32+00:00",
   "filings": [
    {
     "dii": 8.79,
@@ -58720,7 +58720,7 @@
   "source": "NSE XBRL"
  },
  "LICHSGFIN": {
-  "fetched_at": "2026-11-11T21:39:30+00:00",
+  "fetched_at": "2026-11-12T21:41:33+00:00",
   "filings": [
    {
     "dii": 21.64,
@@ -58892,7 +58892,7 @@
   "source": "NSE XBRL"
  },
  "LICI": {
-  "fetched_at": "2026-11-11T21:39:32+00:00",
+  "fetched_at": "2026-11-12T21:41:35+00:00",
   "filings": [
    {
     "dii": 6.17,
@@ -58952,7 +58952,7 @@
   "source": "NSE XBRL"
  },
  "LINDEINDIA": {
-  "fetched_at": "2026-11-11T21:39:34+00:00",
+  "fetched_at": "2026-11-12T21:41:37+00:00",
   "filings": [
    {
     "dii": 6.74,
@@ -59052,7 +59052,7 @@
   "source": "NSE XBRL"
  },
  "LLOYDSME": {
-  "fetched_at": "2026-11-11T21:39:36+00:00",
+  "fetched_at": "2026-11-12T21:41:39+00:00",
   "filings": [
    {
     "dii": 2.14,
@@ -59264,7 +59264,7 @@
   "source": "NSE XBRL"
  },
  "LODHA": {
-  "fetched_at": "2026-11-11T21:39:38+00:00",
+  "fetched_at": "2026-11-12T21:41:41+00:00",
   "filings": [
    {
     "dii": 2.55,
@@ -59420,7 +59420,7 @@
   "source": "NSE XBRL"
  },
  "LT": {
-  "fetched_at": "2026-11-11T21:39:40+00:00",
+  "fetched_at": "2026-11-12T21:41:43+00:00",
   "filings": [
    {
     "dii": 42.86,
@@ -59632,7 +59632,7 @@
   "source": "NSE XBRL"
  },
  "LTF": {
-  "fetched_at": "2026-11-11T21:39:42+00:00",
+  "fetched_at": "2026-11-12T21:41:45+00:00",
   "filings": [
    {
     "dii": 15.79,
@@ -59748,7 +59748,7 @@
   "source": "NSE XBRL"
  },
  "LTFOODS": {
-  "fetched_at": "2026-11-11T21:39:44+00:00",
+  "fetched_at": "2026-11-12T21:41:47+00:00",
   "filings": [
    {
     "dii": 11.23,
@@ -60008,7 +60008,7 @@
   "source": "NSE XBRL"
  },
  "LTM": {
-  "fetched_at": "2026-11-11T21:39:46+00:00",
+  "fetched_at": "2026-11-12T21:41:49+00:00",
   "filings": [
    {
     "dii": 16.84,
@@ -60084,7 +60084,7 @@
   "source": "NSE XBRL"
  },
  "LTTS": {
-  "fetched_at": "2026-11-11T21:39:48+00:00",
+  "fetched_at": "2026-11-12T21:41:51+00:00",
   "filings": [
    {
     "dii": 13.76,
@@ -60176,7 +60176,7 @@
   "source": "NSE XBRL"
  },
  "LUPIN": {
-  "fetched_at": "2026-11-11T21:39:50+00:00",
+  "fetched_at": "2026-11-12T21:41:53+00:00",
   "filings": [
    {
     "dii": 23.78,
@@ -60324,7 +60324,7 @@
   "source": "NSE XBRL"
  },
  "M&M": {
-  "fetched_at": "2026-11-11T21:39:52+00:00",
+  "fetched_at": "2026-11-12T21:41:55+00:00",
   "filings": [
    {
     "dii": 34.24,
@@ -60608,7 +60608,7 @@
   "source": "NSE XBRL"
  },
  "M&MFIN": {
-  "fetched_at": "2026-11-11T21:39:54+00:00",
+  "fetched_at": "2026-11-12T21:41:57+00:00",
   "filings": [
    {
     "dii": 31.56,
@@ -60780,7 +60780,7 @@
   "source": "NSE XBRL"
  },
  "MAHABANK": {
-  "fetched_at": "2026-11-11T21:39:56+00:00",
+  "fetched_at": "2026-11-12T21:41:59+00:00",
   "filings": [
    {
     "dii": 13.77,
@@ -60872,7 +60872,7 @@
   "source": "NSE XBRL"
  },
  "MANAPPURAM": {
-  "fetched_at": "2026-11-11T21:39:58+00:00",
+  "fetched_at": "2026-11-12T21:42:01+00:00",
   "filings": [
    {
     "dii": 17.55,
@@ -61036,7 +61036,7 @@
   "source": "NSE XBRL"
  },
  "MANKIND": {
-  "fetched_at": "2026-11-11T21:40:00+00:00",
+  "fetched_at": "2026-11-12T21:42:03+00:00",
   "filings": [
    {
     "dii": 15.56,
@@ -61428,7 +61428,7 @@
   "source": "NSE XBRL"
  },
  "MARICO": {
-  "fetched_at": "2026-11-11T21:40:02+00:00",
+  "fetched_at": "2026-11-12T21:42:05+00:00",
   "filings": [
    {
     "dii": 14.1,
@@ -61680,7 +61680,7 @@
   "source": "NSE XBRL"
  },
  "MARUTI": {
-  "fetched_at": "2026-11-11T21:40:04+00:00",
+  "fetched_at": "2026-11-12T21:42:07+00:00",
   "filings": [
    {
     "dii": 25.41,
@@ -61852,7 +61852,7 @@
   "source": "NSE XBRL"
  },
  "MAXHEALTH": {
-  "fetched_at": "2026-11-11T21:40:06+00:00",
+  "fetched_at": "2026-11-12T21:42:09+00:00",
   "filings": [
    {
     "dii": 31.0,
@@ -62168,7 +62168,7 @@
   "source": "NSE XBRL"
  },
  "MAZDOCK": {
-  "fetched_at": "2026-11-11T21:40:08+00:00",
+  "fetched_at": "2026-11-12T21:42:11+00:00",
   "filings": [
    {
     "dii": 5.09,
@@ -62228,7 +62228,7 @@
   "source": "NSE XBRL"
  },
  "MEDANTA": {
-  "fetched_at": "2026-11-11T21:40:12+00:00",
+  "fetched_at": "2026-11-12T21:42:15+00:00",
   "filings": [
    {
     "dii": 17.01,
@@ -62432,7 +62432,7 @@
   "source": "NSE XBRL"
  },
  "MEESHO": {
-  "fetched_at": "2026-11-11T21:40:14+00:00",
+  "fetched_at": "2026-11-12T21:42:17+00:00",
   "filings": [
    {
     "dii": 13.66,
@@ -62700,7 +62700,7 @@
   "source": "NSE XBRL"
  },
  "MFSL": {
-  "fetched_at": "2026-11-11T21:40:16+00:00",
+  "fetched_at": "2026-11-12T21:42:19+00:00",
   "filings": [
    {
     "dii": 43.7,
@@ -63016,7 +63016,7 @@
   "source": "NSE XBRL"
  },
  "MGL": {
-  "fetched_at": "2026-11-11T21:40:18+00:00",
+  "fetched_at": "2026-11-12T21:42:21+00:00",
   "filings": [
    {
     "dii": 22.26,
@@ -63252,7 +63252,7 @@
   "source": "NSE XBRL"
  },
  "MINDACORP": {
-  "fetched_at": "2026-11-11T21:40:20+00:00",
+  "fetched_at": "2026-11-12T21:42:23+00:00",
   "filings": [
    {
     "dii": 17.91,
@@ -63400,7 +63400,7 @@
   "source": "NSE XBRL"
  },
  "MMTC": {
-  "fetched_at": "2026-11-11T21:40:22+00:00",
+  "fetched_at": "2026-11-12T21:42:25+00:00",
   "filings": [
    {
     "dii": 1.78,
@@ -63460,7 +63460,7 @@
   "source": "NSE XBRL"
  },
  "MOTHERSON": {
-  "fetched_at": "2026-11-11T21:40:24+00:00",
+  "fetched_at": "2026-11-12T21:42:27+00:00",
   "filings": [
    {
     "dii": 20.8,
@@ -63696,7 +63696,7 @@
   "source": "NSE XBRL"
  },
  "MOTILALOFS": {
-  "fetched_at": "2026-11-11T21:40:26+00:00",
+  "fetched_at": "2026-11-12T21:42:29+00:00",
   "filings": [
    {
     "dii": 7.28,
@@ -63948,7 +63948,7 @@
   "source": "NSE XBRL"
  },
  "MPHASIS": {
-  "fetched_at": "2026-11-11T21:40:28+00:00",
+  "fetched_at": "2026-11-12T21:42:31+00:00",
   "filings": [
    {
     "dii": 45.85,
@@ -64216,7 +64216,7 @@
   "source": "NSE XBRL"
  },
  "MRF": {
-  "fetched_at": "2026-11-11T21:40:30+00:00",
+  "fetched_at": "2026-11-12T21:42:33+00:00",
   "filings": [
    {
     "dii": 12.7,
@@ -64404,7 +64404,7 @@
   "source": "NSE XBRL"
  },
  "MRPL": {
-  "fetched_at": "2026-11-11T21:40:32+00:00",
+  "fetched_at": "2026-11-12T21:42:35+00:00",
   "filings": [
    {
     "dii": 0.54,
@@ -64480,7 +64480,7 @@
   "source": "NSE XBRL"
  },
  "MSUMI": {
-  "fetched_at": "2026-11-11T21:40:34+00:00",
+  "fetched_at": "2026-11-12T21:42:37+00:00",
   "filings": [
    {
     "dii": 18.31,
@@ -64644,7 +64644,7 @@
   "source": "NSE XBRL"
  },
  "MTARTECH": {
-  "fetched_at": "2026-11-11T21:40:36+00:00",
+  "fetched_at": "2026-11-12T21:42:39+00:00",
   "filings": [
    {
     "dii": 27.09,
@@ -64960,7 +64960,7 @@
   "source": "NSE XBRL"
  },
  "MUTHOOTFIN": {
-  "fetched_at": "2026-11-11T21:40:38+00:00",
+  "fetched_at": "2026-11-12T21:42:41+00:00",
   "filings": [
    {
     "dii": 12.55,
@@ -65220,7 +65220,7 @@
   "source": "NSE XBRL"
  },
  "NAM-INDIA": {
-  "fetched_at": "2026-11-11T21:40:40+00:00",
+  "fetched_at": "2026-11-12T21:42:43+00:00",
   "filings": [
    {
     "dii": 15.56,
@@ -65336,7 +65336,7 @@
   "source": "NSE XBRL"
  },
  "NATCOPHARM": {
-  "fetched_at": "2026-11-11T21:40:42+00:00",
+  "fetched_at": "2026-11-12T21:42:45+00:00",
   "filings": [
    {
     "dii": 6.16,
@@ -65516,7 +65516,7 @@
   "source": "NSE XBRL"
  },
  "NATIONALUM": {
-  "fetched_at": "2026-11-11T21:40:44+00:00",
+  "fetched_at": "2026-11-12T21:42:47+00:00",
   "filings": [
    {
     "dii": 11.71,
@@ -65600,7 +65600,7 @@
   "source": "NSE XBRL"
  },
  "NAUKRI": {
-  "fetched_at": "2026-11-11T21:40:46+00:00",
+  "fetched_at": "2026-11-12T21:42:49+00:00",
   "filings": [
    {
     "dii": 26.81,
@@ -65892,7 +65892,7 @@
   "source": "NSE XBRL"
  },
  "NAVA": {
-  "fetched_at": "2026-11-11T21:40:48+00:00",
+  "fetched_at": "2026-11-12T21:42:52+00:00",
   "filings": [
    {
     "dii": 0.47,
@@ -66144,7 +66144,7 @@
   "source": "NSE XBRL"
  },
  "NAVINFLUOR": {
-  "fetched_at": "2026-11-11T21:40:50+00:00",
+  "fetched_at": "2026-11-12T21:42:53+00:00",
   "filings": [
    {
     "dii": 28.7,
@@ -66388,7 +66388,7 @@
   "source": "NSE XBRL"
  },
  "NBCC": {
-  "fetched_at": "2026-11-11T21:40:52+00:00",
+  "fetched_at": "2026-11-12T21:42:55+00:00",
   "filings": [
    {
     "dii": 10.19,
@@ -66472,7 +66472,7 @@
   "source": "NSE XBRL"
  },
  "NCC": {
-  "fetched_at": "2026-11-11T21:40:54+00:00",
+  "fetched_at": "2026-11-12T21:42:57+00:00",
   "filings": [
    {
     "dii": 18.16,
@@ -66652,7 +66652,7 @@
   "source": "NSE XBRL"
  },
  "NESTLEIND": {
-  "fetched_at": "2026-11-11T21:40:56+00:00",
+  "fetched_at": "2026-11-12T21:42:59+00:00",
   "filings": [
    {
     "dii": 10.67,
@@ -66736,7 +66736,7 @@
   "source": "NSE XBRL"
  },
  "NETWEB": {
-  "fetched_at": "2026-11-11T21:40:58+00:00",
+  "fetched_at": "2026-11-12T21:43:01+00:00",
   "filings": [
    {
     "dii": 7.22,
@@ -66868,7 +66868,7 @@
   "source": "NSE XBRL"
  },
  "NEULANDLAB": {
-  "fetched_at": "2026-11-11T21:41:00+00:00",
+  "fetched_at": "2026-11-12T21:43:03+00:00",
   "filings": [
    {
     "dii": 16.26,
@@ -67228,7 +67228,7 @@
   "source": "NSE XBRL"
  },
  "NH": {
-  "fetched_at": "2026-11-11T21:41:02+00:00",
+  "fetched_at": "2026-11-12T21:43:05+00:00",
   "filings": [
    {
     "dii": 10.68,
@@ -67416,7 +67416,7 @@
   "source": "NSE XBRL"
  },
  "NHPC": {
-  "fetched_at": "2026-11-11T21:41:04+00:00",
+  "fetched_at": "2026-11-12T21:43:07+00:00",
   "filings": [
    {
     "dii": 14.27,
@@ -67556,7 +67556,7 @@
   "source": "NSE XBRL"
  },
  "NIACL": {
-  "fetched_at": "2026-11-11T21:41:06+00:00",
+  "fetched_at": "2026-11-12T21:43:09+00:00",
   "filings": [
    {
     "dii": 11.19,
@@ -67632,7 +67632,7 @@
   "source": "NSE XBRL"
  },
  "NITINSPIN": {
-  "fetched_at": "2026-11-11T21:46:52+00:00",
+  "fetched_at": "2026-11-12T21:48:49+00:00",
   "filings": [
    {
     "dii": 14.77,
@@ -68024,7 +68024,7 @@
   "source": "NSE XBRL"
  },
  "NLCINDIA": {
-  "fetched_at": "2026-11-11T21:41:08+00:00",
+  "fetched_at": "2026-11-12T21:43:11+00:00",
   "filings": [
    {
     "dii": 13.64,
@@ -68164,7 +68164,7 @@
   "source": "NSE XBRL"
  },
  "NMDC": {
-  "fetched_at": "2026-11-11T21:41:10+00:00",
+  "fetched_at": "2026-11-12T21:43:13+00:00",
   "filings": [
    {
     "dii": 12.51,
@@ -68248,7 +68248,7 @@
   "source": "NSE XBRL"
  },
  "NOCIL": {
-  "fetched_at": "2026-11-11T21:46:54+00:00",
+  "fetched_at": "2026-11-12T21:48:51+00:00",
   "filings": [
    {
     "dii": 6.96,
@@ -68420,7 +68420,7 @@
   "source": "NSE XBRL"
  },
  "NSLNISP": {
-  "fetched_at": "2026-11-11T21:41:12+00:00",
+  "fetched_at": "2026-11-12T21:43:15+00:00",
   "filings": [
    {
     "dii": 15.79,
@@ -68480,7 +68480,7 @@
   "source": "NSE XBRL"
  },
  "NTPC": {
-  "fetched_at": "2026-11-11T21:41:14+00:00",
+  "fetched_at": "2026-11-12T21:43:17+00:00",
   "filings": [
    {
     "dii": 29.87,
@@ -68660,7 +68660,7 @@
   "source": "NSE XBRL"
  },
  "NTPCGREEN": {
-  "fetched_at": "2026-11-11T21:41:16+00:00",
+  "fetched_at": "2026-11-12T21:43:19+00:00",
   "filings": [
    {
     "dii": 5.29,
@@ -68736,7 +68736,7 @@
   "source": "NSE XBRL"
  },
  "NUVAMA": {
-  "fetched_at": "2026-11-11T21:41:18+00:00",
+  "fetched_at": "2026-11-12T21:43:21+00:00",
   "filings": [
    {
     "dii": 8.36,
@@ -68868,7 +68868,7 @@
   "source": "NSE XBRL"
  },
  "NUVOCO": {
-  "fetched_at": "2026-11-11T21:41:20+00:00",
+  "fetched_at": "2026-11-12T21:43:23+00:00",
   "filings": [
    {
     "dii": 17.65,
@@ -69008,7 +69008,7 @@
   "source": "NSE XBRL"
  },
  "NYKAA": {
-  "fetched_at": "2026-11-11T21:41:22+00:00",
+  "fetched_at": "2026-11-12T21:43:25+00:00",
   "filings": [
    {
     "dii": 22.35,
@@ -69316,7 +69316,7 @@
   "source": "NSE XBRL"
  },
  "OBEROIRLTY": {
-  "fetched_at": "2026-11-11T21:41:24+00:00",
+  "fetched_at": "2026-11-12T21:43:27+00:00",
   "filings": [
    {
     "dii": 14.83,
@@ -69440,7 +69440,7 @@
   "source": "NSE XBRL"
  },
  "OFSS": {
-  "fetched_at": "2026-11-11T21:41:26+00:00",
+  "fetched_at": "2026-11-12T21:43:29+00:00",
   "filings": [
    {
     "dii": 7.77,
@@ -69508,7 +69508,7 @@
   "source": "NSE XBRL"
  },
  "OIL": {
-  "fetched_at": "2026-11-11T21:41:28+00:00",
+  "fetched_at": "2026-11-12T21:43:31+00:00",
   "filings": [
    {
     "dii": 20.67,
@@ -69680,7 +69680,7 @@
   "source": "NSE XBRL"
  },
  "OLAELEC": {
-  "fetched_at": "2026-11-11T21:41:30+00:00",
+  "fetched_at": "2026-11-12T21:43:33+00:00",
   "filings": [
    {
     "dii": 11.75,
@@ -69820,7 +69820,7 @@
   "source": "NSE XBRL"
  },
  "OLECTRA": {
-  "fetched_at": "2026-11-11T21:41:32+00:00",
+  "fetched_at": "2026-11-12T21:43:35+00:00",
   "filings": [
    {
     "dii": 0.6,
@@ -69864,7 +69864,7 @@
   "source": "NSE XBRL"
  },
  "ONESOURCE": {
-  "fetched_at": "2026-11-11T21:41:34+00:00",
+  "fetched_at": "2026-11-12T21:43:37+00:00",
   "filings": [
    {
     "dii": 24.21,
@@ -70156,7 +70156,7 @@
   "source": "NSE XBRL"
  },
  "ONGC": {
-  "fetched_at": "2026-11-11T21:41:36+00:00",
+  "fetched_at": "2026-11-12T21:43:39+00:00",
   "filings": [
    {
     "dii": 18.66,
@@ -70296,7 +70296,7 @@
   "source": "NSE XBRL"
  },
  "ORIENTBELL": {
-  "fetched_at": "2026-11-11T21:46:56+00:00",
+  "fetched_at": "2026-11-12T21:48:53+00:00",
   "filings": [
    {
     "dii": 0.21,
@@ -70468,7 +70468,7 @@
   "source": "NSE XBRL"
  },
  "PAGEIND": {
-  "fetched_at": "2026-11-11T21:41:38+00:00",
+  "fetched_at": "2026-11-12T21:43:41+00:00",
   "filings": [
    {
     "dii": 32.92,
@@ -70776,7 +70776,7 @@
   "source": "NSE XBRL"
  },
  "PANAMAPET": {
-  "fetched_at": "2026-11-11T21:46:58+00:00",
+  "fetched_at": "2026-11-12T21:48:55+00:00",
   "filings": [
    {
     "dii": 0.01,
@@ -71204,7 +71204,7 @@
   "source": "NSE XBRL"
  },
  "PARADEEP": {
-  "fetched_at": "2026-11-11T21:41:40+00:00",
+  "fetched_at": "2026-11-12T21:43:43+00:00",
   "filings": [
    {
     "dii": 20.26,
@@ -71376,7 +71376,7 @@
   "source": "NSE XBRL"
  },
  "PATANJALI": {
-  "fetched_at": "2026-11-11T21:41:42+00:00",
+  "fetched_at": "2026-11-12T21:43:45+00:00",
   "filings": [
    {
     "dii": 12.51,
@@ -71532,7 +71532,7 @@
   "source": "NSE XBRL"
  },
  "PAYTM": {
-  "fetched_at": "2026-11-11T21:41:44+00:00",
+  "fetched_at": "2026-11-12T21:43:47+00:00",
   "filings": [
    {
     "dii": 29.51,
@@ -71848,7 +71848,7 @@
   "source": "NSE XBRL"
  },
  "PCBL": {
-  "fetched_at": "2026-11-11T21:41:46+00:00",
+  "fetched_at": "2026-11-12T21:43:49+00:00",
   "filings": [
    {
     "dii": 13.71,
@@ -72044,7 +72044,7 @@
   "source": "NSE XBRL"
  },
  "PERSISTENT": {
-  "fetched_at": "2026-11-11T21:41:49+00:00",
+  "fetched_at": "2026-11-12T21:43:51+00:00",
   "filings": [
    {
     "dii": 31.96,
@@ -72288,7 +72288,7 @@
   "source": "NSE XBRL"
  },
  "PETRONET": {
-  "fetched_at": "2026-11-11T21:41:50+00:00",
+  "fetched_at": "2026-11-12T21:43:53+00:00",
   "filings": [
    {
     "dii": 14.21,
@@ -72460,7 +72460,7 @@
   "source": "NSE XBRL"
  },
  "PFC": {
-  "fetched_at": "2026-11-11T21:41:52+00:00",
+  "fetched_at": "2026-11-12T21:43:56+00:00",
   "filings": [
    {
     "dii": 15.75,
@@ -72812,7 +72812,7 @@
   "source": "NSE XBRL"
  },
  "PFOCUS": {
-  "fetched_at": "2026-11-11T21:41:54+00:00",
+  "fetched_at": "2026-11-12T21:43:57+00:00",
   "filings": [
    {
     "dii": 1.07,
@@ -72984,7 +72984,7 @@
   "source": "NSE XBRL"
  },
  "PGEL": {
-  "fetched_at": "2026-11-11T21:41:56+00:00",
+  "fetched_at": "2026-11-12T21:43:59+00:00",
   "filings": [
    {
     "dii": 26.59,
@@ -73196,7 +73196,7 @@
   "source": "NSE XBRL"
  },
  "PHOENIXLTD": {
-  "fetched_at": "2026-11-11T21:41:58+00:00",
+  "fetched_at": "2026-11-12T21:44:01+00:00",
   "filings": [
    {
     "dii": 17.31,
@@ -73416,7 +73416,7 @@
   "source": "NSE XBRL"
  },
  "PIDILITIND": {
-  "fetched_at": "2026-11-11T21:42:00+00:00",
+  "fetched_at": "2026-11-12T21:44:03+00:00",
   "filings": [
    {
     "dii": 9.21,
@@ -73748,7 +73748,7 @@
   "source": "NSE XBRL"
  },
  "PIIND": {
-  "fetched_at": "2026-11-11T21:42:02+00:00",
+  "fetched_at": "2026-11-12T21:44:05+00:00",
   "filings": [
    {
     "dii": 31.52,
@@ -73992,7 +73992,7 @@
   "source": "NSE XBRL"
  },
  "PINELABS": {
-  "fetched_at": "2026-11-11T21:42:04+00:00",
+  "fetched_at": "2026-11-12T21:44:07+00:00",
   "filings": [
    {
     "dii": 29.58,
@@ -74324,7 +74324,7 @@
   "source": "NSE XBRL"
  },
  "PIRAMALFIN": {
-  "fetched_at": "2026-11-11T21:42:06+00:00",
+  "fetched_at": "2026-11-12T21:44:09+00:00",
   "filings": [
    {
     "dii": 21.75,
@@ -74592,7 +74592,7 @@
   "source": "NSE XBRL"
  },
  "PNB": {
-  "fetched_at": "2026-11-11T21:42:08+00:00",
+  "fetched_at": "2026-11-12T21:44:11+00:00",
   "filings": [
    {
     "dii": 16.13,
@@ -74668,7 +74668,7 @@
   "source": "NSE XBRL"
  },
  "PNBHOUSING": {
-  "fetched_at": "2026-11-11T21:42:10+00:00",
+  "fetched_at": "2026-11-12T21:44:13+00:00",
   "filings": [
    {
     "dii": 49.29,
@@ -74984,7 +74984,7 @@
   "source": "NSE XBRL"
  },
  "POLICYBZR": {
-  "fetched_at": "2026-11-11T21:42:12+00:00",
+  "fetched_at": "2026-11-12T21:44:15+00:00",
   "filings": [
    {
     "dii": 44.86,
@@ -75356,7 +75356,7 @@
   "source": "NSE XBRL"
  },
  "POLYCAB": {
-  "fetched_at": "2026-11-11T21:42:14+00:00",
+  "fetched_at": "2026-11-12T21:44:17+00:00",
   "filings": [
    {
     "dii": 7.9,
@@ -75632,7 +75632,7 @@
   "source": "NSE XBRL"
  },
  "POLYMED": {
-  "fetched_at": "2026-11-11T21:42:16+00:00",
+  "fetched_at": "2026-11-12T21:44:19+00:00",
   "filings": [
    {
     "dii": 15.9,
@@ -75988,7 +75988,7 @@
   "source": "NSE XBRL"
  },
  "POONAWALLA": {
-  "fetched_at": "2026-11-11T21:42:18+00:00",
+  "fetched_at": "2026-11-12T21:44:21+00:00",
   "filings": [
    {
     "dii": 17.16,
@@ -76112,7 +76112,7 @@
   "source": "NSE XBRL"
  },
  "POWERGRID": {
-  "fetched_at": "2026-11-11T21:42:20+00:00",
+  "fetched_at": "2026-11-12T21:44:23+00:00",
   "filings": [
    {
     "dii": 20.91,
@@ -76316,7 +76316,7 @@
   "source": "NSE XBRL"
  },
  "POWERINDIA": {
-  "fetched_at": "2026-11-11T21:42:22+00:00",
+  "fetched_at": "2026-11-12T21:44:25+00:00",
   "filings": [
    {
     "dii": 6.54,
@@ -76360,7 +76360,7 @@
   "source": "NSE XBRL"
  },
  "PPLPHARMA": {
-  "fetched_at": "2026-11-11T21:42:24+00:00",
+  "fetched_at": "2026-11-12T21:44:27+00:00",
   "filings": [
    {
     "dii": 14.44,
@@ -76508,7 +76508,7 @@
   "source": "NSE XBRL"
  },
  "PREMIERENE": {
-  "fetched_at": "2026-11-11T21:42:26+00:00",
+  "fetched_at": "2026-11-12T21:44:29+00:00",
   "filings": [
    {
     "dii": 18.88,
@@ -76672,7 +76672,7 @@
   "source": "NSE XBRL"
  },
  "PRESTIGE": {
-  "fetched_at": "2026-11-11T21:42:29+00:00",
+  "fetched_at": "2026-11-12T21:44:31+00:00",
   "filings": [
    {
     "dii": 23.81,
@@ -76892,7 +76892,7 @@
   "source": "NSE XBRL"
  },
  "PRIVISCL": {
-  "fetched_at": "2026-11-11T21:42:30+00:00",
+  "fetched_at": "2026-11-12T21:44:33+00:00",
   "filings": [
    {
     "dii": 8.96,
@@ -77144,7 +77144,7 @@
   "source": "NSE XBRL"
  },
  "PTCIL": {
-  "fetched_at": "2026-11-11T21:42:39+00:00",
+  "fetched_at": "2026-11-12T21:44:35+00:00",
   "filings": [
    {
     "dii": 9.58,
@@ -77412,7 +77412,7 @@
   "source": "NSE XBRL"
  },
  "PVRINOX": {
-  "fetched_at": "2026-11-11T21:42:40+00:00",
+  "fetched_at": "2026-11-12T21:44:37+00:00",
   "filings": [
    {
     "dii": 33.56,
@@ -77672,7 +77672,7 @@
   "source": "NSE XBRL"
  },
  "PWL": {
-  "fetched_at": "2026-11-11T21:42:42+00:00",
+  "fetched_at": "2026-11-12T21:44:39+00:00",
   "filings": [
    {
     "dii": 14.89,
@@ -77820,7 +77820,7 @@
   "source": "NSE XBRL"
  },
  "RADICO": {
-  "fetched_at": "2026-11-11T21:42:44+00:00",
+  "fetched_at": "2026-11-12T21:44:41+00:00",
   "filings": [
    {
     "dii": 27.17,
@@ -78080,7 +78080,7 @@
   "source": "NSE XBRL"
  },
  "RAILTEL": {
-  "fetched_at": "2026-11-11T21:42:46+00:00",
+  "fetched_at": "2026-11-12T21:44:43+00:00",
   "filings": [
    {
     "dii": 1.03,
@@ -78124,7 +78124,7 @@
   "source": "NSE XBRL"
  },
  "RAINBOW": {
-  "fetched_at": "2026-11-11T21:42:48+00:00",
+  "fetched_at": "2026-11-12T21:44:45+00:00",
   "filings": [
    {
     "dii": 23.28,
@@ -78416,7 +78416,7 @@
   "source": "NSE XBRL"
  },
  "RAMCOCEM": {
-  "fetched_at": "2026-11-11T21:42:50+00:00",
+  "fetched_at": "2026-11-12T21:44:47+00:00",
   "filings": [
    {
     "dii": 30.06,
@@ -78708,7 +78708,7 @@
   "source": "NSE XBRL"
  },
  "RAYMOND": {
-  "fetched_at": "2026-11-11T21:47:00+00:00",
+  "fetched_at": "2026-11-12T21:48:57+00:00",
   "filings": [
    {
     "dii": 6.11,
@@ -78856,7 +78856,7 @@
   "source": "NSE XBRL"
  },
  "RBLBANK": {
-  "fetched_at": "2026-11-11T21:42:52+00:00",
+  "fetched_at": "2026-11-12T21:44:49+00:00",
   "filings": [
    {
     "dii": 18.52,
@@ -79012,7 +79012,7 @@
   "source": "NSE XBRL"
  },
  "RECLTD": {
-  "fetched_at": "2026-11-11T21:42:54+00:00",
+  "fetched_at": "2026-11-12T21:44:51+00:00",
   "filings": [
    {
     "dii": 16.55,
@@ -79128,7 +79128,7 @@
   "source": "NSE XBRL"
  },
  "REDINGTON": {
-  "fetched_at": "2026-11-11T21:42:56+00:00",
+  "fetched_at": "2026-11-12T21:44:53+00:00",
   "filings": [
    {
     "dii": 16.0,
@@ -79340,7 +79340,7 @@
   "source": "NSE XBRL"
  },
  "RELIANCE": {
-  "fetched_at": "2026-11-11T21:42:58+00:00",
+  "fetched_at": "2026-11-12T21:44:55+00:00",
   "filings": [
    {
     "dii": 21.72,
@@ -79560,7 +79560,7 @@
   "source": "NSE XBRL"
  },
  "RHIM": {
-  "fetched_at": "2026-11-11T21:43:00+00:00",
+  "fetched_at": "2026-11-12T21:44:57+00:00",
   "filings": [
    {
     "dii": 26.07,
@@ -79772,7 +79772,7 @@
   "source": "NSE XBRL"
  },
  "RITES": {
-  "fetched_at": "2026-11-11T21:43:02+00:00",
+  "fetched_at": "2026-11-12T21:44:59+00:00",
   "filings": [
    {
     "dii": 9.16,
@@ -79848,7 +79848,7 @@
   "source": "NSE XBRL"
  },
  "RKFORGE": {
-  "fetched_at": "2026-11-11T21:43:04+00:00",
+  "fetched_at": "2026-11-12T21:45:01+00:00",
   "filings": [
    {
     "dii": 5.73,
@@ -80156,7 +80156,7 @@
   "source": "NSE XBRL"
  },
  "RPOWER": {
-  "fetched_at": "2026-11-11T21:43:06+00:00",
+  "fetched_at": "2026-11-12T21:45:03+00:00",
   "filings": [
    {
     "dii": 4.34,
@@ -80272,7 +80272,7 @@
   "source": "NSE XBRL"
  },
  "RRKABEL": {
-  "fetched_at": "2026-11-11T21:43:08+00:00",
+  "fetched_at": "2026-11-12T21:45:05+00:00",
   "filings": [
    {
     "dii": 10.25,
@@ -80668,7 +80668,7 @@
   "source": "NSE XBRL"
  },
  "RSYSTEMS": {
-  "fetched_at": "2026-11-11T21:47:02+00:00",
+  "fetched_at": "2026-11-12T21:48:59+00:00",
   "filings": [
    {
     "dii": 4.66,
@@ -80784,7 +80784,7 @@
   "source": "NSE XBRL"
  },
  "RUBICON": {
-  "fetched_at": "2026-11-11T21:43:10+00:00",
+  "fetched_at": "2026-11-12T21:45:07+00:00",
   "filings": [
    {
     "dii": 15.72,
@@ -81052,7 +81052,7 @@
   "source": "NSE XBRL"
  },
  "RVNL": {
-  "fetched_at": "2026-11-11T21:43:12+00:00",
+  "fetched_at": "2026-11-12T21:45:09+00:00",
   "filings": [
    {
     "dii": 6.21,
@@ -81112,7 +81112,7 @@
   "source": "NSE XBRL"
  },
  "SAFARI": {
-  "fetched_at": "2026-11-11T21:47:04+00:00",
+  "fetched_at": "2026-11-12T21:49:01+00:00",
   "filings": [
    {
     "dii": 28.55,
@@ -81428,7 +81428,7 @@
   "source": "NSE XBRL"
  },
  "SAGILITY": {
-  "fetched_at": "2026-11-11T21:43:14+00:00",
+  "fetched_at": "2026-11-12T21:45:11+00:00",
   "filings": [
    {
     "dii": 22.59,
@@ -81584,7 +81584,7 @@
   "source": "NSE XBRL"
  },
  "SAIL": {
-  "fetched_at": "2026-11-11T21:43:16+00:00",
+  "fetched_at": "2026-11-12T21:45:13+00:00",
   "filings": [
    {
     "dii": 16.49,
@@ -81660,7 +81660,7 @@
   "source": "NSE XBRL"
  },
  "SAILIFE": {
-  "fetched_at": "2026-11-11T21:43:18+00:00",
+  "fetched_at": "2026-11-12T21:45:15+00:00",
   "filings": [
    {
     "dii": 32.32,
@@ -81960,7 +81960,7 @@
   "source": "NSE XBRL"
  },
  "SAMMAANCAP": {
-  "fetched_at": "2026-11-11T21:43:20+00:00",
+  "fetched_at": "2026-11-12T21:45:17+00:00",
   "filings": [
    {
     "dii": 4.17,
@@ -82172,7 +82172,7 @@
   "source": "NSE XBRL"
  },
  "SANGAMIND": {
-  "fetched_at": "2026-11-11T21:47:06+00:00",
+  "fetched_at": "2026-11-12T21:49:03+00:00",
   "filings": [
    {
     "dii": 10.18,
@@ -82544,7 +82544,7 @@
   "source": "NSE XBRL"
  },
  "SANSERA": {
-  "fetched_at": "2026-11-11T21:43:22+00:00",
+  "fetched_at": "2026-11-12T21:45:19+00:00",
   "filings": [
    {
     "dii": 29.59,
@@ -83176,7 +83176,7 @@
   "source": "NSE XBRL"
  },
  "SARDAEN": {
-  "fetched_at": "2026-11-11T21:43:24+00:00",
+  "fetched_at": "2026-11-12T21:45:21+00:00",
   "filings": [
    {
     "dii": 3.47,
@@ -83412,7 +83412,7 @@
   "source": "NSE XBRL"
  },
  "SAREGAMA": {
-  "fetched_at": "2026-11-11T21:47:24+00:00",
+  "fetched_at": "2026-11-12T21:49:21+00:00",
   "filings": [
    {
     "dii": 9.36,
@@ -83544,7 +83544,7 @@
   "source": "NSE XBRL"
  },
  "SBFC": {
-  "fetched_at": "2026-11-11T21:47:26+00:00",
+  "fetched_at": "2026-11-12T21:49:23+00:00",
   "filings": [
    {
     "dii": 22.24,
@@ -83716,7 +83716,7 @@
   "source": "NSE XBRL"
  },
  "SBICARD": {
-  "fetched_at": "2026-11-11T21:43:26+00:00",
+  "fetched_at": "2026-11-12T21:45:23+00:00",
   "filings": [
    {
     "dii": 20.2,
@@ -83832,7 +83832,7 @@
   "source": "NSE XBRL"
  },
  "SBILIFE": {
-  "fetched_at": "2026-11-11T21:43:28+00:00",
+  "fetched_at": "2026-11-12T21:45:25+00:00",
   "filings": [
    {
     "dii": 20.07,
@@ -84004,7 +84004,7 @@
   "source": "NSE XBRL"
  },
  "SBIN": {
-  "fetched_at": "2026-11-11T21:43:30+00:00",
+  "fetched_at": "2026-11-12T21:45:27+00:00",
   "filings": [
    {
     "dii": 26.34,
@@ -84160,7 +84160,7 @@
   "source": "NSE XBRL"
  },
  "SCHAEFFLER": {
-  "fetched_at": "2026-11-11T21:43:32+00:00",
+  "fetched_at": "2026-11-12T21:45:29+00:00",
   "filings": [
    {
     "dii": 16.35,
@@ -84332,7 +84332,7 @@
   "source": "NSE XBRL"
  },
  "SCHNEIDER": {
-  "fetched_at": "2026-11-11T21:43:34+00:00",
+  "fetched_at": "2026-11-12T21:45:31+00:00",
   "filings": [
    {
     "dii": 4.8,
@@ -84424,7 +84424,7 @@
   "source": "NSE XBRL"
  },
  "SCI": {
-  "fetched_at": "2026-11-11T21:43:36+00:00",
+  "fetched_at": "2026-11-12T21:45:33+00:00",
   "filings": [
    {
     "dii": 1.44,
@@ -84468,7 +84468,7 @@
   "source": "NSE XBRL"
  },
  "SHAILY": {
-  "fetched_at": "2026-11-11T21:47:08+00:00",
+  "fetched_at": "2026-11-12T21:49:05+00:00",
   "filings": [
    {
     "dii": 16.15,
@@ -84704,7 +84704,7 @@
   "source": "NSE XBRL"
  },
  "SHREECEM": {
-  "fetched_at": "2026-11-11T21:43:38+00:00",
+  "fetched_at": "2026-11-12T21:45:35+00:00",
   "filings": [
    {
     "dii": 16.48,
@@ -84996,7 +84996,7 @@
   "source": "NSE XBRL"
  },
  "SHRIPISTON": {
-  "fetched_at": "2026-11-11T21:43:40+00:00",
+  "fetched_at": "2026-11-12T21:45:37+00:00",
   "filings": [
    {
     "dii": 16.53,
@@ -85192,7 +85192,7 @@
   "source": "NSE XBRL"
  },
  "SHRIRAMFIN": {
-  "fetched_at": "2026-11-11T21:43:42+00:00",
+  "fetched_at": "2026-11-12T21:45:39+00:00",
   "filings": [
    {
     "dii": 19.01,
@@ -85396,7 +85396,7 @@
   "source": "NSE XBRL"
  },
  "SHYAMMETL": {
-  "fetched_at": "2026-11-11T21:43:44+00:00",
+  "fetched_at": "2026-11-12T21:45:41+00:00",
   "filings": [
    {
     "dii": 11.15,
@@ -85608,7 +85608,7 @@
   "source": "NSE XBRL"
  },
  "SIEMENS": {
-  "fetched_at": "2026-11-11T21:43:46+00:00",
+  "fetched_at": "2026-11-12T21:45:43+00:00",
   "filings": [
    {
     "dii": 9.04,
@@ -85716,7 +85716,7 @@
   "source": "NSE XBRL"
  },
  "SIGNATURE": {
-  "fetched_at": "2026-11-11T21:43:48+00:00",
+  "fetched_at": "2026-11-12T21:45:45+00:00",
   "filings": [
    {
     "dii": 5.48,
@@ -86072,7 +86072,7 @@
   "source": "NSE XBRL"
  },
  "SJVN": {
-  "fetched_at": "2026-11-11T21:43:50+00:00",
+  "fetched_at": "2026-11-12T21:45:47+00:00",
   "filings": [
    {
     "dii": 3.8,
@@ -86148,7 +86148,7 @@
   "source": "NSE XBRL"
  },
  "SOBHA": {
-  "fetched_at": "2026-11-11T21:43:52+00:00",
+  "fetched_at": "2026-11-12T21:45:49+00:00",
   "filings": [
    {
     "dii": 25.7,
@@ -86352,7 +86352,7 @@
   "source": "NSE XBRL"
  },
  "SOLARA": {
-  "fetched_at": "2026-11-11T21:47:10+00:00",
+  "fetched_at": "2026-11-12T21:49:07+00:00",
   "filings": [
    {
     "dii": 3.89,
@@ -86676,7 +86676,7 @@
   "source": "NSE XBRL"
  },
  "SOLARINDS": {
-  "fetched_at": "2026-11-11T21:43:54+00:00",
+  "fetched_at": "2026-11-12T21:45:51+00:00",
   "filings": [
    {
     "dii": 13.55,
@@ -86816,7 +86816,7 @@
   "source": "NSE XBRL"
  },
  "SONACOMS": {
-  "fetched_at": "2026-11-11T21:43:56+00:00",
+  "fetched_at": "2026-11-12T21:45:53+00:00",
   "filings": [
    {
     "dii": 41.22,
@@ -87500,7 +87500,7 @@
   "source": "NSE XBRL"
  },
  "SRF": {
-  "fetched_at": "2026-11-11T21:43:58+00:00",
+  "fetched_at": "2026-11-12T21:45:55+00:00",
   "filings": [
    {
     "dii": 22.51,
@@ -87664,7 +87664,7 @@
   "source": "NSE XBRL"
  },
  "STARHEALTH": {
-  "fetched_at": "2026-11-11T21:44:00+00:00",
+  "fetched_at": "2026-11-12T21:45:57+00:00",
   "filings": [
    {
     "dii": 18.77,
@@ -87868,7 +87868,7 @@
   "source": "NSE XBRL"
  },
  "STLTECH": {
-  "fetched_at": "2026-11-11T21:44:02+00:00",
+  "fetched_at": "2026-11-12T21:45:59+00:00",
   "filings": [
    {
     "dii": 13.74,
@@ -87984,7 +87984,7 @@
   "source": "NSE XBRL"
  },
  "SUMICHEM": {
-  "fetched_at": "2026-11-11T21:44:04+00:00",
+  "fetched_at": "2026-11-12T21:46:01+00:00",
   "filings": [
    {
     "dii": 9.69,
@@ -88084,7 +88084,7 @@
   "source": "NSE XBRL"
  },
  "SUNDARMFIN": {
-  "fetched_at": "2026-11-11T21:44:06+00:00",
+  "fetched_at": "2026-11-12T21:46:03+00:00",
   "filings": [
    {
     "dii": 8.88,
@@ -88480,7 +88480,7 @@
   "source": "NSE XBRL"
  },
  "SUNPHARMA": {
-  "fetched_at": "2026-11-11T21:44:08+00:00",
+  "fetched_at": "2026-11-12T21:46:05+00:00",
   "filings": [
    {
     "dii": 22.27,
@@ -88692,7 +88692,7 @@
   "source": "NSE XBRL"
  },
  "SUNTV": {
-  "fetched_at": "2026-11-11T21:44:10+00:00",
+  "fetched_at": "2026-11-12T21:46:07+00:00",
   "filings": [
    {
     "dii": 10.81,
@@ -88792,7 +88792,7 @@
   "source": "NSE XBRL"
  },
  "SUPREMEIND": {
-  "fetched_at": "2026-11-11T21:44:12+00:00",
+  "fetched_at": "2026-11-12T21:46:09+00:00",
   "filings": [
    {
     "dii": 19.71,
@@ -89028,7 +89028,7 @@
   "source": "NSE XBRL"
  },
  "SUZLON": {
-  "fetched_at": "2026-11-11T21:44:14+00:00",
+  "fetched_at": "2026-11-12T21:46:11+00:00",
   "filings": [
    {
     "dii": 10.25,
@@ -89232,7 +89232,7 @@
   "source": "NSE XBRL"
  },
  "SWANCORP": {
-  "fetched_at": "2026-11-11T21:44:16+00:00",
+  "fetched_at": "2026-11-12T21:46:13+00:00",
   "filings": [
    {
     "dii": 12.83,
@@ -89532,7 +89532,7 @@
   "source": "NSE XBRL"
  },
  "SWIGGY": {
-  "fetched_at": "2026-11-11T21:44:18+00:00",
+  "fetched_at": "2026-11-12T21:46:15+00:00",
   "filings": [
    {
     "dii": 34.49,
@@ -89824,7 +89824,7 @@
   "source": "NSE XBRL"
  },
  "SYNGENE": {
-  "fetched_at": "2026-11-11T21:44:20+00:00",
+  "fetched_at": "2026-11-12T21:46:17+00:00",
   "filings": [
    {
     "dii": 29.3,
@@ -89996,7 +89996,7 @@
   "source": "NSE XBRL"
  },
  "SYRMA": {
-  "fetched_at": "2026-11-11T21:44:22+00:00",
+  "fetched_at": "2026-11-12T21:46:19+00:00",
   "filings": [
    {
     "dii": 14.44,
@@ -90200,7 +90200,7 @@
   "source": "NSE XBRL"
  },
  "TALBROAUTO": {
-  "fetched_at": "2026-11-11T21:47:12+00:00",
+  "fetched_at": "2026-11-12T21:49:09+00:00",
   "filings": [
    {
     "dii": 0.19,
@@ -90388,7 +90388,7 @@
   "source": "NSE XBRL"
  },
  "TARIL": {
-  "fetched_at": "2026-11-11T21:44:24+00:00",
+  "fetched_at": "2026-11-12T21:46:21+00:00",
   "filings": [
    {
     "dii": 1.19,
@@ -90520,7 +90520,7 @@
   "source": "NSE XBRL"
  },
  "TATACAP": {
-  "fetched_at": "2026-11-11T21:44:27+00:00",
+  "fetched_at": "2026-11-12T21:46:23+00:00",
   "filings": [
    {
     "dii": 3.88,
@@ -90596,7 +90596,7 @@
   "source": "NSE XBRL"
  },
  "TATACHEM": {
-  "fetched_at": "2026-11-11T21:44:29+00:00",
+  "fetched_at": "2026-11-12T21:46:25+00:00",
   "filings": [
    {
     "dii": 19.65,
@@ -90720,7 +90720,7 @@
   "source": "NSE XBRL"
  },
  "TATACOMM": {
-  "fetched_at": "2026-11-11T21:44:30+00:00",
+  "fetched_at": "2026-11-12T21:46:27+00:00",
   "filings": [
    {
     "dii": 20.21,
@@ -90876,7 +90876,7 @@
   "source": "NSE XBRL"
  },
  "TATACONSUM": {
-  "fetched_at": "2026-11-11T21:44:32+00:00",
+  "fetched_at": "2026-11-12T21:46:29+00:00",
   "filings": [
    {
     "dii": 25.34,
@@ -91024,7 +91024,7 @@
   "source": "NSE XBRL"
  },
  "TATAELXSI": {
-  "fetched_at": "2026-11-11T21:44:34+00:00",
+  "fetched_at": "2026-11-12T21:46:31+00:00",
   "filings": [
    {
     "dii": 9.98,
@@ -91116,7 +91116,7 @@
   "source": "NSE XBRL"
  },
  "TATAINVEST": {
-  "fetched_at": "2026-11-11T21:44:36+00:00",
+  "fetched_at": "2026-11-12T21:46:33+00:00",
   "filings": [
    {
     "dii": 0.62,
@@ -91192,7 +91192,7 @@
   "source": "NSE XBRL"
  },
  "TATAPOWER": {
-  "fetched_at": "2026-11-11T21:44:38+00:00",
+  "fetched_at": "2026-11-12T21:46:35+00:00",
   "filings": [
    {
     "dii": 18.48,
@@ -91324,7 +91324,7 @@
   "source": "NSE XBRL"
  },
  "TATASTEEL": {
-  "fetched_at": "2026-11-11T21:44:40+00:00",
+  "fetched_at": "2026-11-12T21:46:37+00:00",
   "filings": [
    {
     "dii": 27.52,
@@ -91472,7 +91472,7 @@
   "source": "NSE XBRL"
  },
  "TATATECH": {
-  "fetched_at": "2026-11-11T21:44:42+00:00",
+  "fetched_at": "2026-11-12T21:46:39+00:00",
   "filings": [
    {
     "dii": 5.54,
@@ -91588,7 +91588,7 @@
   "source": "NSE XBRL"
  },
  "TBOTEK": {
-  "fetched_at": "2026-11-11T21:44:44+00:00",
+  "fetched_at": "2026-11-12T21:46:41+00:00",
   "filings": [
    {
     "dii": 27.2,
@@ -91840,7 +91840,7 @@
   "source": "NSE XBRL"
  },
  "TCS": {
-  "fetched_at": "2026-11-11T21:44:46+00:00",
+  "fetched_at": "2026-11-12T21:46:43+00:00",
   "filings": [
    {
     "dii": 13.57,
@@ -91924,7 +91924,7 @@
   "source": "NSE XBRL"
  },
  "TDPOWERSYS": {
-  "fetched_at": "2026-11-11T21:44:48+00:00",
+  "fetched_at": "2026-11-12T21:46:45+00:00",
   "filings": [
    {
     "dii": 27.93,
@@ -92208,7 +92208,7 @@
   "source": "NSE XBRL"
  },
  "TECHM": {
-  "fetched_at": "2026-11-11T21:44:50+00:00",
+  "fetched_at": "2026-11-12T21:46:47+00:00",
   "filings": [
    {
     "dii": 35.68,
@@ -92404,7 +92404,7 @@
   "source": "NSE XBRL"
  },
  "TECHNOE": {
-  "fetched_at": "2026-11-11T21:44:52+00:00",
+  "fetched_at": "2026-11-12T21:46:49+00:00",
   "filings": [
    {
     "dii": 21.33,
@@ -92640,7 +92640,7 @@
   "source": "NSE XBRL"
  },
  "TEGA": {
-  "fetched_at": "2026-11-11T21:44:54+00:00",
+  "fetched_at": "2026-11-12T21:46:51+00:00",
   "filings": [
    {
     "dii": 17.15,
@@ -92788,7 +92788,7 @@
   "source": "NSE XBRL"
  },
  "TEJASNET": {
-  "fetched_at": "2026-11-11T21:44:56+00:00",
+  "fetched_at": "2026-11-12T21:46:53+00:00",
   "filings": [
    {
     "dii": 4.0,
@@ -92848,7 +92848,7 @@
   "source": "NSE XBRL"
  },
  "TENNIND": {
-  "fetched_at": "2026-11-11T21:44:58+00:00",
+  "fetched_at": "2026-11-12T21:46:55+00:00",
   "filings": [
    {
     "dii": 22.69,
@@ -93052,7 +93052,7 @@
   "source": "NSE XBRL"
  },
  "THANGAMAYL": {
-  "fetched_at": "2026-11-11T21:45:00+00:00",
+  "fetched_at": "2026-11-12T21:46:57+00:00",
   "filings": [
    {
     "dii": 17.03,
@@ -93436,7 +93436,7 @@
   "source": "NSE XBRL"
  },
  "THERMAX": {
-  "fetched_at": "2026-11-11T21:45:02+00:00",
+  "fetched_at": "2026-11-12T21:46:59+00:00",
   "filings": [
    {
     "dii": 14.94,
@@ -93584,7 +93584,7 @@
   "source": "NSE XBRL"
  },
  "TIINDIA": {
-  "fetched_at": "2026-11-11T21:45:04+00:00",
+  "fetched_at": "2026-11-12T21:47:02+00:00",
   "filings": [
    {
     "dii": 21.63,
@@ -93665,7 +93665,7 @@
   "source": "NSE XBRL"
  },
  "TIMKEN": {
-  "fetched_at": "2026-11-11T21:45:06+00:00",
+  "fetched_at": "2026-11-12T21:47:03+00:00",
   "filings": [
    {
     "dii": 30.74,
@@ -93837,7 +93837,7 @@
   "source": "NSE XBRL"
  },
  "TITAGARH": {
-  "fetched_at": "2026-11-11T21:45:08+00:00",
+  "fetched_at": "2026-11-12T21:47:05+00:00",
   "filings": [
    {
     "dii": 15.95,
@@ -94009,7 +94009,7 @@
   "source": "NSE XBRL"
  },
  "TITAN": {
-  "fetched_at": "2026-11-11T21:45:10+00:00",
+  "fetched_at": "2026-11-12T21:47:08+00:00",
   "filings": [
    {
     "dii": 14.42,
@@ -94205,7 +94205,7 @@
   "source": "NSE XBRL"
  },
  "TMCV": {
-  "fetched_at": "2026-11-11T21:45:12+00:00",
+  "fetched_at": "2026-11-12T21:47:09+00:00",
   "filings": [
    {
     "dii": 18.6,
@@ -94369,7 +94369,7 @@
   "source": "NSE XBRL"
  },
  "TMPV": {
-  "fetched_at": "2026-11-11T21:45:14+00:00",
+  "fetched_at": "2026-11-12T21:47:11+00:00",
   "filings": [
    {
     "dii": 17.92,
@@ -94493,7 +94493,7 @@
   "source": "NSE XBRL"
  },
  "TORNTPHARM": {
-  "fetched_at": "2026-11-11T21:45:16+00:00",
+  "fetched_at": "2026-11-12T21:47:13+00:00",
   "filings": [
    {
     "dii": 13.46,
@@ -94585,7 +94585,7 @@
   "source": "NSE XBRL"
  },
  "TORNTPOWER": {
-  "fetched_at": "2026-11-11T21:45:18+00:00",
+  "fetched_at": "2026-11-12T21:47:15+00:00",
   "filings": [
    {
     "dii": 22.8,
@@ -94825,7 +94825,7 @@
   "source": "NSE XBRL"
  },
  "TRENT": {
-  "fetched_at": "2026-11-11T21:45:20+00:00",
+  "fetched_at": "2026-11-12T21:47:17+00:00",
   "filings": [
    {
     "dii": 23.33,
@@ -95021,7 +95021,7 @@
   "source": "NSE XBRL"
  },
  "TRIDENT": {
-  "fetched_at": "2026-11-11T21:45:22+00:00",
+  "fetched_at": "2026-11-12T21:47:19+00:00",
   "filings": [
    {
     "dii": 0.27,
@@ -95097,7 +95097,7 @@
   "source": "NSE XBRL"
  },
  "TRITURBINE": {
-  "fetched_at": "2026-11-11T21:45:24+00:00",
+  "fetched_at": "2026-11-12T21:47:21+00:00",
   "filings": [
    {
     "dii": 17.85,
@@ -95317,7 +95317,7 @@
   "source": "NSE XBRL"
  },
  "TTML": {
-  "fetched_at": "2026-11-11T21:45:26+00:00",
+  "fetched_at": "2026-11-12T21:47:23+00:00",
   "filings": [
    {
     "dii": 0.18,
@@ -95393,7 +95393,7 @@
   "source": "NSE XBRL"
  },
  "TVSMOTOR": {
-  "fetched_at": "2026-11-11T21:45:28+00:00",
+  "fetched_at": "2026-11-12T21:47:26+00:00",
   "filings": [
    {
     "dii": 20.29,
@@ -95493,7 +95493,7 @@
   "source": "NSE XBRL"
  },
  "TVTODAY": {
-  "fetched_at": "2026-11-11T21:47:14+00:00",
+  "fetched_at": "2026-11-12T21:49:11+00:00",
   "filings": [
    {
     "dii": 0.09,
@@ -95585,7 +95585,7 @@
   "source": "NSE XBRL"
  },
  "UBL": {
-  "fetched_at": "2026-11-11T21:45:30+00:00",
+  "fetched_at": "2026-11-12T21:47:27+00:00",
   "filings": [
    {
     "dii": 17.28,
@@ -95789,7 +95789,7 @@
   "source": "NSE XBRL"
  },
  "UCOBANK": {
-  "fetched_at": "2026-11-11T21:45:32+00:00",
+  "fetched_at": "2026-11-12T21:47:29+00:00",
   "filings": [
    {
     "dii": 4.14,
@@ -95849,7 +95849,7 @@
   "source": "NSE XBRL"
  },
  "ULTRACEMCO": {
-  "fetched_at": "2026-11-11T21:45:34+00:00",
+  "fetched_at": "2026-11-12T21:47:31+00:00",
   "filings": [
    {
     "dii": 20.86,
@@ -95981,7 +95981,7 @@
   "source": "NSE XBRL"
  },
  "UNIONBANK": {
-  "fetched_at": "2026-11-11T21:45:36+00:00",
+  "fetched_at": "2026-11-12T21:47:33+00:00",
   "filings": [
    {
     "dii": 11.64,
@@ -96073,7 +96073,7 @@
   "source": "NSE XBRL"
  },
  "UNITDSPR": {
-  "fetched_at": "2026-11-11T21:45:38+00:00",
+  "fetched_at": "2026-11-12T21:47:35+00:00",
   "filings": [
    {
     "dii": 17.65,
@@ -96221,7 +96221,7 @@
   "source": "NSE XBRL"
  },
  "UNOMINDA": {
-  "fetched_at": "2026-11-11T21:45:40+00:00",
+  "fetched_at": "2026-11-12T21:47:37+00:00",
   "filings": [
    {
     "dii": 17.11,
@@ -96457,7 +96457,7 @@
   "source": "NSE XBRL"
  },
  "UPL": {
-  "fetched_at": "2026-11-11T21:45:42+00:00",
+  "fetched_at": "2026-11-12T21:47:39+00:00",
   "filings": [
    {
     "dii": 14.31,
@@ -96749,7 +96749,7 @@
   "source": "NSE XBRL"
  },
  "URBANCO": {
-  "fetched_at": "2026-11-11T21:45:44+00:00",
+  "fetched_at": "2026-11-12T21:47:41+00:00",
   "filings": [
    {
     "dii": 15.17,
@@ -97065,7 +97065,7 @@
   "source": "NSE XBRL"
  },
  "USHAMART": {
-  "fetched_at": "2026-11-11T21:45:46+00:00",
+  "fetched_at": "2026-11-12T21:47:43+00:00",
   "filings": [
    {
     "dii": 17.34,
@@ -97317,7 +97317,7 @@
   "source": "NSE XBRL"
  },
  "UTIAMC": {
-  "fetched_at": "2026-11-11T21:45:48+00:00",
+  "fetched_at": "2026-11-12T21:47:45+00:00",
   "filings": [
    {
     "dii": 59.12,
@@ -97481,7 +97481,7 @@
   "source": "NSE XBRL"
  },
  "UTTAMSUGAR": {
-  "fetched_at": "2026-11-11T21:47:16+00:00",
+  "fetched_at": "2026-11-12T21:49:13+00:00",
   "filings": [
    {
     "dii": 0.18,
@@ -97653,7 +97653,7 @@
   "source": "NSE XBRL"
  },
  "VAIBHAVGBL": {
-  "fetched_at": "2026-11-11T21:47:18+00:00",
+  "fetched_at": "2026-11-12T21:49:15+00:00",
   "filings": [
    {
     "dii": 2.24,
@@ -97777,7 +97777,7 @@
   "source": "NSE XBRL"
  },
  "VAML": {
-  "fetched_at": "2026-11-11T21:45:50+00:00",
+  "fetched_at": "2026-11-12T21:47:47+00:00",
   "filings": [
    {
     "dii": 15.34,
@@ -97941,7 +97941,7 @@
   "source": "NSE XBRL"
  },
  "VBL": {
-  "fetched_at": "2026-11-11T21:45:52+00:00",
+  "fetched_at": "2026-11-12T21:47:49+00:00",
   "filings": [
    {
     "dii": 16.34,
@@ -98113,7 +98113,7 @@
   "source": "NSE XBRL"
  },
  "VEDL": {
-  "fetched_at": "2026-11-11T21:45:54+00:00",
+  "fetched_at": "2026-11-12T21:47:51+00:00",
   "filings": [
    {
     "dii": 10.69,
@@ -98237,7 +98237,7 @@
   "source": "NSE XBRL"
  },
  "VEDPOWER": {
-  "fetched_at": "2026-11-11T21:45:56+00:00",
+  "fetched_at": "2026-11-12T21:47:53+00:00",
   "filings": [
    {
     "dii": 10.72,
@@ -98361,7 +98361,7 @@
   "source": "NSE XBRL"
  },
  "VIJAYA": {
-  "fetched_at": "2026-11-11T21:45:58+00:00",
+  "fetched_at": "2026-11-12T21:47:55+00:00",
   "filings": [
    {
     "dii": 32.5,
@@ -98581,7 +98581,7 @@
   "source": "NSE XBRL"
  },
  "VISL": {
-  "fetched_at": "2026-11-11T21:46:00+00:00",
+  "fetched_at": "2026-11-12T21:47:57+00:00",
   "filings": [
    {
     "dii": 9.24,
@@ -98713,7 +98713,7 @@
   "source": "NSE XBRL"
  },
  "VMM": {
-  "fetched_at": "2026-11-11T21:46:02+00:00",
+  "fetched_at": "2026-11-12T21:47:59+00:00",
   "filings": [
    {
     "dii": 36.45,
@@ -98917,7 +98917,7 @@
   "source": "NSE XBRL"
  },
  "VOGL": {
-  "fetched_at": "2026-11-11T21:46:04+00:00",
+  "fetched_at": "2026-11-12T21:48:01+00:00",
   "filings": [
    {
     "dii": 5.94,
@@ -99025,7 +99025,7 @@
   "source": "NSE XBRL"
  },
  "VOLTAS": {
-  "fetched_at": "2026-11-11T21:46:06+00:00",
+  "fetched_at": "2026-11-12T21:48:03+00:00",
   "filings": [
    {
     "dii": 38.52,
@@ -99269,7 +99269,7 @@
   "source": "NSE XBRL"
  },
  "VSTIND": {
-  "fetched_at": "2026-11-11T21:47:20+00:00",
+  "fetched_at": "2026-11-12T21:49:17+00:00",
   "filings": [
    {
     "dii": 5.91,
@@ -99425,7 +99425,7 @@
   "source": "NSE XBRL"
  },
  "VTL": {
-  "fetched_at": "2026-11-11T21:46:08+00:00",
+  "fetched_at": "2026-11-12T21:48:05+00:00",
   "filings": [
    {
     "dii": 14.17,
@@ -99581,7 +99581,7 @@
   "source": "NSE XBRL"
  },
  "WAAREEENER": {
-  "fetched_at": "2026-11-11T21:46:10+00:00",
+  "fetched_at": "2026-11-12T21:48:07+00:00",
   "filings": [
    {
     "dii": 4.09,
@@ -99697,7 +99697,7 @@
   "source": "NSE XBRL"
  },
  "WELCORP": {
-  "fetched_at": "2026-11-11T21:46:12+00:00",
+  "fetched_at": "2026-11-12T21:48:09+00:00",
   "filings": [
    {
     "dii": 16.36,
@@ -99901,7 +99901,7 @@
   "source": "NSE XBRL"
  },
  "WELSPUNLIV": {
-  "fetched_at": "2026-11-11T21:46:14+00:00",
+  "fetched_at": "2026-11-12T21:48:11+00:00",
   "filings": [
    {
     "dii": 12.09,
@@ -100033,7 +100033,7 @@
   "source": "NSE XBRL"
  },
  "WHIRLPOOL": {
-  "fetched_at": "2026-11-11T21:46:16+00:00",
+  "fetched_at": "2026-11-12T21:48:13+00:00",
   "filings": [
    {
     "dii": 32.36,
@@ -100237,7 +100237,7 @@
   "source": "NSE XBRL"
  },
  "WIPRO": {
-  "fetched_at": "2026-11-11T21:46:18+00:00",
+  "fetched_at": "2026-11-12T21:48:15+00:00",
   "filings": [
    {
     "dii": 5.13,
@@ -100393,7 +100393,7 @@
   "source": "NSE XBRL"
  },
  "WOCKPHARMA": {
-  "fetched_at": "2026-11-11T21:46:20+00:00",
+  "fetched_at": "2026-11-12T21:48:17+00:00",
   "filings": [
    {
     "dii": 9.0,
@@ -100549,7 +100549,7 @@
   "source": "NSE XBRL"
  },
  "YESBANK": {
-  "fetched_at": "2026-11-11T21:46:22+00:00",
+  "fetched_at": "2026-11-12T21:48:19+00:00",
   "filings": [
    {
     "dii": 23.07,
@@ -100649,7 +100649,7 @@
   "source": "NSE XBRL"
  },
  "ZEEL": {
-  "fetched_at": "2026-11-11T21:46:24+00:00",
+  "fetched_at": "2026-11-12T21:48:21+00:00",
   "filings": [
    {
     "dii": 7.33,
@@ -100781,7 +100781,7 @@
   "source": "NSE XBRL"
  },
  "ZENSARTECH": {
-  "fetched_at": "2026-11-11T21:46:26+00:00",
+  "fetched_at": "2026-11-12T21:48:23+00:00",
   "filings": [
    {
     "dii": 21.71,
@@ -100953,7 +100953,7 @@
   "source": "NSE XBRL"
  },
  "ZENTEC": {
-  "fetched_at": "2026-11-11T21:46:28+00:00",
+  "fetched_at": "2026-11-12T21:48:25+00:00",
   "filings": [
    {
     "dii": 10.76,
@@ -101141,7 +101141,7 @@
   "source": "NSE XBRL"
  },
  "ZFCVINDIA": {
-  "fetched_at": "2026-11-11T21:46:30+00:00",
+  "fetched_at": "2026-11-12T21:48:27+00:00",
   "filings": [
    {
     "dii": 25.48,
@@ -101265,7 +101265,7 @@
   "source": "NSE XBRL"
  },
  "ZYDUSLIFE": {
-  "fetched_at": "2026-11-11T21:46:32+00:00",
+  "fetched_at": "2026-11-12T21:48:29+00:00",
   "filings": [
    {
     "dii": 11.28,
@@ -101365,7 +101365,7 @@
   "source": "NSE XBRL"
  },
  "ZYDUSWELL": {
-  "fetched_at": "2026-11-11T21:46:34+00:00",
+  "fetched_at": "2026-11-12T21:48:31+00:00",
   "filings": [
    {
     "dii": 19.39,
