@@ -59,8 +59,8 @@
   "ATULAUTO": {
    "in_universe": false,
    "name": "Atul Auto Limited",
-   "price": 391.6,
-   "price_date": "2026-11-23",
+   "price": 389.8,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "BEML": {
@@ -255,8 +255,8 @@
   "JUBLPHARMA": {
    "in_universe": false,
    "name": "Jubilant Pharmova Limited",
-   "price": 924.3,
-   "price_date": "2026-11-23",
+   "price": 916.35,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "KARURVYSYA": {
@@ -269,8 +269,8 @@
   "KCP": {
    "in_universe": false,
    "name": "KCP Limited",
-   "price": 142.59,
-   "price_date": "2026-11-23",
+   "price": 145.9,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "LAURUSLABS": {
@@ -339,8 +339,8 @@
   "ORIENTBELL": {
    "in_universe": false,
    "name": "Orient Bell Limited",
-   "price": 350.75,
-   "price_date": "2026-11-23",
+   "price": 347.1,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "PAGEIND": {
@@ -353,8 +353,8 @@
   "PANAMAPET": {
    "in_universe": false,
    "name": "Panama Petrochem Limited",
-   "price": 412.1,
-   "price_date": "2026-11-23",
+   "price": 410.15,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "PATANJALI": {
@@ -402,22 +402,22 @@
   "RSYSTEMS": {
    "in_universe": false,
    "name": "R Systems International Limited",
-   "price": 238.35,
-   "price_date": "2026-11-23",
+   "price": 235.4,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "SAFARI": {
    "in_universe": false,
    "name": "Safari Industries (India) Limited",
-   "price": 1480.7,
-   "price_date": "2026-11-23",
+   "price": 1537.8,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "SANGAMIND": {
    "in_universe": false,
    "name": "Sangam (India) Limited",
-   "price": 696.1,
-   "price_date": "2026-11-23",
+   "price": 691.1,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "SARDAEN": {
@@ -430,15 +430,15 @@
   "SAREGAMA": {
    "in_universe": false,
    "name": "Saregama India Limited",
-   "price": 657.6,
-   "price_date": "2026-11-23",
+   "price": 620.55,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "SBFC": {
    "in_universe": false,
    "name": "SBFC Finance Limited",
-   "price": 86.97,
-   "price_date": "2026-11-23",
+   "price": 85.43,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "SCHNEIDER": {
@@ -451,8 +451,8 @@
   "SHAILY": {
    "in_universe": false,
    "name": "Shaily Engineering Plastics Limited",
-   "price": 3035.0,
-   "price_date": "2026-11-23",
+   "price": 2905.1,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "SIGNATURE": {
@@ -549,22 +549,22 @@
   "UTTAMSUGAR": {
    "in_universe": false,
    "name": "Uttam Sugar Mills Limited",
-   "price": 348.5,
-   "price_date": "2026-11-23",
+   "price": 346.15,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "VAIBHAVGBL": {
    "in_universe": false,
    "name": "Vaibhav Global Limited",
-   "price": 155.54,
-   "price_date": "2026-11-23",
+   "price": 156.43,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "VSTIND": {
    "in_universe": false,
    "name": "VST Industries Limited",
-   "price": 193.11,
-   "price_date": "2026-11-23",
+   "price": 192.63,
+   "price_date": "2026-11-25",
    "sector": "Unclassified"
   },
   "WELSPUNLIV": {
@@ -589,7 +589,7 @@
    "sector": "Consumer Cyclical"
   }
  },
- "generated_at": "2026-11-25T00:43:04+00:00",
+ "generated_at": "2026-11-26T00:20:01+00:00",
  "investors": [
   {
    "alias": "DMart founder",
@@ -652,7 +652,7 @@
       "Radhakishan Shivkishan Damani"
      ],
      "holding_pct": 29.1,
-     "holding_value_cr": 954.55,
+     "holding_value_cr": 952.17,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -688,7 +688,7 @@
     "Financial Services"
    ],
    "type": "Individual HNI",
-   "value_cr": 117582.97
+   "value_cr": 117580.59
   },
   {
    "alias": null,
@@ -916,7 +916,7 @@
       "REKHA JHUNJHUNWALA"
      ],
      "holding_pct": 6.43,
-     "holding_value_cr": 946.85,
+     "holding_value_cr": 938.71,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1010,7 +1010,7 @@
     "Healthcare"
    ],
    "type": "Individual HNI",
-   "value_cr": 41223.26
+   "value_cr": 41215.12
   },
   {
    "alias": null,
@@ -1314,7 +1314,7 @@
       "NALANDA INDIA FUND LIMITED"
      ],
      "holding_pct": 6.58,
-     "holding_value_cr": 171.7,
+     "holding_value_cr": 172.68,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1332,7 +1332,7 @@
     "Communication Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 21440.45
+   "value_cr": 21441.43
   },
   {
    "alias": null,
@@ -1616,7 +1616,7 @@
       "Malabar India Fund Limited"
      ],
      "holding_pct": 5.16,
-     "holding_value_cr": 374.05,
+     "holding_value_cr": 388.47,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1635,7 +1635,7 @@
       "Malabar India Fund Limited"
      ],
      "holding_pct": 2.9,
-     "holding_value_cr": 367.89,
+     "holding_value_cr": 347.16,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1654,7 +1654,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 5.4,
-     "holding_value_cr": 140.92,
+     "holding_value_cr": 141.73,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1673,7 +1673,7 @@
       "MALABAR INDIA FUND LIMITED"
      ],
      "holding_pct": 1.21,
-     "holding_value_cr": 117.17,
+     "holding_value_cr": 115.1,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -1691,7 +1691,7 @@
     "Financial Services"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 3145.19
+   "value_cr": 3137.62
   },
   {
    "alias": null,
@@ -1989,7 +1989,7 @@
       "MADHURI MADHUSUDAN KELA"
      ],
      "holding_pct": 4.86,
-     "holding_value_cr": 169.9,
+     "holding_value_cr": 168.68,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2006,7 +2006,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 1618.45
+   "value_cr": 1617.23
   },
   {
    "alias": null,
@@ -2128,7 +2128,7 @@
       "ABAKKUS EMERGING OPPORTUNITIES FUND-1"
      ],
      "holding_pct": 1.15,
-     "holding_value_cr": 169.61,
+     "holding_value_cr": 168.15,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2146,7 +2146,7 @@
     "Basic Materials"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 1105.5
+   "value_cr": 1104.04
   },
   {
    "alias": "3P Investment Managers",
@@ -2268,7 +2268,7 @@
       "VIJAY KEDIA"
      ],
      "holding_pct": 20.91,
-     "holding_value_cr": 227.21,
+     "holding_value_cr": 226.16,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2306,7 +2306,7 @@
       "VIJAY KEDIA"
      ],
      "holding_pct": 2.04,
-     "holding_value_cr": 53.27,
+     "holding_value_cr": 53.58,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2323,7 +2323,7 @@
     "Industrials"
    ],
    "type": "Individual HNI",
-   "value_cr": 646.29
+   "value_cr": 645.55
   },
   {
    "alias": null,
@@ -2342,7 +2342,7 @@
       "BHAVOOK TRIPATHI"
      ],
      "holding_pct": 20.47,
-     "holding_value_cr": 578.12,
+     "holding_value_cr": 570.97,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2358,7 +2358,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 578.12
+   "value_cr": 570.97
   },
   {
    "alias": null,
@@ -2384,7 +2384,7 @@
       "ASHISH KACHOLIA"
      ],
      "holding_pct": 3.22,
-     "holding_value_cr": 448.87,
+     "holding_value_cr": 429.66,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2403,7 +2403,7 @@
       "ASHISH KACHOLIA"
      ],
      "holding_pct": 1.61,
-     "holding_value_cr": 116.98,
+     "holding_value_cr": 121.49,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2419,7 +2419,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 565.85
+   "value_cr": 551.15
   },
   {
    "alias": "Old Bridge Capital",
@@ -2568,7 +2568,7 @@
       "Anil Kumar Goel"
      ],
      "holding_pct": 3.67,
-     "holding_value_cr": 48.79,
+     "holding_value_cr": 48.46,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2587,7 +2587,7 @@
       "ANIL KUMAR GOEL"
      ],
      "holding_pct": 1.07,
-     "holding_value_cr": 26.79,
+     "holding_value_cr": 26.66,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2603,7 +2603,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 75.58
+   "value_cr": 75.12
   },
   {
    "alias": null,
@@ -2622,7 +2622,7 @@
       "RAMESH DAMANI"
      ],
      "holding_pct": 1.22,
-     "holding_value_cr": 30.53,
+     "holding_value_cr": 30.39,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2638,7 +2638,7 @@
     "Unclassified"
    ],
    "type": "Individual HNI",
-   "value_cr": 30.53
+   "value_cr": 30.39
   },
   {
    "alias": "Equity Intelligence India",
@@ -2657,7 +2657,7 @@
       "EQUITY INTELLIGENCE INDIA PRIVATE LIMITED"
      ],
      "holding_pct": 3.82,
-     "holding_value_cr": 19.78,
+     "holding_value_cr": 19.57,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2673,7 +2673,7 @@
     "Unclassified"
    ],
    "type": "Institutional / PMS",
-   "value_cr": 19.78
+   "value_cr": 19.57
   },
   {
    "alias": null,
@@ -2840,7 +2840,7 @@
       "GOVINDLAL M PARIKH"
      ],
      "holding_pct": 1.56,
-     "holding_value_cr": 28.61,
+     "holding_value_cr": 29.27,
      "in_universe": false,
      "quarter": "Sep 2026",
      "role": "public",
@@ -2856,7 +2856,7 @@
     "Basic Materials"
    ],
    "type": "Individual HNI",
-   "value_cr": 620.02
+   "value_cr": 620.68
   },
   {
    "alias": null,
@@ -2915,6 +2915,6 @@
   }
  ],
  "latest_period": "Sep 2026",
- "price_date": "2026-11-23",
+ "price_date": "2026-11-25",
  "source": "NSE shareholding pattern filings (XBRL)"
 }
