@@ -1,6 +1,6 @@
 {
  "360ONE": {
-  "fetched_at": "2026-11-21T14:10:59+00:00",
+  "fetched_at": "2026-11-28T14:52:54+00:00",
   "sid": "IIFW",
   "source": "Tickertape",
   "years": [
@@ -79,7 +79,7 @@
   ]
  },
  "AADHARHFC": {
-  "fetched_at": "2026-11-21T14:11:00+00:00",
+  "fetched_at": "2026-11-28T14:52:55+00:00",
   "sid": "AADH",
   "source": "Tickertape",
   "years": [
@@ -158,7 +158,7 @@
   ]
  },
  "AARTIIND": {
-  "fetched_at": "2026-11-21T14:11:00+00:00",
+  "fetched_at": "2026-11-28T14:52:56+00:00",
   "sid": "ARTI",
   "source": "Tickertape",
   "years": [
@@ -237,7 +237,7 @@
   ]
  },
  "AAVAS": {
-  "fetched_at": "2026-11-21T14:11:01+00:00",
+  "fetched_at": "2026-11-28T14:52:56+00:00",
   "sid": "AVAS",
   "source": "Tickertape",
   "years": [
@@ -316,7 +316,7 @@
   ]
  },
  "ABB": {
-  "fetched_at": "2026-11-21T14:11:02+00:00",
+  "fetched_at": "2026-11-28T14:52:57+00:00",
   "sid": "ABB",
   "source": "Tickertape",
   "years": [
@@ -359,7 +359,7 @@
   ]
  },
  "ABBOTINDIA": {
-  "fetched_at": "2026-11-21T14:11:02+00:00",
+  "fetched_at": "2026-11-28T14:52:58+00:00",
   "sid": "ABOT",
   "source": "Tickertape",
   "years": [
@@ -438,7 +438,7 @@
   ]
  },
  "ABCAPITAL": {
-  "fetched_at": "2026-11-21T14:11:03+00:00",
+  "fetched_at": "2026-11-28T14:52:58+00:00",
   "sid": "ADTB",
   "source": "Tickertape",
   "years": [
@@ -517,7 +517,7 @@
   ]
  },
  "ABDL": {
-  "fetched_at": "2026-11-21T14:11:04+00:00",
+  "fetched_at": "2026-11-28T14:52:59+00:00",
   "sid": "ABD",
   "source": "Tickertape",
   "years": [
@@ -596,7 +596,7 @@
   ]
  },
  "ABREL": {
-  "fetched_at": "2026-11-21T14:11:04+00:00",
+  "fetched_at": "2026-11-28T14:53:00+00:00",
   "sid": "CNTY",
   "source": "Tickertape",
   "years": [
@@ -675,7 +675,7 @@
   ]
  },
  "ABSLAMC": {
-  "fetched_at": "2026-11-21T14:11:05+00:00",
+  "fetched_at": "2026-11-28T14:53:00+00:00",
   "sid": "ABS",
   "source": "Tickertape",
   "years": [
@@ -754,7 +754,7 @@
   ]
  },
  "ACC": {
-  "fetched_at": "2026-11-21T14:11:06+00:00",
+  "fetched_at": "2026-11-28T14:53:01+00:00",
   "sid": "ACC",
   "source": "Tickertape",
   "years": [
@@ -833,7 +833,7 @@
   ]
  },
  "ACE": {
-  "fetched_at": "2026-11-21T14:11:07+00:00",
+  "fetched_at": "2026-11-28T14:53:02+00:00",
   "sid": "ACEL",
   "source": "Tickertape",
   "years": [
@@ -912,7 +912,7 @@
   ]
  },
  "ACMESOLAR": {
-  "fetched_at": "2026-11-21T14:11:07+00:00",
+  "fetched_at": "2026-11-28T14:53:03+00:00",
   "sid": "ACMES",
   "source": "Tickertape",
   "years": [
@@ -991,7 +991,7 @@
   ]
  },
  "ACUTAAS": {
-  "fetched_at": "2026-11-21T14:11:08+00:00",
+  "fetched_at": "2026-11-28T14:53:03+00:00",
   "sid": "AMIO",
   "source": "Tickertape",
   "years": [
@@ -1070,7 +1070,7 @@
   ]
  },
  "ADANIENSOL": {
-  "fetched_at": "2026-11-21T14:11:09+00:00",
+  "fetched_at": "2026-11-28T14:53:04+00:00",
   "sid": "ADAI",
   "source": "Tickertape",
   "years": [
@@ -1149,7 +1149,7 @@
   ]
  },
  "ADANIENT": {
-  "fetched_at": "2026-11-21T14:11:09+00:00",
+  "fetched_at": "2026-11-28T14:53:05+00:00",
   "sid": "ADEL",
   "source": "Tickertape",
   "years": [
@@ -1228,7 +1228,7 @@
   ]
  },
  "ADANIGREEN": {
-  "fetched_at": "2026-11-21T14:11:10+00:00",
+  "fetched_at": "2026-11-28T14:53:05+00:00",
   "sid": "ADNA",
   "source": "Tickertape",
   "years": [
@@ -1307,7 +1307,7 @@
   ]
  },
  "ADANIPORTS": {
-  "fetched_at": "2026-11-21T14:11:11+00:00",
+  "fetched_at": "2026-11-28T14:53:06+00:00",
   "sid": "APSE",
   "source": "Tickertape",
   "years": [
@@ -1386,7 +1386,7 @@
   ]
  },
  "ADANIPOWER": {
-  "fetched_at": "2026-11-21T14:11:12+00:00",
+  "fetched_at": "2026-11-28T14:53:07+00:00",
   "sid": "ADAN",
   "source": "Tickertape",
   "years": [
@@ -1465,7 +1465,7 @@
   ]
  },
  "AEGISLOG": {
-  "fetched_at": "2026-11-21T14:11:12+00:00",
+  "fetched_at": "2026-11-28T14:53:08+00:00",
   "sid": "AEGS",
   "source": "Tickertape",
   "years": [
@@ -1544,7 +1544,7 @@
   ]
  },
  "AEGISVOPAK": {
-  "fetched_at": "2026-11-21T14:11:13+00:00",
+  "fetched_at": "2026-11-28T14:53:08+00:00",
   "sid": "AEG",
   "source": "Tickertape",
   "years": [
@@ -1623,7 +1623,7 @@
   ]
  },
  "AFCONS": {
-  "fetched_at": "2026-11-21T14:11:14+00:00",
+  "fetched_at": "2026-11-28T14:53:09+00:00",
   "sid": "AFCO",
   "source": "Tickertape",
   "years": [
@@ -1702,7 +1702,7 @@
   ]
  },
  "AFFLE": {
-  "fetched_at": "2026-11-21T14:11:15+00:00",
+  "fetched_at": "2026-11-28T14:53:10+00:00",
   "sid": "AFFL",
   "source": "Tickertape",
   "years": [
@@ -1781,7 +1781,7 @@
   ]
  },
  "AIAENG": {
-  "fetched_at": "2026-11-21T14:11:15+00:00",
+  "fetched_at": "2026-11-28T14:53:11+00:00",
   "sid": "AIAE",
   "source": "Tickertape",
   "years": [
@@ -1860,7 +1860,7 @@
   ]
  },
  "AIIL": {
-  "fetched_at": "2026-11-21T14:11:16+00:00",
+  "fetched_at": "2026-11-28T14:53:12+00:00",
   "sid": "AII",
   "source": "Tickertape",
   "years": [
@@ -1939,7 +1939,7 @@
   ]
  },
  "AJANTPHARM": {
-  "fetched_at": "2026-11-21T14:11:17+00:00",
+  "fetched_at": "2026-11-28T14:53:12+00:00",
   "sid": "AJPH",
   "source": "Tickertape",
   "years": [
@@ -2018,7 +2018,7 @@
   ]
  },
  "ALKEM": {
-  "fetched_at": "2026-11-21T14:11:17+00:00",
+  "fetched_at": "2026-11-28T14:53:13+00:00",
   "sid": "ALKE",
   "source": "Tickertape",
   "years": [
@@ -2097,7 +2097,7 @@
   ]
  },
  "AMBER": {
-  "fetched_at": "2026-11-21T14:11:19+00:00",
+  "fetched_at": "2026-11-28T14:53:14+00:00",
   "sid": "AMBE",
   "source": "Tickertape",
   "years": [
@@ -2176,7 +2176,7 @@
   ]
  },
  "AMBUJACEM": {
-  "fetched_at": "2026-11-21T14:11:19+00:00",
+  "fetched_at": "2026-11-28T14:53:14+00:00",
   "sid": "ABUJ",
   "source": "Tickertape",
   "years": [
@@ -2255,7 +2255,7 @@
   ]
  },
  "ANANDRATHI": {
-  "fetched_at": "2026-11-21T14:11:20+00:00",
+  "fetched_at": "2026-11-28T14:53:15+00:00",
   "sid": "ANAND",
   "source": "Tickertape",
   "years": [
@@ -2334,7 +2334,7 @@
   ]
  },
  "ANANTRAJ": {
-  "fetched_at": "2026-11-21T14:11:21+00:00",
+  "fetched_at": "2026-11-28T14:53:16+00:00",
   "sid": "ANRA",
   "source": "Tickertape",
   "years": [
@@ -2413,7 +2413,7 @@
   ]
  },
  "ANGELONE": {
-  "fetched_at": "2026-11-21T14:11:21+00:00",
+  "fetched_at": "2026-11-28T14:53:16+00:00",
   "sid": "ANGE",
   "source": "Tickertape",
   "years": [
@@ -2492,7 +2492,7 @@
   ]
  },
  "ANTHEM": {
-  "fetched_at": "2026-11-21T14:11:22+00:00",
+  "fetched_at": "2026-11-28T14:53:17+00:00",
   "sid": "ANTH",
   "source": "Tickertape",
   "years": [
@@ -2571,7 +2571,7 @@
   ]
  },
  "ANURAS": {
-  "fetched_at": "2026-11-21T14:11:23+00:00",
+  "fetched_at": "2026-11-28T14:53:18+00:00",
   "sid": "ANUR",
   "source": "Tickertape",
   "years": [
@@ -2650,7 +2650,7 @@
   ]
  },
  "APARINDS": {
-  "fetched_at": "2026-11-21T14:11:24+00:00",
+  "fetched_at": "2026-11-28T14:53:19+00:00",
   "sid": "APAR",
   "source": "Tickertape",
   "years": [
@@ -2729,7 +2729,7 @@
   ]
  },
  "APLAPOLLO": {
-  "fetched_at": "2026-11-21T14:11:24+00:00",
+  "fetched_at": "2026-11-28T14:53:19+00:00",
   "sid": "APLA",
   "source": "Tickertape",
   "years": [
@@ -2808,7 +2808,7 @@
   ]
  },
  "APOLLOHOSP": {
-  "fetched_at": "2026-11-21T14:11:25+00:00",
+  "fetched_at": "2026-11-28T14:53:20+00:00",
   "sid": "APLH",
   "source": "Tickertape",
   "years": [
@@ -2887,7 +2887,7 @@
   ]
  },
  "APOLLOTYRE": {
-  "fetched_at": "2026-11-21T14:11:26+00:00",
+  "fetched_at": "2026-11-28T14:53:21+00:00",
   "sid": "APLO",
   "source": "Tickertape",
   "years": [
@@ -2966,7 +2966,7 @@
   ]
  },
  "APTUS": {
-  "fetched_at": "2026-11-21T14:11:26+00:00",
+  "fetched_at": "2026-11-28T14:53:21+00:00",
   "sid": "APTU",
   "source": "Tickertape",
   "years": [
@@ -3045,7 +3045,7 @@
   ]
  },
  "ARE&M": {
-  "fetched_at": "2026-11-21T14:11:27+00:00",
+  "fetched_at": "2026-11-28T14:53:22+00:00",
   "sid": "AMAR",
   "source": "Tickertape",
   "years": [
@@ -3124,7 +3124,7 @@
   ]
  },
  "ASAHIINDIA": {
-  "fetched_at": "2026-11-21T14:11:28+00:00",
+  "fetched_at": "2026-11-28T14:53:23+00:00",
   "sid": "AISG",
   "source": "Tickertape",
   "years": [
@@ -3203,7 +3203,7 @@
   ]
  },
  "ASHOKLEY": {
-  "fetched_at": "2026-11-21T14:11:29+00:00",
+  "fetched_at": "2026-11-28T14:53:23+00:00",
   "sid": "ASOK",
   "source": "Tickertape",
   "years": [
@@ -3282,7 +3282,7 @@
   ]
  },
  "ASIANPAINT": {
-  "fetched_at": "2026-11-21T14:11:30+00:00",
+  "fetched_at": "2026-11-28T14:53:24+00:00",
   "sid": "ASPN",
   "source": "Tickertape",
   "years": [
@@ -3361,7 +3361,7 @@
   ]
  },
  "ASTERDM": {
-  "fetched_at": "2026-11-21T14:11:31+00:00",
+  "fetched_at": "2026-11-28T14:53:25+00:00",
   "sid": "ATRD",
   "source": "Tickertape",
   "years": [
@@ -3440,7 +3440,7 @@
   ]
  },
  "ASTRAL": {
-  "fetched_at": "2026-11-21T14:11:31+00:00",
+  "fetched_at": "2026-11-28T14:53:26+00:00",
   "sid": "ASPT",
   "source": "Tickertape",
   "years": [
@@ -3519,7 +3519,7 @@
   ]
  },
  "ATGL": {
-  "fetched_at": "2026-11-21T14:11:32+00:00",
+  "fetched_at": "2026-11-28T14:53:26+00:00",
   "sid": "ADAG",
   "source": "Tickertape",
   "years": [
@@ -3598,7 +3598,7 @@
   ]
  },
  "ATHERENERG": {
-  "fetched_at": "2026-11-21T14:11:33+00:00",
+  "fetched_at": "2026-11-28T14:53:27+00:00",
   "sid": "ATHER",
   "source": "Tickertape",
   "years": [
@@ -3677,7 +3677,7 @@
   ]
  },
  "ATUL": {
-  "fetched_at": "2026-11-21T14:11:34+00:00",
+  "fetched_at": "2026-11-28T14:53:28+00:00",
   "sid": "ATLP",
   "source": "Tickertape",
   "years": [
@@ -3756,7 +3756,7 @@
   ]
  },
  "AUBANK": {
-  "fetched_at": "2026-11-21T14:11:34+00:00",
+  "fetched_at": "2026-11-28T14:53:28+00:00",
   "sid": "AUFI",
   "source": "Tickertape",
   "years": [
@@ -3835,7 +3835,7 @@
   ]
  },
  "AUROPHARMA": {
-  "fetched_at": "2026-11-21T14:11:35+00:00",
+  "fetched_at": "2026-11-28T14:53:29+00:00",
   "sid": "ARBN",
   "source": "Tickertape",
   "years": [
@@ -3914,7 +3914,7 @@
   ]
  },
  "AVANTIFEED": {
-  "fetched_at": "2026-11-21T14:11:36+00:00",
+  "fetched_at": "2026-11-28T14:53:30+00:00",
   "sid": "AVNT",
   "source": "Tickertape",
   "years": [
@@ -3993,7 +3993,7 @@
   ]
  },
  "AWL": {
-  "fetched_at": "2026-11-21T14:11:36+00:00",
+  "fetched_at": "2026-11-28T14:53:30+00:00",
   "sid": "AWL",
   "source": "Tickertape",
   "years": [
@@ -4072,7 +4072,7 @@
   ]
  },
  "AXISBANK": {
-  "fetched_at": "2026-11-21T14:11:37+00:00",
+  "fetched_at": "2026-11-28T14:53:31+00:00",
   "sid": "AXBK",
   "source": "Tickertape",
   "years": [
@@ -4151,7 +4151,7 @@
   ]
  },
  "BAJAJ-AUTO": {
-  "fetched_at": "2026-11-21T14:11:38+00:00",
+  "fetched_at": "2026-11-28T14:53:33+00:00",
   "sid": "BAJA",
   "source": "Tickertape",
   "years": [
@@ -4230,7 +4230,7 @@
   ]
  },
  "BAJAJFINSV": {
-  "fetched_at": "2026-11-21T14:11:39+00:00",
+  "fetched_at": "2026-11-28T14:53:33+00:00",
   "sid": "BJFS",
   "source": "Tickertape",
   "years": [
@@ -4309,7 +4309,7 @@
   ]
  },
  "BAJAJHFL": {
-  "fetched_at": "2026-11-21T14:11:40+00:00",
+  "fetched_at": "2026-11-28T14:53:34+00:00",
   "sid": "BAJAH",
   "source": "Tickertape",
   "years": [
@@ -4388,7 +4388,7 @@
   ]
  },
  "BAJAJHLDNG": {
-  "fetched_at": "2026-11-21T14:11:41+00:00",
+  "fetched_at": "2026-11-28T14:53:35+00:00",
   "sid": "BJAT",
   "source": "Tickertape",
   "years": [
@@ -4467,7 +4467,7 @@
   ]
  },
  "BAJFINANCE": {
-  "fetched_at": "2026-11-21T14:11:41+00:00",
+  "fetched_at": "2026-11-28T14:53:35+00:00",
   "sid": "BJFN",
   "source": "Tickertape",
   "years": [
@@ -4546,7 +4546,7 @@
   ]
  },
  "BALKRISIND": {
-  "fetched_at": "2026-11-21T14:11:42+00:00",
+  "fetched_at": "2026-11-28T14:53:36+00:00",
   "sid": "BLKI",
   "source": "Tickertape",
   "years": [
@@ -4625,7 +4625,7 @@
   ]
  },
  "BALRAMCHIN": {
-  "fetched_at": "2026-11-21T14:11:43+00:00",
+  "fetched_at": "2026-11-28T14:53:37+00:00",
   "sid": "BACH",
   "source": "Tickertape",
   "years": [
@@ -4704,7 +4704,7 @@
   ]
  },
  "BANDHANBNK": {
-  "fetched_at": "2026-11-21T14:11:44+00:00",
+  "fetched_at": "2026-11-28T14:53:37+00:00",
   "sid": "BANH",
   "source": "Tickertape",
   "years": [
@@ -4783,7 +4783,7 @@
   ]
  },
  "BANKBARODA": {
-  "fetched_at": "2026-11-21T14:11:45+00:00",
+  "fetched_at": "2026-11-28T14:53:38+00:00",
   "sid": "BOB",
   "source": "Tickertape",
   "years": [
@@ -4862,7 +4862,7 @@
   ]
  },
  "BANKINDIA": {
-  "fetched_at": "2026-11-21T14:11:45+00:00",
+  "fetched_at": "2026-11-28T14:53:39+00:00",
   "sid": "BOI",
   "source": "Tickertape",
   "years": [
@@ -4941,7 +4941,7 @@
   ]
  },
  "BATAINDIA": {
-  "fetched_at": "2026-11-21T14:11:46+00:00",
+  "fetched_at": "2026-11-28T14:53:40+00:00",
   "sid": "BATA",
   "source": "Tickertape",
   "years": [
@@ -5020,7 +5020,7 @@
   ]
  },
  "BDL": {
-  "fetched_at": "2026-11-21T14:11:47+00:00",
+  "fetched_at": "2026-11-28T14:53:41+00:00",
   "sid": "BARA",
   "source": "Tickertape",
   "years": [
@@ -5099,7 +5099,7 @@
   ]
  },
  "BEL": {
-  "fetched_at": "2026-11-21T14:11:48+00:00",
+  "fetched_at": "2026-11-28T14:53:41+00:00",
   "sid": "BAJE",
   "source": "Tickertape",
   "years": [
@@ -5178,7 +5178,7 @@
   ]
  },
  "BELRISE": {
-  "fetched_at": "2026-11-21T14:11:49+00:00",
+  "fetched_at": "2026-11-28T14:53:42+00:00",
   "sid": "BELR",
   "source": "Tickertape",
   "years": [
@@ -5257,7 +5257,7 @@
   ]
  },
  "BEML": {
-  "fetched_at": "2026-11-21T14:11:49+00:00",
+  "fetched_at": "2026-11-28T14:53:43+00:00",
   "sid": "BEML",
   "source": "Tickertape",
   "years": [
@@ -5336,7 +5336,7 @@
   ]
  },
  "BERGEPAINT": {
-  "fetched_at": "2026-11-21T14:11:50+00:00",
+  "fetched_at": "2026-11-28T14:53:43+00:00",
   "sid": "BRGR",
   "source": "Tickertape",
   "years": [
@@ -5415,7 +5415,7 @@
   ]
  },
  "BHARATFORG": {
-  "fetched_at": "2026-11-21T14:11:51+00:00",
+  "fetched_at": "2026-11-28T14:53:44+00:00",
   "sid": "BFRG",
   "source": "Tickertape",
   "years": [
@@ -5494,7 +5494,7 @@
   ]
  },
  "BHARTIARTL": {
-  "fetched_at": "2026-11-21T14:11:52+00:00",
+  "fetched_at": "2026-11-28T14:53:45+00:00",
   "sid": "BRTI",
   "source": "Tickertape",
   "years": [
@@ -5573,7 +5573,7 @@
   ]
  },
  "BHARTIHEXA": {
-  "fetched_at": "2026-11-21T14:11:52+00:00",
+  "fetched_at": "2026-11-28T14:53:46+00:00",
   "sid": "BHARI",
   "source": "Tickertape",
   "years": [
@@ -5652,7 +5652,7 @@
   ]
  },
  "BHEL": {
-  "fetched_at": "2026-11-21T14:11:53+00:00",
+  "fetched_at": "2026-11-28T14:53:47+00:00",
   "sid": "BHEL",
   "source": "Tickertape",
   "years": [
@@ -5731,7 +5731,7 @@
   ]
  },
  "BIOCON": {
-  "fetched_at": "2026-11-21T14:11:54+00:00",
+  "fetched_at": "2026-11-28T14:53:47+00:00",
   "sid": "BION",
   "source": "Tickertape",
   "years": [
@@ -5810,7 +5810,7 @@
   ]
  },
  "BLS": {
-  "fetched_at": "2026-11-21T14:11:55+00:00",
+  "fetched_at": "2026-11-28T14:53:48+00:00",
   "sid": "BLSN",
   "source": "Tickertape",
   "years": [
@@ -5889,7 +5889,7 @@
   ]
  },
  "BLUESTARCO": {
-  "fetched_at": "2026-11-21T14:11:55+00:00",
+  "fetched_at": "2026-11-28T14:53:49+00:00",
   "sid": "BLUS",
   "source": "Tickertape",
   "years": [
@@ -5968,7 +5968,7 @@
   ]
  },
  "BOSCHLTD": {
-  "fetched_at": "2026-11-21T14:11:56+00:00",
+  "fetched_at": "2026-11-28T14:53:50+00:00",
   "sid": "BOSH",
   "source": "Tickertape",
   "years": [
@@ -6047,7 +6047,7 @@
   ]
  },
  "BPCL": {
-  "fetched_at": "2026-11-21T14:11:57+00:00",
+  "fetched_at": "2026-11-28T14:53:50+00:00",
   "sid": "BPCL",
   "source": "Tickertape",
   "years": [
@@ -6126,7 +6126,7 @@
   ]
  },
  "BRIGADE": {
-  "fetched_at": "2026-11-21T14:11:58+00:00",
+  "fetched_at": "2026-11-28T14:53:51+00:00",
   "sid": "BRIG",
   "source": "Tickertape",
   "years": [
@@ -6205,7 +6205,7 @@
   ]
  },
  "BRITANNIA": {
-  "fetched_at": "2026-11-21T14:11:58+00:00",
+  "fetched_at": "2026-11-28T14:53:52+00:00",
   "sid": "BRIT",
   "source": "Tickertape",
   "years": [
@@ -6284,7 +6284,7 @@
   ]
  },
  "BSE": {
-  "fetched_at": "2026-11-21T14:11:59+00:00",
+  "fetched_at": "2026-11-28T14:53:53+00:00",
   "sid": "BSEL",
   "source": "Tickertape",
   "years": [
@@ -6363,7 +6363,7 @@
   ]
  },
  "BSOFT": {
-  "fetched_at": "2026-11-21T14:12:00+00:00",
+  "fetched_at": "2026-11-28T14:53:53+00:00",
   "sid": "BIRS",
   "source": "Tickertape",
   "years": [
@@ -6442,7 +6442,7 @@
   ]
  },
  "CAMS": {
-  "fetched_at": "2026-11-21T14:12:01+00:00",
+  "fetched_at": "2026-11-28T14:53:54+00:00",
   "sid": "CAMC",
   "source": "Tickertape",
   "years": [
@@ -6521,7 +6521,7 @@
   ]
  },
  "CANBK": {
-  "fetched_at": "2026-11-21T14:12:02+00:00",
+  "fetched_at": "2026-11-28T14:53:55+00:00",
   "sid": "CNBK",
   "source": "Tickertape",
   "years": [
@@ -6600,7 +6600,7 @@
   ]
  },
  "CANFINHOME": {
-  "fetched_at": "2026-11-21T14:12:02+00:00",
+  "fetched_at": "2026-11-28T14:53:55+00:00",
   "sid": "CNFH",
   "source": "Tickertape",
   "years": [
@@ -6679,7 +6679,7 @@
   ]
  },
  "CANHLIFE": {
-  "fetched_at": "2026-11-21T14:12:03+00:00",
+  "fetched_at": "2026-11-28T14:53:56+00:00",
   "sid": "CANH",
   "source": "Tickertape",
   "years": [
@@ -6758,7 +6758,7 @@
   ]
  },
  "CAPLIPOINT": {
-  "fetched_at": "2026-11-21T14:12:04+00:00",
+  "fetched_at": "2026-11-28T14:53:57+00:00",
   "sid": "CAPL",
   "source": "Tickertape",
   "years": [
@@ -6837,7 +6837,7 @@
   ]
  },
  "CARBORUNIV": {
-  "fetched_at": "2026-11-21T14:12:04+00:00",
+  "fetched_at": "2026-11-28T14:53:57+00:00",
   "sid": "CRBR",
   "source": "Tickertape",
   "years": [
@@ -6916,7 +6916,7 @@
   ]
  },
  "CARTRADE": {
-  "fetched_at": "2026-11-21T14:12:05+00:00",
+  "fetched_at": "2026-11-28T14:53:58+00:00",
   "sid": "CART",
   "source": "Tickertape",
   "years": [
@@ -6995,7 +6995,7 @@
   ]
  },
  "CASTROLIND": {
-  "fetched_at": "2026-11-21T14:12:06+00:00",
+  "fetched_at": "2026-11-28T14:53:59+00:00",
   "sid": "CAST",
   "source": "Tickertape",
   "years": [
@@ -7074,7 +7074,7 @@
   ]
  },
  "CCL": {
-  "fetched_at": "2026-11-21T14:12:06+00:00",
+  "fetched_at": "2026-11-28T14:54:00+00:00",
   "sid": "CCLP",
   "source": "Tickertape",
   "years": [
@@ -7153,7 +7153,7 @@
   ]
  },
  "CDSL": {
-  "fetched_at": "2026-11-21T14:12:07+00:00",
+  "fetched_at": "2026-11-28T14:54:00+00:00",
   "sid": "CENA",
   "source": "Tickertape",
   "years": [
@@ -7232,7 +7232,7 @@
   ]
  },
  "CEATLTD": {
-  "fetched_at": "2026-11-21T14:12:08+00:00",
+  "fetched_at": "2026-11-28T14:54:01+00:00",
   "sid": "CEAT",
   "source": "Tickertape",
   "years": [
@@ -7311,7 +7311,7 @@
   ]
  },
  "CEMPRO": {
-  "fetched_at": "2026-11-21T14:12:09+00:00",
+  "fetched_at": "2026-11-28T14:54:02+00:00",
   "sid": "ITCM",
   "source": "Tickertape",
   "years": [
@@ -7390,7 +7390,7 @@
   ]
  },
  "CENTRALBK": {
-  "fetched_at": "2026-11-21T14:12:09+00:00",
+  "fetched_at": "2026-11-28T14:54:02+00:00",
   "sid": "CBI",
   "source": "Tickertape",
   "years": [
@@ -7469,7 +7469,7 @@
   ]
  },
  "CESC": {
-  "fetched_at": "2026-11-21T14:12:10+00:00",
+  "fetched_at": "2026-11-28T14:54:03+00:00",
   "sid": "CESC",
   "source": "Tickertape",
   "years": [
@@ -7548,7 +7548,7 @@
   ]
  },
  "CGCL": {
-  "fetched_at": "2026-11-21T14:12:11+00:00",
+  "fetched_at": "2026-11-28T14:54:04+00:00",
   "sid": "CAPG",
   "source": "Tickertape",
   "years": [
@@ -7627,7 +7627,7 @@
   ]
  },
  "CGPOWER": {
-  "fetched_at": "2026-11-21T14:12:12+00:00",
+  "fetched_at": "2026-11-28T14:54:05+00:00",
   "sid": "CGPO",
   "source": "Tickertape",
   "years": [
@@ -7706,7 +7706,7 @@
   ]
  },
  "CHAMBLFERT": {
-  "fetched_at": "2026-11-21T14:12:12+00:00",
+  "fetched_at": "2026-11-28T14:54:05+00:00",
   "sid": "CHMB",
   "source": "Tickertape",
   "years": [
@@ -7785,7 +7785,7 @@
   ]
  },
  "CHENNPETRO": {
-  "fetched_at": "2026-11-21T14:12:13+00:00",
+  "fetched_at": "2026-11-28T14:54:06+00:00",
   "sid": "CHPC",
   "source": "Tickertape",
   "years": [
@@ -7864,7 +7864,7 @@
   ]
  },
  "CHOICEIN": {
-  "fetched_at": "2026-11-21T14:12:14+00:00",
+  "fetched_at": "2026-11-28T14:54:07+00:00",
   "sid": "CHOI",
   "source": "Tickertape",
   "years": [
@@ -7943,7 +7943,7 @@
   ]
  },
  "CHOLAFIN": {
-  "fetched_at": "2026-11-21T14:12:15+00:00",
+  "fetched_at": "2026-11-28T14:54:08+00:00",
   "sid": "CHLA",
   "source": "Tickertape",
   "years": [
@@ -8022,7 +8022,7 @@
   ]
  },
  "CHOLAHLDNG": {
-  "fetched_at": "2026-11-21T14:12:15+00:00",
+  "fetched_at": "2026-11-28T14:54:08+00:00",
   "sid": "CHOL",
   "source": "Tickertape",
   "years": [
@@ -8101,7 +8101,7 @@
   ]
  },
  "CIEINDIA": {
-  "fetched_at": "2026-11-21T14:12:16+00:00",
+  "fetched_at": "2026-11-28T14:54:09+00:00",
   "sid": "MAHN",
   "source": "Tickertape",
   "years": [
@@ -8180,7 +8180,7 @@
   ]
  },
  "CIPLA": {
-  "fetched_at": "2026-11-21T14:12:17+00:00",
+  "fetched_at": "2026-11-28T14:54:10+00:00",
   "sid": "CIPL",
   "source": "Tickertape",
   "years": [
@@ -8259,7 +8259,7 @@
   ]
  },
  "CLEAN": {
-  "fetched_at": "2026-11-21T14:12:17+00:00",
+  "fetched_at": "2026-11-28T14:54:10+00:00",
   "sid": "CLE",
   "source": "Tickertape",
   "years": [
@@ -8338,7 +8338,7 @@
   ]
  },
  "COALINDIA": {
-  "fetched_at": "2026-11-21T14:12:19+00:00",
+  "fetched_at": "2026-11-28T14:54:12+00:00",
   "sid": "COAL",
   "source": "Tickertape",
   "years": [
@@ -8417,7 +8417,7 @@
   ]
  },
  "COCHINSHIP": {
-  "fetched_at": "2026-11-21T14:12:19+00:00",
+  "fetched_at": "2026-11-28T14:54:13+00:00",
   "sid": "COCH",
   "source": "Tickertape",
   "years": [
@@ -8496,7 +8496,7 @@
   ]
  },
  "COFORGE": {
-  "fetched_at": "2026-11-21T14:12:21+00:00",
+  "fetched_at": "2026-11-28T14:54:13+00:00",
   "sid": "COFO",
   "source": "Tickertape",
   "years": [
@@ -8575,7 +8575,7 @@
   ]
  },
  "COHANCE": {
-  "fetched_at": "2026-11-21T14:12:21+00:00",
+  "fetched_at": "2026-11-28T14:54:14+00:00",
   "sid": "SUVH",
   "source": "Tickertape",
   "years": [
@@ -8654,7 +8654,7 @@
   ]
  },
  "COLPAL": {
-  "fetched_at": "2026-11-21T14:12:22+00:00",
+  "fetched_at": "2026-11-28T14:54:15+00:00",
   "sid": "COLG",
   "source": "Tickertape",
   "years": [
@@ -8733,7 +8733,7 @@
   ]
  },
  "CONCOR": {
-  "fetched_at": "2026-11-21T14:12:22+00:00",
+  "fetched_at": "2026-11-28T14:54:15+00:00",
   "sid": "CCRI",
   "source": "Tickertape",
   "years": [
@@ -8812,7 +8812,7 @@
   ]
  },
  "CONCORDBIO": {
-  "fetched_at": "2026-11-21T14:12:23+00:00",
+  "fetched_at": "2026-11-28T14:54:16+00:00",
   "sid": "CONCO",
   "source": "Tickertape",
   "years": [
@@ -8891,7 +8891,7 @@
   ]
  },
  "COROMANDEL": {
-  "fetched_at": "2026-11-21T14:12:24+00:00",
+  "fetched_at": "2026-11-28T14:54:17+00:00",
   "sid": "CORF",
   "source": "Tickertape",
   "years": [
@@ -8970,7 +8970,7 @@
   ]
  },
  "CPPLUS": {
-  "fetched_at": "2026-11-21T14:12:25+00:00",
+  "fetched_at": "2026-11-28T14:54:17+00:00",
   "sid": "CPP",
   "source": "Tickertape",
   "years": [
@@ -9049,7 +9049,7 @@
   ]
  },
  "CRAFTSMAN": {
-  "fetched_at": "2026-11-21T14:12:25+00:00",
+  "fetched_at": "2026-11-28T14:54:18+00:00",
   "sid": "CRAF",
   "source": "Tickertape",
   "years": [
@@ -9128,7 +9128,7 @@
   ]
  },
  "CREDITACC": {
-  "fetched_at": "2026-11-21T14:12:26+00:00",
+  "fetched_at": "2026-11-28T14:54:19+00:00",
   "sid": "CRDE",
   "source": "Tickertape",
   "years": [
@@ -9207,7 +9207,7 @@
   ]
  },
  "CRISIL": {
-  "fetched_at": "2026-11-21T14:12:27+00:00",
+  "fetched_at": "2026-11-28T14:54:20+00:00",
   "sid": "CRSL",
   "source": "Tickertape",
   "years": [
@@ -9286,7 +9286,7 @@
   ]
  },
  "CROMPTON": {
-  "fetched_at": "2026-11-21T14:12:27+00:00",
+  "fetched_at": "2026-11-28T14:54:20+00:00",
   "sid": "CROP",
   "source": "Tickertape",
   "years": [
@@ -9365,7 +9365,7 @@
   ]
  },
  "CUB": {
-  "fetched_at": "2026-11-21T14:12:28+00:00",
+  "fetched_at": "2026-11-28T14:54:21+00:00",
   "sid": "CTBK",
   "source": "Tickertape",
   "years": [
@@ -9444,7 +9444,7 @@
   ]
  },
  "CUMMINSIND": {
-  "fetched_at": "2026-11-21T14:12:29+00:00",
+  "fetched_at": "2026-11-28T14:54:22+00:00",
   "sid": "CUMM",
   "source": "Tickertape",
   "years": [
@@ -9523,7 +9523,7 @@
   ]
  },
  "CUPID": {
-  "fetched_at": "2026-11-21T14:12:30+00:00",
+  "fetched_at": "2026-11-28T14:54:22+00:00",
   "sid": "CUCO",
   "source": "Tickertape",
   "years": [
@@ -9584,7 +9584,7 @@
   ]
  },
  "CYIENT": {
-  "fetched_at": "2026-11-21T14:12:30+00:00",
+  "fetched_at": "2026-11-28T14:54:23+00:00",
   "sid": "CYIE",
   "source": "Tickertape",
   "years": [
@@ -9663,7 +9663,7 @@
   ]
  },
  "DABUR": {
-  "fetched_at": "2026-11-21T14:12:31+00:00",
+  "fetched_at": "2026-11-28T14:54:24+00:00",
   "sid": "DABU",
   "source": "Tickertape",
   "years": [
@@ -9742,7 +9742,7 @@
   ]
  },
  "DALBHARAT": {
-  "fetched_at": "2026-11-21T14:12:32+00:00",
+  "fetched_at": "2026-11-28T14:54:25+00:00",
   "sid": "DALB",
   "source": "Tickertape",
   "years": [
@@ -9821,7 +9821,7 @@
   ]
  },
  "DATAPATTNS": {
-  "fetched_at": "2026-11-21T14:12:32+00:00",
+  "fetched_at": "2026-11-28T14:54:25+00:00",
   "sid": "DATAP",
   "source": "Tickertape",
   "years": [
@@ -9900,7 +9900,7 @@
   ]
  },
  "DEEPAKFERT": {
-  "fetched_at": "2026-11-21T14:12:33+00:00",
+  "fetched_at": "2026-11-28T14:54:26+00:00",
   "sid": "DPFE",
   "source": "Tickertape",
   "years": [
@@ -9979,7 +9979,7 @@
   ]
  },
  "DEEPAKNTR": {
-  "fetched_at": "2026-11-21T14:12:34+00:00",
+  "fetched_at": "2026-11-28T14:54:27+00:00",
   "sid": "DPNT",
   "source": "Tickertape",
   "years": [
@@ -10058,7 +10058,7 @@
   ]
  },
  "DELHIVERY": {
-  "fetched_at": "2026-11-21T14:12:34+00:00",
+  "fetched_at": "2026-11-28T14:54:27+00:00",
   "sid": "DELH",
   "source": "Tickertape",
   "years": [
@@ -10137,7 +10137,7 @@
   ]
  },
  "DEVYANI": {
-  "fetched_at": "2026-11-21T14:12:35+00:00",
+  "fetched_at": "2026-11-28T14:54:28+00:00",
   "sid": "DEVY",
   "source": "Tickertape",
   "years": [
@@ -10216,7 +10216,7 @@
   ]
  },
  "DIVISLAB": {
-  "fetched_at": "2026-11-21T14:12:36+00:00",
+  "fetched_at": "2026-11-28T14:54:29+00:00",
   "sid": "DIVI",
   "source": "Tickertape",
   "years": [
@@ -10295,7 +10295,7 @@
   ]
  },
  "DIXON": {
-  "fetched_at": "2026-11-21T14:12:37+00:00",
+  "fetched_at": "2026-11-28T14:54:30+00:00",
   "sid": "DIXO",
   "source": "Tickertape",
   "years": [
@@ -10374,7 +10374,7 @@
   ]
  },
  "DLF": {
-  "fetched_at": "2026-11-21T14:12:37+00:00",
+  "fetched_at": "2026-11-28T14:54:30+00:00",
   "sid": "DLF",
   "source": "Tickertape",
   "years": [
@@ -10453,7 +10453,7 @@
   ]
  },
  "DMART": {
-  "fetched_at": "2026-11-21T14:12:38+00:00",
+  "fetched_at": "2026-11-28T14:54:31+00:00",
   "sid": "AVEU",
   "source": "Tickertape",
   "years": [
@@ -10532,7 +10532,7 @@
   ]
  },
  "DOMS": {
-  "fetched_at": "2026-11-21T14:12:39+00:00",
+  "fetched_at": "2026-11-28T14:54:32+00:00",
   "sid": "DOM",
   "source": "Tickertape",
   "years": [
@@ -10611,7 +10611,7 @@
   ]
  },
  "DRREDDY": {
-  "fetched_at": "2026-11-21T14:12:39+00:00",
+  "fetched_at": "2026-11-28T14:54:32+00:00",
   "sid": "REDY",
   "source": "Tickertape",
   "years": [
@@ -10690,7 +10690,7 @@
   ]
  },
  "ECLERX": {
-  "fetched_at": "2026-11-21T14:12:40+00:00",
+  "fetched_at": "2026-11-28T14:54:33+00:00",
   "sid": "ECLE",
   "source": "Tickertape",
   "years": [
@@ -10769,7 +10769,7 @@
   ]
  },
  "EICHERMOT": {
-  "fetched_at": "2026-11-21T14:12:41+00:00",
+  "fetched_at": "2026-11-28T14:54:34+00:00",
   "sid": "EICH",
   "source": "Tickertape",
   "years": [
@@ -10848,7 +10848,7 @@
   ]
  },
  "EIDPARRY": {
-  "fetched_at": "2026-11-21T14:12:41+00:00",
+  "fetched_at": "2026-11-28T14:54:34+00:00",
   "sid": "EIDP",
   "source": "Tickertape",
   "years": [
@@ -10927,7 +10927,7 @@
   ]
  },
  "EIHOTEL": {
-  "fetched_at": "2026-11-21T14:12:42+00:00",
+  "fetched_at": "2026-11-28T14:54:35+00:00",
   "sid": "EIHO",
   "source": "Tickertape",
   "years": [
@@ -11006,7 +11006,7 @@
   ]
  },
  "ELECON": {
-  "fetched_at": "2026-11-21T14:12:43+00:00",
+  "fetched_at": "2026-11-28T14:54:36+00:00",
   "sid": "ELCN",
   "source": "Tickertape",
   "years": [
@@ -11085,86 +11085,65 @@
   ]
  },
  "ELGIEQUIP": {
-  "fetched_at": "2026-11-21T14:12:44+00:00",
+  "fetched_at": "2026-11-28T14:54:37+00:00",
   "sid": "ELGE",
   "source": "Tickertape",
   "years": [
    {
-    "current_assets": 1098.64,
-    "current_liabilities": 349.83,
-    "ebit": 360.74,
-    "ebitda": 399.1,
-    "equity": 1222.0,
-    "interest": 6.75,
-    "inventory": 167.35,
-    "net_income": 272.49,
-    "other_income": 81.5,
-    "payables": 168.81,
-    "profit_before_tax": 353.99,
-    "raw_materials": 972.99,
-    "receivables": 443.51,
-    "revenue": 1840.0,
-    "total_assets": 1582.35,
+    "ebit": 530.14,
+    "ebitda": 607.86,
+    "interest": 19.77,
+    "net_income": 370.81,
+    "other_income": 139.56,
+    "profit_before_tax": 510.37,
+    "raw_materials": null,
+    "revenue": 3215.78,
     "year": "Mar 2023"
    },
    {
-    "current_assets": 1399.8,
-    "current_liabilities": 421.9,
-    "ebit": 434.6,
-    "ebitda": 470.6,
-    "equity": 1469.4,
-    "interest": 6.6,
-    "inventory": 186.4,
-    "net_income": 322.2,
-    "other_income": 105.8,
-    "payables": 219.6,
-    "profit_before_tax": 428.0,
-    "raw_materials": 985.2,
-    "receivables": 499.1,
-    "revenue": 1912.0,
-    "total_assets": 1901.9,
+    "ebit": 469.52,
+    "ebitda": 546.17,
+    "interest": 29.34,
+    "net_income": 311.89,
+    "other_income": 128.29,
+    "profit_before_tax": 440.18,
+    "raw_materials": null,
+    "revenue": 3277.94,
     "year": "Mar 2024"
    },
    {
-    "current_assets": 1515.7,
-    "current_liabilities": 339.2,
-    "ebit": 471.0,
-    "ebitda": 506.9,
-    "equity": 1726.5,
-    "interest": 3.4,
-    "inventory": 213.7,
-    "net_income": 350.1,
-    "other_income": 117.5,
-    "payables": 218.7,
-    "profit_before_tax": 467.6,
-    "raw_materials": 1122.4,
-    "receivables": 460.4,
-    "revenue": 2150.5,
-    "total_assets": 2083.8,
+    "ebit": 512.08,
+    "ebitda": 588.15,
+    "interest": 30.47,
+    "net_income": 350.11,
+    "other_income": 131.5,
+    "profit_before_tax": 481.61,
+    "raw_materials": null,
+    "revenue": 3573.67,
     "year": "Mar 2025"
    },
    {
-    "current_assets": 1706.1,
-    "current_liabilities": 480.3,
-    "ebit": 467.3,
-    "ebitda": 508.3,
-    "equity": 1986.9,
-    "interest": 2.8,
-    "inventory": 272.6,
-    "net_income": 345.3,
-    "other_income": 119.2,
-    "payables": 323.3,
-    "profit_before_tax": 464.5,
-    "raw_materials": 1255.1,
-    "receivables": 640.8,
-    "revenue": 2428.7,
-    "total_assets": 2512.2,
+    "current_assets": 2490.2,
+    "current_liabilities": 1195.9,
+    "ebit": 606.9,
+    "ebitda": 692.7,
+    "equity": 2231.9,
+    "interest": 29.5,
+    "inventory": 710.7,
+    "net_income": 430.2,
+    "other_income": 147.2,
+    "payables": 480.1,
+    "profit_before_tax": 577.4,
+    "raw_materials": 1976.9,
+    "receivables": 723.9,
+    "revenue": 4075.2,
+    "total_assets": 3538.0,
     "year": "Mar 2026"
    }
   ]
  },
  "EMAMILTD": {
-  "fetched_at": "2026-11-21T14:12:44+00:00",
+  "fetched_at": "2026-11-28T14:54:37+00:00",
   "sid": "EMAM",
   "source": "Tickertape",
   "years": [
@@ -11243,7 +11222,7 @@
   ]
  },
  "EMBASSY": {
-  "fetched_at": "2026-11-21T14:12:45+00:00",
+  "fetched_at": "2026-11-28T14:54:38+00:00",
   "sid": "EMBA",
   "source": "Tickertape",
   "years": [
@@ -11322,7 +11301,7 @@
   ]
  },
  "EMCURE": {
-  "fetched_at": "2026-11-21T14:12:46+00:00",
+  "fetched_at": "2026-11-28T14:54:39+00:00",
   "sid": "EMC",
   "source": "Tickertape",
   "years": [
@@ -11401,7 +11380,7 @@
   ]
  },
  "EMMVEE": {
-  "fetched_at": "2026-11-21T14:12:46+00:00",
+  "fetched_at": "2026-11-28T14:54:39+00:00",
   "sid": "EMMV",
   "source": "Tickertape",
   "years": [
@@ -11480,7 +11459,7 @@
   ]
  },
  "ENDURANCE": {
-  "fetched_at": "2026-11-21T14:12:47+00:00",
+  "fetched_at": "2026-11-28T14:54:40+00:00",
   "sid": "ENDU",
   "source": "Tickertape",
   "years": [
@@ -11559,7 +11538,7 @@
   ]
  },
  "ENGINERSIN": {
-  "fetched_at": "2026-11-21T14:12:48+00:00",
+  "fetched_at": "2026-11-28T14:54:41+00:00",
   "sid": "ENGI",
   "source": "Tickertape",
   "years": [
@@ -11638,7 +11617,7 @@
   ]
  },
  "ENRIN": {
-  "fetched_at": "2026-11-21T14:12:48+00:00",
+  "fetched_at": "2026-11-28T14:54:41+00:00",
   "sid": "ENR",
   "source": "Tickertape",
   "years": [
@@ -11677,11 +11656,22 @@
     "revenue": 7932.0,
     "total_assets": 9545.2,
     "year": "Mar 2025"
+   },
+   {
+    "ebit": 2419.8,
+    "ebitda": 2568.6,
+    "interest": 32.1,
+    "net_income": 1780.9,
+    "other_income": 606.8,
+    "profit_before_tax": 2387.7,
+    "raw_materials": null,
+    "revenue": 10496.5,
+    "year": "Mar 2026"
    }
   ]
  },
  "ESCORTS": {
-  "fetched_at": "2026-11-21T14:12:49+00:00",
+  "fetched_at": "2026-11-28T14:54:42+00:00",
   "sid": "ESCO",
   "source": "Tickertape",
   "years": [
@@ -11760,7 +11750,7 @@
   ]
  },
  "ETERNAL": {
-  "fetched_at": "2026-11-21T14:12:50+00:00",
+  "fetched_at": "2026-11-28T14:54:43+00:00",
   "sid": "ZOM",
   "source": "Tickertape",
   "years": [
@@ -11839,7 +11829,7 @@
   ]
  },
  "EXIDEIND": {
-  "fetched_at": "2026-11-21T14:12:51+00:00",
+  "fetched_at": "2026-11-28T14:54:44+00:00",
   "sid": "EXID",
   "source": "Tickertape",
   "years": [
@@ -11918,7 +11908,7 @@
   ]
  },
  "FACT": {
-  "fetched_at": "2026-11-21T14:12:51+00:00",
+  "fetched_at": "2026-11-28T14:54:44+00:00",
   "sid": "FCTL",
   "source": "Tickertape",
   "years": [
@@ -11997,7 +11987,7 @@
   ]
  },
  "FEDERALBNK": {
-  "fetched_at": "2026-11-21T14:12:52+00:00",
+  "fetched_at": "2026-11-28T14:54:45+00:00",
   "sid": "FED",
   "source": "Tickertape",
   "years": [
@@ -12076,7 +12066,7 @@
   ]
  },
  "FINCABLES": {
-  "fetched_at": "2026-11-21T14:12:53+00:00",
+  "fetched_at": "2026-11-28T14:54:46+00:00",
   "sid": "FNXC",
   "source": "Tickertape",
   "years": [
@@ -12155,7 +12145,7 @@
   ]
  },
  "FIRSTCRY": {
-  "fetched_at": "2026-11-21T14:12:54+00:00",
+  "fetched_at": "2026-11-28T14:54:46+00:00",
   "sid": "FIRS",
   "source": "Tickertape",
   "years": [
@@ -12234,7 +12224,7 @@
   ]
  },
  "FIVESTAR": {
-  "fetched_at": "2026-11-21T14:12:54+00:00",
+  "fetched_at": "2026-11-28T14:54:47+00:00",
   "sid": "FIVES",
   "source": "Tickertape",
   "years": [
@@ -12313,7 +12303,7 @@
   ]
  },
  "FLUOROCHEM": {
-  "fetched_at": "2026-11-21T14:12:55+00:00",
+  "fetched_at": "2026-11-28T14:54:48+00:00",
   "sid": "GUJL",
   "source": "Tickertape",
   "years": [
@@ -12392,7 +12382,7 @@
   ]
  },
  "FORCEMOT": {
-  "fetched_at": "2026-11-21T14:12:56+00:00",
+  "fetched_at": "2026-11-28T14:54:48+00:00",
   "sid": "FORC",
   "source": "Tickertape",
   "years": [
@@ -12471,7 +12461,7 @@
   ]
  },
  "FORTIS": {
-  "fetched_at": "2026-11-21T14:12:56+00:00",
+  "fetched_at": "2026-11-28T14:54:49+00:00",
   "sid": "FOHE",
   "source": "Tickertape",
   "years": [
@@ -12550,7 +12540,7 @@
   ]
  },
  "FSL": {
-  "fetched_at": "2026-11-21T14:12:57+00:00",
+  "fetched_at": "2026-11-28T14:54:50+00:00",
   "sid": "FISO",
   "source": "Tickertape",
   "years": [
@@ -12629,7 +12619,7 @@
   ]
  },
  "GABRIEL": {
-  "fetched_at": "2026-11-21T14:12:58+00:00",
+  "fetched_at": "2026-11-28T14:54:51+00:00",
   "sid": "GABR",
   "source": "Tickertape",
   "years": [
@@ -12690,7 +12680,7 @@
   ]
  },
  "GAIL": {
-  "fetched_at": "2026-11-21T14:12:59+00:00",
+  "fetched_at": "2026-11-28T14:54:52+00:00",
   "sid": "GAIL",
   "source": "Tickertape",
   "years": [
@@ -12769,7 +12759,7 @@
   ]
  },
  "GALLANTT": {
-  "fetched_at": "2026-11-21T14:13:00+00:00",
+  "fetched_at": "2026-11-28T14:54:52+00:00",
   "sid": "GALM",
   "source": "Tickertape",
   "years": [
@@ -12848,7 +12838,7 @@
   ]
  },
  "GESHIP": {
-  "fetched_at": "2026-11-21T14:13:01+00:00",
+  "fetched_at": "2026-11-28T14:54:53+00:00",
   "sid": "GESC",
   "source": "Tickertape",
   "years": [
@@ -12927,7 +12917,7 @@
   ]
  },
  "GICRE": {
-  "fetched_at": "2026-11-21T14:13:01+00:00",
+  "fetched_at": "2026-11-28T14:54:54+00:00",
   "sid": "GENA",
   "source": "Tickertape",
   "years": [
@@ -13006,7 +12996,7 @@
   ]
  },
  "GILLETTE": {
-  "fetched_at": "2026-11-21T14:13:02+00:00",
+  "fetched_at": "2026-11-28T14:54:54+00:00",
   "sid": "GILE",
   "source": "Tickertape",
   "years": [
@@ -13085,7 +13075,7 @@
   ]
  },
  "GLAND": {
-  "fetched_at": "2026-11-21T14:13:03+00:00",
+  "fetched_at": "2026-11-28T14:54:55+00:00",
   "sid": "GLAN",
   "source": "Tickertape",
   "years": [
@@ -13164,7 +13154,7 @@
   ]
  },
  "GLAXO": {
-  "fetched_at": "2026-11-21T14:13:03+00:00",
+  "fetched_at": "2026-11-28T14:54:56+00:00",
   "sid": "GLAX",
   "source": "Tickertape",
   "years": [
@@ -13243,7 +13233,7 @@
   ]
  },
  "GLENMARK": {
-  "fetched_at": "2026-11-21T14:13:04+00:00",
+  "fetched_at": "2026-11-28T14:54:57+00:00",
   "sid": "GLEN",
   "source": "Tickertape",
   "years": [
@@ -13322,7 +13312,7 @@
   ]
  },
  "GMDCLTD": {
-  "fetched_at": "2026-11-21T14:13:05+00:00",
+  "fetched_at": "2026-11-28T14:54:57+00:00",
   "sid": "GMDC",
   "source": "Tickertape",
   "years": [
@@ -13401,7 +13391,7 @@
   ]
  },
  "GMRAIRPORT": {
-  "fetched_at": "2026-11-21T14:13:06+00:00",
+  "fetched_at": "2026-11-28T14:54:58+00:00",
   "sid": "GMRI",
   "source": "Tickertape",
   "years": [
@@ -13480,7 +13470,7 @@
   ]
  },
  "GODFRYPHLP": {
-  "fetched_at": "2026-11-21T14:13:07+00:00",
+  "fetched_at": "2026-11-28T14:54:59+00:00",
   "sid": "GDFR",
   "source": "Tickertape",
   "years": [
@@ -13559,7 +13549,7 @@
   ]
  },
  "GODREJCP": {
-  "fetched_at": "2026-11-21T14:13:07+00:00",
+  "fetched_at": "2026-11-28T14:54:59+00:00",
   "sid": "GOCP",
   "source": "Tickertape",
   "years": [
@@ -13638,7 +13628,7 @@
   ]
  },
  "GODREJIND": {
-  "fetched_at": "2026-11-21T14:13:08+00:00",
+  "fetched_at": "2026-11-28T14:55:00+00:00",
   "sid": "GODI",
   "source": "Tickertape",
   "years": [
@@ -13717,7 +13707,7 @@
   ]
  },
  "GODREJPROP": {
-  "fetched_at": "2026-11-21T14:13:09+00:00",
+  "fetched_at": "2026-11-28T14:55:01+00:00",
   "sid": "GODR",
   "source": "Tickertape",
   "years": [
@@ -13796,7 +13786,7 @@
   ]
  },
  "GPIL": {
-  "fetched_at": "2026-11-21T14:13:09+00:00",
+  "fetched_at": "2026-11-28T14:55:01+00:00",
   "sid": "GDPI",
   "source": "Tickertape",
   "years": [
@@ -13875,7 +13865,7 @@
   ]
  },
  "GRANULES": {
-  "fetched_at": "2026-11-21T14:13:10+00:00",
+  "fetched_at": "2026-11-28T14:55:02+00:00",
   "sid": "GRAN",
   "source": "Tickertape",
   "years": [
@@ -13954,7 +13944,7 @@
   ]
  },
  "GRAPHITE": {
-  "fetched_at": "2026-11-21T14:13:11+00:00",
+  "fetched_at": "2026-11-28T14:55:03+00:00",
   "sid": "GRPH",
   "source": "Tickertape",
   "years": [
@@ -14033,7 +14023,7 @@
   ]
  },
  "GRASIM": {
-  "fetched_at": "2026-11-21T14:13:12+00:00",
+  "fetched_at": "2026-11-28T14:55:04+00:00",
   "sid": "GRAS",
   "source": "Tickertape",
   "years": [
@@ -14112,7 +14102,7 @@
   ]
  },
  "GRAVITA": {
-  "fetched_at": "2026-11-21T14:13:13+00:00",
+  "fetched_at": "2026-11-28T14:55:04+00:00",
   "sid": "GRAI",
   "source": "Tickertape",
   "years": [
@@ -14191,7 +14181,7 @@
   ]
  },
  "GROWW": {
-  "fetched_at": "2026-11-21T14:13:13+00:00",
+  "fetched_at": "2026-11-28T14:55:05+00:00",
   "sid": "GROWO",
   "source": "Tickertape",
   "years": [
@@ -14270,7 +14260,7 @@
   ]
  },
  "GRSE": {
-  "fetched_at": "2026-11-21T14:13:14+00:00",
+  "fetched_at": "2026-11-28T14:55:06+00:00",
   "sid": "GRSE",
   "source": "Tickertape",
   "years": [
@@ -14349,7 +14339,7 @@
   ]
  },
  "GVT&D": {
-  "fetched_at": "2026-11-21T14:13:15+00:00",
+  "fetched_at": "2026-11-28T14:55:07+00:00",
   "sid": "GETD",
   "source": "Tickertape",
   "years": [
@@ -14428,7 +14418,7 @@
   ]
  },
  "HAL": {
-  "fetched_at": "2026-11-21T14:13:15+00:00",
+  "fetched_at": "2026-11-28T14:55:08+00:00",
   "sid": "HIAE",
   "source": "Tickertape",
   "years": [
@@ -14507,7 +14497,7 @@
   ]
  },
  "HAVELLS": {
-  "fetched_at": "2026-11-21T14:13:16+00:00",
+  "fetched_at": "2026-11-28T14:55:08+00:00",
   "sid": "HVEL",
   "source": "Tickertape",
   "years": [
@@ -14586,7 +14576,7 @@
   ]
  },
  "HBLENGINE": {
-  "fetched_at": "2026-11-21T14:13:17+00:00",
+  "fetched_at": "2026-11-28T14:55:09+00:00",
   "sid": "HBLS",
   "source": "Tickertape",
   "years": [
@@ -14665,7 +14655,7 @@
   ]
  },
  "HCLTECH": {
-  "fetched_at": "2026-11-21T14:13:17+00:00",
+  "fetched_at": "2026-11-28T14:55:10+00:00",
   "sid": "HCLT",
   "source": "Tickertape",
   "years": [
@@ -14744,7 +14734,7 @@
   ]
  },
  "HDBFS": {
-  "fetched_at": "2026-11-21T14:13:18+00:00",
+  "fetched_at": "2026-11-28T14:55:10+00:00",
   "sid": "HDB",
   "source": "Tickertape",
   "years": [
@@ -14823,7 +14813,7 @@
   ]
  },
  "HDFCAMC": {
-  "fetched_at": "2026-11-21T14:13:19+00:00",
+  "fetched_at": "2026-11-28T14:55:11+00:00",
   "sid": "HDFA",
   "source": "Tickertape",
   "years": [
@@ -14902,7 +14892,7 @@
   ]
  },
  "HDFCBANK": {
-  "fetched_at": "2026-11-21T14:13:20+00:00",
+  "fetched_at": "2026-11-28T14:55:12+00:00",
   "sid": "HDBK",
   "source": "Tickertape",
   "years": [
@@ -14981,7 +14971,7 @@
   ]
  },
  "HDFCLIFE": {
-  "fetched_at": "2026-11-21T14:13:21+00:00",
+  "fetched_at": "2026-11-28T14:55:12+00:00",
   "sid": "HDFL",
   "source": "Tickertape",
   "years": [
@@ -15060,7 +15050,7 @@
   ]
  },
  "HEROMOTOCO": {
-  "fetched_at": "2026-11-21T14:13:22+00:00",
+  "fetched_at": "2026-11-28T14:55:14+00:00",
   "sid": "HROM",
   "source": "Tickertape",
   "years": [
@@ -15139,7 +15129,7 @@
   ]
  },
  "HEXT": {
-  "fetched_at": "2026-11-21T14:13:23+00:00",
+  "fetched_at": "2026-11-28T14:55:14+00:00",
   "sid": "HEXT",
   "source": "Tickertape",
   "years": [
@@ -15218,7 +15208,7 @@
   ]
  },
  "HFCL": {
-  "fetched_at": "2026-11-21T14:13:23+00:00",
+  "fetched_at": "2026-11-28T14:55:15+00:00",
   "sid": "HFCL",
   "source": "Tickertape",
   "years": [
@@ -15297,7 +15287,7 @@
   ]
  },
  "HINDALCO": {
-  "fetched_at": "2026-11-21T14:13:24+00:00",
+  "fetched_at": "2026-11-28T14:55:16+00:00",
   "sid": "HALC",
   "source": "Tickertape",
   "years": [
@@ -15376,7 +15366,7 @@
   ]
  },
  "HINDCOPPER": {
-  "fetched_at": "2026-11-21T14:13:25+00:00",
+  "fetched_at": "2026-11-28T14:55:16+00:00",
   "sid": "HCPR",
   "source": "Tickertape",
   "years": [
@@ -15455,7 +15445,7 @@
   ]
  },
  "HINDPETRO": {
-  "fetched_at": "2026-11-21T14:13:25+00:00",
+  "fetched_at": "2026-11-28T14:55:17+00:00",
   "sid": "HPCL",
   "source": "Tickertape",
   "years": [
@@ -15534,7 +15524,7 @@
   ]
  },
  "HINDUNILVR": {
-  "fetched_at": "2026-11-21T14:13:26+00:00",
+  "fetched_at": "2026-11-28T14:55:18+00:00",
   "sid": "HLL",
   "source": "Tickertape",
   "years": [
@@ -15613,7 +15603,7 @@
   ]
  },
  "HINDZINC": {
-  "fetched_at": "2026-11-21T14:13:27+00:00",
+  "fetched_at": "2026-11-28T14:55:18+00:00",
   "sid": "HZNC",
   "source": "Tickertape",
   "years": [
@@ -15692,7 +15682,7 @@
   ]
  },
  "HOMEFIRST": {
-  "fetched_at": "2026-11-21T14:13:27+00:00",
+  "fetched_at": "2026-11-28T14:55:19+00:00",
   "sid": "HOM",
   "source": "Tickertape",
   "years": [
@@ -15771,7 +15761,7 @@
   ]
  },
  "HONASA": {
-  "fetched_at": "2026-11-21T14:13:28+00:00",
+  "fetched_at": "2026-11-28T14:55:20+00:00",
   "sid": "HON",
   "source": "Tickertape",
   "years": [
@@ -15850,7 +15840,7 @@
   ]
  },
  "HONAUT": {
-  "fetched_at": "2026-11-21T14:13:29+00:00",
+  "fetched_at": "2026-11-28T14:55:20+00:00",
   "sid": "HONE",
   "source": "Tickertape",
   "years": [
@@ -15929,7 +15919,7 @@
   ]
  },
  "HSCL": {
-  "fetched_at": "2026-11-21T14:13:30+00:00",
+  "fetched_at": "2026-11-28T14:55:21+00:00",
   "sid": "HIMD",
   "source": "Tickertape",
   "years": [
@@ -16008,7 +15998,7 @@
   ]
  },
  "HUDCO": {
-  "fetched_at": "2026-11-21T14:13:30+00:00",
+  "fetched_at": "2026-11-28T14:55:22+00:00",
   "sid": "HUDC",
   "source": "Tickertape",
   "years": [
@@ -16087,7 +16077,7 @@
   ]
  },
  "HYUNDAI": {
-  "fetched_at": "2026-11-21T14:13:31+00:00",
+  "fetched_at": "2026-11-28T14:55:23+00:00",
   "sid": "HYU",
   "source": "Tickertape",
   "years": [
@@ -16166,7 +16156,7 @@
   ]
  },
  "ICICIAMC": {
-  "fetched_at": "2026-11-21T14:13:32+00:00",
+  "fetched_at": "2026-11-28T14:55:23+00:00",
   "sid": "ICIAI",
   "source": "Tickertape",
   "years": [
@@ -16245,7 +16235,7 @@
   ]
  },
  "ICICIBANK": {
-  "fetched_at": "2026-11-21T14:13:32+00:00",
+  "fetched_at": "2026-11-28T14:55:24+00:00",
   "sid": "ICBK",
   "source": "Tickertape",
   "years": [
@@ -16324,7 +16314,7 @@
   ]
  },
  "ICICIGI": {
-  "fetched_at": "2026-11-21T14:13:33+00:00",
+  "fetched_at": "2026-11-28T14:55:25+00:00",
   "sid": "ICIL",
   "source": "Tickertape",
   "years": [
@@ -16403,7 +16393,7 @@
   ]
  },
  "IDBI": {
-  "fetched_at": "2026-11-21T14:13:34+00:00",
+  "fetched_at": "2026-11-28T14:55:26+00:00",
   "sid": "IDBI",
   "source": "Tickertape",
   "years": [
@@ -16482,7 +16472,7 @@
   ]
  },
  "IDEA": {
-  "fetched_at": "2026-11-21T14:13:35+00:00",
+  "fetched_at": "2026-11-28T14:55:27+00:00",
   "sid": "VODA",
   "source": "Tickertape",
   "years": [
@@ -16561,7 +16551,7 @@
   ]
  },
  "IDFCFIRSTB": {
-  "fetched_at": "2026-11-21T14:13:35+00:00",
+  "fetched_at": "2026-11-28T14:55:28+00:00",
   "sid": "IDFB",
   "source": "Tickertape",
   "years": [
@@ -16640,7 +16630,7 @@
   ]
  },
  "IEX": {
-  "fetched_at": "2026-11-21T14:13:36+00:00",
+  "fetched_at": "2026-11-28T14:55:28+00:00",
   "sid": "IIAN",
   "source": "Tickertape",
   "years": [
@@ -16719,7 +16709,7 @@
   ]
  },
  "IFCI": {
-  "fetched_at": "2026-11-21T14:13:37+00:00",
+  "fetched_at": "2026-11-28T14:55:29+00:00",
   "sid": "IFCI",
   "source": "Tickertape",
   "years": [
@@ -16798,7 +16788,7 @@
   ]
  },
  "IGIL": {
-  "fetched_at": "2026-11-21T14:13:38+00:00",
+  "fetched_at": "2026-11-28T14:55:30+00:00",
   "sid": "IGI",
   "source": "Tickertape",
   "years": [
@@ -16823,7 +16813,7 @@
   ]
  },
  "IGL": {
-  "fetched_at": "2026-11-21T14:13:38+00:00",
+  "fetched_at": "2026-11-28T14:55:30+00:00",
   "sid": "IGAS",
   "source": "Tickertape",
   "years": [
@@ -16902,7 +16892,7 @@
   ]
  },
  "IIFL": {
-  "fetched_at": "2026-11-21T14:13:39+00:00",
+  "fetched_at": "2026-11-28T14:55:31+00:00",
   "sid": "IIFL",
   "source": "Tickertape",
   "years": [
@@ -16981,7 +16971,7 @@
   ]
  },
  "IKS": {
-  "fetched_at": "2026-11-21T14:13:40+00:00",
+  "fetched_at": "2026-11-28T14:55:32+00:00",
   "sid": "IKS",
   "source": "Tickertape",
   "years": [
@@ -17060,7 +17050,7 @@
   ]
  },
  "INDHOTEL": {
-  "fetched_at": "2026-11-21T14:13:41+00:00",
+  "fetched_at": "2026-11-28T14:55:33+00:00",
   "sid": "IHTL",
   "source": "Tickertape",
   "years": [
@@ -17139,7 +17129,7 @@
   ]
  },
  "INDIACEM": {
-  "fetched_at": "2026-11-21T14:13:42+00:00",
+  "fetched_at": "2026-11-28T14:55:33+00:00",
   "sid": "ICMN",
   "source": "Tickertape",
   "years": [
@@ -17218,7 +17208,7 @@
   ]
  },
  "INDIAMART": {
-  "fetched_at": "2026-11-21T14:13:43+00:00",
+  "fetched_at": "2026-11-28T14:55:34+00:00",
   "sid": "INMR",
   "source": "Tickertape",
   "years": [
@@ -17297,7 +17287,7 @@
   ]
  },
  "INDIANB": {
-  "fetched_at": "2026-11-21T14:13:43+00:00",
+  "fetched_at": "2026-11-28T14:55:35+00:00",
   "sid": "INBA",
   "source": "Tickertape",
   "years": [
@@ -17376,7 +17366,7 @@
   ]
  },
  "INDIGO": {
-  "fetched_at": "2026-11-21T14:13:44+00:00",
+  "fetched_at": "2026-11-28T14:55:35+00:00",
   "sid": "INGL",
   "source": "Tickertape",
   "years": [
@@ -17455,7 +17445,7 @@
   ]
  },
  "INDUSINDBK": {
-  "fetched_at": "2026-11-21T14:13:45+00:00",
+  "fetched_at": "2026-11-28T14:55:36+00:00",
   "sid": "INBK",
   "source": "Tickertape",
   "years": [
@@ -17534,7 +17524,7 @@
   ]
  },
  "INDUSTOWER": {
-  "fetched_at": "2026-11-21T14:13:46+00:00",
+  "fetched_at": "2026-11-28T14:55:37+00:00",
   "sid": "BHRI",
   "source": "Tickertape",
   "years": [
@@ -17613,7 +17603,7 @@
   ]
  },
  "INFY": {
-  "fetched_at": "2026-11-21T14:13:47+00:00",
+  "fetched_at": "2026-11-28T14:55:37+00:00",
   "sid": "INFY",
   "source": "Tickertape",
   "years": [
@@ -17692,7 +17682,7 @@
   ]
  },
  "INOXWIND": {
-  "fetched_at": "2026-11-21T14:13:48+00:00",
+  "fetched_at": "2026-11-28T14:55:39+00:00",
   "sid": "INWN",
   "source": "Tickertape",
   "years": [
@@ -17771,7 +17761,7 @@
   ]
  },
  "INTELLECT": {
-  "fetched_at": "2026-11-21T14:13:49+00:00",
+  "fetched_at": "2026-11-28T14:55:39+00:00",
   "sid": "INEE",
   "source": "Tickertape",
   "years": [
@@ -17850,7 +17840,7 @@
   ]
  },
  "IOB": {
-  "fetched_at": "2026-11-21T14:13:49+00:00",
+  "fetched_at": "2026-11-28T14:55:40+00:00",
   "sid": "IOBK",
   "source": "Tickertape",
   "years": [
@@ -17929,7 +17919,7 @@
   ]
  },
  "IOC": {
-  "fetched_at": "2026-11-21T14:13:50+00:00",
+  "fetched_at": "2026-11-28T14:55:41+00:00",
   "sid": "IOC",
   "source": "Tickertape",
   "years": [
@@ -18008,7 +17998,7 @@
   ]
  },
  "IPCALAB": {
-  "fetched_at": "2026-11-21T14:13:51+00:00",
+  "fetched_at": "2026-11-28T14:55:41+00:00",
   "sid": "IPCA",
   "source": "Tickertape",
   "years": [
@@ -18087,7 +18077,7 @@
   ]
  },
  "IRB": {
-  "fetched_at": "2026-11-21T14:13:51+00:00",
+  "fetched_at": "2026-11-28T14:55:42+00:00",
   "sid": "IRBI",
   "source": "Tickertape",
   "years": [
@@ -18166,7 +18156,7 @@
   ]
  },
  "IRCON": {
-  "fetched_at": "2026-11-21T14:13:52+00:00",
+  "fetched_at": "2026-11-28T14:55:43+00:00",
   "sid": "IRCN",
   "source": "Tickertape",
   "years": [
@@ -18245,7 +18235,7 @@
   ]
  },
  "IRCTC": {
-  "fetched_at": "2026-11-21T14:13:53+00:00",
+  "fetched_at": "2026-11-28T14:55:43+00:00",
   "sid": "INIR",
   "source": "Tickertape",
   "years": [
@@ -18324,7 +18314,7 @@
   ]
  },
  "IREDA": {
-  "fetched_at": "2026-11-21T14:13:53+00:00",
+  "fetched_at": "2026-11-28T14:55:44+00:00",
   "sid": "IRE",
   "source": "Tickertape",
   "years": [
@@ -18385,7 +18375,7 @@
   ]
  },
  "IRFC": {
-  "fetched_at": "2026-11-21T14:13:54+00:00",
+  "fetched_at": "2026-11-28T14:55:45+00:00",
   "sid": "IRF",
   "source": "Tickertape",
   "years": [
@@ -18464,7 +18454,7 @@
   ]
  },
  "ITC": {
-  "fetched_at": "2026-11-21T14:13:55+00:00",
+  "fetched_at": "2026-11-28T14:55:46+00:00",
   "sid": "ITC",
   "source": "Tickertape",
   "years": [
@@ -18543,7 +18533,7 @@
   ]
  },
  "ITCHOTELS": {
-  "fetched_at": "2026-11-21T14:13:56+00:00",
+  "fetched_at": "2026-11-28T14:55:46+00:00",
   "sid": "ITCH",
   "source": "Tickertape",
   "years": [
@@ -18604,7 +18594,7 @@
   ]
  },
  "ITI": {
-  "fetched_at": "2026-11-21T14:13:57+00:00",
+  "fetched_at": "2026-11-28T14:55:47+00:00",
   "sid": "ITEL",
   "source": "Tickertape",
   "years": [
@@ -18683,7 +18673,7 @@
   ]
  },
  "J&KBANK": {
-  "fetched_at": "2026-11-21T14:13:57+00:00",
+  "fetched_at": "2026-11-28T14:55:48+00:00",
   "sid": "JKBK",
   "source": "Tickertape",
   "years": [
@@ -18762,7 +18752,7 @@
   ]
  },
  "JAINREC": {
-  "fetched_at": "2026-11-21T14:13:58+00:00",
+  "fetched_at": "2026-11-28T14:55:48+00:00",
   "sid": "JAINR",
   "source": "Tickertape",
   "years": [
@@ -18841,7 +18831,7 @@
   ]
  },
  "JBMA": {
-  "fetched_at": "2026-11-21T14:13:59+00:00",
+  "fetched_at": "2026-11-28T14:55:49+00:00",
   "sid": "JBMA",
   "source": "Tickertape",
   "years": [
@@ -18920,7 +18910,7 @@
   ]
  },
  "JINDALSAW": {
-  "fetched_at": "2026-11-21T14:13:59+00:00",
+  "fetched_at": "2026-11-28T14:55:50+00:00",
   "sid": "JIND",
   "source": "Tickertape",
   "years": [
@@ -18999,7 +18989,7 @@
   ]
  },
  "JINDALSTEL": {
-  "fetched_at": "2026-11-21T14:14:01+00:00",
+  "fetched_at": "2026-11-28T14:55:50+00:00",
   "sid": "JNSP",
   "source": "Tickertape",
   "years": [
@@ -19078,7 +19068,7 @@
   ]
  },
  "JIOFIN": {
-  "fetched_at": "2026-11-21T14:14:01+00:00",
+  "fetched_at": "2026-11-28T14:55:51+00:00",
   "sid": "JIO",
   "source": "Tickertape",
   "years": [
@@ -19157,7 +19147,7 @@
   ]
  },
  "JKCEMENT": {
-  "fetched_at": "2026-11-21T14:14:02+00:00",
+  "fetched_at": "2026-11-28T14:55:52+00:00",
   "sid": "JKCE",
   "source": "Tickertape",
   "years": [
@@ -19236,7 +19226,7 @@
   ]
  },
  "JKTYRE": {
-  "fetched_at": "2026-11-21T14:14:03+00:00",
+  "fetched_at": "2026-11-28T14:55:53+00:00",
   "sid": "JKIN",
   "source": "Tickertape",
   "years": [
@@ -19315,7 +19305,7 @@
   ]
  },
  "JMFINANCIL": {
-  "fetched_at": "2026-11-21T14:14:03+00:00",
+  "fetched_at": "2026-11-28T14:55:53+00:00",
   "sid": "JMSH",
   "source": "Tickertape",
   "years": [
@@ -19394,7 +19384,7 @@
   ]
  },
  "JPPOWER": {
-  "fetched_at": "2026-11-21T14:14:04+00:00",
+  "fetched_at": "2026-11-28T14:55:54+00:00",
   "sid": "JAPR",
   "source": "Tickertape",
   "years": [
@@ -19473,7 +19463,7 @@
   ]
  },
  "JSL": {
-  "fetched_at": "2026-11-21T14:14:05+00:00",
+  "fetched_at": "2026-11-28T14:55:55+00:00",
   "sid": "JIST",
   "source": "Tickertape",
   "years": [
@@ -19552,7 +19542,7 @@
   ]
  },
  "JSWCEMENT": {
-  "fetched_at": "2026-11-21T14:14:06+00:00",
+  "fetched_at": "2026-11-28T14:55:55+00:00",
   "sid": "JSWC",
   "source": "Tickertape",
   "years": [
@@ -19631,7 +19621,7 @@
   ]
  },
  "JSWENERGY": {
-  "fetched_at": "2026-11-21T14:14:07+00:00",
+  "fetched_at": "2026-11-28T14:55:56+00:00",
   "sid": "JSWE",
   "source": "Tickertape",
   "years": [
@@ -19710,7 +19700,7 @@
   ]
  },
  "JSWINFRA": {
-  "fetched_at": "2026-11-21T14:14:07+00:00",
+  "fetched_at": "2026-11-28T14:55:57+00:00",
   "sid": "JSW",
   "source": "Tickertape",
   "years": [
@@ -19789,7 +19779,7 @@
   ]
  },
  "JSWSTEEL": {
-  "fetched_at": "2026-11-21T14:14:08+00:00",
+  "fetched_at": "2026-11-28T14:55:57+00:00",
   "sid": "JSTL",
   "source": "Tickertape",
   "years": [
@@ -19868,7 +19858,7 @@
   ]
  },
  "JUBLFOOD": {
-  "fetched_at": "2026-11-21T14:14:09+00:00",
+  "fetched_at": "2026-11-28T14:55:58+00:00",
   "sid": "JUBI",
   "source": "Tickertape",
   "years": [
@@ -19947,7 +19937,7 @@
   ]
  },
  "JUBLINGREA": {
-  "fetched_at": "2026-11-21T14:14:09+00:00",
+  "fetched_at": "2026-11-28T14:55:59+00:00",
   "sid": "JUB",
   "source": "Tickertape",
   "years": [
@@ -20026,7 +20016,7 @@
   ]
  },
  "JWL": {
-  "fetched_at": "2026-11-21T14:14:10+00:00",
+  "fetched_at": "2026-11-28T14:56:00+00:00",
   "sid": "CEBB",
   "source": "Tickertape",
   "years": [
@@ -20105,7 +20095,7 @@
   ]
  },
  "JYOTICNC": {
-  "fetched_at": "2026-11-21T14:14:11+00:00",
+  "fetched_at": "2026-11-28T14:56:00+00:00",
   "sid": "JYOTC",
   "source": "Tickertape",
   "years": [
@@ -20184,7 +20174,7 @@
   ]
  },
  "KAJARIACER": {
-  "fetched_at": "2026-11-21T14:14:12+00:00",
+  "fetched_at": "2026-11-28T14:56:01+00:00",
   "sid": "KAJR",
   "source": "Tickertape",
   "years": [
@@ -20263,7 +20253,7 @@
   ]
  },
  "KALYANKJIL": {
-  "fetched_at": "2026-11-21T14:14:12+00:00",
+  "fetched_at": "2026-11-28T14:56:02+00:00",
   "sid": "KALYA",
   "source": "Tickertape",
   "years": [
@@ -20342,7 +20332,7 @@
   ]
  },
  "KARURVYSYA": {
-  "fetched_at": "2026-11-21T14:14:13+00:00",
+  "fetched_at": "2026-11-28T14:56:02+00:00",
   "sid": "KARU",
   "source": "Tickertape",
   "years": [
@@ -20421,7 +20411,7 @@
   ]
  },
  "KAYNES": {
-  "fetched_at": "2026-11-21T14:14:14+00:00",
+  "fetched_at": "2026-11-28T14:56:03+00:00",
   "sid": "KAYN",
   "source": "Tickertape",
   "years": [
@@ -20500,7 +20490,7 @@
   ]
  },
  "KEC": {
-  "fetched_at": "2026-11-21T14:14:14+00:00",
+  "fetched_at": "2026-11-28T14:56:04+00:00",
   "sid": "KECL",
   "source": "Tickertape",
   "years": [
@@ -20579,7 +20569,7 @@
   ]
  },
  "KEI": {
-  "fetched_at": "2026-11-21T14:14:15+00:00",
+  "fetched_at": "2026-11-28T14:56:04+00:00",
   "sid": "KEIN",
   "source": "Tickertape",
   "years": [
@@ -20658,7 +20648,7 @@
   ]
  },
  "KFINTECH": {
-  "fetched_at": "2026-11-21T14:14:16+00:00",
+  "fetched_at": "2026-11-28T14:56:05+00:00",
   "sid": "KFI",
   "source": "Tickertape",
   "years": [
@@ -20737,7 +20727,7 @@
   ]
  },
  "KIMS": {
-  "fetched_at": "2026-11-21T14:14:16+00:00",
+  "fetched_at": "2026-11-28T14:56:06+00:00",
   "sid": "KIMS",
   "source": "Tickertape",
   "years": [
@@ -20816,7 +20806,7 @@
   ]
  },
  "KIRLOSBROS": {
-  "fetched_at": "2026-11-21T14:14:17+00:00",
+  "fetched_at": "2026-11-28T14:56:07+00:00",
   "sid": "KRBR",
   "source": "Tickertape",
   "years": [
@@ -20895,7 +20885,7 @@
   ]
  },
  "KIRLOSENG": {
-  "fetched_at": "2026-11-21T14:14:18+00:00",
+  "fetched_at": "2026-11-28T14:56:08+00:00",
   "sid": "KIRO",
   "source": "Tickertape",
   "years": [
@@ -20974,7 +20964,7 @@
   ]
  },
  "KOTAKBANK": {
-  "fetched_at": "2026-11-21T14:14:19+00:00",
+  "fetched_at": "2026-11-28T14:56:08+00:00",
   "sid": "KTKM",
   "source": "Tickertape",
   "years": [
@@ -21053,7 +21043,7 @@
   ]
  },
  "KPIL": {
-  "fetched_at": "2026-11-21T14:14:19+00:00",
+  "fetched_at": "2026-11-28T14:56:09+00:00",
   "sid": "KAPT",
   "source": "Tickertape",
   "years": [
@@ -21132,7 +21122,7 @@
   ]
  },
  "KPITTECH": {
-  "fetched_at": "2026-11-21T14:14:20+00:00",
+  "fetched_at": "2026-11-28T14:56:10+00:00",
   "sid": "KPIE",
   "source": "Tickertape",
   "years": [
@@ -21211,7 +21201,7 @@
   ]
  },
  "KPRMILL": {
-  "fetched_at": "2026-11-21T14:14:21+00:00",
+  "fetched_at": "2026-11-28T14:56:11+00:00",
   "sid": "KPRM",
   "source": "Tickertape",
   "years": [
@@ -21290,7 +21280,7 @@
   ]
  },
  "KSB": {
-  "fetched_at": "2026-11-21T14:14:21+00:00",
+  "fetched_at": "2026-11-28T14:56:11+00:00",
   "sid": "KSBL",
   "source": "Tickertape",
   "years": [
@@ -21369,7 +21359,7 @@
   ]
  },
  "LALPATHLAB": {
-  "fetched_at": "2026-11-21T14:14:22+00:00",
+  "fetched_at": "2026-11-28T14:56:12+00:00",
   "sid": "DLPA",
   "source": "Tickertape",
   "years": [
@@ -21448,7 +21438,7 @@
   ]
  },
  "LAURUSLABS": {
-  "fetched_at": "2026-11-21T14:14:23+00:00",
+  "fetched_at": "2026-11-28T14:56:13+00:00",
   "sid": "LAUL",
   "source": "Tickertape",
   "years": [
@@ -21527,7 +21517,7 @@
   ]
  },
  "LEMONTREE": {
-  "fetched_at": "2026-11-21T14:14:23+00:00",
+  "fetched_at": "2026-11-28T14:56:13+00:00",
   "sid": "LEMO",
   "source": "Tickertape",
   "years": [
@@ -21606,7 +21596,7 @@
   ]
  },
  "LENSKART": {
-  "fetched_at": "2026-11-21T14:14:24+00:00",
+  "fetched_at": "2026-11-28T14:56:14+00:00",
   "sid": "LEN",
   "source": "Tickertape",
   "years": [
@@ -21685,7 +21675,7 @@
   ]
  },
  "LGEINDIA": {
-  "fetched_at": "2026-11-21T14:14:25+00:00",
+  "fetched_at": "2026-11-28T14:56:15+00:00",
   "sid": "LGE",
   "source": "Tickertape",
   "years": [
@@ -21764,7 +21754,7 @@
   ]
  },
  "LICHSGFIN": {
-  "fetched_at": "2026-11-21T14:14:26+00:00",
+  "fetched_at": "2026-11-28T14:56:15+00:00",
   "sid": "LICH",
   "source": "Tickertape",
   "years": [
@@ -21843,7 +21833,7 @@
   ]
  },
  "LICI": {
-  "fetched_at": "2026-11-21T14:14:27+00:00",
+  "fetched_at": "2026-11-28T14:56:16+00:00",
   "sid": "LIC",
   "source": "Tickertape",
   "years": [
@@ -21922,7 +21912,7 @@
   ]
  },
  "LINDEINDIA": {
-  "fetched_at": "2026-11-21T14:14:27+00:00",
+  "fetched_at": "2026-11-28T14:56:17+00:00",
   "sid": "LIND",
   "source": "Tickertape",
   "years": [
@@ -22001,7 +21991,7 @@
   ]
  },
  "LLOYDSME": {
-  "fetched_at": "2026-11-21T14:14:28+00:00",
+  "fetched_at": "2026-11-28T14:56:18+00:00",
   "sid": "LLO",
   "source": "Tickertape",
   "years": [
@@ -22080,7 +22070,7 @@
   ]
  },
  "LODHA": {
-  "fetched_at": "2026-11-21T14:14:29+00:00",
+  "fetched_at": "2026-11-28T14:56:18+00:00",
   "sid": "LOD",
   "source": "Tickertape",
   "years": [
@@ -22159,7 +22149,7 @@
   ]
  },
  "LT": {
-  "fetched_at": "2026-11-21T14:14:29+00:00",
+  "fetched_at": "2026-11-28T14:56:19+00:00",
   "sid": "LART",
   "source": "Tickertape",
   "years": [
@@ -22238,7 +22228,7 @@
   ]
  },
  "LTF": {
-  "fetched_at": "2026-11-21T14:14:30+00:00",
+  "fetched_at": "2026-11-28T14:56:20+00:00",
   "sid": "LTFH",
   "source": "Tickertape",
   "years": [
@@ -22317,7 +22307,7 @@
   ]
  },
  "LTFOODS": {
-  "fetched_at": "2026-11-21T14:14:31+00:00",
+  "fetched_at": "2026-11-28T14:56:20+00:00",
   "sid": "LTOL",
   "source": "Tickertape",
   "years": [
@@ -22396,7 +22386,7 @@
   ]
  },
  "LTM": {
-  "fetched_at": "2026-11-21T14:14:32+00:00",
+  "fetched_at": "2026-11-28T14:56:21+00:00",
   "sid": "LRTI",
   "source": "Tickertape",
   "years": [
@@ -22475,7 +22465,7 @@
   ]
  },
  "LTTS": {
-  "fetched_at": "2026-11-21T14:14:32+00:00",
+  "fetched_at": "2026-11-28T14:56:22+00:00",
   "sid": "LTEH",
   "source": "Tickertape",
   "years": [
@@ -22554,7 +22544,7 @@
   ]
  },
  "LUPIN": {
-  "fetched_at": "2026-11-21T14:14:33+00:00",
+  "fetched_at": "2026-11-28T14:56:22+00:00",
   "sid": "LUPN",
   "source": "Tickertape",
   "years": [
@@ -22633,7 +22623,7 @@
   ]
  },
  "M&M": {
-  "fetched_at": "2026-11-21T14:14:34+00:00",
+  "fetched_at": "2026-11-28T14:56:23+00:00",
   "sid": "MAHM",
   "source": "Tickertape",
   "years": [
@@ -22712,7 +22702,7 @@
   ]
  },
  "M&MFIN": {
-  "fetched_at": "2026-11-21T14:14:34+00:00",
+  "fetched_at": "2026-11-28T14:56:24+00:00",
   "sid": "MMFS",
   "source": "Tickertape",
   "years": [
@@ -22791,7 +22781,7 @@
   ]
  },
  "MAHABANK": {
-  "fetched_at": "2026-11-21T14:14:35+00:00",
+  "fetched_at": "2026-11-28T14:56:25+00:00",
   "sid": "BMBK",
   "source": "Tickertape",
   "years": [
@@ -22870,7 +22860,7 @@
   ]
  },
  "MANAPPURAM": {
-  "fetched_at": "2026-11-21T14:14:36+00:00",
+  "fetched_at": "2026-11-28T14:56:25+00:00",
   "sid": "MNFL",
   "source": "Tickertape",
   "years": [
@@ -22949,7 +22939,7 @@
   ]
  },
  "MANKIND": {
-  "fetched_at": "2026-11-21T14:14:37+00:00",
+  "fetched_at": "2026-11-28T14:56:26+00:00",
   "sid": "MANKI",
   "source": "Tickertape",
   "years": [
@@ -23028,7 +23018,7 @@
   ]
  },
  "MARICO": {
-  "fetched_at": "2026-11-21T14:14:37+00:00",
+  "fetched_at": "2026-11-28T14:56:27+00:00",
   "sid": "MRCO",
   "source": "Tickertape",
   "years": [
@@ -23107,7 +23097,7 @@
   ]
  },
  "MARUTI": {
-  "fetched_at": "2026-11-21T14:14:38+00:00",
+  "fetched_at": "2026-11-28T14:56:27+00:00",
   "sid": "MRTI",
   "source": "Tickertape",
   "years": [
@@ -23186,7 +23176,7 @@
   ]
  },
  "MAXHEALTH": {
-  "fetched_at": "2026-11-21T14:14:39+00:00",
+  "fetched_at": "2026-11-28T14:56:28+00:00",
   "sid": "MAXE",
   "source": "Tickertape",
   "years": [
@@ -23265,7 +23255,7 @@
   ]
  },
  "MAZDOCK": {
-  "fetched_at": "2026-11-21T14:14:40+00:00",
+  "fetched_at": "2026-11-28T14:56:29+00:00",
   "sid": "MAZ",
   "source": "Tickertape",
   "years": [
@@ -23344,7 +23334,7 @@
   ]
  },
  "MCX": {
-  "fetched_at": "2026-11-21T14:14:40+00:00",
+  "fetched_at": "2026-11-28T14:56:30+00:00",
   "sid": "MCEI",
   "source": "Tickertape",
   "years": [
@@ -23423,7 +23413,7 @@
   ]
  },
  "MEDANTA": {
-  "fetched_at": "2026-11-21T14:14:41+00:00",
+  "fetched_at": "2026-11-28T14:56:30+00:00",
   "sid": "MEDA",
   "source": "Tickertape",
   "years": [
@@ -23502,7 +23492,7 @@
   ]
  },
  "MEESHO": {
-  "fetched_at": "2026-11-21T14:14:42+00:00",
+  "fetched_at": "2026-11-28T14:56:31+00:00",
   "sid": "MEES",
   "source": "Tickertape",
   "years": [
@@ -23581,7 +23571,7 @@
   ]
  },
  "MFSL": {
-  "fetched_at": "2026-11-21T14:14:42+00:00",
+  "fetched_at": "2026-11-28T14:56:32+00:00",
   "sid": "MAXI",
   "source": "Tickertape",
   "years": [
@@ -23660,7 +23650,7 @@
   ]
  },
  "MGL": {
-  "fetched_at": "2026-11-21T14:14:43+00:00",
+  "fetched_at": "2026-11-28T14:56:32+00:00",
   "sid": "MGAS",
   "source": "Tickertape",
   "years": [
@@ -23739,7 +23729,7 @@
   ]
  },
  "MINDACORP": {
-  "fetched_at": "2026-11-21T14:14:44+00:00",
+  "fetched_at": "2026-11-28T14:56:33+00:00",
   "sid": "MINC",
   "source": "Tickertape",
   "years": [
@@ -23818,7 +23808,7 @@
   ]
  },
  "MMTC": {
-  "fetched_at": "2026-11-21T14:14:44+00:00",
+  "fetched_at": "2026-11-28T14:56:34+00:00",
   "sid": "MMTC",
   "source": "Tickertape",
   "years": [
@@ -23897,7 +23887,7 @@
   ]
  },
  "MOTHERSON": {
-  "fetched_at": "2026-11-21T14:14:45+00:00",
+  "fetched_at": "2026-11-28T14:56:34+00:00",
   "sid": "MOSS",
   "source": "Tickertape",
   "years": [
@@ -23976,7 +23966,7 @@
   ]
  },
  "MOTILALOFS": {
-  "fetched_at": "2026-11-21T14:14:46+00:00",
+  "fetched_at": "2026-11-28T14:56:35+00:00",
   "sid": "MOFS",
   "source": "Tickertape",
   "years": [
@@ -24055,7 +24045,7 @@
   ]
  },
  "MPHASIS": {
-  "fetched_at": "2026-11-21T14:14:47+00:00",
+  "fetched_at": "2026-11-28T14:56:36+00:00",
   "sid": "MBFL",
   "source": "Tickertape",
   "years": [
@@ -24134,7 +24124,7 @@
   ]
  },
  "MRF": {
-  "fetched_at": "2026-11-21T14:14:47+00:00",
+  "fetched_at": "2026-11-28T14:56:37+00:00",
   "sid": "MRF",
   "source": "Tickertape",
   "years": [
@@ -24213,7 +24203,7 @@
   ]
  },
  "MRPL": {
-  "fetched_at": "2026-11-21T14:14:48+00:00",
+  "fetched_at": "2026-11-28T14:56:37+00:00",
   "sid": "MRPL",
   "source": "Tickertape",
   "years": [
@@ -24292,7 +24282,7 @@
   ]
  },
  "MSUMI": {
-  "fetched_at": "2026-11-21T14:14:49+00:00",
+  "fetched_at": "2026-11-28T14:56:38+00:00",
   "sid": "MSU",
   "source": "Tickertape",
   "years": [
@@ -24371,7 +24361,7 @@
   ]
  },
  "MUTHOOTFIN": {
-  "fetched_at": "2026-11-21T14:14:50+00:00",
+  "fetched_at": "2026-11-28T14:56:39+00:00",
   "sid": "MUTT",
   "source": "Tickertape",
   "years": [
@@ -24450,7 +24440,7 @@
   ]
  },
  "NAM-INDIA": {
-  "fetched_at": "2026-11-21T14:14:50+00:00",
+  "fetched_at": "2026-11-28T14:56:40+00:00",
   "sid": "NIPF",
   "source": "Tickertape",
   "years": [
@@ -24529,7 +24519,7 @@
   ]
  },
  "NATCOPHARM": {
-  "fetched_at": "2026-11-21T14:14:52+00:00",
+  "fetched_at": "2026-11-28T14:56:40+00:00",
   "sid": "NATP",
   "source": "Tickertape",
   "years": [
@@ -24608,7 +24598,7 @@
   ]
  },
  "NATIONALUM": {
-  "fetched_at": "2026-11-21T14:14:53+00:00",
+  "fetched_at": "2026-11-28T14:56:41+00:00",
   "sid": "NALU",
   "source": "Tickertape",
   "years": [
@@ -24687,7 +24677,7 @@
   ]
  },
  "NAUKRI": {
-  "fetched_at": "2026-11-21T14:14:54+00:00",
+  "fetched_at": "2026-11-28T14:56:42+00:00",
   "sid": "INED",
   "source": "Tickertape",
   "years": [
@@ -24766,7 +24756,7 @@
   ]
  },
  "NAVA": {
-  "fetched_at": "2026-11-21T14:14:54+00:00",
+  "fetched_at": "2026-11-28T14:56:42+00:00",
   "sid": "NABV",
   "source": "Tickertape",
   "years": [
@@ -24845,7 +24835,7 @@
   ]
  },
  "NAVINFLUOR": {
-  "fetched_at": "2026-11-21T14:14:55+00:00",
+  "fetched_at": "2026-11-28T14:56:43+00:00",
   "sid": "NAFL",
   "source": "Tickertape",
   "years": [
@@ -24924,7 +24914,7 @@
   ]
  },
  "NBCC": {
-  "fetched_at": "2026-11-21T14:14:56+00:00",
+  "fetched_at": "2026-11-28T14:56:44+00:00",
   "sid": "NBCC",
   "source": "Tickertape",
   "years": [
@@ -25003,7 +24993,7 @@
   ]
  },
  "NCC": {
-  "fetched_at": "2026-11-21T14:14:57+00:00",
+  "fetched_at": "2026-11-28T14:56:45+00:00",
   "sid": "NCCL",
   "source": "Tickertape",
   "years": [
@@ -25082,21 +25072,10 @@
   ]
  },
  "NESTLEIND": {
-  "fetched_at": "2026-11-21T14:14:57+00:00",
+  "fetched_at": "2026-11-28T14:56:45+00:00",
   "sid": "NEST",
   "source": "Tickertape",
   "years": [
-   {
-    "ebit": 4157.58,
-    "ebitda": 4586.49,
-    "interest": 119.29,
-    "net_income": 2998.67,
-    "other_income": 1039.62,
-    "profit_before_tax": 4038.29,
-    "raw_materials": null,
-    "revenue": 19247.51,
-    "year": "Mar 2023"
-   },
    {
     "current_assets": 3494.72,
     "current_liabilities": 3956.07,
@@ -25154,7 +25133,7 @@
   ]
  },
  "NETWEB": {
-  "fetched_at": "2026-11-21T14:14:58+00:00",
+  "fetched_at": "2026-11-28T14:56:46+00:00",
   "sid": "NETWE",
   "source": "Tickertape",
   "years": [
@@ -25233,7 +25212,7 @@
   ]
  },
  "NEULANDLAB": {
-  "fetched_at": "2026-11-21T14:14:59+00:00",
+  "fetched_at": "2026-11-28T14:56:47+00:00",
   "sid": "NEUL",
   "source": "Tickertape",
   "years": [
@@ -25312,7 +25291,7 @@
   ]
  },
  "NH": {
-  "fetched_at": "2026-11-21T14:14:59+00:00",
+  "fetched_at": "2026-11-28T14:56:47+00:00",
   "sid": "NARY",
   "source": "Tickertape",
   "years": [
@@ -25391,7 +25370,7 @@
   ]
  },
  "NHPC": {
-  "fetched_at": "2026-11-21T14:15:00+00:00",
+  "fetched_at": "2026-11-28T14:56:48+00:00",
   "sid": "NHPC",
   "source": "Tickertape",
   "years": [
@@ -25470,7 +25449,7 @@
   ]
  },
  "NIACL": {
-  "fetched_at": "2026-11-21T14:15:01+00:00",
+  "fetched_at": "2026-11-28T14:56:49+00:00",
   "sid": "THEE",
   "source": "Tickertape",
   "years": [
@@ -25549,7 +25528,7 @@
   ]
  },
  "NLCINDIA": {
-  "fetched_at": "2026-11-21T14:15:01+00:00",
+  "fetched_at": "2026-11-28T14:56:49+00:00",
   "sid": "NLCI",
   "source": "Tickertape",
   "years": [
@@ -25628,7 +25607,7 @@
   ]
  },
  "NMDC": {
-  "fetched_at": "2026-11-21T14:15:02+00:00",
+  "fetched_at": "2026-11-28T14:56:50+00:00",
   "sid": "NMDC",
   "source": "Tickertape",
   "years": [
@@ -25707,7 +25686,7 @@
   ]
  },
  "NSLNISP": {
-  "fetched_at": "2026-11-21T14:15:03+00:00",
+  "fetched_at": "2026-11-28T14:56:51+00:00",
   "sid": "NSLN",
   "source": "Tickertape",
   "years": [
@@ -25786,7 +25765,7 @@
   ]
  },
  "NTPC": {
-  "fetched_at": "2026-11-21T14:15:04+00:00",
+  "fetched_at": "2026-11-28T14:56:52+00:00",
   "sid": "NTPC",
   "source": "Tickertape",
   "years": [
@@ -25865,7 +25844,7 @@
   ]
  },
  "NTPCGREEN": {
-  "fetched_at": "2026-11-21T14:15:05+00:00",
+  "fetched_at": "2026-11-28T14:56:52+00:00",
   "sid": "NTP",
   "source": "Tickertape",
   "years": [
@@ -25944,7 +25923,7 @@
   ]
  },
  "NUVAMA": {
-  "fetched_at": "2026-11-21T14:15:05+00:00",
+  "fetched_at": "2026-11-28T14:56:53+00:00",
   "sid": "NUVA",
   "source": "Tickertape",
   "years": [
@@ -26023,7 +26002,7 @@
   ]
  },
  "NUVOCO": {
-  "fetched_at": "2026-11-21T14:15:06+00:00",
+  "fetched_at": "2026-11-28T14:56:54+00:00",
   "sid": "NUV",
   "source": "Tickertape",
   "years": [
@@ -26102,7 +26081,7 @@
   ]
  },
  "NYKAA": {
-  "fetched_at": "2026-11-21T14:15:07+00:00",
+  "fetched_at": "2026-11-28T14:56:54+00:00",
   "sid": "NYK",
   "source": "Tickertape",
   "years": [
@@ -26181,7 +26160,7 @@
   ]
  },
  "OBEROIRLTY": {
-  "fetched_at": "2026-11-21T14:15:07+00:00",
+  "fetched_at": "2026-11-28T14:56:55+00:00",
   "sid": "OEBO",
   "source": "Tickertape",
   "years": [
@@ -26260,7 +26239,7 @@
   ]
  },
  "OFSS": {
-  "fetched_at": "2026-11-21T14:15:08+00:00",
+  "fetched_at": "2026-11-28T14:56:56+00:00",
   "sid": "ORCL",
   "source": "Tickertape",
   "years": [
@@ -26339,7 +26318,7 @@
   ]
  },
  "OIL": {
-  "fetched_at": "2026-11-21T14:15:09+00:00",
+  "fetched_at": "2026-11-28T14:56:57+00:00",
   "sid": "OILI",
   "source": "Tickertape",
   "years": [
@@ -26418,7 +26397,7 @@
   ]
  },
  "OLAELEC": {
-  "fetched_at": "2026-11-21T14:15:10+00:00",
+  "fetched_at": "2026-11-28T14:56:57+00:00",
   "sid": "OLAE",
   "source": "Tickertape",
   "years": [
@@ -26497,7 +26476,7 @@
   ]
  },
  "OLECTRA": {
-  "fetched_at": "2026-11-21T14:15:11+00:00",
+  "fetched_at": "2026-11-28T14:56:58+00:00",
   "sid": "OLEC",
   "source": "Tickertape",
   "years": [
@@ -26576,7 +26555,7 @@
   ]
  },
  "ONESOURCE": {
-  "fetched_at": "2026-11-21T14:15:11+00:00",
+  "fetched_at": "2026-11-28T14:56:59+00:00",
   "sid": "ONE",
   "source": "Tickertape",
   "years": [
@@ -26655,7 +26634,7 @@
   ]
  },
  "ONGC": {
-  "fetched_at": "2026-11-21T14:15:12+00:00",
+  "fetched_at": "2026-11-28T14:56:59+00:00",
   "sid": "ONGC",
   "source": "Tickertape",
   "years": [
@@ -26734,7 +26713,7 @@
   ]
  },
  "PAGEIND": {
-  "fetched_at": "2026-11-21T14:15:13+00:00",
+  "fetched_at": "2026-11-28T14:57:00+00:00",
   "sid": "PAGE",
   "source": "Tickertape",
   "years": [
@@ -26813,7 +26792,7 @@
   ]
  },
  "PARADEEP": {
-  "fetched_at": "2026-11-21T14:15:14+00:00",
+  "fetched_at": "2026-11-28T14:57:01+00:00",
   "sid": "PARAD",
   "source": "Tickertape",
   "years": [
@@ -26892,7 +26871,7 @@
   ]
  },
  "PATANJALI": {
-  "fetched_at": "2026-11-21T14:15:14+00:00",
+  "fetched_at": "2026-11-28T14:57:01+00:00",
   "sid": "RCSY",
   "source": "Tickertape",
   "years": [
@@ -26935,7 +26914,7 @@
   ]
  },
  "PAYTM": {
-  "fetched_at": "2026-11-21T14:15:15+00:00",
+  "fetched_at": "2026-11-28T14:57:02+00:00",
   "sid": "PAY",
   "source": "Tickertape",
   "years": [
@@ -27014,7 +26993,7 @@
   ]
  },
  "PCBL": {
-  "fetched_at": "2026-11-21T14:15:16+00:00",
+  "fetched_at": "2026-11-28T14:57:03+00:00",
   "sid": "PHIL",
   "source": "Tickertape",
   "years": [
@@ -27093,7 +27072,7 @@
   ]
  },
  "PERSISTENT": {
-  "fetched_at": "2026-11-21T14:15:16+00:00",
+  "fetched_at": "2026-11-28T14:57:04+00:00",
   "sid": "PERS",
   "source": "Tickertape",
   "years": [
@@ -27172,7 +27151,7 @@
   ]
  },
  "PETRONET": {
-  "fetched_at": "2026-11-21T14:15:18+00:00",
+  "fetched_at": "2026-11-28T14:57:04+00:00",
   "sid": "PLNG",
   "source": "Tickertape",
   "years": [
@@ -27251,7 +27230,7 @@
   ]
  },
  "PFC": {
-  "fetched_at": "2026-11-21T14:15:18+00:00",
+  "fetched_at": "2026-11-28T14:57:05+00:00",
   "sid": "PWFC",
   "source": "Tickertape",
   "years": [
@@ -27330,7 +27309,7 @@
   ]
  },
  "PFOCUS": {
-  "fetched_at": "2026-11-21T14:15:19+00:00",
+  "fetched_at": "2026-11-28T14:57:06+00:00",
   "sid": "PRFO",
   "source": "Tickertape",
   "years": [
@@ -27409,7 +27388,7 @@
   ]
  },
  "PGEL": {
-  "fetched_at": "2026-11-21T14:15:20+00:00",
+  "fetched_at": "2026-11-28T14:57:07+00:00",
   "sid": "PGEL",
   "source": "Tickertape",
   "years": [
@@ -27488,7 +27467,7 @@
   ]
  },
  "PHOENIXLTD": {
-  "fetched_at": "2026-11-21T14:15:21+00:00",
+  "fetched_at": "2026-11-28T14:57:08+00:00",
   "sid": "PHOE",
   "source": "Tickertape",
   "years": [
@@ -27567,7 +27546,7 @@
   ]
  },
  "PIDILITIND": {
-  "fetched_at": "2026-11-21T14:15:22+00:00",
+  "fetched_at": "2026-11-28T14:57:08+00:00",
   "sid": "PIDI",
   "source": "Tickertape",
   "years": [
@@ -27646,7 +27625,7 @@
   ]
  },
  "PIIND": {
-  "fetched_at": "2026-11-21T14:15:22+00:00",
+  "fetched_at": "2026-11-28T14:57:09+00:00",
   "sid": "PIIL",
   "source": "Tickertape",
   "years": [
@@ -27725,7 +27704,7 @@
   ]
  },
  "PINELABS": {
-  "fetched_at": "2026-11-21T14:15:23+00:00",
+  "fetched_at": "2026-11-28T14:57:10+00:00",
   "sid": "PINEL",
   "source": "Tickertape",
   "years": [
@@ -27804,7 +27783,7 @@
   ]
  },
  "PIRAMALFIN": {
-  "fetched_at": "2026-11-21T14:15:24+00:00",
+  "fetched_at": "2026-11-28T14:57:10+00:00",
   "sid": "DWNH",
   "source": "Tickertape",
   "years": [
@@ -27883,7 +27862,7 @@
   ]
  },
  "PNB": {
-  "fetched_at": "2026-11-21T14:15:24+00:00",
+  "fetched_at": "2026-11-28T14:57:11+00:00",
   "sid": "PNBK",
   "source": "Tickertape",
   "years": [
@@ -27962,7 +27941,7 @@
   ]
  },
  "PNBHOUSING": {
-  "fetched_at": "2026-11-21T14:15:25+00:00",
+  "fetched_at": "2026-11-28T14:57:12+00:00",
   "sid": "PNBH",
   "source": "Tickertape",
   "years": [
@@ -28041,7 +28020,7 @@
   ]
  },
  "POLICYBZR": {
-  "fetched_at": "2026-11-21T14:15:26+00:00",
+  "fetched_at": "2026-11-28T14:57:12+00:00",
   "sid": "POLI",
   "source": "Tickertape",
   "years": [
@@ -28120,7 +28099,7 @@
   ]
  },
  "POLYCAB": {
-  "fetched_at": "2026-11-21T14:15:26+00:00",
+  "fetched_at": "2026-11-28T14:57:13+00:00",
   "sid": "POLC",
   "source": "Tickertape",
   "years": [
@@ -28199,7 +28178,7 @@
   ]
  },
  "POLYMED": {
-  "fetched_at": "2026-11-21T14:15:27+00:00",
+  "fetched_at": "2026-11-28T14:57:14+00:00",
   "sid": "PLMD",
   "source": "Tickertape",
   "years": [
@@ -28278,7 +28257,7 @@
   ]
  },
  "POONAWALLA": {
-  "fetched_at": "2026-11-21T14:15:28+00:00",
+  "fetched_at": "2026-11-28T14:57:15+00:00",
   "sid": "MAGM",
   "source": "Tickertape",
   "years": [
@@ -28357,7 +28336,7 @@
   ]
  },
  "POWERGRID": {
-  "fetched_at": "2026-11-21T14:15:29+00:00",
+  "fetched_at": "2026-11-28T14:57:15+00:00",
   "sid": "PGRD",
   "source": "Tickertape",
   "years": [
@@ -28436,7 +28415,7 @@
   ]
  },
  "POWERINDIA": {
-  "fetched_at": "2026-11-21T14:15:30+00:00",
+  "fetched_at": "2026-11-28T14:57:16+00:00",
   "sid": "ABBW",
   "source": "Tickertape",
   "years": [
@@ -28515,7 +28494,7 @@
   ]
  },
  "PPLPHARMA": {
-  "fetched_at": "2026-11-21T14:15:30+00:00",
+  "fetched_at": "2026-11-28T14:57:17+00:00",
   "sid": "PPL",
   "source": "Tickertape",
   "years": [
@@ -28594,7 +28573,7 @@
   ]
  },
  "PREMIERENE": {
-  "fetched_at": "2026-11-21T14:15:31+00:00",
+  "fetched_at": "2026-11-28T14:57:17+00:00",
   "sid": "PREMI",
   "source": "Tickertape",
   "years": [
@@ -28673,7 +28652,7 @@
   ]
  },
  "PRESTIGE": {
-  "fetched_at": "2026-11-21T14:15:32+00:00",
+  "fetched_at": "2026-11-28T14:57:18+00:00",
   "sid": "PREG",
   "source": "Tickertape",
   "years": [
@@ -28752,7 +28731,7 @@
   ]
  },
  "PTCIL": {
-  "fetched_at": "2026-11-21T14:15:33+00:00",
+  "fetched_at": "2026-11-28T14:57:19+00:00",
   "sid": "PTC",
   "source": "Tickertape",
   "years": [
@@ -28831,7 +28810,7 @@
   ]
  },
  "PVRINOX": {
-  "fetched_at": "2026-11-21T14:15:34+00:00",
+  "fetched_at": "2026-11-28T14:57:20+00:00",
   "sid": "PVRL",
   "source": "Tickertape",
   "years": [
@@ -28910,7 +28889,7 @@
   ]
  },
  "PWL": {
-  "fetched_at": "2026-11-21T14:15:34+00:00",
+  "fetched_at": "2026-11-28T14:57:21+00:00",
   "sid": "PWL",
   "source": "Tickertape",
   "years": [
@@ -28989,7 +28968,7 @@
   ]
  },
  "RADICO": {
-  "fetched_at": "2026-11-21T14:15:35+00:00",
+  "fetched_at": "2026-11-28T14:57:21+00:00",
   "sid": "RADC",
   "source": "Tickertape",
   "years": [
@@ -29068,7 +29047,7 @@
   ]
  },
  "RAILTEL": {
-  "fetched_at": "2026-11-21T14:15:36+00:00",
+  "fetched_at": "2026-11-28T14:57:22+00:00",
   "sid": "RAIL",
   "source": "Tickertape",
   "years": [
@@ -29147,7 +29126,7 @@
   ]
  },
  "RAINBOW": {
-  "fetched_at": "2026-11-21T14:15:36+00:00",
+  "fetched_at": "2026-11-28T14:57:23+00:00",
   "sid": "RAINB",
   "source": "Tickertape",
   "years": [
@@ -29226,7 +29205,7 @@
   ]
  },
  "RAMCOCEM": {
-  "fetched_at": "2026-11-21T14:15:37+00:00",
+  "fetched_at": "2026-11-28T14:57:23+00:00",
   "sid": "TRCE",
   "source": "Tickertape",
   "years": [
@@ -29305,7 +29284,7 @@
   ]
  },
  "RBLBANK": {
-  "fetched_at": "2026-11-21T14:15:38+00:00",
+  "fetched_at": "2026-11-28T14:57:24+00:00",
   "sid": "RATB",
   "source": "Tickertape",
   "years": [
@@ -29384,7 +29363,7 @@
   ]
  },
  "RECLTD": {
-  "fetched_at": "2026-11-21T14:15:39+00:00",
+  "fetched_at": "2026-11-28T14:57:25+00:00",
   "sid": "RECM",
   "source": "Tickertape",
   "years": [
@@ -29463,7 +29442,7 @@
   ]
  },
  "REDINGTON": {
-  "fetched_at": "2026-11-21T14:15:40+00:00",
+  "fetched_at": "2026-11-28T14:57:25+00:00",
   "sid": "REDI",
   "source": "Tickertape",
   "years": [
@@ -29542,7 +29521,7 @@
   ]
  },
  "RELIANCE": {
-  "fetched_at": "2026-11-21T14:15:40+00:00",
+  "fetched_at": "2026-11-28T14:57:26+00:00",
   "sid": "RELI",
   "source": "Tickertape",
   "years": [
@@ -29621,7 +29600,7 @@
   ]
  },
  "RHIM": {
-  "fetched_at": "2026-11-21T14:15:41+00:00",
+  "fetched_at": "2026-11-28T14:57:27+00:00",
   "sid": "ORRE",
   "source": "Tickertape",
   "years": [
@@ -29700,7 +29679,7 @@
   ]
  },
  "RITES": {
-  "fetched_at": "2026-11-21T14:15:42+00:00",
+  "fetched_at": "2026-11-28T14:57:28+00:00",
   "sid": "RITS",
   "source": "Tickertape",
   "years": [
@@ -29779,7 +29758,7 @@
   ]
  },
  "RKFORGE": {
-  "fetched_at": "2026-11-21T14:15:43+00:00",
+  "fetched_at": "2026-11-28T14:57:28+00:00",
   "sid": "RKFO",
   "source": "Tickertape",
   "years": [
@@ -29858,7 +29837,7 @@
   ]
  },
  "RPOWER": {
-  "fetched_at": "2026-11-21T14:15:43+00:00",
+  "fetched_at": "2026-11-28T14:57:29+00:00",
   "sid": "RPOL",
   "source": "Tickertape",
   "years": [
@@ -29937,7 +29916,7 @@
   ]
  },
  "RRKABEL": {
-  "fetched_at": "2026-11-21T14:15:44+00:00",
+  "fetched_at": "2026-11-28T14:57:30+00:00",
   "sid": "RRK",
   "source": "Tickertape",
   "years": [
@@ -30016,7 +29995,7 @@
   ]
  },
  "RVNL": {
-  "fetched_at": "2026-11-21T14:15:45+00:00",
+  "fetched_at": "2026-11-28T14:57:31+00:00",
   "sid": "RAIV",
   "source": "Tickertape",
   "years": [
@@ -30095,7 +30074,7 @@
   ]
  },
  "SAGILITY": {
-  "fetched_at": "2026-11-21T14:15:46+00:00",
+  "fetched_at": "2026-11-28T14:57:31+00:00",
   "sid": "SAGI",
   "source": "Tickertape",
   "years": [
@@ -30174,7 +30153,7 @@
   ]
  },
  "SAIL": {
-  "fetched_at": "2026-11-21T14:15:47+00:00",
+  "fetched_at": "2026-11-28T14:57:32+00:00",
   "sid": "SAIL",
   "source": "Tickertape",
   "years": [
@@ -30253,7 +30232,7 @@
   ]
  },
  "SAILIFE": {
-  "fetched_at": "2026-11-21T14:15:47+00:00",
+  "fetched_at": "2026-11-28T14:57:33+00:00",
   "sid": "SAILI",
   "source": "Tickertape",
   "years": [
@@ -30332,7 +30311,7 @@
   ]
  },
  "SAMMAANCAP": {
-  "fetched_at": "2026-11-21T14:15:48+00:00",
+  "fetched_at": "2026-11-28T14:57:34+00:00",
   "sid": "INBF",
   "source": "Tickertape",
   "years": [
@@ -30411,7 +30390,7 @@
   ]
  },
  "SARDAEN": {
-  "fetched_at": "2026-11-21T14:15:49+00:00",
+  "fetched_at": "2026-11-28T14:57:35+00:00",
   "sid": "SAEM",
   "source": "Tickertape",
   "years": [
@@ -30490,7 +30469,7 @@
   ]
  },
  "SBICARD": {
-  "fetched_at": "2026-11-21T14:15:50+00:00",
+  "fetched_at": "2026-11-28T14:57:35+00:00",
   "sid": "SBIC",
   "source": "Tickertape",
   "years": [
@@ -30569,7 +30548,7 @@
   ]
  },
  "SBILIFE": {
-  "fetched_at": "2026-11-21T14:15:50+00:00",
+  "fetched_at": "2026-11-28T14:57:36+00:00",
   "sid": "SBIL",
   "source": "Tickertape",
   "years": [
@@ -30648,7 +30627,7 @@
   ]
  },
  "SBIN": {
-  "fetched_at": "2026-11-21T14:15:51+00:00",
+  "fetched_at": "2026-11-28T14:57:37+00:00",
   "sid": "SBI",
   "source": "Tickertape",
   "years": [
@@ -30727,7 +30706,7 @@
   ]
  },
  "SCHAEFFLER": {
-  "fetched_at": "2026-11-21T14:15:52+00:00",
+  "fetched_at": "2026-11-28T14:57:37+00:00",
   "sid": "SCHE",
   "source": "Tickertape",
   "years": [
@@ -30806,7 +30785,7 @@
   ]
  },
  "SCHNEIDER": {
-  "fetched_at": "2026-11-21T14:15:53+00:00",
+  "fetched_at": "2026-11-28T14:57:38+00:00",
   "sid": "SEIN",
   "source": "Tickertape",
   "years": [
@@ -30885,7 +30864,7 @@
   ]
  },
  "SCI": {
-  "fetched_at": "2026-11-21T14:15:54+00:00",
+  "fetched_at": "2026-11-28T14:57:39+00:00",
   "sid": "SCI",
   "source": "Tickertape",
   "years": [
@@ -30964,7 +30943,7 @@
   ]
  },
  "SHREECEM": {
-  "fetched_at": "2026-11-21T14:15:54+00:00",
+  "fetched_at": "2026-11-28T14:57:39+00:00",
   "sid": "SHCM",
   "source": "Tickertape",
   "years": [
@@ -31043,7 +31022,7 @@
   ]
  },
  "SHRIPISTON": {
-  "fetched_at": "2026-11-21T14:15:55+00:00",
+  "fetched_at": "2026-11-28T14:57:40+00:00",
   "sid": "SHIE",
   "source": "Tickertape",
   "years": [
@@ -31122,7 +31101,7 @@
   ]
  },
  "SHRIRAMFIN": {
-  "fetched_at": "2026-11-21T14:15:56+00:00",
+  "fetched_at": "2026-11-28T14:57:41+00:00",
   "sid": "SRTR",
   "source": "Tickertape",
   "years": [
@@ -31201,7 +31180,7 @@
   ]
  },
  "SHYAMMETL": {
-  "fetched_at": "2026-11-21T14:15:56+00:00",
+  "fetched_at": "2026-11-28T14:57:42+00:00",
   "sid": "SHYAE",
   "source": "Tickertape",
   "years": [
@@ -31280,7 +31259,7 @@
   ]
  },
  "SIEMENS": {
-  "fetched_at": "2026-11-21T14:15:57+00:00",
+  "fetched_at": "2026-11-28T14:57:42+00:00",
   "sid": "SIEM",
   "source": "Tickertape",
   "years": [
@@ -31338,7 +31317,7 @@
   ]
  },
  "SIGNATURE": {
-  "fetched_at": "2026-11-21T14:15:58+00:00",
+  "fetched_at": "2026-11-28T14:57:43+00:00",
   "sid": "SIGNA",
   "source": "Tickertape",
   "years": [
@@ -31417,7 +31396,7 @@
   ]
  },
  "SJVN": {
-  "fetched_at": "2026-11-21T14:15:58+00:00",
+  "fetched_at": "2026-11-28T14:57:44+00:00",
   "sid": "SJVN",
   "source": "Tickertape",
   "years": [
@@ -31496,7 +31475,7 @@
   ]
  },
  "SOBHA": {
-  "fetched_at": "2026-11-21T14:15:59+00:00",
+  "fetched_at": "2026-11-28T14:57:44+00:00",
   "sid": "SOBH",
   "source": "Tickertape",
   "years": [
@@ -31575,7 +31554,7 @@
   ]
  },
  "SOLARINDS": {
-  "fetched_at": "2026-11-21T14:16:00+00:00",
+  "fetched_at": "2026-11-28T14:57:45+00:00",
   "sid": "SLIN",
   "source": "Tickertape",
   "years": [
@@ -31654,7 +31633,7 @@
   ]
  },
  "SONACOMS": {
-  "fetched_at": "2026-11-21T14:16:01+00:00",
+  "fetched_at": "2026-11-28T14:57:46+00:00",
   "sid": "SONAC",
   "source": "Tickertape",
   "years": [
@@ -31733,7 +31712,7 @@
   ]
  },
  "SRF": {
-  "fetched_at": "2026-11-21T14:16:02+00:00",
+  "fetched_at": "2026-11-28T14:57:46+00:00",
   "sid": "SRFL",
   "source": "Tickertape",
   "years": [
@@ -31812,7 +31791,7 @@
   ]
  },
  "STARHEALTH": {
-  "fetched_at": "2026-11-21T14:16:02+00:00",
+  "fetched_at": "2026-11-28T14:57:47+00:00",
   "sid": "STARH",
   "source": "Tickertape",
   "years": [
@@ -31891,7 +31870,7 @@
   ]
  },
  "SUMICHEM": {
-  "fetched_at": "2026-11-21T14:16:03+00:00",
+  "fetched_at": "2026-11-28T14:57:48+00:00",
   "sid": "SUMH",
   "source": "Tickertape",
   "years": [
@@ -31970,7 +31949,7 @@
   ]
  },
  "SUNDARMFIN": {
-  "fetched_at": "2026-11-21T14:16:04+00:00",
+  "fetched_at": "2026-11-28T14:57:49+00:00",
   "sid": "SNFN",
   "source": "Tickertape",
   "years": [
@@ -32049,7 +32028,7 @@
   ]
  },
  "SUNPHARMA": {
-  "fetched_at": "2026-11-21T14:16:05+00:00",
+  "fetched_at": "2026-11-28T14:57:50+00:00",
   "sid": "SUN",
   "source": "Tickertape",
   "years": [
@@ -32128,7 +32107,7 @@
   ]
  },
  "SUNTV": {
-  "fetched_at": "2026-11-21T14:16:06+00:00",
+  "fetched_at": "2026-11-28T14:57:50+00:00",
   "sid": "SUTV",
   "source": "Tickertape",
   "years": [
@@ -32207,7 +32186,7 @@
   ]
  },
  "SUPREMEIND": {
-  "fetched_at": "2026-11-21T14:16:06+00:00",
+  "fetched_at": "2026-11-28T14:57:51+00:00",
   "sid": "SUPI",
   "source": "Tickertape",
   "years": [
@@ -32286,7 +32265,7 @@
   ]
  },
  "SUZLON": {
-  "fetched_at": "2026-11-21T14:16:07+00:00",
+  "fetched_at": "2026-11-28T14:57:52+00:00",
   "sid": "SUZL",
   "source": "Tickertape",
   "years": [
@@ -32365,7 +32344,7 @@
   ]
  },
  "SWANCORP": {
-  "fetched_at": "2026-11-21T14:16:08+00:00",
+  "fetched_at": "2026-11-28T14:57:52+00:00",
   "sid": "SWAN",
   "source": "Tickertape",
   "years": [
@@ -32444,7 +32423,7 @@
   ]
  },
  "SWIGGY": {
-  "fetched_at": "2026-11-21T14:16:08+00:00",
+  "fetched_at": "2026-11-28T14:57:53+00:00",
   "sid": "SWIG",
   "source": "Tickertape",
   "years": [
@@ -32523,7 +32502,7 @@
   ]
  },
  "SYNGENE": {
-  "fetched_at": "2026-11-21T14:16:10+00:00",
+  "fetched_at": "2026-11-28T14:57:54+00:00",
   "sid": "SYNN",
   "source": "Tickertape",
   "years": [
@@ -32602,7 +32581,7 @@
   ]
  },
  "SYRMA": {
-  "fetched_at": "2026-11-21T14:16:10+00:00",
+  "fetched_at": "2026-11-28T14:57:55+00:00",
   "sid": "SYR",
   "source": "Tickertape",
   "years": [
@@ -32681,7 +32660,7 @@
   ]
  },
  "TARIL": {
-  "fetched_at": "2026-11-21T14:16:11+00:00",
+  "fetched_at": "2026-11-28T14:57:55+00:00",
   "sid": "TRNF",
   "source": "Tickertape",
   "years": [
@@ -32760,7 +32739,7 @@
   ]
  },
  "TATACAP": {
-  "fetched_at": "2026-11-21T14:16:12+00:00",
+  "fetched_at": "2026-11-28T14:57:56+00:00",
   "sid": "TATAC",
   "source": "Tickertape",
   "years": [
@@ -32839,7 +32818,7 @@
   ]
  },
  "TATACHEM": {
-  "fetched_at": "2026-11-21T14:16:12+00:00",
+  "fetched_at": "2026-11-28T14:57:57+00:00",
   "sid": "TTCH",
   "source": "Tickertape",
   "years": [
@@ -32918,7 +32897,7 @@
   ]
  },
  "TATACOMM": {
-  "fetched_at": "2026-11-21T14:16:13+00:00",
+  "fetched_at": "2026-11-28T14:57:57+00:00",
   "sid": "TATA",
   "source": "Tickertape",
   "years": [
@@ -32997,7 +32976,7 @@
   ]
  },
  "TATACONSUM": {
-  "fetched_at": "2026-11-21T14:16:14+00:00",
+  "fetched_at": "2026-11-28T14:57:58+00:00",
   "sid": "TACN",
   "source": "Tickertape",
   "years": [
@@ -33076,7 +33055,7 @@
   ]
  },
  "TATAELXSI": {
-  "fetched_at": "2026-11-21T14:16:14+00:00",
+  "fetched_at": "2026-11-28T14:57:59+00:00",
   "sid": "TTEX",
   "source": "Tickertape",
   "years": [
@@ -33155,7 +33134,7 @@
   ]
  },
  "TATAINVEST": {
-  "fetched_at": "2026-11-21T14:16:15+00:00",
+  "fetched_at": "2026-11-28T14:58:00+00:00",
   "sid": "TINV",
   "source": "Tickertape",
   "years": [
@@ -33234,7 +33213,7 @@
   ]
  },
  "TATAPOWER": {
-  "fetched_at": "2026-11-21T14:16:16+00:00",
+  "fetched_at": "2026-11-28T14:58:00+00:00",
   "sid": "TTPW",
   "source": "Tickertape",
   "years": [
@@ -33313,7 +33292,7 @@
   ]
  },
  "TATASTEEL": {
-  "fetched_at": "2026-11-21T14:16:17+00:00",
+  "fetched_at": "2026-11-28T14:58:01+00:00",
   "sid": "TISC",
   "source": "Tickertape",
   "years": [
@@ -33392,7 +33371,7 @@
   ]
  },
  "TATATECH": {
-  "fetched_at": "2026-11-21T14:16:18+00:00",
+  "fetched_at": "2026-11-28T14:58:02+00:00",
   "sid": "TATAT",
   "source": "Tickertape",
   "years": [
@@ -33471,7 +33450,7 @@
   ]
  },
  "TBOTEK": {
-  "fetched_at": "2026-11-21T14:16:18+00:00",
+  "fetched_at": "2026-11-28T14:58:02+00:00",
   "sid": "TBO",
   "source": "Tickertape",
   "years": [
@@ -33550,7 +33529,7 @@
   ]
  },
  "TCS": {
-  "fetched_at": "2026-11-21T14:16:19+00:00",
+  "fetched_at": "2026-11-28T14:58:03+00:00",
   "sid": "TCS",
   "source": "Tickertape",
   "years": [
@@ -33629,7 +33608,7 @@
   ]
  },
  "TDPOWERSYS": {
-  "fetched_at": "2026-11-21T14:16:20+00:00",
+  "fetched_at": "2026-11-28T14:58:04+00:00",
   "sid": "TDPS",
   "source": "Tickertape",
   "years": [
@@ -33708,7 +33687,7 @@
   ]
  },
  "TECHM": {
-  "fetched_at": "2026-11-21T14:16:21+00:00",
+  "fetched_at": "2026-11-28T14:58:04+00:00",
   "sid": "TEML",
   "source": "Tickertape",
   "years": [
@@ -33787,7 +33766,7 @@
   ]
  },
  "TECHNOE": {
-  "fetched_at": "2026-11-21T14:16:21+00:00",
+  "fetched_at": "2026-11-28T14:58:05+00:00",
   "sid": "TEEC",
   "source": "Tickertape",
   "years": [
@@ -33866,7 +33845,7 @@
   ]
  },
  "TEGA": {
-  "fetched_at": "2026-11-21T14:16:22+00:00",
+  "fetched_at": "2026-11-28T14:58:06+00:00",
   "sid": "TEG",
   "source": "Tickertape",
   "years": [
@@ -33945,7 +33924,7 @@
   ]
  },
  "TEJASNET": {
-  "fetched_at": "2026-11-21T14:16:23+00:00",
+  "fetched_at": "2026-11-28T14:58:07+00:00",
   "sid": "TEJS",
   "source": "Tickertape",
   "years": [
@@ -34024,7 +34003,7 @@
   ]
  },
  "TENNIND": {
-  "fetched_at": "2026-11-21T14:16:23+00:00",
+  "fetched_at": "2026-11-28T14:58:08+00:00",
   "sid": "TENN",
   "source": "Tickertape",
   "years": [
@@ -34103,7 +34082,7 @@
   ]
  },
  "THANGAMAYL": {
-  "fetched_at": "2026-11-21T14:16:24+00:00",
+  "fetched_at": "2026-11-28T14:58:08+00:00",
   "sid": "THNG",
   "source": "Tickertape",
   "years": [
@@ -34182,7 +34161,7 @@
   ]
  },
  "THERMAX": {
-  "fetched_at": "2026-11-21T14:16:25+00:00",
+  "fetched_at": "2026-11-28T14:58:09+00:00",
   "sid": "THMX",
   "source": "Tickertape",
   "years": [
@@ -34261,7 +34240,7 @@
   ]
  },
  "TIINDIA": {
-  "fetched_at": "2026-11-21T14:16:25+00:00",
+  "fetched_at": "2026-11-28T14:58:10+00:00",
   "sid": "TBEI",
   "source": "Tickertape",
   "years": [
@@ -34340,7 +34319,7 @@
   ]
  },
  "TIMKEN": {
-  "fetched_at": "2026-11-21T14:16:26+00:00",
+  "fetched_at": "2026-11-28T14:58:11+00:00",
   "sid": "TIMK",
   "source": "Tickertape",
   "years": [
@@ -34383,7 +34362,7 @@
   ]
  },
  "TITAGARH": {
-  "fetched_at": "2026-11-21T14:16:27+00:00",
+  "fetched_at": "2026-11-28T14:58:11+00:00",
   "sid": "TITW",
   "source": "Tickertape",
   "years": [
@@ -34462,7 +34441,7 @@
   ]
  },
  "TITAN": {
-  "fetched_at": "2026-11-21T14:16:28+00:00",
+  "fetched_at": "2026-11-28T14:58:12+00:00",
   "sid": "TITN",
   "source": "Tickertape",
   "years": [
@@ -34541,7 +34520,7 @@
   ]
  },
  "TMCV": {
-  "fetched_at": "2026-11-21T14:16:28+00:00",
+  "fetched_at": "2026-11-28T14:58:13+00:00",
   "sid": "TMC",
   "source": "Tickertape",
   "years": [
@@ -34584,7 +34563,7 @@
   ]
  },
  "TMPV": {
-  "fetched_at": "2026-11-21T14:16:29+00:00",
+  "fetched_at": "2026-11-28T14:58:13+00:00",
   "sid": "TAMO",
   "source": "Tickertape",
   "years": [
@@ -34663,7 +34642,7 @@
   ]
  },
  "TORNTPHARM": {
-  "fetched_at": "2026-11-21T14:16:30+00:00",
+  "fetched_at": "2026-11-28T14:58:14+00:00",
   "sid": "TORP",
   "source": "Tickertape",
   "years": [
@@ -34742,7 +34721,7 @@
   ]
  },
  "TORNTPOWER": {
-  "fetched_at": "2026-11-21T14:16:30+00:00",
+  "fetched_at": "2026-11-28T14:58:15+00:00",
   "sid": "TOPO",
   "source": "Tickertape",
   "years": [
@@ -34821,7 +34800,7 @@
   ]
  },
  "TRENT": {
-  "fetched_at": "2026-11-21T14:16:31+00:00",
+  "fetched_at": "2026-11-28T14:58:15+00:00",
   "sid": "TREN",
   "source": "Tickertape",
   "years": [
@@ -34900,7 +34879,7 @@
   ]
  },
  "TRIDENT": {
-  "fetched_at": "2026-11-21T14:16:32+00:00",
+  "fetched_at": "2026-11-28T14:58:16+00:00",
   "sid": "TRIE",
   "source": "Tickertape",
   "years": [
@@ -34979,7 +34958,7 @@
   ]
  },
  "TRITURBINE": {
-  "fetched_at": "2026-11-21T14:16:32+00:00",
+  "fetched_at": "2026-11-28T14:58:17+00:00",
   "sid": "TRVT",
   "source": "Tickertape",
   "years": [
@@ -35058,7 +35037,7 @@
   ]
  },
  "TTML": {
-  "fetched_at": "2026-11-21T14:16:33+00:00",
+  "fetched_at": "2026-11-28T14:58:18+00:00",
   "sid": "TTML",
   "source": "Tickertape",
   "years": [
@@ -35137,7 +35116,7 @@
   ]
  },
  "TVSMOTOR": {
-  "fetched_at": "2026-11-21T14:16:34+00:00",
+  "fetched_at": "2026-11-28T14:58:18+00:00",
   "sid": "TVSM",
   "source": "Tickertape",
   "years": [
@@ -35216,7 +35195,7 @@
   ]
  },
  "UBL": {
-  "fetched_at": "2026-11-21T14:16:35+00:00",
+  "fetched_at": "2026-11-28T14:58:19+00:00",
   "sid": "UBBW",
   "source": "Tickertape",
   "years": [
@@ -35295,7 +35274,7 @@
   ]
  },
  "UCOBANK": {
-  "fetched_at": "2026-11-21T14:16:35+00:00",
+  "fetched_at": "2026-11-28T14:58:20+00:00",
   "sid": "UCBK",
   "source": "Tickertape",
   "years": [
@@ -35374,7 +35353,7 @@
   ]
  },
  "ULTRACEMCO": {
-  "fetched_at": "2026-11-21T14:16:36+00:00",
+  "fetched_at": "2026-11-28T14:58:20+00:00",
   "sid": "ULTC",
   "source": "Tickertape",
   "years": [
@@ -35453,7 +35432,7 @@
   ]
  },
  "UNIONBANK": {
-  "fetched_at": "2026-11-21T14:16:37+00:00",
+  "fetched_at": "2026-11-28T14:58:21+00:00",
   "sid": "UNBK",
   "source": "Tickertape",
   "years": [
@@ -35532,7 +35511,7 @@
   ]
  },
  "UNITDSPR": {
-  "fetched_at": "2026-11-21T14:16:37+00:00",
+  "fetched_at": "2026-11-28T14:58:22+00:00",
   "sid": "UNSP",
   "source": "Tickertape",
   "years": [
@@ -35611,7 +35590,7 @@
   ]
  },
  "UNOMINDA": {
-  "fetched_at": "2026-11-21T14:16:38+00:00",
+  "fetched_at": "2026-11-28T14:58:23+00:00",
   "sid": "MNDA",
   "source": "Tickertape",
   "years": [
@@ -35690,7 +35669,7 @@
   ]
  },
  "UPL": {
-  "fetched_at": "2026-11-21T14:16:39+00:00",
+  "fetched_at": "2026-11-28T14:58:23+00:00",
   "sid": "UPLL",
   "source": "Tickertape",
   "years": [
@@ -35769,7 +35748,7 @@
   ]
  },
  "URBANCO": {
-  "fetched_at": "2026-11-21T14:16:39+00:00",
+  "fetched_at": "2026-11-28T14:58:24+00:00",
   "sid": "URBA",
   "source": "Tickertape",
   "years": [
@@ -35848,7 +35827,7 @@
   ]
  },
  "USHAMART": {
-  "fetched_at": "2026-11-21T14:16:40+00:00",
+  "fetched_at": "2026-11-28T14:58:25+00:00",
   "sid": "USBL",
   "source": "Tickertape",
   "years": [
@@ -35927,7 +35906,7 @@
   ]
  },
  "UTIAMC": {
-  "fetched_at": "2026-11-21T14:16:41+00:00",
+  "fetched_at": "2026-11-28T14:58:25+00:00",
   "sid": "UTI",
   "source": "Tickertape",
   "years": [
@@ -36006,7 +35985,7 @@
   ]
  },
  "VBL": {
-  "fetched_at": "2026-11-21T14:16:42+00:00",
+  "fetched_at": "2026-11-28T14:58:26+00:00",
   "sid": "VARB",
   "source": "Tickertape",
   "years": [
@@ -36085,7 +36064,7 @@
   ]
  },
  "VEDL": {
-  "fetched_at": "2026-11-21T14:16:43+00:00",
+  "fetched_at": "2026-11-28T14:58:27+00:00",
   "sid": "VDAN",
   "source": "Tickertape",
   "years": [
@@ -36164,7 +36143,7 @@
   ]
  },
  "VIJAYA": {
-  "fetched_at": "2026-11-21T14:16:44+00:00",
+  "fetched_at": "2026-11-28T14:58:28+00:00",
   "sid": "VIJAY",
   "source": "Tickertape",
   "years": [
@@ -36243,7 +36222,7 @@
   ]
  },
  "VMM": {
-  "fetched_at": "2026-11-21T14:16:45+00:00",
+  "fetched_at": "2026-11-28T14:58:29+00:00",
   "sid": "VMM",
   "source": "Tickertape",
   "years": [
@@ -36322,7 +36301,7 @@
   ]
  },
  "VOLTAS": {
-  "fetched_at": "2026-11-21T14:16:46+00:00",
+  "fetched_at": "2026-11-28T14:58:30+00:00",
   "sid": "VOLT",
   "source": "Tickertape",
   "years": [
@@ -36401,7 +36380,7 @@
   ]
  },
  "VTL": {
-  "fetched_at": "2026-11-21T14:16:46+00:00",
+  "fetched_at": "2026-11-28T14:58:31+00:00",
   "sid": "VART",
   "source": "Tickertape",
   "years": [
@@ -36480,7 +36459,7 @@
   ]
  },
  "WAAREEENER": {
-  "fetched_at": "2026-11-21T14:16:47+00:00",
+  "fetched_at": "2026-11-28T14:58:32+00:00",
   "sid": "WAARE",
   "source": "Tickertape",
   "years": [
@@ -36559,7 +36538,7 @@
   ]
  },
  "WELCORP": {
-  "fetched_at": "2026-11-21T14:16:48+00:00",
+  "fetched_at": "2026-11-28T14:58:32+00:00",
   "sid": "WGSR",
   "source": "Tickertape",
   "years": [
@@ -36638,7 +36617,7 @@
   ]
  },
  "WELSPUNLIV": {
-  "fetched_at": "2026-11-21T14:16:49+00:00",
+  "fetched_at": "2026-11-28T14:58:33+00:00",
   "sid": "WLSP",
   "source": "Tickertape",
   "years": [
@@ -36717,7 +36696,7 @@
   ]
  },
  "WHIRLPOOL": {
-  "fetched_at": "2026-11-21T14:16:49+00:00",
+  "fetched_at": "2026-11-28T14:58:34+00:00",
   "sid": "WHIR",
   "source": "Tickertape",
   "years": [
@@ -36796,7 +36775,7 @@
   ]
  },
  "WIPRO": {
-  "fetched_at": "2026-11-21T14:16:50+00:00",
+  "fetched_at": "2026-11-28T14:58:34+00:00",
   "sid": "WIPR",
   "source": "Tickertape",
   "years": [
@@ -36875,7 +36854,7 @@
   ]
  },
  "WOCKPHARMA": {
-  "fetched_at": "2026-11-21T14:16:51+00:00",
+  "fetched_at": "2026-11-28T14:58:35+00:00",
   "sid": "WCKH",
   "source": "Tickertape",
   "years": [
@@ -36954,7 +36933,7 @@
   ]
  },
  "YESBANK": {
-  "fetched_at": "2026-11-21T14:16:51+00:00",
+  "fetched_at": "2026-11-28T14:58:36+00:00",
   "sid": "YESB",
   "source": "Tickertape",
   "years": [
@@ -37033,7 +37012,7 @@
   ]
  },
  "ZEEL": {
-  "fetched_at": "2026-11-21T14:16:52+00:00",
+  "fetched_at": "2026-11-28T14:58:37+00:00",
   "sid": "ZEE",
   "source": "Tickertape",
   "years": [
@@ -37112,7 +37091,7 @@
   ]
  },
  "ZENSARTECH": {
-  "fetched_at": "2026-11-21T14:16:53+00:00",
+  "fetched_at": "2026-11-28T14:58:37+00:00",
   "sid": "ZENT",
   "source": "Tickertape",
   "years": [
@@ -37191,7 +37170,7 @@
   ]
  },
  "ZENTEC": {
-  "fetched_at": "2026-11-21T14:16:53+00:00",
+  "fetched_at": "2026-11-28T14:58:38+00:00",
   "sid": "ZETE",
   "source": "Tickertape",
   "years": [
@@ -37270,7 +37249,7 @@
   ]
  },
  "ZFCVINDIA": {
-  "fetched_at": "2026-11-21T14:16:54+00:00",
+  "fetched_at": "2026-11-28T14:58:39+00:00",
   "sid": "WABC",
   "source": "Tickertape",
   "years": [
@@ -37349,7 +37328,7 @@
   ]
  },
  "ZYDUSLIFE": {
-  "fetched_at": "2026-11-21T14:16:55+00:00",
+  "fetched_at": "2026-11-28T14:58:39+00:00",
   "sid": "CADI",
   "source": "Tickertape",
   "years": [
@@ -37428,7 +37407,7 @@
   ]
  },
  "ZYDUSWELL": {
-  "fetched_at": "2026-11-21T14:16:56+00:00",
+  "fetched_at": "2026-11-28T14:58:40+00:00",
   "sid": "ZYDS",
   "source": "Tickertape",
   "years": [
